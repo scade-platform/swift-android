@@ -1,0 +1,22 @@
+AndroidLocation:
+- android/location/OnNmeaMessageListener
+- android/location/LocationListener
+- android/location/GnssClock
+- android/location/LocationManager
+- android/location/GnssMeasurementsEvent
+- android/location/GnssMeasurementsEvent$Callback
+- android/location/GpsStatus
+- android/location/GpsStatus$NmeaListener
+- android/location/GpsStatus$Listener
+- android/location/Address
+- android/location/Criteria
+- android/location/GnssStatus
+- android/location/GnssStatus$Callback
+- android/location/GnssMeasurement
+- android/location/Location
+- android/location/LocationProvider
+- android/location/SettingInjectorService
+- android/location/GpsSatellite
+- android/location/GnssNavigationMessage
+- android/location/GnssNavigationMessage$Callback
+- android/location/Geocoder
