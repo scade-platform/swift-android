@@ -13,7 +13,7 @@ public protocol SharedPreferences: JObjectConvertible {
 
   func getString(key: String, defValue: String) -> String
 
-  func getStringSet<R, T0>(key: String, defValues: T0?) -> R? where R: Java.Set, T0: Java.Set, R.E == String, T0.E == String
+  func getStringSet<T0, R>(key: String, defValues: T0?) -> R? where T0: Java.Set, R: Java.Set, T0.E == String, R.E == String
 
   func getInt(key: String, defValue: Int32) -> Int32
 
@@ -59,7 +59,7 @@ public extension SharedPreferencesProxyProtocol {
     self.javaObject.call(method: SharedPreferences__method__1, [key.toJavaParameter(), defValue.toJavaParameter()])
   }
 
-  func getStringSet<R, T0>(key: String, defValues: T0?) -> R? where R: Java.Set, T0: Java.Set, R.E == String, T0.E == String {
+  func getStringSet<T0, R>(key: String, defValues: T0?) -> R? where T0: Java.Set, R: Java.Set, T0.E == String, R.E == String {
     self.javaObject.call(method: SharedPreferences__method__2, [key.toJavaParameter(), defValues.toJavaParameter()])
   }
 

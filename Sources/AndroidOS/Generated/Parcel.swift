@@ -199,7 +199,7 @@ open class Parcel: Object {
     self.javaObject.call(method: Parcel__method__48, [val.toJavaParameter()])
   }
 
-  public func writeTypedList<T0, T>(val: T0?) -> Void where T0: List, T: Parcelable, T0.E == T {
+  public func writeTypedList<T, T0>(val: T0?) -> Void where T: Parcelable, T0: List, T0.E == T {
     self.javaObject.call(method: Parcel__method__49, [val.toJavaParameter()])
   }
 

@@ -8,7 +8,7 @@ public protocol LoaderManager where Self: Object {
   typealias LoaderCallbacks = AndroidApp.LoaderManagerLoaderCallbacks
   typealias LoaderCallbacksProxy = AndroidApp.LoaderManagerLoaderCallbacksProxy
 
-  func initLoader<T0, D>(id: Int32, args: Bundle?, callback: T0?) -> Loader<D>? where T0: LoaderManager.LoaderCallbacks, D: Object, T0.D == D
+  func initLoader<D, T0>(id: Int32, args: Bundle?, callback: T0?) -> Loader<D>? where D: Object, T0: LoaderManager.LoaderCallbacks, T0.D == D
 
   func restartLoader<D, T0>(id: Int32, args: Bundle?, callback: T0?) -> Loader<D>? where D: Object, T0: LoaderManager.LoaderCallbacks, T0.D == D
 
@@ -40,7 +40,7 @@ open class LoaderManagerProxy: Object, JInterfaceProxy, LoaderManager {
     self.init(obj.toJavaObject()!)
   }
 
-  public func initLoader<T0, D>(id: Int32, args: Bundle?, callback: T0?) -> Loader<D>? where T0: LoaderManager.LoaderCallbacks, D: Object, T0.D == D {
+  public func initLoader<D, T0>(id: Int32, args: Bundle?, callback: T0?) -> Loader<D>? where D: Object, T0: LoaderManager.LoaderCallbacks, T0.D == D {
     self.javaObject.call(method: LoaderManager__method__1, [id.toJavaParameter(), args.toJavaParameter(), callback.toJavaParameter()])
   }
 

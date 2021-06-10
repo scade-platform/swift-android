@@ -11,6 +11,7 @@ let package = Package(
     .library(name: "AndroidContent", type: .static, targets: ["AndroidContent"]),
     .library(name: "AndroidBluetooth", type: .static, targets: ["AndroidBluetooth"]),
     .library(name: "AndroidLocation", type: .static, targets: ["AndroidLocation"]),
+    .library(name: "AndroidNFC", type: .static, targets: ["AndroidNFC"]),
     .library(name: "AndroidMedia", type: .static, targets: ["AndroidMedia"]),
   ],
 
@@ -31,6 +32,8 @@ let package = Package(
     .target(name: "AndroidBluetooth", dependencies: ["CAndroidBluetooth", "AndroidOS", "Java", "AndroidContent"]),
     .target(name: "CAndroidLocation"),
     .target(name: "AndroidLocation", dependencies: ["CAndroidLocation", "AndroidOS", "Java", "AndroidApp", "AndroidContent"]),
+    .target(name: "CAndroidNFC"),
+    .target(name: "AndroidNFC", dependencies: ["CAndroidNFC", "AndroidOS", "Java", "AndroidApp", "AndroidContent"]),
     .target(name: "CAndroidMedia"),
     .target(name: "AndroidMedia", dependencies: ["CAndroidMedia", "AndroidOS", "Java", "AndroidApp", "AndroidContent"]),
   ]
