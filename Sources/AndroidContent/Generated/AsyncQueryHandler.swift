@@ -47,7 +47,7 @@ open class AsyncQueryHandlerWorkerHandler: Object {}
 // ------------------------------------------------------------------------------------
 
 open class AsyncQueryHandlerWorkerArgs: Object {
-  public var cookie: Object {
+  public var cookie: Object? {
     get {
       javaObject.get(field: AsyncQueryHandlerWorkerArgs__field__0)
     }
@@ -65,7 +65,7 @@ open class AsyncQueryHandlerWorkerArgs: Object {
     }
   }
 
-  public var projection: String {
+  public var projection: [String] {
     get {
       javaObject.get(field: AsyncQueryHandlerWorkerArgs__field__2)
     }
@@ -74,7 +74,7 @@ open class AsyncQueryHandlerWorkerArgs: Object {
     }
   }
 
-  public var result: Object {
+  public var result: Object? {
     get {
       javaObject.get(field: AsyncQueryHandlerWorkerArgs__field__3)
     }
@@ -92,7 +92,7 @@ open class AsyncQueryHandlerWorkerArgs: Object {
     }
   }
 
-  public var selectionArgs: String {
+  public var selectionArgs: [String] {
     get {
       javaObject.get(field: AsyncQueryHandlerWorkerArgs__field__5)
     }
@@ -101,7 +101,7 @@ open class AsyncQueryHandlerWorkerArgs: Object {
     }
   }
 
-  public var values: ContentValues {
+  public var values: ContentValues? {
     get {
       javaObject.get(field: AsyncQueryHandlerWorkerArgs__field__6)
     }

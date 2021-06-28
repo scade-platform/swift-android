@@ -23,7 +23,7 @@ open class ApplicationErrorReport: Object, Parcelable {
 
   public static let TYPE_RUNNING_SERVICE: Int32 = ApplicationErrorReport__class.getStatic(field: ApplicationErrorReport__field__4)
 
-  public var anrInfo: ApplicationErrorReport.AnrInfo {
+  public var anrInfo: ApplicationErrorReport.AnrInfo? {
     get {
       javaObject.get(field: ApplicationErrorReport__field__5)
     }
@@ -32,7 +32,7 @@ open class ApplicationErrorReport: Object, Parcelable {
     }
   }
 
-  public var batteryInfo: ApplicationErrorReport.BatteryInfo {
+  public var batteryInfo: ApplicationErrorReport.BatteryInfo? {
     get {
       javaObject.get(field: ApplicationErrorReport__field__6)
     }
@@ -41,7 +41,7 @@ open class ApplicationErrorReport: Object, Parcelable {
     }
   }
 
-  public var crashInfo: ApplicationErrorReport.CrashInfo {
+  public var crashInfo: ApplicationErrorReport.CrashInfo? {
     get {
       javaObject.get(field: ApplicationErrorReport__field__7)
     }
@@ -77,7 +77,7 @@ open class ApplicationErrorReport: Object, Parcelable {
     }
   }
 
-  public var runningServiceInfo: ApplicationErrorReport.RunningServiceInfo {
+  public var runningServiceInfo: ApplicationErrorReport.RunningServiceInfo? {
     get {
       javaObject.get(field: ApplicationErrorReport__field__11)
     }

@@ -24,7 +24,7 @@ open class PermissionGroupInfo: PackageItemInfo, Parcelable {
     }
   }
 
-  public var nonLocalizedDescription: String {
+  public var nonLocalizedDescription: String? {
     get {
       javaObject.get(field: PermissionGroupInfo__field__3)
     }

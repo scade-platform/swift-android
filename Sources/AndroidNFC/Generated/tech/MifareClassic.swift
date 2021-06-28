@@ -5,11 +5,11 @@ import Java
 open class MifareClassic: Object, BasicTagTechnology {
   public static let BLOCK_SIZE: Int32 = MifareClassic__class.getStatic(field: MifareClassic__field__0)
 
-  public static let KEY_DEFAULT: Int8 = MifareClassic__class.getStatic(field: MifareClassic__field__1)
+  public static let KEY_DEFAULT: [Int8] = MifareClassic__class.getStatic(field: MifareClassic__field__1)
 
-  public static let KEY_MIFARE_APPLICATION_DIRECTORY: Int8 = MifareClassic__class.getStatic(field: MifareClassic__field__2)
+  public static let KEY_MIFARE_APPLICATION_DIRECTORY: [Int8] = MifareClassic__class.getStatic(field: MifareClassic__field__2)
 
-  public static let KEY_NFC_FORUM: Int8 = MifareClassic__class.getStatic(field: MifareClassic__field__3)
+  public static let KEY_NFC_FORUM: [Int8] = MifareClassic__class.getStatic(field: MifareClassic__field__3)
 
   public static let SIZE_1K: Int32 = MifareClassic__class.getStatic(field: MifareClassic__field__4)
 

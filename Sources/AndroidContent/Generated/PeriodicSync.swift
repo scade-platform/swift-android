@@ -6,7 +6,7 @@ import Java
 open class PeriodicSync: Object, Parcelable {
   private(set) lazy var authority: String = javaObject.get(field: PeriodicSync__field__0)
 
-  private(set) lazy var extras: Bundle = javaObject.get(field: PeriodicSync__field__1)
+  private(set) lazy var extras: Bundle? = javaObject.get(field: PeriodicSync__field__1)
 
   private(set) lazy var period: Int64 = javaObject.get(field: PeriodicSync__field__2)
 

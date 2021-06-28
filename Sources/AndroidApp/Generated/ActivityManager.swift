@@ -243,7 +243,7 @@ open class ActivityManagerRunningAppProcessInfo: Object, Parcelable {
     }
   }
 
-  public var importanceReasonComponent: ComponentName {
+  public var importanceReasonComponent: ComponentName? {
     get {
       javaObject.get(field: ActivityManagerRunningAppProcessInfo__field__14)
     }
@@ -288,7 +288,7 @@ open class ActivityManagerRunningAppProcessInfo: Object, Parcelable {
     }
   }
 
-  public var pkgList: String {
+  public var pkgList: [String] {
     get {
       javaObject.get(field: ActivityManagerRunningAppProcessInfo__field__19)
     }
@@ -362,7 +362,7 @@ open class ActivityManagerProcessErrorStateInfo: Object, Parcelable {
     }
   }
 
-  public var crashData: Int8 {
+  public var crashData: [Int8] {
     get {
       javaObject.get(field: ActivityManagerProcessErrorStateInfo__field__4)
     }
@@ -633,7 +633,7 @@ open class ActivityManagerRunningServiceInfo: Object, Parcelable {
     }
   }
 
-  public var service: ComponentName {
+  public var service: ComponentName? {
     get {
       javaObject.get(field: ActivityManagerRunningServiceInfo__field__15)
     }
@@ -688,7 +688,7 @@ open class ActivityManagerRunningServiceInfo: Object, Parcelable {
 // ------------------------------------------------------------------------------------
 
 open class ActivityManagerRunningTaskInfo: Object, Parcelable {
-  public var baseActivity: ComponentName {
+  public var baseActivity: ComponentName? {
     get {
       javaObject.get(field: ActivityManagerRunningTaskInfo__field__0)
     }
@@ -697,7 +697,7 @@ open class ActivityManagerRunningTaskInfo: Object, Parcelable {
     }
   }
 
-  public var description: String {
+  public var description: String? {
     get {
       javaObject.get(field: ActivityManagerRunningTaskInfo__field__1)
     }
@@ -733,7 +733,7 @@ open class ActivityManagerRunningTaskInfo: Object, Parcelable {
     }
   }
 
-  public var topActivity: ComponentName {
+  public var topActivity: ComponentName? {
     get {
       javaObject.get(field: ActivityManagerRunningTaskInfo__field__5)
     }
@@ -779,7 +779,7 @@ open class ActivityManagerRecentTaskInfo: Object, Parcelable {
     }
   }
 
-  public var baseActivity: ComponentName {
+  public var baseActivity: ComponentName? {
     get {
       javaObject.get(field: ActivityManagerRecentTaskInfo__field__1)
     }
@@ -788,7 +788,7 @@ open class ActivityManagerRecentTaskInfo: Object, Parcelable {
     }
   }
 
-  public var baseIntent: Intent {
+  public var baseIntent: Intent? {
     get {
       javaObject.get(field: ActivityManagerRecentTaskInfo__field__2)
     }
@@ -797,7 +797,7 @@ open class ActivityManagerRecentTaskInfo: Object, Parcelable {
     }
   }
 
-  public var description: String {
+  public var description: String? {
     get {
       javaObject.get(field: ActivityManagerRecentTaskInfo__field__3)
     }
@@ -824,7 +824,7 @@ open class ActivityManagerRecentTaskInfo: Object, Parcelable {
     }
   }
 
-  public var origActivity: ComponentName {
+  public var origActivity: ComponentName? {
     get {
       javaObject.get(field: ActivityManagerRecentTaskInfo__field__6)
     }
@@ -842,7 +842,7 @@ open class ActivityManagerRecentTaskInfo: Object, Parcelable {
     }
   }
 
-  public var taskDescription: ActivityManager.TaskDescription {
+  public var taskDescription: ActivityManager.TaskDescription? {
     get {
       javaObject.get(field: ActivityManagerRecentTaskInfo__field__8)
     }
@@ -851,7 +851,7 @@ open class ActivityManagerRecentTaskInfo: Object, Parcelable {
     }
   }
 
-  public var topActivity: ComponentName {
+  public var topActivity: ComponentName? {
     get {
       javaObject.get(field: ActivityManagerRecentTaskInfo__field__9)
     }

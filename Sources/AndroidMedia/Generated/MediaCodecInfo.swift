@@ -547,7 +547,7 @@ open class MediaCodecInfoCodecCapabilities: Object {
 
   public static let FEATURE_TunneledPlayback: String = MediaCodecInfoCodecCapabilities__class.getStatic(field: MediaCodecInfoCodecCapabilities__field__55)
 
-  public var colorFormats: Int32 {
+  public var colorFormats: [Int32] {
     get {
       javaObject.get(field: MediaCodecInfoCodecCapabilities__field__56)
     }
@@ -556,7 +556,7 @@ open class MediaCodecInfoCodecCapabilities: Object {
     }
   }
 
-  public var profileLevels: MediaCodecInfo.CodecProfileLevel {
+  public var profileLevels: [MediaCodecInfo.CodecProfileLevel?] {
     get {
       javaObject.get(field: MediaCodecInfoCodecCapabilities__field__57)
     }

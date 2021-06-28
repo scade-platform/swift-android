@@ -3,7 +3,7 @@
 import Java
 
 open class Bundle: BaseBundle, Parcelable {
-  public static let EMPTY: Bundle = Bundle__class.getStatic(field: Bundle__field__0)
+  public static let EMPTY: Bundle? = Bundle__class.getStatic(field: Bundle__field__0)
 
   override public init() {
     super.init(ctor: Bundle__method__0, [])

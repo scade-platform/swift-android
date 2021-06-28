@@ -28,7 +28,7 @@ open class AppWidgetProviderInfo: Object, Parcelable {
     }
   }
 
-  public var configure: ComponentName {
+  public var configure: ComponentName? {
     get {
       javaObject.get(field: AppWidgetProviderInfo__field__8)
     }
@@ -118,7 +118,7 @@ open class AppWidgetProviderInfo: Object, Parcelable {
     }
   }
 
-  public var provider: ComponentName {
+  public var provider: ComponentName? {
     get {
       javaObject.get(field: AppWidgetProviderInfo__field__18)
     }

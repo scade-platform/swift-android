@@ -33,7 +33,7 @@ open class DrmInitDataProxy: Object, JInterfaceProxy, DrmInitData {
 // ------------------------------------------------------------------------------------
 
 open class DrmInitDataSchemeInitData: Object {
-  private(set) lazy var data: Int8 = javaObject.get(field: DrmInitDataSchemeInitData__field__0)
+  private(set) lazy var data: [Int8] = javaObject.get(field: DrmInitDataSchemeInitData__field__0)
 
   private(set) lazy var mimeType: String = javaObject.get(field: DrmInitDataSchemeInitData__field__1)
 }

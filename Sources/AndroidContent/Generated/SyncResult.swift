@@ -4,7 +4,7 @@ import AndroidOS
 import Java
 
 open class SyncResult: Object, Parcelable {
-  public static let ALREADY_IN_PROGRESS: SyncResult = SyncResult__class.getStatic(field: SyncResult__field__0)
+  public static let ALREADY_IN_PROGRESS: SyncResult? = SyncResult__class.getStatic(field: SyncResult__field__0)
 
   public var databaseError: Bool {
     get {
@@ -51,7 +51,7 @@ open class SyncResult: Object, Parcelable {
     }
   }
 
-  private(set) lazy var stats: SyncStats = javaObject.get(field: SyncResult__field__6)
+  private(set) lazy var stats: SyncStats? = javaObject.get(field: SyncResult__field__6)
 
   private(set) lazy var syncAlreadyInProgress: Bool = javaObject.get(field: SyncResult__field__7)
 

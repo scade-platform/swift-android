@@ -100,7 +100,7 @@ open class Equalizer: AudioEffect {
 // ------------------------------------------------------------------------------------
 
 open class EqualizerSettings: Object {
-  public var bandLevels: Int16 {
+  public var bandLevels: [Int16] {
     get {
       javaObject.get(field: EqualizerSettings__field__0)
     }

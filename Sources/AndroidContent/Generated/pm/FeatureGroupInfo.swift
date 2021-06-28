@@ -4,7 +4,7 @@ import AndroidOS
 import Java
 
 open class FeatureGroupInfo: Object, Parcelable {
-  public var features: FeatureInfo {
+  public var features: [FeatureInfo?] {
     get {
       javaObject.get(field: FeatureGroupInfo__field__0)
     }

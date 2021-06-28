@@ -68,7 +68,7 @@ open class LauncherActivityListItem: Object {
     }
   }
 
-  public var extras: Bundle {
+  public var extras: Bundle? {
     get {
       javaObject.get(field: LauncherActivityListItem__field__1)
     }
@@ -77,7 +77,7 @@ open class LauncherActivityListItem: Object {
     }
   }
 
-  public var label: String {
+  public var label: String? {
     get {
       javaObject.get(field: LauncherActivityListItem__field__2)
     }
@@ -95,7 +95,7 @@ open class LauncherActivityListItem: Object {
     }
   }
 
-  public var resolveInfo: ResolveInfo {
+  public var resolveInfo: ResolveInfo? {
     get {
       javaObject.get(field: LauncherActivityListItem__field__4)
     }

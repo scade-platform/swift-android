@@ -6,7 +6,7 @@ import Java
 open class ResolveInfo: Object, Parcelable {
   public typealias DisplayNameComparator = AndroidContent.ResolveInfoDisplayNameComparator
 
-  public var activityInfo: ActivityInfo {
+  public var activityInfo: ActivityInfo? {
     get {
       javaObject.get(field: ResolveInfo__field__0)
     }
@@ -15,7 +15,7 @@ open class ResolveInfo: Object, Parcelable {
     }
   }
 
-  public var filter: IntentFilter {
+  public var filter: IntentFilter? {
     get {
       javaObject.get(field: ResolveInfo__field__1)
     }
@@ -60,7 +60,7 @@ open class ResolveInfo: Object, Parcelable {
     }
   }
 
-  public var nonLocalizedLabel: String {
+  public var nonLocalizedLabel: String? {
     get {
       javaObject.get(field: ResolveInfo__field__6)
     }
@@ -87,7 +87,7 @@ open class ResolveInfo: Object, Parcelable {
     }
   }
 
-  public var providerInfo: ProviderInfo {
+  public var providerInfo: ProviderInfo? {
     get {
       javaObject.get(field: ResolveInfo__field__9)
     }
@@ -105,7 +105,7 @@ open class ResolveInfo: Object, Parcelable {
     }
   }
 
-  public var serviceInfo: ServiceInfo {
+  public var serviceInfo: ServiceInfo? {
     get {
       javaObject.get(field: ResolveInfo__field__11)
     }

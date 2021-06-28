@@ -167,7 +167,7 @@ open class Notification: Object, Parcelable {
 
   public static let VISIBILITY_SECRET: Int32 = Notification__class.getStatic(field: Notification__field__66)
 
-  public var actions: Notification.Action {
+  public var actions: [Notification.Action?] {
     get {
       javaObject.get(field: Notification__field__67)
     }
@@ -203,7 +203,7 @@ open class Notification: Object, Parcelable {
     }
   }
 
-  public var contentIntent: PendingIntent {
+  public var contentIntent: PendingIntent? {
     get {
       javaObject.get(field: Notification__field__71)
     }
@@ -221,7 +221,7 @@ open class Notification: Object, Parcelable {
     }
   }
 
-  public var deleteIntent: PendingIntent {
+  public var deleteIntent: PendingIntent? {
     get {
       javaObject.get(field: Notification__field__73)
     }
@@ -230,7 +230,7 @@ open class Notification: Object, Parcelable {
     }
   }
 
-  public var extras: Bundle {
+  public var extras: Bundle? {
     get {
       javaObject.get(field: Notification__field__74)
     }
@@ -248,7 +248,7 @@ open class Notification: Object, Parcelable {
     }
   }
 
-  public var fullScreenIntent: PendingIntent {
+  public var fullScreenIntent: PendingIntent? {
     get {
       javaObject.get(field: Notification__field__76)
     }
@@ -320,7 +320,7 @@ open class Notification: Object, Parcelable {
     }
   }
 
-  public var publicVersion: Notification {
+  public var publicVersion: Notification? {
     get {
       javaObject.get(field: Notification__field__84)
     }
@@ -329,7 +329,7 @@ open class Notification: Object, Parcelable {
     }
   }
 
-  public var tickerText: String {
+  public var tickerText: String? {
     get {
       javaObject.get(field: Notification__field__85)
     }
@@ -338,7 +338,7 @@ open class Notification: Object, Parcelable {
     }
   }
 
-  public var vibrate: Int64 {
+  public var vibrate: [Int64] {
     get {
       javaObject.get(field: Notification__field__86)
     }
@@ -1234,7 +1234,7 @@ open class NotificationAction: Object, Parcelable {
 
   public typealias Builder = AndroidApp.NotificationActionBuilder
 
-  public var actionIntent: PendingIntent {
+  public var actionIntent: PendingIntent? {
     get {
       javaObject.get(field: NotificationAction__field__0)
     }
@@ -1252,7 +1252,7 @@ open class NotificationAction: Object, Parcelable {
     }
   }
 
-  public var title: String {
+  public var title: String? {
     get {
       javaObject.get(field: NotificationAction__field__2)
     }

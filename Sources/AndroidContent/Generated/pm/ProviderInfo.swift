@@ -60,7 +60,7 @@ open class ProviderInfo: ComponentInfo, Parcelable {
     }
   }
 
-  public var pathPermissions: PathPermission {
+  public var pathPermissions: [PathPermission?] {
     get {
       javaObject.get(field: ProviderInfo__field__7)
     }

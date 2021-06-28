@@ -42,7 +42,7 @@ open class PackageItemInfo: Object {
     }
   }
 
-  public var metaData: Bundle {
+  public var metaData: Bundle? {
     get {
       javaObject.get(field: PackageItemInfo__field__4)
     }
@@ -60,7 +60,7 @@ open class PackageItemInfo: Object {
     }
   }
 
-  public var nonLocalizedLabel: String {
+  public var nonLocalizedLabel: String? {
     get {
       javaObject.get(field: PackageItemInfo__field__6)
     }

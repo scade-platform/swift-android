@@ -4,11 +4,11 @@ import AndroidOS
 import Java
 
 open class BluetoothGattDescriptor: Object, Parcelable {
-  public static let DISABLE_NOTIFICATION_VALUE: Int8 = BluetoothGattDescriptor__class.getStatic(field: BluetoothGattDescriptor__field__0)
+  public static let DISABLE_NOTIFICATION_VALUE: [Int8] = BluetoothGattDescriptor__class.getStatic(field: BluetoothGattDescriptor__field__0)
 
-  public static let ENABLE_INDICATION_VALUE: Int8 = BluetoothGattDescriptor__class.getStatic(field: BluetoothGattDescriptor__field__1)
+  public static let ENABLE_INDICATION_VALUE: [Int8] = BluetoothGattDescriptor__class.getStatic(field: BluetoothGattDescriptor__field__1)
 
-  public static let ENABLE_NOTIFICATION_VALUE: Int8 = BluetoothGattDescriptor__class.getStatic(field: BluetoothGattDescriptor__field__2)
+  public static let ENABLE_NOTIFICATION_VALUE: [Int8] = BluetoothGattDescriptor__class.getStatic(field: BluetoothGattDescriptor__field__2)
 
   public static let PERMISSION_READ: Int32 = BluetoothGattDescriptor__class.getStatic(field: BluetoothGattDescriptor__field__3)
 

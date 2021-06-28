@@ -12,7 +12,7 @@ open class PackageInfo: Object, Parcelable {
 
   public static let REQUESTED_PERMISSION_GRANTED: Int32 = PackageInfo__class.getStatic(field: PackageInfo__field__3)
 
-  public var activities: ActivityInfo {
+  public var activities: [ActivityInfo?] {
     get {
       javaObject.get(field: PackageInfo__field__4)
     }
@@ -21,7 +21,7 @@ open class PackageInfo: Object, Parcelable {
     }
   }
 
-  public var applicationInfo: ApplicationInfo {
+  public var applicationInfo: ApplicationInfo? {
     get {
       javaObject.get(field: PackageInfo__field__5)
     }
@@ -39,7 +39,7 @@ open class PackageInfo: Object, Parcelable {
     }
   }
 
-  public var configPreferences: ConfigurationInfo {
+  public var configPreferences: [ConfigurationInfo?] {
     get {
       javaObject.get(field: PackageInfo__field__7)
     }
@@ -48,7 +48,7 @@ open class PackageInfo: Object, Parcelable {
     }
   }
 
-  public var featureGroups: FeatureGroupInfo {
+  public var featureGroups: [FeatureGroupInfo?] {
     get {
       javaObject.get(field: PackageInfo__field__8)
     }
@@ -66,7 +66,7 @@ open class PackageInfo: Object, Parcelable {
     }
   }
 
-  public var gids: Int32 {
+  public var gids: [Int32] {
     get {
       javaObject.get(field: PackageInfo__field__10)
     }
@@ -84,7 +84,7 @@ open class PackageInfo: Object, Parcelable {
     }
   }
 
-  public var instrumentation: InstrumentationInfo {
+  public var instrumentation: [InstrumentationInfo?] {
     get {
       javaObject.get(field: PackageInfo__field__12)
     }
@@ -111,7 +111,7 @@ open class PackageInfo: Object, Parcelable {
     }
   }
 
-  public var permissions: PermissionInfo {
+  public var permissions: [PermissionInfo?] {
     get {
       javaObject.get(field: PackageInfo__field__15)
     }
@@ -120,7 +120,7 @@ open class PackageInfo: Object, Parcelable {
     }
   }
 
-  public var providers: ProviderInfo {
+  public var providers: [ProviderInfo?] {
     get {
       javaObject.get(field: PackageInfo__field__16)
     }
@@ -129,7 +129,7 @@ open class PackageInfo: Object, Parcelable {
     }
   }
 
-  public var receivers: ActivityInfo {
+  public var receivers: [ActivityInfo?] {
     get {
       javaObject.get(field: PackageInfo__field__17)
     }
@@ -138,7 +138,7 @@ open class PackageInfo: Object, Parcelable {
     }
   }
 
-  public var reqFeatures: FeatureInfo {
+  public var reqFeatures: [FeatureInfo?] {
     get {
       javaObject.get(field: PackageInfo__field__18)
     }
@@ -147,7 +147,7 @@ open class PackageInfo: Object, Parcelable {
     }
   }
 
-  public var requestedPermissions: String {
+  public var requestedPermissions: [String] {
     get {
       javaObject.get(field: PackageInfo__field__19)
     }
@@ -156,7 +156,7 @@ open class PackageInfo: Object, Parcelable {
     }
   }
 
-  public var requestedPermissionsFlags: Int32 {
+  public var requestedPermissionsFlags: [Int32] {
     get {
       javaObject.get(field: PackageInfo__field__20)
     }
@@ -165,7 +165,7 @@ open class PackageInfo: Object, Parcelable {
     }
   }
 
-  public var services: ServiceInfo {
+  public var services: [ServiceInfo?] {
     get {
       javaObject.get(field: PackageInfo__field__21)
     }
@@ -192,7 +192,7 @@ open class PackageInfo: Object, Parcelable {
     }
   }
 
-  public var signatures: Signature {
+  public var signatures: [Signature?] {
     get {
       javaObject.get(field: PackageInfo__field__24)
     }
@@ -201,7 +201,7 @@ open class PackageInfo: Object, Parcelable {
     }
   }
 
-  public var splitNames: String {
+  public var splitNames: [String] {
     get {
       javaObject.get(field: PackageInfo__field__25)
     }
@@ -210,7 +210,7 @@ open class PackageInfo: Object, Parcelable {
     }
   }
 
-  public var splitRevisionCodes: Int32 {
+  public var splitRevisionCodes: [Int32] {
     get {
       javaObject.get(field: PackageInfo__field__26)
     }

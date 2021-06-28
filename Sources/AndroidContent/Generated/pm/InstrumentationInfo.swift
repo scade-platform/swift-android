@@ -49,7 +49,7 @@ open class InstrumentationInfo: PackageItemInfo, Parcelable {
     }
   }
 
-  public var splitPublicSourceDirs: String {
+  public var splitPublicSourceDirs: [String] {
     get {
       javaObject.get(field: InstrumentationInfo__field__5)
     }
@@ -58,7 +58,7 @@ open class InstrumentationInfo: PackageItemInfo, Parcelable {
     }
   }
 
-  public var splitSourceDirs: String {
+  public var splitSourceDirs: [String] {
     get {
       javaObject.get(field: InstrumentationInfo__field__6)
     }

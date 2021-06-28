@@ -3,7 +3,7 @@
 import Java
 
 open class NfcEvent: Object {
-  private(set) lazy var nfcAdapter: NfcAdapter = javaObject.get(field: NfcEvent__field__0)
+  private(set) lazy var nfcAdapter: NfcAdapter? = javaObject.get(field: NfcEvent__field__0)
 
   private(set) lazy var peerLlcpMajorVersion: Int32 = javaObject.get(field: NfcEvent__field__1)
 

@@ -4,7 +4,7 @@ import AndroidOS
 import Java
 
 open class ComponentInfo: PackageItemInfo {
-  public var applicationInfo: ApplicationInfo {
+  public var applicationInfo: ApplicationInfo? {
     get {
       javaObject.get(field: ComponentInfo__field__0)
     }

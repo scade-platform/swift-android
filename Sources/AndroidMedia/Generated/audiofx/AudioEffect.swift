@@ -31,23 +31,23 @@ open class AudioEffect: Object {
 
   public static let EFFECT_INSERT: String = AudioEffect__class.getStatic(field: AudioEffect__field__9)
 
-  public static let EFFECT_TYPE_AEC: UUID = AudioEffect__class.getStatic(field: AudioEffect__field__10)
+  public static let EFFECT_TYPE_AEC: UUID? = AudioEffect__class.getStatic(field: AudioEffect__field__10)
 
-  public static let EFFECT_TYPE_AGC: UUID = AudioEffect__class.getStatic(field: AudioEffect__field__11)
+  public static let EFFECT_TYPE_AGC: UUID? = AudioEffect__class.getStatic(field: AudioEffect__field__11)
 
-  public static let EFFECT_TYPE_BASS_BOOST: UUID = AudioEffect__class.getStatic(field: AudioEffect__field__12)
+  public static let EFFECT_TYPE_BASS_BOOST: UUID? = AudioEffect__class.getStatic(field: AudioEffect__field__12)
 
-  public static let EFFECT_TYPE_ENV_REVERB: UUID = AudioEffect__class.getStatic(field: AudioEffect__field__13)
+  public static let EFFECT_TYPE_ENV_REVERB: UUID? = AudioEffect__class.getStatic(field: AudioEffect__field__13)
 
-  public static let EFFECT_TYPE_EQUALIZER: UUID = AudioEffect__class.getStatic(field: AudioEffect__field__14)
+  public static let EFFECT_TYPE_EQUALIZER: UUID? = AudioEffect__class.getStatic(field: AudioEffect__field__14)
 
-  public static let EFFECT_TYPE_LOUDNESS_ENHANCER: UUID = AudioEffect__class.getStatic(field: AudioEffect__field__15)
+  public static let EFFECT_TYPE_LOUDNESS_ENHANCER: UUID? = AudioEffect__class.getStatic(field: AudioEffect__field__15)
 
-  public static let EFFECT_TYPE_NS: UUID = AudioEffect__class.getStatic(field: AudioEffect__field__16)
+  public static let EFFECT_TYPE_NS: UUID? = AudioEffect__class.getStatic(field: AudioEffect__field__16)
 
-  public static let EFFECT_TYPE_PRESET_REVERB: UUID = AudioEffect__class.getStatic(field: AudioEffect__field__17)
+  public static let EFFECT_TYPE_PRESET_REVERB: UUID? = AudioEffect__class.getStatic(field: AudioEffect__field__17)
 
-  public static let EFFECT_TYPE_VIRTUALIZER: UUID = AudioEffect__class.getStatic(field: AudioEffect__field__18)
+  public static let EFFECT_TYPE_VIRTUALIZER: UUID? = AudioEffect__class.getStatic(field: AudioEffect__field__18)
 
   public static let ERROR: Int32 = AudioEffect__class.getStatic(field: AudioEffect__field__19)
 
@@ -200,7 +200,7 @@ open class AudioEffectDescriptor: Object {
     }
   }
 
-  public var _type: UUID {
+  public var _type: UUID? {
     get {
       javaObject.get(field: AudioEffectDescriptor__field__3)
     }
@@ -209,7 +209,7 @@ open class AudioEffectDescriptor: Object {
     }
   }
 
-  public var uuid: UUID {
+  public var uuid: UUID? {
     get {
       javaObject.get(field: AudioEffectDescriptor__field__4)
     }

@@ -236,7 +236,7 @@ public final class MediaCodecOnFrameRenderedListenerProxy: Object, JInterfacePro
 open class MediaCodecCryptoInfo: Object {
   public typealias Pattern = AndroidMedia.MediaCodecCryptoInfoPattern
 
-  public var iv: Int8 {
+  public var iv: [Int8] {
     get {
       javaObject.get(field: MediaCodecCryptoInfo__field__0)
     }
@@ -245,7 +245,7 @@ open class MediaCodecCryptoInfo: Object {
     }
   }
 
-  public var key: Int8 {
+  public var key: [Int8] {
     get {
       javaObject.get(field: MediaCodecCryptoInfo__field__1)
     }
@@ -263,7 +263,7 @@ open class MediaCodecCryptoInfo: Object {
     }
   }
 
-  public var numBytesOfClearData: Int32 {
+  public var numBytesOfClearData: [Int32] {
     get {
       javaObject.get(field: MediaCodecCryptoInfo__field__3)
     }
@@ -272,7 +272,7 @@ open class MediaCodecCryptoInfo: Object {
     }
   }
 
-  public var numBytesOfEncryptedData: Int32 {
+  public var numBytesOfEncryptedData: [Int32] {
     get {
       javaObject.get(field: MediaCodecCryptoInfo__field__4)
     }

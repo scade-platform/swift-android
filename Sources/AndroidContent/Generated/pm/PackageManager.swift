@@ -125,7 +125,7 @@ public protocol PackageManager where Self: Object {
 
   func clearPackagePreferredActivities(packageName: String) -> Void
 
-  func getPreferredActivities<T1, T0>(outFilters: T0?, outActivities: T1?, packageName: String) -> Int32 where T1: List, T0: List, T1.E == ComponentName, T0.E == IntentFilter
+  func getPreferredActivities<T0, T1>(outFilters: T0?, outActivities: T1?, packageName: String) -> Int32 where T0: List, T1: List, T0.E == IntentFilter, T1.E == ComponentName
 
   func setComponentEnabledSetting(componentName: ComponentName?, newState: Int32, flags: Int32) -> Void
 
@@ -706,7 +706,7 @@ open class PackageManagerProxy: Object, JInterfaceProxy, PackageManager {
     self.javaObject.call(method: PackageManager__method__60, [packageName.toJavaParameter()])
   }
 
-  public func getPreferredActivities<T1, T0>(outFilters: T0?, outActivities: T1?, packageName: String) -> Int32 where T1: List, T0: List, T1.E == ComponentName, T0.E == IntentFilter {
+  public func getPreferredActivities<T0, T1>(outFilters: T0?, outActivities: T1?, packageName: String) -> Int32 where T0: List, T1: List, T0.E == IntentFilter, T1.E == ComponentName {
     self.javaObject.call(method: PackageManager__method__61, [outFilters.toJavaParameter(), outActivities.toJavaParameter(), packageName.toJavaParameter()])
   }
 

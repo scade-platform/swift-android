@@ -29,7 +29,7 @@ open class Entity: Object {
 // ------------------------------------------------------------------------------------
 
 open class EntityNamedContentValues: Object {
-  private(set) lazy var values: ContentValues = javaObject.get(field: EntityNamedContentValues__field__0)
+  private(set) lazy var values: ContentValues? = javaObject.get(field: EntityNamedContentValues__field__0)
 }
 
 // ------------------------------------------------------------------------------------

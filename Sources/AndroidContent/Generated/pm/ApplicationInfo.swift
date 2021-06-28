@@ -212,7 +212,7 @@ open class ApplicationInfo: PackageItemInfo, Parcelable {
     }
   }
 
-  public var sharedLibraryFiles: String {
+  public var sharedLibraryFiles: [String] {
     get {
       javaObject.get(field: ApplicationInfo__field__48)
     }
@@ -230,7 +230,7 @@ open class ApplicationInfo: PackageItemInfo, Parcelable {
     }
   }
 
-  public var splitPublicSourceDirs: String {
+  public var splitPublicSourceDirs: [String] {
     get {
       javaObject.get(field: ApplicationInfo__field__50)
     }
@@ -239,7 +239,7 @@ open class ApplicationInfo: PackageItemInfo, Parcelable {
     }
   }
 
-  public var splitSourceDirs: String {
+  public var splitSourceDirs: [String] {
     get {
       javaObject.get(field: ApplicationInfo__field__51)
     }

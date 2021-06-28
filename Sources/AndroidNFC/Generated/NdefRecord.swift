@@ -4,19 +4,19 @@ import AndroidOS
 import Java
 
 open class NdefRecord: Object, Parcelable {
-  public static let RTD_ALTERNATIVE_CARRIER: Int8 = NdefRecord__class.getStatic(field: NdefRecord__field__0)
+  public static let RTD_ALTERNATIVE_CARRIER: [Int8] = NdefRecord__class.getStatic(field: NdefRecord__field__0)
 
-  public static let RTD_HANDOVER_CARRIER: Int8 = NdefRecord__class.getStatic(field: NdefRecord__field__1)
+  public static let RTD_HANDOVER_CARRIER: [Int8] = NdefRecord__class.getStatic(field: NdefRecord__field__1)
 
-  public static let RTD_HANDOVER_REQUEST: Int8 = NdefRecord__class.getStatic(field: NdefRecord__field__2)
+  public static let RTD_HANDOVER_REQUEST: [Int8] = NdefRecord__class.getStatic(field: NdefRecord__field__2)
 
-  public static let RTD_HANDOVER_SELECT: Int8 = NdefRecord__class.getStatic(field: NdefRecord__field__3)
+  public static let RTD_HANDOVER_SELECT: [Int8] = NdefRecord__class.getStatic(field: NdefRecord__field__3)
 
-  public static let RTD_SMART_POSTER: Int8 = NdefRecord__class.getStatic(field: NdefRecord__field__4)
+  public static let RTD_SMART_POSTER: [Int8] = NdefRecord__class.getStatic(field: NdefRecord__field__4)
 
-  public static let RTD_TEXT: Int8 = NdefRecord__class.getStatic(field: NdefRecord__field__5)
+  public static let RTD_TEXT: [Int8] = NdefRecord__class.getStatic(field: NdefRecord__field__5)
 
-  public static let RTD_URI: Int8 = NdefRecord__class.getStatic(field: NdefRecord__field__6)
+  public static let RTD_URI: [Int8] = NdefRecord__class.getStatic(field: NdefRecord__field__6)
 
   public static let TNF_ABSOLUTE_URI: Int16 = NdefRecord__class.getStatic(field: NdefRecord__field__7)
 

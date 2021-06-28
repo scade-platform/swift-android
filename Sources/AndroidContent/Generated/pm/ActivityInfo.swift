@@ -250,7 +250,7 @@ open class ActivityInfo: ComponentInfo, Parcelable {
     }
   }
 
-  public var windowLayout: ActivityInfo.WindowLayout {
+  public var windowLayout: ActivityInfo.WindowLayout? {
     get {
       javaObject.get(field: ActivityInfo__field__73)
     }
