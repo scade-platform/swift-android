@@ -1,6 +1,5 @@
 
 
-import AndroidOS
 import Java
 
 open class ComponentInfo: PackageItemInfo {

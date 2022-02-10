@@ -1,4 +1,4 @@
 Android:
 - android/Manifest
-- android/Manifest$permission_group
 - android/Manifest$permission
+- android/Manifest$permission_group

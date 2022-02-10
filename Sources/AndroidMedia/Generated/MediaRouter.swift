@@ -266,7 +266,7 @@ open class MediaRouterRouteCategory: Object {
     self.javaObject.call(method: MediaRouterRouteCategory__method__1, [JavaParameter(object: context?.toJavaObject())])
   }
 
-  public func getRoutes<T0, R>(_out: T0?) -> R? where T0: List, R: List, T0.E == MediaRouter.RouteInfo, R.E == MediaRouter.RouteInfo {
+  public func getRoutes<T0>(_out: T0?) -> T0? where T0: List, T0.E == MediaRouter.RouteInfo {
     self.javaObject.call(method: MediaRouterRouteCategory__method__2, [_out.toJavaParameter()])
   }
 
