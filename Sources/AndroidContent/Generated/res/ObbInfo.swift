@@ -42,11 +42,11 @@ open class ObbInfo: Object, Parcelable {
     }
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ObbInfo__method__0, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ObbInfo__method__1, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }

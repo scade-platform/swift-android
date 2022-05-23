@@ -9,36 +9,28 @@ open class KeyguardManager: Object {
 
   public typealias KeyguardLock = AndroidApp.KeyguardManagerKeyguardLock
 
-  public func createConfirmDeviceCredentialIntent(title: String?, description: String?) -> Intent? {
+  open func createConfirmDeviceCredentialIntent(title: String?, description: String?) -> Intent? {
     self.javaObject.call(method: KeyguardManager__method__0, [title.toJavaParameter(), description.toJavaParameter()])
   }
 
-  public func newKeyguardLock(tag: String) -> KeyguardManager.KeyguardLock? {
-    self.javaObject.call(method: KeyguardManager__method__1, [tag.toJavaParameter()])
+  open func isKeyguardLocked() -> Bool {
+    self.javaObject.call(method: KeyguardManager__method__1, [])
   }
 
-  public func isKeyguardLocked() -> Bool {
+  open func isKeyguardSecure() -> Bool {
     self.javaObject.call(method: KeyguardManager__method__2, [])
   }
 
-  public func isKeyguardSecure() -> Bool {
+  open func inKeyguardRestrictedInputMode() -> Bool {
     self.javaObject.call(method: KeyguardManager__method__3, [])
   }
 
-  public func inKeyguardRestrictedInputMode() -> Bool {
+  open func isDeviceLocked() -> Bool {
     self.javaObject.call(method: KeyguardManager__method__4, [])
   }
 
-  public func isDeviceLocked() -> Bool {
+  open func isDeviceSecure() -> Bool {
     self.javaObject.call(method: KeyguardManager__method__5, [])
-  }
-
-  public func isDeviceSecure() -> Bool {
-    self.javaObject.call(method: KeyguardManager__method__6, [])
-  }
-
-  public func exitKeyguardSecurely(callback: KeyguardManager.OnKeyguardExitResult?) {
-    self.javaObject.call(method: KeyguardManager__method__7, [JavaParameter(object: callback?.toJavaObject())])
   }
 }
 
@@ -77,11 +69,11 @@ public final class KeyguardManagerOnKeyguardExitResultProxy: Object, JInterfaceP
 // ------------------------------------------------------------------------------------
 
 open class KeyguardManagerKeyguardLock: Object {
-  public func disableKeyguard() {
+  open func disableKeyguard() {
     self.javaObject.call(method: KeyguardManagerKeyguardLock__method__0, [])
   }
 
-  public func reenableKeyguard() {
+  open func reenableKeyguard() {
     self.javaObject.call(method: KeyguardManagerKeyguardLock__method__1, [])
   }
 }
@@ -91,13 +83,11 @@ open class KeyguardManagerKeyguardLock: Object {
 private let KeyguardManager__class = findJavaClass(fqn: "android/app/KeyguardManager")!
 
 private let KeyguardManager__method__0 = KeyguardManager__class.getMethodID(name: "createConfirmDeviceCredentialIntent", sig: "(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/Intent;")!
-private let KeyguardManager__method__1 = KeyguardManager__class.getMethodID(name: "newKeyguardLock", sig: "(Ljava/lang/String;)Landroid/app/KeyguardManager$KeyguardLock;")!
-private let KeyguardManager__method__2 = KeyguardManager__class.getMethodID(name: "isKeyguardLocked", sig: "()Z")!
-private let KeyguardManager__method__3 = KeyguardManager__class.getMethodID(name: "isKeyguardSecure", sig: "()Z")!
-private let KeyguardManager__method__4 = KeyguardManager__class.getMethodID(name: "inKeyguardRestrictedInputMode", sig: "()Z")!
-private let KeyguardManager__method__5 = KeyguardManager__class.getMethodID(name: "isDeviceLocked", sig: "()Z")!
-private let KeyguardManager__method__6 = KeyguardManager__class.getMethodID(name: "isDeviceSecure", sig: "()Z")!
-private let KeyguardManager__method__7 = KeyguardManager__class.getMethodID(name: "exitKeyguardSecurely", sig: "(Landroid/app/KeyguardManager$OnKeyguardExitResult;)V")!
+private let KeyguardManager__method__1 = KeyguardManager__class.getMethodID(name: "isKeyguardLocked", sig: "()Z")!
+private let KeyguardManager__method__2 = KeyguardManager__class.getMethodID(name: "isKeyguardSecure", sig: "()Z")!
+private let KeyguardManager__method__3 = KeyguardManager__class.getMethodID(name: "inKeyguardRestrictedInputMode", sig: "()Z")!
+private let KeyguardManager__method__4 = KeyguardManager__class.getMethodID(name: "isDeviceLocked", sig: "()Z")!
+private let KeyguardManager__method__5 = KeyguardManager__class.getMethodID(name: "isDeviceSecure", sig: "()Z")!
 
 // ------------------------------------------------------------------------------------
 

@@ -4,19 +4,19 @@ import AndroidOS
 import Java
 
 open class PathPermission: Object {
-  public init(pattern: String, _type: Int32, readPermission: String, writePermission: String) {
-    super.init(ctor: PathPermission__method__0, [pattern.toJavaParameter(), _type.toJavaParameter(), readPermission.toJavaParameter(), writePermission.toJavaParameter()])
+  public init(pattern: String, type: Int32, readPermission: String, writePermission: String) {
+    super.init(ctor: PathPermission__method__0, [pattern.toJavaParameter(), type.toJavaParameter(), readPermission.toJavaParameter(), writePermission.toJavaParameter()])
   }
 
   public init(src: Parcel?) {
     super.init(ctor: PathPermission__method__1, [src.toJavaParameter()])
   }
 
-  public func getReadPermission() -> String {
+  open func getReadPermission() -> String {
     self.javaObject.call(method: PathPermission__method__2, [])
   }
 
-  public func getWritePermission() -> String {
+  open func getWritePermission() -> String {
     self.javaObject.call(method: PathPermission__method__3, [])
   }
 

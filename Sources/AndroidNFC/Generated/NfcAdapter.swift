@@ -65,56 +65,48 @@ open class NfcAdapter: Object {
     NfcAdapter__class.callStatic(method: NfcAdapter__method__0, [JavaParameter(object: context?.toJavaObject())])
   }
 
-  public func isEnabled() -> Bool {
+  open func isEnabled() -> Bool {
     self.javaObject.call(method: NfcAdapter__method__1, [])
   }
 
-  public func setBeamPushUrisCallback(callback: NfcAdapter.CreateBeamUrisCallback?, activity: Activity?) {
+  open func setBeamPushUrisCallback(callback: NfcAdapter.CreateBeamUrisCallback?, activity: Activity?) {
     self.javaObject.call(method: NfcAdapter__method__2, [JavaParameter(object: callback?.toJavaObject()), activity.toJavaParameter()])
   }
 
-  public func setNdefPushMessage(message: NdefMessage?, activity: Activity?, activities: [Activity?]) {
+  open func setNdefPushMessage(message: NdefMessage?, activity: Activity?, activities: [Activity?]) {
     self.javaObject.call(method: NfcAdapter__method__3, [message.toJavaParameter(), activity.toJavaParameter(), activities.toJavaParameter()])
   }
 
-  public func setNdefPushMessageCallback(callback: NfcAdapter.CreateNdefMessageCallback?, activity: Activity?, activities: [Activity?]) {
+  open func setNdefPushMessageCallback(callback: NfcAdapter.CreateNdefMessageCallback?, activity: Activity?, activities: [Activity?]) {
     self.javaObject.call(method: NfcAdapter__method__4, [JavaParameter(object: callback?.toJavaObject()), activity.toJavaParameter(), activities.toJavaParameter()])
   }
 
-  public func setOnNdefPushCompleteCallback(callback: NfcAdapter.OnNdefPushCompleteCallback?, activity: Activity?, activities: [Activity?]) {
+  open func setOnNdefPushCompleteCallback(callback: NfcAdapter.OnNdefPushCompleteCallback?, activity: Activity?, activities: [Activity?]) {
     self.javaObject.call(method: NfcAdapter__method__5, [JavaParameter(object: callback?.toJavaObject()), activity.toJavaParameter(), activities.toJavaParameter()])
   }
 
-  public func enableForegroundDispatch(activity: Activity?, intent: PendingIntent?, filters: [IntentFilter?], techLists: [[String]]) {
+  open func enableForegroundDispatch(activity: Activity?, intent: PendingIntent?, filters: [IntentFilter?], techLists: [[String]]) {
     self.javaObject.call(method: NfcAdapter__method__6, [activity.toJavaParameter(), intent.toJavaParameter(), filters.toJavaParameter(), techLists.toJavaParameter()])
   }
 
-  public func disableForegroundDispatch(activity: Activity?) {
+  open func disableForegroundDispatch(activity: Activity?) {
     self.javaObject.call(method: NfcAdapter__method__7, [activity.toJavaParameter()])
   }
 
-  public func enableReaderMode(activity: Activity?, callback: NfcAdapter.ReaderCallback?, flags: Int32, extras: Bundle?) {
+  open func enableReaderMode(activity: Activity?, callback: NfcAdapter.ReaderCallback?, flags: Int32, extras: Bundle?) {
     self.javaObject.call(method: NfcAdapter__method__8, [activity.toJavaParameter(), JavaParameter(object: callback?.toJavaObject()), flags.toJavaParameter(), extras.toJavaParameter()])
   }
 
-  public func disableReaderMode(activity: Activity?) {
+  open func disableReaderMode(activity: Activity?) {
     self.javaObject.call(method: NfcAdapter__method__9, [activity.toJavaParameter()])
   }
 
-  public func invokeBeam(activity: Activity?) -> Bool {
+  open func invokeBeam(activity: Activity?) -> Bool {
     self.javaObject.call(method: NfcAdapter__method__10, [activity.toJavaParameter()])
   }
 
-  public func enableForegroundNdefPush(activity: Activity?, message: NdefMessage?) {
-    self.javaObject.call(method: NfcAdapter__method__11, [activity.toJavaParameter(), message.toJavaParameter()])
-  }
-
-  public func disableForegroundNdefPush(activity: Activity?) {
-    self.javaObject.call(method: NfcAdapter__method__12, [activity.toJavaParameter()])
-  }
-
-  public func isNdefPushEnabled() -> Bool {
-    self.javaObject.call(method: NfcAdapter__method__13, [])
+  open func isNdefPushEnabled() -> Bool {
+    self.javaObject.call(method: NfcAdapter__method__11, [])
   }
 }
 
@@ -287,9 +279,7 @@ private let NfcAdapter__method__7 = NfcAdapter__class.getMethodID(name: "disable
 private let NfcAdapter__method__8 = NfcAdapter__class.getMethodID(name: "enableReaderMode", sig: "(Landroid/app/Activity;Landroid/nfc/NfcAdapter$ReaderCallback;ILandroid/os/Bundle;)V")!
 private let NfcAdapter__method__9 = NfcAdapter__class.getMethodID(name: "disableReaderMode", sig: "(Landroid/app/Activity;)V")!
 private let NfcAdapter__method__10 = NfcAdapter__class.getMethodID(name: "invokeBeam", sig: "(Landroid/app/Activity;)Z")!
-private let NfcAdapter__method__11 = NfcAdapter__class.getMethodID(name: "enableForegroundNdefPush", sig: "(Landroid/app/Activity;Landroid/nfc/NdefMessage;)V")!
-private let NfcAdapter__method__12 = NfcAdapter__class.getMethodID(name: "disableForegroundNdefPush", sig: "(Landroid/app/Activity;)V")!
-private let NfcAdapter__method__13 = NfcAdapter__class.getMethodID(name: "isNdefPushEnabled", sig: "()Z")!
+private let NfcAdapter__method__11 = NfcAdapter__class.getMethodID(name: "isNdefPushEnabled", sig: "()Z")!
 
 private let NfcAdapter__field__0 = NfcAdapter__class.getStaticFieldID(name: "ACTION_ADAPTER_STATE_CHANGED", sig: "Ljava/lang/String;")!
 private let NfcAdapter__field__1 = NfcAdapter__class.getStaticFieldID(name: "ACTION_NDEF_DISCOVERED", sig: "Ljava/lang/String;")!

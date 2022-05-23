@@ -48,103 +48,103 @@ open class GnssMeasurement: Object, Parcelable {
 
   public static let STATE_UNKNOWN: Int32 = GnssMeasurement__class.getStatic(field: GnssMeasurement__field__21)
 
-  public func getSvid() -> Int32 {
+  open func getSvid() -> Int32 {
     self.javaObject.call(method: GnssMeasurement__method__0, [])
   }
 
-  public func getConstellationType() -> Int32 {
+  open func getConstellationType() -> Int32 {
     self.javaObject.call(method: GnssMeasurement__method__1, [])
   }
 
-  public func getTimeOffsetNanos() -> Double {
+  open func getTimeOffsetNanos() -> Double {
     self.javaObject.call(method: GnssMeasurement__method__2, [])
   }
 
-  public func getState() -> Int32 {
+  open func getState() -> Int32 {
     self.javaObject.call(method: GnssMeasurement__method__3, [])
   }
 
-  public func getReceivedSvTimeNanos() -> Int64 {
+  open func getReceivedSvTimeNanos() -> Int64 {
     self.javaObject.call(method: GnssMeasurement__method__4, [])
   }
 
-  public func getReceivedSvTimeUncertaintyNanos() -> Int64 {
+  open func getReceivedSvTimeUncertaintyNanos() -> Int64 {
     self.javaObject.call(method: GnssMeasurement__method__5, [])
   }
 
-  public func getCn0DbHz() -> Double {
+  open func getCn0DbHz() -> Double {
     self.javaObject.call(method: GnssMeasurement__method__6, [])
   }
 
-  public func getPseudorangeRateMetersPerSecond() -> Double {
+  open func getPseudorangeRateMetersPerSecond() -> Double {
     self.javaObject.call(method: GnssMeasurement__method__7, [])
   }
 
-  public func getPseudorangeRateUncertaintyMetersPerSecond() -> Double {
+  open func getPseudorangeRateUncertaintyMetersPerSecond() -> Double {
     self.javaObject.call(method: GnssMeasurement__method__8, [])
   }
 
-  public func getAccumulatedDeltaRangeState() -> Int32 {
+  open func getAccumulatedDeltaRangeState() -> Int32 {
     self.javaObject.call(method: GnssMeasurement__method__9, [])
   }
 
-  public func getAccumulatedDeltaRangeMeters() -> Double {
+  open func getAccumulatedDeltaRangeMeters() -> Double {
     self.javaObject.call(method: GnssMeasurement__method__10, [])
   }
 
-  public func getAccumulatedDeltaRangeUncertaintyMeters() -> Double {
+  open func getAccumulatedDeltaRangeUncertaintyMeters() -> Double {
     self.javaObject.call(method: GnssMeasurement__method__11, [])
   }
 
-  public func hasCarrierFrequencyHz() -> Bool {
+  open func hasCarrierFrequencyHz() -> Bool {
     self.javaObject.call(method: GnssMeasurement__method__12, [])
   }
 
-  public func getCarrierFrequencyHz() -> Float {
+  open func getCarrierFrequencyHz() -> Float {
     self.javaObject.call(method: GnssMeasurement__method__13, [])
   }
 
-  public func hasCarrierCycles() -> Bool {
+  open func hasCarrierCycles() -> Bool {
     self.javaObject.call(method: GnssMeasurement__method__14, [])
   }
 
-  public func getCarrierCycles() -> Int64 {
+  open func getCarrierCycles() -> Int64 {
     self.javaObject.call(method: GnssMeasurement__method__15, [])
   }
 
-  public func hasCarrierPhase() -> Bool {
+  open func hasCarrierPhase() -> Bool {
     self.javaObject.call(method: GnssMeasurement__method__16, [])
   }
 
-  public func getCarrierPhase() -> Double {
+  open func getCarrierPhase() -> Double {
     self.javaObject.call(method: GnssMeasurement__method__17, [])
   }
 
-  public func hasCarrierPhaseUncertainty() -> Bool {
+  open func hasCarrierPhaseUncertainty() -> Bool {
     self.javaObject.call(method: GnssMeasurement__method__18, [])
   }
 
-  public func getCarrierPhaseUncertainty() -> Double {
+  open func getCarrierPhaseUncertainty() -> Double {
     self.javaObject.call(method: GnssMeasurement__method__19, [])
   }
 
-  public func getMultipathIndicator() -> Int32 {
+  open func getMultipathIndicator() -> Int32 {
     self.javaObject.call(method: GnssMeasurement__method__20, [])
   }
 
-  public func hasSnrInDb() -> Bool {
+  open func hasSnrInDb() -> Bool {
     self.javaObject.call(method: GnssMeasurement__method__21, [])
   }
 
-  public func getSnrInDb() -> Double {
+  open func getSnrInDb() -> Double {
     self.javaObject.call(method: GnssMeasurement__method__22, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: GnssMeasurement__method__23, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: GnssMeasurement__method__24, [])
   }
 }

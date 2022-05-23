@@ -2,21 +2,7 @@
 
 import Java
 
-public protocol VolumeProvider where Self: Object {
-  init(volumeControl: Int32, maxVolume: Int32, currentVolume: Int32)
-
-  func getVolumeControl() -> Int32
-
-  func getMaxVolume() -> Int32
-
-  func getCurrentVolume() -> Int32
-
-  func setCurrentVolume(currentVolume: Int32) -> Void
-
-  func onSetVolumeTo(volume: Int32) -> Void
-
-  func onAdjustVolume(direction: Int32) -> Void
-}
+public protocol VolumeProvider where Self: Object {}
 
 public extension VolumeProvider {
   func box() -> VolumeProviderProxy {

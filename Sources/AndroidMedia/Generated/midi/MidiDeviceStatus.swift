@@ -4,23 +4,23 @@ import AndroidOS
 import Java
 
 open class MidiDeviceStatus: Object, Parcelable {
-  public func getDeviceInfo() -> MidiDeviceInfo? {
+  open func getDeviceInfo() -> MidiDeviceInfo? {
     self.javaObject.call(method: MidiDeviceStatus__method__0, [])
   }
 
-  public func isInputPortOpen(portNumber: Int32) -> Bool {
+  open func isInputPortOpen(portNumber: Int32) -> Bool {
     self.javaObject.call(method: MidiDeviceStatus__method__1, [portNumber.toJavaParameter()])
   }
 
-  public func getOutputPortOpenCount(portNumber: Int32) -> Int32 {
+  open func getOutputPortOpenCount(portNumber: Int32) -> Int32 {
     self.javaObject.call(method: MidiDeviceStatus__method__2, [portNumber.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: MidiDeviceStatus__method__3, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: MidiDeviceStatus__method__4, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }

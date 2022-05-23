@@ -7,27 +7,27 @@ open class NfcF: Object, BasicTagTechnology {
     NfcF__class.callStatic(method: NfcF__method__0, [tag.toJavaParameter()])
   }
 
-  public func getSystemCode() -> [Int8] {
+  open func getSystemCode() -> [Int8] {
     self.javaObject.call(method: NfcF__method__1, [])
   }
 
-  public func getManufacturer() -> [Int8] {
+  open func getManufacturer() -> [Int8] {
     self.javaObject.call(method: NfcF__method__2, [])
   }
 
-  public func transceive(data: [Int8]) -> [Int8] {
+  open func transceive(data: [Int8]) -> [Int8] {
     self.javaObject.call(method: NfcF__method__3, [data.toJavaParameter()])
   }
 
-  public func getMaxTransceiveLength() -> Int32 {
+  open func getMaxTransceiveLength() -> Int32 {
     self.javaObject.call(method: NfcF__method__4, [])
   }
 
-  public func setTimeout(timeout: Int32) {
+  open func setTimeout(timeout: Int32) {
     self.javaObject.call(method: NfcF__method__5, [timeout.toJavaParameter()])
   }
 
-  public func getTimeout() -> Int32 {
+  open func getTimeout() -> Int32 {
     self.javaObject.call(method: NfcF__method__6, [])
   }
 }

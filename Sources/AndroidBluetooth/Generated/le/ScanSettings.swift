@@ -30,27 +30,27 @@ open class ScanSettings: Object, Parcelable {
 
   public static let SCAN_MODE_OPPORTUNISTIC: Int32 = ScanSettings__class.getStatic(field: ScanSettings__field__11)
 
-  public func getScanMode() -> Int32 {
+  open func getScanMode() -> Int32 {
     self.javaObject.call(method: ScanSettings__method__0, [])
   }
 
-  public func getCallbackType() -> Int32 {
+  open func getCallbackType() -> Int32 {
     self.javaObject.call(method: ScanSettings__method__1, [])
   }
 
-  public func getScanResultType() -> Int32 {
+  open func getScanResultType() -> Int32 {
     self.javaObject.call(method: ScanSettings__method__2, [])
   }
 
-  public func getReportDelayMillis() -> Int64 {
+  open func getReportDelayMillis() -> Int64 {
     self.javaObject.call(method: ScanSettings__method__3, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ScanSettings__method__4, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ScanSettings__method__5, [])
   }
 }
@@ -62,27 +62,27 @@ open class ScanSettingsBuilder: Object {
     super.init(ctor: ScanSettingsBuilder__method__0, [])
   }
 
-  public func setScanMode(scanMode: Int32) -> ScanSettings.Builder? {
+  open func setScanMode(scanMode: Int32) -> ScanSettings.Builder? {
     self.javaObject.call(method: ScanSettingsBuilder__method__1, [scanMode.toJavaParameter()])
   }
 
-  public func setCallbackType(callbackType: Int32) -> ScanSettings.Builder? {
+  open func setCallbackType(callbackType: Int32) -> ScanSettings.Builder? {
     self.javaObject.call(method: ScanSettingsBuilder__method__2, [callbackType.toJavaParameter()])
   }
 
-  public func setReportDelay(reportDelayMillis: Int64) -> ScanSettings.Builder? {
+  open func setReportDelay(reportDelayMillis: Int64) -> ScanSettings.Builder? {
     self.javaObject.call(method: ScanSettingsBuilder__method__3, [reportDelayMillis.toJavaParameter()])
   }
 
-  public func setNumOfMatches(numOfMatches: Int32) -> ScanSettings.Builder? {
+  open func setNumOfMatches(numOfMatches: Int32) -> ScanSettings.Builder? {
     self.javaObject.call(method: ScanSettingsBuilder__method__4, [numOfMatches.toJavaParameter()])
   }
 
-  public func setMatchMode(matchMode: Int32) -> ScanSettings.Builder? {
+  open func setMatchMode(matchMode: Int32) -> ScanSettings.Builder? {
     self.javaObject.call(method: ScanSettingsBuilder__method__5, [matchMode.toJavaParameter()])
   }
 
-  public func build() -> ScanSettings? {
+  open func build() -> ScanSettings? {
     self.javaObject.call(method: ScanSettingsBuilder__method__6, [])
   }
 

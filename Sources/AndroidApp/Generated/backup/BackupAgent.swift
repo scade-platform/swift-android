@@ -5,21 +5,9 @@ import AndroidOS
 import Java
 
 public protocol BackupAgent where Self: ContextWrapper {
-  init()
-
-  func onCreate() -> Void
-
-  func onDestroy() -> Void
-
   func onBackup(oldState: ParcelFileDescriptor?, data: BackupDataOutput?, newState: ParcelFileDescriptor?) -> Void
 
   func onRestore(data: BackupDataInput?, appVersionCode: Int32, newState: ParcelFileDescriptor?) -> Void
-
-  func onFullBackup(data: FullBackupDataOutput?) -> Void
-
-  func onQuotaExceeded(backupDataBytes: Int64, quotaBytes: Int64) -> Void
-
-  func onRestoreFinished() -> Void
 }
 
 public extension BackupAgent {
@@ -71,11 +59,11 @@ open class BackupAgentProxy: ContextWrapper, JInterfaceProxy, BackupAgent {
     self.init(obj.toJavaObject()!)
   }
 
-  public func onBackup(oldState: ParcelFileDescriptor?, data: BackupDataOutput?, newState: ParcelFileDescriptor?) {
+  open func onBackup(oldState: ParcelFileDescriptor?, data: BackupDataOutput?, newState: ParcelFileDescriptor?) {
     self.javaObject.call(method: BackupAgent__method__3, [oldState.toJavaParameter(), data.toJavaParameter(), newState.toJavaParameter()])
   }
 
-  public func onRestore(data: BackupDataInput?, appVersionCode: Int32, newState: ParcelFileDescriptor?) {
+  open func onRestore(data: BackupDataInput?, appVersionCode: Int32, newState: ParcelFileDescriptor?) {
     self.javaObject.call(method: BackupAgent__method__4, [data.toJavaParameter(), appVersionCode.toJavaParameter(), newState.toJavaParameter()])
   }
 }

@@ -86,17 +86,21 @@ open class PackageItemInfo: Object {
     super.init(ctor: PackageItemInfo__method__1, [orig.toJavaParameter()])
   }
 
-  public func loadLabel(pm: PackageManager?) -> String? {
-    self.javaObject.call(method: PackageItemInfo__method__2, [JavaParameter(object: pm?.toJavaObject())])
+  public init(source: Parcel?) {
+    super.init(ctor: PackageItemInfo__method__2, [source.toJavaParameter()])
   }
 
-  public func loadXmlMetaData(pm: PackageManager?, name: String) -> XmlResourceParser? {
-    let res = self.javaObject.call(method: PackageItemInfo__method__3, [JavaParameter(object: pm?.toJavaObject()), name.toJavaParameter()]) as Object?
+  open func loadLabel(pm: PackageManager?) -> String? {
+    self.javaObject.call(method: PackageItemInfo__method__3, [JavaParameter(object: pm?.toJavaObject())])
+  }
+
+  open func loadXmlMetaData(pm: PackageManager?, name: String) -> XmlResourceParser? {
+    let res = self.javaObject.call(method: PackageItemInfo__method__4, [JavaParameter(object: pm?.toJavaObject()), name.toJavaParameter()]) as Object?
     return cast(res, to: XmlResourceParserProxy.self)
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
-    self.javaObject.call(method: PackageItemInfo__method__4, [dest.toJavaParameter(), flags.toJavaParameter()])
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
+    self.javaObject.call(method: PackageItemInfo__method__5, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
   public required init(_ obj: JavaObject) {
@@ -115,8 +119,8 @@ open class PackageItemInfoDisplayNameComparator: Object {
     super.init(ctor: PackageItemInfoDisplayNameComparator__method__0, [JavaParameter(object: pm?.toJavaObject())])
   }
 
-  public func compare(o1: PackageItemInfo?, o2: PackageItemInfo?) -> Int32 {
-    self.javaObject.call(method: PackageItemInfoDisplayNameComparator__method__1, [o1.toJavaParameter(), o2.toJavaParameter()])
+  public func compare(aa: PackageItemInfo?, ab: PackageItemInfo?) -> Int32 {
+    self.javaObject.call(method: PackageItemInfoDisplayNameComparator__method__1, [aa.toJavaParameter(), ab.toJavaParameter()])
   }
 
   public required init(_ obj: JavaObject) {
@@ -134,9 +138,10 @@ private let PackageItemInfo__class = findJavaClass(fqn: "android/content/pm/Pack
 
 private let PackageItemInfo__method__0 = PackageItemInfo__class.getMethodID(name: "<init>", sig: "()V")!
 private let PackageItemInfo__method__1 = PackageItemInfo__class.getMethodID(name: "<init>", sig: "(Landroid/content/pm/PackageItemInfo;)V")!
-private let PackageItemInfo__method__2 = PackageItemInfo__class.getMethodID(name: "loadLabel", sig: "(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;")!
-private let PackageItemInfo__method__3 = PackageItemInfo__class.getMethodID(name: "loadXmlMetaData", sig: "(Landroid/content/pm/PackageManager;Ljava/lang/String;)Landroid/content/res/XmlResourceParser;")!
-private let PackageItemInfo__method__4 = PackageItemInfo__class.getMethodID(name: "writeToParcel", sig: "(Landroid/os/Parcel;I)V")!
+private let PackageItemInfo__method__2 = PackageItemInfo__class.getMethodID(name: "<init>", sig: "(Landroid/os/Parcel;)V")!
+private let PackageItemInfo__method__3 = PackageItemInfo__class.getMethodID(name: "loadLabel", sig: "(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;")!
+private let PackageItemInfo__method__4 = PackageItemInfo__class.getMethodID(name: "loadXmlMetaData", sig: "(Landroid/content/pm/PackageManager;Ljava/lang/String;)Landroid/content/res/XmlResourceParser;")!
+private let PackageItemInfo__method__5 = PackageItemInfo__class.getMethodID(name: "writeToParcel", sig: "(Landroid/os/Parcel;I)V")!
 
 private let PackageItemInfo__field__0 = PackageItemInfo__class.getFieldID(name: "banner", sig: "I")!
 private let PackageItemInfo__field__1 = PackageItemInfo__class.getFieldID(name: "icon", sig: "I")!

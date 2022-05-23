@@ -7,21 +7,21 @@ open class MediaSessionManager: Object {
   public typealias OnActiveSessionsChangedListener = AndroidMedia.MediaSessionManagerOnActiveSessionsChangedListener
   public typealias OnActiveSessionsChangedListenerProxy = AndroidMedia.MediaSessionManagerOnActiveSessionsChangedListenerProxy
 
-  public func getActiveSessions<R>(notificationListener: ComponentName?) -> R? where R: List, R.E == MediaController {
+  open func getActiveSessions<R>(notificationListener: ComponentName?) -> R? where R: List, R.E == MediaController {
     self.javaObject.call(method: MediaSessionManager__method__0, [notificationListener.toJavaParameter()])
   }
 
-  public func addOnActiveSessionsChangedListener(sessionListener: MediaSessionManager.OnActiveSessionsChangedListener?, notificationListener: ComponentName?) {
+  open func addOnActiveSessionsChangedListener(sessionListener: MediaSessionManager.OnActiveSessionsChangedListener?, notificationListener: ComponentName?) {
     self.javaObject.call(method: MediaSessionManager__method__1, [JavaParameter(object: sessionListener?.toJavaObject()), notificationListener.toJavaParameter()])
   }
 
-  public func removeOnActiveSessionsChangedListener(listener: MediaSessionManager.OnActiveSessionsChangedListener?) {
+  open func removeOnActiveSessionsChangedListener(listener: MediaSessionManager.OnActiveSessionsChangedListener?) {
     self.javaObject.call(method: MediaSessionManager__method__2, [JavaParameter(object: listener?.toJavaObject())])
   }
 }
 
 extension MediaSessionManager {
-  public func getActiveSessions(notificationListener: ComponentName?) -> ListProxy<MediaController>? {
+  open func getActiveSessions(notificationListener: ComponentName?) -> ListProxy<MediaController>? {
     self.javaObject.call(method: MediaSessionManager__method__0, [notificationListener.toJavaParameter()])
   }
 }

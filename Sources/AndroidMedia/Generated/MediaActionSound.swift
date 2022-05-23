@@ -15,15 +15,15 @@ open class MediaActionSound: Object {
     super.init(ctor: MediaActionSound__method__0, [])
   }
 
-  public func load(soundName: Int32) {
+  open func load(soundName: Int32) {
     self.javaObject.call(method: MediaActionSound__method__1, [soundName.toJavaParameter()])
   }
 
-  public func play(soundName: Int32) {
+  open func play(soundName: Int32) {
     self.javaObject.call(method: MediaActionSound__method__2, [soundName.toJavaParameter()])
   }
 
-  public func release() {
+  open func release() {
     self.javaObject.call(method: MediaActionSound__method__3, [])
   }
 

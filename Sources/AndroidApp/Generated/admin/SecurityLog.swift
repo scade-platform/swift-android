@@ -38,23 +38,23 @@ open class SecurityLog: Object {
 // ------------------------------------------------------------------------------------
 
 open class SecurityLogSecurityEvent: Object, Parcelable {
-  public func getTimeNanos() -> Int64 {
+  open func getTimeNanos() -> Int64 {
     self.javaObject.call(method: SecurityLogSecurityEvent__method__0, [])
   }
 
-  public func getTag() -> Int32 {
+  open func getTag() -> Int32 {
     self.javaObject.call(method: SecurityLogSecurityEvent__method__1, [])
   }
 
-  public func getData() -> Object? {
+  open func getData() -> Object? {
     self.javaObject.call(method: SecurityLogSecurityEvent__method__2, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: SecurityLogSecurityEvent__method__3, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: SecurityLogSecurityEvent__method__4, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }

@@ -6,23 +6,23 @@ import Java
 open class UriPermission: Object, Parcelable {
   public static let INVALID_TIME: Int64 = UriPermission__class.getStatic(field: UriPermission__field__0)
 
-  public func isReadPermission() -> Bool {
+  open func isReadPermission() -> Bool {
     self.javaObject.call(method: UriPermission__method__0, [])
   }
 
-  public func isWritePermission() -> Bool {
+  open func isWritePermission() -> Bool {
     self.javaObject.call(method: UriPermission__method__1, [])
   }
 
-  public func getPersistedTime() -> Int64 {
+  open func getPersistedTime() -> Int64 {
     self.javaObject.call(method: UriPermission__method__2, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: UriPermission__method__3, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: UriPermission__method__4, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }

@@ -14,19 +14,19 @@ open class MediaScannerConnection: Object, ServiceConnection {
     super.init(ctor: MediaScannerConnection__method__0, [JavaParameter(object: context?.toJavaObject()), JavaParameter(object: client?.toJavaObject())])
   }
 
-  public func connect() {
+  open func connect() {
     self.javaObject.call(method: MediaScannerConnection__method__1, [])
   }
 
-  public func disconnect() {
+  open func disconnect() {
     self.javaObject.call(method: MediaScannerConnection__method__2, [])
   }
 
-  public func isConnected() -> Bool {
+  open func isConnected() -> Bool {
     self.javaObject.call(method: MediaScannerConnection__method__3, [])
   }
 
-  public func scanFile(path: String, mimeType: String) {
+  open func scanFile(path: String, mimeType: String) {
     self.javaObject.call(method: MediaScannerConnection__method__4, [path.toJavaParameter(), mimeType.toJavaParameter()])
   }
 
@@ -34,7 +34,7 @@ open class MediaScannerConnection: Object, ServiceConnection {
     MediaScannerConnection__class.callStatic(method: MediaScannerConnection__method__5, [JavaParameter(object: context?.toJavaObject()), paths.toJavaParameter(), mimeTypes.toJavaParameter(), JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func onServiceDisconnected(name: ComponentName?) {
+  open func onServiceDisconnected(name: ComponentName?) {
     self.javaObject.call(method: MediaScannerConnection__method__6, [name.toJavaParameter()])
   }
 

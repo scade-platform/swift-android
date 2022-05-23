@@ -9,11 +9,11 @@ open class LoudnessEnhancer: AudioEffect {
     super.init(ctor: LoudnessEnhancer__method__0, [audioSession.toJavaParameter()])
   }
 
-  public func setTargetGain(gainmB: Int32) {
+  open func setTargetGain(gainmB: Int32) {
     self.javaObject.call(method: LoudnessEnhancer__method__1, [gainmB.toJavaParameter()])
   }
 
-  public func getTargetGain() -> Float {
+  open func getTargetGain() -> Float {
     self.javaObject.call(method: LoudnessEnhancer__method__2, [])
   }
 

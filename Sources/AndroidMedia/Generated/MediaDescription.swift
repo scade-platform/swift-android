@@ -1,37 +1,42 @@
 
 
+import AndroidGraphics
 import AndroidOS
 import Java
 
 open class MediaDescription: Object, Parcelable {
   public typealias Builder = AndroidMedia.MediaDescriptionBuilder
 
-  public func getMediaId() -> String {
+  open func getMediaId() -> String {
     self.javaObject.call(method: MediaDescription__method__0, [])
   }
 
-  public func getTitle() -> String? {
+  open func getTitle() -> String? {
     self.javaObject.call(method: MediaDescription__method__1, [])
   }
 
-  public func getSubtitle() -> String? {
+  open func getSubtitle() -> String? {
     self.javaObject.call(method: MediaDescription__method__2, [])
   }
 
-  public func getDescription() -> String? {
+  open func getDescription() -> String? {
     self.javaObject.call(method: MediaDescription__method__3, [])
   }
 
-  public func getExtras() -> Bundle? {
+  open func getIconBitmap() -> Bitmap? {
     self.javaObject.call(method: MediaDescription__method__4, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func getExtras() -> Bundle? {
     self.javaObject.call(method: MediaDescription__method__5, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
-    self.javaObject.call(method: MediaDescription__method__6, [dest.toJavaParameter(), flags.toJavaParameter()])
+  open func describeContents() -> Int32 {
+    self.javaObject.call(method: MediaDescription__method__6, [])
+  }
+
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
+    self.javaObject.call(method: MediaDescription__method__7, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }
 
@@ -42,28 +47,32 @@ open class MediaDescriptionBuilder: Object {
     super.init(ctor: MediaDescriptionBuilder__method__0, [])
   }
 
-  public func setMediaId(mediaId: String) -> MediaDescription.Builder? {
+  open func setMediaId(mediaId: String) -> MediaDescription.Builder? {
     self.javaObject.call(method: MediaDescriptionBuilder__method__1, [mediaId.toJavaParameter()])
   }
 
-  public func setTitle(title: String?) -> MediaDescription.Builder? {
+  open func setTitle(title: String?) -> MediaDescription.Builder? {
     self.javaObject.call(method: MediaDescriptionBuilder__method__2, [title.toJavaParameter()])
   }
 
-  public func setSubtitle(subtitle: String?) -> MediaDescription.Builder? {
+  open func setSubtitle(subtitle: String?) -> MediaDescription.Builder? {
     self.javaObject.call(method: MediaDescriptionBuilder__method__3, [subtitle.toJavaParameter()])
   }
 
-  public func setDescription(description: String?) -> MediaDescription.Builder? {
+  open func setDescription(description: String?) -> MediaDescription.Builder? {
     self.javaObject.call(method: MediaDescriptionBuilder__method__4, [description.toJavaParameter()])
   }
 
-  public func setExtras(extras: Bundle?) -> MediaDescription.Builder? {
-    self.javaObject.call(method: MediaDescriptionBuilder__method__5, [extras.toJavaParameter()])
+  open func setIconBitmap(icon: Bitmap?) -> MediaDescription.Builder? {
+    self.javaObject.call(method: MediaDescriptionBuilder__method__5, [icon.toJavaParameter()])
   }
 
-  public func build() -> MediaDescription? {
-    self.javaObject.call(method: MediaDescriptionBuilder__method__6, [])
+  open func setExtras(extras: Bundle?) -> MediaDescription.Builder? {
+    self.javaObject.call(method: MediaDescriptionBuilder__method__6, [extras.toJavaParameter()])
+  }
+
+  open func build() -> MediaDescription? {
+    self.javaObject.call(method: MediaDescriptionBuilder__method__7, [])
   }
 
   public required init(_ obj: JavaObject) {
@@ -83,9 +92,10 @@ private let MediaDescription__method__0 = MediaDescription__class.getMethodID(na
 private let MediaDescription__method__1 = MediaDescription__class.getMethodID(name: "getTitle", sig: "()Ljava/lang/CharSequence;")!
 private let MediaDescription__method__2 = MediaDescription__class.getMethodID(name: "getSubtitle", sig: "()Ljava/lang/CharSequence;")!
 private let MediaDescription__method__3 = MediaDescription__class.getMethodID(name: "getDescription", sig: "()Ljava/lang/CharSequence;")!
-private let MediaDescription__method__4 = MediaDescription__class.getMethodID(name: "getExtras", sig: "()Landroid/os/Bundle;")!
-private let MediaDescription__method__5 = MediaDescription__class.getMethodID(name: "describeContents", sig: "()I")!
-private let MediaDescription__method__6 = MediaDescription__class.getMethodID(name: "writeToParcel", sig: "(Landroid/os/Parcel;I)V")!
+private let MediaDescription__method__4 = MediaDescription__class.getMethodID(name: "getIconBitmap", sig: "()Landroid/graphics/Bitmap;")!
+private let MediaDescription__method__5 = MediaDescription__class.getMethodID(name: "getExtras", sig: "()Landroid/os/Bundle;")!
+private let MediaDescription__method__6 = MediaDescription__class.getMethodID(name: "describeContents", sig: "()I")!
+private let MediaDescription__method__7 = MediaDescription__class.getMethodID(name: "writeToParcel", sig: "(Landroid/os/Parcel;I)V")!
 
 // ------------------------------------------------------------------------------------
 
@@ -96,5 +106,6 @@ private let MediaDescriptionBuilder__method__1 = MediaDescriptionBuilder__class.
 private let MediaDescriptionBuilder__method__2 = MediaDescriptionBuilder__class.getMethodID(name: "setTitle", sig: "(Ljava/lang/CharSequence;)Landroid/media/MediaDescription$Builder;")!
 private let MediaDescriptionBuilder__method__3 = MediaDescriptionBuilder__class.getMethodID(name: "setSubtitle", sig: "(Ljava/lang/CharSequence;)Landroid/media/MediaDescription$Builder;")!
 private let MediaDescriptionBuilder__method__4 = MediaDescriptionBuilder__class.getMethodID(name: "setDescription", sig: "(Ljava/lang/CharSequence;)Landroid/media/MediaDescription$Builder;")!
-private let MediaDescriptionBuilder__method__5 = MediaDescriptionBuilder__class.getMethodID(name: "setExtras", sig: "(Landroid/os/Bundle;)Landroid/media/MediaDescription$Builder;")!
-private let MediaDescriptionBuilder__method__6 = MediaDescriptionBuilder__class.getMethodID(name: "build", sig: "()Landroid/media/MediaDescription;")!
+private let MediaDescriptionBuilder__method__5 = MediaDescriptionBuilder__class.getMethodID(name: "setIconBitmap", sig: "(Landroid/graphics/Bitmap;)Landroid/media/MediaDescription$Builder;")!
+private let MediaDescriptionBuilder__method__6 = MediaDescriptionBuilder__class.getMethodID(name: "setExtras", sig: "(Landroid/os/Bundle;)Landroid/media/MediaDescription$Builder;")!
+private let MediaDescriptionBuilder__method__7 = MediaDescriptionBuilder__class.getMethodID(name: "build", sig: "()Landroid/media/MediaDescription;")!

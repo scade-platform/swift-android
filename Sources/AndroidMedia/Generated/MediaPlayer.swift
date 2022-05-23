@@ -2,6 +2,7 @@
 
 import AndroidContent
 import AndroidOS
+import AndroidView
 import Java
 
 open class MediaPlayer: Object {
@@ -78,220 +79,228 @@ open class MediaPlayer: Object {
     super.init(ctor: MediaPlayer__method__0, [])
   }
 
-  public func setVideoScalingMode(mode: Int32) {
-    self.javaObject.call(method: MediaPlayer__method__1, [mode.toJavaParameter()])
+  open func setDisplay(sh: SurfaceHolder?) {
+    self.javaObject.call(method: MediaPlayer__method__1, [JavaParameter(object: sh?.toJavaObject())])
+  }
+
+  open func setSurface(surface: Surface?) {
+    self.javaObject.call(method: MediaPlayer__method__2, [surface.toJavaParameter()])
+  }
+
+  open func setVideoScalingMode(mode: Int32) {
+    self.javaObject.call(method: MediaPlayer__method__3, [mode.toJavaParameter()])
   }
 
   public static func create(context: Context?, resid: Int32) -> MediaPlayer? {
-    MediaPlayer__class.callStatic(method: MediaPlayer__method__2, [JavaParameter(object: context?.toJavaObject()), resid.toJavaParameter()])
+    MediaPlayer__class.callStatic(method: MediaPlayer__method__4, [JavaParameter(object: context?.toJavaObject()), resid.toJavaParameter()])
   }
 
   public static func create(context: Context?, resid: Int32, audioAttributes: AudioAttributes?, audioSessionId: Int32) -> MediaPlayer? {
-    MediaPlayer__class.callStatic(method: MediaPlayer__method__3, [JavaParameter(object: context?.toJavaObject()), resid.toJavaParameter(), audioAttributes.toJavaParameter(), audioSessionId.toJavaParameter()])
+    MediaPlayer__class.callStatic(method: MediaPlayer__method__5, [JavaParameter(object: context?.toJavaObject()), resid.toJavaParameter(), audioAttributes.toJavaParameter(), audioSessionId.toJavaParameter()])
   }
 
-  public func setDataSource(path: String) {
-    self.javaObject.call(method: MediaPlayer__method__4, [path.toJavaParameter()])
+  open func setDataSource(path: String) {
+    self.javaObject.call(method: MediaPlayer__method__6, [path.toJavaParameter()])
   }
 
-  public func setDataSource(afd: AssetFileDescriptor?) {
-    self.javaObject.call(method: MediaPlayer__method__5, [afd.toJavaParameter()])
+  open func setDataSource(afd: AssetFileDescriptor?) {
+    self.javaObject.call(method: MediaPlayer__method__7, [afd.toJavaParameter()])
   }
 
-  public func setDataSource(fd: FileDescriptor?) {
-    self.javaObject.call(method: MediaPlayer__method__6, [fd.toJavaParameter()])
+  open func setDataSource(fd: FileDescriptor?) {
+    self.javaObject.call(method: MediaPlayer__method__8, [fd.toJavaParameter()])
   }
 
-  public func setDataSource(fd: FileDescriptor?, offset: Int64, length: Int64) {
-    self.javaObject.call(method: MediaPlayer__method__7, [fd.toJavaParameter(), offset.toJavaParameter(), length.toJavaParameter()])
+  open func setDataSource(fd: FileDescriptor?, offset: Int64, length: Int64) {
+    self.javaObject.call(method: MediaPlayer__method__9, [fd.toJavaParameter(), offset.toJavaParameter(), length.toJavaParameter()])
   }
 
-  public func setDataSource(dataSource: MediaDataSource?) {
-    self.javaObject.call(method: MediaPlayer__method__8, [JavaParameter(object: dataSource?.toJavaObject())])
+  open func setDataSource(dataSource: MediaDataSource?) {
+    self.javaObject.call(method: MediaPlayer__method__10, [JavaParameter(object: dataSource?.toJavaObject())])
   }
 
-  public func prepare() {
-    self.javaObject.call(method: MediaPlayer__method__9, [])
-  }
-
-  public func prepareAsync() {
-    self.javaObject.call(method: MediaPlayer__method__10, [])
-  }
-
-  public func start() {
+  open func prepare() {
     self.javaObject.call(method: MediaPlayer__method__11, [])
   }
 
-  public func stop() {
+  open func prepareAsync() {
     self.javaObject.call(method: MediaPlayer__method__12, [])
   }
 
-  public func pause() {
+  open func start() {
     self.javaObject.call(method: MediaPlayer__method__13, [])
   }
 
-  public func setWakeMode(context: Context?, mode: Int32) {
-    self.javaObject.call(method: MediaPlayer__method__14, [JavaParameter(object: context?.toJavaObject()), mode.toJavaParameter()])
+  open func stop() {
+    self.javaObject.call(method: MediaPlayer__method__14, [])
   }
 
-  public func setScreenOnWhilePlaying(screenOn: Bool) {
-    self.javaObject.call(method: MediaPlayer__method__15, [screenOn.toJavaParameter()])
+  open func pause() {
+    self.javaObject.call(method: MediaPlayer__method__15, [])
   }
 
-  public func getVideoWidth() -> Int32 {
-    self.javaObject.call(method: MediaPlayer__method__16, [])
+  open func setWakeMode(context: Context?, mode: Int32) {
+    self.javaObject.call(method: MediaPlayer__method__16, [JavaParameter(object: context?.toJavaObject()), mode.toJavaParameter()])
   }
 
-  public func getVideoHeight() -> Int32 {
-    self.javaObject.call(method: MediaPlayer__method__17, [])
+  open func setScreenOnWhilePlaying(screenOn: Bool) {
+    self.javaObject.call(method: MediaPlayer__method__17, [screenOn.toJavaParameter()])
   }
 
-  public func isPlaying() -> Bool {
+  open func getVideoWidth() -> Int32 {
     self.javaObject.call(method: MediaPlayer__method__18, [])
   }
 
-  public func setPlaybackParams(params: PlaybackParams?) {
-    self.javaObject.call(method: MediaPlayer__method__19, [params.toJavaParameter()])
+  open func getVideoHeight() -> Int32 {
+    self.javaObject.call(method: MediaPlayer__method__19, [])
   }
 
-  public func getPlaybackParams() -> PlaybackParams? {
+  open func isPlaying() -> Bool {
     self.javaObject.call(method: MediaPlayer__method__20, [])
   }
 
-  public func setSyncParams(params: SyncParams?) {
+  open func setPlaybackParams(params: PlaybackParams?) {
     self.javaObject.call(method: MediaPlayer__method__21, [params.toJavaParameter()])
   }
 
-  public func getSyncParams() -> SyncParams? {
+  open func getPlaybackParams() -> PlaybackParams? {
     self.javaObject.call(method: MediaPlayer__method__22, [])
   }
 
-  public func seekTo(msec: Int32) {
-    self.javaObject.call(method: MediaPlayer__method__23, [msec.toJavaParameter()])
+  open func setSyncParams(params: SyncParams?) {
+    self.javaObject.call(method: MediaPlayer__method__23, [params.toJavaParameter()])
   }
 
-  public func getTimestamp() -> MediaTimestamp? {
+  open func getSyncParams() -> SyncParams? {
     self.javaObject.call(method: MediaPlayer__method__24, [])
   }
 
-  public func getCurrentPosition() -> Int32 {
-    self.javaObject.call(method: MediaPlayer__method__25, [])
+  open func seekTo(msec: Int32) {
+    self.javaObject.call(method: MediaPlayer__method__25, [msec.toJavaParameter()])
   }
 
-  public func getDuration() -> Int32 {
+  open func getTimestamp() -> MediaTimestamp? {
     self.javaObject.call(method: MediaPlayer__method__26, [])
   }
 
-  public func setNextMediaPlayer(next: MediaPlayer?) {
-    self.javaObject.call(method: MediaPlayer__method__27, [next.toJavaParameter()])
+  open func getCurrentPosition() -> Int32 {
+    self.javaObject.call(method: MediaPlayer__method__27, [])
   }
 
-  public func release() {
+  open func getDuration() -> Int32 {
     self.javaObject.call(method: MediaPlayer__method__28, [])
   }
 
-  public func reset() {
-    self.javaObject.call(method: MediaPlayer__method__29, [])
+  open func setNextMediaPlayer(next: MediaPlayer?) {
+    self.javaObject.call(method: MediaPlayer__method__29, [next.toJavaParameter()])
   }
 
-  public func setAudioStreamType(streamtype: Int32) {
-    self.javaObject.call(method: MediaPlayer__method__30, [streamtype.toJavaParameter()])
+  open func release() {
+    self.javaObject.call(method: MediaPlayer__method__30, [])
   }
 
-  public func setAudioAttributes(attributes: AudioAttributes?) {
-    self.javaObject.call(method: MediaPlayer__method__31, [attributes.toJavaParameter()])
+  open func reset() {
+    self.javaObject.call(method: MediaPlayer__method__31, [])
   }
 
-  public func setLooping(looping: Bool) {
-    self.javaObject.call(method: MediaPlayer__method__32, [looping.toJavaParameter()])
+  open func setAudioStreamType(streamtype: Int32) {
+    self.javaObject.call(method: MediaPlayer__method__32, [streamtype.toJavaParameter()])
   }
 
-  public func isLooping() -> Bool {
-    self.javaObject.call(method: MediaPlayer__method__33, [])
+  open func setAudioAttributes(attributes: AudioAttributes?) {
+    self.javaObject.call(method: MediaPlayer__method__33, [attributes.toJavaParameter()])
   }
 
-  public func setVolume(leftVolume: Float, rightVolume: Float) {
-    self.javaObject.call(method: MediaPlayer__method__34, [leftVolume.toJavaParameter(), rightVolume.toJavaParameter()])
+  open func setLooping(looping: Bool) {
+    self.javaObject.call(method: MediaPlayer__method__34, [looping.toJavaParameter()])
   }
 
-  public func setAudioSessionId(sessionId: Int32) {
-    self.javaObject.call(method: MediaPlayer__method__35, [sessionId.toJavaParameter()])
+  open func isLooping() -> Bool {
+    self.javaObject.call(method: MediaPlayer__method__35, [])
   }
 
-  public func getAudioSessionId() -> Int32 {
-    self.javaObject.call(method: MediaPlayer__method__36, [])
+  open func setVolume(leftVolume: Float, rightVolume: Float) {
+    self.javaObject.call(method: MediaPlayer__method__36, [leftVolume.toJavaParameter(), rightVolume.toJavaParameter()])
   }
 
-  public func attachAuxEffect(effectId: Int32) {
-    self.javaObject.call(method: MediaPlayer__method__37, [effectId.toJavaParameter()])
+  open func setAudioSessionId(sessionId: Int32) {
+    self.javaObject.call(method: MediaPlayer__method__37, [sessionId.toJavaParameter()])
   }
 
-  public func setAuxEffectSendLevel(level: Float) {
-    self.javaObject.call(method: MediaPlayer__method__38, [level.toJavaParameter()])
+  open func getAudioSessionId() -> Int32 {
+    self.javaObject.call(method: MediaPlayer__method__38, [])
   }
 
-  public func getTrackInfo() -> [MediaPlayer.TrackInfo?] {
-    self.javaObject.call(method: MediaPlayer__method__39, [])
+  open func attachAuxEffect(effectId: Int32) {
+    self.javaObject.call(method: MediaPlayer__method__39, [effectId.toJavaParameter()])
   }
 
-  public func addTimedTextSource(path: String, mimeType: String) {
-    self.javaObject.call(method: MediaPlayer__method__40, [path.toJavaParameter(), mimeType.toJavaParameter()])
+  open func setAuxEffectSendLevel(level: Float) {
+    self.javaObject.call(method: MediaPlayer__method__40, [level.toJavaParameter()])
   }
 
-  public func addTimedTextSource(fd: FileDescriptor?, mimeType: String) {
-    self.javaObject.call(method: MediaPlayer__method__41, [fd.toJavaParameter(), mimeType.toJavaParameter()])
+  open func getTrackInfo() -> [MediaPlayer.TrackInfo?] {
+    self.javaObject.call(method: MediaPlayer__method__41, [])
   }
 
-  public func addTimedTextSource(fd: FileDescriptor?, offset: Int64, length: Int64, mime: String) {
-    self.javaObject.call(method: MediaPlayer__method__42, [fd.toJavaParameter(), offset.toJavaParameter(), length.toJavaParameter(), mime.toJavaParameter()])
+  open func addTimedTextSource(path: String, mimeType: String) {
+    self.javaObject.call(method: MediaPlayer__method__42, [path.toJavaParameter(), mimeType.toJavaParameter()])
   }
 
-  public func getSelectedTrack(trackType: Int32) -> Int32 {
-    self.javaObject.call(method: MediaPlayer__method__43, [trackType.toJavaParameter()])
+  open func addTimedTextSource(fd: FileDescriptor?, mimeType: String) {
+    self.javaObject.call(method: MediaPlayer__method__43, [fd.toJavaParameter(), mimeType.toJavaParameter()])
   }
 
-  public func selectTrack(index: Int32) {
-    self.javaObject.call(method: MediaPlayer__method__44, [index.toJavaParameter()])
+  open func addTimedTextSource(fd: FileDescriptor?, offset: Int64, length: Int64, mime: String) {
+    self.javaObject.call(method: MediaPlayer__method__44, [fd.toJavaParameter(), offset.toJavaParameter(), length.toJavaParameter(), mime.toJavaParameter()])
   }
 
-  public func deselectTrack(index: Int32) {
-    self.javaObject.call(method: MediaPlayer__method__45, [index.toJavaParameter()])
+  open func getSelectedTrack(trackType: Int32) -> Int32 {
+    self.javaObject.call(method: MediaPlayer__method__45, [trackType.toJavaParameter()])
   }
 
-  public func setOnPreparedListener(listener: MediaPlayer.OnPreparedListener?) {
-    self.javaObject.call(method: MediaPlayer__method__46, [JavaParameter(object: listener?.toJavaObject())])
+  open func selectTrack(index: Int32) {
+    self.javaObject.call(method: MediaPlayer__method__46, [index.toJavaParameter()])
   }
 
-  public func setOnCompletionListener(listener: MediaPlayer.OnCompletionListener?) {
-    self.javaObject.call(method: MediaPlayer__method__47, [JavaParameter(object: listener?.toJavaObject())])
+  open func deselectTrack(index: Int32) {
+    self.javaObject.call(method: MediaPlayer__method__47, [index.toJavaParameter()])
   }
 
-  public func setOnBufferingUpdateListener(listener: MediaPlayer.OnBufferingUpdateListener?) {
+  open func setOnPreparedListener(listener: MediaPlayer.OnPreparedListener?) {
     self.javaObject.call(method: MediaPlayer__method__48, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setOnSeekCompleteListener(listener: MediaPlayer.OnSeekCompleteListener?) {
+  open func setOnCompletionListener(listener: MediaPlayer.OnCompletionListener?) {
     self.javaObject.call(method: MediaPlayer__method__49, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setOnVideoSizeChangedListener(listener: MediaPlayer.OnVideoSizeChangedListener?) {
+  open func setOnBufferingUpdateListener(listener: MediaPlayer.OnBufferingUpdateListener?) {
     self.javaObject.call(method: MediaPlayer__method__50, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setOnTimedTextListener(listener: MediaPlayer.OnTimedTextListener?) {
+  open func setOnSeekCompleteListener(listener: MediaPlayer.OnSeekCompleteListener?) {
     self.javaObject.call(method: MediaPlayer__method__51, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setOnTimedMetaDataAvailableListener(listener: MediaPlayer.OnTimedMetaDataAvailableListener?) {
+  open func setOnVideoSizeChangedListener(listener: MediaPlayer.OnVideoSizeChangedListener?) {
     self.javaObject.call(method: MediaPlayer__method__52, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setOnErrorListener(listener: MediaPlayer.OnErrorListener?) {
+  open func setOnTimedTextListener(listener: MediaPlayer.OnTimedTextListener?) {
     self.javaObject.call(method: MediaPlayer__method__53, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setOnInfoListener(listener: MediaPlayer.OnInfoListener?) {
+  open func setOnTimedMetaDataAvailableListener(listener: MediaPlayer.OnTimedMetaDataAvailableListener?) {
     self.javaObject.call(method: MediaPlayer__method__54, [JavaParameter(object: listener?.toJavaObject())])
+  }
+
+  open func setOnErrorListener(listener: MediaPlayer.OnErrorListener?) {
+    self.javaObject.call(method: MediaPlayer__method__55, [JavaParameter(object: listener?.toJavaObject())])
+  }
+
+  open func setOnInfoListener(listener: MediaPlayer.OnInfoListener?) {
+    self.javaObject.call(method: MediaPlayer__method__56, [JavaParameter(object: listener?.toJavaObject())])
   }
 
   public required init(_ obj: JavaObject) {
@@ -606,23 +615,23 @@ open class MediaPlayerTrackInfo: Object, Parcelable {
 
   public static let MEDIA_TRACK_TYPE_VIDEO: Int32 = MediaPlayerTrackInfo__class.getStatic(field: MediaPlayerTrackInfo__field__5)
 
-  public func getTrackType() -> Int32 {
+  open func getTrackType() -> Int32 {
     self.javaObject.call(method: MediaPlayerTrackInfo__method__0, [])
   }
 
-  public func getLanguage() -> String {
+  open func getLanguage() -> String {
     self.javaObject.call(method: MediaPlayerTrackInfo__method__1, [])
   }
 
-  public func getFormat() -> MediaFormat? {
+  open func getFormat() -> MediaFormat? {
     self.javaObject.call(method: MediaPlayerTrackInfo__method__2, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: MediaPlayerTrackInfo__method__3, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: MediaPlayerTrackInfo__method__4, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }
@@ -632,60 +641,62 @@ open class MediaPlayerTrackInfo: Object, Parcelable {
 private let MediaPlayer__class = findJavaClass(fqn: "android/media/MediaPlayer")!
 
 private let MediaPlayer__method__0 = MediaPlayer__class.getMethodID(name: "<init>", sig: "()V")!
-private let MediaPlayer__method__1 = MediaPlayer__class.getMethodID(name: "setVideoScalingMode", sig: "(I)V")!
-private let MediaPlayer__method__2 = MediaPlayer__class.getStaticMethodID(name: "create", sig: "(Landroid/content/Context;I)Landroid/media/MediaPlayer;")!
-private let MediaPlayer__method__3 = MediaPlayer__class.getStaticMethodID(name: "create", sig: "(Landroid/content/Context;ILandroid/media/AudioAttributes;I)Landroid/media/MediaPlayer;")!
-private let MediaPlayer__method__4 = MediaPlayer__class.getMethodID(name: "setDataSource", sig: "(Ljava/lang/String;)V")!
-private let MediaPlayer__method__5 = MediaPlayer__class.getMethodID(name: "setDataSource", sig: "(Landroid/content/res/AssetFileDescriptor;)V")!
-private let MediaPlayer__method__6 = MediaPlayer__class.getMethodID(name: "setDataSource", sig: "(Ljava/io/FileDescriptor;)V")!
-private let MediaPlayer__method__7 = MediaPlayer__class.getMethodID(name: "setDataSource", sig: "(Ljava/io/FileDescriptor;JJ)V")!
-private let MediaPlayer__method__8 = MediaPlayer__class.getMethodID(name: "setDataSource", sig: "(Landroid/media/MediaDataSource;)V")!
-private let MediaPlayer__method__9 = MediaPlayer__class.getMethodID(name: "prepare", sig: "()V")!
-private let MediaPlayer__method__10 = MediaPlayer__class.getMethodID(name: "prepareAsync", sig: "()V")!
-private let MediaPlayer__method__11 = MediaPlayer__class.getMethodID(name: "start", sig: "()V")!
-private let MediaPlayer__method__12 = MediaPlayer__class.getMethodID(name: "stop", sig: "()V")!
-private let MediaPlayer__method__13 = MediaPlayer__class.getMethodID(name: "pause", sig: "()V")!
-private let MediaPlayer__method__14 = MediaPlayer__class.getMethodID(name: "setWakeMode", sig: "(Landroid/content/Context;I)V")!
-private let MediaPlayer__method__15 = MediaPlayer__class.getMethodID(name: "setScreenOnWhilePlaying", sig: "(Z)V")!
-private let MediaPlayer__method__16 = MediaPlayer__class.getMethodID(name: "getVideoWidth", sig: "()I")!
-private let MediaPlayer__method__17 = MediaPlayer__class.getMethodID(name: "getVideoHeight", sig: "()I")!
-private let MediaPlayer__method__18 = MediaPlayer__class.getMethodID(name: "isPlaying", sig: "()Z")!
-private let MediaPlayer__method__19 = MediaPlayer__class.getMethodID(name: "setPlaybackParams", sig: "(Landroid/media/PlaybackParams;)V")!
-private let MediaPlayer__method__20 = MediaPlayer__class.getMethodID(name: "getPlaybackParams", sig: "()Landroid/media/PlaybackParams;")!
-private let MediaPlayer__method__21 = MediaPlayer__class.getMethodID(name: "setSyncParams", sig: "(Landroid/media/SyncParams;)V")!
-private let MediaPlayer__method__22 = MediaPlayer__class.getMethodID(name: "getSyncParams", sig: "()Landroid/media/SyncParams;")!
-private let MediaPlayer__method__23 = MediaPlayer__class.getMethodID(name: "seekTo", sig: "(I)V")!
-private let MediaPlayer__method__24 = MediaPlayer__class.getMethodID(name: "getTimestamp", sig: "()Landroid/media/MediaTimestamp;")!
-private let MediaPlayer__method__25 = MediaPlayer__class.getMethodID(name: "getCurrentPosition", sig: "()I")!
-private let MediaPlayer__method__26 = MediaPlayer__class.getMethodID(name: "getDuration", sig: "()I")!
-private let MediaPlayer__method__27 = MediaPlayer__class.getMethodID(name: "setNextMediaPlayer", sig: "(Landroid/media/MediaPlayer;)V")!
-private let MediaPlayer__method__28 = MediaPlayer__class.getMethodID(name: "release", sig: "()V")!
-private let MediaPlayer__method__29 = MediaPlayer__class.getMethodID(name: "reset", sig: "()V")!
-private let MediaPlayer__method__30 = MediaPlayer__class.getMethodID(name: "setAudioStreamType", sig: "(I)V")!
-private let MediaPlayer__method__31 = MediaPlayer__class.getMethodID(name: "setAudioAttributes", sig: "(Landroid/media/AudioAttributes;)V")!
-private let MediaPlayer__method__32 = MediaPlayer__class.getMethodID(name: "setLooping", sig: "(Z)V")!
-private let MediaPlayer__method__33 = MediaPlayer__class.getMethodID(name: "isLooping", sig: "()Z")!
-private let MediaPlayer__method__34 = MediaPlayer__class.getMethodID(name: "setVolume", sig: "(FF)V")!
-private let MediaPlayer__method__35 = MediaPlayer__class.getMethodID(name: "setAudioSessionId", sig: "(I)V")!
-private let MediaPlayer__method__36 = MediaPlayer__class.getMethodID(name: "getAudioSessionId", sig: "()I")!
-private let MediaPlayer__method__37 = MediaPlayer__class.getMethodID(name: "attachAuxEffect", sig: "(I)V")!
-private let MediaPlayer__method__38 = MediaPlayer__class.getMethodID(name: "setAuxEffectSendLevel", sig: "(F)V")!
-private let MediaPlayer__method__39 = MediaPlayer__class.getMethodID(name: "getTrackInfo", sig: "()[Landroid/media/MediaPlayer$TrackInfo;")!
-private let MediaPlayer__method__40 = MediaPlayer__class.getMethodID(name: "addTimedTextSource", sig: "(Ljava/lang/String;Ljava/lang/String;)V")!
-private let MediaPlayer__method__41 = MediaPlayer__class.getMethodID(name: "addTimedTextSource", sig: "(Ljava/io/FileDescriptor;Ljava/lang/String;)V")!
-private let MediaPlayer__method__42 = MediaPlayer__class.getMethodID(name: "addTimedTextSource", sig: "(Ljava/io/FileDescriptor;JJLjava/lang/String;)V")!
-private let MediaPlayer__method__43 = MediaPlayer__class.getMethodID(name: "getSelectedTrack", sig: "(I)I")!
-private let MediaPlayer__method__44 = MediaPlayer__class.getMethodID(name: "selectTrack", sig: "(I)V")!
-private let MediaPlayer__method__45 = MediaPlayer__class.getMethodID(name: "deselectTrack", sig: "(I)V")!
-private let MediaPlayer__method__46 = MediaPlayer__class.getMethodID(name: "setOnPreparedListener", sig: "(Landroid/media/MediaPlayer$OnPreparedListener;)V")!
-private let MediaPlayer__method__47 = MediaPlayer__class.getMethodID(name: "setOnCompletionListener", sig: "(Landroid/media/MediaPlayer$OnCompletionListener;)V")!
-private let MediaPlayer__method__48 = MediaPlayer__class.getMethodID(name: "setOnBufferingUpdateListener", sig: "(Landroid/media/MediaPlayer$OnBufferingUpdateListener;)V")!
-private let MediaPlayer__method__49 = MediaPlayer__class.getMethodID(name: "setOnSeekCompleteListener", sig: "(Landroid/media/MediaPlayer$OnSeekCompleteListener;)V")!
-private let MediaPlayer__method__50 = MediaPlayer__class.getMethodID(name: "setOnVideoSizeChangedListener", sig: "(Landroid/media/MediaPlayer$OnVideoSizeChangedListener;)V")!
-private let MediaPlayer__method__51 = MediaPlayer__class.getMethodID(name: "setOnTimedTextListener", sig: "(Landroid/media/MediaPlayer$OnTimedTextListener;)V")!
-private let MediaPlayer__method__52 = MediaPlayer__class.getMethodID(name: "setOnTimedMetaDataAvailableListener", sig: "(Landroid/media/MediaPlayer$OnTimedMetaDataAvailableListener;)V")!
-private let MediaPlayer__method__53 = MediaPlayer__class.getMethodID(name: "setOnErrorListener", sig: "(Landroid/media/MediaPlayer$OnErrorListener;)V")!
-private let MediaPlayer__method__54 = MediaPlayer__class.getMethodID(name: "setOnInfoListener", sig: "(Landroid/media/MediaPlayer$OnInfoListener;)V")!
+private let MediaPlayer__method__1 = MediaPlayer__class.getMethodID(name: "setDisplay", sig: "(Landroid/view/SurfaceHolder;)V")!
+private let MediaPlayer__method__2 = MediaPlayer__class.getMethodID(name: "setSurface", sig: "(Landroid/view/Surface;)V")!
+private let MediaPlayer__method__3 = MediaPlayer__class.getMethodID(name: "setVideoScalingMode", sig: "(I)V")!
+private let MediaPlayer__method__4 = MediaPlayer__class.getStaticMethodID(name: "create", sig: "(Landroid/content/Context;I)Landroid/media/MediaPlayer;")!
+private let MediaPlayer__method__5 = MediaPlayer__class.getStaticMethodID(name: "create", sig: "(Landroid/content/Context;ILandroid/media/AudioAttributes;I)Landroid/media/MediaPlayer;")!
+private let MediaPlayer__method__6 = MediaPlayer__class.getMethodID(name: "setDataSource", sig: "(Ljava/lang/String;)V")!
+private let MediaPlayer__method__7 = MediaPlayer__class.getMethodID(name: "setDataSource", sig: "(Landroid/content/res/AssetFileDescriptor;)V")!
+private let MediaPlayer__method__8 = MediaPlayer__class.getMethodID(name: "setDataSource", sig: "(Ljava/io/FileDescriptor;)V")!
+private let MediaPlayer__method__9 = MediaPlayer__class.getMethodID(name: "setDataSource", sig: "(Ljava/io/FileDescriptor;JJ)V")!
+private let MediaPlayer__method__10 = MediaPlayer__class.getMethodID(name: "setDataSource", sig: "(Landroid/media/MediaDataSource;)V")!
+private let MediaPlayer__method__11 = MediaPlayer__class.getMethodID(name: "prepare", sig: "()V")!
+private let MediaPlayer__method__12 = MediaPlayer__class.getMethodID(name: "prepareAsync", sig: "()V")!
+private let MediaPlayer__method__13 = MediaPlayer__class.getMethodID(name: "start", sig: "()V")!
+private let MediaPlayer__method__14 = MediaPlayer__class.getMethodID(name: "stop", sig: "()V")!
+private let MediaPlayer__method__15 = MediaPlayer__class.getMethodID(name: "pause", sig: "()V")!
+private let MediaPlayer__method__16 = MediaPlayer__class.getMethodID(name: "setWakeMode", sig: "(Landroid/content/Context;I)V")!
+private let MediaPlayer__method__17 = MediaPlayer__class.getMethodID(name: "setScreenOnWhilePlaying", sig: "(Z)V")!
+private let MediaPlayer__method__18 = MediaPlayer__class.getMethodID(name: "getVideoWidth", sig: "()I")!
+private let MediaPlayer__method__19 = MediaPlayer__class.getMethodID(name: "getVideoHeight", sig: "()I")!
+private let MediaPlayer__method__20 = MediaPlayer__class.getMethodID(name: "isPlaying", sig: "()Z")!
+private let MediaPlayer__method__21 = MediaPlayer__class.getMethodID(name: "setPlaybackParams", sig: "(Landroid/media/PlaybackParams;)V")!
+private let MediaPlayer__method__22 = MediaPlayer__class.getMethodID(name: "getPlaybackParams", sig: "()Landroid/media/PlaybackParams;")!
+private let MediaPlayer__method__23 = MediaPlayer__class.getMethodID(name: "setSyncParams", sig: "(Landroid/media/SyncParams;)V")!
+private let MediaPlayer__method__24 = MediaPlayer__class.getMethodID(name: "getSyncParams", sig: "()Landroid/media/SyncParams;")!
+private let MediaPlayer__method__25 = MediaPlayer__class.getMethodID(name: "seekTo", sig: "(I)V")!
+private let MediaPlayer__method__26 = MediaPlayer__class.getMethodID(name: "getTimestamp", sig: "()Landroid/media/MediaTimestamp;")!
+private let MediaPlayer__method__27 = MediaPlayer__class.getMethodID(name: "getCurrentPosition", sig: "()I")!
+private let MediaPlayer__method__28 = MediaPlayer__class.getMethodID(name: "getDuration", sig: "()I")!
+private let MediaPlayer__method__29 = MediaPlayer__class.getMethodID(name: "setNextMediaPlayer", sig: "(Landroid/media/MediaPlayer;)V")!
+private let MediaPlayer__method__30 = MediaPlayer__class.getMethodID(name: "release", sig: "()V")!
+private let MediaPlayer__method__31 = MediaPlayer__class.getMethodID(name: "reset", sig: "()V")!
+private let MediaPlayer__method__32 = MediaPlayer__class.getMethodID(name: "setAudioStreamType", sig: "(I)V")!
+private let MediaPlayer__method__33 = MediaPlayer__class.getMethodID(name: "setAudioAttributes", sig: "(Landroid/media/AudioAttributes;)V")!
+private let MediaPlayer__method__34 = MediaPlayer__class.getMethodID(name: "setLooping", sig: "(Z)V")!
+private let MediaPlayer__method__35 = MediaPlayer__class.getMethodID(name: "isLooping", sig: "()Z")!
+private let MediaPlayer__method__36 = MediaPlayer__class.getMethodID(name: "setVolume", sig: "(FF)V")!
+private let MediaPlayer__method__37 = MediaPlayer__class.getMethodID(name: "setAudioSessionId", sig: "(I)V")!
+private let MediaPlayer__method__38 = MediaPlayer__class.getMethodID(name: "getAudioSessionId", sig: "()I")!
+private let MediaPlayer__method__39 = MediaPlayer__class.getMethodID(name: "attachAuxEffect", sig: "(I)V")!
+private let MediaPlayer__method__40 = MediaPlayer__class.getMethodID(name: "setAuxEffectSendLevel", sig: "(F)V")!
+private let MediaPlayer__method__41 = MediaPlayer__class.getMethodID(name: "getTrackInfo", sig: "()[Landroid/media/MediaPlayer$TrackInfo;")!
+private let MediaPlayer__method__42 = MediaPlayer__class.getMethodID(name: "addTimedTextSource", sig: "(Ljava/lang/String;Ljava/lang/String;)V")!
+private let MediaPlayer__method__43 = MediaPlayer__class.getMethodID(name: "addTimedTextSource", sig: "(Ljava/io/FileDescriptor;Ljava/lang/String;)V")!
+private let MediaPlayer__method__44 = MediaPlayer__class.getMethodID(name: "addTimedTextSource", sig: "(Ljava/io/FileDescriptor;JJLjava/lang/String;)V")!
+private let MediaPlayer__method__45 = MediaPlayer__class.getMethodID(name: "getSelectedTrack", sig: "(I)I")!
+private let MediaPlayer__method__46 = MediaPlayer__class.getMethodID(name: "selectTrack", sig: "(I)V")!
+private let MediaPlayer__method__47 = MediaPlayer__class.getMethodID(name: "deselectTrack", sig: "(I)V")!
+private let MediaPlayer__method__48 = MediaPlayer__class.getMethodID(name: "setOnPreparedListener", sig: "(Landroid/media/MediaPlayer$OnPreparedListener;)V")!
+private let MediaPlayer__method__49 = MediaPlayer__class.getMethodID(name: "setOnCompletionListener", sig: "(Landroid/media/MediaPlayer$OnCompletionListener;)V")!
+private let MediaPlayer__method__50 = MediaPlayer__class.getMethodID(name: "setOnBufferingUpdateListener", sig: "(Landroid/media/MediaPlayer$OnBufferingUpdateListener;)V")!
+private let MediaPlayer__method__51 = MediaPlayer__class.getMethodID(name: "setOnSeekCompleteListener", sig: "(Landroid/media/MediaPlayer$OnSeekCompleteListener;)V")!
+private let MediaPlayer__method__52 = MediaPlayer__class.getMethodID(name: "setOnVideoSizeChangedListener", sig: "(Landroid/media/MediaPlayer$OnVideoSizeChangedListener;)V")!
+private let MediaPlayer__method__53 = MediaPlayer__class.getMethodID(name: "setOnTimedTextListener", sig: "(Landroid/media/MediaPlayer$OnTimedTextListener;)V")!
+private let MediaPlayer__method__54 = MediaPlayer__class.getMethodID(name: "setOnTimedMetaDataAvailableListener", sig: "(Landroid/media/MediaPlayer$OnTimedMetaDataAvailableListener;)V")!
+private let MediaPlayer__method__55 = MediaPlayer__class.getMethodID(name: "setOnErrorListener", sig: "(Landroid/media/MediaPlayer$OnErrorListener;)V")!
+private let MediaPlayer__method__56 = MediaPlayer__class.getMethodID(name: "setOnInfoListener", sig: "(Landroid/media/MediaPlayer$OnInfoListener;)V")!
 
 private let MediaPlayer__field__0 = MediaPlayer__class.getStaticFieldID(name: "MEDIA_ERROR_IO", sig: "I")!
 private let MediaPlayer__field__1 = MediaPlayer__class.getStaticFieldID(name: "MEDIA_ERROR_MALFORMED", sig: "I")!

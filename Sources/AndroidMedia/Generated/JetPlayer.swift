@@ -11,7 +11,7 @@ open class JetPlayer: Object {
     JetPlayer__class.callStatic(method: JetPlayer__method__0, [])
   }
 
-  public func release() {
+  open func release() {
     self.javaObject.call(method: JetPlayer__method__1, [])
   }
 
@@ -19,55 +19,55 @@ open class JetPlayer: Object {
     JetPlayer__class.callStatic(method: JetPlayer__method__2, [])
   }
 
-  public func loadJetFile(path: String) -> Bool {
+  open func loadJetFile(path: String) -> Bool {
     self.javaObject.call(method: JetPlayer__method__3, [path.toJavaParameter()])
   }
 
-  public func loadJetFile(afd: AssetFileDescriptor?) -> Bool {
+  open func loadJetFile(afd: AssetFileDescriptor?) -> Bool {
     self.javaObject.call(method: JetPlayer__method__4, [afd.toJavaParameter()])
   }
 
-  public func closeJetFile() -> Bool {
+  open func closeJetFile() -> Bool {
     self.javaObject.call(method: JetPlayer__method__5, [])
   }
 
-  public func play() -> Bool {
+  open func play() -> Bool {
     self.javaObject.call(method: JetPlayer__method__6, [])
   }
 
-  public func pause() -> Bool {
+  open func pause() -> Bool {
     self.javaObject.call(method: JetPlayer__method__7, [])
   }
 
-  public func queueJetSegment(segmentNum: Int32, libNum: Int32, repeatCount: Int32, transpose: Int32, muteFlags: Int32, userID: Int8) -> Bool {
+  open func queueJetSegment(segmentNum: Int32, libNum: Int32, repeatCount: Int32, transpose: Int32, muteFlags: Int32, userID: Int8) -> Bool {
     self.javaObject.call(method: JetPlayer__method__8, [segmentNum.toJavaParameter(), libNum.toJavaParameter(), repeatCount.toJavaParameter(), transpose.toJavaParameter(), muteFlags.toJavaParameter(), userID.toJavaParameter()])
   }
 
-  public func queueJetSegmentMuteArray(segmentNum: Int32, libNum: Int32, repeatCount: Int32, transpose: Int32, muteArray: [Bool], userID: Int8) -> Bool {
+  open func queueJetSegmentMuteArray(segmentNum: Int32, libNum: Int32, repeatCount: Int32, transpose: Int32, muteArray: [Bool], userID: Int8) -> Bool {
     self.javaObject.call(method: JetPlayer__method__9, [segmentNum.toJavaParameter(), libNum.toJavaParameter(), repeatCount.toJavaParameter(), transpose.toJavaParameter(), muteArray.toJavaParameter(), userID.toJavaParameter()])
   }
 
-  public func setMuteFlags(muteFlags: Int32, sync: Bool) -> Bool {
+  open func setMuteFlags(muteFlags: Int32, sync: Bool) -> Bool {
     self.javaObject.call(method: JetPlayer__method__10, [muteFlags.toJavaParameter(), sync.toJavaParameter()])
   }
 
-  public func setMuteArray(muteArray: [Bool], sync: Bool) -> Bool {
+  open func setMuteArray(muteArray: [Bool], sync: Bool) -> Bool {
     self.javaObject.call(method: JetPlayer__method__11, [muteArray.toJavaParameter(), sync.toJavaParameter()])
   }
 
-  public func setMuteFlag(trackId: Int32, muteFlag: Bool, sync: Bool) -> Bool {
+  open func setMuteFlag(trackId: Int32, muteFlag: Bool, sync: Bool) -> Bool {
     self.javaObject.call(method: JetPlayer__method__12, [trackId.toJavaParameter(), muteFlag.toJavaParameter(), sync.toJavaParameter()])
   }
 
-  public func triggerClip(clipId: Int32) -> Bool {
+  open func triggerClip(clipId: Int32) -> Bool {
     self.javaObject.call(method: JetPlayer__method__13, [clipId.toJavaParameter()])
   }
 
-  public func clearQueue() -> Bool {
+  open func clearQueue() -> Bool {
     self.javaObject.call(method: JetPlayer__method__14, [])
   }
 
-  public func setEventListener(listener: JetPlayer.OnJetEventListener?) {
+  open func setEventListener(listener: JetPlayer.OnJetEventListener?) {
     self.javaObject.call(method: JetPlayer__method__15, [JavaParameter(object: listener?.toJavaObject())])
   }
 }

@@ -29,63 +29,63 @@ open class WallpaperManager: Object {
     WallpaperManager__class.callStatic(method: WallpaperManager__method__0, [JavaParameter(object: context?.toJavaObject())])
   }
 
-  public func getWallpaperFile(which: Int32) -> ParcelFileDescriptor? {
+  open func getWallpaperFile(which: Int32) -> ParcelFileDescriptor? {
     self.javaObject.call(method: WallpaperManager__method__1, [which.toJavaParameter()])
   }
 
-  public func forgetLoadedWallpaper() {
+  open func forgetLoadedWallpaper() {
     self.javaObject.call(method: WallpaperManager__method__2, [])
   }
 
-  public func getWallpaperInfo() -> WallpaperInfo? {
+  open func getWallpaperInfo() -> WallpaperInfo? {
     self.javaObject.call(method: WallpaperManager__method__3, [])
   }
 
-  public func getWallpaperId(which: Int32) -> Int32 {
+  open func getWallpaperId(which: Int32) -> Int32 {
     self.javaObject.call(method: WallpaperManager__method__4, [which.toJavaParameter()])
   }
 
-  public func setResource(resid: Int32) {
+  open func setResource(resid: Int32) {
     self.javaObject.call(method: WallpaperManager__method__5, [resid.toJavaParameter()])
   }
 
-  public func setResource(resid: Int32, which: Int32) -> Int32 {
+  open func setResource(resid: Int32, which: Int32) -> Int32 {
     self.javaObject.call(method: WallpaperManager__method__6, [resid.toJavaParameter(), which.toJavaParameter()])
   }
 
-  public func hasResourceWallpaper(resid: Int32) -> Bool {
+  open func hasResourceWallpaper(resid: Int32) -> Bool {
     self.javaObject.call(method: WallpaperManager__method__7, [resid.toJavaParameter()])
   }
 
-  public func getDesiredMinimumWidth() -> Int32 {
+  open func getDesiredMinimumWidth() -> Int32 {
     self.javaObject.call(method: WallpaperManager__method__8, [])
   }
 
-  public func getDesiredMinimumHeight() -> Int32 {
+  open func getDesiredMinimumHeight() -> Int32 {
     self.javaObject.call(method: WallpaperManager__method__9, [])
   }
 
-  public func suggestDesiredDimensions(minimumWidth: Int32, minimumHeight: Int32) {
+  open func suggestDesiredDimensions(minimumWidth: Int32, minimumHeight: Int32) {
     self.javaObject.call(method: WallpaperManager__method__10, [minimumWidth.toJavaParameter(), minimumHeight.toJavaParameter()])
   }
 
-  public func setWallpaperOffsetSteps(xStep: Float, yStep: Float) {
+  open func setWallpaperOffsetSteps(xStep: Float, yStep: Float) {
     self.javaObject.call(method: WallpaperManager__method__11, [xStep.toJavaParameter(), yStep.toJavaParameter()])
   }
 
-  public func isWallpaperSupported() -> Bool {
+  open func isWallpaperSupported() -> Bool {
     self.javaObject.call(method: WallpaperManager__method__12, [])
   }
 
-  public func isSetWallpaperAllowed() -> Bool {
+  open func isSetWallpaperAllowed() -> Bool {
     self.javaObject.call(method: WallpaperManager__method__13, [])
   }
 
-  public func clear() {
+  open func clear() {
     self.javaObject.call(method: WallpaperManager__method__14, [])
   }
 
-  public func clear(which: Int32) {
+  open func clear(which: Int32) {
     self.javaObject.call(method: WallpaperManager__method__15, [which.toJavaParameter()])
   }
 }

@@ -38,7 +38,7 @@ open class ServiceInfo: ComponentInfo, Parcelable {
     super.init(ctor: ServiceInfo__method__1, [orig.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ServiceInfo__method__2, [])
   }
 

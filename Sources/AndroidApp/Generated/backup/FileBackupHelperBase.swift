@@ -4,7 +4,7 @@ import AndroidOS
 import Java
 
 open class FileBackupHelperBase: Object {
-  public func writeNewStateDescription(newState: ParcelFileDescriptor?) {
+  open func writeNewStateDescription(newState: ParcelFileDescriptor?) {
     self.javaObject.call(method: FileBackupHelperBase__method__0, [newState.toJavaParameter()])
   }
 }

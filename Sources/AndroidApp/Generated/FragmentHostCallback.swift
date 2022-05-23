@@ -7,27 +7,7 @@ import Java
 public protocol FragmentHostCallback: FragmentContainer {
   associatedtype E: JObjectConvertible
 
-  func onShouldSaveFragmentState(fragment: Fragment?) -> Bool
-
-  func onUseFragmentManagerInflaterFactory() -> Bool
-
   func onGetHost() -> E?
-
-  func onInvalidateOptionsMenu() -> Void
-
-  func onStartActivityFromFragment(fragment: Fragment?, intent: Intent?, requestCode: Int32, options: Bundle?) -> Void
-
-  func onStartIntentSenderFromFragment(fragment: Fragment?, intent: IntentSender?, requestCode: Int32, fillInIntent: Intent?, flagsMask: Int32, flagsValues: Int32, extraFlags: Int32, options: Bundle?) -> Void
-
-  func onRequestPermissionsFromFragment(fragment: Fragment?, permissions: [String], requestCode: Int32) -> Void
-
-  func onHasWindowAnimations() -> Bool
-
-  func onGetWindowAnimations() -> Int32
-
-  func onAttachFragment(fragment: Fragment?) -> Void
-
-  func onHasView() -> Bool
 }
 
 public extension FragmentHostCallback {
@@ -89,7 +69,7 @@ open class FragmentHostCallbackProxy<E: JObjectConvertible>: FragmentContainerPr
     self.init(obj.toJavaObject()!)
   }
 
-  public func onGetHost() -> E? {
+  open func onGetHost() -> E? {
     self.javaObject.call(method: FragmentHostCallback__method__2, [])
   }
 }

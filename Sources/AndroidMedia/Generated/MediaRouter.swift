@@ -1,6 +1,7 @@
 
 
 import AndroidContent
+import AndroidView
 import Java
 
 open class MediaRouter: Object {
@@ -30,67 +31,67 @@ open class MediaRouter: Object {
 
   public static let ROUTE_TYPE_USER: Int32 = MediaRouter__class.getStatic(field: MediaRouter__field__4)
 
-  public func getDefaultRoute() -> MediaRouter.RouteInfo? {
+  open func getDefaultRoute() -> MediaRouter.RouteInfo? {
     self.javaObject.call(method: MediaRouter__method__0, [])
   }
 
-  public func getSelectedRoute(_type: Int32) -> MediaRouter.RouteInfo? {
-    self.javaObject.call(method: MediaRouter__method__1, [_type.toJavaParameter()])
+  open func getSelectedRoute(type: Int32) -> MediaRouter.RouteInfo? {
+    self.javaObject.call(method: MediaRouter__method__1, [type.toJavaParameter()])
   }
 
-  public func addCallback(types: Int32, cb: MediaRouter.Callback?) {
+  open func addCallback(types: Int32, cb: MediaRouter.Callback?) {
     self.javaObject.call(method: MediaRouter__method__2, [types.toJavaParameter(), JavaParameter(object: cb?.toJavaObject())])
   }
 
-  public func addCallback(types: Int32, cb: MediaRouter.Callback?, flags: Int32) {
+  open func addCallback(types: Int32, cb: MediaRouter.Callback?, flags: Int32) {
     self.javaObject.call(method: MediaRouter__method__3, [types.toJavaParameter(), JavaParameter(object: cb?.toJavaObject()), flags.toJavaParameter()])
   }
 
-  public func removeCallback(cb: MediaRouter.Callback?) {
+  open func removeCallback(cb: MediaRouter.Callback?) {
     self.javaObject.call(method: MediaRouter__method__4, [JavaParameter(object: cb?.toJavaObject())])
   }
 
-  public func selectRoute(types: Int32, route: MediaRouter.RouteInfo?) {
+  open func selectRoute(types: Int32, route: MediaRouter.RouteInfo?) {
     self.javaObject.call(method: MediaRouter__method__5, [types.toJavaParameter(), route.toJavaParameter()])
   }
 
-  public func addUserRoute(info: MediaRouter.UserRouteInfo?) {
+  open func addUserRoute(info: MediaRouter.UserRouteInfo?) {
     self.javaObject.call(method: MediaRouter__method__6, [info.toJavaParameter()])
   }
 
-  public func removeUserRoute(info: MediaRouter.UserRouteInfo?) {
+  open func removeUserRoute(info: MediaRouter.UserRouteInfo?) {
     self.javaObject.call(method: MediaRouter__method__7, [info.toJavaParameter()])
   }
 
-  public func clearUserRoutes() {
+  open func clearUserRoutes() {
     self.javaObject.call(method: MediaRouter__method__8, [])
   }
 
-  public func getCategoryCount() -> Int32 {
+  open func getCategoryCount() -> Int32 {
     self.javaObject.call(method: MediaRouter__method__9, [])
   }
 
-  public func getCategoryAt(index: Int32) -> MediaRouter.RouteCategory? {
+  open func getCategoryAt(index: Int32) -> MediaRouter.RouteCategory? {
     self.javaObject.call(method: MediaRouter__method__10, [index.toJavaParameter()])
   }
 
-  public func getRouteCount() -> Int32 {
+  open func getRouteCount() -> Int32 {
     self.javaObject.call(method: MediaRouter__method__11, [])
   }
 
-  public func getRouteAt(index: Int32) -> MediaRouter.RouteInfo? {
+  open func getRouteAt(index: Int32) -> MediaRouter.RouteInfo? {
     self.javaObject.call(method: MediaRouter__method__12, [index.toJavaParameter()])
   }
 
-  public func createUserRoute(category: MediaRouter.RouteCategory?) -> MediaRouter.UserRouteInfo? {
+  open func createUserRoute(category: MediaRouter.RouteCategory?) -> MediaRouter.UserRouteInfo? {
     self.javaObject.call(method: MediaRouter__method__13, [category.toJavaParameter()])
   }
 
-  public func createRouteCategory(name: String?, isGroupable: Bool) -> MediaRouter.RouteCategory? {
+  open func createRouteCategory(name: String?, isGroupable: Bool) -> MediaRouter.RouteCategory? {
     self.javaObject.call(method: MediaRouter__method__14, [name.toJavaParameter(), isGroupable.toJavaParameter()])
   }
 
-  public func createRouteCategory(nameResId: Int32, isGroupable: Bool) -> MediaRouter.RouteCategory? {
+  open func createRouteCategory(nameResId: Int32, isGroupable: Bool) -> MediaRouter.RouteCategory? {
     self.javaObject.call(method: MediaRouter__method__15, [nameResId.toJavaParameter(), isGroupable.toJavaParameter()])
   }
 }
@@ -120,11 +121,11 @@ open class MediaRouterVolumeCallbackProxy: Object, JInterfaceProxy, MediaRouterV
     self.init(obj.toJavaObject()!)
   }
 
-  public func onVolumeUpdateRequest(info: MediaRouter.RouteInfo?, direction: Int32) {
+  open func onVolumeUpdateRequest(info: MediaRouter.RouteInfo?, direction: Int32) {
     self.javaObject.call(method: MediaRouterVolumeCallback__method__1, [info.toJavaParameter(), direction.toJavaParameter()])
   }
 
-  public func onVolumeSetRequest(info: MediaRouter.RouteInfo?, volume: Int32) {
+  open func onVolumeSetRequest(info: MediaRouter.RouteInfo?, volume: Int32) {
     self.javaObject.call(method: MediaRouterVolumeCallback__method__2, [info.toJavaParameter(), volume.toJavaParameter()])
   }
 }
@@ -136,35 +137,35 @@ open class MediaRouterSimpleCallback: Object, MediaRouter.Callback {
     super.init(ctor: MediaRouterSimpleCallback__method__0, [])
   }
 
-  public func onRouteSelected(router: MediaRouter?, _type: Int32, info: MediaRouter.RouteInfo?) {
-    self.javaObject.call(method: MediaRouterSimpleCallback__method__1, [router.toJavaParameter(), _type.toJavaParameter(), info.toJavaParameter()])
+  open func onRouteSelected(router: MediaRouter?, type: Int32, info: MediaRouter.RouteInfo?) {
+    self.javaObject.call(method: MediaRouterSimpleCallback__method__1, [router.toJavaParameter(), type.toJavaParameter(), info.toJavaParameter()])
   }
 
-  public func onRouteUnselected(router: MediaRouter?, _type: Int32, info: MediaRouter.RouteInfo?) {
-    self.javaObject.call(method: MediaRouterSimpleCallback__method__2, [router.toJavaParameter(), _type.toJavaParameter(), info.toJavaParameter()])
+  open func onRouteUnselected(router: MediaRouter?, type: Int32, info: MediaRouter.RouteInfo?) {
+    self.javaObject.call(method: MediaRouterSimpleCallback__method__2, [router.toJavaParameter(), type.toJavaParameter(), info.toJavaParameter()])
   }
 
-  public func onRouteAdded(router: MediaRouter?, info: MediaRouter.RouteInfo?) {
+  open func onRouteAdded(router: MediaRouter?, info: MediaRouter.RouteInfo?) {
     self.javaObject.call(method: MediaRouterSimpleCallback__method__3, [router.toJavaParameter(), info.toJavaParameter()])
   }
 
-  public func onRouteRemoved(router: MediaRouter?, info: MediaRouter.RouteInfo?) {
+  open func onRouteRemoved(router: MediaRouter?, info: MediaRouter.RouteInfo?) {
     self.javaObject.call(method: MediaRouterSimpleCallback__method__4, [router.toJavaParameter(), info.toJavaParameter()])
   }
 
-  public func onRouteChanged(router: MediaRouter?, info: MediaRouter.RouteInfo?) {
+  open func onRouteChanged(router: MediaRouter?, info: MediaRouter.RouteInfo?) {
     self.javaObject.call(method: MediaRouterSimpleCallback__method__5, [router.toJavaParameter(), info.toJavaParameter()])
   }
 
-  public func onRouteGrouped(router: MediaRouter?, info: MediaRouter.RouteInfo?, group: MediaRouter.RouteGroup?, index: Int32) {
+  open func onRouteGrouped(router: MediaRouter?, info: MediaRouter.RouteInfo?, group: MediaRouter.RouteGroup?, index: Int32) {
     self.javaObject.call(method: MediaRouterSimpleCallback__method__6, [router.toJavaParameter(), info.toJavaParameter(), group.toJavaParameter(), index.toJavaParameter()])
   }
 
-  public func onRouteUngrouped(router: MediaRouter?, info: MediaRouter.RouteInfo?, group: MediaRouter.RouteGroup?) {
+  open func onRouteUngrouped(router: MediaRouter?, info: MediaRouter.RouteInfo?, group: MediaRouter.RouteGroup?) {
     self.javaObject.call(method: MediaRouterSimpleCallback__method__7, [router.toJavaParameter(), info.toJavaParameter(), group.toJavaParameter()])
   }
 
-  public func onRouteVolumeChanged(router: MediaRouter?, info: MediaRouter.RouteInfo?) {
+  open func onRouteVolumeChanged(router: MediaRouter?, info: MediaRouter.RouteInfo?) {
     self.javaObject.call(method: MediaRouterSimpleCallback__method__8, [router.toJavaParameter(), info.toJavaParameter()])
   }
 
@@ -180,9 +181,9 @@ open class MediaRouterSimpleCallback: Object, MediaRouter.Callback {
 // ------------------------------------------------------------------------------------
 
 public protocol MediaRouterCallback where Self: Object {
-  func onRouteSelected(router: MediaRouter?, _type: Int32, info: MediaRouter.RouteInfo?) -> Void
+  func onRouteSelected(router: MediaRouter?, type: Int32, info: MediaRouter.RouteInfo?) -> Void
 
-  func onRouteUnselected(router: MediaRouter?, _type: Int32, info: MediaRouter.RouteInfo?) -> Void
+  func onRouteUnselected(router: MediaRouter?, type: Int32, info: MediaRouter.RouteInfo?) -> Void
 
   func onRouteAdded(router: MediaRouter?, info: MediaRouter.RouteInfo?) -> Void
 
@@ -195,8 +196,6 @@ public protocol MediaRouterCallback where Self: Object {
   func onRouteUngrouped(router: MediaRouter?, info: MediaRouter.RouteInfo?, group: MediaRouter.RouteGroup?) -> Void
 
   func onRouteVolumeChanged(router: MediaRouter?, info: MediaRouter.RouteInfo?) -> Void
-
-  func onRoutePresentationDisplayChanged(router: MediaRouter?, info: MediaRouter.RouteInfo?) -> Void
 }
 
 public extension MediaRouterCallback {
@@ -222,35 +221,35 @@ open class MediaRouterCallbackProxy: Object, JInterfaceProxy, MediaRouterCallbac
     self.init(obj.toJavaObject()!)
   }
 
-  public func onRouteSelected(router: MediaRouter?, _type: Int32, info: MediaRouter.RouteInfo?) {
-    self.javaObject.call(method: MediaRouterCallback__method__1, [router.toJavaParameter(), _type.toJavaParameter(), info.toJavaParameter()])
+  open func onRouteSelected(router: MediaRouter?, type: Int32, info: MediaRouter.RouteInfo?) {
+    self.javaObject.call(method: MediaRouterCallback__method__1, [router.toJavaParameter(), type.toJavaParameter(), info.toJavaParameter()])
   }
 
-  public func onRouteUnselected(router: MediaRouter?, _type: Int32, info: MediaRouter.RouteInfo?) {
-    self.javaObject.call(method: MediaRouterCallback__method__2, [router.toJavaParameter(), _type.toJavaParameter(), info.toJavaParameter()])
+  open func onRouteUnselected(router: MediaRouter?, type: Int32, info: MediaRouter.RouteInfo?) {
+    self.javaObject.call(method: MediaRouterCallback__method__2, [router.toJavaParameter(), type.toJavaParameter(), info.toJavaParameter()])
   }
 
-  public func onRouteAdded(router: MediaRouter?, info: MediaRouter.RouteInfo?) {
+  open func onRouteAdded(router: MediaRouter?, info: MediaRouter.RouteInfo?) {
     self.javaObject.call(method: MediaRouterCallback__method__3, [router.toJavaParameter(), info.toJavaParameter()])
   }
 
-  public func onRouteRemoved(router: MediaRouter?, info: MediaRouter.RouteInfo?) {
+  open func onRouteRemoved(router: MediaRouter?, info: MediaRouter.RouteInfo?) {
     self.javaObject.call(method: MediaRouterCallback__method__4, [router.toJavaParameter(), info.toJavaParameter()])
   }
 
-  public func onRouteChanged(router: MediaRouter?, info: MediaRouter.RouteInfo?) {
+  open func onRouteChanged(router: MediaRouter?, info: MediaRouter.RouteInfo?) {
     self.javaObject.call(method: MediaRouterCallback__method__5, [router.toJavaParameter(), info.toJavaParameter()])
   }
 
-  public func onRouteGrouped(router: MediaRouter?, info: MediaRouter.RouteInfo?, group: MediaRouter.RouteGroup?, index: Int32) {
+  open func onRouteGrouped(router: MediaRouter?, info: MediaRouter.RouteInfo?, group: MediaRouter.RouteGroup?, index: Int32) {
     self.javaObject.call(method: MediaRouterCallback__method__6, [router.toJavaParameter(), info.toJavaParameter(), group.toJavaParameter(), index.toJavaParameter()])
   }
 
-  public func onRouteUngrouped(router: MediaRouter?, info: MediaRouter.RouteInfo?, group: MediaRouter.RouteGroup?) {
+  open func onRouteUngrouped(router: MediaRouter?, info: MediaRouter.RouteInfo?, group: MediaRouter.RouteGroup?) {
     self.javaObject.call(method: MediaRouterCallback__method__7, [router.toJavaParameter(), info.toJavaParameter(), group.toJavaParameter()])
   }
 
-  public func onRouteVolumeChanged(router: MediaRouter?, info: MediaRouter.RouteInfo?) {
+  open func onRouteVolumeChanged(router: MediaRouter?, info: MediaRouter.RouteInfo?) {
     self.javaObject.call(method: MediaRouterCallback__method__8, [router.toJavaParameter(), info.toJavaParameter()])
   }
 }
@@ -258,61 +257,61 @@ open class MediaRouterCallbackProxy: Object, JInterfaceProxy, MediaRouterCallbac
 // ------------------------------------------------------------------------------------
 
 open class MediaRouterRouteCategory: Object {
-  public func getName() -> String? {
+  open func getName() -> String? {
     self.javaObject.call(method: MediaRouterRouteCategory__method__0, [])
   }
 
-  public func getName(context: Context?) -> String? {
+  open func getName(context: Context?) -> String? {
     self.javaObject.call(method: MediaRouterRouteCategory__method__1, [JavaParameter(object: context?.toJavaObject())])
   }
 
-  public func getRoutes<T0>(_out: T0?) -> T0? where T0: List, T0.E == MediaRouter.RouteInfo {
-    self.javaObject.call(method: MediaRouterRouteCategory__method__2, [_out.toJavaParameter()])
+  open func getRoutes<T0>(out: T0?) -> T0? where T0: List, T0.E == MediaRouter.RouteInfo {
+    self.javaObject.call(method: MediaRouterRouteCategory__method__2, [out.toJavaParameter()])
   }
 
-  public func getSupportedTypes() -> Int32 {
+  open func getSupportedTypes() -> Int32 {
     self.javaObject.call(method: MediaRouterRouteCategory__method__3, [])
   }
 
-  public func isGroupable() -> Bool {
+  open func isGroupable() -> Bool {
     self.javaObject.call(method: MediaRouterRouteCategory__method__4, [])
   }
 }
 
 extension MediaRouterRouteCategory {
-  public func getRoutes<T0>(_out: T0?) -> ListProxy<MediaRouter.RouteInfo>? where T0: List, T0.E == MediaRouter.RouteInfo {
-    self.javaObject.call(method: MediaRouterRouteCategory__method__2, [_out.toJavaParameter()])
+  open func getRoutes<T0>(out: T0?) -> ListProxy<MediaRouter.RouteInfo>? where T0: List, T0.E == MediaRouter.RouteInfo {
+    self.javaObject.call(method: MediaRouterRouteCategory__method__2, [out.toJavaParameter()])
   }
 }
 
 // ------------------------------------------------------------------------------------
 
 open class MediaRouterRouteGroup: MediaRouter.RouteInfo {
-  public func addRoute(route: MediaRouter.RouteInfo?) {
+  open func addRoute(route: MediaRouter.RouteInfo?) {
     self.javaObject.call(method: MediaRouterRouteGroup__method__0, [route.toJavaParameter()])
   }
 
-  public func addRoute(route: MediaRouter.RouteInfo?, insertAt: Int32) {
+  open func addRoute(route: MediaRouter.RouteInfo?, insertAt: Int32) {
     self.javaObject.call(method: MediaRouterRouteGroup__method__1, [route.toJavaParameter(), insertAt.toJavaParameter()])
   }
 
-  public func removeRoute(route: MediaRouter.RouteInfo?) {
+  open func removeRoute(route: MediaRouter.RouteInfo?) {
     self.javaObject.call(method: MediaRouterRouteGroup__method__2, [route.toJavaParameter()])
   }
 
-  public func removeRoute(index: Int32) {
+  open func removeRoute(index: Int32) {
     self.javaObject.call(method: MediaRouterRouteGroup__method__3, [index.toJavaParameter()])
   }
 
-  public func getRouteCount() -> Int32 {
+  open func getRouteCount() -> Int32 {
     self.javaObject.call(method: MediaRouterRouteGroup__method__4, [])
   }
 
-  public func getRouteAt(index: Int32) -> MediaRouter.RouteInfo? {
+  open func getRouteAt(index: Int32) -> MediaRouter.RouteInfo? {
     self.javaObject.call(method: MediaRouterRouteGroup__method__5, [index.toJavaParameter()])
   }
 
-  public func setIconResource(resId: Int32) {
+  open func setIconResource(resId: Int32) {
     self.javaObject.call(method: MediaRouterRouteGroup__method__6, [resId.toJavaParameter()])
   }
 }
@@ -320,55 +319,55 @@ open class MediaRouterRouteGroup: MediaRouter.RouteInfo {
 // ------------------------------------------------------------------------------------
 
 open class MediaRouterUserRouteInfo: MediaRouter.RouteInfo {
-  public func setName(name: String?) {
+  open func setName(name: String?) {
     self.javaObject.call(method: MediaRouterUserRouteInfo__method__0, [name.toJavaParameter()])
   }
 
-  public func setName(resId: Int32) {
+  open func setName(resId: Int32) {
     self.javaObject.call(method: MediaRouterUserRouteInfo__method__1, [resId.toJavaParameter()])
   }
 
-  public func setDescription(description: String?) {
+  open func setDescription(description: String?) {
     self.javaObject.call(method: MediaRouterUserRouteInfo__method__2, [description.toJavaParameter()])
   }
 
-  public func setStatus(status: String?) {
+  open func setStatus(status: String?) {
     self.javaObject.call(method: MediaRouterUserRouteInfo__method__3, [status.toJavaParameter()])
   }
 
-  public func setRemoteControlClient(rcc: RemoteControlClient?) {
+  open func setRemoteControlClient(rcc: RemoteControlClient?) {
     self.javaObject.call(method: MediaRouterUserRouteInfo__method__4, [rcc.toJavaParameter()])
   }
 
-  public func getRemoteControlClient() -> RemoteControlClient? {
+  open func getRemoteControlClient() -> RemoteControlClient? {
     self.javaObject.call(method: MediaRouterUserRouteInfo__method__5, [])
   }
 
-  public func setIconResource(resId: Int32) {
+  open func setIconResource(resId: Int32) {
     self.javaObject.call(method: MediaRouterUserRouteInfo__method__6, [resId.toJavaParameter()])
   }
 
-  public func setVolumeCallback(vcb: MediaRouter.VolumeCallback?) {
+  open func setVolumeCallback(vcb: MediaRouter.VolumeCallback?) {
     self.javaObject.call(method: MediaRouterUserRouteInfo__method__7, [JavaParameter(object: vcb?.toJavaObject())])
   }
 
-  public func setPlaybackType(_type: Int32) {
-    self.javaObject.call(method: MediaRouterUserRouteInfo__method__8, [_type.toJavaParameter()])
+  open func setPlaybackType(type: Int32) {
+    self.javaObject.call(method: MediaRouterUserRouteInfo__method__8, [type.toJavaParameter()])
   }
 
-  public func setVolumeHandling(volumeHandling: Int32) {
+  open func setVolumeHandling(volumeHandling: Int32) {
     self.javaObject.call(method: MediaRouterUserRouteInfo__method__9, [volumeHandling.toJavaParameter()])
   }
 
-  public func setVolume(volume: Int32) {
+  open func setVolume(volume: Int32) {
     self.javaObject.call(method: MediaRouterUserRouteInfo__method__10, [volume.toJavaParameter()])
   }
 
-  public func setVolumeMax(volumeMax: Int32) {
+  open func setVolumeMax(volumeMax: Int32) {
     self.javaObject.call(method: MediaRouterUserRouteInfo__method__11, [volumeMax.toJavaParameter()])
   }
 
-  public func setPlaybackStream(stream: Int32) {
+  open func setPlaybackStream(stream: Int32) {
     self.javaObject.call(method: MediaRouterUserRouteInfo__method__12, [stream.toJavaParameter()])
   }
 }
@@ -392,80 +391,84 @@ open class MediaRouterRouteInfo: Object {
 
   public static let PLAYBACK_VOLUME_VARIABLE: Int32 = MediaRouterRouteInfo__class.getStatic(field: MediaRouterRouteInfo__field__7)
 
-  public func getName() -> String? {
+  open func getName() -> String? {
     self.javaObject.call(method: MediaRouterRouteInfo__method__0, [])
   }
 
-  public func getName(context: Context?) -> String? {
+  open func getName(context: Context?) -> String? {
     self.javaObject.call(method: MediaRouterRouteInfo__method__1, [JavaParameter(object: context?.toJavaObject())])
   }
 
-  public func getDescription() -> String? {
+  open func getDescription() -> String? {
     self.javaObject.call(method: MediaRouterRouteInfo__method__2, [])
   }
 
-  public func getStatus() -> String? {
+  open func getStatus() -> String? {
     self.javaObject.call(method: MediaRouterRouteInfo__method__3, [])
   }
 
-  public func getSupportedTypes() -> Int32 {
+  open func getSupportedTypes() -> Int32 {
     self.javaObject.call(method: MediaRouterRouteInfo__method__4, [])
   }
 
-  public func getDeviceType() -> Int32 {
+  open func getDeviceType() -> Int32 {
     self.javaObject.call(method: MediaRouterRouteInfo__method__5, [])
   }
 
-  public func getGroup() -> MediaRouter.RouteGroup? {
+  open func getGroup() -> MediaRouter.RouteGroup? {
     self.javaObject.call(method: MediaRouterRouteInfo__method__6, [])
   }
 
-  public func getCategory() -> MediaRouter.RouteCategory? {
+  open func getCategory() -> MediaRouter.RouteCategory? {
     self.javaObject.call(method: MediaRouterRouteInfo__method__7, [])
   }
 
-  public func setTag(tag: Object?) {
+  open func setTag(tag: Object?) {
     self.javaObject.call(method: MediaRouterRouteInfo__method__8, [tag.toJavaParameter()])
   }
 
-  public func getTag() -> Object? {
+  open func getTag() -> Object? {
     self.javaObject.call(method: MediaRouterRouteInfo__method__9, [])
   }
 
-  public func getPlaybackType() -> Int32 {
+  open func getPlaybackType() -> Int32 {
     self.javaObject.call(method: MediaRouterRouteInfo__method__10, [])
   }
 
-  public func getPlaybackStream() -> Int32 {
+  open func getPlaybackStream() -> Int32 {
     self.javaObject.call(method: MediaRouterRouteInfo__method__11, [])
   }
 
-  public func getVolume() -> Int32 {
+  open func getVolume() -> Int32 {
     self.javaObject.call(method: MediaRouterRouteInfo__method__12, [])
   }
 
-  public func requestSetVolume(volume: Int32) {
+  open func requestSetVolume(volume: Int32) {
     self.javaObject.call(method: MediaRouterRouteInfo__method__13, [volume.toJavaParameter()])
   }
 
-  public func requestUpdateVolume(direction: Int32) {
+  open func requestUpdateVolume(direction: Int32) {
     self.javaObject.call(method: MediaRouterRouteInfo__method__14, [direction.toJavaParameter()])
   }
 
-  public func getVolumeMax() -> Int32 {
+  open func getVolumeMax() -> Int32 {
     self.javaObject.call(method: MediaRouterRouteInfo__method__15, [])
   }
 
-  public func getVolumeHandling() -> Int32 {
+  open func getVolumeHandling() -> Int32 {
     self.javaObject.call(method: MediaRouterRouteInfo__method__16, [])
   }
 
-  public func isEnabled() -> Bool {
+  open func getPresentationDisplay() -> Display? {
     self.javaObject.call(method: MediaRouterRouteInfo__method__17, [])
   }
 
-  public func isConnecting() -> Bool {
+  open func isEnabled() -> Bool {
     self.javaObject.call(method: MediaRouterRouteInfo__method__18, [])
+  }
+
+  open func isConnecting() -> Bool {
+    self.javaObject.call(method: MediaRouterRouteInfo__method__19, [])
   }
 }
 
@@ -592,8 +595,9 @@ private let MediaRouterRouteInfo__method__13 = MediaRouterRouteInfo__class.getMe
 private let MediaRouterRouteInfo__method__14 = MediaRouterRouteInfo__class.getMethodID(name: "requestUpdateVolume", sig: "(I)V")!
 private let MediaRouterRouteInfo__method__15 = MediaRouterRouteInfo__class.getMethodID(name: "getVolumeMax", sig: "()I")!
 private let MediaRouterRouteInfo__method__16 = MediaRouterRouteInfo__class.getMethodID(name: "getVolumeHandling", sig: "()I")!
-private let MediaRouterRouteInfo__method__17 = MediaRouterRouteInfo__class.getMethodID(name: "isEnabled", sig: "()Z")!
-private let MediaRouterRouteInfo__method__18 = MediaRouterRouteInfo__class.getMethodID(name: "isConnecting", sig: "()Z")!
+private let MediaRouterRouteInfo__method__17 = MediaRouterRouteInfo__class.getMethodID(name: "getPresentationDisplay", sig: "()Landroid/view/Display;")!
+private let MediaRouterRouteInfo__method__18 = MediaRouterRouteInfo__class.getMethodID(name: "isEnabled", sig: "()Z")!
+private let MediaRouterRouteInfo__method__19 = MediaRouterRouteInfo__class.getMethodID(name: "isConnecting", sig: "()Z")!
 
 private let MediaRouterRouteInfo__field__0 = MediaRouterRouteInfo__class.getStaticFieldID(name: "DEVICE_TYPE_BLUETOOTH", sig: "I")!
 private let MediaRouterRouteInfo__field__1 = MediaRouterRouteInfo__class.getStaticFieldID(name: "DEVICE_TYPE_SPEAKER", sig: "I")!

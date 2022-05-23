@@ -9,7 +9,7 @@ open class UriMatcher: Object {
     super.init(ctor: UriMatcher__method__0, [code.toJavaParameter()])
   }
 
-  public func addURI(authority: String, path: String, code: Int32) {
+  open func addURI(authority: String, path: String, code: Int32) {
     self.javaObject.call(method: UriMatcher__method__1, [authority.toJavaParameter(), path.toJavaParameter(), code.toJavaParameter()])
   }
 

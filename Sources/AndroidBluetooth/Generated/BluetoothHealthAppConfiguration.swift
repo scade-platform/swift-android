@@ -4,23 +4,23 @@ import AndroidOS
 import Java
 
 open class BluetoothHealthAppConfiguration: Object, Parcelable {
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: BluetoothHealthAppConfiguration__method__0, [])
   }
 
-  public func getDataType() -> Int32 {
+  open func getDataType() -> Int32 {
     self.javaObject.call(method: BluetoothHealthAppConfiguration__method__1, [])
   }
 
-  public func getName() -> String {
+  open func getName() -> String {
     self.javaObject.call(method: BluetoothHealthAppConfiguration__method__2, [])
   }
 
-  public func getRole() -> Int32 {
+  open func getRole() -> Int32 {
     self.javaObject.call(method: BluetoothHealthAppConfiguration__method__3, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: BluetoothHealthAppConfiguration__method__4, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }

@@ -3,19 +3,7 @@
 import AndroidOS
 import Java
 
-public protocol ContentResolver where Self: Object {
-  init(context: Context?)
-
-  func applyBatch(authority: String, operations: ArrayList<ContentProviderOperation>?) -> [ContentProviderResult?]
-
-  func acquireContentProviderClient(name: String) -> ContentProviderClient?
-
-  func acquireUnstableContentProviderClient(name: String) -> ContentProviderClient?
-
-  func getPersistedUriPermissions<R>() -> R? where R: List, R.E == UriPermission
-
-  func getOutgoingPersistedUriPermissions<R>() -> R? where R: List, R.E == UriPermission
-}
+public protocol ContentResolver where Self: Object {}
 
 public extension ContentResolver {
   func box() -> ContentResolverProxy {
@@ -57,7 +45,7 @@ public extension ContentResolver where Self: Object {
   }
 
   static func getCurrentSyncs() -> ListProxy<SyncInfo>? {
-    ContentResolver__class.callStatic(method: ContentResolver__method__13, [])
+    ContentResolver__class.callStatic(method: ContentResolver__method__12, [])
   }
 }
 
@@ -134,20 +122,16 @@ public final class ContentResolverStatic {
     ContentResolver__class.callStatic(method: ContentResolver__method__11, [sync.toJavaParameter()])
   }
 
-  public static func getCurrentSync() -> SyncInfo? {
+  public static func getCurrentSyncs<R>() -> R? where R: List, R.E == SyncInfo {
     ContentResolver__class.callStatic(method: ContentResolver__method__12, [])
   }
 
-  public static func getCurrentSyncs<R>() -> R? where R: List, R.E == SyncInfo {
-    ContentResolver__class.callStatic(method: ContentResolver__method__13, [])
-  }
-
   public static func addStatusChangeListener(mask: Int32, callback: SyncStatusObserver?) -> Object? {
-    ContentResolver__class.callStatic(method: ContentResolver__method__14, [mask.toJavaParameter(), JavaParameter(object: callback?.toJavaObject())])
+    ContentResolver__class.callStatic(method: ContentResolver__method__13, [mask.toJavaParameter(), JavaParameter(object: callback?.toJavaObject())])
   }
 
   public static func removeStatusChangeListener(handle: Object?) {
-    ContentResolver__class.callStatic(method: ContentResolver__method__15, [handle.toJavaParameter()])
+    ContentResolver__class.callStatic(method: ContentResolver__method__14, [handle.toJavaParameter()])
   }
 }
 
@@ -179,10 +163,9 @@ private let ContentResolver__method__8 = ContentResolver__class.getStaticMethodI
 private let ContentResolver__method__9 = ContentResolver__class.getStaticMethodID(name: "cancelSync", sig: "(Landroid/content/SyncRequest;)V")!
 private let ContentResolver__method__10 = ContentResolver__class.getStaticMethodID(name: "getMasterSyncAutomatically", sig: "()Z")!
 private let ContentResolver__method__11 = ContentResolver__class.getStaticMethodID(name: "setMasterSyncAutomatically", sig: "(Z)V")!
-private let ContentResolver__method__12 = ContentResolver__class.getStaticMethodID(name: "getCurrentSync", sig: "()Landroid/content/SyncInfo;")!
-private let ContentResolver__method__13 = ContentResolver__class.getStaticMethodID(name: "getCurrentSyncs", sig: "()Ljava/util/List;")!
-private let ContentResolver__method__14 = ContentResolver__class.getStaticMethodID(name: "addStatusChangeListener", sig: "(ILandroid/content/SyncStatusObserver;)Ljava/lang/Object;")!
-private let ContentResolver__method__15 = ContentResolver__class.getStaticMethodID(name: "removeStatusChangeListener", sig: "(Ljava/lang/Object;)V")!
+private let ContentResolver__method__12 = ContentResolver__class.getStaticMethodID(name: "getCurrentSyncs", sig: "()Ljava/util/List;")!
+private let ContentResolver__method__13 = ContentResolver__class.getStaticMethodID(name: "addStatusChangeListener", sig: "(ILandroid/content/SyncStatusObserver;)Ljava/lang/Object;")!
+private let ContentResolver__method__14 = ContentResolver__class.getStaticMethodID(name: "removeStatusChangeListener", sig: "(Ljava/lang/Object;)V")!
 
 private let ContentResolver__field__0 = ContentResolver__class.getStaticFieldID(name: "ANY_CURSOR_ITEM_TYPE", sig: "Ljava/lang/String;")!
 private let ContentResolver__field__1 = ContentResolver__class.getStaticFieldID(name: "CURSOR_DIR_BASE_TYPE", sig: "Ljava/lang/String;")!

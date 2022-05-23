@@ -7,38 +7,6 @@ public protocol BroadcastReceiver where Self: Object {
   typealias PendingResult = AndroidContent.BroadcastReceiverPendingResult
 
   func onReceive(context: Context?, intent: Intent?) -> Void
-
-  func goAsync() -> BroadcastReceiver.PendingResult?
-
-  func setResultCode(code: Int32) -> Void
-
-  func getResultCode() -> Int32
-
-  func setResultData(data: String) -> Void
-
-  func getResultData() -> String
-
-  func setResultExtras(extras: Bundle?) -> Void
-
-  func getResultExtras(makeMap: Bool) -> Bundle?
-
-  func setResult(code: Int32, data: String, extras: Bundle?) -> Void
-
-  func getAbortBroadcast() -> Bool
-
-  func abortBroadcast() -> Void
-
-  func clearAbortBroadcast() -> Void
-
-  func isOrderedBroadcast() -> Bool
-
-  func isInitialStickyBroadcast() -> Bool
-
-  func setOrderedHint(isOrdered: Bool) -> Void
-
-  func setDebugUnregister(debug: Bool) -> Void
-
-  func getDebugUnregister() -> Bool
 }
 
 public extension BroadcastReceiver {
@@ -124,7 +92,7 @@ open class BroadcastReceiverProxy: Object, JInterfaceProxy, BroadcastReceiver {
     self.init(obj.toJavaObject()!)
   }
 
-  public func onReceive(context: Context?, intent: Intent?) {
+  open func onReceive(context: Context?, intent: Intent?) {
     self.javaObject.call(method: BroadcastReceiver__method__1, [JavaParameter(object: context?.toJavaObject()), intent.toJavaParameter()])
   }
 }

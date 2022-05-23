@@ -4,31 +4,31 @@ import AndroidOS
 import Java
 
 open class AudioRecordingConfiguration: Object, Parcelable {
-  public func getClientAudioSource() -> Int32 {
+  open func getClientAudioSource() -> Int32 {
     self.javaObject.call(method: AudioRecordingConfiguration__method__0, [])
   }
 
-  public func getClientAudioSessionId() -> Int32 {
+  open func getClientAudioSessionId() -> Int32 {
     self.javaObject.call(method: AudioRecordingConfiguration__method__1, [])
   }
 
-  public func getFormat() -> AudioFormat? {
+  open func getFormat() -> AudioFormat? {
     self.javaObject.call(method: AudioRecordingConfiguration__method__2, [])
   }
 
-  public func getClientFormat() -> AudioFormat? {
+  open func getClientFormat() -> AudioFormat? {
     self.javaObject.call(method: AudioRecordingConfiguration__method__3, [])
   }
 
-  public func getAudioDevice() -> AudioDeviceInfo? {
+  open func getAudioDevice() -> AudioDeviceInfo? {
     self.javaObject.call(method: AudioRecordingConfiguration__method__4, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: AudioRecordingConfiguration__method__5, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: AudioRecordingConfiguration__method__6, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }

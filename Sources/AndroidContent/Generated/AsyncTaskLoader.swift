@@ -5,15 +5,7 @@ import Java
 public protocol AsyncTaskLoader where Self: Loader<Object> {
   associatedtype D: JObjectConvertible
 
-  func setUpdateThrottle(delayMS: Int64) -> Void
-
-  func onCanceled(data: D?) -> Void
-
   func loadInBackground() -> D?
-
-  func cancelLoadInBackground() -> Void
-
-  func isLoadInBackgroundCanceled() -> Bool
 }
 
 public extension AsyncTaskLoader {
@@ -31,12 +23,16 @@ public extension AsyncTaskLoader where Self: Object {
     self.javaObject.call(method: AsyncTaskLoader__method__2, [data.toJavaParameter()])
   }
 
-  func cancelLoadInBackground() {
+  func onLoadInBackground() -> D? {
     self.javaObject.call(method: AsyncTaskLoader__method__4, [])
   }
 
-  func isLoadInBackgroundCanceled() -> Bool {
+  func cancelLoadInBackground() {
     self.javaObject.call(method: AsyncTaskLoader__method__5, [])
+  }
+
+  func isLoadInBackgroundCanceled() -> Bool {
+    self.javaObject.call(method: AsyncTaskLoader__method__6, [])
   }
 }
 
@@ -51,7 +47,7 @@ open class AsyncTaskLoaderProxy<D: JObjectConvertible>: Loader<Object>, JInterfa
     self.init(obj.toJavaObject()!)
   }
 
-  public func loadInBackground() -> D? {
+  open func loadInBackground() -> D? {
     self.javaObject.call(method: AsyncTaskLoader__method__3, [])
   }
 }
@@ -63,5 +59,6 @@ private let AsyncTaskLoader__class = findJavaClass(fqn: "android/content/AsyncTa
 private let AsyncTaskLoader__method__1 = AsyncTaskLoader__class.getMethodID(name: "setUpdateThrottle", sig: "(J)V")!
 private let AsyncTaskLoader__method__2 = AsyncTaskLoader__class.getMethodID(name: "onCanceled", sig: "(Ljava/lang/Object;)V")!
 private let AsyncTaskLoader__method__3 = AsyncTaskLoader__class.getMethodID(name: "loadInBackground", sig: "()Ljava/lang/Object;")!
-private let AsyncTaskLoader__method__4 = AsyncTaskLoader__class.getMethodID(name: "cancelLoadInBackground", sig: "()V")!
-private let AsyncTaskLoader__method__5 = AsyncTaskLoader__class.getMethodID(name: "isLoadInBackgroundCanceled", sig: "()Z")!
+private let AsyncTaskLoader__method__4 = AsyncTaskLoader__class.getMethodID(name: "onLoadInBackground", sig: "()Ljava/lang/Object;")!
+private let AsyncTaskLoader__method__5 = AsyncTaskLoader__class.getMethodID(name: "cancelLoadInBackground", sig: "()V")!
+private let AsyncTaskLoader__method__6 = AsyncTaskLoader__class.getMethodID(name: "isLoadInBackgroundCanceled", sig: "()Z")!

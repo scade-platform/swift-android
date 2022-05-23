@@ -25,11 +25,11 @@ open class MediaDataSourceProxy: Object, JInterfaceProxy, MediaDataSource {
     self.init(obj.toJavaObject()!)
   }
 
-  public func readAt(position: Int64, buffer: [Int8], offset: Int32, size: Int32) -> Int32 {
+  open func readAt(position: Int64, buffer: [Int8], offset: Int32, size: Int32) -> Int32 {
     self.javaObject.call(method: MediaDataSource__method__1, [position.toJavaParameter(), buffer.toJavaParameter(), offset.toJavaParameter(), size.toJavaParameter()])
   }
 
-  public func getSize() -> Int64 {
+  open func getSize() -> Int64 {
     self.javaObject.call(method: MediaDataSource__method__2, [])
   }
 }

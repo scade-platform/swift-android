@@ -33,46 +33,42 @@ open class GnssNavigationMessage: Object, Parcelable {
 
   public static let TYPE_UNKNOWN: Int32 = GnssNavigationMessage__class.getStatic(field: GnssNavigationMessage__field__12)
 
-  public func getType() -> Int32 {
+  open func getType() -> Int32 {
     self.javaObject.call(method: GnssNavigationMessage__method__0, [])
   }
 
-  public func getSvid() -> Int32 {
+  open func getSvid() -> Int32 {
     self.javaObject.call(method: GnssNavigationMessage__method__1, [])
   }
 
-  public func getMessageId() -> Int32 {
+  open func getMessageId() -> Int32 {
     self.javaObject.call(method: GnssNavigationMessage__method__2, [])
   }
 
-  public func getSubmessageId() -> Int32 {
+  open func getSubmessageId() -> Int32 {
     self.javaObject.call(method: GnssNavigationMessage__method__3, [])
   }
 
-  public func getData() -> [Int8] {
+  open func getData() -> [Int8] {
     self.javaObject.call(method: GnssNavigationMessage__method__4, [])
   }
 
-  public func getStatus() -> Int32 {
+  open func getStatus() -> Int32 {
     self.javaObject.call(method: GnssNavigationMessage__method__5, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: GnssNavigationMessage__method__6, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: GnssNavigationMessage__method__7, [])
   }
 }
 
 // ------------------------------------------------------------------------------------
 
-public protocol GnssNavigationMessageCallback where Self: Object {
-  func onGnssNavigationMessageReceived(event: GnssNavigationMessage?) -> Void
-
-  func onStatusChanged(status: Int32) -> Void
-}
+public protocol GnssNavigationMessageCallback where Self: Object {}
 
 public extension GnssNavigationMessageCallback {
   func box() -> GnssNavigationMessageCallbackProxy {

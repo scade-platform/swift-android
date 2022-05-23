@@ -19,23 +19,23 @@ open class LabeledIntent: Intent {
     super.init(ctor: LabeledIntent__method__3, [sourcePackage.toJavaParameter(), nonLocalizedLabel.toJavaParameter(), icon.toJavaParameter()])
   }
 
-  public func getSourcePackage() -> String {
+  open func getSourcePackage() -> String {
     self.javaObject.call(method: LabeledIntent__method__4, [])
   }
 
-  public func getLabelResource() -> Int32 {
+  open func getLabelResource() -> Int32 {
     self.javaObject.call(method: LabeledIntent__method__5, [])
   }
 
-  public func getNonLocalizedLabel() -> String? {
+  open func getNonLocalizedLabel() -> String? {
     self.javaObject.call(method: LabeledIntent__method__6, [])
   }
 
-  public func getIconResource() -> Int32 {
+  open func getIconResource() -> Int32 {
     self.javaObject.call(method: LabeledIntent__method__7, [])
   }
 
-  public func loadLabel(pm: PackageManager?) -> String? {
+  open func loadLabel(pm: PackageManager?) -> String? {
     self.javaObject.call(method: LabeledIntent__method__8, [JavaParameter(object: pm?.toJavaObject())])
   }
 

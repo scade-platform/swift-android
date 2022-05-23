@@ -20,25 +20,25 @@ open class VoiceInteractor: Object {
   public typealias Request = AndroidApp.VoiceInteractorRequest
   public typealias RequestProxy = AndroidApp.VoiceInteractorRequestProxy
 
-  public func submitRequest(request: VoiceInteractor.Request?) -> Bool {
+  open func submitRequest(request: VoiceInteractor.Request?) -> Bool {
     self.javaObject.call(method: VoiceInteractor__method__0, [JavaParameter(object: request?.toJavaObject())])
   }
 
-  public func submitRequest(request: VoiceInteractor.Request?, name: String) -> Bool {
+  open func submitRequest(request: VoiceInteractor.Request?, name: String) -> Bool {
     self.javaObject.call(method: VoiceInteractor__method__1, [JavaParameter(object: request?.toJavaObject()), name.toJavaParameter()])
   }
 
-  public func getActiveRequests() -> [VoiceInteractor.Request?] {
+  open func getActiveRequests() -> [VoiceInteractor.Request?] {
     let res = self.javaObject.call(method: VoiceInteractor__method__2, []) as [Object?]
     return cast(res, to: VoiceInteractor.RequestProxy.self)
   }
 
-  public func getActiveRequest(name: String) -> VoiceInteractor.Request? {
+  open func getActiveRequest(name: String) -> VoiceInteractor.Request? {
     let res = self.javaObject.call(method: VoiceInteractor__method__3, [name.toJavaParameter()]) as Object?
     return cast(res, to: VoiceInteractor.RequestProxy.self)
   }
 
-  public func supportsCommands(commands: [String]) -> [Bool] {
+  open func supportsCommands(commands: [String]) -> [Bool] {
     self.javaObject.call(method: VoiceInteractor__method__4, [commands.toJavaParameter()])
   }
 }
@@ -54,23 +54,23 @@ open class VoiceInteractorPrompt: Object, Parcelable {
     super.init(ctor: VoiceInteractorPrompt__method__1, [prompt.toJavaParameter()])
   }
 
-  public func getVoicePromptAt(index: Int32) -> String? {
+  open func getVoicePromptAt(index: Int32) -> String? {
     self.javaObject.call(method: VoiceInteractorPrompt__method__2, [index.toJavaParameter()])
   }
 
-  public func countVoicePrompts() -> Int32 {
+  open func countVoicePrompts() -> Int32 {
     self.javaObject.call(method: VoiceInteractorPrompt__method__3, [])
   }
 
-  public func getVisualPrompt() -> String? {
+  open func getVisualPrompt() -> String? {
     self.javaObject.call(method: VoiceInteractorPrompt__method__4, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: VoiceInteractorPrompt__method__5, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: VoiceInteractorPrompt__method__6, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
@@ -90,7 +90,7 @@ open class VoiceInteractorCommandRequest: Object, VoiceInteractor.Request {
     super.init(ctor: VoiceInteractorCommandRequest__method__0, [command.toJavaParameter(), args.toJavaParameter()])
   }
 
-  public func onCommandResult(isCompleted: Bool, result: Bundle?) {
+  open func onCommandResult(isCompleted: Bool, result: Bundle?) {
     self.javaObject.call(method: VoiceInteractorCommandRequest__method__1, [isCompleted.toJavaParameter(), result.toJavaParameter()])
   }
 
@@ -110,7 +110,7 @@ open class VoiceInteractorAbortVoiceRequest: Object, VoiceInteractor.Request {
     super.init(ctor: VoiceInteractorAbortVoiceRequest__method__0, [prompt.toJavaParameter(), extras.toJavaParameter()])
   }
 
-  public func onAbortResult(result: Bundle?) {
+  open func onAbortResult(result: Bundle?) {
     self.javaObject.call(method: VoiceInteractorAbortVoiceRequest__method__1, [result.toJavaParameter()])
   }
 
@@ -130,7 +130,7 @@ open class VoiceInteractorCompleteVoiceRequest: Object, VoiceInteractor.Request 
     super.init(ctor: VoiceInteractorCompleteVoiceRequest__method__0, [prompt.toJavaParameter(), extras.toJavaParameter()])
   }
 
-  public func onCompleteResult(result: Bundle?) {
+  open func onCompleteResult(result: Bundle?) {
     self.javaObject.call(method: VoiceInteractorCompleteVoiceRequest__method__1, [result.toJavaParameter()])
   }
 
@@ -152,7 +152,7 @@ open class VoiceInteractorPickOptionRequest: Object, VoiceInteractor.Request {
     super.init(ctor: VoiceInteractorPickOptionRequest__method__0, [prompt.toJavaParameter(), options.toJavaParameter(), extras.toJavaParameter()])
   }
 
-  public func onPickOptionResult(finished: Bool, selections: [VoiceInteractor.PickOptionRequest.Option?], result: Bundle?) {
+  open func onPickOptionResult(finished: Bool, selections: [VoiceInteractor.PickOptionRequest.Option?], result: Bundle?) {
     self.javaObject.call(method: VoiceInteractorPickOptionRequest__method__1, [finished.toJavaParameter(), selections.toJavaParameter(), result.toJavaParameter()])
   }
 
@@ -172,39 +172,39 @@ open class VoiceInteractorPickOptionRequestOption: Object, Parcelable {
     super.init(ctor: VoiceInteractorPickOptionRequestOption__method__0, [label.toJavaParameter(), index.toJavaParameter()])
   }
 
-  public func addSynonym(synonym: String?) -> VoiceInteractor.PickOptionRequest.Option? {
+  open func addSynonym(synonym: String?) -> VoiceInteractor.PickOptionRequest.Option? {
     self.javaObject.call(method: VoiceInteractorPickOptionRequestOption__method__1, [synonym.toJavaParameter()])
   }
 
-  public func getLabel() -> String? {
+  open func getLabel() -> String? {
     self.javaObject.call(method: VoiceInteractorPickOptionRequestOption__method__2, [])
   }
 
-  public func getIndex() -> Int32 {
+  open func getIndex() -> Int32 {
     self.javaObject.call(method: VoiceInteractorPickOptionRequestOption__method__3, [])
   }
 
-  public func countSynonyms() -> Int32 {
+  open func countSynonyms() -> Int32 {
     self.javaObject.call(method: VoiceInteractorPickOptionRequestOption__method__4, [])
   }
 
-  public func getSynonymAt(index: Int32) -> String? {
+  open func getSynonymAt(index: Int32) -> String? {
     self.javaObject.call(method: VoiceInteractorPickOptionRequestOption__method__5, [index.toJavaParameter()])
   }
 
-  public func setExtras(extras: Bundle?) {
+  open func setExtras(extras: Bundle?) {
     self.javaObject.call(method: VoiceInteractorPickOptionRequestOption__method__6, [extras.toJavaParameter()])
   }
 
-  public func getExtras() -> Bundle? {
+  open func getExtras() -> Bundle? {
     self.javaObject.call(method: VoiceInteractorPickOptionRequestOption__method__7, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: VoiceInteractorPickOptionRequestOption__method__8, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: VoiceInteractorPickOptionRequestOption__method__9, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
@@ -224,7 +224,7 @@ open class VoiceInteractorConfirmationRequest: Object, VoiceInteractor.Request {
     super.init(ctor: VoiceInteractorConfirmationRequest__method__0, [prompt.toJavaParameter(), extras.toJavaParameter()])
   }
 
-  public func onConfirmationResult(confirmed: Bool, result: Bundle?) {
+  open func onConfirmationResult(confirmed: Bool, result: Bundle?) {
     self.javaObject.call(method: VoiceInteractorConfirmationRequest__method__1, [confirmed.toJavaParameter(), result.toJavaParameter()])
   }
 
@@ -239,21 +239,7 @@ open class VoiceInteractorConfirmationRequest: Object, VoiceInteractor.Request {
 
 // ------------------------------------------------------------------------------------
 
-public protocol VoiceInteractorRequest where Self: Object {
-  func getName() -> String
-
-  func cancel() -> Void
-
-  func getContext() -> Context?
-
-  func getActivity() -> Activity?
-
-  func onCancel() -> Void
-
-  func onAttached(activity: Activity?) -> Void
-
-  func onDetached() -> Void
-}
+public protocol VoiceInteractorRequest where Self: Object {}
 
 public extension VoiceInteractorRequest {
   func box() -> VoiceInteractorRequestProxy {

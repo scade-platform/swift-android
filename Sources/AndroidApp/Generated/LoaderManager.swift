@@ -40,19 +40,19 @@ open class LoaderManagerProxy: Object, JInterfaceProxy, LoaderManager {
     self.init(obj.toJavaObject()!)
   }
 
-  public func initLoader<D, T0>(id: Int32, args: Bundle?, callback: T0?) -> Loader<D>? where D: Object, T0: LoaderManager.LoaderCallbacks, T0.D == D {
+  open func initLoader<D, T0>(id: Int32, args: Bundle?, callback: T0?) -> Loader<D>? where D: Object, T0: LoaderManager.LoaderCallbacks, T0.D == D {
     self.javaObject.call(method: LoaderManager__method__1, [id.toJavaParameter(), args.toJavaParameter(), callback.toJavaParameter()])
   }
 
-  public func restartLoader<D, T0>(id: Int32, args: Bundle?, callback: T0?) -> Loader<D>? where D: Object, T0: LoaderManager.LoaderCallbacks, T0.D == D {
+  open func restartLoader<D, T0>(id: Int32, args: Bundle?, callback: T0?) -> Loader<D>? where D: Object, T0: LoaderManager.LoaderCallbacks, T0.D == D {
     self.javaObject.call(method: LoaderManager__method__2, [id.toJavaParameter(), args.toJavaParameter(), callback.toJavaParameter()])
   }
 
-  public func destroyLoader(id: Int32) {
+  open func destroyLoader(id: Int32) {
     self.javaObject.call(method: LoaderManager__method__3, [id.toJavaParameter()])
   }
 
-  public func getLoader<D>(id: Int32) -> Loader<D>? where D: Object {
+  open func getLoader<D>(id: Int32) -> Loader<D>? where D: Object {
     self.javaObject.call(method: LoaderManager__method__4, [id.toJavaParameter()])
   }
 }

@@ -5,107 +5,107 @@ import AndroidOS
 import Java
 
 open class SearchableInfo: Object, Parcelable {
-  public func getSuggestAuthority() -> String {
+  open func getSuggestAuthority() -> String {
     self.javaObject.call(method: SearchableInfo__method__0, [])
   }
 
-  public func getSuggestPackage() -> String {
+  open func getSuggestPackage() -> String {
     self.javaObject.call(method: SearchableInfo__method__1, [])
   }
 
-  public func getSearchActivity() -> ComponentName? {
+  open func getSearchActivity() -> ComponentName? {
     self.javaObject.call(method: SearchableInfo__method__2, [])
   }
 
-  public func shouldRewriteQueryFromData() -> Bool {
+  open func shouldRewriteQueryFromData() -> Bool {
     self.javaObject.call(method: SearchableInfo__method__3, [])
   }
 
-  public func shouldRewriteQueryFromText() -> Bool {
+  open func shouldRewriteQueryFromText() -> Bool {
     self.javaObject.call(method: SearchableInfo__method__4, [])
   }
 
-  public func getSettingsDescriptionId() -> Int32 {
+  open func getSettingsDescriptionId() -> Int32 {
     self.javaObject.call(method: SearchableInfo__method__5, [])
   }
 
-  public func getSuggestPath() -> String {
+  open func getSuggestPath() -> String {
     self.javaObject.call(method: SearchableInfo__method__6, [])
   }
 
-  public func getSuggestSelection() -> String {
+  open func getSuggestSelection() -> String {
     self.javaObject.call(method: SearchableInfo__method__7, [])
   }
 
-  public func getSuggestIntentAction() -> String {
+  open func getSuggestIntentAction() -> String {
     self.javaObject.call(method: SearchableInfo__method__8, [])
   }
 
-  public func getSuggestIntentData() -> String {
+  open func getSuggestIntentData() -> String {
     self.javaObject.call(method: SearchableInfo__method__9, [])
   }
 
-  public func getSuggestThreshold() -> Int32 {
+  open func getSuggestThreshold() -> Int32 {
     self.javaObject.call(method: SearchableInfo__method__10, [])
   }
 
-  public func getHintId() -> Int32 {
+  open func getHintId() -> Int32 {
     self.javaObject.call(method: SearchableInfo__method__11, [])
   }
 
-  public func getVoiceSearchEnabled() -> Bool {
+  open func getVoiceSearchEnabled() -> Bool {
     self.javaObject.call(method: SearchableInfo__method__12, [])
   }
 
-  public func getVoiceSearchLaunchWebSearch() -> Bool {
+  open func getVoiceSearchLaunchWebSearch() -> Bool {
     self.javaObject.call(method: SearchableInfo__method__13, [])
   }
 
-  public func getVoiceSearchLaunchRecognizer() -> Bool {
+  open func getVoiceSearchLaunchRecognizer() -> Bool {
     self.javaObject.call(method: SearchableInfo__method__14, [])
   }
 
-  public func getVoiceLanguageModeId() -> Int32 {
+  open func getVoiceLanguageModeId() -> Int32 {
     self.javaObject.call(method: SearchableInfo__method__15, [])
   }
 
-  public func getVoicePromptTextId() -> Int32 {
+  open func getVoicePromptTextId() -> Int32 {
     self.javaObject.call(method: SearchableInfo__method__16, [])
   }
 
-  public func getVoiceLanguageId() -> Int32 {
+  open func getVoiceLanguageId() -> Int32 {
     self.javaObject.call(method: SearchableInfo__method__17, [])
   }
 
-  public func getVoiceMaxResults() -> Int32 {
+  open func getVoiceMaxResults() -> Int32 {
     self.javaObject.call(method: SearchableInfo__method__18, [])
   }
 
-  public func getInputType() -> Int32 {
+  open func getInputType() -> Int32 {
     self.javaObject.call(method: SearchableInfo__method__19, [])
   }
 
-  public func getImeOptions() -> Int32 {
+  open func getImeOptions() -> Int32 {
     self.javaObject.call(method: SearchableInfo__method__20, [])
   }
 
-  public func shouldIncludeInGlobalSearch() -> Bool {
+  open func shouldIncludeInGlobalSearch() -> Bool {
     self.javaObject.call(method: SearchableInfo__method__21, [])
   }
 
-  public func queryAfterZeroResults() -> Bool {
+  open func queryAfterZeroResults() -> Bool {
     self.javaObject.call(method: SearchableInfo__method__22, [])
   }
 
-  public func autoUrlDetect() -> Bool {
+  open func autoUrlDetect() -> Bool {
     self.javaObject.call(method: SearchableInfo__method__23, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: SearchableInfo__method__24, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: SearchableInfo__method__25, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }

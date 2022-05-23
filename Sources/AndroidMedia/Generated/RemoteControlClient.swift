@@ -1,6 +1,7 @@
 
 
 import AndroidApp
+import AndroidGraphics
 import Java
 
 open class RemoteControlClient: Object {
@@ -57,35 +58,35 @@ open class RemoteControlClient: Object {
     super.init(ctor: RemoteControlClient__method__0, [mediaButtonIntent.toJavaParameter()])
   }
 
-  public func getMediaSession() -> MediaSession? {
+  open func getMediaSession() -> MediaSession? {
     self.javaObject.call(method: RemoteControlClient__method__1, [])
   }
 
-  public func editMetadata(startEmpty: Bool) -> RemoteControlClient.MetadataEditor? {
+  open func editMetadata(startEmpty: Bool) -> RemoteControlClient.MetadataEditor? {
     self.javaObject.call(method: RemoteControlClient__method__2, [startEmpty.toJavaParameter()])
   }
 
-  public func setPlaybackState(state: Int32) {
+  open func setPlaybackState(state: Int32) {
     self.javaObject.call(method: RemoteControlClient__method__3, [state.toJavaParameter()])
   }
 
-  public func setPlaybackState(state: Int32, timeInMs: Int64, playbackSpeed: Float) {
+  open func setPlaybackState(state: Int32, timeInMs: Int64, playbackSpeed: Float) {
     self.javaObject.call(method: RemoteControlClient__method__4, [state.toJavaParameter(), timeInMs.toJavaParameter(), playbackSpeed.toJavaParameter()])
   }
 
-  public func setTransportControlFlags(transportControlFlags: Int32) {
+  open func setTransportControlFlags(transportControlFlags: Int32) {
     self.javaObject.call(method: RemoteControlClient__method__5, [transportControlFlags.toJavaParameter()])
   }
 
-  public func setMetadataUpdateListener(l: RemoteControlClient.OnMetadataUpdateListener?) {
+  open func setMetadataUpdateListener(l: RemoteControlClient.OnMetadataUpdateListener?) {
     self.javaObject.call(method: RemoteControlClient__method__6, [JavaParameter(object: l?.toJavaObject())])
   }
 
-  public func setPlaybackPositionUpdateListener(l: RemoteControlClient.OnPlaybackPositionUpdateListener?) {
+  open func setPlaybackPositionUpdateListener(l: RemoteControlClient.OnPlaybackPositionUpdateListener?) {
     self.javaObject.call(method: RemoteControlClient__method__7, [JavaParameter(object: l?.toJavaObject())])
   }
 
-  public func setOnGetPlaybackPositionListener(l: RemoteControlClient.OnGetPlaybackPositionListener?) {
+  open func setOnGetPlaybackPositionListener(l: RemoteControlClient.OnGetPlaybackPositionListener?) {
     self.javaObject.call(method: RemoteControlClient__method__8, [JavaParameter(object: l?.toJavaObject())])
   }
 
@@ -199,20 +200,24 @@ public final class RemoteControlClientOnMetadataUpdateListenerProxy: Object, JIn
 open class RemoteControlClientMetadataEditor: Object, MediaMetadataEditor {
   public static let BITMAP_KEY_ARTWORK: Int32 = RemoteControlClientMetadataEditor__class.getStatic(field: RemoteControlClientMetadataEditor__field__0)
 
-  public func putString(key: Int32, value: String) -> RemoteControlClient.MetadataEditor? {
+  open func putString(key: Int32, value: String) -> RemoteControlClient.MetadataEditor? {
     self.javaObject.call(method: RemoteControlClientMetadataEditor__method__0, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putLong(key: Int32, value: Int64) -> RemoteControlClient.MetadataEditor? {
+  open func putLong(key: Int32, value: Int64) -> RemoteControlClient.MetadataEditor? {
     self.javaObject.call(method: RemoteControlClientMetadataEditor__method__1, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putObject(key: Int32, object: Object?) -> RemoteControlClient.MetadataEditor? {
-    self.javaObject.call(method: RemoteControlClientMetadataEditor__method__2, [key.toJavaParameter(), object.toJavaParameter()])
+  open func putBitmap(key: Int32, bitmap: Bitmap?) -> RemoteControlClient.MetadataEditor? {
+    self.javaObject.call(method: RemoteControlClientMetadataEditor__method__2, [key.toJavaParameter(), bitmap.toJavaParameter()])
   }
 
-  public func apply() {
-    self.javaObject.call(method: RemoteControlClientMetadataEditor__method__3, [])
+  open func putObject(key: Int32, value: Object?) -> RemoteControlClient.MetadataEditor? {
+    self.javaObject.call(method: RemoteControlClientMetadataEditor__method__3, [key.toJavaParameter(), value.toJavaParameter()])
+  }
+
+  open func apply() {
+    self.javaObject.call(method: RemoteControlClientMetadataEditor__method__4, [])
   }
 }
 
@@ -274,7 +279,8 @@ private let RemoteControlClientMetadataEditor__class = findJavaClass(fqn: "andro
 
 private let RemoteControlClientMetadataEditor__method__0 = RemoteControlClientMetadataEditor__class.getMethodID(name: "putString", sig: "(ILjava/lang/String;)Landroid/media/RemoteControlClient$MetadataEditor;")!
 private let RemoteControlClientMetadataEditor__method__1 = RemoteControlClientMetadataEditor__class.getMethodID(name: "putLong", sig: "(IJ)Landroid/media/RemoteControlClient$MetadataEditor;")!
-private let RemoteControlClientMetadataEditor__method__2 = RemoteControlClientMetadataEditor__class.getMethodID(name: "putObject", sig: "(ILjava/lang/Object;)Landroid/media/RemoteControlClient$MetadataEditor;")!
-private let RemoteControlClientMetadataEditor__method__3 = RemoteControlClientMetadataEditor__class.getMethodID(name: "apply", sig: "()V")!
+private let RemoteControlClientMetadataEditor__method__2 = RemoteControlClientMetadataEditor__class.getMethodID(name: "putBitmap", sig: "(ILandroid/graphics/Bitmap;)Landroid/media/RemoteControlClient$MetadataEditor;")!
+private let RemoteControlClientMetadataEditor__method__3 = RemoteControlClientMetadataEditor__class.getMethodID(name: "putObject", sig: "(ILjava/lang/Object;)Landroid/media/RemoteControlClient$MetadataEditor;")!
+private let RemoteControlClientMetadataEditor__method__4 = RemoteControlClientMetadataEditor__class.getMethodID(name: "apply", sig: "()V")!
 
 private let RemoteControlClientMetadataEditor__field__0 = RemoteControlClientMetadataEditor__class.getStaticFieldID(name: "BITMAP_KEY_ARTWORK", sig: "I")!

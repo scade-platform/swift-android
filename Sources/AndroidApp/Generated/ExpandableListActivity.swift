@@ -7,27 +7,27 @@ open class ExpandableListActivity: Activity {
     super.init(ctor: ExpandableListActivity__method__0, [])
   }
 
-  public func onGroupCollapse(groupPosition: Int32) {
+  open func onGroupCollapse(groupPosition: Int32) {
     self.javaObject.call(method: ExpandableListActivity__method__1, [groupPosition.toJavaParameter()])
   }
 
-  public func onGroupExpand(groupPosition: Int32) {
+  open func onGroupExpand(groupPosition: Int32) {
     self.javaObject.call(method: ExpandableListActivity__method__2, [groupPosition.toJavaParameter()])
   }
 
-  public func getSelectedId() -> Int64 {
+  open func getSelectedId() -> Int64 {
     self.javaObject.call(method: ExpandableListActivity__method__3, [])
   }
 
-  public func getSelectedPosition() -> Int64 {
+  open func getSelectedPosition() -> Int64 {
     self.javaObject.call(method: ExpandableListActivity__method__4, [])
   }
 
-  public func setSelectedChild(groupPosition: Int32, childPosition: Int32, shouldExpandGroup: Bool) -> Bool {
+  open func setSelectedChild(groupPosition: Int32, childPosition: Int32, shouldExpandGroup: Bool) -> Bool {
     self.javaObject.call(method: ExpandableListActivity__method__5, [groupPosition.toJavaParameter(), childPosition.toJavaParameter(), shouldExpandGroup.toJavaParameter()])
   }
 
-  public func setSelectedGroup(groupPosition: Int32) {
+  open func setSelectedGroup(groupPosition: Int32) {
     self.javaObject.call(method: ExpandableListActivity__method__6, [groupPosition.toJavaParameter()])
   }
 

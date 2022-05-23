@@ -151,561 +151,561 @@ open class DevicePolicyManager: Object {
 
   public static let WIPE_RESET_PROTECTION_DATA: Int32 = DevicePolicyManager__class.getStatic(field: DevicePolicyManager__field__72)
 
-  public func isAdminActive(admin: ComponentName?) -> Bool {
+  open func isAdminActive(admin: ComponentName?) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__0, [admin.toJavaParameter()])
   }
 
-  public func getActiveAdmins<R>() -> R? where R: List, R.E == ComponentName {
+  open func getActiveAdmins<R>() -> R? where R: List, R.E == ComponentName {
     self.javaObject.call(method: DevicePolicyManager__method__1, [])
   }
 
-  public func removeActiveAdmin(admin: ComponentName?) {
+  open func removeActiveAdmin(admin: ComponentName?) {
     self.javaObject.call(method: DevicePolicyManager__method__2, [admin.toJavaParameter()])
   }
 
-  public func hasGrantedPolicy(admin: ComponentName?, usesPolicy: Int32) -> Bool {
+  open func hasGrantedPolicy(admin: ComponentName?, usesPolicy: Int32) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__3, [admin.toJavaParameter(), usesPolicy.toJavaParameter()])
   }
 
-  public func setPasswordQuality(admin: ComponentName?, quality: Int32) {
+  open func setPasswordQuality(admin: ComponentName?, quality: Int32) {
     self.javaObject.call(method: DevicePolicyManager__method__4, [admin.toJavaParameter(), quality.toJavaParameter()])
   }
 
-  public func getPasswordQuality(admin: ComponentName?) -> Int32 {
+  open func getPasswordQuality(admin: ComponentName?) -> Int32 {
     self.javaObject.call(method: DevicePolicyManager__method__5, [admin.toJavaParameter()])
   }
 
-  public func setPasswordMinimumLength(admin: ComponentName?, length: Int32) {
+  open func setPasswordMinimumLength(admin: ComponentName?, length: Int32) {
     self.javaObject.call(method: DevicePolicyManager__method__6, [admin.toJavaParameter(), length.toJavaParameter()])
   }
 
-  public func getPasswordMinimumLength(admin: ComponentName?) -> Int32 {
+  open func getPasswordMinimumLength(admin: ComponentName?) -> Int32 {
     self.javaObject.call(method: DevicePolicyManager__method__7, [admin.toJavaParameter()])
   }
 
-  public func setPasswordMinimumUpperCase(admin: ComponentName?, length: Int32) {
+  open func setPasswordMinimumUpperCase(admin: ComponentName?, length: Int32) {
     self.javaObject.call(method: DevicePolicyManager__method__8, [admin.toJavaParameter(), length.toJavaParameter()])
   }
 
-  public func getPasswordMinimumUpperCase(admin: ComponentName?) -> Int32 {
+  open func getPasswordMinimumUpperCase(admin: ComponentName?) -> Int32 {
     self.javaObject.call(method: DevicePolicyManager__method__9, [admin.toJavaParameter()])
   }
 
-  public func setPasswordMinimumLowerCase(admin: ComponentName?, length: Int32) {
+  open func setPasswordMinimumLowerCase(admin: ComponentName?, length: Int32) {
     self.javaObject.call(method: DevicePolicyManager__method__10, [admin.toJavaParameter(), length.toJavaParameter()])
   }
 
-  public func getPasswordMinimumLowerCase(admin: ComponentName?) -> Int32 {
+  open func getPasswordMinimumLowerCase(admin: ComponentName?) -> Int32 {
     self.javaObject.call(method: DevicePolicyManager__method__11, [admin.toJavaParameter()])
   }
 
-  public func setPasswordMinimumLetters(admin: ComponentName?, length: Int32) {
+  open func setPasswordMinimumLetters(admin: ComponentName?, length: Int32) {
     self.javaObject.call(method: DevicePolicyManager__method__12, [admin.toJavaParameter(), length.toJavaParameter()])
   }
 
-  public func getPasswordMinimumLetters(admin: ComponentName?) -> Int32 {
+  open func getPasswordMinimumLetters(admin: ComponentName?) -> Int32 {
     self.javaObject.call(method: DevicePolicyManager__method__13, [admin.toJavaParameter()])
   }
 
-  public func setPasswordMinimumNumeric(admin: ComponentName?, length: Int32) {
+  open func setPasswordMinimumNumeric(admin: ComponentName?, length: Int32) {
     self.javaObject.call(method: DevicePolicyManager__method__14, [admin.toJavaParameter(), length.toJavaParameter()])
   }
 
-  public func getPasswordMinimumNumeric(admin: ComponentName?) -> Int32 {
+  open func getPasswordMinimumNumeric(admin: ComponentName?) -> Int32 {
     self.javaObject.call(method: DevicePolicyManager__method__15, [admin.toJavaParameter()])
   }
 
-  public func setPasswordMinimumSymbols(admin: ComponentName?, length: Int32) {
+  open func setPasswordMinimumSymbols(admin: ComponentName?, length: Int32) {
     self.javaObject.call(method: DevicePolicyManager__method__16, [admin.toJavaParameter(), length.toJavaParameter()])
   }
 
-  public func getPasswordMinimumSymbols(admin: ComponentName?) -> Int32 {
+  open func getPasswordMinimumSymbols(admin: ComponentName?) -> Int32 {
     self.javaObject.call(method: DevicePolicyManager__method__17, [admin.toJavaParameter()])
   }
 
-  public func setPasswordMinimumNonLetter(admin: ComponentName?, length: Int32) {
+  open func setPasswordMinimumNonLetter(admin: ComponentName?, length: Int32) {
     self.javaObject.call(method: DevicePolicyManager__method__18, [admin.toJavaParameter(), length.toJavaParameter()])
   }
 
-  public func getPasswordMinimumNonLetter(admin: ComponentName?) -> Int32 {
+  open func getPasswordMinimumNonLetter(admin: ComponentName?) -> Int32 {
     self.javaObject.call(method: DevicePolicyManager__method__19, [admin.toJavaParameter()])
   }
 
-  public func setPasswordHistoryLength(admin: ComponentName?, length: Int32) {
+  open func setPasswordHistoryLength(admin: ComponentName?, length: Int32) {
     self.javaObject.call(method: DevicePolicyManager__method__20, [admin.toJavaParameter(), length.toJavaParameter()])
   }
 
-  public func setPasswordExpirationTimeout(admin: ComponentName?, timeout: Int64) {
+  open func setPasswordExpirationTimeout(admin: ComponentName?, timeout: Int64) {
     self.javaObject.call(method: DevicePolicyManager__method__21, [admin.toJavaParameter(), timeout.toJavaParameter()])
   }
 
-  public func getPasswordExpirationTimeout(admin: ComponentName?) -> Int64 {
+  open func getPasswordExpirationTimeout(admin: ComponentName?) -> Int64 {
     self.javaObject.call(method: DevicePolicyManager__method__22, [admin.toJavaParameter()])
   }
 
-  public func getPasswordExpiration(admin: ComponentName?) -> Int64 {
+  open func getPasswordExpiration(admin: ComponentName?) -> Int64 {
     self.javaObject.call(method: DevicePolicyManager__method__23, [admin.toJavaParameter()])
   }
 
-  public func getPasswordHistoryLength(admin: ComponentName?) -> Int32 {
+  open func getPasswordHistoryLength(admin: ComponentName?) -> Int32 {
     self.javaObject.call(method: DevicePolicyManager__method__24, [admin.toJavaParameter()])
   }
 
-  public func getPasswordMaximumLength(quality: Int32) -> Int32 {
+  open func getPasswordMaximumLength(quality: Int32) -> Int32 {
     self.javaObject.call(method: DevicePolicyManager__method__25, [quality.toJavaParameter()])
   }
 
-  public func isActivePasswordSufficient() -> Bool {
+  open func isActivePasswordSufficient() -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__26, [])
   }
 
-  public func getCurrentFailedPasswordAttempts() -> Int32 {
+  open func getCurrentFailedPasswordAttempts() -> Int32 {
     self.javaObject.call(method: DevicePolicyManager__method__27, [])
   }
 
-  public func setMaximumFailedPasswordsForWipe(admin: ComponentName?, num: Int32) {
+  open func setMaximumFailedPasswordsForWipe(admin: ComponentName?, num: Int32) {
     self.javaObject.call(method: DevicePolicyManager__method__28, [admin.toJavaParameter(), num.toJavaParameter()])
   }
 
-  public func getMaximumFailedPasswordsForWipe(admin: ComponentName?) -> Int32 {
+  open func getMaximumFailedPasswordsForWipe(admin: ComponentName?) -> Int32 {
     self.javaObject.call(method: DevicePolicyManager__method__29, [admin.toJavaParameter()])
   }
 
-  public func resetPassword(password: String, flags: Int32) -> Bool {
+  open func resetPassword(password: String, flags: Int32) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__30, [password.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func setMaximumTimeToLock(admin: ComponentName?, timeMs: Int64) {
+  open func setMaximumTimeToLock(admin: ComponentName?, timeMs: Int64) {
     self.javaObject.call(method: DevicePolicyManager__method__31, [admin.toJavaParameter(), timeMs.toJavaParameter()])
   }
 
-  public func getMaximumTimeToLock(admin: ComponentName?) -> Int64 {
+  open func getMaximumTimeToLock(admin: ComponentName?) -> Int64 {
     self.javaObject.call(method: DevicePolicyManager__method__32, [admin.toJavaParameter()])
   }
 
-  public func lockNow() {
+  open func lockNow() {
     self.javaObject.call(method: DevicePolicyManager__method__33, [])
   }
 
-  public func wipeData(flags: Int32) {
+  open func wipeData(flags: Int32) {
     self.javaObject.call(method: DevicePolicyManager__method__34, [flags.toJavaParameter()])
   }
 
-  public func setStorageEncryption(admin: ComponentName?, encrypt: Bool) -> Int32 {
+  open func setStorageEncryption(admin: ComponentName?, encrypt: Bool) -> Int32 {
     self.javaObject.call(method: DevicePolicyManager__method__35, [admin.toJavaParameter(), encrypt.toJavaParameter()])
   }
 
-  public func getStorageEncryption(admin: ComponentName?) -> Bool {
+  open func getStorageEncryption(admin: ComponentName?) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__36, [admin.toJavaParameter()])
   }
 
-  public func getStorageEncryptionStatus() -> Int32 {
+  open func getStorageEncryptionStatus() -> Int32 {
     self.javaObject.call(method: DevicePolicyManager__method__37, [])
   }
 
-  public func installCaCert(admin: ComponentName?, certBuffer: [Int8]) -> Bool {
+  open func installCaCert(admin: ComponentName?, certBuffer: [Int8]) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__38, [admin.toJavaParameter(), certBuffer.toJavaParameter()])
   }
 
-  public func uninstallCaCert(admin: ComponentName?, certBuffer: [Int8]) {
+  open func uninstallCaCert(admin: ComponentName?, certBuffer: [Int8]) {
     self.javaObject.call(method: DevicePolicyManager__method__39, [admin.toJavaParameter(), certBuffer.toJavaParameter()])
   }
 
-  public func getInstalledCaCerts<R>(admin: ComponentName?) -> R? where R: List, R.E == [Int8] {
+  open func getInstalledCaCerts<R>(admin: ComponentName?) -> R? where R: List, R.E == [Int8] {
     self.javaObject.call(method: DevicePolicyManager__method__40, [admin.toJavaParameter()])
   }
 
-  public func uninstallAllUserCaCerts(admin: ComponentName?) {
+  open func uninstallAllUserCaCerts(admin: ComponentName?) {
     self.javaObject.call(method: DevicePolicyManager__method__41, [admin.toJavaParameter()])
   }
 
-  public func hasCaCertInstalled(admin: ComponentName?, certBuffer: [Int8]) -> Bool {
+  open func hasCaCertInstalled(admin: ComponentName?, certBuffer: [Int8]) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__42, [admin.toJavaParameter(), certBuffer.toJavaParameter()])
   }
 
-  public func removeKeyPair(admin: ComponentName?, alias: String) -> Bool {
+  open func removeKeyPair(admin: ComponentName?, alias: String) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__43, [admin.toJavaParameter(), alias.toJavaParameter()])
   }
 
-  public func setCertInstallerPackage(admin: ComponentName?, installerPackage: String) {
+  open func setCertInstallerPackage(admin: ComponentName?, installerPackage: String) {
     self.javaObject.call(method: DevicePolicyManager__method__44, [admin.toJavaParameter(), installerPackage.toJavaParameter()])
   }
 
-  public func getCertInstallerPackage(admin: ComponentName?) -> String {
+  open func getCertInstallerPackage(admin: ComponentName?) -> String {
     self.javaObject.call(method: DevicePolicyManager__method__45, [admin.toJavaParameter()])
   }
 
-  public func setAlwaysOnVpnPackage(admin: ComponentName?, vpnPackage: String, lockdownEnabled: Bool) {
+  open func setAlwaysOnVpnPackage(admin: ComponentName?, vpnPackage: String, lockdownEnabled: Bool) {
     self.javaObject.call(method: DevicePolicyManager__method__46, [admin.toJavaParameter(), vpnPackage.toJavaParameter(), lockdownEnabled.toJavaParameter()])
   }
 
-  public func getAlwaysOnVpnPackage(admin: ComponentName?) -> String {
+  open func getAlwaysOnVpnPackage(admin: ComponentName?) -> String {
     self.javaObject.call(method: DevicePolicyManager__method__47, [admin.toJavaParameter()])
   }
 
-  public func setCameraDisabled(admin: ComponentName?, disabled: Bool) {
+  open func setCameraDisabled(admin: ComponentName?, disabled: Bool) {
     self.javaObject.call(method: DevicePolicyManager__method__48, [admin.toJavaParameter(), disabled.toJavaParameter()])
   }
 
-  public func getCameraDisabled(admin: ComponentName?) -> Bool {
+  open func getCameraDisabled(admin: ComponentName?) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__49, [admin.toJavaParameter()])
   }
 
-  public func requestBugreport(admin: ComponentName?) -> Bool {
+  open func requestBugreport(admin: ComponentName?) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__50, [admin.toJavaParameter()])
   }
 
-  public func setScreenCaptureDisabled(admin: ComponentName?, disabled: Bool) {
+  open func setScreenCaptureDisabled(admin: ComponentName?, disabled: Bool) {
     self.javaObject.call(method: DevicePolicyManager__method__51, [admin.toJavaParameter(), disabled.toJavaParameter()])
   }
 
-  public func getScreenCaptureDisabled(admin: ComponentName?) -> Bool {
+  open func getScreenCaptureDisabled(admin: ComponentName?) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__52, [admin.toJavaParameter()])
   }
 
-  public func setAutoTimeRequired(admin: ComponentName?, required: Bool) {
+  open func setAutoTimeRequired(admin: ComponentName?, required: Bool) {
     self.javaObject.call(method: DevicePolicyManager__method__53, [admin.toJavaParameter(), required.toJavaParameter()])
   }
 
-  public func getAutoTimeRequired() -> Bool {
+  open func getAutoTimeRequired() -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__54, [])
   }
 
-  public func setKeyguardDisabledFeatures(admin: ComponentName?, which: Int32) {
+  open func setKeyguardDisabledFeatures(admin: ComponentName?, which: Int32) {
     self.javaObject.call(method: DevicePolicyManager__method__55, [admin.toJavaParameter(), which.toJavaParameter()])
   }
 
-  public func getKeyguardDisabledFeatures(admin: ComponentName?) -> Int32 {
+  open func getKeyguardDisabledFeatures(admin: ComponentName?) -> Int32 {
     self.javaObject.call(method: DevicePolicyManager__method__56, [admin.toJavaParameter()])
   }
 
-  public func isDeviceOwnerApp(packageName: String) -> Bool {
+  open func isDeviceOwnerApp(packageName: String) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__57, [packageName.toJavaParameter()])
   }
 
-  public func clearDeviceOwnerApp(packageName: String) {
+  open func clearDeviceOwnerApp(packageName: String) {
     self.javaObject.call(method: DevicePolicyManager__method__58, [packageName.toJavaParameter()])
   }
 
-  public func clearProfileOwner(admin: ComponentName?) {
+  open func clearProfileOwner(admin: ComponentName?) {
     self.javaObject.call(method: DevicePolicyManager__method__59, [admin.toJavaParameter()])
   }
 
-  public func setDeviceOwnerLockScreenInfo(admin: ComponentName?, info: String?) {
+  open func setDeviceOwnerLockScreenInfo(admin: ComponentName?, info: String?) {
     self.javaObject.call(method: DevicePolicyManager__method__60, [admin.toJavaParameter(), info.toJavaParameter()])
   }
 
-  public func getDeviceOwnerLockScreenInfo() -> String? {
+  open func getDeviceOwnerLockScreenInfo() -> String? {
     self.javaObject.call(method: DevicePolicyManager__method__61, [])
   }
 
-  public func setPackagesSuspended(admin: ComponentName?, packageNames: [String], suspended: Bool) -> [String] {
+  open func setPackagesSuspended(admin: ComponentName?, packageNames: [String], suspended: Bool) -> [String] {
     self.javaObject.call(method: DevicePolicyManager__method__62, [admin.toJavaParameter(), packageNames.toJavaParameter(), suspended.toJavaParameter()])
   }
 
-  public func isPackageSuspended(admin: ComponentName?, packageName: String) -> Bool {
+  open func isPackageSuspended(admin: ComponentName?, packageName: String) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__63, [admin.toJavaParameter(), packageName.toJavaParameter()])
   }
 
-  public func setProfileEnabled(admin: ComponentName?) {
+  open func setProfileEnabled(admin: ComponentName?) {
     self.javaObject.call(method: DevicePolicyManager__method__64, [admin.toJavaParameter()])
   }
 
-  public func setProfileName(admin: ComponentName?, profileName: String) {
+  open func setProfileName(admin: ComponentName?, profileName: String) {
     self.javaObject.call(method: DevicePolicyManager__method__65, [admin.toJavaParameter(), profileName.toJavaParameter()])
   }
 
-  public func isProfileOwnerApp(packageName: String) -> Bool {
+  open func isProfileOwnerApp(packageName: String) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__66, [packageName.toJavaParameter()])
   }
 
-  public func addPersistentPreferredActivity(admin: ComponentName?, filter: IntentFilter?, activity: ComponentName?) {
+  open func addPersistentPreferredActivity(admin: ComponentName?, filter: IntentFilter?, activity: ComponentName?) {
     self.javaObject.call(method: DevicePolicyManager__method__67, [admin.toJavaParameter(), filter.toJavaParameter(), activity.toJavaParameter()])
   }
 
-  public func clearPackagePersistentPreferredActivities(admin: ComponentName?, packageName: String) {
+  open func clearPackagePersistentPreferredActivities(admin: ComponentName?, packageName: String) {
     self.javaObject.call(method: DevicePolicyManager__method__68, [admin.toJavaParameter(), packageName.toJavaParameter()])
   }
 
-  public func setApplicationRestrictionsManagingPackage(admin: ComponentName?, packageName: String) {
+  open func setApplicationRestrictionsManagingPackage(admin: ComponentName?, packageName: String) {
     self.javaObject.call(method: DevicePolicyManager__method__69, [admin.toJavaParameter(), packageName.toJavaParameter()])
   }
 
-  public func getApplicationRestrictionsManagingPackage(admin: ComponentName?) -> String {
+  open func getApplicationRestrictionsManagingPackage(admin: ComponentName?) -> String {
     self.javaObject.call(method: DevicePolicyManager__method__70, [admin.toJavaParameter()])
   }
 
-  public func isCallerApplicationRestrictionsManagingPackage() -> Bool {
+  open func isCallerApplicationRestrictionsManagingPackage() -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__71, [])
   }
 
-  public func setApplicationRestrictions(admin: ComponentName?, packageName: String, settings: Bundle?) {
+  open func setApplicationRestrictions(admin: ComponentName?, packageName: String, settings: Bundle?) {
     self.javaObject.call(method: DevicePolicyManager__method__72, [admin.toJavaParameter(), packageName.toJavaParameter(), settings.toJavaParameter()])
   }
 
-  public func setCrossProfileCallerIdDisabled(admin: ComponentName?, disabled: Bool) {
+  open func setCrossProfileCallerIdDisabled(admin: ComponentName?, disabled: Bool) {
     self.javaObject.call(method: DevicePolicyManager__method__73, [admin.toJavaParameter(), disabled.toJavaParameter()])
   }
 
-  public func getCrossProfileCallerIdDisabled(admin: ComponentName?) -> Bool {
+  open func getCrossProfileCallerIdDisabled(admin: ComponentName?) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__74, [admin.toJavaParameter()])
   }
 
-  public func setCrossProfileContactsSearchDisabled(admin: ComponentName?, disabled: Bool) {
+  open func setCrossProfileContactsSearchDisabled(admin: ComponentName?, disabled: Bool) {
     self.javaObject.call(method: DevicePolicyManager__method__75, [admin.toJavaParameter(), disabled.toJavaParameter()])
   }
 
-  public func getCrossProfileContactsSearchDisabled(admin: ComponentName?) -> Bool {
+  open func getCrossProfileContactsSearchDisabled(admin: ComponentName?) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__76, [admin.toJavaParameter()])
   }
 
-  public func setBluetoothContactSharingDisabled(admin: ComponentName?, disabled: Bool) {
+  open func setBluetoothContactSharingDisabled(admin: ComponentName?, disabled: Bool) {
     self.javaObject.call(method: DevicePolicyManager__method__77, [admin.toJavaParameter(), disabled.toJavaParameter()])
   }
 
-  public func getBluetoothContactSharingDisabled(admin: ComponentName?) -> Bool {
+  open func getBluetoothContactSharingDisabled(admin: ComponentName?) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__78, [admin.toJavaParameter()])
   }
 
-  public func addCrossProfileIntentFilter(admin: ComponentName?, filter: IntentFilter?, flags: Int32) {
+  open func addCrossProfileIntentFilter(admin: ComponentName?, filter: IntentFilter?, flags: Int32) {
     self.javaObject.call(method: DevicePolicyManager__method__79, [admin.toJavaParameter(), filter.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func clearCrossProfileIntentFilters(admin: ComponentName?) {
+  open func clearCrossProfileIntentFilters(admin: ComponentName?) {
     self.javaObject.call(method: DevicePolicyManager__method__80, [admin.toJavaParameter()])
   }
 
-  public func setPermittedAccessibilityServices<T0>(admin: ComponentName?, packageNames: T0?) -> Bool where T0: List, T0.E == String {
+  open func setPermittedAccessibilityServices<T0>(admin: ComponentName?, packageNames: T0?) -> Bool where T0: List, T0.E == String {
     self.javaObject.call(method: DevicePolicyManager__method__81, [admin.toJavaParameter(), packageNames.toJavaParameter()])
   }
 
-  public func getPermittedAccessibilityServices<R>(admin: ComponentName?) -> R? where R: List, R.E == String {
+  open func getPermittedAccessibilityServices<R>(admin: ComponentName?) -> R? where R: List, R.E == String {
     self.javaObject.call(method: DevicePolicyManager__method__82, [admin.toJavaParameter()])
   }
 
-  public func setPermittedInputMethods<T0>(admin: ComponentName?, packageNames: T0?) -> Bool where T0: List, T0.E == String {
+  open func setPermittedInputMethods<T0>(admin: ComponentName?, packageNames: T0?) -> Bool where T0: List, T0.E == String {
     self.javaObject.call(method: DevicePolicyManager__method__83, [admin.toJavaParameter(), packageNames.toJavaParameter()])
   }
 
-  public func getPermittedInputMethods<R>(admin: ComponentName?) -> R? where R: List, R.E == String {
+  open func getPermittedInputMethods<R>(admin: ComponentName?) -> R? where R: List, R.E == String {
     self.javaObject.call(method: DevicePolicyManager__method__84, [admin.toJavaParameter()])
   }
 
-  public func getApplicationRestrictions(admin: ComponentName?, packageName: String) -> Bundle? {
+  open func getApplicationRestrictions(admin: ComponentName?, packageName: String) -> Bundle? {
     self.javaObject.call(method: DevicePolicyManager__method__85, [admin.toJavaParameter(), packageName.toJavaParameter()])
   }
 
-  public func addUserRestriction(admin: ComponentName?, key: String) {
+  open func addUserRestriction(admin: ComponentName?, key: String) {
     self.javaObject.call(method: DevicePolicyManager__method__86, [admin.toJavaParameter(), key.toJavaParameter()])
   }
 
-  public func clearUserRestriction(admin: ComponentName?, key: String) {
+  open func clearUserRestriction(admin: ComponentName?, key: String) {
     self.javaObject.call(method: DevicePolicyManager__method__87, [admin.toJavaParameter(), key.toJavaParameter()])
   }
 
-  public func getUserRestrictions(admin: ComponentName?) -> Bundle? {
+  open func getUserRestrictions(admin: ComponentName?) -> Bundle? {
     self.javaObject.call(method: DevicePolicyManager__method__88, [admin.toJavaParameter()])
   }
 
-  public func setApplicationHidden(admin: ComponentName?, packageName: String, hidden: Bool) -> Bool {
+  open func setApplicationHidden(admin: ComponentName?, packageName: String, hidden: Bool) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__89, [admin.toJavaParameter(), packageName.toJavaParameter(), hidden.toJavaParameter()])
   }
 
-  public func isApplicationHidden(admin: ComponentName?, packageName: String) -> Bool {
+  open func isApplicationHidden(admin: ComponentName?, packageName: String) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__90, [admin.toJavaParameter(), packageName.toJavaParameter()])
   }
 
-  public func enableSystemApp(admin: ComponentName?, packageName: String) {
+  open func enableSystemApp(admin: ComponentName?, packageName: String) {
     self.javaObject.call(method: DevicePolicyManager__method__91, [admin.toJavaParameter(), packageName.toJavaParameter()])
   }
 
-  public func enableSystemApp(admin: ComponentName?, intent: Intent?) -> Int32 {
+  open func enableSystemApp(admin: ComponentName?, intent: Intent?) -> Int32 {
     self.javaObject.call(method: DevicePolicyManager__method__92, [admin.toJavaParameter(), intent.toJavaParameter()])
   }
 
-  public func setAccountManagementDisabled(admin: ComponentName?, accountType: String, disabled: Bool) {
+  open func setAccountManagementDisabled(admin: ComponentName?, accountType: String, disabled: Bool) {
     self.javaObject.call(method: DevicePolicyManager__method__93, [admin.toJavaParameter(), accountType.toJavaParameter(), disabled.toJavaParameter()])
   }
 
-  public func getAccountTypesWithManagementDisabled() -> [String] {
+  open func getAccountTypesWithManagementDisabled() -> [String] {
     self.javaObject.call(method: DevicePolicyManager__method__94, [])
   }
 
-  public func setLockTaskPackages(admin: ComponentName?, packages: [String]) {
+  open func setLockTaskPackages(admin: ComponentName?, packages: [String]) {
     self.javaObject.call(method: DevicePolicyManager__method__95, [admin.toJavaParameter(), packages.toJavaParameter()])
   }
 
-  public func isLockTaskPermitted(pkg: String) -> Bool {
+  open func isLockTaskPermitted(pkg: String) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__96, [pkg.toJavaParameter()])
   }
 
-  public func setGlobalSetting(admin: ComponentName?, setting: String, value: String) {
+  open func setGlobalSetting(admin: ComponentName?, setting: String, value: String) {
     self.javaObject.call(method: DevicePolicyManager__method__97, [admin.toJavaParameter(), setting.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func setSecureSetting(admin: ComponentName?, setting: String, value: String) {
+  open func setSecureSetting(admin: ComponentName?, setting: String, value: String) {
     self.javaObject.call(method: DevicePolicyManager__method__98, [admin.toJavaParameter(), setting.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func setRestrictionsProvider(admin: ComponentName?, provider: ComponentName?) {
+  open func setRestrictionsProvider(admin: ComponentName?, provider: ComponentName?) {
     self.javaObject.call(method: DevicePolicyManager__method__99, [admin.toJavaParameter(), provider.toJavaParameter()])
   }
 
-  public func setMasterVolumeMuted(admin: ComponentName?, on: Bool) {
+  open func setMasterVolumeMuted(admin: ComponentName?, on: Bool) {
     self.javaObject.call(method: DevicePolicyManager__method__100, [admin.toJavaParameter(), on.toJavaParameter()])
   }
 
-  public func isMasterVolumeMuted(admin: ComponentName?) -> Bool {
+  open func isMasterVolumeMuted(admin: ComponentName?) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__101, [admin.toJavaParameter()])
   }
 
-  public func setUninstallBlocked(admin: ComponentName?, packageName: String, uninstallBlocked: Bool) {
+  open func setUninstallBlocked(admin: ComponentName?, packageName: String, uninstallBlocked: Bool) {
     self.javaObject.call(method: DevicePolicyManager__method__102, [admin.toJavaParameter(), packageName.toJavaParameter(), uninstallBlocked.toJavaParameter()])
   }
 
-  public func isUninstallBlocked(admin: ComponentName?, packageName: String) -> Bool {
+  open func isUninstallBlocked(admin: ComponentName?, packageName: String) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__103, [admin.toJavaParameter(), packageName.toJavaParameter()])
   }
 
-  public func addCrossProfileWidgetProvider(admin: ComponentName?, packageName: String) -> Bool {
+  open func addCrossProfileWidgetProvider(admin: ComponentName?, packageName: String) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__104, [admin.toJavaParameter(), packageName.toJavaParameter()])
   }
 
-  public func removeCrossProfileWidgetProvider(admin: ComponentName?, packageName: String) -> Bool {
+  open func removeCrossProfileWidgetProvider(admin: ComponentName?, packageName: String) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__105, [admin.toJavaParameter(), packageName.toJavaParameter()])
   }
 
-  public func getCrossProfileWidgetProviders<R>(admin: ComponentName?) -> R? where R: List, R.E == String {
+  open func getCrossProfileWidgetProviders<R>(admin: ComponentName?) -> R? where R: List, R.E == String {
     self.javaObject.call(method: DevicePolicyManager__method__106, [admin.toJavaParameter()])
   }
 
-  public func setSystemUpdatePolicy(admin: ComponentName?, policy: SystemUpdatePolicy?) {
+  open func setSystemUpdatePolicy(admin: ComponentName?, policy: SystemUpdatePolicy?) {
     self.javaObject.call(method: DevicePolicyManager__method__107, [admin.toJavaParameter(), policy.toJavaParameter()])
   }
 
-  public func getSystemUpdatePolicy() -> SystemUpdatePolicy? {
+  open func getSystemUpdatePolicy() -> SystemUpdatePolicy? {
     self.javaObject.call(method: DevicePolicyManager__method__108, [])
   }
 
-  public func setKeyguardDisabled(admin: ComponentName?, disabled: Bool) -> Bool {
+  open func setKeyguardDisabled(admin: ComponentName?, disabled: Bool) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__109, [admin.toJavaParameter(), disabled.toJavaParameter()])
   }
 
-  public func setStatusBarDisabled(admin: ComponentName?, disabled: Bool) -> Bool {
+  open func setStatusBarDisabled(admin: ComponentName?, disabled: Bool) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__110, [admin.toJavaParameter(), disabled.toJavaParameter()])
   }
 
-  public func setPermissionPolicy(admin: ComponentName?, policy: Int32) {
+  open func setPermissionPolicy(admin: ComponentName?, policy: Int32) {
     self.javaObject.call(method: DevicePolicyManager__method__111, [admin.toJavaParameter(), policy.toJavaParameter()])
   }
 
-  public func getPermissionPolicy(admin: ComponentName?) -> Int32 {
+  open func getPermissionPolicy(admin: ComponentName?) -> Int32 {
     self.javaObject.call(method: DevicePolicyManager__method__112, [admin.toJavaParameter()])
   }
 
-  public func setPermissionGrantState(admin: ComponentName?, packageName: String, permission: String, grantState: Int32) -> Bool {
+  open func setPermissionGrantState(admin: ComponentName?, packageName: String, permission: String, grantState: Int32) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__113, [admin.toJavaParameter(), packageName.toJavaParameter(), permission.toJavaParameter(), grantState.toJavaParameter()])
   }
 
-  public func getPermissionGrantState(admin: ComponentName?, packageName: String, permission: String) -> Int32 {
+  open func getPermissionGrantState(admin: ComponentName?, packageName: String, permission: String) -> Int32 {
     self.javaObject.call(method: DevicePolicyManager__method__114, [admin.toJavaParameter(), packageName.toJavaParameter(), permission.toJavaParameter()])
   }
 
-  public func isProvisioningAllowed(action: String) -> Bool {
+  open func isProvisioningAllowed(action: String) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__115, [action.toJavaParameter()])
   }
 
-  public func isManagedProfile(admin: ComponentName?) -> Bool {
+  open func isManagedProfile(admin: ComponentName?) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__116, [admin.toJavaParameter()])
   }
 
-  public func getWifiMacAddress(admin: ComponentName?) -> String {
+  open func getWifiMacAddress(admin: ComponentName?) -> String {
     self.javaObject.call(method: DevicePolicyManager__method__117, [admin.toJavaParameter()])
   }
 
-  public func reboot(admin: ComponentName?) {
+  open func reboot(admin: ComponentName?) {
     self.javaObject.call(method: DevicePolicyManager__method__118, [admin.toJavaParameter()])
   }
 
-  public func setShortSupportMessage(admin: ComponentName?, message: String?) {
+  open func setShortSupportMessage(admin: ComponentName?, message: String?) {
     self.javaObject.call(method: DevicePolicyManager__method__119, [admin.toJavaParameter(), message.toJavaParameter()])
   }
 
-  public func getShortSupportMessage(admin: ComponentName?) -> String? {
+  open func getShortSupportMessage(admin: ComponentName?) -> String? {
     self.javaObject.call(method: DevicePolicyManager__method__120, [admin.toJavaParameter()])
   }
 
-  public func setLongSupportMessage(admin: ComponentName?, message: String?) {
+  open func setLongSupportMessage(admin: ComponentName?, message: String?) {
     self.javaObject.call(method: DevicePolicyManager__method__121, [admin.toJavaParameter(), message.toJavaParameter()])
   }
 
-  public func getLongSupportMessage(admin: ComponentName?) -> String? {
+  open func getLongSupportMessage(admin: ComponentName?) -> String? {
     self.javaObject.call(method: DevicePolicyManager__method__122, [admin.toJavaParameter()])
   }
 
-  public func getParentProfileInstance(admin: ComponentName?) -> DevicePolicyManager? {
+  open func getParentProfileInstance(admin: ComponentName?) -> DevicePolicyManager? {
     self.javaObject.call(method: DevicePolicyManager__method__123, [admin.toJavaParameter()])
   }
 
-  public func setSecurityLoggingEnabled(admin: ComponentName?, enabled: Bool) {
+  open func setSecurityLoggingEnabled(admin: ComponentName?, enabled: Bool) {
     self.javaObject.call(method: DevicePolicyManager__method__124, [admin.toJavaParameter(), enabled.toJavaParameter()])
   }
 
-  public func isSecurityLoggingEnabled(admin: ComponentName?) -> Bool {
+  open func isSecurityLoggingEnabled(admin: ComponentName?) -> Bool {
     self.javaObject.call(method: DevicePolicyManager__method__125, [admin.toJavaParameter()])
   }
 
-  public func retrieveSecurityLogs<R>(admin: ComponentName?) -> R? where R: List, R.E == SecurityLog.SecurityEvent {
+  open func retrieveSecurityLogs<R>(admin: ComponentName?) -> R? where R: List, R.E == SecurityLog.SecurityEvent {
     self.javaObject.call(method: DevicePolicyManager__method__126, [admin.toJavaParameter()])
   }
 
-  public func retrievePreRebootSecurityLogs<R>(admin: ComponentName?) -> R? where R: List, R.E == SecurityLog.SecurityEvent {
+  open func retrievePreRebootSecurityLogs<R>(admin: ComponentName?) -> R? where R: List, R.E == SecurityLog.SecurityEvent {
     self.javaObject.call(method: DevicePolicyManager__method__127, [admin.toJavaParameter()])
   }
 
-  public func setOrganizationColor(admin: ComponentName?, color: Int32) {
+  open func setOrganizationColor(admin: ComponentName?, color: Int32) {
     self.javaObject.call(method: DevicePolicyManager__method__128, [admin.toJavaParameter(), color.toJavaParameter()])
   }
 
-  public func getOrganizationColor(admin: ComponentName?) -> Int32 {
+  open func getOrganizationColor(admin: ComponentName?) -> Int32 {
     self.javaObject.call(method: DevicePolicyManager__method__129, [admin.toJavaParameter()])
   }
 
-  public func setOrganizationName(admin: ComponentName?, title: String?) {
+  open func setOrganizationName(admin: ComponentName?, title: String?) {
     self.javaObject.call(method: DevicePolicyManager__method__130, [admin.toJavaParameter(), title.toJavaParameter()])
   }
 
-  public func getOrganizationName(admin: ComponentName?) -> String? {
+  open func getOrganizationName(admin: ComponentName?) -> String? {
     self.javaObject.call(method: DevicePolicyManager__method__131, [admin.toJavaParameter()])
   }
 }
 
 extension DevicePolicyManager {
-  public func getActiveAdmins() -> ListProxy<ComponentName>? {
+  open func getActiveAdmins() -> ListProxy<ComponentName>? {
     self.javaObject.call(method: DevicePolicyManager__method__1, [])
   }
 
-  public func getInstalledCaCerts(admin: ComponentName?) -> ListProxy<[Int8]>? {
+  open func getInstalledCaCerts(admin: ComponentName?) -> ListProxy<[Int8]>? {
     self.javaObject.call(method: DevicePolicyManager__method__40, [admin.toJavaParameter()])
   }
 
-  public func getPermittedAccessibilityServices(admin: ComponentName?) -> ListProxy<String>? {
+  open func getPermittedAccessibilityServices(admin: ComponentName?) -> ListProxy<String>? {
     self.javaObject.call(method: DevicePolicyManager__method__82, [admin.toJavaParameter()])
   }
 
-  public func getPermittedInputMethods(admin: ComponentName?) -> ListProxy<String>? {
+  open func getPermittedInputMethods(admin: ComponentName?) -> ListProxy<String>? {
     self.javaObject.call(method: DevicePolicyManager__method__84, [admin.toJavaParameter()])
   }
 
-  public func getCrossProfileWidgetProviders(admin: ComponentName?) -> ListProxy<String>? {
+  open func getCrossProfileWidgetProviders(admin: ComponentName?) -> ListProxy<String>? {
     self.javaObject.call(method: DevicePolicyManager__method__106, [admin.toJavaParameter()])
   }
 
-  public func retrieveSecurityLogs(admin: ComponentName?) -> ListProxy<SecurityLog.SecurityEvent>? {
+  open func retrieveSecurityLogs(admin: ComponentName?) -> ListProxy<SecurityLog.SecurityEvent>? {
     self.javaObject.call(method: DevicePolicyManager__method__126, [admin.toJavaParameter()])
   }
 
-  public func retrievePreRebootSecurityLogs(admin: ComponentName?) -> ListProxy<SecurityLog.SecurityEvent>? {
+  open func retrievePreRebootSecurityLogs(admin: ComponentName?) -> ListProxy<SecurityLog.SecurityEvent>? {
     self.javaObject.call(method: DevicePolicyManager__method__127, [admin.toJavaParameter()])
   }
 }

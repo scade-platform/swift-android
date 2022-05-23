@@ -20,8 +20,8 @@ open class RestrictionEntry: Object, Parcelable {
 
   public static let TYPE_STRING: Int32 = RestrictionEntry__class.getStatic(field: RestrictionEntry__field__7)
 
-  public init(_type: Int32, key: String) {
-    super.init(ctor: RestrictionEntry__method__0, [_type.toJavaParameter(), key.toJavaParameter()])
+  public init(type: Int32, key: String) {
+    super.init(ctor: RestrictionEntry__method__0, [type.toJavaParameter(), key.toJavaParameter()])
   }
 
   public init(key: String, selectedString: String) {
@@ -52,103 +52,103 @@ open class RestrictionEntry: Object, Parcelable {
     RestrictionEntry__class.callStatic(method: RestrictionEntry__method__7, [key.toJavaParameter(), restrictionEntries.toJavaParameter()])
   }
 
-  public func setType(_type: Int32) {
-    self.javaObject.call(method: RestrictionEntry__method__8, [_type.toJavaParameter()])
+  open func setType(type: Int32) {
+    self.javaObject.call(method: RestrictionEntry__method__8, [type.toJavaParameter()])
   }
 
-  public func getType() -> Int32 {
+  open func getType() -> Int32 {
     self.javaObject.call(method: RestrictionEntry__method__9, [])
   }
 
-  public func getSelectedString() -> String {
+  open func getSelectedString() -> String {
     self.javaObject.call(method: RestrictionEntry__method__10, [])
   }
 
-  public func getAllSelectedStrings() -> [String] {
+  open func getAllSelectedStrings() -> [String] {
     self.javaObject.call(method: RestrictionEntry__method__11, [])
   }
 
-  public func getSelectedState() -> Bool {
+  open func getSelectedState() -> Bool {
     self.javaObject.call(method: RestrictionEntry__method__12, [])
   }
 
-  public func getIntValue() -> Int32 {
+  open func getIntValue() -> Int32 {
     self.javaObject.call(method: RestrictionEntry__method__13, [])
   }
 
-  public func setIntValue(value: Int32) {
+  open func setIntValue(value: Int32) {
     self.javaObject.call(method: RestrictionEntry__method__14, [value.toJavaParameter()])
   }
 
-  public func setSelectedString(selectedString: String) {
+  open func setSelectedString(selectedString: String) {
     self.javaObject.call(method: RestrictionEntry__method__15, [selectedString.toJavaParameter()])
   }
 
-  public func setSelectedState(state: Bool) {
+  open func setSelectedState(state: Bool) {
     self.javaObject.call(method: RestrictionEntry__method__16, [state.toJavaParameter()])
   }
 
-  public func setAllSelectedStrings(allSelectedStrings: [String]) {
+  open func setAllSelectedStrings(allSelectedStrings: [String]) {
     self.javaObject.call(method: RestrictionEntry__method__17, [allSelectedStrings.toJavaParameter()])
   }
 
-  public func setChoiceValues(choiceValues: [String]) {
+  open func setChoiceValues(choiceValues: [String]) {
     self.javaObject.call(method: RestrictionEntry__method__18, [choiceValues.toJavaParameter()])
   }
 
-  public func setChoiceValues(context: Context?, stringArrayResId: Int32) {
+  open func setChoiceValues(context: Context?, stringArrayResId: Int32) {
     self.javaObject.call(method: RestrictionEntry__method__19, [JavaParameter(object: context?.toJavaObject()), stringArrayResId.toJavaParameter()])
   }
 
-  public func getRestrictions() -> [RestrictionEntry?] {
+  open func getRestrictions() -> [RestrictionEntry?] {
     self.javaObject.call(method: RestrictionEntry__method__20, [])
   }
 
-  public func setRestrictions(restrictions: [RestrictionEntry?]) {
+  open func setRestrictions(restrictions: [RestrictionEntry?]) {
     self.javaObject.call(method: RestrictionEntry__method__21, [restrictions.toJavaParameter()])
   }
 
-  public func getChoiceValues() -> [String] {
+  open func getChoiceValues() -> [String] {
     self.javaObject.call(method: RestrictionEntry__method__22, [])
   }
 
-  public func setChoiceEntries(choiceEntries: [String]) {
+  open func setChoiceEntries(choiceEntries: [String]) {
     self.javaObject.call(method: RestrictionEntry__method__23, [choiceEntries.toJavaParameter()])
   }
 
-  public func setChoiceEntries(context: Context?, stringArrayResId: Int32) {
+  open func setChoiceEntries(context: Context?, stringArrayResId: Int32) {
     self.javaObject.call(method: RestrictionEntry__method__24, [JavaParameter(object: context?.toJavaObject()), stringArrayResId.toJavaParameter()])
   }
 
-  public func getChoiceEntries() -> [String] {
+  open func getChoiceEntries() -> [String] {
     self.javaObject.call(method: RestrictionEntry__method__25, [])
   }
 
-  public func getDescription() -> String {
+  open func getDescription() -> String {
     self.javaObject.call(method: RestrictionEntry__method__26, [])
   }
 
-  public func setDescription(description: String) {
+  open func setDescription(description: String) {
     self.javaObject.call(method: RestrictionEntry__method__27, [description.toJavaParameter()])
   }
 
-  public func getKey() -> String {
+  open func getKey() -> String {
     self.javaObject.call(method: RestrictionEntry__method__28, [])
   }
 
-  public func getTitle() -> String {
+  open func getTitle() -> String {
     self.javaObject.call(method: RestrictionEntry__method__29, [])
   }
 
-  public func setTitle(title: String) {
+  open func setTitle(title: String) {
     self.javaObject.call(method: RestrictionEntry__method__30, [title.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: RestrictionEntry__method__31, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: RestrictionEntry__method__32, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 

@@ -6,10 +6,6 @@ import AndroidOS
 import Java
 
 public protocol HostNfcFService: Service {
-  init()
-
-  func sendResponsePacket(responsePacket: [Int8]) -> Void
-
   func processNfcFPacket(commandPacket: [Int8], extras: Bundle?) -> [Int8]
 
   func onDeactivated(reason: Int32) -> Void
@@ -50,11 +46,11 @@ open class HostNfcFServiceProxy: ServiceProxy, HostNfcFService {
     self.init(obj.toJavaObject()!)
   }
 
-  public func processNfcFPacket(commandPacket: [Int8], extras: Bundle?) -> [Int8] {
+  open func processNfcFPacket(commandPacket: [Int8], extras: Bundle?) -> [Int8] {
     self.javaObject.call(method: HostNfcFService__method__2, [commandPacket.toJavaParameter(), extras.toJavaParameter()])
   }
 
-  public func onDeactivated(reason: Int32) {
+  open func onDeactivated(reason: Int32) {
     self.javaObject.call(method: HostNfcFService__method__3, [reason.toJavaParameter()])
   }
 }

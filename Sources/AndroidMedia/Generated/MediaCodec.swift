@@ -1,6 +1,7 @@
 
 
 import AndroidOS
+import AndroidView
 import Java
 
 open class MediaCodec: Object {
@@ -50,12 +51,12 @@ open class MediaCodec: Object {
 
   public static let VIDEO_SCALING_MODE_SCALE_TO_FIT_WITH_CROPPING: Int32 = MediaCodec__class.getStatic(field: MediaCodec__field__15)
 
-  public static func createDecoderByType(_type: String) -> MediaCodec? {
-    MediaCodec__class.callStatic(method: MediaCodec__method__0, [_type.toJavaParameter()])
+  public static func createDecoderByType(type: String) -> MediaCodec? {
+    MediaCodec__class.callStatic(method: MediaCodec__method__0, [type.toJavaParameter()])
   }
 
-  public static func createEncoderByType(_type: String) -> MediaCodec? {
-    MediaCodec__class.callStatic(method: MediaCodec__method__1, [_type.toJavaParameter()])
+  public static func createEncoderByType(type: String) -> MediaCodec? {
+    MediaCodec__class.callStatic(method: MediaCodec__method__1, [type.toJavaParameter()])
   }
 
   public static func createByCodecName(name: String) -> MediaCodec? {
@@ -70,86 +71,116 @@ open class MediaCodec: Object {
     self.javaObject.call(method: MediaCodec__method__4, [])
   }
 
+  open func configure(format: MediaFormat?, surface: Surface?, crypto: MediaCrypto?, flags: Int32) {
+    self.javaObject.call(method: MediaCodec__method__5, [format.toJavaParameter(), surface.toJavaParameter(), crypto.toJavaParameter(), flags.toJavaParameter()])
+  }
+
+  open func setOutputSurface(surface: Surface?) {
+    self.javaObject.call(method: MediaCodec__method__6, [surface.toJavaParameter()])
+  }
+
+  public static func createPersistentInputSurface() -> Surface? {
+    MediaCodec__class.callStatic(method: MediaCodec__method__7, [])
+  }
+
+  open func setInputSurface(surface: Surface?) {
+    self.javaObject.call(method: MediaCodec__method__8, [surface.toJavaParameter()])
+  }
+
+  public func createInputSurface() -> Surface? {
+    self.javaObject.call(method: MediaCodec__method__9, [])
+  }
+
   public func start() {
-    self.javaObject.call(method: MediaCodec__method__5, [])
+    self.javaObject.call(method: MediaCodec__method__10, [])
   }
 
   public func stop() {
-    self.javaObject.call(method: MediaCodec__method__6, [])
+    self.javaObject.call(method: MediaCodec__method__11, [])
   }
 
   public func flush() {
-    self.javaObject.call(method: MediaCodec__method__7, [])
+    self.javaObject.call(method: MediaCodec__method__12, [])
   }
 
   public func queueInputBuffer(index: Int32, offset: Int32, size: Int32, presentationTimeUs: Int64, flags: Int32) {
-    self.javaObject.call(method: MediaCodec__method__8, [index.toJavaParameter(), offset.toJavaParameter(), size.toJavaParameter(), presentationTimeUs.toJavaParameter(), flags.toJavaParameter()])
+    self.javaObject.call(method: MediaCodec__method__13, [index.toJavaParameter(), offset.toJavaParameter(), size.toJavaParameter(), presentationTimeUs.toJavaParameter(), flags.toJavaParameter()])
   }
 
   public func queueSecureInputBuffer(index: Int32, offset: Int32, info: MediaCodec.CryptoInfo?, presentationTimeUs: Int64, flags: Int32) {
-    self.javaObject.call(method: MediaCodec__method__9, [index.toJavaParameter(), offset.toJavaParameter(), info.toJavaParameter(), presentationTimeUs.toJavaParameter(), flags.toJavaParameter()])
+    self.javaObject.call(method: MediaCodec__method__14, [index.toJavaParameter(), offset.toJavaParameter(), info.toJavaParameter(), presentationTimeUs.toJavaParameter(), flags.toJavaParameter()])
   }
 
   public func dequeueInputBuffer(timeoutUs: Int64) -> Int32 {
-    self.javaObject.call(method: MediaCodec__method__10, [timeoutUs.toJavaParameter()])
+    self.javaObject.call(method: MediaCodec__method__15, [timeoutUs.toJavaParameter()])
   }
 
   public func dequeueOutputBuffer(info: MediaCodec.BufferInfo?, timeoutUs: Int64) -> Int32 {
-    self.javaObject.call(method: MediaCodec__method__11, [info.toJavaParameter(), timeoutUs.toJavaParameter()])
+    self.javaObject.call(method: MediaCodec__method__16, [info.toJavaParameter(), timeoutUs.toJavaParameter()])
   }
 
   public func releaseOutputBuffer(index: Int32, render: Bool) {
-    self.javaObject.call(method: MediaCodec__method__12, [index.toJavaParameter(), render.toJavaParameter()])
+    self.javaObject.call(method: MediaCodec__method__17, [index.toJavaParameter(), render.toJavaParameter()])
   }
 
   public func releaseOutputBuffer(index: Int32, renderTimestampNs: Int64) {
-    self.javaObject.call(method: MediaCodec__method__13, [index.toJavaParameter(), renderTimestampNs.toJavaParameter()])
+    self.javaObject.call(method: MediaCodec__method__18, [index.toJavaParameter(), renderTimestampNs.toJavaParameter()])
   }
 
   public func signalEndOfInputStream() {
-    self.javaObject.call(method: MediaCodec__method__14, [])
+    self.javaObject.call(method: MediaCodec__method__19, [])
   }
 
   public func getOutputFormat() -> MediaFormat? {
-    self.javaObject.call(method: MediaCodec__method__15, [])
+    self.javaObject.call(method: MediaCodec__method__20, [])
   }
 
   public func getInputFormat() -> MediaFormat? {
-    self.javaObject.call(method: MediaCodec__method__16, [])
+    self.javaObject.call(method: MediaCodec__method__21, [])
   }
 
   public func getOutputFormat(index: Int32) -> MediaFormat? {
-    self.javaObject.call(method: MediaCodec__method__17, [index.toJavaParameter()])
+    self.javaObject.call(method: MediaCodec__method__22, [index.toJavaParameter()])
   }
 
-  public func getInputImage(index: Int32) -> Image? {
-    let res = self.javaObject.call(method: MediaCodec__method__18, [index.toJavaParameter()]) as Object?
+  open func getInputBuffer(index: Int32) -> ByteBuffer? {
+    let res = self.javaObject.call(method: MediaCodec__method__23, [index.toJavaParameter()]) as Object?
+    return cast(res, to: ByteBufferProxy.self) as! ByteBuffer?
+  }
+
+  open func getInputImage(index: Int32) -> Image? {
+    let res = self.javaObject.call(method: MediaCodec__method__24, [index.toJavaParameter()]) as Object?
     return cast(res, to: ImageProxy.self)
   }
 
-  public func getOutputImage(index: Int32) -> Image? {
-    let res = self.javaObject.call(method: MediaCodec__method__19, [index.toJavaParameter()]) as Object?
+  open func getOutputBuffer(index: Int32) -> ByteBuffer? {
+    let res = self.javaObject.call(method: MediaCodec__method__25, [index.toJavaParameter()]) as Object?
+    return cast(res, to: ByteBufferProxy.self) as! ByteBuffer?
+  }
+
+  open func getOutputImage(index: Int32) -> Image? {
+    let res = self.javaObject.call(method: MediaCodec__method__26, [index.toJavaParameter()]) as Object?
     return cast(res, to: ImageProxy.self)
   }
 
   public func setVideoScalingMode(mode: Int32) {
-    self.javaObject.call(method: MediaCodec__method__20, [mode.toJavaParameter()])
+    self.javaObject.call(method: MediaCodec__method__27, [mode.toJavaParameter()])
   }
 
   public func getName() -> String {
-    self.javaObject.call(method: MediaCodec__method__21, [])
+    self.javaObject.call(method: MediaCodec__method__28, [])
   }
 
   public func setParameters(params: Bundle?) {
-    self.javaObject.call(method: MediaCodec__method__22, [params.toJavaParameter()])
+    self.javaObject.call(method: MediaCodec__method__29, [params.toJavaParameter()])
   }
 
-  public func setCallback(cb: MediaCodec.Callback?) {
-    self.javaObject.call(method: MediaCodec__method__23, [JavaParameter(object: cb?.toJavaObject())])
+  open func setCallback(cb: MediaCodec.Callback?) {
+    self.javaObject.call(method: MediaCodec__method__30, [JavaParameter(object: cb?.toJavaObject())])
   }
 
-  public func getCodecInfo() -> MediaCodecInfo? {
-    self.javaObject.call(method: MediaCodec__method__24, [])
+  open func getCodecInfo() -> MediaCodecInfo? {
+    self.javaObject.call(method: MediaCodec__method__31, [])
   }
 }
 
@@ -182,19 +213,19 @@ open class MediaCodecCallbackProxy: Object, JInterfaceProxy, MediaCodecCallback 
     self.init(obj.toJavaObject()!)
   }
 
-  public func onInputBufferAvailable(codec: MediaCodec?, index: Int32) {
+  open func onInputBufferAvailable(codec: MediaCodec?, index: Int32) {
     self.javaObject.call(method: MediaCodecCallback__method__1, [codec.toJavaParameter(), index.toJavaParameter()])
   }
 
-  public func onOutputBufferAvailable(codec: MediaCodec?, index: Int32, info: MediaCodec.BufferInfo?) {
+  open func onOutputBufferAvailable(codec: MediaCodec?, index: Int32, info: MediaCodec.BufferInfo?) {
     self.javaObject.call(method: MediaCodecCallback__method__2, [codec.toJavaParameter(), index.toJavaParameter(), info.toJavaParameter()])
   }
 
-  public func onError(codec: MediaCodec?, e: MediaCodec.CodecException?) {
+  open func onError(codec: MediaCodec?, e: MediaCodec.CodecException?) {
     self.javaObject.call(method: MediaCodecCallback__method__3, [codec.toJavaParameter(), e.toJavaParameter()])
   }
 
-  public func onOutputFormatChanged(codec: MediaCodec?, format: MediaFormat?) {
+  open func onOutputFormatChanged(codec: MediaCodec?, format: MediaFormat?) {
     self.javaObject.call(method: MediaCodecCallback__method__4, [codec.toJavaParameter(), format.toJavaParameter()])
   }
 }
@@ -294,11 +325,11 @@ open class MediaCodecCryptoInfo: Object {
     super.init(ctor: MediaCodecCryptoInfo__method__0, [])
   }
 
-  public func set(newNumSubSamples: Int32, newNumBytesOfClearData: [Int32], newNumBytesOfEncryptedData: [Int32], newKey: [Int8], newIV: [Int8], newMode: Int32) {
+  open func set(newNumSubSamples: Int32, newNumBytesOfClearData: [Int32], newNumBytesOfEncryptedData: [Int32], newKey: [Int8], newIV: [Int8], newMode: Int32) {
     self.javaObject.call(method: MediaCodecCryptoInfo__method__1, [newNumSubSamples.toJavaParameter(), newNumBytesOfClearData.toJavaParameter(), newNumBytesOfEncryptedData.toJavaParameter(), newKey.toJavaParameter(), newIV.toJavaParameter(), newMode.toJavaParameter()])
   }
 
-  public func setPattern(newPattern: MediaCodec.CryptoInfo.Pattern?) {
+  open func setPattern(newPattern: MediaCodec.CryptoInfo.Pattern?) {
     self.javaObject.call(method: MediaCodecCryptoInfo__method__2, [newPattern.toJavaParameter()])
   }
 
@@ -318,15 +349,15 @@ open class MediaCodecCryptoInfoPattern: Object {
     super.init(ctor: MediaCodecCryptoInfoPattern__method__0, [blocksToEncrypt.toJavaParameter(), blocksToSkip.toJavaParameter()])
   }
 
-  public func set(blocksToEncrypt: Int32, blocksToSkip: Int32) {
+  open func set(blocksToEncrypt: Int32, blocksToSkip: Int32) {
     self.javaObject.call(method: MediaCodecCryptoInfoPattern__method__1, [blocksToEncrypt.toJavaParameter(), blocksToSkip.toJavaParameter()])
   }
 
-  public func getSkipBlocks() -> Int32 {
+  open func getSkipBlocks() -> Int32 {
     self.javaObject.call(method: MediaCodecCryptoInfoPattern__method__2, [])
   }
 
-  public func getEncryptBlocks() -> Int32 {
+  open func getEncryptBlocks() -> Int32 {
     self.javaObject.call(method: MediaCodecCryptoInfoPattern__method__3, [])
   }
 
@@ -358,7 +389,7 @@ open class MediaCodecCryptoException: Object {
     super.init(ctor: MediaCodecCryptoException__method__0, [errorCode.toJavaParameter(), detailMessage.toJavaParameter()])
   }
 
-  public func getErrorCode() -> Int32 {
+  open func getErrorCode() -> Int32 {
     self.javaObject.call(method: MediaCodecCryptoException__method__1, [])
   }
 
@@ -378,19 +409,19 @@ open class MediaCodecCodecException: Object {
 
   public static let ERROR_RECLAIMED: Int32 = MediaCodecCodecException__class.getStatic(field: MediaCodecCodecException__field__1)
 
-  public func isTransient() -> Bool {
+  open func isTransient() -> Bool {
     self.javaObject.call(method: MediaCodecCodecException__method__0, [])
   }
 
-  public func isRecoverable() -> Bool {
+  open func isRecoverable() -> Bool {
     self.javaObject.call(method: MediaCodecCodecException__method__1, [])
   }
 
-  public func getErrorCode() -> Int32 {
+  open func getErrorCode() -> Int32 {
     self.javaObject.call(method: MediaCodecCodecException__method__2, [])
   }
 
-  public func getDiagnosticInfo() -> String {
+  open func getDiagnosticInfo() -> String {
     self.javaObject.call(method: MediaCodecCodecException__method__3, [])
   }
 }
@@ -438,7 +469,7 @@ open class MediaCodecBufferInfo: Object {
     super.init(ctor: MediaCodecBufferInfo__method__0, [])
   }
 
-  public func set(newOffset: Int32, newSize: Int32, newTimeUs: Int64, newFlags: Int32) {
+  open func set(newOffset: Int32, newSize: Int32, newTimeUs: Int64, newFlags: Int32) {
     self.javaObject.call(method: MediaCodecBufferInfo__method__1, [newOffset.toJavaParameter(), newSize.toJavaParameter(), newTimeUs.toJavaParameter(), newFlags.toJavaParameter()])
   }
 
@@ -460,26 +491,33 @@ private let MediaCodec__method__1 = MediaCodec__class.getStaticMethodID(name: "c
 private let MediaCodec__method__2 = MediaCodec__class.getStaticMethodID(name: "createByCodecName", sig: "(Ljava/lang/String;)Landroid/media/MediaCodec;")!
 private let MediaCodec__method__3 = MediaCodec__class.getMethodID(name: "reset", sig: "()V")!
 private let MediaCodec__method__4 = MediaCodec__class.getMethodID(name: "release", sig: "()V")!
-private let MediaCodec__method__5 = MediaCodec__class.getMethodID(name: "start", sig: "()V")!
-private let MediaCodec__method__6 = MediaCodec__class.getMethodID(name: "stop", sig: "()V")!
-private let MediaCodec__method__7 = MediaCodec__class.getMethodID(name: "flush", sig: "()V")!
-private let MediaCodec__method__8 = MediaCodec__class.getMethodID(name: "queueInputBuffer", sig: "(IIIJI)V")!
-private let MediaCodec__method__9 = MediaCodec__class.getMethodID(name: "queueSecureInputBuffer", sig: "(IILandroid/media/MediaCodec$CryptoInfo;JI)V")!
-private let MediaCodec__method__10 = MediaCodec__class.getMethodID(name: "dequeueInputBuffer", sig: "(J)I")!
-private let MediaCodec__method__11 = MediaCodec__class.getMethodID(name: "dequeueOutputBuffer", sig: "(Landroid/media/MediaCodec$BufferInfo;J)I")!
-private let MediaCodec__method__12 = MediaCodec__class.getMethodID(name: "releaseOutputBuffer", sig: "(IZ)V")!
-private let MediaCodec__method__13 = MediaCodec__class.getMethodID(name: "releaseOutputBuffer", sig: "(IJ)V")!
-private let MediaCodec__method__14 = MediaCodec__class.getMethodID(name: "signalEndOfInputStream", sig: "()V")!
-private let MediaCodec__method__15 = MediaCodec__class.getMethodID(name: "getOutputFormat", sig: "()Landroid/media/MediaFormat;")!
-private let MediaCodec__method__16 = MediaCodec__class.getMethodID(name: "getInputFormat", sig: "()Landroid/media/MediaFormat;")!
-private let MediaCodec__method__17 = MediaCodec__class.getMethodID(name: "getOutputFormat", sig: "(I)Landroid/media/MediaFormat;")!
-private let MediaCodec__method__18 = MediaCodec__class.getMethodID(name: "getInputImage", sig: "(I)Landroid/media/Image;")!
-private let MediaCodec__method__19 = MediaCodec__class.getMethodID(name: "getOutputImage", sig: "(I)Landroid/media/Image;")!
-private let MediaCodec__method__20 = MediaCodec__class.getMethodID(name: "setVideoScalingMode", sig: "(I)V")!
-private let MediaCodec__method__21 = MediaCodec__class.getMethodID(name: "getName", sig: "()Ljava/lang/String;")!
-private let MediaCodec__method__22 = MediaCodec__class.getMethodID(name: "setParameters", sig: "(Landroid/os/Bundle;)V")!
-private let MediaCodec__method__23 = MediaCodec__class.getMethodID(name: "setCallback", sig: "(Landroid/media/MediaCodec$Callback;)V")!
-private let MediaCodec__method__24 = MediaCodec__class.getMethodID(name: "getCodecInfo", sig: "()Landroid/media/MediaCodecInfo;")!
+private let MediaCodec__method__5 = MediaCodec__class.getMethodID(name: "configure", sig: "(Landroid/media/MediaFormat;Landroid/view/Surface;Landroid/media/MediaCrypto;I)V")!
+private let MediaCodec__method__6 = MediaCodec__class.getMethodID(name: "setOutputSurface", sig: "(Landroid/view/Surface;)V")!
+private let MediaCodec__method__7 = MediaCodec__class.getStaticMethodID(name: "createPersistentInputSurface", sig: "()Landroid/view/Surface;")!
+private let MediaCodec__method__8 = MediaCodec__class.getMethodID(name: "setInputSurface", sig: "(Landroid/view/Surface;)V")!
+private let MediaCodec__method__9 = MediaCodec__class.getMethodID(name: "createInputSurface", sig: "()Landroid/view/Surface;")!
+private let MediaCodec__method__10 = MediaCodec__class.getMethodID(name: "start", sig: "()V")!
+private let MediaCodec__method__11 = MediaCodec__class.getMethodID(name: "stop", sig: "()V")!
+private let MediaCodec__method__12 = MediaCodec__class.getMethodID(name: "flush", sig: "()V")!
+private let MediaCodec__method__13 = MediaCodec__class.getMethodID(name: "queueInputBuffer", sig: "(IIIJI)V")!
+private let MediaCodec__method__14 = MediaCodec__class.getMethodID(name: "queueSecureInputBuffer", sig: "(IILandroid/media/MediaCodec$CryptoInfo;JI)V")!
+private let MediaCodec__method__15 = MediaCodec__class.getMethodID(name: "dequeueInputBuffer", sig: "(J)I")!
+private let MediaCodec__method__16 = MediaCodec__class.getMethodID(name: "dequeueOutputBuffer", sig: "(Landroid/media/MediaCodec$BufferInfo;J)I")!
+private let MediaCodec__method__17 = MediaCodec__class.getMethodID(name: "releaseOutputBuffer", sig: "(IZ)V")!
+private let MediaCodec__method__18 = MediaCodec__class.getMethodID(name: "releaseOutputBuffer", sig: "(IJ)V")!
+private let MediaCodec__method__19 = MediaCodec__class.getMethodID(name: "signalEndOfInputStream", sig: "()V")!
+private let MediaCodec__method__20 = MediaCodec__class.getMethodID(name: "getOutputFormat", sig: "()Landroid/media/MediaFormat;")!
+private let MediaCodec__method__21 = MediaCodec__class.getMethodID(name: "getInputFormat", sig: "()Landroid/media/MediaFormat;")!
+private let MediaCodec__method__22 = MediaCodec__class.getMethodID(name: "getOutputFormat", sig: "(I)Landroid/media/MediaFormat;")!
+private let MediaCodec__method__23 = MediaCodec__class.getMethodID(name: "getInputBuffer", sig: "(I)Ljava/nio/ByteBuffer;")!
+private let MediaCodec__method__24 = MediaCodec__class.getMethodID(name: "getInputImage", sig: "(I)Landroid/media/Image;")!
+private let MediaCodec__method__25 = MediaCodec__class.getMethodID(name: "getOutputBuffer", sig: "(I)Ljava/nio/ByteBuffer;")!
+private let MediaCodec__method__26 = MediaCodec__class.getMethodID(name: "getOutputImage", sig: "(I)Landroid/media/Image;")!
+private let MediaCodec__method__27 = MediaCodec__class.getMethodID(name: "setVideoScalingMode", sig: "(I)V")!
+private let MediaCodec__method__28 = MediaCodec__class.getMethodID(name: "getName", sig: "()Ljava/lang/String;")!
+private let MediaCodec__method__29 = MediaCodec__class.getMethodID(name: "setParameters", sig: "(Landroid/os/Bundle;)V")!
+private let MediaCodec__method__30 = MediaCodec__class.getMethodID(name: "setCallback", sig: "(Landroid/media/MediaCodec$Callback;)V")!
+private let MediaCodec__method__31 = MediaCodec__class.getMethodID(name: "getCodecInfo", sig: "()Landroid/media/MediaCodecInfo;")!
 
 private let MediaCodec__field__0 = MediaCodec__class.getStaticFieldID(name: "BUFFER_FLAG_CODEC_CONFIG", sig: "I")!
 private let MediaCodec__field__1 = MediaCodec__class.getStaticFieldID(name: "BUFFER_FLAG_END_OF_STREAM", sig: "I")!

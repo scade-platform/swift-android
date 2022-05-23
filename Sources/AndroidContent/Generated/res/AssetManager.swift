@@ -13,7 +13,7 @@ open class AssetManager: Object {
 
   public static let ACCESS_UNKNOWN: Int32 = AssetManager__class.getStatic(field: AssetManager__field__3)
 
-  public func close() {
+  open func close() {
     self.javaObject.call(method: AssetManager__method__0, [])
   }
 

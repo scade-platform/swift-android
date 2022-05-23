@@ -7,11 +7,11 @@ open class MidiInputPort: Object, MidiReceiver {
     self.javaObject.call(method: MidiInputPort__method__0, [])
   }
 
-  public func onSend(msg: [Int8], offset: Int32, count: Int32, timestamp: Int64) {
+  open func onSend(msg: [Int8], offset: Int32, count: Int32, timestamp: Int64) {
     self.javaObject.call(method: MidiInputPort__method__1, [msg.toJavaParameter(), offset.toJavaParameter(), count.toJavaParameter(), timestamp.toJavaParameter()])
   }
 
-  public func close() {
+  open func close() {
     self.javaObject.call(method: MidiInputPort__method__2, [])
   }
 }

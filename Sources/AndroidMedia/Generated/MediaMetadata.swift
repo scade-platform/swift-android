@@ -1,5 +1,6 @@
 
 
+import AndroidGraphics
 import AndroidOS
 import Java
 
@@ -60,50 +61,54 @@ open class MediaMetadata: Object, Parcelable {
 
   public static let METADATA_KEY_YEAR: String = MediaMetadata__class.getStatic(field: MediaMetadata__field__26)
 
-  public func containsKey(key: String) -> Bool {
+  open func containsKey(key: String) -> Bool {
     self.javaObject.call(method: MediaMetadata__method__0, [key.toJavaParameter()])
   }
 
-  public func getText(key: String) -> String? {
+  open func getText(key: String) -> String? {
     self.javaObject.call(method: MediaMetadata__method__1, [key.toJavaParameter()])
   }
 
-  public func getString(key: String) -> String {
+  open func getString(key: String) -> String {
     self.javaObject.call(method: MediaMetadata__method__2, [key.toJavaParameter()])
   }
 
-  public func getLong(key: String) -> Int64 {
+  open func getLong(key: String) -> Int64 {
     self.javaObject.call(method: MediaMetadata__method__3, [key.toJavaParameter()])
   }
 
-  public func getRating(key: String) -> Rating? {
+  open func getRating(key: String) -> Rating? {
     self.javaObject.call(method: MediaMetadata__method__4, [key.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
-    self.javaObject.call(method: MediaMetadata__method__5, [])
+  open func getBitmap(key: String) -> Bitmap? {
+    self.javaObject.call(method: MediaMetadata__method__5, [key.toJavaParameter()])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
-    self.javaObject.call(method: MediaMetadata__method__6, [dest.toJavaParameter(), flags.toJavaParameter()])
+  open func describeContents() -> Int32 {
+    self.javaObject.call(method: MediaMetadata__method__6, [])
   }
 
-  public func size() -> Int32 {
-    self.javaObject.call(method: MediaMetadata__method__7, [])
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
+    self.javaObject.call(method: MediaMetadata__method__7, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func keySet<R>() -> R? where R: Java.Set, R.E == String {
+  open func size() -> Int32 {
     self.javaObject.call(method: MediaMetadata__method__8, [])
   }
 
-  public func getDescription() -> MediaDescription? {
+  open func keySet<R>() -> R? where R: Java.Set, R.E == String {
     self.javaObject.call(method: MediaMetadata__method__9, [])
+  }
+
+  open func getDescription() -> MediaDescription? {
+    self.javaObject.call(method: MediaMetadata__method__10, [])
   }
 }
 
 extension MediaMetadata {
-  public func keySet() -> Java.SetProxy<String>? {
-    self.javaObject.call(method: MediaMetadata__method__8, [])
+  open func keySet() -> Java.SetProxy<String>? {
+    self.javaObject.call(method: MediaMetadata__method__9, [])
   }
 }
 
@@ -118,24 +123,28 @@ open class MediaMetadataBuilder: Object {
     super.init(ctor: MediaMetadataBuilder__method__1, [source.toJavaParameter()])
   }
 
-  public func putText(key: String, value: String?) -> MediaMetadata.Builder? {
+  open func putText(key: String, value: String?) -> MediaMetadata.Builder? {
     self.javaObject.call(method: MediaMetadataBuilder__method__2, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putString(key: String, value: String) -> MediaMetadata.Builder? {
+  open func putString(key: String, value: String) -> MediaMetadata.Builder? {
     self.javaObject.call(method: MediaMetadataBuilder__method__3, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putLong(key: String, value: Int64) -> MediaMetadata.Builder? {
+  open func putLong(key: String, value: Int64) -> MediaMetadata.Builder? {
     self.javaObject.call(method: MediaMetadataBuilder__method__4, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putRating(key: String, value: Rating?) -> MediaMetadata.Builder? {
+  open func putRating(key: String, value: Rating?) -> MediaMetadata.Builder? {
     self.javaObject.call(method: MediaMetadataBuilder__method__5, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func build() -> MediaMetadata? {
-    self.javaObject.call(method: MediaMetadataBuilder__method__6, [])
+  open func putBitmap(key: String, value: Bitmap?) -> MediaMetadata.Builder? {
+    self.javaObject.call(method: MediaMetadataBuilder__method__6, [key.toJavaParameter(), value.toJavaParameter()])
+  }
+
+  open func build() -> MediaMetadata? {
+    self.javaObject.call(method: MediaMetadataBuilder__method__7, [])
   }
 
   public required init(_ obj: JavaObject) {
@@ -156,11 +165,12 @@ private let MediaMetadata__method__1 = MediaMetadata__class.getMethodID(name: "g
 private let MediaMetadata__method__2 = MediaMetadata__class.getMethodID(name: "getString", sig: "(Ljava/lang/String;)Ljava/lang/String;")!
 private let MediaMetadata__method__3 = MediaMetadata__class.getMethodID(name: "getLong", sig: "(Ljava/lang/String;)J")!
 private let MediaMetadata__method__4 = MediaMetadata__class.getMethodID(name: "getRating", sig: "(Ljava/lang/String;)Landroid/media/Rating;")!
-private let MediaMetadata__method__5 = MediaMetadata__class.getMethodID(name: "describeContents", sig: "()I")!
-private let MediaMetadata__method__6 = MediaMetadata__class.getMethodID(name: "writeToParcel", sig: "(Landroid/os/Parcel;I)V")!
-private let MediaMetadata__method__7 = MediaMetadata__class.getMethodID(name: "size", sig: "()I")!
-private let MediaMetadata__method__8 = MediaMetadata__class.getMethodID(name: "keySet", sig: "()Ljava/util/Set;")!
-private let MediaMetadata__method__9 = MediaMetadata__class.getMethodID(name: "getDescription", sig: "()Landroid/media/MediaDescription;")!
+private let MediaMetadata__method__5 = MediaMetadata__class.getMethodID(name: "getBitmap", sig: "(Ljava/lang/String;)Landroid/graphics/Bitmap;")!
+private let MediaMetadata__method__6 = MediaMetadata__class.getMethodID(name: "describeContents", sig: "()I")!
+private let MediaMetadata__method__7 = MediaMetadata__class.getMethodID(name: "writeToParcel", sig: "(Landroid/os/Parcel;I)V")!
+private let MediaMetadata__method__8 = MediaMetadata__class.getMethodID(name: "size", sig: "()I")!
+private let MediaMetadata__method__9 = MediaMetadata__class.getMethodID(name: "keySet", sig: "()Ljava/util/Set;")!
+private let MediaMetadata__method__10 = MediaMetadata__class.getMethodID(name: "getDescription", sig: "()Landroid/media/MediaDescription;")!
 
 private let MediaMetadata__field__0 = MediaMetadata__class.getStaticFieldID(name: "METADATA_KEY_ALBUM", sig: "Ljava/lang/String;")!
 private let MediaMetadata__field__1 = MediaMetadata__class.getStaticFieldID(name: "METADATA_KEY_ALBUM_ART", sig: "Ljava/lang/String;")!
@@ -200,4 +210,5 @@ private let MediaMetadataBuilder__method__2 = MediaMetadataBuilder__class.getMet
 private let MediaMetadataBuilder__method__3 = MediaMetadataBuilder__class.getMethodID(name: "putString", sig: "(Ljava/lang/String;Ljava/lang/String;)Landroid/media/MediaMetadata$Builder;")!
 private let MediaMetadataBuilder__method__4 = MediaMetadataBuilder__class.getMethodID(name: "putLong", sig: "(Ljava/lang/String;J)Landroid/media/MediaMetadata$Builder;")!
 private let MediaMetadataBuilder__method__5 = MediaMetadataBuilder__class.getMethodID(name: "putRating", sig: "(Ljava/lang/String;Landroid/media/Rating;)Landroid/media/MediaMetadata$Builder;")!
-private let MediaMetadataBuilder__method__6 = MediaMetadataBuilder__class.getMethodID(name: "build", sig: "()Landroid/media/MediaMetadata;")!
+private let MediaMetadataBuilder__method__6 = MediaMetadataBuilder__class.getMethodID(name: "putBitmap", sig: "(Ljava/lang/String;Landroid/graphics/Bitmap;)Landroid/media/MediaMetadata$Builder;")!
+private let MediaMetadataBuilder__method__7 = MediaMetadataBuilder__class.getMethodID(name: "build", sig: "()Landroid/media/MediaMetadata;")!

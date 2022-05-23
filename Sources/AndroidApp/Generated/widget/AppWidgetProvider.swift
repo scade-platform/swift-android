@@ -9,31 +9,31 @@ open class AppWidgetProvider: Object, BroadcastReceiver {
     super.init(ctor: AppWidgetProvider__method__0, [])
   }
 
-  public func onReceive(context: Context?, intent: Intent?) {
+  open func onReceive(context: Context?, intent: Intent?) {
     self.javaObject.call(method: AppWidgetProvider__method__1, [JavaParameter(object: context?.toJavaObject()), intent.toJavaParameter()])
   }
 
-  public func onUpdate(context: Context?, appWidgetManager: AppWidgetManager?, appWidgetIds: [Int32]) {
+  open func onUpdate(context: Context?, appWidgetManager: AppWidgetManager?, appWidgetIds: [Int32]) {
     self.javaObject.call(method: AppWidgetProvider__method__2, [JavaParameter(object: context?.toJavaObject()), appWidgetManager.toJavaParameter(), appWidgetIds.toJavaParameter()])
   }
 
-  public func onAppWidgetOptionsChanged(context: Context?, appWidgetManager: AppWidgetManager?, appWidgetId: Int32, newOptions: Bundle?) {
+  open func onAppWidgetOptionsChanged(context: Context?, appWidgetManager: AppWidgetManager?, appWidgetId: Int32, newOptions: Bundle?) {
     self.javaObject.call(method: AppWidgetProvider__method__3, [JavaParameter(object: context?.toJavaObject()), appWidgetManager.toJavaParameter(), appWidgetId.toJavaParameter(), newOptions.toJavaParameter()])
   }
 
-  public func onDeleted(context: Context?, appWidgetIds: [Int32]) {
+  open func onDeleted(context: Context?, appWidgetIds: [Int32]) {
     self.javaObject.call(method: AppWidgetProvider__method__4, [JavaParameter(object: context?.toJavaObject()), appWidgetIds.toJavaParameter()])
   }
 
-  public func onEnabled(context: Context?) {
+  open func onEnabled(context: Context?) {
     self.javaObject.call(method: AppWidgetProvider__method__5, [JavaParameter(object: context?.toJavaObject())])
   }
 
-  public func onDisabled(context: Context?) {
+  open func onDisabled(context: Context?) {
     self.javaObject.call(method: AppWidgetProvider__method__6, [JavaParameter(object: context?.toJavaObject())])
   }
 
-  public func onRestored(context: Context?, oldWidgetIds: [Int32], newWidgetIds: [Int32]) {
+  open func onRestored(context: Context?, oldWidgetIds: [Int32], newWidgetIds: [Int32]) {
     self.javaObject.call(method: AppWidgetProvider__method__7, [JavaParameter(object: context?.toJavaObject()), oldWidgetIds.toJavaParameter(), newWidgetIds.toJavaParameter()])
   }
 

@@ -21,11 +21,11 @@ open class FeatureGroupInfo: Object, Parcelable {
     super.init(ctor: FeatureGroupInfo__method__1, [other.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: FeatureGroupInfo__method__2, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: FeatureGroupInfo__method__3, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 

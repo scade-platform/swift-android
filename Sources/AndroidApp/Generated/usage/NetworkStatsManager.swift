@@ -6,35 +6,35 @@ open class NetworkStatsManager: Object {
   public typealias UsageCallback = AndroidApp.NetworkStatsManagerUsageCallback
   public typealias UsageCallbackProxy = AndroidApp.NetworkStatsManagerUsageCallbackProxy
 
-  public func querySummaryForDevice(networkType: Int32, subscriberId: String, startTime: Int64, endTime: Int64) -> NetworkStats.Bucket? {
+  open func querySummaryForDevice(networkType: Int32, subscriberId: String, startTime: Int64, endTime: Int64) -> NetworkStats.Bucket? {
     self.javaObject.call(method: NetworkStatsManager__method__0, [networkType.toJavaParameter(), subscriberId.toJavaParameter(), startTime.toJavaParameter(), endTime.toJavaParameter()])
   }
 
-  public func querySummaryForUser(networkType: Int32, subscriberId: String, startTime: Int64, endTime: Int64) -> NetworkStats.Bucket? {
+  open func querySummaryForUser(networkType: Int32, subscriberId: String, startTime: Int64, endTime: Int64) -> NetworkStats.Bucket? {
     self.javaObject.call(method: NetworkStatsManager__method__1, [networkType.toJavaParameter(), subscriberId.toJavaParameter(), startTime.toJavaParameter(), endTime.toJavaParameter()])
   }
 
-  public func querySummary(networkType: Int32, subscriberId: String, startTime: Int64, endTime: Int64) -> NetworkStats? {
+  open func querySummary(networkType: Int32, subscriberId: String, startTime: Int64, endTime: Int64) -> NetworkStats? {
     self.javaObject.call(method: NetworkStatsManager__method__2, [networkType.toJavaParameter(), subscriberId.toJavaParameter(), startTime.toJavaParameter(), endTime.toJavaParameter()])
   }
 
-  public func queryDetailsForUid(networkType: Int32, subscriberId: String, startTime: Int64, endTime: Int64, uid: Int32) -> NetworkStats? {
+  open func queryDetailsForUid(networkType: Int32, subscriberId: String, startTime: Int64, endTime: Int64, uid: Int32) -> NetworkStats? {
     self.javaObject.call(method: NetworkStatsManager__method__3, [networkType.toJavaParameter(), subscriberId.toJavaParameter(), startTime.toJavaParameter(), endTime.toJavaParameter(), uid.toJavaParameter()])
   }
 
-  public func queryDetailsForUidTag(networkType: Int32, subscriberId: String, startTime: Int64, endTime: Int64, uid: Int32, tag: Int32) -> NetworkStats? {
+  open func queryDetailsForUidTag(networkType: Int32, subscriberId: String, startTime: Int64, endTime: Int64, uid: Int32, tag: Int32) -> NetworkStats? {
     self.javaObject.call(method: NetworkStatsManager__method__4, [networkType.toJavaParameter(), subscriberId.toJavaParameter(), startTime.toJavaParameter(), endTime.toJavaParameter(), uid.toJavaParameter(), tag.toJavaParameter()])
   }
 
-  public func queryDetails(networkType: Int32, subscriberId: String, startTime: Int64, endTime: Int64) -> NetworkStats? {
+  open func queryDetails(networkType: Int32, subscriberId: String, startTime: Int64, endTime: Int64) -> NetworkStats? {
     self.javaObject.call(method: NetworkStatsManager__method__5, [networkType.toJavaParameter(), subscriberId.toJavaParameter(), startTime.toJavaParameter(), endTime.toJavaParameter()])
   }
 
-  public func registerUsageCallback(networkType: Int32, subscriberId: String, thresholdBytes: Int64, callback: NetworkStatsManager.UsageCallback?) {
+  open func registerUsageCallback(networkType: Int32, subscriberId: String, thresholdBytes: Int64, callback: NetworkStatsManager.UsageCallback?) {
     self.javaObject.call(method: NetworkStatsManager__method__6, [networkType.toJavaParameter(), subscriberId.toJavaParameter(), thresholdBytes.toJavaParameter(), JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func unregisterUsageCallback(callback: NetworkStatsManager.UsageCallback?) {
+  open func unregisterUsageCallback(callback: NetworkStatsManager.UsageCallback?) {
     self.javaObject.call(method: NetworkStatsManager__method__7, [JavaParameter(object: callback?.toJavaObject())])
   }
 }
@@ -62,7 +62,7 @@ open class NetworkStatsManagerUsageCallbackProxy: Object, JInterfaceProxy, Netwo
     self.init(obj.toJavaObject()!)
   }
 
-  public func onThresholdReached(networkType: Int32, subscriberId: String) {
+  open func onThresholdReached(networkType: Int32, subscriberId: String) {
     self.javaObject.call(method: NetworkStatsManagerUsageCallback__method__1, [networkType.toJavaParameter(), subscriberId.toJavaParameter()])
   }
 }

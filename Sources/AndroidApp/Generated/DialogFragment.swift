@@ -17,59 +17,59 @@ open class DialogFragment: Fragment, DialogInterface.OnCancelListener, DialogInt
     super.init(ctor: DialogFragment__method__0, [])
   }
 
-  public func setStyle(style: Int32, theme: Int32) {
+  open func setStyle(style: Int32, theme: Int32) {
     self.javaObject.call(method: DialogFragment__method__1, [style.toJavaParameter(), theme.toJavaParameter()])
   }
 
-  public func show(manager: FragmentManager?, tag: String) {
+  open func show(manager: FragmentManager?, tag: String) {
     self.javaObject.call(method: DialogFragment__method__2, [JavaParameter(object: manager?.toJavaObject()), tag.toJavaParameter()])
   }
 
-  public func show(transaction: FragmentTransaction?, tag: String) -> Int32 {
+  open func show(transaction: FragmentTransaction?, tag: String) -> Int32 {
     self.javaObject.call(method: DialogFragment__method__3, [JavaParameter(object: transaction?.toJavaObject()), tag.toJavaParameter()])
   }
 
-  public func dismiss() {
+  open func dismiss() {
     self.javaObject.call(method: DialogFragment__method__4, [])
   }
 
-  public func dismissAllowingStateLoss() {
+  open func dismissAllowingStateLoss() {
     self.javaObject.call(method: DialogFragment__method__5, [])
   }
 
-  public func getDialog() -> Dialog? {
+  open func getDialog() -> Dialog? {
     self.javaObject.call(method: DialogFragment__method__6, [])
   }
 
-  public func getTheme() -> Int32 {
+  open func getTheme() -> Int32 {
     self.javaObject.call(method: DialogFragment__method__7, [])
   }
 
-  public func setCancelable(cancelable: Bool) {
+  open func setCancelable(cancelable: Bool) {
     self.javaObject.call(method: DialogFragment__method__8, [cancelable.toJavaParameter()])
   }
 
-  public func isCancelable() -> Bool {
+  open func isCancelable() -> Bool {
     self.javaObject.call(method: DialogFragment__method__9, [])
   }
 
-  public func setShowsDialog(showsDialog: Bool) {
+  open func setShowsDialog(showsDialog: Bool) {
     self.javaObject.call(method: DialogFragment__method__10, [showsDialog.toJavaParameter()])
   }
 
-  public func getShowsDialog() -> Bool {
+  open func getShowsDialog() -> Bool {
     self.javaObject.call(method: DialogFragment__method__11, [])
   }
 
-  public func onCreateDialog(savedInstanceState: Bundle?) -> Dialog? {
+  open func onCreateDialog(savedInstanceState: Bundle?) -> Dialog? {
     self.javaObject.call(method: DialogFragment__method__12, [savedInstanceState.toJavaParameter()])
   }
 
-  public func onCancel(dialog: DialogInterface?) {
+  open func onCancel(dialog: DialogInterface?) {
     self.javaObject.call(method: DialogFragment__method__13, [JavaParameter(object: dialog?.toJavaObject())])
   }
 
-  public func onDismiss(dialog: DialogInterface?) {
+  open func onDismiss(dialog: DialogInterface?) {
     self.javaObject.call(method: DialogFragment__method__14, [JavaParameter(object: dialog?.toJavaObject())])
   }
 

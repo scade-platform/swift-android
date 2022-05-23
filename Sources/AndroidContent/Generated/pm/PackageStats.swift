@@ -97,11 +97,11 @@ open class PackageStats: Object, Parcelable {
     super.init(ctor: PackageStats__method__2, [pStats.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: PackageStats__method__3, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: PackageStats__method__4, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 

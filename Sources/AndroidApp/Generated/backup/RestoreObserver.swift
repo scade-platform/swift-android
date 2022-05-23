@@ -2,13 +2,7 @@
 
 import Java
 
-public protocol RestoreObserver where Self: Object {
-  func restoreStarting(numPackages: Int32) -> Void
-
-  func onUpdate(nowBeingRestored: Int32, currentPackage: String) -> Void
-
-  func restoreFinished(error: Int32) -> Void
-}
+public protocol RestoreObserver where Self: Object {}
 
 public extension RestoreObserver {
   func box() -> RestoreObserverProxy {

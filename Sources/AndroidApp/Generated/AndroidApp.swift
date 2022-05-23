@@ -81,7 +81,6 @@ public func AndroidApp_init() -> Void {
   registerJavaClass(ProgressDialog.self, fqn: "android/app/ProgressDialog")    
   registerJavaClass(RemoteInput.self, fqn: "android/app/RemoteInput")    
   registerJavaClass(RemoteInputBuilder.self, fqn: "android/app/RemoteInput$Builder")    
-  registerJavaClass(SearchManager.self, fqn: "android/app/SearchManager")    
   registerJavaClass(SearchableInfo.self, fqn: "android/app/SearchableInfo")    
   registerJavaClass(TabActivity.self, fqn: "android/app/TabActivity")    
   registerJavaClass(TaskStackBuilder.self, fqn: "android/app/TaskStackBuilder")    

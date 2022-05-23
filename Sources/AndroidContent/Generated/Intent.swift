@@ -568,7 +568,7 @@ open class Intent: Object, Parcelable {
     Intent__class.callStatic(method: Intent__method__5, [target.toJavaParameter(), title.toJavaParameter(), sender.toJavaParameter()])
   }
 
-  public func cloneFilter() -> Intent? {
+  open func cloneFilter() -> Intent? {
     self.javaObject.call(method: Intent__method__6, [])
   }
 
@@ -584,421 +584,413 @@ open class Intent: Object, Parcelable {
     Intent__class.callStatic(method: Intent__method__9, [mainActivity.toJavaParameter()])
   }
 
-  public static func getIntent(uri: String) -> Intent? {
-    Intent__class.callStatic(method: Intent__method__10, [uri.toJavaParameter()])
-  }
-
   public static func parseUri(uri: String, flags: Int32) -> Intent? {
-    Intent__class.callStatic(method: Intent__method__11, [uri.toJavaParameter(), flags.toJavaParameter()])
+    Intent__class.callStatic(method: Intent__method__10, [uri.toJavaParameter(), flags.toJavaParameter()])
   }
 
   public static func getIntentOld(uri: String) -> Intent? {
-    Intent__class.callStatic(method: Intent__method__12, [uri.toJavaParameter()])
+    Intent__class.callStatic(method: Intent__method__11, [uri.toJavaParameter()])
   }
 
-  public func getAction() -> String {
+  open func getAction() -> String {
+    self.javaObject.call(method: Intent__method__12, [])
+  }
+
+  open func getDataString() -> String {
     self.javaObject.call(method: Intent__method__13, [])
   }
 
-  public func getDataString() -> String {
+  open func getScheme() -> String {
     self.javaObject.call(method: Intent__method__14, [])
   }
 
-  public func getScheme() -> String {
+  open func getType() -> String {
     self.javaObject.call(method: Intent__method__15, [])
   }
 
-  public func getType() -> String {
-    self.javaObject.call(method: Intent__method__16, [])
+  open func resolveType(context: Context?) -> String {
+    self.javaObject.call(method: Intent__method__16, [JavaParameter(object: context?.toJavaObject())])
   }
 
-  public func resolveType(context: Context?) -> String {
-    self.javaObject.call(method: Intent__method__17, [JavaParameter(object: context?.toJavaObject())])
+  open func resolveType(resolver: ContentResolver?) -> String {
+    self.javaObject.call(method: Intent__method__17, [JavaParameter(object: resolver?.toJavaObject())])
   }
 
-  public func resolveType(resolver: ContentResolver?) -> String {
+  open func resolveTypeIfNeeded(resolver: ContentResolver?) -> String {
     self.javaObject.call(method: Intent__method__18, [JavaParameter(object: resolver?.toJavaObject())])
   }
 
-  public func resolveTypeIfNeeded(resolver: ContentResolver?) -> String {
-    self.javaObject.call(method: Intent__method__19, [JavaParameter(object: resolver?.toJavaObject())])
+  open func hasCategory(category: String) -> Bool {
+    self.javaObject.call(method: Intent__method__19, [category.toJavaParameter()])
   }
 
-  public func hasCategory(category: String) -> Bool {
-    self.javaObject.call(method: Intent__method__20, [category.toJavaParameter()])
+  open func getCategories<R>() -> R? where R: Java.Set, R.E == String {
+    self.javaObject.call(method: Intent__method__20, [])
   }
 
-  public func getCategories<R>() -> R? where R: Java.Set, R.E == String {
+  open func getSelector() -> Intent? {
     self.javaObject.call(method: Intent__method__21, [])
   }
 
-  public func getSelector() -> Intent? {
+  open func getClipData() -> ClipData? {
     self.javaObject.call(method: Intent__method__22, [])
   }
 
-  public func getClipData() -> ClipData? {
-    self.javaObject.call(method: Intent__method__23, [])
+  open func hasExtra(name: String) -> Bool {
+    self.javaObject.call(method: Intent__method__23, [name.toJavaParameter()])
   }
 
-  public func hasExtra(name: String) -> Bool {
-    self.javaObject.call(method: Intent__method__24, [name.toJavaParameter()])
+  open func hasFileDescriptors() -> Bool {
+    self.javaObject.call(method: Intent__method__24, [])
   }
 
-  public func hasFileDescriptors() -> Bool {
-    self.javaObject.call(method: Intent__method__25, [])
+  open func getBooleanExtra(name: String, defaultValue: Bool) -> Bool {
+    self.javaObject.call(method: Intent__method__25, [name.toJavaParameter(), defaultValue.toJavaParameter()])
   }
 
-  public func getBooleanExtra(name: String, defaultValue: Bool) -> Bool {
+  open func getByteExtra(name: String, defaultValue: Int8) -> Int8 {
     self.javaObject.call(method: Intent__method__26, [name.toJavaParameter(), defaultValue.toJavaParameter()])
   }
 
-  public func getByteExtra(name: String, defaultValue: Int8) -> Int8 {
+  open func getShortExtra(name: String, defaultValue: Int16) -> Int16 {
     self.javaObject.call(method: Intent__method__27, [name.toJavaParameter(), defaultValue.toJavaParameter()])
   }
 
-  public func getShortExtra(name: String, defaultValue: Int16) -> Int16 {
+  open func getCharExtra(name: String, defaultValue: UInt16) -> UInt16 {
     self.javaObject.call(method: Intent__method__28, [name.toJavaParameter(), defaultValue.toJavaParameter()])
   }
 
-  public func getCharExtra(name: String, defaultValue: UInt16) -> UInt16 {
+  open func getIntExtra(name: String, defaultValue: Int32) -> Int32 {
     self.javaObject.call(method: Intent__method__29, [name.toJavaParameter(), defaultValue.toJavaParameter()])
   }
 
-  public func getIntExtra(name: String, defaultValue: Int32) -> Int32 {
+  open func getLongExtra(name: String, defaultValue: Int64) -> Int64 {
     self.javaObject.call(method: Intent__method__30, [name.toJavaParameter(), defaultValue.toJavaParameter()])
   }
 
-  public func getLongExtra(name: String, defaultValue: Int64) -> Int64 {
+  open func getFloatExtra(name: String, defaultValue: Float) -> Float {
     self.javaObject.call(method: Intent__method__31, [name.toJavaParameter(), defaultValue.toJavaParameter()])
   }
 
-  public func getFloatExtra(name: String, defaultValue: Float) -> Float {
+  open func getDoubleExtra(name: String, defaultValue: Double) -> Double {
     self.javaObject.call(method: Intent__method__32, [name.toJavaParameter(), defaultValue.toJavaParameter()])
   }
 
-  public func getDoubleExtra(name: String, defaultValue: Double) -> Double {
-    self.javaObject.call(method: Intent__method__33, [name.toJavaParameter(), defaultValue.toJavaParameter()])
+  open func getStringExtra(name: String) -> String {
+    self.javaObject.call(method: Intent__method__33, [name.toJavaParameter()])
   }
 
-  public func getStringExtra(name: String) -> String {
+  open func getCharSequenceExtra(name: String) -> String? {
     self.javaObject.call(method: Intent__method__34, [name.toJavaParameter()])
   }
 
-  public func getCharSequenceExtra(name: String) -> String? {
+  open func getParcelableExtra<T>(name: String) -> T? where T: Parcelable {
     self.javaObject.call(method: Intent__method__35, [name.toJavaParameter()])
   }
 
-  public func getParcelableExtra<T>(name: String) -> T? where T: Parcelable {
-    self.javaObject.call(method: Intent__method__36, [name.toJavaParameter()])
-  }
-
-  public func getParcelableArrayExtra(name: String) -> [Parcelable?] {
-    let res = self.javaObject.call(method: Intent__method__37, [name.toJavaParameter()]) as [Object?]
+  open func getParcelableArrayExtra(name: String) -> [Parcelable?] {
+    let res = self.javaObject.call(method: Intent__method__36, [name.toJavaParameter()]) as [Object?]
     return cast(res, to: ParcelableProxy.self)
   }
 
-  public func getParcelableArrayListExtra<T>(name: String) -> ArrayList<T>? where T: Parcelable {
+  open func getParcelableArrayListExtra<T>(name: String) -> ArrayList<T>? where T: Parcelable {
+    self.javaObject.call(method: Intent__method__37, [name.toJavaParameter()])
+  }
+
+  open func getIntegerArrayListExtra(name: String) -> ArrayList<Int32.PrimitiveType>? {
     self.javaObject.call(method: Intent__method__38, [name.toJavaParameter()])
   }
 
-  public func getIntegerArrayListExtra(name: String) -> ArrayList<Int32.PrimitiveType>? {
+  open func getStringArrayListExtra(name: String) -> ArrayList<String>? {
     self.javaObject.call(method: Intent__method__39, [name.toJavaParameter()])
   }
 
-  public func getStringArrayListExtra(name: String) -> ArrayList<String>? {
+  open func getCharSequenceArrayListExtra(name: String) -> ArrayList<String>? {
     self.javaObject.call(method: Intent__method__40, [name.toJavaParameter()])
   }
 
-  public func getCharSequenceArrayListExtra(name: String) -> ArrayList<String>? {
+  open func getBooleanArrayExtra(name: String) -> [Bool] {
     self.javaObject.call(method: Intent__method__41, [name.toJavaParameter()])
   }
 
-  public func getBooleanArrayExtra(name: String) -> [Bool] {
+  open func getByteArrayExtra(name: String) -> [Int8] {
     self.javaObject.call(method: Intent__method__42, [name.toJavaParameter()])
   }
 
-  public func getByteArrayExtra(name: String) -> [Int8] {
+  open func getShortArrayExtra(name: String) -> [Int16] {
     self.javaObject.call(method: Intent__method__43, [name.toJavaParameter()])
   }
 
-  public func getShortArrayExtra(name: String) -> [Int16] {
+  open func getCharArrayExtra(name: String) -> [UInt16] {
     self.javaObject.call(method: Intent__method__44, [name.toJavaParameter()])
   }
 
-  public func getCharArrayExtra(name: String) -> [UInt16] {
+  open func getIntArrayExtra(name: String) -> [Int32] {
     self.javaObject.call(method: Intent__method__45, [name.toJavaParameter()])
   }
 
-  public func getIntArrayExtra(name: String) -> [Int32] {
+  open func getLongArrayExtra(name: String) -> [Int64] {
     self.javaObject.call(method: Intent__method__46, [name.toJavaParameter()])
   }
 
-  public func getLongArrayExtra(name: String) -> [Int64] {
+  open func getFloatArrayExtra(name: String) -> [Float] {
     self.javaObject.call(method: Intent__method__47, [name.toJavaParameter()])
   }
 
-  public func getFloatArrayExtra(name: String) -> [Float] {
+  open func getDoubleArrayExtra(name: String) -> [Double] {
     self.javaObject.call(method: Intent__method__48, [name.toJavaParameter()])
   }
 
-  public func getDoubleArrayExtra(name: String) -> [Double] {
+  open func getStringArrayExtra(name: String) -> [String] {
     self.javaObject.call(method: Intent__method__49, [name.toJavaParameter()])
   }
 
-  public func getStringArrayExtra(name: String) -> [String] {
+  open func getCharSequenceArrayExtra(name: String) -> [String?] {
     self.javaObject.call(method: Intent__method__50, [name.toJavaParameter()])
   }
 
-  public func getCharSequenceArrayExtra(name: String) -> [String?] {
+  open func getBundleExtra(name: String) -> Bundle? {
     self.javaObject.call(method: Intent__method__51, [name.toJavaParameter()])
   }
 
-  public func getBundleExtra(name: String) -> Bundle? {
-    self.javaObject.call(method: Intent__method__52, [name.toJavaParameter()])
+  open func getExtras() -> Bundle? {
+    self.javaObject.call(method: Intent__method__52, [])
   }
 
-  public func getExtras() -> Bundle? {
+  open func getFlags() -> Int32 {
     self.javaObject.call(method: Intent__method__53, [])
   }
 
-  public func getFlags() -> Int32 {
+  open func getPackage() -> String {
     self.javaObject.call(method: Intent__method__54, [])
   }
 
-  public func getPackage() -> String {
+  open func getComponent() -> ComponentName? {
     self.javaObject.call(method: Intent__method__55, [])
   }
 
-  public func getComponent() -> ComponentName? {
-    self.javaObject.call(method: Intent__method__56, [])
+  open func resolveActivity(pm: PackageManager?) -> ComponentName? {
+    self.javaObject.call(method: Intent__method__56, [JavaParameter(object: pm?.toJavaObject())])
   }
 
-  public func resolveActivity(pm: PackageManager?) -> ComponentName? {
-    self.javaObject.call(method: Intent__method__57, [JavaParameter(object: pm?.toJavaObject())])
+  open func resolveActivityInfo(pm: PackageManager?, flags: Int32) -> ActivityInfo? {
+    self.javaObject.call(method: Intent__method__57, [JavaParameter(object: pm?.toJavaObject()), flags.toJavaParameter()])
   }
 
-  public func resolveActivityInfo(pm: PackageManager?, flags: Int32) -> ActivityInfo? {
-    self.javaObject.call(method: Intent__method__58, [JavaParameter(object: pm?.toJavaObject()), flags.toJavaParameter()])
+  open func setAction(action: String) -> Intent? {
+    self.javaObject.call(method: Intent__method__58, [action.toJavaParameter()])
   }
 
-  public func setAction(action: String) -> Intent? {
-    self.javaObject.call(method: Intent__method__59, [action.toJavaParameter()])
+  open func setType(type: String) -> Intent? {
+    self.javaObject.call(method: Intent__method__59, [type.toJavaParameter()])
   }
 
-  public func setType(_type: String) -> Intent? {
-    self.javaObject.call(method: Intent__method__60, [_type.toJavaParameter()])
+  open func setTypeAndNormalize(type: String) -> Intent? {
+    self.javaObject.call(method: Intent__method__60, [type.toJavaParameter()])
   }
 
-  public func setTypeAndNormalize(_type: String) -> Intent? {
-    self.javaObject.call(method: Intent__method__61, [_type.toJavaParameter()])
+  open func addCategory(category: String) -> Intent? {
+    self.javaObject.call(method: Intent__method__61, [category.toJavaParameter()])
   }
 
-  public func addCategory(category: String) -> Intent? {
+  open func removeCategory(category: String) {
     self.javaObject.call(method: Intent__method__62, [category.toJavaParameter()])
   }
 
-  public func removeCategory(category: String) {
-    self.javaObject.call(method: Intent__method__63, [category.toJavaParameter()])
+  open func setSelector(selector: Intent?) {
+    self.javaObject.call(method: Intent__method__63, [selector.toJavaParameter()])
   }
 
-  public func setSelector(selector: Intent?) {
-    self.javaObject.call(method: Intent__method__64, [selector.toJavaParameter()])
+  open func setClipData(clip: ClipData?) {
+    self.javaObject.call(method: Intent__method__64, [clip.toJavaParameter()])
   }
 
-  public func setClipData(clip: ClipData?) {
-    self.javaObject.call(method: Intent__method__65, [clip.toJavaParameter()])
+  open func putExtra(name: String, value: Bool) -> Intent? {
+    self.javaObject.call(method: Intent__method__65, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putExtra(name: String, value: Bool) -> Intent? {
+  open func putExtra(name: String, value: Int8) -> Intent? {
     self.javaObject.call(method: Intent__method__66, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putExtra(name: String, value: Int8) -> Intent? {
+  open func putExtra(name: String, value: UInt16) -> Intent? {
     self.javaObject.call(method: Intent__method__67, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putExtra(name: String, value: UInt16) -> Intent? {
+  open func putExtra(name: String, value: Int16) -> Intent? {
     self.javaObject.call(method: Intent__method__68, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putExtra(name: String, value: Int16) -> Intent? {
+  open func putExtra(name: String, value: Int32) -> Intent? {
     self.javaObject.call(method: Intent__method__69, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putExtra(name: String, value: Int32) -> Intent? {
+  open func putExtra(name: String, value: Int64) -> Intent? {
     self.javaObject.call(method: Intent__method__70, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putExtra(name: String, value: Int64) -> Intent? {
+  open func putExtra(name: String, value: Float) -> Intent? {
     self.javaObject.call(method: Intent__method__71, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putExtra(name: String, value: Float) -> Intent? {
+  open func putExtra(name: String, value: Double) -> Intent? {
     self.javaObject.call(method: Intent__method__72, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putExtra(name: String, value: Double) -> Intent? {
+  open func putExtra(name: String, value: String) -> Intent? {
     self.javaObject.call(method: Intent__method__73, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putExtra(name: String, value: String) -> Intent? {
+  open func putExtra(name: String, value: String?) -> Intent? {
     self.javaObject.call(method: Intent__method__74, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putExtra(name: String, value: String?) -> Intent? {
-    self.javaObject.call(method: Intent__method__75, [name.toJavaParameter(), value.toJavaParameter()])
+  open func putExtra(name: String, value: Parcelable?) -> Intent? {
+    self.javaObject.call(method: Intent__method__75, [name.toJavaParameter(), JavaParameter(object: value?.toJavaObject())])
   }
 
-  public func putExtra(name: String, value: Parcelable?) -> Intent? {
-    self.javaObject.call(method: Intent__method__76, [name.toJavaParameter(), JavaParameter(object: value?.toJavaObject())])
+  open func putExtra(name: String, value: [Parcelable?]) -> Intent? {
+    self.javaObject.call(method: Intent__method__76, [name.toJavaParameter(), JavaParameter(object: value.map { $0?.box() }.toJavaObject())])
   }
 
-  public func putExtra(name: String, value: [Parcelable?]) -> Intent? {
-    self.javaObject.call(method: Intent__method__77, [name.toJavaParameter(), JavaParameter(object: value.map { $0?.box() }.toJavaObject())])
+  open func putParcelableArrayListExtra<T0>(name: String, value: ArrayList<T0>?) -> Intent? where T0: Parcelable {
+    self.javaObject.call(method: Intent__method__77, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putParcelableArrayListExtra<T0>(name: String, value: ArrayList<T0>?) -> Intent? where T0: Parcelable {
+  open func putIntegerArrayListExtra(name: String, value: ArrayList<Int32.PrimitiveType>?) -> Intent? {
     self.javaObject.call(method: Intent__method__78, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putIntegerArrayListExtra(name: String, value: ArrayList<Int32.PrimitiveType>?) -> Intent? {
+  open func putStringArrayListExtra(name: String, value: ArrayList<String>?) -> Intent? {
     self.javaObject.call(method: Intent__method__79, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putStringArrayListExtra(name: String, value: ArrayList<String>?) -> Intent? {
+  open func putCharSequenceArrayListExtra(name: String, value: ArrayList<String>?) -> Intent? {
     self.javaObject.call(method: Intent__method__80, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putCharSequenceArrayListExtra(name: String, value: ArrayList<String>?) -> Intent? {
+  open func putExtra(name: String, value: [Bool]) -> Intent? {
     self.javaObject.call(method: Intent__method__81, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putExtra(name: String, value: [Bool]) -> Intent? {
+  open func putExtra(name: String, value: [Int8]) -> Intent? {
     self.javaObject.call(method: Intent__method__82, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putExtra(name: String, value: [Int8]) -> Intent? {
+  open func putExtra(name: String, value: [Int16]) -> Intent? {
     self.javaObject.call(method: Intent__method__83, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putExtra(name: String, value: [Int16]) -> Intent? {
+  open func putExtra(name: String, value: [UInt16]) -> Intent? {
     self.javaObject.call(method: Intent__method__84, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putExtra(name: String, value: [UInt16]) -> Intent? {
+  open func putExtra(name: String, value: [Int32]) -> Intent? {
     self.javaObject.call(method: Intent__method__85, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putExtra(name: String, value: [Int32]) -> Intent? {
+  open func putExtra(name: String, value: [Int64]) -> Intent? {
     self.javaObject.call(method: Intent__method__86, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putExtra(name: String, value: [Int64]) -> Intent? {
+  open func putExtra(name: String, value: [Float]) -> Intent? {
     self.javaObject.call(method: Intent__method__87, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putExtra(name: String, value: [Float]) -> Intent? {
+  open func putExtra(name: String, value: [Double]) -> Intent? {
     self.javaObject.call(method: Intent__method__88, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putExtra(name: String, value: [Double]) -> Intent? {
+  open func putExtra(name: String, value: [String]) -> Intent? {
     self.javaObject.call(method: Intent__method__89, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putExtra(name: String, value: [String]) -> Intent? {
+  open func putExtra(name: String, value: [String?]) -> Intent? {
     self.javaObject.call(method: Intent__method__90, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putExtra(name: String, value: [String?]) -> Intent? {
+  open func putExtra(name: String, value: Bundle?) -> Intent? {
     self.javaObject.call(method: Intent__method__91, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putExtra(name: String, value: Bundle?) -> Intent? {
-    self.javaObject.call(method: Intent__method__92, [name.toJavaParameter(), value.toJavaParameter()])
+  open func putExtras(src: Intent?) -> Intent? {
+    self.javaObject.call(method: Intent__method__92, [src.toJavaParameter()])
   }
 
-  public func putExtras(src: Intent?) -> Intent? {
-    self.javaObject.call(method: Intent__method__93, [src.toJavaParameter()])
+  open func putExtras(extras: Bundle?) -> Intent? {
+    self.javaObject.call(method: Intent__method__93, [extras.toJavaParameter()])
   }
 
-  public func putExtras(extras: Bundle?) -> Intent? {
-    self.javaObject.call(method: Intent__method__94, [extras.toJavaParameter()])
+  open func replaceExtras(src: Intent?) -> Intent? {
+    self.javaObject.call(method: Intent__method__94, [src.toJavaParameter()])
   }
 
-  public func replaceExtras(src: Intent?) -> Intent? {
-    self.javaObject.call(method: Intent__method__95, [src.toJavaParameter()])
+  open func replaceExtras(extras: Bundle?) -> Intent? {
+    self.javaObject.call(method: Intent__method__95, [extras.toJavaParameter()])
   }
 
-  public func replaceExtras(extras: Bundle?) -> Intent? {
-    self.javaObject.call(method: Intent__method__96, [extras.toJavaParameter()])
+  open func removeExtra(name: String) {
+    self.javaObject.call(method: Intent__method__96, [name.toJavaParameter()])
   }
 
-  public func removeExtra(name: String) {
-    self.javaObject.call(method: Intent__method__97, [name.toJavaParameter()])
+  open func setFlags(flags: Int32) -> Intent? {
+    self.javaObject.call(method: Intent__method__97, [flags.toJavaParameter()])
   }
 
-  public func setFlags(flags: Int32) -> Intent? {
+  open func addFlags(flags: Int32) -> Intent? {
     self.javaObject.call(method: Intent__method__98, [flags.toJavaParameter()])
   }
 
-  public func addFlags(flags: Int32) -> Intent? {
-    self.javaObject.call(method: Intent__method__99, [flags.toJavaParameter()])
+  open func setPackage(packageName: String) -> Intent? {
+    self.javaObject.call(method: Intent__method__99, [packageName.toJavaParameter()])
   }
 
-  public func setPackage(packageName: String) -> Intent? {
-    self.javaObject.call(method: Intent__method__100, [packageName.toJavaParameter()])
+  open func setComponent(component: ComponentName?) -> Intent? {
+    self.javaObject.call(method: Intent__method__100, [component.toJavaParameter()])
   }
 
-  public func setComponent(component: ComponentName?) -> Intent? {
-    self.javaObject.call(method: Intent__method__101, [component.toJavaParameter()])
+  open func setClassName(packageContext: Context?, className: String) -> Intent? {
+    self.javaObject.call(method: Intent__method__101, [JavaParameter(object: packageContext?.toJavaObject()), className.toJavaParameter()])
   }
 
-  public func setClassName(packageContext: Context?, className: String) -> Intent? {
-    self.javaObject.call(method: Intent__method__102, [JavaParameter(object: packageContext?.toJavaObject()), className.toJavaParameter()])
+  open func setClassName(packageName: String, className: String) -> Intent? {
+    self.javaObject.call(method: Intent__method__102, [packageName.toJavaParameter(), className.toJavaParameter()])
   }
 
-  public func setClassName(packageName: String, className: String) -> Intent? {
-    self.javaObject.call(method: Intent__method__103, [packageName.toJavaParameter(), className.toJavaParameter()])
+  open func setClass<T0>(packageContext: Context?, cls: Class<T0>?) -> Intent? where T0: Object {
+    self.javaObject.call(method: Intent__method__103, [JavaParameter(object: packageContext?.toJavaObject()), cls.toJavaParameter()])
   }
 
-  public func setClass<T0>(packageContext: Context?, cls: Class<T0>?) -> Intent? where T0: Object {
-    self.javaObject.call(method: Intent__method__104, [JavaParameter(object: packageContext?.toJavaObject()), cls.toJavaParameter()])
+  open func fillIn(other: Intent?, flags: Int32) -> Int32 {
+    self.javaObject.call(method: Intent__method__104, [other.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func fillIn(other: Intent?, flags: Int32) -> Int32 {
-    self.javaObject.call(method: Intent__method__105, [other.toJavaParameter(), flags.toJavaParameter()])
+  open func filterEquals(other: Intent?) -> Bool {
+    self.javaObject.call(method: Intent__method__105, [other.toJavaParameter()])
   }
 
-  public func filterEquals(other: Intent?) -> Bool {
-    self.javaObject.call(method: Intent__method__106, [other.toJavaParameter()])
+  open func filterHashCode() -> Int32 {
+    self.javaObject.call(method: Intent__method__106, [])
   }
 
-  public func filterHashCode() -> Int32 {
-    self.javaObject.call(method: Intent__method__107, [])
+  open func toUri(flags: Int32) -> String {
+    self.javaObject.call(method: Intent__method__107, [flags.toJavaParameter()])
   }
 
-  public func toURI() -> String {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: Intent__method__108, [])
   }
 
-  public func toUri(flags: Int32) -> String {
-    self.javaObject.call(method: Intent__method__109, [flags.toJavaParameter()])
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
+    self.javaObject.call(method: Intent__method__109, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
-    self.javaObject.call(method: Intent__method__110, [])
+  open func readFromParcel(_in: Parcel?) {
+    self.javaObject.call(method: Intent__method__110, [_in.toJavaParameter()])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
-    self.javaObject.call(method: Intent__method__111, [dest.toJavaParameter(), flags.toJavaParameter()])
-  }
-
-  public func readFromParcel(_in: Parcel?) {
-    self.javaObject.call(method: Intent__method__112, [_in.toJavaParameter()])
-  }
-
-  public static func normalizeMimeType(_type: String) -> String {
-    Intent__class.callStatic(method: Intent__method__113, [_type.toJavaParameter()])
+  public static func normalizeMimeType(type: String) -> String {
+    Intent__class.callStatic(method: Intent__method__111, [type.toJavaParameter()])
   }
 
   public required init(_ obj: JavaObject) {
@@ -1011,8 +1003,8 @@ open class Intent: Object, Parcelable {
 }
 
 extension Intent {
-  public func getCategories() -> Java.SetProxy<String>? {
-    self.javaObject.call(method: Intent__method__21, [])
+  open func getCategories() -> Java.SetProxy<String>? {
+    self.javaObject.call(method: Intent__method__20, [])
   }
 }
 
@@ -1023,7 +1015,7 @@ open class IntentFilterComparison: Object {
     super.init(ctor: IntentFilterComparison__method__0, [intent.toJavaParameter()])
   }
 
-  public func getIntent() -> Intent? {
+  open func getIntent() -> Intent? {
     self.javaObject.call(method: IntentFilterComparison__method__1, [])
   }
 
@@ -1065,11 +1057,11 @@ open class IntentShortcutIconResource: Object, Parcelable {
     IntentShortcutIconResource__class.callStatic(method: IntentShortcutIconResource__method__1, [JavaParameter(object: context?.toJavaObject()), resourceId.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: IntentShortcutIconResource__method__2, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: IntentShortcutIconResource__method__3, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
@@ -1096,110 +1088,108 @@ private let Intent__method__6 = Intent__class.getMethodID(name: "cloneFilter", s
 private let Intent__method__7 = Intent__class.getStaticMethodID(name: "makeMainActivity", sig: "(Landroid/content/ComponentName;)Landroid/content/Intent;")!
 private let Intent__method__8 = Intent__class.getStaticMethodID(name: "makeMainSelectorActivity", sig: "(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;")!
 private let Intent__method__9 = Intent__class.getStaticMethodID(name: "makeRestartActivityTask", sig: "(Landroid/content/ComponentName;)Landroid/content/Intent;")!
-private let Intent__method__10 = Intent__class.getStaticMethodID(name: "getIntent", sig: "(Ljava/lang/String;)Landroid/content/Intent;")!
-private let Intent__method__11 = Intent__class.getStaticMethodID(name: "parseUri", sig: "(Ljava/lang/String;I)Landroid/content/Intent;")!
-private let Intent__method__12 = Intent__class.getStaticMethodID(name: "getIntentOld", sig: "(Ljava/lang/String;)Landroid/content/Intent;")!
-private let Intent__method__13 = Intent__class.getMethodID(name: "getAction", sig: "()Ljava/lang/String;")!
-private let Intent__method__14 = Intent__class.getMethodID(name: "getDataString", sig: "()Ljava/lang/String;")!
-private let Intent__method__15 = Intent__class.getMethodID(name: "getScheme", sig: "()Ljava/lang/String;")!
-private let Intent__method__16 = Intent__class.getMethodID(name: "getType", sig: "()Ljava/lang/String;")!
-private let Intent__method__17 = Intent__class.getMethodID(name: "resolveType", sig: "(Landroid/content/Context;)Ljava/lang/String;")!
-private let Intent__method__18 = Intent__class.getMethodID(name: "resolveType", sig: "(Landroid/content/ContentResolver;)Ljava/lang/String;")!
-private let Intent__method__19 = Intent__class.getMethodID(name: "resolveTypeIfNeeded", sig: "(Landroid/content/ContentResolver;)Ljava/lang/String;")!
-private let Intent__method__20 = Intent__class.getMethodID(name: "hasCategory", sig: "(Ljava/lang/String;)Z")!
-private let Intent__method__21 = Intent__class.getMethodID(name: "getCategories", sig: "()Ljava/util/Set;")!
-private let Intent__method__22 = Intent__class.getMethodID(name: "getSelector", sig: "()Landroid/content/Intent;")!
-private let Intent__method__23 = Intent__class.getMethodID(name: "getClipData", sig: "()Landroid/content/ClipData;")!
-private let Intent__method__24 = Intent__class.getMethodID(name: "hasExtra", sig: "(Ljava/lang/String;)Z")!
-private let Intent__method__25 = Intent__class.getMethodID(name: "hasFileDescriptors", sig: "()Z")!
-private let Intent__method__26 = Intent__class.getMethodID(name: "getBooleanExtra", sig: "(Ljava/lang/String;Z)Z")!
-private let Intent__method__27 = Intent__class.getMethodID(name: "getByteExtra", sig: "(Ljava/lang/String;B)B")!
-private let Intent__method__28 = Intent__class.getMethodID(name: "getShortExtra", sig: "(Ljava/lang/String;S)S")!
-private let Intent__method__29 = Intent__class.getMethodID(name: "getCharExtra", sig: "(Ljava/lang/String;C)C")!
-private let Intent__method__30 = Intent__class.getMethodID(name: "getIntExtra", sig: "(Ljava/lang/String;I)I")!
-private let Intent__method__31 = Intent__class.getMethodID(name: "getLongExtra", sig: "(Ljava/lang/String;J)J")!
-private let Intent__method__32 = Intent__class.getMethodID(name: "getFloatExtra", sig: "(Ljava/lang/String;F)F")!
-private let Intent__method__33 = Intent__class.getMethodID(name: "getDoubleExtra", sig: "(Ljava/lang/String;D)D")!
-private let Intent__method__34 = Intent__class.getMethodID(name: "getStringExtra", sig: "(Ljava/lang/String;)Ljava/lang/String;")!
-private let Intent__method__35 = Intent__class.getMethodID(name: "getCharSequenceExtra", sig: "(Ljava/lang/String;)Ljava/lang/CharSequence;")!
-private let Intent__method__36 = Intent__class.getMethodID(name: "getParcelableExtra", sig: "(Ljava/lang/String;)Landroid/os/Parcelable;")!
-private let Intent__method__37 = Intent__class.getMethodID(name: "getParcelableArrayExtra", sig: "(Ljava/lang/String;)[Landroid/os/Parcelable;")!
-private let Intent__method__38 = Intent__class.getMethodID(name: "getParcelableArrayListExtra", sig: "(Ljava/lang/String;)Ljava/util/ArrayList;")!
-private let Intent__method__39 = Intent__class.getMethodID(name: "getIntegerArrayListExtra", sig: "(Ljava/lang/String;)Ljava/util/ArrayList;")!
-private let Intent__method__40 = Intent__class.getMethodID(name: "getStringArrayListExtra", sig: "(Ljava/lang/String;)Ljava/util/ArrayList;")!
-private let Intent__method__41 = Intent__class.getMethodID(name: "getCharSequenceArrayListExtra", sig: "(Ljava/lang/String;)Ljava/util/ArrayList;")!
-private let Intent__method__42 = Intent__class.getMethodID(name: "getBooleanArrayExtra", sig: "(Ljava/lang/String;)[Z")!
-private let Intent__method__43 = Intent__class.getMethodID(name: "getByteArrayExtra", sig: "(Ljava/lang/String;)[B")!
-private let Intent__method__44 = Intent__class.getMethodID(name: "getShortArrayExtra", sig: "(Ljava/lang/String;)[S")!
-private let Intent__method__45 = Intent__class.getMethodID(name: "getCharArrayExtra", sig: "(Ljava/lang/String;)[C")!
-private let Intent__method__46 = Intent__class.getMethodID(name: "getIntArrayExtra", sig: "(Ljava/lang/String;)[I")!
-private let Intent__method__47 = Intent__class.getMethodID(name: "getLongArrayExtra", sig: "(Ljava/lang/String;)[J")!
-private let Intent__method__48 = Intent__class.getMethodID(name: "getFloatArrayExtra", sig: "(Ljava/lang/String;)[F")!
-private let Intent__method__49 = Intent__class.getMethodID(name: "getDoubleArrayExtra", sig: "(Ljava/lang/String;)[D")!
-private let Intent__method__50 = Intent__class.getMethodID(name: "getStringArrayExtra", sig: "(Ljava/lang/String;)[Ljava/lang/String;")!
-private let Intent__method__51 = Intent__class.getMethodID(name: "getCharSequenceArrayExtra", sig: "(Ljava/lang/String;)[Ljava/lang/CharSequence;")!
-private let Intent__method__52 = Intent__class.getMethodID(name: "getBundleExtra", sig: "(Ljava/lang/String;)Landroid/os/Bundle;")!
-private let Intent__method__53 = Intent__class.getMethodID(name: "getExtras", sig: "()Landroid/os/Bundle;")!
-private let Intent__method__54 = Intent__class.getMethodID(name: "getFlags", sig: "()I")!
-private let Intent__method__55 = Intent__class.getMethodID(name: "getPackage", sig: "()Ljava/lang/String;")!
-private let Intent__method__56 = Intent__class.getMethodID(name: "getComponent", sig: "()Landroid/content/ComponentName;")!
-private let Intent__method__57 = Intent__class.getMethodID(name: "resolveActivity", sig: "(Landroid/content/pm/PackageManager;)Landroid/content/ComponentName;")!
-private let Intent__method__58 = Intent__class.getMethodID(name: "resolveActivityInfo", sig: "(Landroid/content/pm/PackageManager;I)Landroid/content/pm/ActivityInfo;")!
-private let Intent__method__59 = Intent__class.getMethodID(name: "setAction", sig: "(Ljava/lang/String;)Landroid/content/Intent;")!
-private let Intent__method__60 = Intent__class.getMethodID(name: "setType", sig: "(Ljava/lang/String;)Landroid/content/Intent;")!
-private let Intent__method__61 = Intent__class.getMethodID(name: "setTypeAndNormalize", sig: "(Ljava/lang/String;)Landroid/content/Intent;")!
-private let Intent__method__62 = Intent__class.getMethodID(name: "addCategory", sig: "(Ljava/lang/String;)Landroid/content/Intent;")!
-private let Intent__method__63 = Intent__class.getMethodID(name: "removeCategory", sig: "(Ljava/lang/String;)V")!
-private let Intent__method__64 = Intent__class.getMethodID(name: "setSelector", sig: "(Landroid/content/Intent;)V")!
-private let Intent__method__65 = Intent__class.getMethodID(name: "setClipData", sig: "(Landroid/content/ClipData;)V")!
-private let Intent__method__66 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;Z)Landroid/content/Intent;")!
-private let Intent__method__67 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;B)Landroid/content/Intent;")!
-private let Intent__method__68 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;C)Landroid/content/Intent;")!
-private let Intent__method__69 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;S)Landroid/content/Intent;")!
-private let Intent__method__70 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;I)Landroid/content/Intent;")!
-private let Intent__method__71 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;J)Landroid/content/Intent;")!
-private let Intent__method__72 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;F)Landroid/content/Intent;")!
-private let Intent__method__73 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;D)Landroid/content/Intent;")!
-private let Intent__method__74 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;")!
-private let Intent__method__75 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/content/Intent;")!
-private let Intent__method__76 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;")!
-private let Intent__method__77 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;[Landroid/os/Parcelable;)Landroid/content/Intent;")!
-private let Intent__method__78 = Intent__class.getMethodID(name: "putParcelableArrayListExtra", sig: "(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;")!
-private let Intent__method__79 = Intent__class.getMethodID(name: "putIntegerArrayListExtra", sig: "(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;")!
-private let Intent__method__80 = Intent__class.getMethodID(name: "putStringArrayListExtra", sig: "(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;")!
-private let Intent__method__81 = Intent__class.getMethodID(name: "putCharSequenceArrayListExtra", sig: "(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;")!
-private let Intent__method__82 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;[Z)Landroid/content/Intent;")!
-private let Intent__method__83 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;[B)Landroid/content/Intent;")!
-private let Intent__method__84 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;[S)Landroid/content/Intent;")!
-private let Intent__method__85 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;[C)Landroid/content/Intent;")!
-private let Intent__method__86 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;[I)Landroid/content/Intent;")!
-private let Intent__method__87 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;[J)Landroid/content/Intent;")!
-private let Intent__method__88 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;[F)Landroid/content/Intent;")!
-private let Intent__method__89 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;[D)Landroid/content/Intent;")!
-private let Intent__method__90 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;")!
-private let Intent__method__91 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;[Ljava/lang/CharSequence;)Landroid/content/Intent;")!
-private let Intent__method__92 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;")!
-private let Intent__method__93 = Intent__class.getMethodID(name: "putExtras", sig: "(Landroid/content/Intent;)Landroid/content/Intent;")!
-private let Intent__method__94 = Intent__class.getMethodID(name: "putExtras", sig: "(Landroid/os/Bundle;)Landroid/content/Intent;")!
-private let Intent__method__95 = Intent__class.getMethodID(name: "replaceExtras", sig: "(Landroid/content/Intent;)Landroid/content/Intent;")!
-private let Intent__method__96 = Intent__class.getMethodID(name: "replaceExtras", sig: "(Landroid/os/Bundle;)Landroid/content/Intent;")!
-private let Intent__method__97 = Intent__class.getMethodID(name: "removeExtra", sig: "(Ljava/lang/String;)V")!
-private let Intent__method__98 = Intent__class.getMethodID(name: "setFlags", sig: "(I)Landroid/content/Intent;")!
-private let Intent__method__99 = Intent__class.getMethodID(name: "addFlags", sig: "(I)Landroid/content/Intent;")!
-private let Intent__method__100 = Intent__class.getMethodID(name: "setPackage", sig: "(Ljava/lang/String;)Landroid/content/Intent;")!
-private let Intent__method__101 = Intent__class.getMethodID(name: "setComponent", sig: "(Landroid/content/ComponentName;)Landroid/content/Intent;")!
-private let Intent__method__102 = Intent__class.getMethodID(name: "setClassName", sig: "(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;")!
-private let Intent__method__103 = Intent__class.getMethodID(name: "setClassName", sig: "(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;")!
-private let Intent__method__104 = Intent__class.getMethodID(name: "setClass", sig: "(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;")!
-private let Intent__method__105 = Intent__class.getMethodID(name: "fillIn", sig: "(Landroid/content/Intent;I)I")!
-private let Intent__method__106 = Intent__class.getMethodID(name: "filterEquals", sig: "(Landroid/content/Intent;)Z")!
-private let Intent__method__107 = Intent__class.getMethodID(name: "filterHashCode", sig: "()I")!
-private let Intent__method__108 = Intent__class.getMethodID(name: "toURI", sig: "()Ljava/lang/String;")!
-private let Intent__method__109 = Intent__class.getMethodID(name: "toUri", sig: "(I)Ljava/lang/String;")!
-private let Intent__method__110 = Intent__class.getMethodID(name: "describeContents", sig: "()I")!
-private let Intent__method__111 = Intent__class.getMethodID(name: "writeToParcel", sig: "(Landroid/os/Parcel;I)V")!
-private let Intent__method__112 = Intent__class.getMethodID(name: "readFromParcel", sig: "(Landroid/os/Parcel;)V")!
-private let Intent__method__113 = Intent__class.getStaticMethodID(name: "normalizeMimeType", sig: "(Ljava/lang/String;)Ljava/lang/String;")!
+private let Intent__method__10 = Intent__class.getStaticMethodID(name: "parseUri", sig: "(Ljava/lang/String;I)Landroid/content/Intent;")!
+private let Intent__method__11 = Intent__class.getStaticMethodID(name: "getIntentOld", sig: "(Ljava/lang/String;)Landroid/content/Intent;")!
+private let Intent__method__12 = Intent__class.getMethodID(name: "getAction", sig: "()Ljava/lang/String;")!
+private let Intent__method__13 = Intent__class.getMethodID(name: "getDataString", sig: "()Ljava/lang/String;")!
+private let Intent__method__14 = Intent__class.getMethodID(name: "getScheme", sig: "()Ljava/lang/String;")!
+private let Intent__method__15 = Intent__class.getMethodID(name: "getType", sig: "()Ljava/lang/String;")!
+private let Intent__method__16 = Intent__class.getMethodID(name: "resolveType", sig: "(Landroid/content/Context;)Ljava/lang/String;")!
+private let Intent__method__17 = Intent__class.getMethodID(name: "resolveType", sig: "(Landroid/content/ContentResolver;)Ljava/lang/String;")!
+private let Intent__method__18 = Intent__class.getMethodID(name: "resolveTypeIfNeeded", sig: "(Landroid/content/ContentResolver;)Ljava/lang/String;")!
+private let Intent__method__19 = Intent__class.getMethodID(name: "hasCategory", sig: "(Ljava/lang/String;)Z")!
+private let Intent__method__20 = Intent__class.getMethodID(name: "getCategories", sig: "()Ljava/util/Set;")!
+private let Intent__method__21 = Intent__class.getMethodID(name: "getSelector", sig: "()Landroid/content/Intent;")!
+private let Intent__method__22 = Intent__class.getMethodID(name: "getClipData", sig: "()Landroid/content/ClipData;")!
+private let Intent__method__23 = Intent__class.getMethodID(name: "hasExtra", sig: "(Ljava/lang/String;)Z")!
+private let Intent__method__24 = Intent__class.getMethodID(name: "hasFileDescriptors", sig: "()Z")!
+private let Intent__method__25 = Intent__class.getMethodID(name: "getBooleanExtra", sig: "(Ljava/lang/String;Z)Z")!
+private let Intent__method__26 = Intent__class.getMethodID(name: "getByteExtra", sig: "(Ljava/lang/String;B)B")!
+private let Intent__method__27 = Intent__class.getMethodID(name: "getShortExtra", sig: "(Ljava/lang/String;S)S")!
+private let Intent__method__28 = Intent__class.getMethodID(name: "getCharExtra", sig: "(Ljava/lang/String;C)C")!
+private let Intent__method__29 = Intent__class.getMethodID(name: "getIntExtra", sig: "(Ljava/lang/String;I)I")!
+private let Intent__method__30 = Intent__class.getMethodID(name: "getLongExtra", sig: "(Ljava/lang/String;J)J")!
+private let Intent__method__31 = Intent__class.getMethodID(name: "getFloatExtra", sig: "(Ljava/lang/String;F)F")!
+private let Intent__method__32 = Intent__class.getMethodID(name: "getDoubleExtra", sig: "(Ljava/lang/String;D)D")!
+private let Intent__method__33 = Intent__class.getMethodID(name: "getStringExtra", sig: "(Ljava/lang/String;)Ljava/lang/String;")!
+private let Intent__method__34 = Intent__class.getMethodID(name: "getCharSequenceExtra", sig: "(Ljava/lang/String;)Ljava/lang/CharSequence;")!
+private let Intent__method__35 = Intent__class.getMethodID(name: "getParcelableExtra", sig: "(Ljava/lang/String;)Landroid/os/Parcelable;")!
+private let Intent__method__36 = Intent__class.getMethodID(name: "getParcelableArrayExtra", sig: "(Ljava/lang/String;)[Landroid/os/Parcelable;")!
+private let Intent__method__37 = Intent__class.getMethodID(name: "getParcelableArrayListExtra", sig: "(Ljava/lang/String;)Ljava/util/ArrayList;")!
+private let Intent__method__38 = Intent__class.getMethodID(name: "getIntegerArrayListExtra", sig: "(Ljava/lang/String;)Ljava/util/ArrayList;")!
+private let Intent__method__39 = Intent__class.getMethodID(name: "getStringArrayListExtra", sig: "(Ljava/lang/String;)Ljava/util/ArrayList;")!
+private let Intent__method__40 = Intent__class.getMethodID(name: "getCharSequenceArrayListExtra", sig: "(Ljava/lang/String;)Ljava/util/ArrayList;")!
+private let Intent__method__41 = Intent__class.getMethodID(name: "getBooleanArrayExtra", sig: "(Ljava/lang/String;)[Z")!
+private let Intent__method__42 = Intent__class.getMethodID(name: "getByteArrayExtra", sig: "(Ljava/lang/String;)[B")!
+private let Intent__method__43 = Intent__class.getMethodID(name: "getShortArrayExtra", sig: "(Ljava/lang/String;)[S")!
+private let Intent__method__44 = Intent__class.getMethodID(name: "getCharArrayExtra", sig: "(Ljava/lang/String;)[C")!
+private let Intent__method__45 = Intent__class.getMethodID(name: "getIntArrayExtra", sig: "(Ljava/lang/String;)[I")!
+private let Intent__method__46 = Intent__class.getMethodID(name: "getLongArrayExtra", sig: "(Ljava/lang/String;)[J")!
+private let Intent__method__47 = Intent__class.getMethodID(name: "getFloatArrayExtra", sig: "(Ljava/lang/String;)[F")!
+private let Intent__method__48 = Intent__class.getMethodID(name: "getDoubleArrayExtra", sig: "(Ljava/lang/String;)[D")!
+private let Intent__method__49 = Intent__class.getMethodID(name: "getStringArrayExtra", sig: "(Ljava/lang/String;)[Ljava/lang/String;")!
+private let Intent__method__50 = Intent__class.getMethodID(name: "getCharSequenceArrayExtra", sig: "(Ljava/lang/String;)[Ljava/lang/CharSequence;")!
+private let Intent__method__51 = Intent__class.getMethodID(name: "getBundleExtra", sig: "(Ljava/lang/String;)Landroid/os/Bundle;")!
+private let Intent__method__52 = Intent__class.getMethodID(name: "getExtras", sig: "()Landroid/os/Bundle;")!
+private let Intent__method__53 = Intent__class.getMethodID(name: "getFlags", sig: "()I")!
+private let Intent__method__54 = Intent__class.getMethodID(name: "getPackage", sig: "()Ljava/lang/String;")!
+private let Intent__method__55 = Intent__class.getMethodID(name: "getComponent", sig: "()Landroid/content/ComponentName;")!
+private let Intent__method__56 = Intent__class.getMethodID(name: "resolveActivity", sig: "(Landroid/content/pm/PackageManager;)Landroid/content/ComponentName;")!
+private let Intent__method__57 = Intent__class.getMethodID(name: "resolveActivityInfo", sig: "(Landroid/content/pm/PackageManager;I)Landroid/content/pm/ActivityInfo;")!
+private let Intent__method__58 = Intent__class.getMethodID(name: "setAction", sig: "(Ljava/lang/String;)Landroid/content/Intent;")!
+private let Intent__method__59 = Intent__class.getMethodID(name: "setType", sig: "(Ljava/lang/String;)Landroid/content/Intent;")!
+private let Intent__method__60 = Intent__class.getMethodID(name: "setTypeAndNormalize", sig: "(Ljava/lang/String;)Landroid/content/Intent;")!
+private let Intent__method__61 = Intent__class.getMethodID(name: "addCategory", sig: "(Ljava/lang/String;)Landroid/content/Intent;")!
+private let Intent__method__62 = Intent__class.getMethodID(name: "removeCategory", sig: "(Ljava/lang/String;)V")!
+private let Intent__method__63 = Intent__class.getMethodID(name: "setSelector", sig: "(Landroid/content/Intent;)V")!
+private let Intent__method__64 = Intent__class.getMethodID(name: "setClipData", sig: "(Landroid/content/ClipData;)V")!
+private let Intent__method__65 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;Z)Landroid/content/Intent;")!
+private let Intent__method__66 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;B)Landroid/content/Intent;")!
+private let Intent__method__67 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;C)Landroid/content/Intent;")!
+private let Intent__method__68 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;S)Landroid/content/Intent;")!
+private let Intent__method__69 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;I)Landroid/content/Intent;")!
+private let Intent__method__70 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;J)Landroid/content/Intent;")!
+private let Intent__method__71 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;F)Landroid/content/Intent;")!
+private let Intent__method__72 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;D)Landroid/content/Intent;")!
+private let Intent__method__73 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;")!
+private let Intent__method__74 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/content/Intent;")!
+private let Intent__method__75 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;")!
+private let Intent__method__76 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;[Landroid/os/Parcelable;)Landroid/content/Intent;")!
+private let Intent__method__77 = Intent__class.getMethodID(name: "putParcelableArrayListExtra", sig: "(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;")!
+private let Intent__method__78 = Intent__class.getMethodID(name: "putIntegerArrayListExtra", sig: "(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;")!
+private let Intent__method__79 = Intent__class.getMethodID(name: "putStringArrayListExtra", sig: "(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;")!
+private let Intent__method__80 = Intent__class.getMethodID(name: "putCharSequenceArrayListExtra", sig: "(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;")!
+private let Intent__method__81 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;[Z)Landroid/content/Intent;")!
+private let Intent__method__82 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;[B)Landroid/content/Intent;")!
+private let Intent__method__83 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;[S)Landroid/content/Intent;")!
+private let Intent__method__84 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;[C)Landroid/content/Intent;")!
+private let Intent__method__85 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;[I)Landroid/content/Intent;")!
+private let Intent__method__86 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;[J)Landroid/content/Intent;")!
+private let Intent__method__87 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;[F)Landroid/content/Intent;")!
+private let Intent__method__88 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;[D)Landroid/content/Intent;")!
+private let Intent__method__89 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;")!
+private let Intent__method__90 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;[Ljava/lang/CharSequence;)Landroid/content/Intent;")!
+private let Intent__method__91 = Intent__class.getMethodID(name: "putExtra", sig: "(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;")!
+private let Intent__method__92 = Intent__class.getMethodID(name: "putExtras", sig: "(Landroid/content/Intent;)Landroid/content/Intent;")!
+private let Intent__method__93 = Intent__class.getMethodID(name: "putExtras", sig: "(Landroid/os/Bundle;)Landroid/content/Intent;")!
+private let Intent__method__94 = Intent__class.getMethodID(name: "replaceExtras", sig: "(Landroid/content/Intent;)Landroid/content/Intent;")!
+private let Intent__method__95 = Intent__class.getMethodID(name: "replaceExtras", sig: "(Landroid/os/Bundle;)Landroid/content/Intent;")!
+private let Intent__method__96 = Intent__class.getMethodID(name: "removeExtra", sig: "(Ljava/lang/String;)V")!
+private let Intent__method__97 = Intent__class.getMethodID(name: "setFlags", sig: "(I)Landroid/content/Intent;")!
+private let Intent__method__98 = Intent__class.getMethodID(name: "addFlags", sig: "(I)Landroid/content/Intent;")!
+private let Intent__method__99 = Intent__class.getMethodID(name: "setPackage", sig: "(Ljava/lang/String;)Landroid/content/Intent;")!
+private let Intent__method__100 = Intent__class.getMethodID(name: "setComponent", sig: "(Landroid/content/ComponentName;)Landroid/content/Intent;")!
+private let Intent__method__101 = Intent__class.getMethodID(name: "setClassName", sig: "(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;")!
+private let Intent__method__102 = Intent__class.getMethodID(name: "setClassName", sig: "(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;")!
+private let Intent__method__103 = Intent__class.getMethodID(name: "setClass", sig: "(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;")!
+private let Intent__method__104 = Intent__class.getMethodID(name: "fillIn", sig: "(Landroid/content/Intent;I)I")!
+private let Intent__method__105 = Intent__class.getMethodID(name: "filterEquals", sig: "(Landroid/content/Intent;)Z")!
+private let Intent__method__106 = Intent__class.getMethodID(name: "filterHashCode", sig: "()I")!
+private let Intent__method__107 = Intent__class.getMethodID(name: "toUri", sig: "(I)Ljava/lang/String;")!
+private let Intent__method__108 = Intent__class.getMethodID(name: "describeContents", sig: "()I")!
+private let Intent__method__109 = Intent__class.getMethodID(name: "writeToParcel", sig: "(Landroid/os/Parcel;I)V")!
+private let Intent__method__110 = Intent__class.getMethodID(name: "readFromParcel", sig: "(Landroid/os/Parcel;)V")!
+private let Intent__method__111 = Intent__class.getStaticMethodID(name: "normalizeMimeType", sig: "(Ljava/lang/String;)Ljava/lang/String;")!
 
 private let Intent__field__0 = Intent__class.getStaticFieldID(name: "ACTION_AIRPLANE_MODE_CHANGED", sig: "Ljava/lang/String;")!
 private let Intent__field__1 = Intent__class.getStaticFieldID(name: "ACTION_ALL_APPS", sig: "Ljava/lang/String;")!

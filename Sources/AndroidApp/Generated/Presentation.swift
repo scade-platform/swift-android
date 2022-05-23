@@ -4,15 +4,15 @@ import AndroidContent
 import Java
 
 open class Presentation: Dialog {
-  public func getResources() -> Resources? {
+  open func getResources() -> Resources? {
     self.javaObject.call(method: Presentation__method__0, [])
   }
 
-  public func onDisplayRemoved() {
+  open func onDisplayRemoved() {
     self.javaObject.call(method: Presentation__method__1, [])
   }
 
-  public func onDisplayChanged() {
+  open func onDisplayChanged() {
     self.javaObject.call(method: Presentation__method__2, [])
   }
 }

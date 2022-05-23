@@ -69,11 +69,11 @@ open class AudioEffect: Object {
 
   public static let SUCCESS: Int32 = AudioEffect__class.getStatic(field: AudioEffect__field__28)
 
-  public func release() {
+  open func release() {
     self.javaObject.call(method: AudioEffect__method__0, [])
   }
 
-  public func getDescriptor() -> AudioEffect.Descriptor? {
+  open func getDescriptor() -> AudioEffect.Descriptor? {
     self.javaObject.call(method: AudioEffect__method__1, [])
   }
 
@@ -81,27 +81,27 @@ open class AudioEffect: Object {
     AudioEffect__class.callStatic(method: AudioEffect__method__2, [])
   }
 
-  public func setEnabled(enabled: Bool) -> Int32 {
+  open func setEnabled(enabled: Bool) -> Int32 {
     self.javaObject.call(method: AudioEffect__method__3, [enabled.toJavaParameter()])
   }
 
-  public func getId() -> Int32 {
+  open func getId() -> Int32 {
     self.javaObject.call(method: AudioEffect__method__4, [])
   }
 
-  public func getEnabled() -> Bool {
+  open func getEnabled() -> Bool {
     self.javaObject.call(method: AudioEffect__method__5, [])
   }
 
-  public func hasControl() -> Bool {
+  open func hasControl() -> Bool {
     self.javaObject.call(method: AudioEffect__method__6, [])
   }
 
-  public func setEnableStatusListener(listener: AudioEffect.OnEnableStatusChangeListener?) {
+  open func setEnableStatusListener(listener: AudioEffect.OnEnableStatusChangeListener?) {
     self.javaObject.call(method: AudioEffect__method__7, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setControlStatusListener(listener: AudioEffect.OnControlStatusChangeListener?) {
+  open func setControlStatusListener(listener: AudioEffect.OnControlStatusChangeListener?) {
     self.javaObject.call(method: AudioEffect__method__8, [JavaParameter(object: listener?.toJavaObject())])
   }
 }
@@ -200,7 +200,7 @@ open class AudioEffectDescriptor: Object {
     }
   }
 
-  public var _type: UUID? {
+  public var type: UUID? {
     get {
       javaObject.get(field: AudioEffectDescriptor__field__3)
     }
@@ -222,8 +222,8 @@ open class AudioEffectDescriptor: Object {
     super.init(ctor: AudioEffectDescriptor__method__0, [])
   }
 
-  public init(_type: String, uuid: String, connectMode: String, name: String, implementor: String) {
-    super.init(ctor: AudioEffectDescriptor__method__1, [_type.toJavaParameter(), uuid.toJavaParameter(), connectMode.toJavaParameter(), name.toJavaParameter(), implementor.toJavaParameter()])
+  public init(type: String, uuid: String, connectMode: String, name: String, implementor: String) {
+    super.init(ctor: AudioEffectDescriptor__method__1, [type.toJavaParameter(), uuid.toJavaParameter(), connectMode.toJavaParameter(), name.toJavaParameter(), implementor.toJavaParameter()])
   }
 
   public required init(_ obj: JavaObject) {

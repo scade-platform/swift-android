@@ -9,47 +9,47 @@ open class AssistContent: Object, Parcelable {
     super.init(ctor: AssistContent__method__0, [])
   }
 
-  public func setIntent(intent: Intent?) {
+  open func setIntent(intent: Intent?) {
     self.javaObject.call(method: AssistContent__method__1, [intent.toJavaParameter()])
   }
 
-  public func getIntent() -> Intent? {
+  open func getIntent() -> Intent? {
     self.javaObject.call(method: AssistContent__method__2, [])
   }
 
-  public func isAppProvidedIntent() -> Bool {
+  open func isAppProvidedIntent() -> Bool {
     self.javaObject.call(method: AssistContent__method__3, [])
   }
 
-  public func setClipData(clip: ClipData?) {
+  open func setClipData(clip: ClipData?) {
     self.javaObject.call(method: AssistContent__method__4, [clip.toJavaParameter()])
   }
 
-  public func getClipData() -> ClipData? {
+  open func getClipData() -> ClipData? {
     self.javaObject.call(method: AssistContent__method__5, [])
   }
 
-  public func setStructuredData(structuredData: String) {
+  open func setStructuredData(structuredData: String) {
     self.javaObject.call(method: AssistContent__method__6, [structuredData.toJavaParameter()])
   }
 
-  public func getStructuredData() -> String {
+  open func getStructuredData() -> String {
     self.javaObject.call(method: AssistContent__method__7, [])
   }
 
-  public func isAppProvidedWebUri() -> Bool {
+  open func isAppProvidedWebUri() -> Bool {
     self.javaObject.call(method: AssistContent__method__8, [])
   }
 
-  public func getExtras() -> Bundle? {
+  open func getExtras() -> Bundle? {
     self.javaObject.call(method: AssistContent__method__9, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: AssistContent__method__10, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: AssistContent__method__11, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 

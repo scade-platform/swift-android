@@ -104,7 +104,7 @@ open class ApplicationErrorReport: Object, Parcelable {
     }
   }
 
-  public var _type: Int32 {
+  public var type: Int32 {
     get {
       javaObject.get(field: ApplicationErrorReport__field__14)
     }
@@ -121,15 +121,15 @@ open class ApplicationErrorReport: Object, Parcelable {
     ApplicationErrorReport__class.callStatic(method: ApplicationErrorReport__method__1, [JavaParameter(object: context?.toJavaObject()), packageName.toJavaParameter(), appFlags.toJavaParameter()])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ApplicationErrorReport__method__2, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func readFromParcel(_in: Parcel?) {
+  open func readFromParcel(_in: Parcel?) {
     self.javaObject.call(method: ApplicationErrorReport__method__3, [_in.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ApplicationErrorReport__method__4, [])
   }
 
@@ -171,7 +171,7 @@ open class ApplicationErrorReportRunningServiceInfo: Object {
     super.init(ctor: ApplicationErrorReportRunningServiceInfo__method__1, [_in.toJavaParameter()])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ApplicationErrorReportRunningServiceInfo__method__2, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
@@ -231,7 +231,7 @@ open class ApplicationErrorReportBatteryInfo: Object {
     super.init(ctor: ApplicationErrorReportBatteryInfo__method__1, [_in.toJavaParameter()])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ApplicationErrorReportBatteryInfo__method__2, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
@@ -282,7 +282,7 @@ open class ApplicationErrorReportAnrInfo: Object {
     super.init(ctor: ApplicationErrorReportAnrInfo__method__1, [_in.toJavaParameter()])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ApplicationErrorReportAnrInfo__method__2, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
@@ -369,7 +369,7 @@ open class ApplicationErrorReportCrashInfo: Object {
     super.init(ctor: ApplicationErrorReportCrashInfo__method__1, [_in.toJavaParameter()])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ApplicationErrorReportCrashInfo__method__2, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 

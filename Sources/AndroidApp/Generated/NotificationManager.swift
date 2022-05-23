@@ -36,63 +36,63 @@ open class NotificationManager: Object {
 
   public static let INTERRUPTION_FILTER_UNKNOWN: Int32 = NotificationManager__class.getStatic(field: NotificationManager__field__14)
 
-  public func notify(id: Int32, notification: Notification?) {
+  open func notify(id: Int32, notification: Notification?) {
     self.javaObject.call(method: NotificationManager__method__0, [id.toJavaParameter(), notification.toJavaParameter()])
   }
 
-  public func notify(tag: String, id: Int32, notification: Notification?) {
+  open func notify(tag: String, id: Int32, notification: Notification?) {
     self.javaObject.call(method: NotificationManager__method__1, [tag.toJavaParameter(), id.toJavaParameter(), notification.toJavaParameter()])
   }
 
-  public func cancel(id: Int32) {
+  open func cancel(id: Int32) {
     self.javaObject.call(method: NotificationManager__method__2, [id.toJavaParameter()])
   }
 
-  public func cancel(tag: String, id: Int32) {
+  open func cancel(tag: String, id: Int32) {
     self.javaObject.call(method: NotificationManager__method__3, [tag.toJavaParameter(), id.toJavaParameter()])
   }
 
-  public func cancelAll() {
+  open func cancelAll() {
     self.javaObject.call(method: NotificationManager__method__4, [])
   }
 
-  public func getAutomaticZenRules<R>() -> R? where R: Map, R.K == String, R.V == AutomaticZenRule {
+  open func getAutomaticZenRules<R>() -> R? where R: Map, R.K == String, R.V == AutomaticZenRule {
     self.javaObject.call(method: NotificationManager__method__5, [])
   }
 
-  public func getAutomaticZenRule(id: String) -> AutomaticZenRule? {
+  open func getAutomaticZenRule(id: String) -> AutomaticZenRule? {
     self.javaObject.call(method: NotificationManager__method__6, [id.toJavaParameter()])
   }
 
-  public func addAutomaticZenRule(automaticZenRule: AutomaticZenRule?) -> String {
+  open func addAutomaticZenRule(automaticZenRule: AutomaticZenRule?) -> String {
     self.javaObject.call(method: NotificationManager__method__7, [automaticZenRule.toJavaParameter()])
   }
 
-  public func updateAutomaticZenRule(id: String, automaticZenRule: AutomaticZenRule?) -> Bool {
+  open func updateAutomaticZenRule(id: String, automaticZenRule: AutomaticZenRule?) -> Bool {
     self.javaObject.call(method: NotificationManager__method__8, [id.toJavaParameter(), automaticZenRule.toJavaParameter()])
   }
 
-  public func removeAutomaticZenRule(id: String) -> Bool {
+  open func removeAutomaticZenRule(id: String) -> Bool {
     self.javaObject.call(method: NotificationManager__method__9, [id.toJavaParameter()])
   }
 
-  public func getImportance() -> Int32 {
+  open func getImportance() -> Int32 {
     self.javaObject.call(method: NotificationManager__method__10, [])
   }
 
-  public func areNotificationsEnabled() -> Bool {
+  open func areNotificationsEnabled() -> Bool {
     self.javaObject.call(method: NotificationManager__method__11, [])
   }
 
-  public func isNotificationPolicyAccessGranted() -> Bool {
+  open func isNotificationPolicyAccessGranted() -> Bool {
     self.javaObject.call(method: NotificationManager__method__12, [])
   }
 
-  public func getNotificationPolicy() -> NotificationManager.Policy? {
+  open func getNotificationPolicy() -> NotificationManager.Policy? {
     self.javaObject.call(method: NotificationManager__method__13, [])
   }
 
-  public func setNotificationPolicy(policy: NotificationManager.Policy?) {
+  open func setNotificationPolicy(policy: NotificationManager.Policy?) {
     self.javaObject.call(method: NotificationManager__method__14, [policy.toJavaParameter()])
   }
 
@@ -106,7 +106,7 @@ open class NotificationManager: Object {
 }
 
 extension NotificationManager {
-  public func getAutomaticZenRules() -> MapProxy<String, AutomaticZenRule>? {
+  open func getAutomaticZenRules() -> MapProxy<String, AutomaticZenRule>? {
     self.javaObject.call(method: NotificationManager__method__5, [])
   }
 }
@@ -150,11 +150,11 @@ open class NotificationManagerPolicy: Object, Parcelable {
     super.init(ctor: NotificationManagerPolicy__method__1, [priorityCategories.toJavaParameter(), priorityCallSenders.toJavaParameter(), priorityMessageSenders.toJavaParameter(), suppressedVisualEffects.toJavaParameter()])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: NotificationManagerPolicy__method__2, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: NotificationManagerPolicy__method__3, [])
   }
 

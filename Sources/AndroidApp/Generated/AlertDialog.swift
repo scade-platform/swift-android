@@ -16,36 +16,44 @@ open class AlertDialog: Dialog {
 
   public static let THEME_TRADITIONAL: Int32 = AlertDialog__class.getStatic(field: AlertDialog__field__4)
 
-  public func setMessage(message: String?) {
-    self.javaObject.call(method: AlertDialog__method__0, [message.toJavaParameter()])
+  override public init(context: Context?) {
+    super.init(ctor: AlertDialog__method__0, [JavaParameter(object: context?.toJavaObject())])
   }
 
-  public func setButton(whichButton: Int32, text: String?, listener: DialogInterface.OnClickListener?) {
-    self.javaObject.call(method: AlertDialog__method__1, [whichButton.toJavaParameter(), text.toJavaParameter(), JavaParameter(object: listener?.toJavaObject())])
+  override public init(context: Context?, cancelable: Bool, cancelListener: DialogInterface.OnCancelListener?) {
+    super.init(ctor: AlertDialog__method__1, [JavaParameter(object: context?.toJavaObject()), cancelable.toJavaParameter(), JavaParameter(object: cancelListener?.toJavaObject())])
   }
 
-  public func setButton(text: String?, listener: DialogInterface.OnClickListener?) {
-    self.javaObject.call(method: AlertDialog__method__2, [text.toJavaParameter(), JavaParameter(object: listener?.toJavaObject())])
+  override public init(context: Context?, themeResId: Int32) {
+    super.init(ctor: AlertDialog__method__2, [JavaParameter(object: context?.toJavaObject()), themeResId.toJavaParameter()])
   }
 
-  public func setButton2(text: String?, listener: DialogInterface.OnClickListener?) {
-    self.javaObject.call(method: AlertDialog__method__3, [text.toJavaParameter(), JavaParameter(object: listener?.toJavaObject())])
+  open func setMessage(message: String?) {
+    self.javaObject.call(method: AlertDialog__method__3, [message.toJavaParameter()])
   }
 
-  public func setButton3(text: String?, listener: DialogInterface.OnClickListener?) {
-    self.javaObject.call(method: AlertDialog__method__4, [text.toJavaParameter(), JavaParameter(object: listener?.toJavaObject())])
+  open func setButton(whichButton: Int32, text: String?, listener: DialogInterface.OnClickListener?) {
+    self.javaObject.call(method: AlertDialog__method__4, [whichButton.toJavaParameter(), text.toJavaParameter(), JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setIcon(resId: Int32) {
+  open func setIcon(resId: Int32) {
     self.javaObject.call(method: AlertDialog__method__5, [resId.toJavaParameter()])
   }
 
-  public func setIconAttribute(attrId: Int32) {
+  open func setIconAttribute(attrId: Int32) {
     self.javaObject.call(method: AlertDialog__method__6, [attrId.toJavaParameter()])
   }
 
-  public func setInverseBackgroundForced(forceInverseBackground: Bool) {
+  open func setInverseBackgroundForced(forceInverseBackground: Bool) {
     self.javaObject.call(method: AlertDialog__method__7, [forceInverseBackground.toJavaParameter()])
+  }
+
+  public required init(_ obj: JavaObject) {
+    super.init(obj)
+  }
+
+  public required init(ctor: JavaMethodID, _ args: [JavaParameter]) {
+    super.init(ctor: ctor, args)
   }
 }
 
@@ -60,113 +68,109 @@ open class AlertDialogBuilder: Object {
     super.init(ctor: AlertDialogBuilder__method__1, [JavaParameter(object: context?.toJavaObject()), themeResId.toJavaParameter()])
   }
 
-  public func getContext() -> Context? {
+  open func getContext() -> Context? {
     let res = self.javaObject.call(method: AlertDialogBuilder__method__2, []) as Object?
     return cast(res, to: ContextProxy.self)
   }
 
-  public func setTitle(titleId: Int32) -> AlertDialog.Builder? {
+  open func setTitle(titleId: Int32) -> AlertDialog.Builder? {
     self.javaObject.call(method: AlertDialogBuilder__method__3, [titleId.toJavaParameter()])
   }
 
-  public func setTitle(title: String?) -> AlertDialog.Builder? {
+  open func setTitle(title: String?) -> AlertDialog.Builder? {
     self.javaObject.call(method: AlertDialogBuilder__method__4, [title.toJavaParameter()])
   }
 
-  public func setMessage(messageId: Int32) -> AlertDialog.Builder? {
+  open func setMessage(messageId: Int32) -> AlertDialog.Builder? {
     self.javaObject.call(method: AlertDialogBuilder__method__5, [messageId.toJavaParameter()])
   }
 
-  public func setMessage(message: String?) -> AlertDialog.Builder? {
+  open func setMessage(message: String?) -> AlertDialog.Builder? {
     self.javaObject.call(method: AlertDialogBuilder__method__6, [message.toJavaParameter()])
   }
 
-  public func setIcon(iconId: Int32) -> AlertDialog.Builder? {
+  open func setIcon(iconId: Int32) -> AlertDialog.Builder? {
     self.javaObject.call(method: AlertDialogBuilder__method__7, [iconId.toJavaParameter()])
   }
 
-  public func setIconAttribute(attrId: Int32) -> AlertDialog.Builder? {
+  open func setIconAttribute(attrId: Int32) -> AlertDialog.Builder? {
     self.javaObject.call(method: AlertDialogBuilder__method__8, [attrId.toJavaParameter()])
   }
 
-  public func setPositiveButton(textId: Int32, listener: DialogInterface.OnClickListener?) -> AlertDialog.Builder? {
+  open func setPositiveButton(textId: Int32, listener: DialogInterface.OnClickListener?) -> AlertDialog.Builder? {
     self.javaObject.call(method: AlertDialogBuilder__method__9, [textId.toJavaParameter(), JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setPositiveButton(text: String?, listener: DialogInterface.OnClickListener?) -> AlertDialog.Builder? {
+  open func setPositiveButton(text: String?, listener: DialogInterface.OnClickListener?) -> AlertDialog.Builder? {
     self.javaObject.call(method: AlertDialogBuilder__method__10, [text.toJavaParameter(), JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setNegativeButton(textId: Int32, listener: DialogInterface.OnClickListener?) -> AlertDialog.Builder? {
+  open func setNegativeButton(textId: Int32, listener: DialogInterface.OnClickListener?) -> AlertDialog.Builder? {
     self.javaObject.call(method: AlertDialogBuilder__method__11, [textId.toJavaParameter(), JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setNegativeButton(text: String?, listener: DialogInterface.OnClickListener?) -> AlertDialog.Builder? {
+  open func setNegativeButton(text: String?, listener: DialogInterface.OnClickListener?) -> AlertDialog.Builder? {
     self.javaObject.call(method: AlertDialogBuilder__method__12, [text.toJavaParameter(), JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setNeutralButton(textId: Int32, listener: DialogInterface.OnClickListener?) -> AlertDialog.Builder? {
+  open func setNeutralButton(textId: Int32, listener: DialogInterface.OnClickListener?) -> AlertDialog.Builder? {
     self.javaObject.call(method: AlertDialogBuilder__method__13, [textId.toJavaParameter(), JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setNeutralButton(text: String?, listener: DialogInterface.OnClickListener?) -> AlertDialog.Builder? {
+  open func setNeutralButton(text: String?, listener: DialogInterface.OnClickListener?) -> AlertDialog.Builder? {
     self.javaObject.call(method: AlertDialogBuilder__method__14, [text.toJavaParameter(), JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setCancelable(cancelable: Bool) -> AlertDialog.Builder? {
+  open func setCancelable(cancelable: Bool) -> AlertDialog.Builder? {
     self.javaObject.call(method: AlertDialogBuilder__method__15, [cancelable.toJavaParameter()])
   }
 
-  public func setOnCancelListener(onCancelListener: DialogInterface.OnCancelListener?) -> AlertDialog.Builder? {
+  open func setOnCancelListener(onCancelListener: DialogInterface.OnCancelListener?) -> AlertDialog.Builder? {
     self.javaObject.call(method: AlertDialogBuilder__method__16, [JavaParameter(object: onCancelListener?.toJavaObject())])
   }
 
-  public func setOnDismissListener(onDismissListener: DialogInterface.OnDismissListener?) -> AlertDialog.Builder? {
+  open func setOnDismissListener(onDismissListener: DialogInterface.OnDismissListener?) -> AlertDialog.Builder? {
     self.javaObject.call(method: AlertDialogBuilder__method__17, [JavaParameter(object: onDismissListener?.toJavaObject())])
   }
 
-  public func setOnKeyListener(onKeyListener: DialogInterface.OnKeyListener?) -> AlertDialog.Builder? {
+  open func setOnKeyListener(onKeyListener: DialogInterface.OnKeyListener?) -> AlertDialog.Builder? {
     self.javaObject.call(method: AlertDialogBuilder__method__18, [JavaParameter(object: onKeyListener?.toJavaObject())])
   }
 
-  public func setItems(itemsId: Int32, listener: DialogInterface.OnClickListener?) -> AlertDialog.Builder? {
+  open func setItems(itemsId: Int32, listener: DialogInterface.OnClickListener?) -> AlertDialog.Builder? {
     self.javaObject.call(method: AlertDialogBuilder__method__19, [itemsId.toJavaParameter(), JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setItems(items: [String?], listener: DialogInterface.OnClickListener?) -> AlertDialog.Builder? {
+  open func setItems(items: [String?], listener: DialogInterface.OnClickListener?) -> AlertDialog.Builder? {
     self.javaObject.call(method: AlertDialogBuilder__method__20, [items.toJavaParameter(), JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setMultiChoiceItems(itemsId: Int32, checkedItems: [Bool], listener: DialogInterface.OnMultiChoiceClickListener?) -> AlertDialog.Builder? {
+  open func setMultiChoiceItems(itemsId: Int32, checkedItems: [Bool], listener: DialogInterface.OnMultiChoiceClickListener?) -> AlertDialog.Builder? {
     self.javaObject.call(method: AlertDialogBuilder__method__21, [itemsId.toJavaParameter(), checkedItems.toJavaParameter(), JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setMultiChoiceItems(items: [String?], checkedItems: [Bool], listener: DialogInterface.OnMultiChoiceClickListener?) -> AlertDialog.Builder? {
+  open func setMultiChoiceItems(items: [String?], checkedItems: [Bool], listener: DialogInterface.OnMultiChoiceClickListener?) -> AlertDialog.Builder? {
     self.javaObject.call(method: AlertDialogBuilder__method__22, [items.toJavaParameter(), checkedItems.toJavaParameter(), JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setSingleChoiceItems(itemsId: Int32, checkedItem: Int32, listener: DialogInterface.OnClickListener?) -> AlertDialog.Builder? {
+  open func setSingleChoiceItems(itemsId: Int32, checkedItem: Int32, listener: DialogInterface.OnClickListener?) -> AlertDialog.Builder? {
     self.javaObject.call(method: AlertDialogBuilder__method__23, [itemsId.toJavaParameter(), checkedItem.toJavaParameter(), JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setSingleChoiceItems(items: [String?], checkedItem: Int32, listener: DialogInterface.OnClickListener?) -> AlertDialog.Builder? {
+  open func setSingleChoiceItems(items: [String?], checkedItem: Int32, listener: DialogInterface.OnClickListener?) -> AlertDialog.Builder? {
     self.javaObject.call(method: AlertDialogBuilder__method__24, [items.toJavaParameter(), checkedItem.toJavaParameter(), JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setView(layoutResId: Int32) -> AlertDialog.Builder? {
+  open func setView(layoutResId: Int32) -> AlertDialog.Builder? {
     self.javaObject.call(method: AlertDialogBuilder__method__25, [layoutResId.toJavaParameter()])
   }
 
-  public func setInverseBackgroundForced(useInverseBackground: Bool) -> AlertDialog.Builder? {
-    self.javaObject.call(method: AlertDialogBuilder__method__26, [useInverseBackground.toJavaParameter()])
+  open func create() -> AlertDialog? {
+    self.javaObject.call(method: AlertDialogBuilder__method__26, [])
   }
 
-  public func create() -> AlertDialog? {
+  open func show() -> AlertDialog? {
     self.javaObject.call(method: AlertDialogBuilder__method__27, [])
-  }
-
-  public func show() -> AlertDialog? {
-    self.javaObject.call(method: AlertDialogBuilder__method__28, [])
   }
 
   public required init(_ obj: JavaObject) {
@@ -182,11 +186,11 @@ open class AlertDialogBuilder: Object {
 
 private let AlertDialog__class = findJavaClass(fqn: "android/app/AlertDialog")!
 
-private let AlertDialog__method__0 = AlertDialog__class.getMethodID(name: "setMessage", sig: "(Ljava/lang/CharSequence;)V")!
-private let AlertDialog__method__1 = AlertDialog__class.getMethodID(name: "setButton", sig: "(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V")!
-private let AlertDialog__method__2 = AlertDialog__class.getMethodID(name: "setButton", sig: "(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V")!
-private let AlertDialog__method__3 = AlertDialog__class.getMethodID(name: "setButton2", sig: "(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V")!
-private let AlertDialog__method__4 = AlertDialog__class.getMethodID(name: "setButton3", sig: "(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V")!
+private let AlertDialog__method__0 = AlertDialog__class.getMethodID(name: "<init>", sig: "(Landroid/content/Context;)V")!
+private let AlertDialog__method__1 = AlertDialog__class.getMethodID(name: "<init>", sig: "(Landroid/content/Context;ZLandroid/content/DialogInterface$OnCancelListener;)V")!
+private let AlertDialog__method__2 = AlertDialog__class.getMethodID(name: "<init>", sig: "(Landroid/content/Context;I)V")!
+private let AlertDialog__method__3 = AlertDialog__class.getMethodID(name: "setMessage", sig: "(Ljava/lang/CharSequence;)V")!
+private let AlertDialog__method__4 = AlertDialog__class.getMethodID(name: "setButton", sig: "(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V")!
 private let AlertDialog__method__5 = AlertDialog__class.getMethodID(name: "setIcon", sig: "(I)V")!
 private let AlertDialog__method__6 = AlertDialog__class.getMethodID(name: "setIconAttribute", sig: "(I)V")!
 private let AlertDialog__method__7 = AlertDialog__class.getMethodID(name: "setInverseBackgroundForced", sig: "(Z)V")!
@@ -227,6 +231,5 @@ private let AlertDialogBuilder__method__22 = AlertDialogBuilder__class.getMethod
 private let AlertDialogBuilder__method__23 = AlertDialogBuilder__class.getMethodID(name: "setSingleChoiceItems", sig: "(IILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;")!
 private let AlertDialogBuilder__method__24 = AlertDialogBuilder__class.getMethodID(name: "setSingleChoiceItems", sig: "([Ljava/lang/CharSequence;ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;")!
 private let AlertDialogBuilder__method__25 = AlertDialogBuilder__class.getMethodID(name: "setView", sig: "(I)Landroid/app/AlertDialog$Builder;")!
-private let AlertDialogBuilder__method__26 = AlertDialogBuilder__class.getMethodID(name: "setInverseBackgroundForced", sig: "(Z)Landroid/app/AlertDialog$Builder;")!
-private let AlertDialogBuilder__method__27 = AlertDialogBuilder__class.getMethodID(name: "create", sig: "()Landroid/app/AlertDialog;")!
-private let AlertDialogBuilder__method__28 = AlertDialogBuilder__class.getMethodID(name: "show", sig: "()Landroid/app/AlertDialog;")!
+private let AlertDialogBuilder__method__26 = AlertDialogBuilder__class.getMethodID(name: "create", sig: "()Landroid/app/AlertDialog;")!
+private let AlertDialogBuilder__method__27 = AlertDialogBuilder__class.getMethodID(name: "show", sig: "()Landroid/app/AlertDialog;")!

@@ -4,23 +4,23 @@ import AndroidOS
 import Java
 
 open class JobParameters: Object, Parcelable {
-  public func getJobId() -> Int32 {
+  open func getJobId() -> Int32 {
     self.javaObject.call(method: JobParameters__method__0, [])
   }
 
-  public func isOverrideDeadlineExpired() -> Bool {
+  open func isOverrideDeadlineExpired() -> Bool {
     self.javaObject.call(method: JobParameters__method__1, [])
   }
 
-  public func getTriggeredContentAuthorities() -> [String] {
+  open func getTriggeredContentAuthorities() -> [String] {
     self.javaObject.call(method: JobParameters__method__2, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: JobParameters__method__3, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: JobParameters__method__4, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }

@@ -271,7 +271,7 @@ open class ActivityInfo: ComponentInfo, Parcelable {
     self.javaObject.call(method: ActivityInfo__method__2, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ActivityInfo__method__3, [])
   }
 

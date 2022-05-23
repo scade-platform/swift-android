@@ -110,31 +110,31 @@ open class AudioFormat: Object, Parcelable {
 
   public static let SAMPLE_RATE_UNSPECIFIED: Int32 = AudioFormat__class.getStatic(field: AudioFormat__field__51)
 
-  public func getEncoding() -> Int32 {
+  open func getEncoding() -> Int32 {
     self.javaObject.call(method: AudioFormat__method__0, [])
   }
 
-  public func getSampleRate() -> Int32 {
+  open func getSampleRate() -> Int32 {
     self.javaObject.call(method: AudioFormat__method__1, [])
   }
 
-  public func getChannelMask() -> Int32 {
+  open func getChannelMask() -> Int32 {
     self.javaObject.call(method: AudioFormat__method__2, [])
   }
 
-  public func getChannelIndexMask() -> Int32 {
+  open func getChannelIndexMask() -> Int32 {
     self.javaObject.call(method: AudioFormat__method__3, [])
   }
 
-  public func getChannelCount() -> Int32 {
+  open func getChannelCount() -> Int32 {
     self.javaObject.call(method: AudioFormat__method__4, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: AudioFormat__method__5, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: AudioFormat__method__6, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }
@@ -150,23 +150,23 @@ open class AudioFormatBuilder: Object {
     super.init(ctor: AudioFormatBuilder__method__1, [af.toJavaParameter()])
   }
 
-  public func build() -> AudioFormat? {
+  open func build() -> AudioFormat? {
     self.javaObject.call(method: AudioFormatBuilder__method__2, [])
   }
 
-  public func setEncoding(encoding: Int32) -> AudioFormat.Builder? {
+  open func setEncoding(encoding: Int32) -> AudioFormat.Builder? {
     self.javaObject.call(method: AudioFormatBuilder__method__3, [encoding.toJavaParameter()])
   }
 
-  public func setChannelMask(channelMask: Int32) -> AudioFormat.Builder? {
+  open func setChannelMask(channelMask: Int32) -> AudioFormat.Builder? {
     self.javaObject.call(method: AudioFormatBuilder__method__4, [channelMask.toJavaParameter()])
   }
 
-  public func setChannelIndexMask(channelIndexMask: Int32) -> AudioFormat.Builder? {
+  open func setChannelIndexMask(channelIndexMask: Int32) -> AudioFormat.Builder? {
     self.javaObject.call(method: AudioFormatBuilder__method__5, [channelIndexMask.toJavaParameter()])
   }
 
-  public func setSampleRate(sampleRate: Int32) -> AudioFormat.Builder? {
+  open func setSampleRate(sampleRate: Int32) -> AudioFormat.Builder? {
     self.javaObject.call(method: AudioFormatBuilder__method__6, [sampleRate.toJavaParameter()])
   }
 

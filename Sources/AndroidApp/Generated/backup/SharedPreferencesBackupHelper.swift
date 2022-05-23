@@ -9,11 +9,11 @@ open class SharedPreferencesBackupHelper: FileBackupHelperBase, BackupHelper {
     super.init(ctor: SharedPreferencesBackupHelper__method__0, [JavaParameter(object: context?.toJavaObject()), prefGroups.toJavaParameter()])
   }
 
-  public func performBackup(oldState: ParcelFileDescriptor?, data: BackupDataOutput?, newState: ParcelFileDescriptor?) {
+  open func performBackup(oldState: ParcelFileDescriptor?, data: BackupDataOutput?, newState: ParcelFileDescriptor?) {
     self.javaObject.call(method: SharedPreferencesBackupHelper__method__1, [oldState.toJavaParameter(), data.toJavaParameter(), newState.toJavaParameter()])
   }
 
-  public func restoreEntity(data: BackupDataInputStream?) {
+  open func restoreEntity(data: BackupDataInputStream?) {
     self.javaObject.call(method: SharedPreferencesBackupHelper__method__2, [data.toJavaParameter()])
   }
 

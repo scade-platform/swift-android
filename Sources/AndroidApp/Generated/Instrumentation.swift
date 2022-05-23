@@ -17,125 +17,125 @@ open class Instrumentation: Object {
     super.init(ctor: Instrumentation__method__0, [])
   }
 
-  public func onCreate(arguments: Bundle?) {
+  open func onCreate(arguments: Bundle?) {
     self.javaObject.call(method: Instrumentation__method__1, [arguments.toJavaParameter()])
   }
 
-  public func start() {
+  open func start() {
     self.javaObject.call(method: Instrumentation__method__2, [])
   }
 
-  public func onStart() {
+  open func onStart() {
     self.javaObject.call(method: Instrumentation__method__3, [])
   }
 
-  public func sendStatus(resultCode: Int32, results: Bundle?) {
+  open func sendStatus(resultCode: Int32, results: Bundle?) {
     self.javaObject.call(method: Instrumentation__method__4, [resultCode.toJavaParameter(), results.toJavaParameter()])
   }
 
-  public func finish(resultCode: Int32, results: Bundle?) {
+  open func finish(resultCode: Int32, results: Bundle?) {
     self.javaObject.call(method: Instrumentation__method__5, [resultCode.toJavaParameter(), results.toJavaParameter()])
   }
 
-  public func setAutomaticPerformanceSnapshots() {
+  open func setAutomaticPerformanceSnapshots() {
     self.javaObject.call(method: Instrumentation__method__6, [])
   }
 
-  public func startPerformanceSnapshot() {
+  open func startPerformanceSnapshot() {
     self.javaObject.call(method: Instrumentation__method__7, [])
   }
 
-  public func endPerformanceSnapshot() {
+  open func endPerformanceSnapshot() {
     self.javaObject.call(method: Instrumentation__method__8, [])
   }
 
-  public func onDestroy() {
+  open func onDestroy() {
     self.javaObject.call(method: Instrumentation__method__9, [])
   }
 
-  public func getContext() -> Context? {
+  open func getContext() -> Context? {
     let res = self.javaObject.call(method: Instrumentation__method__10, []) as Object?
     return cast(res, to: ContextProxy.self)
   }
 
-  public func getComponentName() -> ComponentName? {
+  open func getComponentName() -> ComponentName? {
     self.javaObject.call(method: Instrumentation__method__11, [])
   }
 
-  public func getTargetContext() -> Context? {
+  open func getTargetContext() -> Context? {
     let res = self.javaObject.call(method: Instrumentation__method__12, []) as Object?
     return cast(res, to: ContextProxy.self)
   }
 
-  public func isProfiling() -> Bool {
+  open func isProfiling() -> Bool {
     self.javaObject.call(method: Instrumentation__method__13, [])
   }
 
-  public func startProfiling() {
+  open func startProfiling() {
     self.javaObject.call(method: Instrumentation__method__14, [])
   }
 
-  public func stopProfiling() {
+  open func stopProfiling() {
     self.javaObject.call(method: Instrumentation__method__15, [])
   }
 
-  public func setInTouchMode(inTouch: Bool) {
+  open func setInTouchMode(inTouch: Bool) {
     self.javaObject.call(method: Instrumentation__method__16, [inTouch.toJavaParameter()])
   }
 
-  public func waitForIdleSync() {
+  open func waitForIdleSync() {
     self.javaObject.call(method: Instrumentation__method__17, [])
   }
 
-  public func startActivitySync(intent: Intent?) -> Activity? {
+  open func startActivitySync(intent: Intent?) -> Activity? {
     self.javaObject.call(method: Instrumentation__method__18, [intent.toJavaParameter()])
   }
 
-  public func addMonitor(monitor: Instrumentation.ActivityMonitor?) {
+  open func addMonitor(monitor: Instrumentation.ActivityMonitor?) {
     self.javaObject.call(method: Instrumentation__method__19, [monitor.toJavaParameter()])
   }
 
-  public func addMonitor(filter: IntentFilter?, result: Instrumentation.ActivityResult?, block: Bool) -> Instrumentation.ActivityMonitor? {
+  open func addMonitor(filter: IntentFilter?, result: Instrumentation.ActivityResult?, block: Bool) -> Instrumentation.ActivityMonitor? {
     self.javaObject.call(method: Instrumentation__method__20, [filter.toJavaParameter(), result.toJavaParameter(), block.toJavaParameter()])
   }
 
-  public func addMonitor(cls: String, result: Instrumentation.ActivityResult?, block: Bool) -> Instrumentation.ActivityMonitor? {
+  open func addMonitor(cls: String, result: Instrumentation.ActivityResult?, block: Bool) -> Instrumentation.ActivityMonitor? {
     self.javaObject.call(method: Instrumentation__method__21, [cls.toJavaParameter(), result.toJavaParameter(), block.toJavaParameter()])
   }
 
-  public func checkMonitorHit(monitor: Instrumentation.ActivityMonitor?, minHits: Int32) -> Bool {
+  open func checkMonitorHit(monitor: Instrumentation.ActivityMonitor?, minHits: Int32) -> Bool {
     self.javaObject.call(method: Instrumentation__method__22, [monitor.toJavaParameter(), minHits.toJavaParameter()])
   }
 
-  public func waitForMonitor(monitor: Instrumentation.ActivityMonitor?) -> Activity? {
+  open func waitForMonitor(monitor: Instrumentation.ActivityMonitor?) -> Activity? {
     self.javaObject.call(method: Instrumentation__method__23, [monitor.toJavaParameter()])
   }
 
-  public func waitForMonitorWithTimeout(monitor: Instrumentation.ActivityMonitor?, timeOut: Int64) -> Activity? {
+  open func waitForMonitorWithTimeout(monitor: Instrumentation.ActivityMonitor?, timeOut: Int64) -> Activity? {
     self.javaObject.call(method: Instrumentation__method__24, [monitor.toJavaParameter(), timeOut.toJavaParameter()])
   }
 
-  public func removeMonitor(monitor: Instrumentation.ActivityMonitor?) {
+  open func removeMonitor(monitor: Instrumentation.ActivityMonitor?) {
     self.javaObject.call(method: Instrumentation__method__25, [monitor.toJavaParameter()])
   }
 
-  public func invokeMenuActionSync(targetActivity: Activity?, id: Int32, flag: Int32) -> Bool {
+  open func invokeMenuActionSync(targetActivity: Activity?, id: Int32, flag: Int32) -> Bool {
     self.javaObject.call(method: Instrumentation__method__26, [targetActivity.toJavaParameter(), id.toJavaParameter(), flag.toJavaParameter()])
   }
 
-  public func invokeContextMenuAction(targetActivity: Activity?, id: Int32, flag: Int32) -> Bool {
+  open func invokeContextMenuAction(targetActivity: Activity?, id: Int32, flag: Int32) -> Bool {
     self.javaObject.call(method: Instrumentation__method__27, [targetActivity.toJavaParameter(), id.toJavaParameter(), flag.toJavaParameter()])
   }
 
-  public func sendStringSync(text: String) {
+  open func sendStringSync(text: String) {
     self.javaObject.call(method: Instrumentation__method__28, [text.toJavaParameter()])
   }
 
-  public func sendKeyDownUpSync(key: Int32) {
+  open func sendKeyDownUpSync(key: Int32) {
     self.javaObject.call(method: Instrumentation__method__29, [key.toJavaParameter()])
   }
 
-  public func sendCharacterSync(keyCode: Int32) {
+  open func sendCharacterSync(keyCode: Int32) {
     self.javaObject.call(method: Instrumentation__method__30, [keyCode.toJavaParameter()])
   }
 
@@ -143,80 +143,72 @@ open class Instrumentation: Object {
     Instrumentation__class.callStatic(method: Instrumentation__method__31, [clazz.toJavaParameter(), JavaParameter(object: context?.toJavaObject())])
   }
 
-  public func callApplicationOnCreate(app: Application?) {
+  open func callApplicationOnCreate(app: Application?) {
     self.javaObject.call(method: Instrumentation__method__32, [app.toJavaParameter()])
   }
 
-  public func callActivityOnCreate(activity: Activity?, icicle: Bundle?) {
+  open func callActivityOnCreate(activity: Activity?, icicle: Bundle?) {
     self.javaObject.call(method: Instrumentation__method__33, [activity.toJavaParameter(), icicle.toJavaParameter()])
   }
 
-  public func callActivityOnDestroy(activity: Activity?) {
+  open func callActivityOnDestroy(activity: Activity?) {
     self.javaObject.call(method: Instrumentation__method__34, [activity.toJavaParameter()])
   }
 
-  public func callActivityOnRestoreInstanceState(activity: Activity?, savedInstanceState: Bundle?) {
+  open func callActivityOnRestoreInstanceState(activity: Activity?, savedInstanceState: Bundle?) {
     self.javaObject.call(method: Instrumentation__method__35, [activity.toJavaParameter(), savedInstanceState.toJavaParameter()])
   }
 
-  public func callActivityOnPostCreate(activity: Activity?, icicle: Bundle?) {
+  open func callActivityOnPostCreate(activity: Activity?, icicle: Bundle?) {
     self.javaObject.call(method: Instrumentation__method__36, [activity.toJavaParameter(), icicle.toJavaParameter()])
   }
 
-  public func callActivityOnNewIntent(activity: Activity?, intent: Intent?) {
+  open func callActivityOnNewIntent(activity: Activity?, intent: Intent?) {
     self.javaObject.call(method: Instrumentation__method__37, [activity.toJavaParameter(), intent.toJavaParameter()])
   }
 
-  public func callActivityOnStart(activity: Activity?) {
+  open func callActivityOnStart(activity: Activity?) {
     self.javaObject.call(method: Instrumentation__method__38, [activity.toJavaParameter()])
   }
 
-  public func callActivityOnRestart(activity: Activity?) {
+  open func callActivityOnRestart(activity: Activity?) {
     self.javaObject.call(method: Instrumentation__method__39, [activity.toJavaParameter()])
   }
 
-  public func callActivityOnResume(activity: Activity?) {
+  open func callActivityOnResume(activity: Activity?) {
     self.javaObject.call(method: Instrumentation__method__40, [activity.toJavaParameter()])
   }
 
-  public func callActivityOnStop(activity: Activity?) {
+  open func callActivityOnStop(activity: Activity?) {
     self.javaObject.call(method: Instrumentation__method__41, [activity.toJavaParameter()])
   }
 
-  public func callActivityOnSaveInstanceState(activity: Activity?, outState: Bundle?) {
+  open func callActivityOnSaveInstanceState(activity: Activity?, outState: Bundle?) {
     self.javaObject.call(method: Instrumentation__method__42, [activity.toJavaParameter(), outState.toJavaParameter()])
   }
 
-  public func callActivityOnPause(activity: Activity?) {
+  open func callActivityOnPause(activity: Activity?) {
     self.javaObject.call(method: Instrumentation__method__43, [activity.toJavaParameter()])
   }
 
-  public func callActivityOnUserLeaving(activity: Activity?) {
+  open func callActivityOnUserLeaving(activity: Activity?) {
     self.javaObject.call(method: Instrumentation__method__44, [activity.toJavaParameter()])
   }
 
-  public func startAllocCounting() {
+  open func getAllocCounts() -> Bundle? {
     self.javaObject.call(method: Instrumentation__method__45, [])
   }
 
-  public func stopAllocCounting() {
+  open func getBinderCounts() -> Bundle? {
     self.javaObject.call(method: Instrumentation__method__46, [])
   }
 
-  public func getAllocCounts() -> Bundle? {
+  open func getUiAutomation() -> UiAutomation? {
     self.javaObject.call(method: Instrumentation__method__47, [])
   }
 
-  public func getBinderCounts() -> Bundle? {
-    self.javaObject.call(method: Instrumentation__method__48, [])
-  }
-
-  public func getUiAutomation() -> UiAutomation? {
-    self.javaObject.call(method: Instrumentation__method__49, [])
-  }
-
-  public func getUiAutomation(flags: Int32) -> UiAutomation? {
-    self.javaObject.call(method: Instrumentation__method__50, [flags.toJavaParameter()])
+  open func getUiAutomation(flags: Int32) -> UiAutomation? {
+    self.javaObject.call(method: Instrumentation__method__48, [flags.toJavaParameter()])
   }
 
   public required init(_ obj: JavaObject) {
@@ -235,11 +227,11 @@ open class InstrumentationActivityResult: Object {
     super.init(ctor: InstrumentationActivityResult__method__0, [resultCode.toJavaParameter(), resultData.toJavaParameter()])
   }
 
-  public func getResultCode() -> Int32 {
+  open func getResultCode() -> Int32 {
     self.javaObject.call(method: InstrumentationActivityResult__method__1, [])
   }
 
-  public func getResultData() -> Intent? {
+  open func getResultData() -> Intent? {
     self.javaObject.call(method: InstrumentationActivityResult__method__2, [])
   }
 
@@ -349,12 +341,10 @@ private let Instrumentation__method__41 = Instrumentation__class.getMethodID(nam
 private let Instrumentation__method__42 = Instrumentation__class.getMethodID(name: "callActivityOnSaveInstanceState", sig: "(Landroid/app/Activity;Landroid/os/Bundle;)V")!
 private let Instrumentation__method__43 = Instrumentation__class.getMethodID(name: "callActivityOnPause", sig: "(Landroid/app/Activity;)V")!
 private let Instrumentation__method__44 = Instrumentation__class.getMethodID(name: "callActivityOnUserLeaving", sig: "(Landroid/app/Activity;)V")!
-private let Instrumentation__method__45 = Instrumentation__class.getMethodID(name: "startAllocCounting", sig: "()V")!
-private let Instrumentation__method__46 = Instrumentation__class.getMethodID(name: "stopAllocCounting", sig: "()V")!
-private let Instrumentation__method__47 = Instrumentation__class.getMethodID(name: "getAllocCounts", sig: "()Landroid/os/Bundle;")!
-private let Instrumentation__method__48 = Instrumentation__class.getMethodID(name: "getBinderCounts", sig: "()Landroid/os/Bundle;")!
-private let Instrumentation__method__49 = Instrumentation__class.getMethodID(name: "getUiAutomation", sig: "()Landroid/app/UiAutomation;")!
-private let Instrumentation__method__50 = Instrumentation__class.getMethodID(name: "getUiAutomation", sig: "(I)Landroid/app/UiAutomation;")!
+private let Instrumentation__method__45 = Instrumentation__class.getMethodID(name: "getAllocCounts", sig: "()Landroid/os/Bundle;")!
+private let Instrumentation__method__46 = Instrumentation__class.getMethodID(name: "getBinderCounts", sig: "()Landroid/os/Bundle;")!
+private let Instrumentation__method__47 = Instrumentation__class.getMethodID(name: "getUiAutomation", sig: "()Landroid/app/UiAutomation;")!
+private let Instrumentation__method__48 = Instrumentation__class.getMethodID(name: "getUiAutomation", sig: "(I)Landroid/app/UiAutomation;")!
 
 private let Instrumentation__field__0 = Instrumentation__class.getStaticFieldID(name: "REPORT_KEY_IDENTIFIER", sig: "Ljava/lang/String;")!
 private let Instrumentation__field__1 = Instrumentation__class.getStaticFieldID(name: "REPORT_KEY_STREAMRESULT", sig: "Ljava/lang/String;")!

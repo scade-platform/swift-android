@@ -3,15 +3,15 @@
 import Java
 
 open class BluetoothServerSocket: Object {
-  public func accept() -> BluetoothSocket? {
+  open func accept() -> BluetoothSocket? {
     self.javaObject.call(method: BluetoothServerSocket__method__0, [])
   }
 
-  public func accept(timeout: Int32) -> BluetoothSocket? {
+  open func accept(timeout: Int32) -> BluetoothSocket? {
     self.javaObject.call(method: BluetoothServerSocket__method__1, [timeout.toJavaParameter()])
   }
 
-  public func close() {
+  open func close() {
     self.javaObject.call(method: BluetoothServerSocket__method__2, [])
   }
 }

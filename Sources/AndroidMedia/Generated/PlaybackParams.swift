@@ -14,39 +14,39 @@ open class PlaybackParams: Object, Parcelable {
     super.init(ctor: PlaybackParams__method__0, [])
   }
 
-  public func allowDefaults() -> PlaybackParams? {
+  open func allowDefaults() -> PlaybackParams? {
     self.javaObject.call(method: PlaybackParams__method__1, [])
   }
 
-  public func setAudioFallbackMode(audioFallbackMode: Int32) -> PlaybackParams? {
+  open func setAudioFallbackMode(audioFallbackMode: Int32) -> PlaybackParams? {
     self.javaObject.call(method: PlaybackParams__method__2, [audioFallbackMode.toJavaParameter()])
   }
 
-  public func getAudioFallbackMode() -> Int32 {
+  open func getAudioFallbackMode() -> Int32 {
     self.javaObject.call(method: PlaybackParams__method__3, [])
   }
 
-  public func setPitch(pitch: Float) -> PlaybackParams? {
+  open func setPitch(pitch: Float) -> PlaybackParams? {
     self.javaObject.call(method: PlaybackParams__method__4, [pitch.toJavaParameter()])
   }
 
-  public func getPitch() -> Float {
+  open func getPitch() -> Float {
     self.javaObject.call(method: PlaybackParams__method__5, [])
   }
 
-  public func setSpeed(speed: Float) -> PlaybackParams? {
+  open func setSpeed(speed: Float) -> PlaybackParams? {
     self.javaObject.call(method: PlaybackParams__method__6, [speed.toJavaParameter()])
   }
 
-  public func getSpeed() -> Float {
+  open func getSpeed() -> Float {
     self.javaObject.call(method: PlaybackParams__method__7, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: PlaybackParams__method__8, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: PlaybackParams__method__9, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 

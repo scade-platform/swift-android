@@ -93,15 +93,15 @@ open class SyncStats: Object, Parcelable {
     super.init(ctor: SyncStats__method__1, [_in.toJavaParameter()])
   }
 
-  public func clear() {
+  open func clear() {
     self.javaObject.call(method: SyncStats__method__2, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: SyncStats__method__3, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: SyncStats__method__4, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 

@@ -34,55 +34,55 @@ open class AudioRecord: Object, AudioRouting {
     super.init(ctor: AudioRecord__method__0, [audioSource.toJavaParameter(), sampleRateInHz.toJavaParameter(), channelConfig.toJavaParameter(), audioFormat.toJavaParameter(), bufferSizeInBytes.toJavaParameter()])
   }
 
-  public func release() {
+  open func release() {
     self.javaObject.call(method: AudioRecord__method__1, [])
   }
 
-  public func getSampleRate() -> Int32 {
+  open func getSampleRate() -> Int32 {
     self.javaObject.call(method: AudioRecord__method__2, [])
   }
 
-  public func getAudioSource() -> Int32 {
+  open func getAudioSource() -> Int32 {
     self.javaObject.call(method: AudioRecord__method__3, [])
   }
 
-  public func getAudioFormat() -> Int32 {
+  open func getAudioFormat() -> Int32 {
     self.javaObject.call(method: AudioRecord__method__4, [])
   }
 
-  public func getChannelConfiguration() -> Int32 {
+  open func getChannelConfiguration() -> Int32 {
     self.javaObject.call(method: AudioRecord__method__5, [])
   }
 
-  public func getFormat() -> AudioFormat? {
+  open func getFormat() -> AudioFormat? {
     self.javaObject.call(method: AudioRecord__method__6, [])
   }
 
-  public func getChannelCount() -> Int32 {
+  open func getChannelCount() -> Int32 {
     self.javaObject.call(method: AudioRecord__method__7, [])
   }
 
-  public func getState() -> Int32 {
+  open func getState() -> Int32 {
     self.javaObject.call(method: AudioRecord__method__8, [])
   }
 
-  public func getRecordingState() -> Int32 {
+  open func getRecordingState() -> Int32 {
     self.javaObject.call(method: AudioRecord__method__9, [])
   }
 
-  public func getBufferSizeInFrames() -> Int32 {
+  open func getBufferSizeInFrames() -> Int32 {
     self.javaObject.call(method: AudioRecord__method__10, [])
   }
 
-  public func getNotificationMarkerPosition() -> Int32 {
+  open func getNotificationMarkerPosition() -> Int32 {
     self.javaObject.call(method: AudioRecord__method__11, [])
   }
 
-  public func getPositionNotificationPeriod() -> Int32 {
+  open func getPositionNotificationPeriod() -> Int32 {
     self.javaObject.call(method: AudioRecord__method__12, [])
   }
 
-  public func getTimestamp(outTimestamp: AudioTimestamp?, timebase: Int32) -> Int32 {
+  open func getTimestamp(outTimestamp: AudioTimestamp?, timebase: Int32) -> Int32 {
     self.javaObject.call(method: AudioRecord__method__13, [outTimestamp.toJavaParameter(), timebase.toJavaParameter()])
   }
 
@@ -90,72 +90,76 @@ open class AudioRecord: Object, AudioRouting {
     AudioRecord__class.callStatic(method: AudioRecord__method__14, [sampleRateInHz.toJavaParameter(), channelConfig.toJavaParameter(), audioFormat.toJavaParameter()])
   }
 
-  public func getAudioSessionId() -> Int32 {
+  open func getAudioSessionId() -> Int32 {
     self.javaObject.call(method: AudioRecord__method__15, [])
   }
 
-  public func startRecording() {
+  open func startRecording() {
     self.javaObject.call(method: AudioRecord__method__16, [])
   }
 
-  public func startRecording(syncEvent: MediaSyncEvent?) {
+  open func startRecording(syncEvent: MediaSyncEvent?) {
     self.javaObject.call(method: AudioRecord__method__17, [syncEvent.toJavaParameter()])
   }
 
-  public func stop() {
+  open func stop() {
     self.javaObject.call(method: AudioRecord__method__18, [])
   }
 
-  public func read(audioData: [Int8], offsetInBytes: Int32, sizeInBytes: Int32) -> Int32 {
+  open func read(audioData: [Int8], offsetInBytes: Int32, sizeInBytes: Int32) -> Int32 {
     self.javaObject.call(method: AudioRecord__method__19, [audioData.toJavaParameter(), offsetInBytes.toJavaParameter(), sizeInBytes.toJavaParameter()])
   }
 
-  public func read(audioData: [Int8], offsetInBytes: Int32, sizeInBytes: Int32, readMode: Int32) -> Int32 {
+  open func read(audioData: [Int8], offsetInBytes: Int32, sizeInBytes: Int32, readMode: Int32) -> Int32 {
     self.javaObject.call(method: AudioRecord__method__20, [audioData.toJavaParameter(), offsetInBytes.toJavaParameter(), sizeInBytes.toJavaParameter(), readMode.toJavaParameter()])
   }
 
-  public func read(audioData: [Int16], offsetInShorts: Int32, sizeInShorts: Int32) -> Int32 {
+  open func read(audioData: [Int16], offsetInShorts: Int32, sizeInShorts: Int32) -> Int32 {
     self.javaObject.call(method: AudioRecord__method__21, [audioData.toJavaParameter(), offsetInShorts.toJavaParameter(), sizeInShorts.toJavaParameter()])
   }
 
-  public func read(audioData: [Int16], offsetInShorts: Int32, sizeInShorts: Int32, readMode: Int32) -> Int32 {
+  open func read(audioData: [Int16], offsetInShorts: Int32, sizeInShorts: Int32, readMode: Int32) -> Int32 {
     self.javaObject.call(method: AudioRecord__method__22, [audioData.toJavaParameter(), offsetInShorts.toJavaParameter(), sizeInShorts.toJavaParameter(), readMode.toJavaParameter()])
   }
 
-  public func read(audioData: [Float], offsetInFloats: Int32, sizeInFloats: Int32, readMode: Int32) -> Int32 {
+  open func read(audioData: [Float], offsetInFloats: Int32, sizeInFloats: Int32, readMode: Int32) -> Int32 {
     self.javaObject.call(method: AudioRecord__method__23, [audioData.toJavaParameter(), offsetInFloats.toJavaParameter(), sizeInFloats.toJavaParameter(), readMode.toJavaParameter()])
   }
 
-  public func setRecordPositionUpdateListener(listener: AudioRecord.OnRecordPositionUpdateListener?) {
-    self.javaObject.call(method: AudioRecord__method__24, [JavaParameter(object: listener?.toJavaObject())])
+  open func read(audioBuffer: ByteBuffer?, sizeInBytes: Int32) -> Int32 {
+    self.javaObject.call(method: AudioRecord__method__24, [JavaParameter(object: audioBuffer?.toJavaObject()), sizeInBytes.toJavaParameter()])
   }
 
-  public func setNotificationMarkerPosition(markerInFrames: Int32) -> Int32 {
-    self.javaObject.call(method: AudioRecord__method__25, [markerInFrames.toJavaParameter()])
+  open func read(audioBuffer: ByteBuffer?, sizeInBytes: Int32, readMode: Int32) -> Int32 {
+    self.javaObject.call(method: AudioRecord__method__25, [JavaParameter(object: audioBuffer?.toJavaObject()), sizeInBytes.toJavaParameter(), readMode.toJavaParameter()])
   }
 
-  public func getRoutedDevice() -> AudioDeviceInfo? {
-    self.javaObject.call(method: AudioRecord__method__26, [])
+  open func setRecordPositionUpdateListener(listener: AudioRecord.OnRecordPositionUpdateListener?) {
+    self.javaObject.call(method: AudioRecord__method__26, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func removeOnRoutingChangedListener(listener: AudioRouting.OnRoutingChangedListener?) {
-    self.javaObject.call(method: AudioRecord__method__27, [JavaParameter(object: listener?.toJavaObject())])
+  open func setNotificationMarkerPosition(markerInFrames: Int32) -> Int32 {
+    self.javaObject.call(method: AudioRecord__method__27, [markerInFrames.toJavaParameter()])
   }
 
-  public func removeOnRoutingChangedListener(listener: AudioRecordOnRoutingChangedListener?) {
-    self.javaObject.call(method: AudioRecord__method__28, [JavaParameter(object: listener?.toJavaObject())])
+  open func getRoutedDevice() -> AudioDeviceInfo? {
+    self.javaObject.call(method: AudioRecord__method__28, [])
   }
 
-  public func setPositionNotificationPeriod(periodInFrames: Int32) -> Int32 {
-    self.javaObject.call(method: AudioRecord__method__29, [periodInFrames.toJavaParameter()])
+  open func removeOnRoutingChangedListener(listener: AudioRouting.OnRoutingChangedListener?) {
+    self.javaObject.call(method: AudioRecord__method__29, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setPreferredDevice(deviceInfo: AudioDeviceInfo?) -> Bool {
-    self.javaObject.call(method: AudioRecord__method__30, [deviceInfo.toJavaParameter()])
+  open func setPositionNotificationPeriod(periodInFrames: Int32) -> Int32 {
+    self.javaObject.call(method: AudioRecord__method__30, [periodInFrames.toJavaParameter()])
   }
 
-  public func getPreferredDevice() -> AudioDeviceInfo? {
-    self.javaObject.call(method: AudioRecord__method__31, [])
+  open func setPreferredDevice(deviceInfo: AudioDeviceInfo?) -> Bool {
+    self.javaObject.call(method: AudioRecord__method__31, [deviceInfo.toJavaParameter()])
+  }
+
+  open func getPreferredDevice() -> AudioDeviceInfo? {
+    self.javaObject.call(method: AudioRecord__method__32, [])
   }
 
   public required init(_ obj: JavaObject) {
@@ -209,8 +213,6 @@ public final class AudioRecordOnRecordPositionUpdateListenerProxy: Object, JInte
 
 public protocol AudioRecordOnRoutingChangedListener: AudioRouting.OnRoutingChangedListener {
   func onRoutingChanged(audioRecord: AudioRecord?) -> Void
-
-  func onRoutingChanged(router: AudioRouting?) -> Void
 }
 
 public extension AudioRecordOnRoutingChangedListener {
@@ -252,19 +254,19 @@ open class AudioRecordBuilder: Object {
     super.init(ctor: AudioRecordBuilder__method__0, [])
   }
 
-  public func setAudioSource(source: Int32) -> AudioRecord.Builder? {
+  open func setAudioSource(source: Int32) -> AudioRecord.Builder? {
     self.javaObject.call(method: AudioRecordBuilder__method__1, [source.toJavaParameter()])
   }
 
-  public func setAudioFormat(format: AudioFormat?) -> AudioRecord.Builder? {
+  open func setAudioFormat(format: AudioFormat?) -> AudioRecord.Builder? {
     self.javaObject.call(method: AudioRecordBuilder__method__2, [format.toJavaParameter()])
   }
 
-  public func setBufferSizeInBytes(bufferSizeInBytes: Int32) -> AudioRecord.Builder? {
+  open func setBufferSizeInBytes(bufferSizeInBytes: Int32) -> AudioRecord.Builder? {
     self.javaObject.call(method: AudioRecordBuilder__method__3, [bufferSizeInBytes.toJavaParameter()])
   }
 
-  public func build() -> AudioRecord? {
+  open func build() -> AudioRecord? {
     self.javaObject.call(method: AudioRecordBuilder__method__4, [])
   }
 
@@ -305,14 +307,15 @@ private let AudioRecord__method__20 = AudioRecord__class.getMethodID(name: "read
 private let AudioRecord__method__21 = AudioRecord__class.getMethodID(name: "read", sig: "([SII)I")!
 private let AudioRecord__method__22 = AudioRecord__class.getMethodID(name: "read", sig: "([SIII)I")!
 private let AudioRecord__method__23 = AudioRecord__class.getMethodID(name: "read", sig: "([FIII)I")!
-private let AudioRecord__method__24 = AudioRecord__class.getMethodID(name: "setRecordPositionUpdateListener", sig: "(Landroid/media/AudioRecord$OnRecordPositionUpdateListener;)V")!
-private let AudioRecord__method__25 = AudioRecord__class.getMethodID(name: "setNotificationMarkerPosition", sig: "(I)I")!
-private let AudioRecord__method__26 = AudioRecord__class.getMethodID(name: "getRoutedDevice", sig: "()Landroid/media/AudioDeviceInfo;")!
-private let AudioRecord__method__27 = AudioRecord__class.getMethodID(name: "removeOnRoutingChangedListener", sig: "(Landroid/media/AudioRouting$OnRoutingChangedListener;)V")!
-private let AudioRecord__method__28 = AudioRecord__class.getMethodID(name: "removeOnRoutingChangedListener", sig: "(Landroid/media/AudioRecord$OnRoutingChangedListener;)V")!
-private let AudioRecord__method__29 = AudioRecord__class.getMethodID(name: "setPositionNotificationPeriod", sig: "(I)I")!
-private let AudioRecord__method__30 = AudioRecord__class.getMethodID(name: "setPreferredDevice", sig: "(Landroid/media/AudioDeviceInfo;)Z")!
-private let AudioRecord__method__31 = AudioRecord__class.getMethodID(name: "getPreferredDevice", sig: "()Landroid/media/AudioDeviceInfo;")!
+private let AudioRecord__method__24 = AudioRecord__class.getMethodID(name: "read", sig: "(Ljava/nio/ByteBuffer;I)I")!
+private let AudioRecord__method__25 = AudioRecord__class.getMethodID(name: "read", sig: "(Ljava/nio/ByteBuffer;II)I")!
+private let AudioRecord__method__26 = AudioRecord__class.getMethodID(name: "setRecordPositionUpdateListener", sig: "(Landroid/media/AudioRecord$OnRecordPositionUpdateListener;)V")!
+private let AudioRecord__method__27 = AudioRecord__class.getMethodID(name: "setNotificationMarkerPosition", sig: "(I)I")!
+private let AudioRecord__method__28 = AudioRecord__class.getMethodID(name: "getRoutedDevice", sig: "()Landroid/media/AudioDeviceInfo;")!
+private let AudioRecord__method__29 = AudioRecord__class.getMethodID(name: "removeOnRoutingChangedListener", sig: "(Landroid/media/AudioRouting$OnRoutingChangedListener;)V")!
+private let AudioRecord__method__30 = AudioRecord__class.getMethodID(name: "setPositionNotificationPeriod", sig: "(I)I")!
+private let AudioRecord__method__31 = AudioRecord__class.getMethodID(name: "setPreferredDevice", sig: "(Landroid/media/AudioDeviceInfo;)Z")!
+private let AudioRecord__method__32 = AudioRecord__class.getMethodID(name: "getPreferredDevice", sig: "()Landroid/media/AudioDeviceInfo;")!
 
 private let AudioRecord__field__0 = AudioRecord__class.getStaticFieldID(name: "ERROR", sig: "I")!
 private let AudioRecord__field__1 = AudioRecord__class.getStaticFieldID(name: "ERROR_BAD_VALUE", sig: "I")!

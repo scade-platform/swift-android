@@ -31,79 +31,79 @@ open class MifareClassic: Object, BasicTagTechnology {
     MifareClassic__class.callStatic(method: MifareClassic__method__0, [tag.toJavaParameter()])
   }
 
-  public func getType() -> Int32 {
+  open func getType() -> Int32 {
     self.javaObject.call(method: MifareClassic__method__1, [])
   }
 
-  public func getSize() -> Int32 {
+  open func getSize() -> Int32 {
     self.javaObject.call(method: MifareClassic__method__2, [])
   }
 
-  public func getSectorCount() -> Int32 {
+  open func getSectorCount() -> Int32 {
     self.javaObject.call(method: MifareClassic__method__3, [])
   }
 
-  public func getBlockCount() -> Int32 {
+  open func getBlockCount() -> Int32 {
     self.javaObject.call(method: MifareClassic__method__4, [])
   }
 
-  public func getBlockCountInSector(sectorIndex: Int32) -> Int32 {
+  open func getBlockCountInSector(sectorIndex: Int32) -> Int32 {
     self.javaObject.call(method: MifareClassic__method__5, [sectorIndex.toJavaParameter()])
   }
 
-  public func blockToSector(blockIndex: Int32) -> Int32 {
+  open func blockToSector(blockIndex: Int32) -> Int32 {
     self.javaObject.call(method: MifareClassic__method__6, [blockIndex.toJavaParameter()])
   }
 
-  public func sectorToBlock(sectorIndex: Int32) -> Int32 {
+  open func sectorToBlock(sectorIndex: Int32) -> Int32 {
     self.javaObject.call(method: MifareClassic__method__7, [sectorIndex.toJavaParameter()])
   }
 
-  public func authenticateSectorWithKeyA(sectorIndex: Int32, key: [Int8]) -> Bool {
+  open func authenticateSectorWithKeyA(sectorIndex: Int32, key: [Int8]) -> Bool {
     self.javaObject.call(method: MifareClassic__method__8, [sectorIndex.toJavaParameter(), key.toJavaParameter()])
   }
 
-  public func authenticateSectorWithKeyB(sectorIndex: Int32, key: [Int8]) -> Bool {
+  open func authenticateSectorWithKeyB(sectorIndex: Int32, key: [Int8]) -> Bool {
     self.javaObject.call(method: MifareClassic__method__9, [sectorIndex.toJavaParameter(), key.toJavaParameter()])
   }
 
-  public func readBlock(blockIndex: Int32) -> [Int8] {
+  open func readBlock(blockIndex: Int32) -> [Int8] {
     self.javaObject.call(method: MifareClassic__method__10, [blockIndex.toJavaParameter()])
   }
 
-  public func writeBlock(blockIndex: Int32, data: [Int8]) {
+  open func writeBlock(blockIndex: Int32, data: [Int8]) {
     self.javaObject.call(method: MifareClassic__method__11, [blockIndex.toJavaParameter(), data.toJavaParameter()])
   }
 
-  public func increment(blockIndex: Int32, value: Int32) {
+  open func increment(blockIndex: Int32, value: Int32) {
     self.javaObject.call(method: MifareClassic__method__12, [blockIndex.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func decrement(blockIndex: Int32, value: Int32) {
+  open func decrement(blockIndex: Int32, value: Int32) {
     self.javaObject.call(method: MifareClassic__method__13, [blockIndex.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func transfer(blockIndex: Int32) {
+  open func transfer(blockIndex: Int32) {
     self.javaObject.call(method: MifareClassic__method__14, [blockIndex.toJavaParameter()])
   }
 
-  public func restore(blockIndex: Int32) {
+  open func restore(blockIndex: Int32) {
     self.javaObject.call(method: MifareClassic__method__15, [blockIndex.toJavaParameter()])
   }
 
-  public func transceive(data: [Int8]) -> [Int8] {
+  open func transceive(data: [Int8]) -> [Int8] {
     self.javaObject.call(method: MifareClassic__method__16, [data.toJavaParameter()])
   }
 
-  public func getMaxTransceiveLength() -> Int32 {
+  open func getMaxTransceiveLength() -> Int32 {
     self.javaObject.call(method: MifareClassic__method__17, [])
   }
 
-  public func setTimeout(timeout: Int32) {
+  open func setTimeout(timeout: Int32) {
     self.javaObject.call(method: MifareClassic__method__18, [timeout.toJavaParameter()])
   }
 
-  public func getTimeout() -> Int32 {
+  open func getTimeout() -> Int32 {
     self.javaObject.call(method: MifareClassic__method__19, [])
   }
 }

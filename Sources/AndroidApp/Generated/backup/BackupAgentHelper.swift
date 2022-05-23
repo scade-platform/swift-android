@@ -5,19 +5,19 @@ import AndroidOS
 import Java
 
 open class BackupAgentHelper: ContextWrapper, BackupAgent {
-  public required init() {
+  public init() {
     super.init(ctor: BackupAgentHelper__method__0, [])
   }
 
-  public func onBackup(oldState: ParcelFileDescriptor?, data: BackupDataOutput?, newState: ParcelFileDescriptor?) {
+  open func onBackup(oldState: ParcelFileDescriptor?, data: BackupDataOutput?, newState: ParcelFileDescriptor?) {
     self.javaObject.call(method: BackupAgentHelper__method__1, [oldState.toJavaParameter(), data.toJavaParameter(), newState.toJavaParameter()])
   }
 
-  public func onRestore(data: BackupDataInput?, appVersionCode: Int32, newState: ParcelFileDescriptor?) {
+  open func onRestore(data: BackupDataInput?, appVersionCode: Int32, newState: ParcelFileDescriptor?) {
     self.javaObject.call(method: BackupAgentHelper__method__2, [data.toJavaParameter(), appVersionCode.toJavaParameter(), newState.toJavaParameter()])
   }
 
-  public func addHelper(keyPrefix: String, helper: BackupHelper?) {
+  open func addHelper(keyPrefix: String, helper: BackupHelper?) {
     self.javaObject.call(method: BackupAgentHelper__method__3, [keyPrefix.toJavaParameter(), JavaParameter(object: helper?.toJavaObject())])
   }
 

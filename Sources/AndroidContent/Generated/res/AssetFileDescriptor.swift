@@ -18,39 +18,39 @@ open class AssetFileDescriptor: Object, Parcelable {
     super.init(ctor: AssetFileDescriptor__method__1, [fd.toJavaParameter(), startOffset.toJavaParameter(), length.toJavaParameter(), extras.toJavaParameter()])
   }
 
-  public func getParcelFileDescriptor() -> ParcelFileDescriptor? {
+  open func getParcelFileDescriptor() -> ParcelFileDescriptor? {
     self.javaObject.call(method: AssetFileDescriptor__method__2, [])
   }
 
-  public func getFileDescriptor() -> FileDescriptor? {
+  open func getFileDescriptor() -> FileDescriptor? {
     self.javaObject.call(method: AssetFileDescriptor__method__3, [])
   }
 
-  public func getStartOffset() -> Int64 {
+  open func getStartOffset() -> Int64 {
     self.javaObject.call(method: AssetFileDescriptor__method__4, [])
   }
 
-  public func getExtras() -> Bundle? {
+  open func getExtras() -> Bundle? {
     self.javaObject.call(method: AssetFileDescriptor__method__5, [])
   }
 
-  public func getLength() -> Int64 {
+  open func getLength() -> Int64 {
     self.javaObject.call(method: AssetFileDescriptor__method__6, [])
   }
 
-  public func getDeclaredLength() -> Int64 {
+  open func getDeclaredLength() -> Int64 {
     self.javaObject.call(method: AssetFileDescriptor__method__7, [])
   }
 
-  public func close() {
+  open func close() {
     self.javaObject.call(method: AssetFileDescriptor__method__8, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: AssetFileDescriptor__method__9, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: AssetFileDescriptor__method__10, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 

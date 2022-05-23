@@ -83,19 +83,19 @@ open class DownloadManager: Object {
 
   public static let STATUS_SUCCESSFUL: Int32 = DownloadManager__class.getStatic(field: DownloadManager__field__36)
 
-  public func enqueue(request: DownloadManager.Request?) -> Int64 {
+  open func enqueue(request: DownloadManager.Request?) -> Int64 {
     self.javaObject.call(method: DownloadManager__method__0, [request.toJavaParameter()])
   }
 
-  public func remove(ids: [Int64]) -> Int32 {
+  open func remove(ids: [Int64]) -> Int32 {
     self.javaObject.call(method: DownloadManager__method__1, [ids.toJavaParameter()])
   }
 
-  public func openDownloadedFile(id: Int64) -> ParcelFileDescriptor? {
+  open func openDownloadedFile(id: Int64) -> ParcelFileDescriptor? {
     self.javaObject.call(method: DownloadManager__method__2, [id.toJavaParameter()])
   }
 
-  public func getMimeTypeForDownloadedFile(id: Int64) -> String {
+  open func getMimeTypeForDownloadedFile(id: Int64) -> String {
     self.javaObject.call(method: DownloadManager__method__3, [id.toJavaParameter()])
   }
 
@@ -109,7 +109,7 @@ open class DownloadManager: Object {
     return res.value
   }
 
-  public func addCompletedDownload(title: String, description: String, isMediaScannerScannable: Bool, mimeType: String, path: String, length: Int64, showNotification: Bool) -> Int64 {
+  open func addCompletedDownload(title: String, description: String, isMediaScannerScannable: Bool, mimeType: String, path: String, length: Int64, showNotification: Bool) -> Int64 {
     self.javaObject.call(method: DownloadManager__method__6, [title.toJavaParameter(), description.toJavaParameter(), isMediaScannerScannable.toJavaParameter(), mimeType.toJavaParameter(), path.toJavaParameter(), length.toJavaParameter(), showNotification.toJavaParameter()])
   }
 }
@@ -121,11 +121,11 @@ open class DownloadManagerQuery: Object {
     super.init(ctor: DownloadManagerQuery__method__0, [])
   }
 
-  public func setFilterById(ids: [Int64]) -> DownloadManager.Query? {
+  open func setFilterById(ids: [Int64]) -> DownloadManager.Query? {
     self.javaObject.call(method: DownloadManagerQuery__method__1, [ids.toJavaParameter()])
   }
 
-  public func setFilterByStatus(flags: Int32) -> DownloadManager.Query? {
+  open func setFilterByStatus(flags: Int32) -> DownloadManager.Query? {
     self.javaObject.call(method: DownloadManagerQuery__method__2, [flags.toJavaParameter()])
   }
 
@@ -153,64 +153,60 @@ open class DownloadManagerRequest: Object {
 
   public static let VISIBILITY_VISIBLE_NOTIFY_ONLY_COMPLETION: Int32 = DownloadManagerRequest__class.getStatic(field: DownloadManagerRequest__field__5)
 
-  public func setDestinationInExternalFilesDir(context: Context?, dirType: String, subPath: String) -> DownloadManager.Request? {
+  open func setDestinationInExternalFilesDir(context: Context?, dirType: String, subPath: String) -> DownloadManager.Request? {
     self.javaObject.call(method: DownloadManagerRequest__method__0, [JavaParameter(object: context?.toJavaObject()), dirType.toJavaParameter(), subPath.toJavaParameter()])
   }
 
-  public func setDestinationInExternalPublicDir(dirType: String, subPath: String) -> DownloadManager.Request? {
+  open func setDestinationInExternalPublicDir(dirType: String, subPath: String) -> DownloadManager.Request? {
     self.javaObject.call(method: DownloadManagerRequest__method__1, [dirType.toJavaParameter(), subPath.toJavaParameter()])
   }
 
-  public func allowScanningByMediaScanner() {
+  open func allowScanningByMediaScanner() {
     self.javaObject.call(method: DownloadManagerRequest__method__2, [])
   }
 
-  public func addRequestHeader(header: String, value: String) -> DownloadManager.Request? {
+  open func addRequestHeader(header: String, value: String) -> DownloadManager.Request? {
     self.javaObject.call(method: DownloadManagerRequest__method__3, [header.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func setTitle(title: String?) -> DownloadManager.Request? {
+  open func setTitle(title: String?) -> DownloadManager.Request? {
     self.javaObject.call(method: DownloadManagerRequest__method__4, [title.toJavaParameter()])
   }
 
-  public func setDescription(description: String?) -> DownloadManager.Request? {
+  open func setDescription(description: String?) -> DownloadManager.Request? {
     self.javaObject.call(method: DownloadManagerRequest__method__5, [description.toJavaParameter()])
   }
 
-  public func setMimeType(mimeType: String) -> DownloadManager.Request? {
+  open func setMimeType(mimeType: String) -> DownloadManager.Request? {
     self.javaObject.call(method: DownloadManagerRequest__method__6, [mimeType.toJavaParameter()])
   }
 
-  public func setShowRunningNotification(show: Bool) -> DownloadManager.Request? {
-    self.javaObject.call(method: DownloadManagerRequest__method__7, [show.toJavaParameter()])
+  open func setNotificationVisibility(visibility: Int32) -> DownloadManager.Request? {
+    self.javaObject.call(method: DownloadManagerRequest__method__7, [visibility.toJavaParameter()])
   }
 
-  public func setNotificationVisibility(visibility: Int32) -> DownloadManager.Request? {
-    self.javaObject.call(method: DownloadManagerRequest__method__8, [visibility.toJavaParameter()])
+  open func setAllowedNetworkTypes(flags: Int32) -> DownloadManager.Request? {
+    self.javaObject.call(method: DownloadManagerRequest__method__8, [flags.toJavaParameter()])
   }
 
-  public func setAllowedNetworkTypes(flags: Int32) -> DownloadManager.Request? {
-    self.javaObject.call(method: DownloadManagerRequest__method__9, [flags.toJavaParameter()])
+  open func setAllowedOverRoaming(allowed: Bool) -> DownloadManager.Request? {
+    self.javaObject.call(method: DownloadManagerRequest__method__9, [allowed.toJavaParameter()])
   }
 
-  public func setAllowedOverRoaming(allowed: Bool) -> DownloadManager.Request? {
-    self.javaObject.call(method: DownloadManagerRequest__method__10, [allowed.toJavaParameter()])
+  open func setAllowedOverMetered(allow: Bool) -> DownloadManager.Request? {
+    self.javaObject.call(method: DownloadManagerRequest__method__10, [allow.toJavaParameter()])
   }
 
-  public func setAllowedOverMetered(allow: Bool) -> DownloadManager.Request? {
-    self.javaObject.call(method: DownloadManagerRequest__method__11, [allow.toJavaParameter()])
+  open func setRequiresCharging(requiresCharging: Bool) -> DownloadManager.Request? {
+    self.javaObject.call(method: DownloadManagerRequest__method__11, [requiresCharging.toJavaParameter()])
   }
 
-  public func setRequiresCharging(requiresCharging: Bool) -> DownloadManager.Request? {
-    self.javaObject.call(method: DownloadManagerRequest__method__12, [requiresCharging.toJavaParameter()])
+  open func setRequiresDeviceIdle(requiresDeviceIdle: Bool) -> DownloadManager.Request? {
+    self.javaObject.call(method: DownloadManagerRequest__method__12, [requiresDeviceIdle.toJavaParameter()])
   }
 
-  public func setRequiresDeviceIdle(requiresDeviceIdle: Bool) -> DownloadManager.Request? {
-    self.javaObject.call(method: DownloadManagerRequest__method__13, [requiresDeviceIdle.toJavaParameter()])
-  }
-
-  public func setVisibleInDownloadsUi(isVisible: Bool) -> DownloadManager.Request? {
-    self.javaObject.call(method: DownloadManagerRequest__method__14, [isVisible.toJavaParameter()])
+  open func setVisibleInDownloadsUi(isVisible: Bool) -> DownloadManager.Request? {
+    self.javaObject.call(method: DownloadManagerRequest__method__13, [isVisible.toJavaParameter()])
   }
 }
 
@@ -283,14 +279,13 @@ private let DownloadManagerRequest__method__3 = DownloadManagerRequest__class.ge
 private let DownloadManagerRequest__method__4 = DownloadManagerRequest__class.getMethodID(name: "setTitle", sig: "(Ljava/lang/CharSequence;)Landroid/app/DownloadManager$Request;")!
 private let DownloadManagerRequest__method__5 = DownloadManagerRequest__class.getMethodID(name: "setDescription", sig: "(Ljava/lang/CharSequence;)Landroid/app/DownloadManager$Request;")!
 private let DownloadManagerRequest__method__6 = DownloadManagerRequest__class.getMethodID(name: "setMimeType", sig: "(Ljava/lang/String;)Landroid/app/DownloadManager$Request;")!
-private let DownloadManagerRequest__method__7 = DownloadManagerRequest__class.getMethodID(name: "setShowRunningNotification", sig: "(Z)Landroid/app/DownloadManager$Request;")!
-private let DownloadManagerRequest__method__8 = DownloadManagerRequest__class.getMethodID(name: "setNotificationVisibility", sig: "(I)Landroid/app/DownloadManager$Request;")!
-private let DownloadManagerRequest__method__9 = DownloadManagerRequest__class.getMethodID(name: "setAllowedNetworkTypes", sig: "(I)Landroid/app/DownloadManager$Request;")!
-private let DownloadManagerRequest__method__10 = DownloadManagerRequest__class.getMethodID(name: "setAllowedOverRoaming", sig: "(Z)Landroid/app/DownloadManager$Request;")!
-private let DownloadManagerRequest__method__11 = DownloadManagerRequest__class.getMethodID(name: "setAllowedOverMetered", sig: "(Z)Landroid/app/DownloadManager$Request;")!
-private let DownloadManagerRequest__method__12 = DownloadManagerRequest__class.getMethodID(name: "setRequiresCharging", sig: "(Z)Landroid/app/DownloadManager$Request;")!
-private let DownloadManagerRequest__method__13 = DownloadManagerRequest__class.getMethodID(name: "setRequiresDeviceIdle", sig: "(Z)Landroid/app/DownloadManager$Request;")!
-private let DownloadManagerRequest__method__14 = DownloadManagerRequest__class.getMethodID(name: "setVisibleInDownloadsUi", sig: "(Z)Landroid/app/DownloadManager$Request;")!
+private let DownloadManagerRequest__method__7 = DownloadManagerRequest__class.getMethodID(name: "setNotificationVisibility", sig: "(I)Landroid/app/DownloadManager$Request;")!
+private let DownloadManagerRequest__method__8 = DownloadManagerRequest__class.getMethodID(name: "setAllowedNetworkTypes", sig: "(I)Landroid/app/DownloadManager$Request;")!
+private let DownloadManagerRequest__method__9 = DownloadManagerRequest__class.getMethodID(name: "setAllowedOverRoaming", sig: "(Z)Landroid/app/DownloadManager$Request;")!
+private let DownloadManagerRequest__method__10 = DownloadManagerRequest__class.getMethodID(name: "setAllowedOverMetered", sig: "(Z)Landroid/app/DownloadManager$Request;")!
+private let DownloadManagerRequest__method__11 = DownloadManagerRequest__class.getMethodID(name: "setRequiresCharging", sig: "(Z)Landroid/app/DownloadManager$Request;")!
+private let DownloadManagerRequest__method__12 = DownloadManagerRequest__class.getMethodID(name: "setRequiresDeviceIdle", sig: "(Z)Landroid/app/DownloadManager$Request;")!
+private let DownloadManagerRequest__method__13 = DownloadManagerRequest__class.getMethodID(name: "setVisibleInDownloadsUi", sig: "(Z)Landroid/app/DownloadManager$Request;")!
 
 private let DownloadManagerRequest__field__0 = DownloadManagerRequest__class.getStaticFieldID(name: "NETWORK_MOBILE", sig: "I")!
 private let DownloadManagerRequest__field__1 = DownloadManagerRequest__class.getStaticFieldID(name: "NETWORK_WIFI", sig: "I")!

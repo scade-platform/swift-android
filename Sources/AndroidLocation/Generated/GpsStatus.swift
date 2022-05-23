@@ -17,21 +17,21 @@ open class GpsStatus: Object {
 
   public static let GPS_EVENT_STOPPED: Int32 = GpsStatus__class.getStatic(field: GpsStatus__field__3)
 
-  public func getTimeToFirstFix() -> Int32 {
+  open func getTimeToFirstFix() -> Int32 {
     self.javaObject.call(method: GpsStatus__method__0, [])
   }
 
-  public func getSatellites<R>() -> R? where R: Iterable, R.T == GpsSatellite {
+  open func getSatellites<R>() -> R? where R: Iterable, R.T == GpsSatellite {
     self.javaObject.call(method: GpsStatus__method__1, [])
   }
 
-  public func getMaxSatellites() -> Int32 {
+  open func getMaxSatellites() -> Int32 {
     self.javaObject.call(method: GpsStatus__method__2, [])
   }
 }
 
 extension GpsStatus {
-  public func getSatellites() -> IterableProxy<GpsSatellite>? {
+  open func getSatellites() -> IterableProxy<GpsSatellite>? {
     self.javaObject.call(method: GpsStatus__method__1, [])
   }
 }

@@ -77,35 +77,35 @@ open class SyncResult: Object, Parcelable {
     super.init(ctor: SyncResult__method__0, [])
   }
 
-  public func hasHardError() -> Bool {
+  open func hasHardError() -> Bool {
     self.javaObject.call(method: SyncResult__method__1, [])
   }
 
-  public func hasSoftError() -> Bool {
+  open func hasSoftError() -> Bool {
     self.javaObject.call(method: SyncResult__method__2, [])
   }
 
-  public func hasError() -> Bool {
+  open func hasError() -> Bool {
     self.javaObject.call(method: SyncResult__method__3, [])
   }
 
-  public func madeSomeProgress() -> Bool {
+  open func madeSomeProgress() -> Bool {
     self.javaObject.call(method: SyncResult__method__4, [])
   }
 
-  public func clear() {
+  open func clear() {
     self.javaObject.call(method: SyncResult__method__5, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: SyncResult__method__6, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: SyncResult__method__7, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func toDebugString() -> String {
+  open func toDebugString() -> String {
     self.javaObject.call(method: SyncResult__method__8, [])
   }
 

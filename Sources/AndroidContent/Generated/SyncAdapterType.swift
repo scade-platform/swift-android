@@ -18,23 +18,23 @@ open class SyncAdapterType: Object, Parcelable {
     super.init(ctor: SyncAdapterType__method__1, [source.toJavaParameter()])
   }
 
-  public func supportsUploading() -> Bool {
+  open func supportsUploading() -> Bool {
     self.javaObject.call(method: SyncAdapterType__method__2, [])
   }
 
-  public func isUserVisible() -> Bool {
+  open func isUserVisible() -> Bool {
     self.javaObject.call(method: SyncAdapterType__method__3, [])
   }
 
-  public func allowParallelSyncs() -> Bool {
+  open func allowParallelSyncs() -> Bool {
     self.javaObject.call(method: SyncAdapterType__method__4, [])
   }
 
-  public func isAlwaysSyncable() -> Bool {
+  open func isAlwaysSyncable() -> Bool {
     self.javaObject.call(method: SyncAdapterType__method__5, [])
   }
 
-  public func getSettingsActivity() -> String {
+  open func getSettingsActivity() -> String {
     self.javaObject.call(method: SyncAdapterType__method__6, [])
   }
 
@@ -42,11 +42,11 @@ open class SyncAdapterType: Object, Parcelable {
     SyncAdapterType__class.callStatic(method: SyncAdapterType__method__7, [authority.toJavaParameter(), accountType.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: SyncAdapterType__method__8, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: SyncAdapterType__method__9, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 

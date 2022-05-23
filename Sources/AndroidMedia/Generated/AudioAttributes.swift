@@ -52,23 +52,23 @@ open class AudioAttributes: Object, Parcelable {
 
   public static let USAGE_VOICE_COMMUNICATION_SIGNALLING: Int32 = AudioAttributes__class.getStatic(field: AudioAttributes__field__22)
 
-  public func getContentType() -> Int32 {
+  open func getContentType() -> Int32 {
     self.javaObject.call(method: AudioAttributes__method__0, [])
   }
 
-  public func getUsage() -> Int32 {
+  open func getUsage() -> Int32 {
     self.javaObject.call(method: AudioAttributes__method__1, [])
   }
 
-  public func getFlags() -> Int32 {
+  open func getFlags() -> Int32 {
     self.javaObject.call(method: AudioAttributes__method__2, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: AudioAttributes__method__3, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: AudioAttributes__method__4, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }
@@ -84,23 +84,23 @@ open class AudioAttributesBuilder: Object {
     super.init(ctor: AudioAttributesBuilder__method__1, [aa.toJavaParameter()])
   }
 
-  public func build() -> AudioAttributes? {
+  open func build() -> AudioAttributes? {
     self.javaObject.call(method: AudioAttributesBuilder__method__2, [])
   }
 
-  public func setUsage(usage: Int32) -> AudioAttributes.Builder? {
+  open func setUsage(usage: Int32) -> AudioAttributes.Builder? {
     self.javaObject.call(method: AudioAttributesBuilder__method__3, [usage.toJavaParameter()])
   }
 
-  public func setContentType(contentType: Int32) -> AudioAttributes.Builder? {
+  open func setContentType(contentType: Int32) -> AudioAttributes.Builder? {
     self.javaObject.call(method: AudioAttributesBuilder__method__4, [contentType.toJavaParameter()])
   }
 
-  public func setFlags(flags: Int32) -> AudioAttributes.Builder? {
+  open func setFlags(flags: Int32) -> AudioAttributes.Builder? {
     self.javaObject.call(method: AudioAttributesBuilder__method__5, [flags.toJavaParameter()])
   }
 
-  public func setLegacyStreamType(streamType: Int32) -> AudioAttributes.Builder? {
+  open func setLegacyStreamType(streamType: Int32) -> AudioAttributes.Builder? {
     self.javaObject.call(method: AudioAttributesBuilder__method__6, [streamType.toJavaParameter()])
   }
 

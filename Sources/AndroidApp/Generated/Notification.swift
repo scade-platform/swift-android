@@ -369,32 +369,28 @@ open class Notification: Object, Parcelable {
     super.init(ctor: Notification__method__0, [])
   }
 
-  public init(icon: Int32, tickerText: String?, when: Int64) {
-    super.init(ctor: Notification__method__1, [icon.toJavaParameter(), tickerText.toJavaParameter(), when.toJavaParameter()])
-  }
-
   public init(parcel: Parcel?) {
-    super.init(ctor: Notification__method__2, [parcel.toJavaParameter()])
+    super.init(ctor: Notification__method__1, [parcel.toJavaParameter()])
   }
 
-  public func getGroup() -> String {
+  open func getGroup() -> String {
+    self.javaObject.call(method: Notification__method__2, [])
+  }
+
+  open func getSortKey() -> String {
     self.javaObject.call(method: Notification__method__3, [])
   }
 
-  public func getSortKey() -> String {
+  override open func clone() -> Notification? {
     self.javaObject.call(method: Notification__method__4, [])
   }
 
-  public func clone() -> Notification? {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: Notification__method__5, [])
   }
 
-  public func describeContents() -> Int32 {
-    self.javaObject.call(method: Notification__method__6, [])
-  }
-
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
-    self.javaObject.call(method: Notification__method__7, [dest.toJavaParameter(), flags.toJavaParameter()])
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
+    self.javaObject.call(method: Notification__method__6, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
   public required init(_ obj: JavaObject) {
@@ -421,23 +417,23 @@ open class NotificationCarExtender: Object, Notification.Extender {
     super.init(ctor: NotificationCarExtender__method__1, [notif.toJavaParameter()])
   }
 
-  public func extend(builder: Notification.Builder?) -> Notification.Builder? {
+  open func extend(builder: Notification.Builder?) -> Notification.Builder? {
     self.javaObject.call(method: NotificationCarExtender__method__2, [builder.toJavaParameter()])
   }
 
-  public func setColor(color: Int32) -> Notification.CarExtender? {
+  open func setColor(color: Int32) -> Notification.CarExtender? {
     self.javaObject.call(method: NotificationCarExtender__method__3, [color.toJavaParameter()])
   }
 
-  public func getColor() -> Int32 {
+  open func getColor() -> Int32 {
     self.javaObject.call(method: NotificationCarExtender__method__4, [])
   }
 
-  public func setUnreadConversation(unreadConversation: Notification.CarExtender.UnreadConversation?) -> Notification.CarExtender? {
+  open func setUnreadConversation(unreadConversation: Notification.CarExtender.UnreadConversation?) -> Notification.CarExtender? {
     self.javaObject.call(method: NotificationCarExtender__method__5, [unreadConversation.toJavaParameter()])
   }
 
-  public func getUnreadConversation() -> Notification.CarExtender.UnreadConversation? {
+  open func getUnreadConversation() -> Notification.CarExtender.UnreadConversation? {
     self.javaObject.call(method: NotificationCarExtender__method__6, [])
   }
 
@@ -457,23 +453,23 @@ open class NotificationCarExtenderBuilder: Object {
     super.init(ctor: NotificationCarExtenderBuilder__method__0, [name.toJavaParameter()])
   }
 
-  public func addMessage(message: String) -> Notification.CarExtender.Builder? {
+  open func addMessage(message: String) -> Notification.CarExtender.Builder? {
     self.javaObject.call(method: NotificationCarExtenderBuilder__method__1, [message.toJavaParameter()])
   }
 
-  public func setReplyAction(pendingIntent: PendingIntent?, remoteInput: RemoteInput?) -> Notification.CarExtender.Builder? {
+  open func setReplyAction(pendingIntent: PendingIntent?, remoteInput: RemoteInput?) -> Notification.CarExtender.Builder? {
     self.javaObject.call(method: NotificationCarExtenderBuilder__method__2, [pendingIntent.toJavaParameter(), remoteInput.toJavaParameter()])
   }
 
-  public func setReadPendingIntent(pendingIntent: PendingIntent?) -> Notification.CarExtender.Builder? {
+  open func setReadPendingIntent(pendingIntent: PendingIntent?) -> Notification.CarExtender.Builder? {
     self.javaObject.call(method: NotificationCarExtenderBuilder__method__3, [pendingIntent.toJavaParameter()])
   }
 
-  public func setLatestTimestamp(timestamp: Int64) -> Notification.CarExtender.Builder? {
+  open func setLatestTimestamp(timestamp: Int64) -> Notification.CarExtender.Builder? {
     self.javaObject.call(method: NotificationCarExtenderBuilder__method__4, [timestamp.toJavaParameter()])
   }
 
-  public func build() -> Notification.CarExtender.UnreadConversation? {
+  open func build() -> Notification.CarExtender.UnreadConversation? {
     self.javaObject.call(method: NotificationCarExtenderBuilder__method__5, [])
   }
 
@@ -489,31 +485,31 @@ open class NotificationCarExtenderBuilder: Object {
 // ------------------------------------------------------------------------------------
 
 open class NotificationCarExtenderUnreadConversation: Object {
-  public func getMessages() -> [String] {
+  open func getMessages() -> [String] {
     self.javaObject.call(method: NotificationCarExtenderUnreadConversation__method__0, [])
   }
 
-  public func getRemoteInput() -> RemoteInput? {
+  open func getRemoteInput() -> RemoteInput? {
     self.javaObject.call(method: NotificationCarExtenderUnreadConversation__method__1, [])
   }
 
-  public func getReplyPendingIntent() -> PendingIntent? {
+  open func getReplyPendingIntent() -> PendingIntent? {
     self.javaObject.call(method: NotificationCarExtenderUnreadConversation__method__2, [])
   }
 
-  public func getReadPendingIntent() -> PendingIntent? {
+  open func getReadPendingIntent() -> PendingIntent? {
     self.javaObject.call(method: NotificationCarExtenderUnreadConversation__method__3, [])
   }
 
-  public func getParticipants() -> [String] {
+  open func getParticipants() -> [String] {
     self.javaObject.call(method: NotificationCarExtenderUnreadConversation__method__4, [])
   }
 
-  public func getParticipant() -> String {
+  open func getParticipant() -> String {
     self.javaObject.call(method: NotificationCarExtenderUnreadConversation__method__5, [])
   }
 
-  public func getLatestTimestamp() -> Int64 {
+  open func getLatestTimestamp() -> Int64 {
     self.javaObject.call(method: NotificationCarExtenderUnreadConversation__method__6, [])
   }
 }
@@ -547,171 +543,171 @@ open class NotificationWearableExtender: Object, Notification.Extender {
     super.init(ctor: NotificationWearableExtender__method__1, [notif.toJavaParameter()])
   }
 
-  public func extend(builder: Notification.Builder?) -> Notification.Builder? {
+  open func extend(builder: Notification.Builder?) -> Notification.Builder? {
     self.javaObject.call(method: NotificationWearableExtender__method__2, [builder.toJavaParameter()])
   }
 
-  public func clone() -> Notification.WearableExtender? {
+  override open func clone() -> Notification.WearableExtender? {
     self.javaObject.call(method: NotificationWearableExtender__method__3, [])
   }
 
-  public func addAction(action: Notification.Action?) -> Notification.WearableExtender? {
+  open func addAction(action: Notification.Action?) -> Notification.WearableExtender? {
     self.javaObject.call(method: NotificationWearableExtender__method__4, [action.toJavaParameter()])
   }
 
-  public func addActions<T0>(actions: T0?) -> Notification.WearableExtender? where T0: List, T0.E == Notification.Action {
+  open func addActions<T0>(actions: T0?) -> Notification.WearableExtender? where T0: List, T0.E == Notification.Action {
     self.javaObject.call(method: NotificationWearableExtender__method__5, [actions.toJavaParameter()])
   }
 
-  public func clearActions() -> Notification.WearableExtender? {
+  open func clearActions() -> Notification.WearableExtender? {
     self.javaObject.call(method: NotificationWearableExtender__method__6, [])
   }
 
-  public func getActions<R>() -> R? where R: List, R.E == Notification.Action {
+  open func getActions<R>() -> R? where R: List, R.E == Notification.Action {
     self.javaObject.call(method: NotificationWearableExtender__method__7, [])
   }
 
-  public func setDisplayIntent(intent: PendingIntent?) -> Notification.WearableExtender? {
+  open func setDisplayIntent(intent: PendingIntent?) -> Notification.WearableExtender? {
     self.javaObject.call(method: NotificationWearableExtender__method__8, [intent.toJavaParameter()])
   }
 
-  public func getDisplayIntent() -> PendingIntent? {
+  open func getDisplayIntent() -> PendingIntent? {
     self.javaObject.call(method: NotificationWearableExtender__method__9, [])
   }
 
-  public func addPage(page: Notification?) -> Notification.WearableExtender? {
+  open func addPage(page: Notification?) -> Notification.WearableExtender? {
     self.javaObject.call(method: NotificationWearableExtender__method__10, [page.toJavaParameter()])
   }
 
-  public func addPages<T0>(pages: T0?) -> Notification.WearableExtender? where T0: List, T0.E == Notification {
+  open func addPages<T0>(pages: T0?) -> Notification.WearableExtender? where T0: List, T0.E == Notification {
     self.javaObject.call(method: NotificationWearableExtender__method__11, [pages.toJavaParameter()])
   }
 
-  public func clearPages() -> Notification.WearableExtender? {
+  open func clearPages() -> Notification.WearableExtender? {
     self.javaObject.call(method: NotificationWearableExtender__method__12, [])
   }
 
-  public func getPages<R>() -> R? where R: List, R.E == Notification {
+  open func getPages<R>() -> R? where R: List, R.E == Notification {
     self.javaObject.call(method: NotificationWearableExtender__method__13, [])
   }
 
-  public func setContentIcon(icon: Int32) -> Notification.WearableExtender? {
+  open func setContentIcon(icon: Int32) -> Notification.WearableExtender? {
     self.javaObject.call(method: NotificationWearableExtender__method__14, [icon.toJavaParameter()])
   }
 
-  public func getContentIcon() -> Int32 {
+  open func getContentIcon() -> Int32 {
     self.javaObject.call(method: NotificationWearableExtender__method__15, [])
   }
 
-  public func setContentIconGravity(contentIconGravity: Int32) -> Notification.WearableExtender? {
+  open func setContentIconGravity(contentIconGravity: Int32) -> Notification.WearableExtender? {
     self.javaObject.call(method: NotificationWearableExtender__method__16, [contentIconGravity.toJavaParameter()])
   }
 
-  public func getContentIconGravity() -> Int32 {
+  open func getContentIconGravity() -> Int32 {
     self.javaObject.call(method: NotificationWearableExtender__method__17, [])
   }
 
-  public func setContentAction(actionIndex: Int32) -> Notification.WearableExtender? {
+  open func setContentAction(actionIndex: Int32) -> Notification.WearableExtender? {
     self.javaObject.call(method: NotificationWearableExtender__method__18, [actionIndex.toJavaParameter()])
   }
 
-  public func getContentAction() -> Int32 {
+  open func getContentAction() -> Int32 {
     self.javaObject.call(method: NotificationWearableExtender__method__19, [])
   }
 
-  public func setGravity(gravity: Int32) -> Notification.WearableExtender? {
+  open func setGravity(gravity: Int32) -> Notification.WearableExtender? {
     self.javaObject.call(method: NotificationWearableExtender__method__20, [gravity.toJavaParameter()])
   }
 
-  public func getGravity() -> Int32 {
+  open func getGravity() -> Int32 {
     self.javaObject.call(method: NotificationWearableExtender__method__21, [])
   }
 
-  public func setCustomSizePreset(sizePreset: Int32) -> Notification.WearableExtender? {
+  open func setCustomSizePreset(sizePreset: Int32) -> Notification.WearableExtender? {
     self.javaObject.call(method: NotificationWearableExtender__method__22, [sizePreset.toJavaParameter()])
   }
 
-  public func getCustomSizePreset() -> Int32 {
+  open func getCustomSizePreset() -> Int32 {
     self.javaObject.call(method: NotificationWearableExtender__method__23, [])
   }
 
-  public func setCustomContentHeight(height: Int32) -> Notification.WearableExtender? {
+  open func setCustomContentHeight(height: Int32) -> Notification.WearableExtender? {
     self.javaObject.call(method: NotificationWearableExtender__method__24, [height.toJavaParameter()])
   }
 
-  public func getCustomContentHeight() -> Int32 {
+  open func getCustomContentHeight() -> Int32 {
     self.javaObject.call(method: NotificationWearableExtender__method__25, [])
   }
 
-  public func setStartScrollBottom(startScrollBottom: Bool) -> Notification.WearableExtender? {
+  open func setStartScrollBottom(startScrollBottom: Bool) -> Notification.WearableExtender? {
     self.javaObject.call(method: NotificationWearableExtender__method__26, [startScrollBottom.toJavaParameter()])
   }
 
-  public func getStartScrollBottom() -> Bool {
+  open func getStartScrollBottom() -> Bool {
     self.javaObject.call(method: NotificationWearableExtender__method__27, [])
   }
 
-  public func setContentIntentAvailableOffline(contentIntentAvailableOffline: Bool) -> Notification.WearableExtender? {
+  open func setContentIntentAvailableOffline(contentIntentAvailableOffline: Bool) -> Notification.WearableExtender? {
     self.javaObject.call(method: NotificationWearableExtender__method__28, [contentIntentAvailableOffline.toJavaParameter()])
   }
 
-  public func getContentIntentAvailableOffline() -> Bool {
+  open func getContentIntentAvailableOffline() -> Bool {
     self.javaObject.call(method: NotificationWearableExtender__method__29, [])
   }
 
-  public func setHintHideIcon(hintHideIcon: Bool) -> Notification.WearableExtender? {
+  open func setHintHideIcon(hintHideIcon: Bool) -> Notification.WearableExtender? {
     self.javaObject.call(method: NotificationWearableExtender__method__30, [hintHideIcon.toJavaParameter()])
   }
 
-  public func getHintHideIcon() -> Bool {
+  open func getHintHideIcon() -> Bool {
     self.javaObject.call(method: NotificationWearableExtender__method__31, [])
   }
 
-  public func setHintShowBackgroundOnly(hintShowBackgroundOnly: Bool) -> Notification.WearableExtender? {
+  open func setHintShowBackgroundOnly(hintShowBackgroundOnly: Bool) -> Notification.WearableExtender? {
     self.javaObject.call(method: NotificationWearableExtender__method__32, [hintShowBackgroundOnly.toJavaParameter()])
   }
 
-  public func getHintShowBackgroundOnly() -> Bool {
+  open func getHintShowBackgroundOnly() -> Bool {
     self.javaObject.call(method: NotificationWearableExtender__method__33, [])
   }
 
-  public func setHintAvoidBackgroundClipping(hintAvoidBackgroundClipping: Bool) -> Notification.WearableExtender? {
+  open func setHintAvoidBackgroundClipping(hintAvoidBackgroundClipping: Bool) -> Notification.WearableExtender? {
     self.javaObject.call(method: NotificationWearableExtender__method__34, [hintAvoidBackgroundClipping.toJavaParameter()])
   }
 
-  public func getHintAvoidBackgroundClipping() -> Bool {
+  open func getHintAvoidBackgroundClipping() -> Bool {
     self.javaObject.call(method: NotificationWearableExtender__method__35, [])
   }
 
-  public func setHintScreenTimeout(timeout: Int32) -> Notification.WearableExtender? {
+  open func setHintScreenTimeout(timeout: Int32) -> Notification.WearableExtender? {
     self.javaObject.call(method: NotificationWearableExtender__method__36, [timeout.toJavaParameter()])
   }
 
-  public func getHintScreenTimeout() -> Int32 {
+  open func getHintScreenTimeout() -> Int32 {
     self.javaObject.call(method: NotificationWearableExtender__method__37, [])
   }
 
-  public func setHintAmbientBigPicture(hintAmbientBigPicture: Bool) -> Notification.WearableExtender? {
+  open func setHintAmbientBigPicture(hintAmbientBigPicture: Bool) -> Notification.WearableExtender? {
     self.javaObject.call(method: NotificationWearableExtender__method__38, [hintAmbientBigPicture.toJavaParameter()])
   }
 
-  public func getHintAmbientBigPicture() -> Bool {
+  open func getHintAmbientBigPicture() -> Bool {
     self.javaObject.call(method: NotificationWearableExtender__method__39, [])
   }
 
-  public func setHintContentIntentLaunchesActivity(hintContentIntentLaunchesActivity: Bool) -> Notification.WearableExtender? {
+  open func setHintContentIntentLaunchesActivity(hintContentIntentLaunchesActivity: Bool) -> Notification.WearableExtender? {
     self.javaObject.call(method: NotificationWearableExtender__method__40, [hintContentIntentLaunchesActivity.toJavaParameter()])
   }
 
-  public func getHintContentIntentLaunchesActivity() -> Bool {
+  open func getHintContentIntentLaunchesActivity() -> Bool {
     self.javaObject.call(method: NotificationWearableExtender__method__41, [])
   }
 
-  public func setDismissalId(dismissalId: String) -> Notification.WearableExtender? {
+  open func setDismissalId(dismissalId: String) -> Notification.WearableExtender? {
     self.javaObject.call(method: NotificationWearableExtender__method__42, [dismissalId.toJavaParameter()])
   }
 
-  public func getDismissalId() -> String {
+  open func getDismissalId() -> String {
     self.javaObject.call(method: NotificationWearableExtender__method__43, [])
   }
 
@@ -725,11 +721,11 @@ open class NotificationWearableExtender: Object, Notification.Extender {
 }
 
 extension NotificationWearableExtender {
-  public func getActions() -> ListProxy<Notification.Action>? {
+  open func getActions() -> ListProxy<Notification.Action>? {
     self.javaObject.call(method: NotificationWearableExtender__method__7, [])
   }
 
-  public func getPages() -> ListProxy<Notification>? {
+  open func getPages() -> ListProxy<Notification>? {
     self.javaObject.call(method: NotificationWearableExtender__method__13, [])
   }
 }
@@ -805,12 +801,8 @@ open class NotificationMediaStyle: Object, Notification.Style {
     super.init(ctor: NotificationMediaStyle__method__0, [])
   }
 
-  public init(builder: Notification.Builder?) {
-    super.init(ctor: NotificationMediaStyle__method__1, [builder.toJavaParameter()])
-  }
-
-  public func setShowActionsInCompactView(actions: [Int32]) -> Notification.MediaStyle? {
-    self.javaObject.call(method: NotificationMediaStyle__method__2, [actions.toJavaParameter()])
+  open func setShowActionsInCompactView(actions: [Int32]) -> Notification.MediaStyle? {
+    self.javaObject.call(method: NotificationMediaStyle__method__1, [actions.toJavaParameter()])
   }
 
   public required init(_ obj: JavaObject) {
@@ -829,20 +821,16 @@ open class NotificationInboxStyle: Object, Notification.Style {
     super.init(ctor: NotificationInboxStyle__method__0, [])
   }
 
-  public init(builder: Notification.Builder?) {
-    super.init(ctor: NotificationInboxStyle__method__1, [builder.toJavaParameter()])
+  open func setBigContentTitle(title: String?) -> Notification.InboxStyle? {
+    self.javaObject.call(method: NotificationInboxStyle__method__1, [title.toJavaParameter()])
   }
 
-  public func setBigContentTitle(title: String?) -> Notification.InboxStyle? {
-    self.javaObject.call(method: NotificationInboxStyle__method__2, [title.toJavaParameter()])
+  open func setSummaryText(cs: String?) -> Notification.InboxStyle? {
+    self.javaObject.call(method: NotificationInboxStyle__method__2, [cs.toJavaParameter()])
   }
 
-  public func setSummaryText(cs: String?) -> Notification.InboxStyle? {
+  open func addLine(cs: String?) -> Notification.InboxStyle? {
     self.javaObject.call(method: NotificationInboxStyle__method__3, [cs.toJavaParameter()])
-  }
-
-  public func addLine(cs: String?) -> Notification.InboxStyle? {
-    self.javaObject.call(method: NotificationInboxStyle__method__4, [cs.toJavaParameter()])
   }
 
   public required init(_ obj: JavaObject) {
@@ -865,27 +853,27 @@ open class NotificationMessagingStyle: Object, Notification.Style {
     super.init(ctor: NotificationMessagingStyle__method__0, [userDisplayName.toJavaParameter()])
   }
 
-  public func getUserDisplayName() -> String? {
+  open func getUserDisplayName() -> String? {
     self.javaObject.call(method: NotificationMessagingStyle__method__1, [])
   }
 
-  public func setConversationTitle(conversationTitle: String?) -> Notification.MessagingStyle? {
+  open func setConversationTitle(conversationTitle: String?) -> Notification.MessagingStyle? {
     self.javaObject.call(method: NotificationMessagingStyle__method__2, [conversationTitle.toJavaParameter()])
   }
 
-  public func getConversationTitle() -> String? {
+  open func getConversationTitle() -> String? {
     self.javaObject.call(method: NotificationMessagingStyle__method__3, [])
   }
 
-  public func addMessage(text: String?, timestamp: Int64, sender: String?) -> Notification.MessagingStyle? {
+  open func addMessage(text: String?, timestamp: Int64, sender: String?) -> Notification.MessagingStyle? {
     self.javaObject.call(method: NotificationMessagingStyle__method__4, [text.toJavaParameter(), timestamp.toJavaParameter(), sender.toJavaParameter()])
   }
 
-  public func addMessage(message: Notification.MessagingStyle.Message?) -> Notification.MessagingStyle? {
+  open func addMessage(message: Notification.MessagingStyle.Message?) -> Notification.MessagingStyle? {
     self.javaObject.call(method: NotificationMessagingStyle__method__5, [message.toJavaParameter()])
   }
 
-  public func getMessages<R>() -> R? where R: List, R.E == Notification.MessagingStyle.Message {
+  open func getMessages<R>() -> R? where R: List, R.E == Notification.MessagingStyle.Message {
     self.javaObject.call(method: NotificationMessagingStyle__method__6, [])
   }
 
@@ -899,7 +887,7 @@ open class NotificationMessagingStyle: Object, Notification.Style {
 }
 
 extension NotificationMessagingStyle {
-  public func getMessages() -> ListProxy<Notification.MessagingStyle.Message>? {
+  open func getMessages() -> ListProxy<Notification.MessagingStyle.Message>? {
     self.javaObject.call(method: NotificationMessagingStyle__method__6, [])
   }
 }
@@ -911,19 +899,19 @@ open class NotificationMessagingStyleMessage: Object {
     super.init(ctor: NotificationMessagingStyleMessage__method__0, [text.toJavaParameter(), timestamp.toJavaParameter(), sender.toJavaParameter()])
   }
 
-  public func getText() -> String? {
+  open func getText() -> String? {
     self.javaObject.call(method: NotificationMessagingStyleMessage__method__1, [])
   }
 
-  public func getTimestamp() -> Int64 {
+  open func getTimestamp() -> Int64 {
     self.javaObject.call(method: NotificationMessagingStyleMessage__method__2, [])
   }
 
-  public func getSender() -> String? {
+  open func getSender() -> String? {
     self.javaObject.call(method: NotificationMessagingStyleMessage__method__3, [])
   }
 
-  public func getDataMimeType() -> String {
+  open func getDataMimeType() -> String {
     self.javaObject.call(method: NotificationMessagingStyleMessage__method__4, [])
   }
 
@@ -943,20 +931,16 @@ open class NotificationBigTextStyle: Object, Notification.Style {
     super.init(ctor: NotificationBigTextStyle__method__0, [])
   }
 
-  public init(builder: Notification.Builder?) {
-    super.init(ctor: NotificationBigTextStyle__method__1, [builder.toJavaParameter()])
+  open func setBigContentTitle(title: String?) -> Notification.BigTextStyle? {
+    self.javaObject.call(method: NotificationBigTextStyle__method__1, [title.toJavaParameter()])
   }
 
-  public func setBigContentTitle(title: String?) -> Notification.BigTextStyle? {
-    self.javaObject.call(method: NotificationBigTextStyle__method__2, [title.toJavaParameter()])
+  open func setSummaryText(cs: String?) -> Notification.BigTextStyle? {
+    self.javaObject.call(method: NotificationBigTextStyle__method__2, [cs.toJavaParameter()])
   }
 
-  public func setSummaryText(cs: String?) -> Notification.BigTextStyle? {
+  open func bigText(cs: String?) -> Notification.BigTextStyle? {
     self.javaObject.call(method: NotificationBigTextStyle__method__3, [cs.toJavaParameter()])
-  }
-
-  public func bigText(cs: String?) -> Notification.BigTextStyle? {
-    self.javaObject.call(method: NotificationBigTextStyle__method__4, [cs.toJavaParameter()])
   }
 
   public required init(_ obj: JavaObject) {
@@ -975,16 +959,12 @@ open class NotificationBigPictureStyle: Object, Notification.Style {
     super.init(ctor: NotificationBigPictureStyle__method__0, [])
   }
 
-  public init(builder: Notification.Builder?) {
-    super.init(ctor: NotificationBigPictureStyle__method__1, [builder.toJavaParameter()])
+  open func setBigContentTitle(title: String?) -> Notification.BigPictureStyle? {
+    self.javaObject.call(method: NotificationBigPictureStyle__method__1, [title.toJavaParameter()])
   }
 
-  public func setBigContentTitle(title: String?) -> Notification.BigPictureStyle? {
-    self.javaObject.call(method: NotificationBigPictureStyle__method__2, [title.toJavaParameter()])
-  }
-
-  public func setSummaryText(cs: String?) -> Notification.BigPictureStyle? {
-    self.javaObject.call(method: NotificationBigPictureStyle__method__3, [cs.toJavaParameter()])
+  open func setSummaryText(cs: String?) -> Notification.BigPictureStyle? {
+    self.javaObject.call(method: NotificationBigPictureStyle__method__2, [cs.toJavaParameter()])
   }
 
   public required init(_ obj: JavaObject) {
@@ -998,11 +978,7 @@ open class NotificationBigPictureStyle: Object, Notification.Style {
 
 // ------------------------------------------------------------------------------------
 
-public protocol NotificationStyle where Self: Object {
-  func setBuilder(builder: Notification.Builder?) -> Void
-
-  func build() -> Notification?
-}
+public protocol NotificationStyle where Self: Object {}
 
 public extension NotificationStyle {
   func box() -> NotificationStyleProxy {
@@ -1011,12 +987,24 @@ public extension NotificationStyle {
 }
 
 public extension NotificationStyle where Self: Object {
+  func internalSetBigContentTitle(title: String?) {
+    self.javaObject.call(method: NotificationStyle__method__1, [title.toJavaParameter()])
+  }
+
+  func internalSetSummaryText(cs: String?) {
+    self.javaObject.call(method: NotificationStyle__method__2, [cs.toJavaParameter()])
+  }
+
   func setBuilder(builder: Notification.Builder?) {
-    self.javaObject.call(method: NotificationStyle__method__1, [builder.toJavaParameter()])
+    self.javaObject.call(method: NotificationStyle__method__3, [builder.toJavaParameter()])
+  }
+
+  func checkBuilder() {
+    self.javaObject.call(method: NotificationStyle__method__4, [])
   }
 
   func build() -> Notification? {
-    self.javaObject.call(method: NotificationStyle__method__2, [])
+    self.javaObject.call(method: NotificationStyle__method__5, [])
   }
 }
 
@@ -1039,180 +1027,164 @@ open class NotificationBuilder: Object {
     super.init(ctor: NotificationBuilder__method__0, [JavaParameter(object: context?.toJavaObject())])
   }
 
-  public func setWhen(when: Int64) -> Notification.Builder? {
+  open func setWhen(when: Int64) -> Notification.Builder? {
     self.javaObject.call(method: NotificationBuilder__method__1, [when.toJavaParameter()])
   }
 
-  public func setShowWhen(show: Bool) -> Notification.Builder? {
+  open func setShowWhen(show: Bool) -> Notification.Builder? {
     self.javaObject.call(method: NotificationBuilder__method__2, [show.toJavaParameter()])
   }
 
-  public func setUsesChronometer(b: Bool) -> Notification.Builder? {
+  open func setUsesChronometer(b: Bool) -> Notification.Builder? {
     self.javaObject.call(method: NotificationBuilder__method__3, [b.toJavaParameter()])
   }
 
-  public func setChronometerCountDown(countDown: Bool) -> Notification.Builder? {
+  open func setChronometerCountDown(countDown: Bool) -> Notification.Builder? {
     self.javaObject.call(method: NotificationBuilder__method__4, [countDown.toJavaParameter()])
   }
 
-  public func setSmallIcon(icon: Int32) -> Notification.Builder? {
+  open func setSmallIcon(icon: Int32) -> Notification.Builder? {
     self.javaObject.call(method: NotificationBuilder__method__5, [icon.toJavaParameter()])
   }
 
-  public func setSmallIcon(icon: Int32, level: Int32) -> Notification.Builder? {
+  open func setSmallIcon(icon: Int32, level: Int32) -> Notification.Builder? {
     self.javaObject.call(method: NotificationBuilder__method__6, [icon.toJavaParameter(), level.toJavaParameter()])
   }
 
-  public func setContentTitle(title: String?) -> Notification.Builder? {
+  open func setContentTitle(title: String?) -> Notification.Builder? {
     self.javaObject.call(method: NotificationBuilder__method__7, [title.toJavaParameter()])
   }
 
-  public func setContentText(text: String?) -> Notification.Builder? {
+  open func setContentText(text: String?) -> Notification.Builder? {
     self.javaObject.call(method: NotificationBuilder__method__8, [text.toJavaParameter()])
   }
 
-  public func setSubText(text: String?) -> Notification.Builder? {
+  open func setSubText(text: String?) -> Notification.Builder? {
     self.javaObject.call(method: NotificationBuilder__method__9, [text.toJavaParameter()])
   }
 
-  public func setRemoteInputHistory(text: [String?]) -> Notification.Builder? {
+  open func setRemoteInputHistory(text: [String?]) -> Notification.Builder? {
     self.javaObject.call(method: NotificationBuilder__method__10, [text.toJavaParameter()])
   }
 
-  public func setNumber(number: Int32) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__11, [number.toJavaParameter()])
+  open func setProgress(max: Int32, progress: Int32, indeterminate: Bool) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__11, [max.toJavaParameter(), progress.toJavaParameter(), indeterminate.toJavaParameter()])
   }
 
-  public func setContentInfo(info: String?) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__12, [info.toJavaParameter()])
+  open func setContentIntent(intent: PendingIntent?) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__12, [intent.toJavaParameter()])
   }
 
-  public func setProgress(max: Int32, progress: Int32, indeterminate: Bool) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__13, [max.toJavaParameter(), progress.toJavaParameter(), indeterminate.toJavaParameter()])
+  open func setDeleteIntent(intent: PendingIntent?) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__13, [intent.toJavaParameter()])
   }
 
-  public func setContentIntent(intent: PendingIntent?) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__14, [intent.toJavaParameter()])
+  open func setFullScreenIntent(intent: PendingIntent?, highPriority: Bool) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__14, [intent.toJavaParameter(), highPriority.toJavaParameter()])
   }
 
-  public func setDeleteIntent(intent: PendingIntent?) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__15, [intent.toJavaParameter()])
+  open func setTicker(tickerText: String?) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__15, [tickerText.toJavaParameter()])
   }
 
-  public func setFullScreenIntent(intent: PendingIntent?, highPriority: Bool) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__16, [intent.toJavaParameter(), highPriority.toJavaParameter()])
+  open func setVibrate(pattern: [Int64]) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__16, [pattern.toJavaParameter()])
   }
 
-  public func setTicker(tickerText: String?) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__17, [tickerText.toJavaParameter()])
+  open func setLights(argb: Int32, onMs: Int32, offMs: Int32) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__17, [argb.toJavaParameter(), onMs.toJavaParameter(), offMs.toJavaParameter()])
   }
 
-  public func setVibrate(pattern: [Int64]) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__18, [pattern.toJavaParameter()])
+  open func setOngoing(ongoing: Bool) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__18, [ongoing.toJavaParameter()])
   }
 
-  public func setLights(argb: Int32, onMs: Int32, offMs: Int32) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__19, [argb.toJavaParameter(), onMs.toJavaParameter(), offMs.toJavaParameter()])
+  open func setOnlyAlertOnce(onlyAlertOnce: Bool) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__19, [onlyAlertOnce.toJavaParameter()])
   }
 
-  public func setOngoing(ongoing: Bool) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__20, [ongoing.toJavaParameter()])
+  open func setAutoCancel(autoCancel: Bool) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__20, [autoCancel.toJavaParameter()])
   }
 
-  public func setOnlyAlertOnce(onlyAlertOnce: Bool) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__21, [onlyAlertOnce.toJavaParameter()])
+  open func setLocalOnly(localOnly: Bool) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__21, [localOnly.toJavaParameter()])
   }
 
-  public func setAutoCancel(autoCancel: Bool) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__22, [autoCancel.toJavaParameter()])
+  open func setDefaults(defaults: Int32) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__22, [defaults.toJavaParameter()])
   }
 
-  public func setLocalOnly(localOnly: Bool) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__23, [localOnly.toJavaParameter()])
+  open func setPriority(pri: Int32) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__23, [pri.toJavaParameter()])
   }
 
-  public func setDefaults(defaults: Int32) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__24, [defaults.toJavaParameter()])
+  open func setCategory(category: String) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__24, [category.toJavaParameter()])
   }
 
-  public func setPriority(pri: Int32) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__25, [pri.toJavaParameter()])
+  open func addPerson(uri: String) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__25, [uri.toJavaParameter()])
   }
 
-  public func setCategory(category: String) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__26, [category.toJavaParameter()])
+  open func setGroup(groupKey: String) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__26, [groupKey.toJavaParameter()])
   }
 
-  public func addPerson(uri: String) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__27, [uri.toJavaParameter()])
+  open func setGroupSummary(isGroupSummary: Bool) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__27, [isGroupSummary.toJavaParameter()])
   }
 
-  public func setGroup(groupKey: String) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__28, [groupKey.toJavaParameter()])
+  open func setSortKey(sortKey: String) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__28, [sortKey.toJavaParameter()])
   }
 
-  public func setGroupSummary(isGroupSummary: Bool) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__29, [isGroupSummary.toJavaParameter()])
+  open func addExtras(extras: Bundle?) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__29, [extras.toJavaParameter()])
   }
 
-  public func setSortKey(sortKey: String) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__30, [sortKey.toJavaParameter()])
+  open func setExtras(extras: Bundle?) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__30, [extras.toJavaParameter()])
   }
 
-  public func addExtras(extras: Bundle?) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__31, [extras.toJavaParameter()])
+  open func getExtras() -> Bundle? {
+    self.javaObject.call(method: NotificationBuilder__method__31, [])
   }
 
-  public func setExtras(extras: Bundle?) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__32, [extras.toJavaParameter()])
+  open func addAction(action: Notification.Action?) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__32, [action.toJavaParameter()])
   }
 
-  public func getExtras() -> Bundle? {
-    self.javaObject.call(method: NotificationBuilder__method__33, [])
+  open func setActions(actions: [Notification.Action?]) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__33, [actions.toJavaParameter()])
   }
 
-  public func addAction(icon: Int32, title: String?, intent: PendingIntent?) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__34, [icon.toJavaParameter(), title.toJavaParameter(), intent.toJavaParameter()])
+  open func setStyle(style: Notification.Style?) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__34, [JavaParameter(object: style?.toJavaObject())])
   }
 
-  public func addAction(action: Notification.Action?) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__35, [action.toJavaParameter()])
+  open func setVisibility(visibility: Int32) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__35, [visibility.toJavaParameter()])
   }
 
-  public func setActions(actions: [Notification.Action?]) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__36, [actions.toJavaParameter()])
+  open func setPublicVersion(n: Notification?) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__36, [n.toJavaParameter()])
   }
 
-  public func setStyle(style: Notification.Style?) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__37, [JavaParameter(object: style?.toJavaObject())])
+  open func extend(extender: Notification.Extender?) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__37, [JavaParameter(object: extender?.toJavaObject())])
   }
 
-  public func setVisibility(visibility: Int32) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__38, [visibility.toJavaParameter()])
-  }
-
-  public func setPublicVersion(n: Notification?) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__39, [n.toJavaParameter()])
-  }
-
-  public func extend(extender: Notification.Extender?) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__40, [JavaParameter(object: extender?.toJavaObject())])
-  }
-
-  public func setColor(argb: Int32) -> Notification.Builder? {
-    self.javaObject.call(method: NotificationBuilder__method__41, [argb.toJavaParameter()])
+  open func setColor(argb: Int32) -> Notification.Builder? {
+    self.javaObject.call(method: NotificationBuilder__method__38, [argb.toJavaParameter()])
   }
 
   public static func recoverBuilder(context: Context?, n: Notification?) -> Notification.Builder? {
-    NotificationBuilder__class.callStatic(method: NotificationBuilder__method__42, [JavaParameter(object: context?.toJavaObject()), n.toJavaParameter()])
+    NotificationBuilder__class.callStatic(method: NotificationBuilder__method__39, [JavaParameter(object: context?.toJavaObject()), n.toJavaParameter()])
   }
 
-  public func getNotification() -> Notification? {
-    self.javaObject.call(method: NotificationBuilder__method__43, [])
-  }
-
-  public func build() -> Notification? {
-    self.javaObject.call(method: NotificationBuilder__method__44, [])
+  open func build() -> Notification? {
+    self.javaObject.call(method: NotificationBuilder__method__40, [])
   }
 
   public required init(_ obj: JavaObject) {
@@ -1261,40 +1233,28 @@ open class NotificationAction: Object, Parcelable {
     }
   }
 
-  public init(icon: Int32, title: String?, intent: PendingIntent?) {
-    super.init(ctor: NotificationAction__method__0, [icon.toJavaParameter(), title.toJavaParameter(), intent.toJavaParameter()])
+  open func getExtras() -> Bundle? {
+    self.javaObject.call(method: NotificationAction__method__0, [])
   }
 
-  public func getExtras() -> Bundle? {
+  open func getAllowGeneratedReplies() -> Bool {
     self.javaObject.call(method: NotificationAction__method__1, [])
   }
 
-  public func getAllowGeneratedReplies() -> Bool {
+  open func getRemoteInputs() -> [RemoteInput?] {
     self.javaObject.call(method: NotificationAction__method__2, [])
   }
 
-  public func getRemoteInputs() -> [RemoteInput?] {
+  override open func clone() -> Notification.Action? {
     self.javaObject.call(method: NotificationAction__method__3, [])
   }
 
-  public func clone() -> Notification.Action? {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: NotificationAction__method__4, [])
   }
 
-  public func describeContents() -> Int32 {
-    self.javaObject.call(method: NotificationAction__method__5, [])
-  }
-
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
-    self.javaObject.call(method: NotificationAction__method__6, [dest.toJavaParameter(), flags.toJavaParameter()])
-  }
-
-  public required init(_ obj: JavaObject) {
-    super.init(obj)
-  }
-
-  public required init(ctor: JavaMethodID, _ args: [JavaParameter]) {
-    super.init(ctor: ctor, args)
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
+    self.javaObject.call(method: NotificationAction__method__5, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }
 
@@ -1309,51 +1269,51 @@ open class NotificationActionWearableExtender: Object, Notification.Action.Exten
     super.init(ctor: NotificationActionWearableExtender__method__1, [action.toJavaParameter()])
   }
 
-  public func extend(builder: Notification.Action.Builder?) -> Notification.Action.Builder? {
+  open func extend(builder: Notification.Action.Builder?) -> Notification.Action.Builder? {
     self.javaObject.call(method: NotificationActionWearableExtender__method__2, [builder.toJavaParameter()])
   }
 
-  public func clone() -> Notification.Action.WearableExtender? {
+  override open func clone() -> Notification.Action.WearableExtender? {
     self.javaObject.call(method: NotificationActionWearableExtender__method__3, [])
   }
 
-  public func setAvailableOffline(availableOffline: Bool) -> Notification.Action.WearableExtender? {
+  open func setAvailableOffline(availableOffline: Bool) -> Notification.Action.WearableExtender? {
     self.javaObject.call(method: NotificationActionWearableExtender__method__4, [availableOffline.toJavaParameter()])
   }
 
-  public func isAvailableOffline() -> Bool {
+  open func isAvailableOffline() -> Bool {
     self.javaObject.call(method: NotificationActionWearableExtender__method__5, [])
   }
 
-  public func setInProgressLabel(label: String?) -> Notification.Action.WearableExtender? {
+  open func setInProgressLabel(label: String?) -> Notification.Action.WearableExtender? {
     self.javaObject.call(method: NotificationActionWearableExtender__method__6, [label.toJavaParameter()])
   }
 
-  public func getInProgressLabel() -> String? {
+  open func getInProgressLabel() -> String? {
     self.javaObject.call(method: NotificationActionWearableExtender__method__7, [])
   }
 
-  public func setConfirmLabel(label: String?) -> Notification.Action.WearableExtender? {
+  open func setConfirmLabel(label: String?) -> Notification.Action.WearableExtender? {
     self.javaObject.call(method: NotificationActionWearableExtender__method__8, [label.toJavaParameter()])
   }
 
-  public func getConfirmLabel() -> String? {
+  open func getConfirmLabel() -> String? {
     self.javaObject.call(method: NotificationActionWearableExtender__method__9, [])
   }
 
-  public func setCancelLabel(label: String?) -> Notification.Action.WearableExtender? {
+  open func setCancelLabel(label: String?) -> Notification.Action.WearableExtender? {
     self.javaObject.call(method: NotificationActionWearableExtender__method__10, [label.toJavaParameter()])
   }
 
-  public func getCancelLabel() -> String? {
+  open func getCancelLabel() -> String? {
     self.javaObject.call(method: NotificationActionWearableExtender__method__11, [])
   }
 
-  public func setHintLaunchesActivity(hintLaunchesActivity: Bool) -> Notification.Action.WearableExtender? {
+  open func setHintLaunchesActivity(hintLaunchesActivity: Bool) -> Notification.Action.WearableExtender? {
     self.javaObject.call(method: NotificationActionWearableExtender__method__12, [hintLaunchesActivity.toJavaParameter()])
   }
 
-  public func getHintLaunchesActivity() -> Bool {
+  open func getHintLaunchesActivity() -> Bool {
     self.javaObject.call(method: NotificationActionWearableExtender__method__13, [])
   }
 
@@ -1401,36 +1361,32 @@ public final class NotificationActionExtenderProxy: Object, JInterfaceProxy, Not
 // ------------------------------------------------------------------------------------
 
 open class NotificationActionBuilder: Object {
-  public init(icon: Int32, title: String?, intent: PendingIntent?) {
-    super.init(ctor: NotificationActionBuilder__method__0, [icon.toJavaParameter(), title.toJavaParameter(), intent.toJavaParameter()])
-  }
-
   public init(action: Notification.Action?) {
-    super.init(ctor: NotificationActionBuilder__method__1, [action.toJavaParameter()])
+    super.init(ctor: NotificationActionBuilder__method__0, [action.toJavaParameter()])
   }
 
-  public func addExtras(extras: Bundle?) -> Notification.Action.Builder? {
-    self.javaObject.call(method: NotificationActionBuilder__method__2, [extras.toJavaParameter()])
+  open func addExtras(extras: Bundle?) -> Notification.Action.Builder? {
+    self.javaObject.call(method: NotificationActionBuilder__method__1, [extras.toJavaParameter()])
   }
 
-  public func getExtras() -> Bundle? {
-    self.javaObject.call(method: NotificationActionBuilder__method__3, [])
+  open func getExtras() -> Bundle? {
+    self.javaObject.call(method: NotificationActionBuilder__method__2, [])
   }
 
-  public func addRemoteInput(remoteInput: RemoteInput?) -> Notification.Action.Builder? {
-    self.javaObject.call(method: NotificationActionBuilder__method__4, [remoteInput.toJavaParameter()])
+  open func addRemoteInput(remoteInput: RemoteInput?) -> Notification.Action.Builder? {
+    self.javaObject.call(method: NotificationActionBuilder__method__3, [remoteInput.toJavaParameter()])
   }
 
-  public func setAllowGeneratedReplies(allowGeneratedReplies: Bool) -> Notification.Action.Builder? {
-    self.javaObject.call(method: NotificationActionBuilder__method__5, [allowGeneratedReplies.toJavaParameter()])
+  open func setAllowGeneratedReplies(allowGeneratedReplies: Bool) -> Notification.Action.Builder? {
+    self.javaObject.call(method: NotificationActionBuilder__method__4, [allowGeneratedReplies.toJavaParameter()])
   }
 
-  public func extend(extender: Notification.Action.Extender?) -> Notification.Action.Builder? {
-    self.javaObject.call(method: NotificationActionBuilder__method__6, [JavaParameter(object: extender?.toJavaObject())])
+  open func extend(extender: Notification.Action.Extender?) -> Notification.Action.Builder? {
+    self.javaObject.call(method: NotificationActionBuilder__method__5, [JavaParameter(object: extender?.toJavaObject())])
   }
 
-  public func build() -> Notification.Action? {
-    self.javaObject.call(method: NotificationActionBuilder__method__7, [])
+  open func build() -> Notification.Action? {
+    self.javaObject.call(method: NotificationActionBuilder__method__6, [])
   }
 
   public required init(_ obj: JavaObject) {
@@ -1447,13 +1403,12 @@ open class NotificationActionBuilder: Object {
 private let Notification__class = findJavaClass(fqn: "android/app/Notification")!
 
 private let Notification__method__0 = Notification__class.getMethodID(name: "<init>", sig: "()V")!
-private let Notification__method__1 = Notification__class.getMethodID(name: "<init>", sig: "(ILjava/lang/CharSequence;J)V")!
-private let Notification__method__2 = Notification__class.getMethodID(name: "<init>", sig: "(Landroid/os/Parcel;)V")!
-private let Notification__method__3 = Notification__class.getMethodID(name: "getGroup", sig: "()Ljava/lang/String;")!
-private let Notification__method__4 = Notification__class.getMethodID(name: "getSortKey", sig: "()Ljava/lang/String;")!
-private let Notification__method__5 = Notification__class.getMethodID(name: "clone", sig: "()Landroid/app/Notification;")!
-private let Notification__method__6 = Notification__class.getMethodID(name: "describeContents", sig: "()I")!
-private let Notification__method__7 = Notification__class.getMethodID(name: "writeToParcel", sig: "(Landroid/os/Parcel;I)V")!
+private let Notification__method__1 = Notification__class.getMethodID(name: "<init>", sig: "(Landroid/os/Parcel;)V")!
+private let Notification__method__2 = Notification__class.getMethodID(name: "getGroup", sig: "()Ljava/lang/String;")!
+private let Notification__method__3 = Notification__class.getMethodID(name: "getSortKey", sig: "()Ljava/lang/String;")!
+private let Notification__method__4 = Notification__class.getMethodID(name: "clone", sig: "()Landroid/app/Notification;")!
+private let Notification__method__5 = Notification__class.getMethodID(name: "describeContents", sig: "()I")!
+private let Notification__method__6 = Notification__class.getMethodID(name: "writeToParcel", sig: "(Landroid/os/Parcel;I)V")!
 
 private let Notification__field__0 = Notification__class.getStaticFieldID(name: "CATEGORY_ALARM", sig: "Ljava/lang/String;")!
 private let Notification__field__1 = Notification__class.getStaticFieldID(name: "CATEGORY_CALL", sig: "Ljava/lang/String;")!
@@ -1662,18 +1617,16 @@ private let NotificationDecoratedCustomViewStyle__method__0 = NotificationDecora
 private let NotificationMediaStyle__class = findJavaClass(fqn: "android/app/Notification$MediaStyle")!
 
 private let NotificationMediaStyle__method__0 = NotificationMediaStyle__class.getMethodID(name: "<init>", sig: "()V")!
-private let NotificationMediaStyle__method__1 = NotificationMediaStyle__class.getMethodID(name: "<init>", sig: "(Landroid/app/Notification$Builder;)V")!
-private let NotificationMediaStyle__method__2 = NotificationMediaStyle__class.getMethodID(name: "setShowActionsInCompactView", sig: "([I)Landroid/app/Notification$MediaStyle;")!
+private let NotificationMediaStyle__method__1 = NotificationMediaStyle__class.getMethodID(name: "setShowActionsInCompactView", sig: "([I)Landroid/app/Notification$MediaStyle;")!
 
 // ------------------------------------------------------------------------------------
 
 private let NotificationInboxStyle__class = findJavaClass(fqn: "android/app/Notification$InboxStyle")!
 
 private let NotificationInboxStyle__method__0 = NotificationInboxStyle__class.getMethodID(name: "<init>", sig: "()V")!
-private let NotificationInboxStyle__method__1 = NotificationInboxStyle__class.getMethodID(name: "<init>", sig: "(Landroid/app/Notification$Builder;)V")!
-private let NotificationInboxStyle__method__2 = NotificationInboxStyle__class.getMethodID(name: "setBigContentTitle", sig: "(Ljava/lang/CharSequence;)Landroid/app/Notification$InboxStyle;")!
-private let NotificationInboxStyle__method__3 = NotificationInboxStyle__class.getMethodID(name: "setSummaryText", sig: "(Ljava/lang/CharSequence;)Landroid/app/Notification$InboxStyle;")!
-private let NotificationInboxStyle__method__4 = NotificationInboxStyle__class.getMethodID(name: "addLine", sig: "(Ljava/lang/CharSequence;)Landroid/app/Notification$InboxStyle;")!
+private let NotificationInboxStyle__method__1 = NotificationInboxStyle__class.getMethodID(name: "setBigContentTitle", sig: "(Ljava/lang/CharSequence;)Landroid/app/Notification$InboxStyle;")!
+private let NotificationInboxStyle__method__2 = NotificationInboxStyle__class.getMethodID(name: "setSummaryText", sig: "(Ljava/lang/CharSequence;)Landroid/app/Notification$InboxStyle;")!
+private let NotificationInboxStyle__method__3 = NotificationInboxStyle__class.getMethodID(name: "addLine", sig: "(Ljava/lang/CharSequence;)Landroid/app/Notification$InboxStyle;")!
 
 // ------------------------------------------------------------------------------------
 
@@ -1704,26 +1657,27 @@ private let NotificationMessagingStyleMessage__method__4 = NotificationMessaging
 private let NotificationBigTextStyle__class = findJavaClass(fqn: "android/app/Notification$BigTextStyle")!
 
 private let NotificationBigTextStyle__method__0 = NotificationBigTextStyle__class.getMethodID(name: "<init>", sig: "()V")!
-private let NotificationBigTextStyle__method__1 = NotificationBigTextStyle__class.getMethodID(name: "<init>", sig: "(Landroid/app/Notification$Builder;)V")!
-private let NotificationBigTextStyle__method__2 = NotificationBigTextStyle__class.getMethodID(name: "setBigContentTitle", sig: "(Ljava/lang/CharSequence;)Landroid/app/Notification$BigTextStyle;")!
-private let NotificationBigTextStyle__method__3 = NotificationBigTextStyle__class.getMethodID(name: "setSummaryText", sig: "(Ljava/lang/CharSequence;)Landroid/app/Notification$BigTextStyle;")!
-private let NotificationBigTextStyle__method__4 = NotificationBigTextStyle__class.getMethodID(name: "bigText", sig: "(Ljava/lang/CharSequence;)Landroid/app/Notification$BigTextStyle;")!
+private let NotificationBigTextStyle__method__1 = NotificationBigTextStyle__class.getMethodID(name: "setBigContentTitle", sig: "(Ljava/lang/CharSequence;)Landroid/app/Notification$BigTextStyle;")!
+private let NotificationBigTextStyle__method__2 = NotificationBigTextStyle__class.getMethodID(name: "setSummaryText", sig: "(Ljava/lang/CharSequence;)Landroid/app/Notification$BigTextStyle;")!
+private let NotificationBigTextStyle__method__3 = NotificationBigTextStyle__class.getMethodID(name: "bigText", sig: "(Ljava/lang/CharSequence;)Landroid/app/Notification$BigTextStyle;")!
 
 // ------------------------------------------------------------------------------------
 
 private let NotificationBigPictureStyle__class = findJavaClass(fqn: "android/app/Notification$BigPictureStyle")!
 
 private let NotificationBigPictureStyle__method__0 = NotificationBigPictureStyle__class.getMethodID(name: "<init>", sig: "()V")!
-private let NotificationBigPictureStyle__method__1 = NotificationBigPictureStyle__class.getMethodID(name: "<init>", sig: "(Landroid/app/Notification$Builder;)V")!
-private let NotificationBigPictureStyle__method__2 = NotificationBigPictureStyle__class.getMethodID(name: "setBigContentTitle", sig: "(Ljava/lang/CharSequence;)Landroid/app/Notification$BigPictureStyle;")!
-private let NotificationBigPictureStyle__method__3 = NotificationBigPictureStyle__class.getMethodID(name: "setSummaryText", sig: "(Ljava/lang/CharSequence;)Landroid/app/Notification$BigPictureStyle;")!
+private let NotificationBigPictureStyle__method__1 = NotificationBigPictureStyle__class.getMethodID(name: "setBigContentTitle", sig: "(Ljava/lang/CharSequence;)Landroid/app/Notification$BigPictureStyle;")!
+private let NotificationBigPictureStyle__method__2 = NotificationBigPictureStyle__class.getMethodID(name: "setSummaryText", sig: "(Ljava/lang/CharSequence;)Landroid/app/Notification$BigPictureStyle;")!
 
 // ------------------------------------------------------------------------------------
 
 private let NotificationStyle__class = findJavaClass(fqn: "android/app/Notification$Style")!
 
-private let NotificationStyle__method__1 = NotificationStyle__class.getMethodID(name: "setBuilder", sig: "(Landroid/app/Notification$Builder;)V")!
-private let NotificationStyle__method__2 = NotificationStyle__class.getMethodID(name: "build", sig: "()Landroid/app/Notification;")!
+private let NotificationStyle__method__1 = NotificationStyle__class.getMethodID(name: "internalSetBigContentTitle", sig: "(Ljava/lang/CharSequence;)V")!
+private let NotificationStyle__method__2 = NotificationStyle__class.getMethodID(name: "internalSetSummaryText", sig: "(Ljava/lang/CharSequence;)V")!
+private let NotificationStyle__method__3 = NotificationStyle__class.getMethodID(name: "setBuilder", sig: "(Landroid/app/Notification$Builder;)V")!
+private let NotificationStyle__method__4 = NotificationStyle__class.getMethodID(name: "checkBuilder", sig: "()V")!
+private let NotificationStyle__method__5 = NotificationStyle__class.getMethodID(name: "build", sig: "()Landroid/app/Notification;")!
 
 // ------------------------------------------------------------------------------------
 
@@ -1740,52 +1694,47 @@ private let NotificationBuilder__method__7 = NotificationBuilder__class.getMetho
 private let NotificationBuilder__method__8 = NotificationBuilder__class.getMethodID(name: "setContentText", sig: "(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;")!
 private let NotificationBuilder__method__9 = NotificationBuilder__class.getMethodID(name: "setSubText", sig: "(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;")!
 private let NotificationBuilder__method__10 = NotificationBuilder__class.getMethodID(name: "setRemoteInputHistory", sig: "([Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__11 = NotificationBuilder__class.getMethodID(name: "setNumber", sig: "(I)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__12 = NotificationBuilder__class.getMethodID(name: "setContentInfo", sig: "(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__13 = NotificationBuilder__class.getMethodID(name: "setProgress", sig: "(IIZ)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__14 = NotificationBuilder__class.getMethodID(name: "setContentIntent", sig: "(Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__15 = NotificationBuilder__class.getMethodID(name: "setDeleteIntent", sig: "(Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__16 = NotificationBuilder__class.getMethodID(name: "setFullScreenIntent", sig: "(Landroid/app/PendingIntent;Z)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__17 = NotificationBuilder__class.getMethodID(name: "setTicker", sig: "(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__18 = NotificationBuilder__class.getMethodID(name: "setVibrate", sig: "([J)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__19 = NotificationBuilder__class.getMethodID(name: "setLights", sig: "(III)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__20 = NotificationBuilder__class.getMethodID(name: "setOngoing", sig: "(Z)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__21 = NotificationBuilder__class.getMethodID(name: "setOnlyAlertOnce", sig: "(Z)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__22 = NotificationBuilder__class.getMethodID(name: "setAutoCancel", sig: "(Z)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__23 = NotificationBuilder__class.getMethodID(name: "setLocalOnly", sig: "(Z)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__24 = NotificationBuilder__class.getMethodID(name: "setDefaults", sig: "(I)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__25 = NotificationBuilder__class.getMethodID(name: "setPriority", sig: "(I)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__26 = NotificationBuilder__class.getMethodID(name: "setCategory", sig: "(Ljava/lang/String;)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__27 = NotificationBuilder__class.getMethodID(name: "addPerson", sig: "(Ljava/lang/String;)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__28 = NotificationBuilder__class.getMethodID(name: "setGroup", sig: "(Ljava/lang/String;)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__29 = NotificationBuilder__class.getMethodID(name: "setGroupSummary", sig: "(Z)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__30 = NotificationBuilder__class.getMethodID(name: "setSortKey", sig: "(Ljava/lang/String;)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__31 = NotificationBuilder__class.getMethodID(name: "addExtras", sig: "(Landroid/os/Bundle;)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__32 = NotificationBuilder__class.getMethodID(name: "setExtras", sig: "(Landroid/os/Bundle;)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__33 = NotificationBuilder__class.getMethodID(name: "getExtras", sig: "()Landroid/os/Bundle;")!
-private let NotificationBuilder__method__34 = NotificationBuilder__class.getMethodID(name: "addAction", sig: "(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__35 = NotificationBuilder__class.getMethodID(name: "addAction", sig: "(Landroid/app/Notification$Action;)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__36 = NotificationBuilder__class.getMethodID(name: "setActions", sig: "([Landroid/app/Notification$Action;)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__37 = NotificationBuilder__class.getMethodID(name: "setStyle", sig: "(Landroid/app/Notification$Style;)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__38 = NotificationBuilder__class.getMethodID(name: "setVisibility", sig: "(I)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__39 = NotificationBuilder__class.getMethodID(name: "setPublicVersion", sig: "(Landroid/app/Notification;)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__40 = NotificationBuilder__class.getMethodID(name: "extend", sig: "(Landroid/app/Notification$Extender;)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__41 = NotificationBuilder__class.getMethodID(name: "setColor", sig: "(I)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__42 = NotificationBuilder__class.getStaticMethodID(name: "recoverBuilder", sig: "(Landroid/content/Context;Landroid/app/Notification;)Landroid/app/Notification$Builder;")!
-private let NotificationBuilder__method__43 = NotificationBuilder__class.getMethodID(name: "getNotification", sig: "()Landroid/app/Notification;")!
-private let NotificationBuilder__method__44 = NotificationBuilder__class.getMethodID(name: "build", sig: "()Landroid/app/Notification;")!
+private let NotificationBuilder__method__11 = NotificationBuilder__class.getMethodID(name: "setProgress", sig: "(IIZ)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__12 = NotificationBuilder__class.getMethodID(name: "setContentIntent", sig: "(Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__13 = NotificationBuilder__class.getMethodID(name: "setDeleteIntent", sig: "(Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__14 = NotificationBuilder__class.getMethodID(name: "setFullScreenIntent", sig: "(Landroid/app/PendingIntent;Z)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__15 = NotificationBuilder__class.getMethodID(name: "setTicker", sig: "(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__16 = NotificationBuilder__class.getMethodID(name: "setVibrate", sig: "([J)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__17 = NotificationBuilder__class.getMethodID(name: "setLights", sig: "(III)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__18 = NotificationBuilder__class.getMethodID(name: "setOngoing", sig: "(Z)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__19 = NotificationBuilder__class.getMethodID(name: "setOnlyAlertOnce", sig: "(Z)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__20 = NotificationBuilder__class.getMethodID(name: "setAutoCancel", sig: "(Z)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__21 = NotificationBuilder__class.getMethodID(name: "setLocalOnly", sig: "(Z)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__22 = NotificationBuilder__class.getMethodID(name: "setDefaults", sig: "(I)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__23 = NotificationBuilder__class.getMethodID(name: "setPriority", sig: "(I)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__24 = NotificationBuilder__class.getMethodID(name: "setCategory", sig: "(Ljava/lang/String;)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__25 = NotificationBuilder__class.getMethodID(name: "addPerson", sig: "(Ljava/lang/String;)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__26 = NotificationBuilder__class.getMethodID(name: "setGroup", sig: "(Ljava/lang/String;)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__27 = NotificationBuilder__class.getMethodID(name: "setGroupSummary", sig: "(Z)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__28 = NotificationBuilder__class.getMethodID(name: "setSortKey", sig: "(Ljava/lang/String;)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__29 = NotificationBuilder__class.getMethodID(name: "addExtras", sig: "(Landroid/os/Bundle;)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__30 = NotificationBuilder__class.getMethodID(name: "setExtras", sig: "(Landroid/os/Bundle;)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__31 = NotificationBuilder__class.getMethodID(name: "getExtras", sig: "()Landroid/os/Bundle;")!
+private let NotificationBuilder__method__32 = NotificationBuilder__class.getMethodID(name: "addAction", sig: "(Landroid/app/Notification$Action;)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__33 = NotificationBuilder__class.getMethodID(name: "setActions", sig: "([Landroid/app/Notification$Action;)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__34 = NotificationBuilder__class.getMethodID(name: "setStyle", sig: "(Landroid/app/Notification$Style;)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__35 = NotificationBuilder__class.getMethodID(name: "setVisibility", sig: "(I)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__36 = NotificationBuilder__class.getMethodID(name: "setPublicVersion", sig: "(Landroid/app/Notification;)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__37 = NotificationBuilder__class.getMethodID(name: "extend", sig: "(Landroid/app/Notification$Extender;)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__38 = NotificationBuilder__class.getMethodID(name: "setColor", sig: "(I)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__39 = NotificationBuilder__class.getStaticMethodID(name: "recoverBuilder", sig: "(Landroid/content/Context;Landroid/app/Notification;)Landroid/app/Notification$Builder;")!
+private let NotificationBuilder__method__40 = NotificationBuilder__class.getMethodID(name: "build", sig: "()Landroid/app/Notification;")!
 
 // ------------------------------------------------------------------------------------
 
 private let NotificationAction__class = findJavaClass(fqn: "android/app/Notification$Action")!
 
-private let NotificationAction__method__0 = NotificationAction__class.getMethodID(name: "<init>", sig: "(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V")!
-private let NotificationAction__method__1 = NotificationAction__class.getMethodID(name: "getExtras", sig: "()Landroid/os/Bundle;")!
-private let NotificationAction__method__2 = NotificationAction__class.getMethodID(name: "getAllowGeneratedReplies", sig: "()Z")!
-private let NotificationAction__method__3 = NotificationAction__class.getMethodID(name: "getRemoteInputs", sig: "()[Landroid/app/RemoteInput;")!
-private let NotificationAction__method__4 = NotificationAction__class.getMethodID(name: "clone", sig: "()Landroid/app/Notification$Action;")!
-private let NotificationAction__method__5 = NotificationAction__class.getMethodID(name: "describeContents", sig: "()I")!
-private let NotificationAction__method__6 = NotificationAction__class.getMethodID(name: "writeToParcel", sig: "(Landroid/os/Parcel;I)V")!
+private let NotificationAction__method__0 = NotificationAction__class.getMethodID(name: "getExtras", sig: "()Landroid/os/Bundle;")!
+private let NotificationAction__method__1 = NotificationAction__class.getMethodID(name: "getAllowGeneratedReplies", sig: "()Z")!
+private let NotificationAction__method__2 = NotificationAction__class.getMethodID(name: "getRemoteInputs", sig: "()[Landroid/app/RemoteInput;")!
+private let NotificationAction__method__3 = NotificationAction__class.getMethodID(name: "clone", sig: "()Landroid/app/Notification$Action;")!
+private let NotificationAction__method__4 = NotificationAction__class.getMethodID(name: "describeContents", sig: "()I")!
+private let NotificationAction__method__5 = NotificationAction__class.getMethodID(name: "writeToParcel", sig: "(Landroid/os/Parcel;I)V")!
 
 private let NotificationAction__field__0 = NotificationAction__class.getFieldID(name: "actionIntent", sig: "Landroid/app/PendingIntent;")!
 private let NotificationAction__field__1 = NotificationAction__class.getFieldID(name: "icon", sig: "I")!
@@ -1820,11 +1769,10 @@ private let NotificationActionExtender__method__0 = NotificationActionExtender__
 
 private let NotificationActionBuilder__class = findJavaClass(fqn: "android/app/Notification$Action$Builder")!
 
-private let NotificationActionBuilder__method__0 = NotificationActionBuilder__class.getMethodID(name: "<init>", sig: "(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V")!
-private let NotificationActionBuilder__method__1 = NotificationActionBuilder__class.getMethodID(name: "<init>", sig: "(Landroid/app/Notification$Action;)V")!
-private let NotificationActionBuilder__method__2 = NotificationActionBuilder__class.getMethodID(name: "addExtras", sig: "(Landroid/os/Bundle;)Landroid/app/Notification$Action$Builder;")!
-private let NotificationActionBuilder__method__3 = NotificationActionBuilder__class.getMethodID(name: "getExtras", sig: "()Landroid/os/Bundle;")!
-private let NotificationActionBuilder__method__4 = NotificationActionBuilder__class.getMethodID(name: "addRemoteInput", sig: "(Landroid/app/RemoteInput;)Landroid/app/Notification$Action$Builder;")!
-private let NotificationActionBuilder__method__5 = NotificationActionBuilder__class.getMethodID(name: "setAllowGeneratedReplies", sig: "(Z)Landroid/app/Notification$Action$Builder;")!
-private let NotificationActionBuilder__method__6 = NotificationActionBuilder__class.getMethodID(name: "extend", sig: "(Landroid/app/Notification$Action$Extender;)Landroid/app/Notification$Action$Builder;")!
-private let NotificationActionBuilder__method__7 = NotificationActionBuilder__class.getMethodID(name: "build", sig: "()Landroid/app/Notification$Action;")!
+private let NotificationActionBuilder__method__0 = NotificationActionBuilder__class.getMethodID(name: "<init>", sig: "(Landroid/app/Notification$Action;)V")!
+private let NotificationActionBuilder__method__1 = NotificationActionBuilder__class.getMethodID(name: "addExtras", sig: "(Landroid/os/Bundle;)Landroid/app/Notification$Action$Builder;")!
+private let NotificationActionBuilder__method__2 = NotificationActionBuilder__class.getMethodID(name: "getExtras", sig: "()Landroid/os/Bundle;")!
+private let NotificationActionBuilder__method__3 = NotificationActionBuilder__class.getMethodID(name: "addRemoteInput", sig: "(Landroid/app/RemoteInput;)Landroid/app/Notification$Action$Builder;")!
+private let NotificationActionBuilder__method__4 = NotificationActionBuilder__class.getMethodID(name: "setAllowGeneratedReplies", sig: "(Z)Landroid/app/Notification$Action$Builder;")!
+private let NotificationActionBuilder__method__5 = NotificationActionBuilder__class.getMethodID(name: "extend", sig: "(Landroid/app/Notification$Action$Extender;)Landroid/app/Notification$Action$Builder;")!
+private let NotificationActionBuilder__method__6 = NotificationActionBuilder__class.getMethodID(name: "build", sig: "()Landroid/app/Notification$Action;")!

@@ -45,8 +45,6 @@ public protocol FragmentManager where Self: Object {
   func saveFragmentInstanceState(f: Fragment?) -> Fragment.SavedState?
 
   func isDestroyed() -> Bool
-
-  func invalidateOptionsMenu() -> Void
 }
 
 public extension FragmentManager {
@@ -80,77 +78,77 @@ open class FragmentManagerProxy: Object, JInterfaceProxy, FragmentManager {
     self.init(obj.toJavaObject()!)
   }
 
-  public func beginTransaction() -> FragmentTransaction? {
+  open func beginTransaction() -> FragmentTransaction? {
     let res = self.javaObject.call(method: FragmentManager__method__1, []) as Object?
     return cast(res, to: FragmentTransactionProxy.self)
   }
 
-  public func executePendingTransactions() -> Bool {
+  open func executePendingTransactions() -> Bool {
     self.javaObject.call(method: FragmentManager__method__2, [])
   }
 
-  public func findFragmentById(id: Int32) -> Fragment? {
+  open func findFragmentById(id: Int32) -> Fragment? {
     self.javaObject.call(method: FragmentManager__method__3, [id.toJavaParameter()])
   }
 
-  public func findFragmentByTag(tag: String) -> Fragment? {
+  open func findFragmentByTag(tag: String) -> Fragment? {
     self.javaObject.call(method: FragmentManager__method__4, [tag.toJavaParameter()])
   }
 
-  public func popBackStack() {
+  open func popBackStack() {
     self.javaObject.call(method: FragmentManager__method__5, [])
   }
 
-  public func popBackStackImmediate() -> Bool {
+  open func popBackStackImmediate() -> Bool {
     self.javaObject.call(method: FragmentManager__method__6, [])
   }
 
-  public func popBackStack(name: String, flags: Int32) {
+  open func popBackStack(name: String, flags: Int32) {
     self.javaObject.call(method: FragmentManager__method__7, [name.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func popBackStackImmediate(name: String, flags: Int32) -> Bool {
+  open func popBackStackImmediate(name: String, flags: Int32) -> Bool {
     self.javaObject.call(method: FragmentManager__method__8, [name.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func popBackStack(id: Int32, flags: Int32) {
+  open func popBackStack(id: Int32, flags: Int32) {
     self.javaObject.call(method: FragmentManager__method__9, [id.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func popBackStackImmediate(id: Int32, flags: Int32) -> Bool {
+  open func popBackStackImmediate(id: Int32, flags: Int32) -> Bool {
     self.javaObject.call(method: FragmentManager__method__10, [id.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func getBackStackEntryCount() -> Int32 {
+  open func getBackStackEntryCount() -> Int32 {
     self.javaObject.call(method: FragmentManager__method__11, [])
   }
 
-  public func getBackStackEntryAt(index: Int32) -> FragmentManager.BackStackEntry? {
+  open func getBackStackEntryAt(index: Int32) -> FragmentManager.BackStackEntry? {
     let res = self.javaObject.call(method: FragmentManager__method__12, [index.toJavaParameter()]) as Object?
     return cast(res, to: FragmentManager.BackStackEntryProxy.self)
   }
 
-  public func addOnBackStackChangedListener(listener: FragmentManager.OnBackStackChangedListener?) {
+  open func addOnBackStackChangedListener(listener: FragmentManager.OnBackStackChangedListener?) {
     self.javaObject.call(method: FragmentManager__method__13, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func removeOnBackStackChangedListener(listener: FragmentManager.OnBackStackChangedListener?) {
+  open func removeOnBackStackChangedListener(listener: FragmentManager.OnBackStackChangedListener?) {
     self.javaObject.call(method: FragmentManager__method__14, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func putFragment(bundle: Bundle?, key: String, fragment: Fragment?) {
+  open func putFragment(bundle: Bundle?, key: String, fragment: Fragment?) {
     self.javaObject.call(method: FragmentManager__method__15, [bundle.toJavaParameter(), key.toJavaParameter(), fragment.toJavaParameter()])
   }
 
-  public func getFragment(bundle: Bundle?, key: String) -> Fragment? {
+  open func getFragment(bundle: Bundle?, key: String) -> Fragment? {
     self.javaObject.call(method: FragmentManager__method__16, [bundle.toJavaParameter(), key.toJavaParameter()])
   }
 
-  public func saveFragmentInstanceState(f: Fragment?) -> Fragment.SavedState? {
+  open func saveFragmentInstanceState(f: Fragment?) -> Fragment.SavedState? {
     self.javaObject.call(method: FragmentManager__method__17, [f.toJavaParameter()])
   }
 
-  public func isDestroyed() -> Bool {
+  open func isDestroyed() -> Bool {
     self.javaObject.call(method: FragmentManager__method__18, [])
   }
 }

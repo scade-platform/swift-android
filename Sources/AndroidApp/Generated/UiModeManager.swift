@@ -51,23 +51,23 @@ open class UiModeManager: Object {
 
   public static let MODE_NIGHT_YES: Int32 = UiModeManager__class.getStatic(field: UiModeManager__field__9)
 
-  public func enableCarMode(flags: Int32) {
+  open func enableCarMode(flags: Int32) {
     self.javaObject.call(method: UiModeManager__method__0, [flags.toJavaParameter()])
   }
 
-  public func disableCarMode(flags: Int32) {
+  open func disableCarMode(flags: Int32) {
     self.javaObject.call(method: UiModeManager__method__1, [flags.toJavaParameter()])
   }
 
-  public func getCurrentModeType() -> Int32 {
+  open func getCurrentModeType() -> Int32 {
     self.javaObject.call(method: UiModeManager__method__2, [])
   }
 
-  public func setNightMode(mode: Int32) {
+  open func setNightMode(mode: Int32) {
     self.javaObject.call(method: UiModeManager__method__3, [mode.toJavaParameter()])
   }
 
-  public func getNightMode() -> Int32 {
+  open func getNightMode() -> Int32 {
     self.javaObject.call(method: UiModeManager__method__4, [])
   }
 }

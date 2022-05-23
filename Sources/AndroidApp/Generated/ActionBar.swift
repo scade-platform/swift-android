@@ -24,12 +24,6 @@ public protocol ActionBar where Self: Object {
 
   func setLogo(resId: Int32) -> Void
 
-  func setSelectedNavigationItem(position: Int32) -> Void
-
-  func getSelectedNavigationIndex() -> Int32
-
-  func getNavigationItemCount() -> Int32
-
   func setTitle(title: String?) -> Void
 
   func setTitle(resId: Int32) -> Void
@@ -56,35 +50,7 @@ public protocol ActionBar where Self: Object {
 
   func getSubtitle() -> String?
 
-  func getNavigationMode() -> Int32
-
-  func setNavigationMode(mode: Int32) -> Void
-
   func getDisplayOptions() -> Int32
-
-  func newTab() -> ActionBar.Tab?
-
-  func addTab(tab: ActionBar.Tab?) -> Void
-
-  func addTab(tab: ActionBar.Tab?, setSelected: Bool) -> Void
-
-  func addTab(tab: ActionBar.Tab?, position: Int32) -> Void
-
-  func addTab(tab: ActionBar.Tab?, position: Int32, setSelected: Bool) -> Void
-
-  func removeTab(tab: ActionBar.Tab?) -> Void
-
-  func removeTabAt(position: Int32) -> Void
-
-  func removeAllTabs() -> Void
-
-  func selectTab(tab: ActionBar.Tab?) -> Void
-
-  func getSelectedTab() -> ActionBar.Tab?
-
-  func getTabAt(index: Int32) -> ActionBar.Tab?
-
-  func getTabCount() -> Int32
 
   func getHeight() -> Int32
 
@@ -97,28 +63,6 @@ public protocol ActionBar where Self: Object {
   func addOnMenuVisibilityListener(listener: ActionBar.OnMenuVisibilityListener?) -> Void
 
   func removeOnMenuVisibilityListener(listener: ActionBar.OnMenuVisibilityListener?) -> Void
-
-  func setHomeButtonEnabled(enabled: Bool) -> Void
-
-  func getThemedContext() -> Context?
-
-  func setHomeAsUpIndicator(resId: Int32) -> Void
-
-  func setHomeActionContentDescription(description: String?) -> Void
-
-  func setHomeActionContentDescription(resId: Int32) -> Void
-
-  func setHideOnContentScrollEnabled(hideOnContentScroll: Bool) -> Void
-
-  func isHideOnContentScrollEnabled() -> Bool
-
-  func getHideOffset() -> Int32
-
-  func setHideOffset(offset: Int32) -> Void
-
-  func setElevation(elevation: Float) -> Void
-
-  func getElevation() -> Float
 }
 
 public extension ActionBar {
@@ -129,48 +73,48 @@ public extension ActionBar {
 
 public extension ActionBar where Self: Object {
   func setHomeButtonEnabled(enabled: Bool) {
-    self.javaObject.call(method: ActionBar__method__41, [enabled.toJavaParameter()])
+    self.javaObject.call(method: ActionBar__method__24, [enabled.toJavaParameter()])
   }
 
   func getThemedContext() -> Context? {
-    let res = self.javaObject.call(method: ActionBar__method__42, []) as Object?
+    let res = self.javaObject.call(method: ActionBar__method__25, []) as Object?
     return cast(res, to: ContextProxy.self)
   }
 
   func setHomeAsUpIndicator(resId: Int32) {
-    self.javaObject.call(method: ActionBar__method__43, [resId.toJavaParameter()])
+    self.javaObject.call(method: ActionBar__method__26, [resId.toJavaParameter()])
   }
 
   func setHomeActionContentDescription(description: String?) {
-    self.javaObject.call(method: ActionBar__method__44, [description.toJavaParameter()])
+    self.javaObject.call(method: ActionBar__method__27, [description.toJavaParameter()])
   }
 
   func setHomeActionContentDescription(resId: Int32) {
-    self.javaObject.call(method: ActionBar__method__45, [resId.toJavaParameter()])
+    self.javaObject.call(method: ActionBar__method__28, [resId.toJavaParameter()])
   }
 
   func setHideOnContentScrollEnabled(hideOnContentScroll: Bool) {
-    self.javaObject.call(method: ActionBar__method__46, [hideOnContentScroll.toJavaParameter()])
+    self.javaObject.call(method: ActionBar__method__29, [hideOnContentScroll.toJavaParameter()])
   }
 
   func isHideOnContentScrollEnabled() -> Bool {
-    self.javaObject.call(method: ActionBar__method__47, [])
+    self.javaObject.call(method: ActionBar__method__30, [])
   }
 
   func getHideOffset() -> Int32 {
-    self.javaObject.call(method: ActionBar__method__48, [])
+    self.javaObject.call(method: ActionBar__method__31, [])
   }
 
   func setHideOffset(offset: Int32) {
-    self.javaObject.call(method: ActionBar__method__49, [offset.toJavaParameter()])
+    self.javaObject.call(method: ActionBar__method__32, [offset.toJavaParameter()])
   }
 
   func setElevation(elevation: Float) {
-    self.javaObject.call(method: ActionBar__method__50, [elevation.toJavaParameter()])
+    self.javaObject.call(method: ActionBar__method__33, [elevation.toJavaParameter()])
   }
 
   func getElevation() -> Float {
-    self.javaObject.call(method: ActionBar__method__51, [])
+    self.javaObject.call(method: ActionBar__method__34, [])
   }
 }
 
@@ -203,167 +147,96 @@ open class ActionBarProxy: Object, JInterfaceProxy, ActionBar {
     self.init(obj.toJavaObject()!)
   }
 
-  public func setCustomView(resId: Int32) {
+  open func setCustomView(resId: Int32) {
     self.javaObject.call(method: ActionBar__method__1, [resId.toJavaParameter()])
   }
 
-  public func setIcon(resId: Int32) {
+  open func setIcon(resId: Int32) {
     self.javaObject.call(method: ActionBar__method__2, [resId.toJavaParameter()])
   }
 
-  public func setLogo(resId: Int32) {
+  open func setLogo(resId: Int32) {
     self.javaObject.call(method: ActionBar__method__3, [resId.toJavaParameter()])
   }
 
-  public func setSelectedNavigationItem(position: Int32) {
-    self.javaObject.call(method: ActionBar__method__4, [position.toJavaParameter()])
+  open func setTitle(title: String?) {
+    self.javaObject.call(method: ActionBar__method__4, [title.toJavaParameter()])
   }
 
-  public func getSelectedNavigationIndex() -> Int32 {
-    self.javaObject.call(method: ActionBar__method__5, [])
+  open func setTitle(resId: Int32) {
+    self.javaObject.call(method: ActionBar__method__5, [resId.toJavaParameter()])
   }
 
-  public func getNavigationItemCount() -> Int32 {
-    self.javaObject.call(method: ActionBar__method__6, [])
+  open func setSubtitle(subtitle: String?) {
+    self.javaObject.call(method: ActionBar__method__6, [subtitle.toJavaParameter()])
   }
 
-  public func setTitle(title: String?) {
-    self.javaObject.call(method: ActionBar__method__7, [title.toJavaParameter()])
+  open func setSubtitle(resId: Int32) {
+    self.javaObject.call(method: ActionBar__method__7, [resId.toJavaParameter()])
   }
 
-  public func setTitle(resId: Int32) {
-    self.javaObject.call(method: ActionBar__method__8, [resId.toJavaParameter()])
+  open func setDisplayOptions(options: Int32) {
+    self.javaObject.call(method: ActionBar__method__8, [options.toJavaParameter()])
   }
 
-  public func setSubtitle(subtitle: String?) {
-    self.javaObject.call(method: ActionBar__method__9, [subtitle.toJavaParameter()])
+  open func setDisplayOptions(options: Int32, mask: Int32) {
+    self.javaObject.call(method: ActionBar__method__9, [options.toJavaParameter(), mask.toJavaParameter()])
   }
 
-  public func setSubtitle(resId: Int32) {
-    self.javaObject.call(method: ActionBar__method__10, [resId.toJavaParameter()])
+  open func setDisplayUseLogoEnabled(useLogo: Bool) {
+    self.javaObject.call(method: ActionBar__method__10, [useLogo.toJavaParameter()])
   }
 
-  public func setDisplayOptions(options: Int32) {
-    self.javaObject.call(method: ActionBar__method__11, [options.toJavaParameter()])
+  open func setDisplayShowHomeEnabled(showHome: Bool) {
+    self.javaObject.call(method: ActionBar__method__11, [showHome.toJavaParameter()])
   }
 
-  public func setDisplayOptions(options: Int32, mask: Int32) {
-    self.javaObject.call(method: ActionBar__method__12, [options.toJavaParameter(), mask.toJavaParameter()])
+  open func setDisplayHomeAsUpEnabled(showHomeAsUp: Bool) {
+    self.javaObject.call(method: ActionBar__method__12, [showHomeAsUp.toJavaParameter()])
   }
 
-  public func setDisplayUseLogoEnabled(useLogo: Bool) {
-    self.javaObject.call(method: ActionBar__method__13, [useLogo.toJavaParameter()])
+  open func setDisplayShowTitleEnabled(showTitle: Bool) {
+    self.javaObject.call(method: ActionBar__method__13, [showTitle.toJavaParameter()])
   }
 
-  public func setDisplayShowHomeEnabled(showHome: Bool) {
-    self.javaObject.call(method: ActionBar__method__14, [showHome.toJavaParameter()])
+  open func setDisplayShowCustomEnabled(showCustom: Bool) {
+    self.javaObject.call(method: ActionBar__method__14, [showCustom.toJavaParameter()])
   }
 
-  public func setDisplayHomeAsUpEnabled(showHomeAsUp: Bool) {
-    self.javaObject.call(method: ActionBar__method__15, [showHomeAsUp.toJavaParameter()])
+  open func getTitle() -> String? {
+    self.javaObject.call(method: ActionBar__method__15, [])
   }
 
-  public func setDisplayShowTitleEnabled(showTitle: Bool) {
-    self.javaObject.call(method: ActionBar__method__16, [showTitle.toJavaParameter()])
+  open func getSubtitle() -> String? {
+    self.javaObject.call(method: ActionBar__method__16, [])
   }
 
-  public func setDisplayShowCustomEnabled(showCustom: Bool) {
-    self.javaObject.call(method: ActionBar__method__17, [showCustom.toJavaParameter()])
+  open func getDisplayOptions() -> Int32 {
+    self.javaObject.call(method: ActionBar__method__17, [])
   }
 
-  public func getTitle() -> String? {
+  open func getHeight() -> Int32 {
     self.javaObject.call(method: ActionBar__method__18, [])
   }
 
-  public func getSubtitle() -> String? {
+  open func show() {
     self.javaObject.call(method: ActionBar__method__19, [])
   }
 
-  public func getNavigationMode() -> Int32 {
+  open func hide() {
     self.javaObject.call(method: ActionBar__method__20, [])
   }
 
-  public func setNavigationMode(mode: Int32) {
-    self.javaObject.call(method: ActionBar__method__21, [mode.toJavaParameter()])
+  open func isShowing() -> Bool {
+    self.javaObject.call(method: ActionBar__method__21, [])
   }
 
-  public func getDisplayOptions() -> Int32 {
-    self.javaObject.call(method: ActionBar__method__22, [])
+  open func addOnMenuVisibilityListener(listener: ActionBar.OnMenuVisibilityListener?) {
+    self.javaObject.call(method: ActionBar__method__22, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func newTab() -> ActionBar.Tab? {
-    let res = self.javaObject.call(method: ActionBar__method__23, []) as Object?
-    return cast(res, to: ActionBar.TabProxy.self)
-  }
-
-  public func addTab(tab: ActionBar.Tab?) {
-    self.javaObject.call(method: ActionBar__method__24, [JavaParameter(object: tab?.toJavaObject())])
-  }
-
-  public func addTab(tab: ActionBar.Tab?, setSelected: Bool) {
-    self.javaObject.call(method: ActionBar__method__25, [JavaParameter(object: tab?.toJavaObject()), setSelected.toJavaParameter()])
-  }
-
-  public func addTab(tab: ActionBar.Tab?, position: Int32) {
-    self.javaObject.call(method: ActionBar__method__26, [JavaParameter(object: tab?.toJavaObject()), position.toJavaParameter()])
-  }
-
-  public func addTab(tab: ActionBar.Tab?, position: Int32, setSelected: Bool) {
-    self.javaObject.call(method: ActionBar__method__27, [JavaParameter(object: tab?.toJavaObject()), position.toJavaParameter(), setSelected.toJavaParameter()])
-  }
-
-  public func removeTab(tab: ActionBar.Tab?) {
-    self.javaObject.call(method: ActionBar__method__28, [JavaParameter(object: tab?.toJavaObject())])
-  }
-
-  public func removeTabAt(position: Int32) {
-    self.javaObject.call(method: ActionBar__method__29, [position.toJavaParameter()])
-  }
-
-  public func removeAllTabs() {
-    self.javaObject.call(method: ActionBar__method__30, [])
-  }
-
-  public func selectTab(tab: ActionBar.Tab?) {
-    self.javaObject.call(method: ActionBar__method__31, [JavaParameter(object: tab?.toJavaObject())])
-  }
-
-  public func getSelectedTab() -> ActionBar.Tab? {
-    let res = self.javaObject.call(method: ActionBar__method__32, []) as Object?
-    return cast(res, to: ActionBar.TabProxy.self)
-  }
-
-  public func getTabAt(index: Int32) -> ActionBar.Tab? {
-    let res = self.javaObject.call(method: ActionBar__method__33, [index.toJavaParameter()]) as Object?
-    return cast(res, to: ActionBar.TabProxy.self)
-  }
-
-  public func getTabCount() -> Int32 {
-    self.javaObject.call(method: ActionBar__method__34, [])
-  }
-
-  public func getHeight() -> Int32 {
-    self.javaObject.call(method: ActionBar__method__35, [])
-  }
-
-  public func show() {
-    self.javaObject.call(method: ActionBar__method__36, [])
-  }
-
-  public func hide() {
-    self.javaObject.call(method: ActionBar__method__37, [])
-  }
-
-  public func isShowing() -> Bool {
-    self.javaObject.call(method: ActionBar__method__38, [])
-  }
-
-  public func addOnMenuVisibilityListener(listener: ActionBar.OnMenuVisibilityListener?) {
-    self.javaObject.call(method: ActionBar__method__39, [JavaParameter(object: listener?.toJavaObject())])
-  }
-
-  public func removeOnMenuVisibilityListener(listener: ActionBar.OnMenuVisibilityListener?) {
-    self.javaObject.call(method: ActionBar__method__40, [JavaParameter(object: listener?.toJavaObject())])
+  open func removeOnMenuVisibilityListener(listener: ActionBar.OnMenuVisibilityListener?) {
+    self.javaObject.call(method: ActionBar__method__23, [JavaParameter(object: listener?.toJavaObject())])
   }
 }
 
@@ -499,63 +372,63 @@ open class ActionBarTabProxy: Object, JInterfaceProxy, ActionBarTab {
     self.init(obj.toJavaObject()!)
   }
 
-  public func getPosition() -> Int32 {
+  open func getPosition() -> Int32 {
     self.javaObject.call(method: ActionBarTab__method__1, [])
   }
 
-  public func getText() -> String? {
+  open func getText() -> String? {
     self.javaObject.call(method: ActionBarTab__method__2, [])
   }
 
-  public func setIcon(resId: Int32) -> ActionBar.Tab? {
+  open func setIcon(resId: Int32) -> ActionBar.Tab? {
     let res = self.javaObject.call(method: ActionBarTab__method__3, [resId.toJavaParameter()]) as Object?
     return cast(res, to: ActionBar.TabProxy.self)
   }
 
-  public func setText(text: String?) -> ActionBar.Tab? {
+  open func setText(text: String?) -> ActionBar.Tab? {
     let res = self.javaObject.call(method: ActionBarTab__method__4, [text.toJavaParameter()]) as Object?
     return cast(res, to: ActionBar.TabProxy.self)
   }
 
-  public func setText(resId: Int32) -> ActionBar.Tab? {
+  open func setText(resId: Int32) -> ActionBar.Tab? {
     let res = self.javaObject.call(method: ActionBarTab__method__5, [resId.toJavaParameter()]) as Object?
     return cast(res, to: ActionBar.TabProxy.self)
   }
 
-  public func setCustomView(layoutResId: Int32) -> ActionBar.Tab? {
+  open func setCustomView(layoutResId: Int32) -> ActionBar.Tab? {
     let res = self.javaObject.call(method: ActionBarTab__method__6, [layoutResId.toJavaParameter()]) as Object?
     return cast(res, to: ActionBar.TabProxy.self)
   }
 
-  public func setTag(obj: Object?) -> ActionBar.Tab? {
+  open func setTag(obj: Object?) -> ActionBar.Tab? {
     let res = self.javaObject.call(method: ActionBarTab__method__7, [obj.toJavaParameter()]) as Object?
     return cast(res, to: ActionBar.TabProxy.self)
   }
 
-  public func getTag() -> Object? {
+  open func getTag() -> Object? {
     self.javaObject.call(method: ActionBarTab__method__8, [])
   }
 
-  public func setTabListener(listener: ActionBar.TabListener?) -> ActionBar.Tab? {
+  open func setTabListener(listener: ActionBar.TabListener?) -> ActionBar.Tab? {
     let res = self.javaObject.call(method: ActionBarTab__method__9, [JavaParameter(object: listener?.toJavaObject())]) as Object?
     return cast(res, to: ActionBar.TabProxy.self)
   }
 
-  public func select() {
+  open func select() {
     self.javaObject.call(method: ActionBarTab__method__10, [])
   }
 
-  public func setContentDescription(resId: Int32) -> ActionBar.Tab? {
+  open func setContentDescription(resId: Int32) -> ActionBar.Tab? {
     let res = self.javaObject.call(method: ActionBarTab__method__11, [resId.toJavaParameter()]) as Object?
     return cast(res, to: ActionBar.TabProxy.self)
   }
 
-  public func setContentDescription(contentDesc: String?) -> ActionBar.Tab? {
+  open func setContentDescription(contentDesc: String?) -> ActionBar.Tab? {
     let res = self.javaObject.call(method: ActionBarTab__method__12, [contentDesc.toJavaParameter()]) as Object?
     return cast(res, to: ActionBar.TabProxy.self)
   }
 
-  public func getContentDescription() -> String? {
+  open func getContentDescription() -> String? {
     self.javaObject.call(method: ActionBarTab__method__13, [])
   }
 }
@@ -631,54 +504,37 @@ private let ActionBar__class = findJavaClass(fqn: "android/app/ActionBar")!
 private let ActionBar__method__1 = ActionBar__class.getMethodID(name: "setCustomView", sig: "(I)V")!
 private let ActionBar__method__2 = ActionBar__class.getMethodID(name: "setIcon", sig: "(I)V")!
 private let ActionBar__method__3 = ActionBar__class.getMethodID(name: "setLogo", sig: "(I)V")!
-private let ActionBar__method__4 = ActionBar__class.getMethodID(name: "setSelectedNavigationItem", sig: "(I)V")!
-private let ActionBar__method__5 = ActionBar__class.getMethodID(name: "getSelectedNavigationIndex", sig: "()I")!
-private let ActionBar__method__6 = ActionBar__class.getMethodID(name: "getNavigationItemCount", sig: "()I")!
-private let ActionBar__method__7 = ActionBar__class.getMethodID(name: "setTitle", sig: "(Ljava/lang/CharSequence;)V")!
-private let ActionBar__method__8 = ActionBar__class.getMethodID(name: "setTitle", sig: "(I)V")!
-private let ActionBar__method__9 = ActionBar__class.getMethodID(name: "setSubtitle", sig: "(Ljava/lang/CharSequence;)V")!
-private let ActionBar__method__10 = ActionBar__class.getMethodID(name: "setSubtitle", sig: "(I)V")!
-private let ActionBar__method__11 = ActionBar__class.getMethodID(name: "setDisplayOptions", sig: "(I)V")!
-private let ActionBar__method__12 = ActionBar__class.getMethodID(name: "setDisplayOptions", sig: "(II)V")!
-private let ActionBar__method__13 = ActionBar__class.getMethodID(name: "setDisplayUseLogoEnabled", sig: "(Z)V")!
-private let ActionBar__method__14 = ActionBar__class.getMethodID(name: "setDisplayShowHomeEnabled", sig: "(Z)V")!
-private let ActionBar__method__15 = ActionBar__class.getMethodID(name: "setDisplayHomeAsUpEnabled", sig: "(Z)V")!
-private let ActionBar__method__16 = ActionBar__class.getMethodID(name: "setDisplayShowTitleEnabled", sig: "(Z)V")!
-private let ActionBar__method__17 = ActionBar__class.getMethodID(name: "setDisplayShowCustomEnabled", sig: "(Z)V")!
-private let ActionBar__method__18 = ActionBar__class.getMethodID(name: "getTitle", sig: "()Ljava/lang/CharSequence;")!
-private let ActionBar__method__19 = ActionBar__class.getMethodID(name: "getSubtitle", sig: "()Ljava/lang/CharSequence;")!
-private let ActionBar__method__20 = ActionBar__class.getMethodID(name: "getNavigationMode", sig: "()I")!
-private let ActionBar__method__21 = ActionBar__class.getMethodID(name: "setNavigationMode", sig: "(I)V")!
-private let ActionBar__method__22 = ActionBar__class.getMethodID(name: "getDisplayOptions", sig: "()I")!
-private let ActionBar__method__23 = ActionBar__class.getMethodID(name: "newTab", sig: "()Landroid/app/ActionBar$Tab;")!
-private let ActionBar__method__24 = ActionBar__class.getMethodID(name: "addTab", sig: "(Landroid/app/ActionBar$Tab;)V")!
-private let ActionBar__method__25 = ActionBar__class.getMethodID(name: "addTab", sig: "(Landroid/app/ActionBar$Tab;Z)V")!
-private let ActionBar__method__26 = ActionBar__class.getMethodID(name: "addTab", sig: "(Landroid/app/ActionBar$Tab;I)V")!
-private let ActionBar__method__27 = ActionBar__class.getMethodID(name: "addTab", sig: "(Landroid/app/ActionBar$Tab;IZ)V")!
-private let ActionBar__method__28 = ActionBar__class.getMethodID(name: "removeTab", sig: "(Landroid/app/ActionBar$Tab;)V")!
-private let ActionBar__method__29 = ActionBar__class.getMethodID(name: "removeTabAt", sig: "(I)V")!
-private let ActionBar__method__30 = ActionBar__class.getMethodID(name: "removeAllTabs", sig: "()V")!
-private let ActionBar__method__31 = ActionBar__class.getMethodID(name: "selectTab", sig: "(Landroid/app/ActionBar$Tab;)V")!
-private let ActionBar__method__32 = ActionBar__class.getMethodID(name: "getSelectedTab", sig: "()Landroid/app/ActionBar$Tab;")!
-private let ActionBar__method__33 = ActionBar__class.getMethodID(name: "getTabAt", sig: "(I)Landroid/app/ActionBar$Tab;")!
-private let ActionBar__method__34 = ActionBar__class.getMethodID(name: "getTabCount", sig: "()I")!
-private let ActionBar__method__35 = ActionBar__class.getMethodID(name: "getHeight", sig: "()I")!
-private let ActionBar__method__36 = ActionBar__class.getMethodID(name: "show", sig: "()V")!
-private let ActionBar__method__37 = ActionBar__class.getMethodID(name: "hide", sig: "()V")!
-private let ActionBar__method__38 = ActionBar__class.getMethodID(name: "isShowing", sig: "()Z")!
-private let ActionBar__method__39 = ActionBar__class.getMethodID(name: "addOnMenuVisibilityListener", sig: "(Landroid/app/ActionBar$OnMenuVisibilityListener;)V")!
-private let ActionBar__method__40 = ActionBar__class.getMethodID(name: "removeOnMenuVisibilityListener", sig: "(Landroid/app/ActionBar$OnMenuVisibilityListener;)V")!
-private let ActionBar__method__41 = ActionBar__class.getMethodID(name: "setHomeButtonEnabled", sig: "(Z)V")!
-private let ActionBar__method__42 = ActionBar__class.getMethodID(name: "getThemedContext", sig: "()Landroid/content/Context;")!
-private let ActionBar__method__43 = ActionBar__class.getMethodID(name: "setHomeAsUpIndicator", sig: "(I)V")!
-private let ActionBar__method__44 = ActionBar__class.getMethodID(name: "setHomeActionContentDescription", sig: "(Ljava/lang/CharSequence;)V")!
-private let ActionBar__method__45 = ActionBar__class.getMethodID(name: "setHomeActionContentDescription", sig: "(I)V")!
-private let ActionBar__method__46 = ActionBar__class.getMethodID(name: "setHideOnContentScrollEnabled", sig: "(Z)V")!
-private let ActionBar__method__47 = ActionBar__class.getMethodID(name: "isHideOnContentScrollEnabled", sig: "()Z")!
-private let ActionBar__method__48 = ActionBar__class.getMethodID(name: "getHideOffset", sig: "()I")!
-private let ActionBar__method__49 = ActionBar__class.getMethodID(name: "setHideOffset", sig: "(I)V")!
-private let ActionBar__method__50 = ActionBar__class.getMethodID(name: "setElevation", sig: "(F)V")!
-private let ActionBar__method__51 = ActionBar__class.getMethodID(name: "getElevation", sig: "()F")!
+private let ActionBar__method__4 = ActionBar__class.getMethodID(name: "setTitle", sig: "(Ljava/lang/CharSequence;)V")!
+private let ActionBar__method__5 = ActionBar__class.getMethodID(name: "setTitle", sig: "(I)V")!
+private let ActionBar__method__6 = ActionBar__class.getMethodID(name: "setSubtitle", sig: "(Ljava/lang/CharSequence;)V")!
+private let ActionBar__method__7 = ActionBar__class.getMethodID(name: "setSubtitle", sig: "(I)V")!
+private let ActionBar__method__8 = ActionBar__class.getMethodID(name: "setDisplayOptions", sig: "(I)V")!
+private let ActionBar__method__9 = ActionBar__class.getMethodID(name: "setDisplayOptions", sig: "(II)V")!
+private let ActionBar__method__10 = ActionBar__class.getMethodID(name: "setDisplayUseLogoEnabled", sig: "(Z)V")!
+private let ActionBar__method__11 = ActionBar__class.getMethodID(name: "setDisplayShowHomeEnabled", sig: "(Z)V")!
+private let ActionBar__method__12 = ActionBar__class.getMethodID(name: "setDisplayHomeAsUpEnabled", sig: "(Z)V")!
+private let ActionBar__method__13 = ActionBar__class.getMethodID(name: "setDisplayShowTitleEnabled", sig: "(Z)V")!
+private let ActionBar__method__14 = ActionBar__class.getMethodID(name: "setDisplayShowCustomEnabled", sig: "(Z)V")!
+private let ActionBar__method__15 = ActionBar__class.getMethodID(name: "getTitle", sig: "()Ljava/lang/CharSequence;")!
+private let ActionBar__method__16 = ActionBar__class.getMethodID(name: "getSubtitle", sig: "()Ljava/lang/CharSequence;")!
+private let ActionBar__method__17 = ActionBar__class.getMethodID(name: "getDisplayOptions", sig: "()I")!
+private let ActionBar__method__18 = ActionBar__class.getMethodID(name: "getHeight", sig: "()I")!
+private let ActionBar__method__19 = ActionBar__class.getMethodID(name: "show", sig: "()V")!
+private let ActionBar__method__20 = ActionBar__class.getMethodID(name: "hide", sig: "()V")!
+private let ActionBar__method__21 = ActionBar__class.getMethodID(name: "isShowing", sig: "()Z")!
+private let ActionBar__method__22 = ActionBar__class.getMethodID(name: "addOnMenuVisibilityListener", sig: "(Landroid/app/ActionBar$OnMenuVisibilityListener;)V")!
+private let ActionBar__method__23 = ActionBar__class.getMethodID(name: "removeOnMenuVisibilityListener", sig: "(Landroid/app/ActionBar$OnMenuVisibilityListener;)V")!
+private let ActionBar__method__24 = ActionBar__class.getMethodID(name: "setHomeButtonEnabled", sig: "(Z)V")!
+private let ActionBar__method__25 = ActionBar__class.getMethodID(name: "getThemedContext", sig: "()Landroid/content/Context;")!
+private let ActionBar__method__26 = ActionBar__class.getMethodID(name: "setHomeAsUpIndicator", sig: "(I)V")!
+private let ActionBar__method__27 = ActionBar__class.getMethodID(name: "setHomeActionContentDescription", sig: "(Ljava/lang/CharSequence;)V")!
+private let ActionBar__method__28 = ActionBar__class.getMethodID(name: "setHomeActionContentDescription", sig: "(I)V")!
+private let ActionBar__method__29 = ActionBar__class.getMethodID(name: "setHideOnContentScrollEnabled", sig: "(Z)V")!
+private let ActionBar__method__30 = ActionBar__class.getMethodID(name: "isHideOnContentScrollEnabled", sig: "()Z")!
+private let ActionBar__method__31 = ActionBar__class.getMethodID(name: "getHideOffset", sig: "()I")!
+private let ActionBar__method__32 = ActionBar__class.getMethodID(name: "setHideOffset", sig: "(I)V")!
+private let ActionBar__method__33 = ActionBar__class.getMethodID(name: "setElevation", sig: "(F)V")!
+private let ActionBar__method__34 = ActionBar__class.getMethodID(name: "getElevation", sig: "()F")!
 
 private let ActionBar__field__0 = ActionBar__class.getStaticFieldID(name: "DISPLAY_HOME_AS_UP", sig: "I")!
 private let ActionBar__field__1 = ActionBar__class.getStaticFieldID(name: "DISPLAY_SHOW_CUSTOM", sig: "I")!

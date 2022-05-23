@@ -9,51 +9,51 @@ open class TaskStackBuilder: Object {
     TaskStackBuilder__class.callStatic(method: TaskStackBuilder__method__0, [JavaParameter(object: context?.toJavaObject())])
   }
 
-  public func addNextIntent(nextIntent: Intent?) -> TaskStackBuilder? {
+  open func addNextIntent(nextIntent: Intent?) -> TaskStackBuilder? {
     self.javaObject.call(method: TaskStackBuilder__method__1, [nextIntent.toJavaParameter()])
   }
 
-  public func addNextIntentWithParentStack(nextIntent: Intent?) -> TaskStackBuilder? {
+  open func addNextIntentWithParentStack(nextIntent: Intent?) -> TaskStackBuilder? {
     self.javaObject.call(method: TaskStackBuilder__method__2, [nextIntent.toJavaParameter()])
   }
 
-  public func addParentStack(sourceActivity: Activity?) -> TaskStackBuilder? {
+  open func addParentStack(sourceActivity: Activity?) -> TaskStackBuilder? {
     self.javaObject.call(method: TaskStackBuilder__method__3, [sourceActivity.toJavaParameter()])
   }
 
-  public func addParentStack<T0>(sourceActivityClass: Class<T0>?) -> TaskStackBuilder? where T0: Object {
+  open func addParentStack<T0>(sourceActivityClass: Class<T0>?) -> TaskStackBuilder? where T0: Object {
     self.javaObject.call(method: TaskStackBuilder__method__4, [sourceActivityClass.toJavaParameter()])
   }
 
-  public func addParentStack(sourceActivityName: ComponentName?) -> TaskStackBuilder? {
+  open func addParentStack(sourceActivityName: ComponentName?) -> TaskStackBuilder? {
     self.javaObject.call(method: TaskStackBuilder__method__5, [sourceActivityName.toJavaParameter()])
   }
 
-  public func getIntentCount() -> Int32 {
+  open func getIntentCount() -> Int32 {
     self.javaObject.call(method: TaskStackBuilder__method__6, [])
   }
 
-  public func editIntentAt(index: Int32) -> Intent? {
+  open func editIntentAt(index: Int32) -> Intent? {
     self.javaObject.call(method: TaskStackBuilder__method__7, [index.toJavaParameter()])
   }
 
-  public func startActivities() {
+  open func startActivities() {
     self.javaObject.call(method: TaskStackBuilder__method__8, [])
   }
 
-  public func startActivities(options: Bundle?) {
+  open func startActivities(options: Bundle?) {
     self.javaObject.call(method: TaskStackBuilder__method__9, [options.toJavaParameter()])
   }
 
-  public func getPendingIntent(requestCode: Int32, flags: Int32) -> PendingIntent? {
+  open func getPendingIntent(requestCode: Int32, flags: Int32) -> PendingIntent? {
     self.javaObject.call(method: TaskStackBuilder__method__10, [requestCode.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func getPendingIntent(requestCode: Int32, flags: Int32, options: Bundle?) -> PendingIntent? {
+  open func getPendingIntent(requestCode: Int32, flags: Int32, options: Bundle?) -> PendingIntent? {
     self.javaObject.call(method: TaskStackBuilder__method__11, [requestCode.toJavaParameter(), flags.toJavaParameter(), options.toJavaParameter()])
   }
 
-  public func getIntents() -> [Intent?] {
+  open func getIntents() -> [Intent?] {
     self.javaObject.call(method: TaskStackBuilder__method__12, [])
   }
 }

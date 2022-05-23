@@ -89,127 +89,127 @@ open class FragmentTransactionProxy: Object, JInterfaceProxy, FragmentTransactio
     self.init(obj.toJavaObject()!)
   }
 
-  public func add(fragment: Fragment?, tag: String) -> FragmentTransaction? {
+  open func add(fragment: Fragment?, tag: String) -> FragmentTransaction? {
     let res = self.javaObject.call(method: FragmentTransaction__method__1, [fragment.toJavaParameter(), tag.toJavaParameter()]) as Object?
     return cast(res, to: FragmentTransactionProxy.self)
   }
 
-  public func add(containerViewId: Int32, fragment: Fragment?) -> FragmentTransaction? {
+  open func add(containerViewId: Int32, fragment: Fragment?) -> FragmentTransaction? {
     let res = self.javaObject.call(method: FragmentTransaction__method__2, [containerViewId.toJavaParameter(), fragment.toJavaParameter()]) as Object?
     return cast(res, to: FragmentTransactionProxy.self)
   }
 
-  public func add(containerViewId: Int32, fragment: Fragment?, tag: String) -> FragmentTransaction? {
+  open func add(containerViewId: Int32, fragment: Fragment?, tag: String) -> FragmentTransaction? {
     let res = self.javaObject.call(method: FragmentTransaction__method__3, [containerViewId.toJavaParameter(), fragment.toJavaParameter(), tag.toJavaParameter()]) as Object?
     return cast(res, to: FragmentTransactionProxy.self)
   }
 
-  public func replace(containerViewId: Int32, fragment: Fragment?) -> FragmentTransaction? {
+  open func replace(containerViewId: Int32, fragment: Fragment?) -> FragmentTransaction? {
     let res = self.javaObject.call(method: FragmentTransaction__method__4, [containerViewId.toJavaParameter(), fragment.toJavaParameter()]) as Object?
     return cast(res, to: FragmentTransactionProxy.self)
   }
 
-  public func replace(containerViewId: Int32, fragment: Fragment?, tag: String) -> FragmentTransaction? {
+  open func replace(containerViewId: Int32, fragment: Fragment?, tag: String) -> FragmentTransaction? {
     let res = self.javaObject.call(method: FragmentTransaction__method__5, [containerViewId.toJavaParameter(), fragment.toJavaParameter(), tag.toJavaParameter()]) as Object?
     return cast(res, to: FragmentTransactionProxy.self)
   }
 
-  public func remove(fragment: Fragment?) -> FragmentTransaction? {
+  open func remove(fragment: Fragment?) -> FragmentTransaction? {
     let res = self.javaObject.call(method: FragmentTransaction__method__6, [fragment.toJavaParameter()]) as Object?
     return cast(res, to: FragmentTransactionProxy.self)
   }
 
-  public func hide(fragment: Fragment?) -> FragmentTransaction? {
+  open func hide(fragment: Fragment?) -> FragmentTransaction? {
     let res = self.javaObject.call(method: FragmentTransaction__method__7, [fragment.toJavaParameter()]) as Object?
     return cast(res, to: FragmentTransactionProxy.self)
   }
 
-  public func show(fragment: Fragment?) -> FragmentTransaction? {
+  open func show(fragment: Fragment?) -> FragmentTransaction? {
     let res = self.javaObject.call(method: FragmentTransaction__method__8, [fragment.toJavaParameter()]) as Object?
     return cast(res, to: FragmentTransactionProxy.self)
   }
 
-  public func detach(fragment: Fragment?) -> FragmentTransaction? {
+  open func detach(fragment: Fragment?) -> FragmentTransaction? {
     let res = self.javaObject.call(method: FragmentTransaction__method__9, [fragment.toJavaParameter()]) as Object?
     return cast(res, to: FragmentTransactionProxy.self)
   }
 
-  public func attach(fragment: Fragment?) -> FragmentTransaction? {
+  open func attach(fragment: Fragment?) -> FragmentTransaction? {
     let res = self.javaObject.call(method: FragmentTransaction__method__10, [fragment.toJavaParameter()]) as Object?
     return cast(res, to: FragmentTransactionProxy.self)
   }
 
-  public func isEmpty() -> Bool {
+  open func isEmpty() -> Bool {
     self.javaObject.call(method: FragmentTransaction__method__11, [])
   }
 
-  public func setCustomAnimations(enter: Int32, exit: Int32) -> FragmentTransaction? {
+  open func setCustomAnimations(enter: Int32, exit: Int32) -> FragmentTransaction? {
     let res = self.javaObject.call(method: FragmentTransaction__method__12, [enter.toJavaParameter(), exit.toJavaParameter()]) as Object?
     return cast(res, to: FragmentTransactionProxy.self)
   }
 
-  public func setCustomAnimations(enter: Int32, exit: Int32, popEnter: Int32, popExit: Int32) -> FragmentTransaction? {
+  open func setCustomAnimations(enter: Int32, exit: Int32, popEnter: Int32, popExit: Int32) -> FragmentTransaction? {
     let res = self.javaObject.call(method: FragmentTransaction__method__13, [enter.toJavaParameter(), exit.toJavaParameter(), popEnter.toJavaParameter(), popExit.toJavaParameter()]) as Object?
     return cast(res, to: FragmentTransactionProxy.self)
   }
 
-  public func setTransition(transit: Int32) -> FragmentTransaction? {
+  open func setTransition(transit: Int32) -> FragmentTransaction? {
     let res = self.javaObject.call(method: FragmentTransaction__method__14, [transit.toJavaParameter()]) as Object?
     return cast(res, to: FragmentTransactionProxy.self)
   }
 
-  public func setTransitionStyle(styleRes: Int32) -> FragmentTransaction? {
+  open func setTransitionStyle(styleRes: Int32) -> FragmentTransaction? {
     let res = self.javaObject.call(method: FragmentTransaction__method__15, [styleRes.toJavaParameter()]) as Object?
     return cast(res, to: FragmentTransactionProxy.self)
   }
 
-  public func addToBackStack(name: String) -> FragmentTransaction? {
+  open func addToBackStack(name: String) -> FragmentTransaction? {
     let res = self.javaObject.call(method: FragmentTransaction__method__16, [name.toJavaParameter()]) as Object?
     return cast(res, to: FragmentTransactionProxy.self)
   }
 
-  public func isAddToBackStackAllowed() -> Bool {
+  open func isAddToBackStackAllowed() -> Bool {
     self.javaObject.call(method: FragmentTransaction__method__17, [])
   }
 
-  public func disallowAddToBackStack() -> FragmentTransaction? {
+  open func disallowAddToBackStack() -> FragmentTransaction? {
     let res = self.javaObject.call(method: FragmentTransaction__method__18, []) as Object?
     return cast(res, to: FragmentTransactionProxy.self)
   }
 
-  public func setBreadCrumbTitle(res: Int32) -> FragmentTransaction? {
+  open func setBreadCrumbTitle(res: Int32) -> FragmentTransaction? {
     let res = self.javaObject.call(method: FragmentTransaction__method__19, [res.toJavaParameter()]) as Object?
     return cast(res, to: FragmentTransactionProxy.self)
   }
 
-  public func setBreadCrumbTitle(text: String?) -> FragmentTransaction? {
+  open func setBreadCrumbTitle(text: String?) -> FragmentTransaction? {
     let res = self.javaObject.call(method: FragmentTransaction__method__20, [text.toJavaParameter()]) as Object?
     return cast(res, to: FragmentTransactionProxy.self)
   }
 
-  public func setBreadCrumbShortTitle(res: Int32) -> FragmentTransaction? {
+  open func setBreadCrumbShortTitle(res: Int32) -> FragmentTransaction? {
     let res = self.javaObject.call(method: FragmentTransaction__method__21, [res.toJavaParameter()]) as Object?
     return cast(res, to: FragmentTransactionProxy.self)
   }
 
-  public func setBreadCrumbShortTitle(text: String?) -> FragmentTransaction? {
+  open func setBreadCrumbShortTitle(text: String?) -> FragmentTransaction? {
     let res = self.javaObject.call(method: FragmentTransaction__method__22, [text.toJavaParameter()]) as Object?
     return cast(res, to: FragmentTransactionProxy.self)
   }
 
-  public func commit() -> Int32 {
+  open func commit() -> Int32 {
     self.javaObject.call(method: FragmentTransaction__method__23, [])
   }
 
-  public func commitAllowingStateLoss() -> Int32 {
+  open func commitAllowingStateLoss() -> Int32 {
     self.javaObject.call(method: FragmentTransaction__method__24, [])
   }
 
-  public func commitNow() {
+  open func commitNow() {
     self.javaObject.call(method: FragmentTransaction__method__25, [])
   }
 
-  public func commitNowAllowingStateLoss() {
+  open func commitNowAllowingStateLoss() {
     self.javaObject.call(method: FragmentTransaction__method__26, [])
   }
 }

@@ -28,45 +28,45 @@ open class BluetoothHealth: Object, BluetoothProfile {
 
   public static let STATE_CHANNEL_DISCONNECTING: Int32 = BluetoothHealth__class.getStatic(field: BluetoothHealth__field__11)
 
-  public func registerSinkAppConfiguration(name: String, dataType: Int32, callback: BluetoothHealthCallback?) -> Bool {
+  open func registerSinkAppConfiguration(name: String, dataType: Int32, callback: BluetoothHealthCallback?) -> Bool {
     self.javaObject.call(method: BluetoothHealth__method__0, [name.toJavaParameter(), dataType.toJavaParameter(), JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func unregisterAppConfiguration(config: BluetoothHealthAppConfiguration?) -> Bool {
+  open func unregisterAppConfiguration(config: BluetoothHealthAppConfiguration?) -> Bool {
     self.javaObject.call(method: BluetoothHealth__method__1, [config.toJavaParameter()])
   }
 
-  public func connectChannelToSource(device: BluetoothDevice?, config: BluetoothHealthAppConfiguration?) -> Bool {
+  open func connectChannelToSource(device: BluetoothDevice?, config: BluetoothHealthAppConfiguration?) -> Bool {
     self.javaObject.call(method: BluetoothHealth__method__2, [device.toJavaParameter(), config.toJavaParameter()])
   }
 
-  public func disconnectChannel(device: BluetoothDevice?, config: BluetoothHealthAppConfiguration?, channelId: Int32) -> Bool {
+  open func disconnectChannel(device: BluetoothDevice?, config: BluetoothHealthAppConfiguration?, channelId: Int32) -> Bool {
     self.javaObject.call(method: BluetoothHealth__method__3, [device.toJavaParameter(), config.toJavaParameter(), channelId.toJavaParameter()])
   }
 
-  public func getMainChannelFd(device: BluetoothDevice?, config: BluetoothHealthAppConfiguration?) -> ParcelFileDescriptor? {
+  open func getMainChannelFd(device: BluetoothDevice?, config: BluetoothHealthAppConfiguration?) -> ParcelFileDescriptor? {
     self.javaObject.call(method: BluetoothHealth__method__4, [device.toJavaParameter(), config.toJavaParameter()])
   }
 
-  public func getConnectionState(device: BluetoothDevice?) -> Int32 {
+  open func getConnectionState(device: BluetoothDevice?) -> Int32 {
     self.javaObject.call(method: BluetoothHealth__method__5, [device.toJavaParameter()])
   }
 
-  public func getConnectedDevices<R>() -> R? where R: List, R.E == BluetoothDevice {
+  open func getConnectedDevices<R>() -> R? where R: List, R.E == BluetoothDevice {
     self.javaObject.call(method: BluetoothHealth__method__6, [])
   }
 
-  public func getDevicesMatchingConnectionStates<R>(states: [Int32]) -> R? where R: List, R.E == BluetoothDevice {
+  open func getDevicesMatchingConnectionStates<R>(states: [Int32]) -> R? where R: List, R.E == BluetoothDevice {
     self.javaObject.call(method: BluetoothHealth__method__7, [states.toJavaParameter()])
   }
 }
 
 extension BluetoothHealth {
-  public func getConnectedDevices() -> ListProxy<BluetoothDevice>? {
+  open func getConnectedDevices() -> ListProxy<BluetoothDevice>? {
     self.javaObject.call(method: BluetoothHealth__method__6, [])
   }
 
-  public func getDevicesMatchingConnectionStates(states: [Int32]) -> ListProxy<BluetoothDevice>? {
+  open func getDevicesMatchingConnectionStates(states: [Int32]) -> ListProxy<BluetoothDevice>? {
     self.javaObject.call(method: BluetoothHealth__method__7, [states.toJavaParameter()])
   }
 }

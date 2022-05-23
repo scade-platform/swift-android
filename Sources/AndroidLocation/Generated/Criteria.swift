@@ -30,91 +30,91 @@ open class Criteria: Object, Parcelable {
     super.init(ctor: Criteria__method__1, [criteria.toJavaParameter()])
   }
 
-  public func setHorizontalAccuracy(accuracy: Int32) {
+  open func setHorizontalAccuracy(accuracy: Int32) {
     self.javaObject.call(method: Criteria__method__2, [accuracy.toJavaParameter()])
   }
 
-  public func getHorizontalAccuracy() -> Int32 {
+  open func getHorizontalAccuracy() -> Int32 {
     self.javaObject.call(method: Criteria__method__3, [])
   }
 
-  public func setVerticalAccuracy(accuracy: Int32) {
+  open func setVerticalAccuracy(accuracy: Int32) {
     self.javaObject.call(method: Criteria__method__4, [accuracy.toJavaParameter()])
   }
 
-  public func getVerticalAccuracy() -> Int32 {
+  open func getVerticalAccuracy() -> Int32 {
     self.javaObject.call(method: Criteria__method__5, [])
   }
 
-  public func setSpeedAccuracy(accuracy: Int32) {
+  open func setSpeedAccuracy(accuracy: Int32) {
     self.javaObject.call(method: Criteria__method__6, [accuracy.toJavaParameter()])
   }
 
-  public func getSpeedAccuracy() -> Int32 {
+  open func getSpeedAccuracy() -> Int32 {
     self.javaObject.call(method: Criteria__method__7, [])
   }
 
-  public func setBearingAccuracy(accuracy: Int32) {
+  open func setBearingAccuracy(accuracy: Int32) {
     self.javaObject.call(method: Criteria__method__8, [accuracy.toJavaParameter()])
   }
 
-  public func getBearingAccuracy() -> Int32 {
+  open func getBearingAccuracy() -> Int32 {
     self.javaObject.call(method: Criteria__method__9, [])
   }
 
-  public func setAccuracy(accuracy: Int32) {
+  open func setAccuracy(accuracy: Int32) {
     self.javaObject.call(method: Criteria__method__10, [accuracy.toJavaParameter()])
   }
 
-  public func getAccuracy() -> Int32 {
+  open func getAccuracy() -> Int32 {
     self.javaObject.call(method: Criteria__method__11, [])
   }
 
-  public func setPowerRequirement(level: Int32) {
+  open func setPowerRequirement(level: Int32) {
     self.javaObject.call(method: Criteria__method__12, [level.toJavaParameter()])
   }
 
-  public func getPowerRequirement() -> Int32 {
+  open func getPowerRequirement() -> Int32 {
     self.javaObject.call(method: Criteria__method__13, [])
   }
 
-  public func setCostAllowed(costAllowed: Bool) {
+  open func setCostAllowed(costAllowed: Bool) {
     self.javaObject.call(method: Criteria__method__14, [costAllowed.toJavaParameter()])
   }
 
-  public func isCostAllowed() -> Bool {
+  open func isCostAllowed() -> Bool {
     self.javaObject.call(method: Criteria__method__15, [])
   }
 
-  public func setAltitudeRequired(altitudeRequired: Bool) {
+  open func setAltitudeRequired(altitudeRequired: Bool) {
     self.javaObject.call(method: Criteria__method__16, [altitudeRequired.toJavaParameter()])
   }
 
-  public func isAltitudeRequired() -> Bool {
+  open func isAltitudeRequired() -> Bool {
     self.javaObject.call(method: Criteria__method__17, [])
   }
 
-  public func setSpeedRequired(speedRequired: Bool) {
+  open func setSpeedRequired(speedRequired: Bool) {
     self.javaObject.call(method: Criteria__method__18, [speedRequired.toJavaParameter()])
   }
 
-  public func isSpeedRequired() -> Bool {
+  open func isSpeedRequired() -> Bool {
     self.javaObject.call(method: Criteria__method__19, [])
   }
 
-  public func setBearingRequired(bearingRequired: Bool) {
+  open func setBearingRequired(bearingRequired: Bool) {
     self.javaObject.call(method: Criteria__method__20, [bearingRequired.toJavaParameter()])
   }
 
-  public func isBearingRequired() -> Bool {
+  open func isBearingRequired() -> Bool {
     self.javaObject.call(method: Criteria__method__21, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: Criteria__method__22, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: Criteria__method__23, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 

@@ -11,8 +11,12 @@ open class SearchRecentSuggestionsProvider: Object, ContentProvider {
     super.init(ctor: SearchRecentSuggestionsProvider__method__0, [])
   }
 
-  public func onCreate() -> Bool {
-    self.javaObject.call(method: SearchRecentSuggestionsProvider__method__1, [])
+  open func setupSuggestions(authority: String, mode: Int32) {
+    self.javaObject.call(method: SearchRecentSuggestionsProvider__method__1, [authority.toJavaParameter(), mode.toJavaParameter()])
+  }
+
+  open func onCreate() -> Bool {
+    self.javaObject.call(method: SearchRecentSuggestionsProvider__method__2, [])
   }
 
   public required init(_ obj: JavaObject) {
@@ -29,7 +33,8 @@ open class SearchRecentSuggestionsProvider: Object, ContentProvider {
 private let SearchRecentSuggestionsProvider__class = findJavaClass(fqn: "android/content/SearchRecentSuggestionsProvider")!
 
 private let SearchRecentSuggestionsProvider__method__0 = SearchRecentSuggestionsProvider__class.getMethodID(name: "<init>", sig: "()V")!
-private let SearchRecentSuggestionsProvider__method__1 = SearchRecentSuggestionsProvider__class.getMethodID(name: "onCreate", sig: "()Z")!
+private let SearchRecentSuggestionsProvider__method__1 = SearchRecentSuggestionsProvider__class.getMethodID(name: "setupSuggestions", sig: "(Ljava/lang/String;I)V")!
+private let SearchRecentSuggestionsProvider__method__2 = SearchRecentSuggestionsProvider__class.getMethodID(name: "onCreate", sig: "()Z")!
 
 private let SearchRecentSuggestionsProvider__field__0 = SearchRecentSuggestionsProvider__class.getStaticFieldID(name: "DATABASE_MODE_2LINES", sig: "I")!
 private let SearchRecentSuggestionsProvider__field__1 = SearchRecentSuggestionsProvider__class.getStaticFieldID(name: "DATABASE_MODE_QUERIES", sig: "I")!

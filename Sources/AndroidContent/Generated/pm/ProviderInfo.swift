@@ -95,7 +95,7 @@ open class ProviderInfo: ComponentInfo, Parcelable {
     super.init(ctor: ProviderInfo__method__1, [orig.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ProviderInfo__method__2, [])
   }
 

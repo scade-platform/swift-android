@@ -64,19 +64,19 @@ open class RestrictionsManager: Object {
 
   public static let RESULT_UNKNOWN_REQUEST: Int32 = RestrictionsManager__class.getStatic(field: RestrictionsManager__field__29)
 
-  public func getApplicationRestrictions() -> Bundle? {
+  open func getApplicationRestrictions() -> Bundle? {
     self.javaObject.call(method: RestrictionsManager__method__0, [])
   }
 
-  public func hasRestrictionsProvider() -> Bool {
+  open func hasRestrictionsProvider() -> Bool {
     self.javaObject.call(method: RestrictionsManager__method__1, [])
   }
 
-  public func createLocalApprovalIntent() -> Intent? {
+  open func createLocalApprovalIntent() -> Intent? {
     self.javaObject.call(method: RestrictionsManager__method__2, [])
   }
 
-  public func getManifestRestrictions<R>(packageName: String) -> R? where R: List, R.E == RestrictionEntry {
+  open func getManifestRestrictions<R>(packageName: String) -> R? where R: List, R.E == RestrictionEntry {
     self.javaObject.call(method: RestrictionsManager__method__3, [packageName.toJavaParameter()])
   }
 
@@ -86,7 +86,7 @@ open class RestrictionsManager: Object {
 }
 
 extension RestrictionsManager {
-  public func getManifestRestrictions(packageName: String) -> ListProxy<RestrictionEntry>? {
+  open func getManifestRestrictions(packageName: String) -> ListProxy<RestrictionEntry>? {
     self.javaObject.call(method: RestrictionsManager__method__3, [packageName.toJavaParameter()])
   }
 }

@@ -47,43 +47,43 @@ open class AudioDeviceInfo: Object {
 
   public static let TYPE_WIRED_HEADSET: Int32 = AudioDeviceInfo__class.getStatic(field: AudioDeviceInfo__field__21)
 
-  public func getId() -> Int32 {
+  open func getId() -> Int32 {
     self.javaObject.call(method: AudioDeviceInfo__method__0, [])
   }
 
-  public func getProductName() -> String? {
+  open func getProductName() -> String? {
     self.javaObject.call(method: AudioDeviceInfo__method__1, [])
   }
 
-  public func isSource() -> Bool {
+  open func isSource() -> Bool {
     self.javaObject.call(method: AudioDeviceInfo__method__2, [])
   }
 
-  public func isSink() -> Bool {
+  open func isSink() -> Bool {
     self.javaObject.call(method: AudioDeviceInfo__method__3, [])
   }
 
-  public func getSampleRates() -> [Int32] {
+  open func getSampleRates() -> [Int32] {
     self.javaObject.call(method: AudioDeviceInfo__method__4, [])
   }
 
-  public func getChannelMasks() -> [Int32] {
+  open func getChannelMasks() -> [Int32] {
     self.javaObject.call(method: AudioDeviceInfo__method__5, [])
   }
 
-  public func getChannelIndexMasks() -> [Int32] {
+  open func getChannelIndexMasks() -> [Int32] {
     self.javaObject.call(method: AudioDeviceInfo__method__6, [])
   }
 
-  public func getChannelCounts() -> [Int32] {
+  open func getChannelCounts() -> [Int32] {
     self.javaObject.call(method: AudioDeviceInfo__method__7, [])
   }
 
-  public func getEncodings() -> [Int32] {
+  open func getEncodings() -> [Int32] {
     self.javaObject.call(method: AudioDeviceInfo__method__8, [])
   }
 
-  public func getType() -> Int32 {
+  open func getType() -> Int32 {
     self.javaObject.call(method: AudioDeviceInfo__method__9, [])
   }
 }

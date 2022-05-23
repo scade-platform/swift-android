@@ -2,15 +2,7 @@
 
 import Java
 
-public protocol BasicTagTechnology: TagTechnology where Self: Object {
-  func getTag() -> Tag?
-
-  func isConnected() -> Bool
-
-  func connect() -> Void
-
-  func close() -> Void
-}
+public protocol BasicTagTechnology: TagTechnology where Self: Object {}
 
 public extension BasicTagTechnology {
   func box() -> BasicTagTechnologyProxy {

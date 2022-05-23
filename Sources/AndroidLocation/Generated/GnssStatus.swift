@@ -20,54 +20,46 @@ open class GnssStatus: Object {
 
   public static let CONSTELLATION_UNKNOWN: Int32 = GnssStatus__class.getStatic(field: GnssStatus__field__6)
 
-  public func getSatelliteCount() -> Int32 {
+  open func getSatelliteCount() -> Int32 {
     self.javaObject.call(method: GnssStatus__method__0, [])
   }
 
-  public func getConstellationType(satIndex: Int32) -> Int32 {
+  open func getConstellationType(satIndex: Int32) -> Int32 {
     self.javaObject.call(method: GnssStatus__method__1, [satIndex.toJavaParameter()])
   }
 
-  public func getSvid(satIndex: Int32) -> Int32 {
+  open func getSvid(satIndex: Int32) -> Int32 {
     self.javaObject.call(method: GnssStatus__method__2, [satIndex.toJavaParameter()])
   }
 
-  public func getCn0DbHz(satIndex: Int32) -> Float {
+  open func getCn0DbHz(satIndex: Int32) -> Float {
     self.javaObject.call(method: GnssStatus__method__3, [satIndex.toJavaParameter()])
   }
 
-  public func getElevationDegrees(satIndex: Int32) -> Float {
+  open func getElevationDegrees(satIndex: Int32) -> Float {
     self.javaObject.call(method: GnssStatus__method__4, [satIndex.toJavaParameter()])
   }
 
-  public func getAzimuthDegrees(satIndex: Int32) -> Float {
+  open func getAzimuthDegrees(satIndex: Int32) -> Float {
     self.javaObject.call(method: GnssStatus__method__5, [satIndex.toJavaParameter()])
   }
 
-  public func hasEphemerisData(satIndex: Int32) -> Bool {
+  open func hasEphemerisData(satIndex: Int32) -> Bool {
     self.javaObject.call(method: GnssStatus__method__6, [satIndex.toJavaParameter()])
   }
 
-  public func hasAlmanacData(satIndex: Int32) -> Bool {
+  open func hasAlmanacData(satIndex: Int32) -> Bool {
     self.javaObject.call(method: GnssStatus__method__7, [satIndex.toJavaParameter()])
   }
 
-  public func usedInFix(satIndex: Int32) -> Bool {
+  open func usedInFix(satIndex: Int32) -> Bool {
     self.javaObject.call(method: GnssStatus__method__8, [satIndex.toJavaParameter()])
   }
 }
 
 // ------------------------------------------------------------------------------------
 
-public protocol GnssStatusCallback where Self: Object {
-  func onStarted() -> Void
-
-  func onStopped() -> Void
-
-  func onFirstFix(ttffMillis: Int32) -> Void
-
-  func onSatelliteStatusChanged(status: GnssStatus?) -> Void
-}
+public protocol GnssStatusCallback where Self: Object {}
 
 public extension GnssStatusCallback {
   func box() -> GnssStatusCallbackProxy {

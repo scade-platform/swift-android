@@ -13,23 +13,23 @@ open class AssistStructure: Object, Parcelable {
     super.init(ctor: AssistStructure__method__0, [])
   }
 
-  public func getActivityComponent() -> ComponentName? {
+  open func getActivityComponent() -> ComponentName? {
     self.javaObject.call(method: AssistStructure__method__1, [])
   }
 
-  public func getWindowNodeCount() -> Int32 {
+  open func getWindowNodeCount() -> Int32 {
     self.javaObject.call(method: AssistStructure__method__2, [])
   }
 
-  public func getWindowNodeAt(index: Int32) -> AssistStructure.WindowNode? {
+  open func getWindowNodeAt(index: Int32) -> AssistStructure.WindowNode? {
     self.javaObject.call(method: AssistStructure__method__3, [index.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: AssistStructure__method__4, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: AssistStructure__method__5, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
@@ -55,163 +55,163 @@ open class AssistStructureViewNode: Object {
 
   public static let TEXT_STYLE_UNDERLINE: Int32 = AssistStructureViewNode__class.getStatic(field: AssistStructureViewNode__field__4)
 
-  public func getId() -> Int32 {
+  open func getId() -> Int32 {
     self.javaObject.call(method: AssistStructureViewNode__method__0, [])
   }
 
-  public func getIdPackage() -> String {
+  open func getIdPackage() -> String {
     self.javaObject.call(method: AssistStructureViewNode__method__1, [])
   }
 
-  public func getIdType() -> String {
+  open func getIdType() -> String {
     self.javaObject.call(method: AssistStructureViewNode__method__2, [])
   }
 
-  public func getIdEntry() -> String {
+  open func getIdEntry() -> String {
     self.javaObject.call(method: AssistStructureViewNode__method__3, [])
   }
 
-  public func getLeft() -> Int32 {
+  open func getLeft() -> Int32 {
     self.javaObject.call(method: AssistStructureViewNode__method__4, [])
   }
 
-  public func getTop() -> Int32 {
+  open func getTop() -> Int32 {
     self.javaObject.call(method: AssistStructureViewNode__method__5, [])
   }
 
-  public func getScrollX() -> Int32 {
+  open func getScrollX() -> Int32 {
     self.javaObject.call(method: AssistStructureViewNode__method__6, [])
   }
 
-  public func getScrollY() -> Int32 {
+  open func getScrollY() -> Int32 {
     self.javaObject.call(method: AssistStructureViewNode__method__7, [])
   }
 
-  public func getWidth() -> Int32 {
+  open func getWidth() -> Int32 {
     self.javaObject.call(method: AssistStructureViewNode__method__8, [])
   }
 
-  public func getHeight() -> Int32 {
+  open func getHeight() -> Int32 {
     self.javaObject.call(method: AssistStructureViewNode__method__9, [])
   }
 
-  public func getElevation() -> Float {
+  open func getElevation() -> Float {
     self.javaObject.call(method: AssistStructureViewNode__method__10, [])
   }
 
-  public func getAlpha() -> Float {
+  open func getAlpha() -> Float {
     self.javaObject.call(method: AssistStructureViewNode__method__11, [])
   }
 
-  public func getVisibility() -> Int32 {
+  open func getVisibility() -> Int32 {
     self.javaObject.call(method: AssistStructureViewNode__method__12, [])
   }
 
-  public func isAssistBlocked() -> Bool {
+  open func isAssistBlocked() -> Bool {
     self.javaObject.call(method: AssistStructureViewNode__method__13, [])
   }
 
-  public func isEnabled() -> Bool {
+  open func isEnabled() -> Bool {
     self.javaObject.call(method: AssistStructureViewNode__method__14, [])
   }
 
-  public func isClickable() -> Bool {
+  open func isClickable() -> Bool {
     self.javaObject.call(method: AssistStructureViewNode__method__15, [])
   }
 
-  public func isFocusable() -> Bool {
+  open func isFocusable() -> Bool {
     self.javaObject.call(method: AssistStructureViewNode__method__16, [])
   }
 
-  public func isFocused() -> Bool {
+  open func isFocused() -> Bool {
     self.javaObject.call(method: AssistStructureViewNode__method__17, [])
   }
 
-  public func isAccessibilityFocused() -> Bool {
+  open func isAccessibilityFocused() -> Bool {
     self.javaObject.call(method: AssistStructureViewNode__method__18, [])
   }
 
-  public func isCheckable() -> Bool {
+  open func isCheckable() -> Bool {
     self.javaObject.call(method: AssistStructureViewNode__method__19, [])
   }
 
-  public func isChecked() -> Bool {
+  open func isChecked() -> Bool {
     self.javaObject.call(method: AssistStructureViewNode__method__20, [])
   }
 
-  public func isSelected() -> Bool {
+  open func isSelected() -> Bool {
     self.javaObject.call(method: AssistStructureViewNode__method__21, [])
   }
 
-  public func isActivated() -> Bool {
+  open func isActivated() -> Bool {
     self.javaObject.call(method: AssistStructureViewNode__method__22, [])
   }
 
-  public func isLongClickable() -> Bool {
+  open func isLongClickable() -> Bool {
     self.javaObject.call(method: AssistStructureViewNode__method__23, [])
   }
 
-  public func isContextClickable() -> Bool {
+  open func isContextClickable() -> Bool {
     self.javaObject.call(method: AssistStructureViewNode__method__24, [])
   }
 
-  public func getClassName() -> String {
+  open func getClassName() -> String {
     self.javaObject.call(method: AssistStructureViewNode__method__25, [])
   }
 
-  public func getContentDescription() -> String? {
+  open func getContentDescription() -> String? {
     self.javaObject.call(method: AssistStructureViewNode__method__26, [])
   }
 
-  public func getText() -> String? {
+  open func getText() -> String? {
     self.javaObject.call(method: AssistStructureViewNode__method__27, [])
   }
 
-  public func getTextSelectionStart() -> Int32 {
+  open func getTextSelectionStart() -> Int32 {
     self.javaObject.call(method: AssistStructureViewNode__method__28, [])
   }
 
-  public func getTextSelectionEnd() -> Int32 {
+  open func getTextSelectionEnd() -> Int32 {
     self.javaObject.call(method: AssistStructureViewNode__method__29, [])
   }
 
-  public func getTextColor() -> Int32 {
+  open func getTextColor() -> Int32 {
     self.javaObject.call(method: AssistStructureViewNode__method__30, [])
   }
 
-  public func getTextBackgroundColor() -> Int32 {
+  open func getTextBackgroundColor() -> Int32 {
     self.javaObject.call(method: AssistStructureViewNode__method__31, [])
   }
 
-  public func getTextSize() -> Float {
+  open func getTextSize() -> Float {
     self.javaObject.call(method: AssistStructureViewNode__method__32, [])
   }
 
-  public func getTextStyle() -> Int32 {
+  open func getTextStyle() -> Int32 {
     self.javaObject.call(method: AssistStructureViewNode__method__33, [])
   }
 
-  public func getTextLineCharOffsets() -> [Int32] {
+  open func getTextLineCharOffsets() -> [Int32] {
     self.javaObject.call(method: AssistStructureViewNode__method__34, [])
   }
 
-  public func getTextLineBaselines() -> [Int32] {
+  open func getTextLineBaselines() -> [Int32] {
     self.javaObject.call(method: AssistStructureViewNode__method__35, [])
   }
 
-  public func getHint() -> String {
+  open func getHint() -> String {
     self.javaObject.call(method: AssistStructureViewNode__method__36, [])
   }
 
-  public func getExtras() -> Bundle? {
+  open func getExtras() -> Bundle? {
     self.javaObject.call(method: AssistStructureViewNode__method__37, [])
   }
 
-  public func getChildCount() -> Int32 {
+  open func getChildCount() -> Int32 {
     self.javaObject.call(method: AssistStructureViewNode__method__38, [])
   }
 
-  public func getChildAt(index: Int32) -> AssistStructure.ViewNode? {
+  open func getChildAt(index: Int32) -> AssistStructure.ViewNode? {
     self.javaObject.call(method: AssistStructureViewNode__method__39, [index.toJavaParameter()])
   }
 }
@@ -219,31 +219,31 @@ open class AssistStructureViewNode: Object {
 // ------------------------------------------------------------------------------------
 
 open class AssistStructureWindowNode: Object {
-  public func getLeft() -> Int32 {
+  open func getLeft() -> Int32 {
     self.javaObject.call(method: AssistStructureWindowNode__method__0, [])
   }
 
-  public func getTop() -> Int32 {
+  open func getTop() -> Int32 {
     self.javaObject.call(method: AssistStructureWindowNode__method__1, [])
   }
 
-  public func getWidth() -> Int32 {
+  open func getWidth() -> Int32 {
     self.javaObject.call(method: AssistStructureWindowNode__method__2, [])
   }
 
-  public func getHeight() -> Int32 {
+  open func getHeight() -> Int32 {
     self.javaObject.call(method: AssistStructureWindowNode__method__3, [])
   }
 
-  public func getTitle() -> String? {
+  open func getTitle() -> String? {
     self.javaObject.call(method: AssistStructureWindowNode__method__4, [])
   }
 
-  public func getDisplayId() -> Int32 {
+  open func getDisplayId() -> Int32 {
     self.javaObject.call(method: AssistStructureWindowNode__method__5, [])
   }
 
-  public func getRootViewNode() -> AssistStructure.ViewNode? {
+  open func getRootViewNode() -> AssistStructure.ViewNode? {
     self.javaObject.call(method: AssistStructureWindowNode__method__6, [])
   }
 }

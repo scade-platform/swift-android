@@ -44,52 +44,48 @@ open class PendingIntent: Object, Parcelable {
     PendingIntent__class.callStatic(method: PendingIntent__method__5, [JavaParameter(object: context?.toJavaObject()), requestCode.toJavaParameter(), intent.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func getIntentSender() -> IntentSender? {
+  open func getIntentSender() -> IntentSender? {
     self.javaObject.call(method: PendingIntent__method__6, [])
   }
 
-  public func cancel() {
+  open func cancel() {
     self.javaObject.call(method: PendingIntent__method__7, [])
   }
 
-  public func send() {
+  open func send() {
     self.javaObject.call(method: PendingIntent__method__8, [])
   }
 
-  public func send(code: Int32) {
+  open func send(code: Int32) {
     self.javaObject.call(method: PendingIntent__method__9, [code.toJavaParameter()])
   }
 
-  public func send(context: Context?, code: Int32, intent: Intent?) {
+  open func send(context: Context?, code: Int32, intent: Intent?) {
     self.javaObject.call(method: PendingIntent__method__10, [JavaParameter(object: context?.toJavaObject()), code.toJavaParameter(), intent.toJavaParameter()])
   }
 
-  public func getTargetPackage() -> String {
+  open func getCreatorPackage() -> String {
     self.javaObject.call(method: PendingIntent__method__11, [])
   }
 
-  public func getCreatorPackage() -> String {
+  open func getCreatorUid() -> Int32 {
     self.javaObject.call(method: PendingIntent__method__12, [])
   }
 
-  public func getCreatorUid() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: PendingIntent__method__13, [])
   }
 
-  public func describeContents() -> Int32 {
-    self.javaObject.call(method: PendingIntent__method__14, [])
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
+    self.javaObject.call(method: PendingIntent__method__14, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
-    self.javaObject.call(method: PendingIntent__method__15, [dest.toJavaParameter(), flags.toJavaParameter()])
-  }
-
-  public static func writePendingIntentOrNullToParcel(sender: PendingIntent?, _out: Parcel?) {
-    PendingIntent__class.callStatic(method: PendingIntent__method__16, [sender.toJavaParameter(), _out.toJavaParameter()])
+  public static func writePendingIntentOrNullToParcel(sender: PendingIntent?, out: Parcel?) {
+    PendingIntent__class.callStatic(method: PendingIntent__method__15, [sender.toJavaParameter(), out.toJavaParameter()])
   }
 
   public static func readPendingIntentOrNullFromParcel(_in: Parcel?) -> PendingIntent? {
-    PendingIntent__class.callStatic(method: PendingIntent__method__17, [_in.toJavaParameter()])
+    PendingIntent__class.callStatic(method: PendingIntent__method__16, [_in.toJavaParameter()])
   }
 }
 
@@ -160,13 +156,12 @@ private let PendingIntent__method__7 = PendingIntent__class.getMethodID(name: "c
 private let PendingIntent__method__8 = PendingIntent__class.getMethodID(name: "send", sig: "()V")!
 private let PendingIntent__method__9 = PendingIntent__class.getMethodID(name: "send", sig: "(I)V")!
 private let PendingIntent__method__10 = PendingIntent__class.getMethodID(name: "send", sig: "(Landroid/content/Context;ILandroid/content/Intent;)V")!
-private let PendingIntent__method__11 = PendingIntent__class.getMethodID(name: "getTargetPackage", sig: "()Ljava/lang/String;")!
-private let PendingIntent__method__12 = PendingIntent__class.getMethodID(name: "getCreatorPackage", sig: "()Ljava/lang/String;")!
-private let PendingIntent__method__13 = PendingIntent__class.getMethodID(name: "getCreatorUid", sig: "()I")!
-private let PendingIntent__method__14 = PendingIntent__class.getMethodID(name: "describeContents", sig: "()I")!
-private let PendingIntent__method__15 = PendingIntent__class.getMethodID(name: "writeToParcel", sig: "(Landroid/os/Parcel;I)V")!
-private let PendingIntent__method__16 = PendingIntent__class.getStaticMethodID(name: "writePendingIntentOrNullToParcel", sig: "(Landroid/app/PendingIntent;Landroid/os/Parcel;)V")!
-private let PendingIntent__method__17 = PendingIntent__class.getStaticMethodID(name: "readPendingIntentOrNullFromParcel", sig: "(Landroid/os/Parcel;)Landroid/app/PendingIntent;")!
+private let PendingIntent__method__11 = PendingIntent__class.getMethodID(name: "getCreatorPackage", sig: "()Ljava/lang/String;")!
+private let PendingIntent__method__12 = PendingIntent__class.getMethodID(name: "getCreatorUid", sig: "()I")!
+private let PendingIntent__method__13 = PendingIntent__class.getMethodID(name: "describeContents", sig: "()I")!
+private let PendingIntent__method__14 = PendingIntent__class.getMethodID(name: "writeToParcel", sig: "(Landroid/os/Parcel;I)V")!
+private let PendingIntent__method__15 = PendingIntent__class.getStaticMethodID(name: "writePendingIntentOrNullToParcel", sig: "(Landroid/app/PendingIntent;Landroid/os/Parcel;)V")!
+private let PendingIntent__method__16 = PendingIntent__class.getStaticMethodID(name: "readPendingIntentOrNullFromParcel", sig: "(Landroid/os/Parcel;)Landroid/app/PendingIntent;")!
 
 private let PendingIntent__field__0 = PendingIntent__class.getStaticFieldID(name: "FLAG_CANCEL_CURRENT", sig: "I")!
 private let PendingIntent__field__1 = PendingIntent__class.getStaticFieldID(name: "FLAG_IMMUTABLE", sig: "I")!

@@ -6,11 +6,11 @@ open class LauncherApps: Object {
   public typealias Callback = AndroidContent.LauncherAppsCallback
   public typealias CallbackProxy = AndroidContent.LauncherAppsCallbackProxy
 
-  public func registerCallback(callback: LauncherApps.Callback?) {
+  open func registerCallback(callback: LauncherApps.Callback?) {
     self.javaObject.call(method: LauncherApps__method__0, [JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func unregisterCallback(callback: LauncherApps.Callback?) {
+  open func unregisterCallback(callback: LauncherApps.Callback?) {
     self.javaObject.call(method: LauncherApps__method__1, [JavaParameter(object: callback?.toJavaObject())])
   }
 }

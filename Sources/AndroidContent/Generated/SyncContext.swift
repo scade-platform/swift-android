@@ -3,7 +3,7 @@
 import Java
 
 open class SyncContext: Object {
-  public func onFinished(result: SyncResult?) {
+  open func onFinished(result: SyncResult?) {
     self.javaObject.call(method: SyncContext__method__0, [result.toJavaParameter()])
   }
 }

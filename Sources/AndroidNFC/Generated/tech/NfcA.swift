@@ -7,27 +7,27 @@ open class NfcA: Object, BasicTagTechnology {
     NfcA__class.callStatic(method: NfcA__method__0, [tag.toJavaParameter()])
   }
 
-  public func getAtqa() -> [Int8] {
+  open func getAtqa() -> [Int8] {
     self.javaObject.call(method: NfcA__method__1, [])
   }
 
-  public func getSak() -> Int16 {
+  open func getSak() -> Int16 {
     self.javaObject.call(method: NfcA__method__2, [])
   }
 
-  public func transceive(data: [Int8]) -> [Int8] {
+  open func transceive(data: [Int8]) -> [Int8] {
     self.javaObject.call(method: NfcA__method__3, [data.toJavaParameter()])
   }
 
-  public func getMaxTransceiveLength() -> Int32 {
+  open func getMaxTransceiveLength() -> Int32 {
     self.javaObject.call(method: NfcA__method__4, [])
   }
 
-  public func setTimeout(timeout: Int32) {
+  open func setTimeout(timeout: Int32) {
     self.javaObject.call(method: NfcA__method__5, [timeout.toJavaParameter()])
   }
 
-  public func getTimeout() -> Int32 {
+  open func getTimeout() -> Int32 {
     self.javaObject.call(method: NfcA__method__6, [])
   }
 }

@@ -4,167 +4,167 @@ import AndroidOS
 import Java
 
 open class Address: Object, Parcelable {
-  public func getMaxAddressLineIndex() -> Int32 {
+  open func getMaxAddressLineIndex() -> Int32 {
     self.javaObject.call(method: Address__method__0, [])
   }
 
-  public func getAddressLine(index: Int32) -> String {
+  open func getAddressLine(index: Int32) -> String {
     self.javaObject.call(method: Address__method__1, [index.toJavaParameter()])
   }
 
-  public func setAddressLine(index: Int32, line: String) {
+  open func setAddressLine(index: Int32, line: String) {
     self.javaObject.call(method: Address__method__2, [index.toJavaParameter(), line.toJavaParameter()])
   }
 
-  public func getFeatureName() -> String {
+  open func getFeatureName() -> String {
     self.javaObject.call(method: Address__method__3, [])
   }
 
-  public func setFeatureName(featureName: String) {
+  open func setFeatureName(featureName: String) {
     self.javaObject.call(method: Address__method__4, [featureName.toJavaParameter()])
   }
 
-  public func getAdminArea() -> String {
+  open func getAdminArea() -> String {
     self.javaObject.call(method: Address__method__5, [])
   }
 
-  public func setAdminArea(adminArea: String) {
+  open func setAdminArea(adminArea: String) {
     self.javaObject.call(method: Address__method__6, [adminArea.toJavaParameter()])
   }
 
-  public func getSubAdminArea() -> String {
+  open func getSubAdminArea() -> String {
     self.javaObject.call(method: Address__method__7, [])
   }
 
-  public func setSubAdminArea(subAdminArea: String) {
+  open func setSubAdminArea(subAdminArea: String) {
     self.javaObject.call(method: Address__method__8, [subAdminArea.toJavaParameter()])
   }
 
-  public func getLocality() -> String {
+  open func getLocality() -> String {
     self.javaObject.call(method: Address__method__9, [])
   }
 
-  public func setLocality(locality: String) {
+  open func setLocality(locality: String) {
     self.javaObject.call(method: Address__method__10, [locality.toJavaParameter()])
   }
 
-  public func getSubLocality() -> String {
+  open func getSubLocality() -> String {
     self.javaObject.call(method: Address__method__11, [])
   }
 
-  public func setSubLocality(sublocality: String) {
+  open func setSubLocality(sublocality: String) {
     self.javaObject.call(method: Address__method__12, [sublocality.toJavaParameter()])
   }
 
-  public func getThoroughfare() -> String {
+  open func getThoroughfare() -> String {
     self.javaObject.call(method: Address__method__13, [])
   }
 
-  public func setThoroughfare(thoroughfare: String) {
+  open func setThoroughfare(thoroughfare: String) {
     self.javaObject.call(method: Address__method__14, [thoroughfare.toJavaParameter()])
   }
 
-  public func getSubThoroughfare() -> String {
+  open func getSubThoroughfare() -> String {
     self.javaObject.call(method: Address__method__15, [])
   }
 
-  public func setSubThoroughfare(subthoroughfare: String) {
+  open func setSubThoroughfare(subthoroughfare: String) {
     self.javaObject.call(method: Address__method__16, [subthoroughfare.toJavaParameter()])
   }
 
-  public func getPremises() -> String {
+  open func getPremises() -> String {
     self.javaObject.call(method: Address__method__17, [])
   }
 
-  public func setPremises(premises: String) {
+  open func setPremises(premises: String) {
     self.javaObject.call(method: Address__method__18, [premises.toJavaParameter()])
   }
 
-  public func getPostalCode() -> String {
+  open func getPostalCode() -> String {
     self.javaObject.call(method: Address__method__19, [])
   }
 
-  public func setPostalCode(postalCode: String) {
+  open func setPostalCode(postalCode: String) {
     self.javaObject.call(method: Address__method__20, [postalCode.toJavaParameter()])
   }
 
-  public func getCountryCode() -> String {
+  open func getCountryCode() -> String {
     self.javaObject.call(method: Address__method__21, [])
   }
 
-  public func setCountryCode(countryCode: String) {
+  open func setCountryCode(countryCode: String) {
     self.javaObject.call(method: Address__method__22, [countryCode.toJavaParameter()])
   }
 
-  public func getCountryName() -> String {
+  open func getCountryName() -> String {
     self.javaObject.call(method: Address__method__23, [])
   }
 
-  public func setCountryName(countryName: String) {
+  open func setCountryName(countryName: String) {
     self.javaObject.call(method: Address__method__24, [countryName.toJavaParameter()])
   }
 
-  public func hasLatitude() -> Bool {
+  open func hasLatitude() -> Bool {
     self.javaObject.call(method: Address__method__25, [])
   }
 
-  public func getLatitude() -> Double {
+  open func getLatitude() -> Double {
     self.javaObject.call(method: Address__method__26, [])
   }
 
-  public func setLatitude(latitude: Double) {
+  open func setLatitude(latitude: Double) {
     self.javaObject.call(method: Address__method__27, [latitude.toJavaParameter()])
   }
 
-  public func clearLatitude() {
+  open func clearLatitude() {
     self.javaObject.call(method: Address__method__28, [])
   }
 
-  public func hasLongitude() -> Bool {
+  open func hasLongitude() -> Bool {
     self.javaObject.call(method: Address__method__29, [])
   }
 
-  public func getLongitude() -> Double {
+  open func getLongitude() -> Double {
     self.javaObject.call(method: Address__method__30, [])
   }
 
-  public func setLongitude(longitude: Double) {
+  open func setLongitude(longitude: Double) {
     self.javaObject.call(method: Address__method__31, [longitude.toJavaParameter()])
   }
 
-  public func clearLongitude() {
+  open func clearLongitude() {
     self.javaObject.call(method: Address__method__32, [])
   }
 
-  public func getPhone() -> String {
+  open func getPhone() -> String {
     self.javaObject.call(method: Address__method__33, [])
   }
 
-  public func setPhone(phone: String) {
+  open func setPhone(phone: String) {
     self.javaObject.call(method: Address__method__34, [phone.toJavaParameter()])
   }
 
-  public func getUrl() -> String {
+  open func getUrl() -> String {
     self.javaObject.call(method: Address__method__35, [])
   }
 
-  public func setUrl(Url: String) {
+  open func setUrl(Url: String) {
     self.javaObject.call(method: Address__method__36, [Url.toJavaParameter()])
   }
 
-  public func getExtras() -> Bundle? {
+  open func getExtras() -> Bundle? {
     self.javaObject.call(method: Address__method__37, [])
   }
 
-  public func setExtras(extras: Bundle?) {
+  open func setExtras(extras: Bundle?) {
     self.javaObject.call(method: Address__method__38, [extras.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: Address__method__39, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: Address__method__40, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }

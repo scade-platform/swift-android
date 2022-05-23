@@ -43,23 +43,23 @@ open class JobSchedulerProxy: Object, JInterfaceProxy, JobScheduler {
     self.init(obj.toJavaObject()!)
   }
 
-  public func schedule(job: JobInfo?) -> Int32 {
+  open func schedule(job: JobInfo?) -> Int32 {
     self.javaObject.call(method: JobScheduler__method__1, [job.toJavaParameter()])
   }
 
-  public func cancel(jobId: Int32) {
+  open func cancel(jobId: Int32) {
     self.javaObject.call(method: JobScheduler__method__2, [jobId.toJavaParameter()])
   }
 
-  public func cancelAll() {
+  open func cancelAll() {
     self.javaObject.call(method: JobScheduler__method__3, [])
   }
 
-  public func getAllPendingJobs<R>() -> R? where R: List, R.E == JobInfo {
+  open func getAllPendingJobs<R>() -> R? where R: List, R.E == JobInfo {
     self.javaObject.call(method: JobScheduler__method__4, [])
   }
 
-  public func getPendingJob(jobId: Int32) -> JobInfo? {
+  open func getPendingJob(jobId: Int32) -> JobInfo? {
     self.javaObject.call(method: JobScheduler__method__5, [jobId.toJavaParameter()])
   }
 }

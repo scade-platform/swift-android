@@ -7,19 +7,19 @@ open class NfcB: Object, BasicTagTechnology {
     NfcB__class.callStatic(method: NfcB__method__0, [tag.toJavaParameter()])
   }
 
-  public func getApplicationData() -> [Int8] {
+  open func getApplicationData() -> [Int8] {
     self.javaObject.call(method: NfcB__method__1, [])
   }
 
-  public func getProtocolInfo() -> [Int8] {
+  open func getProtocolInfo() -> [Int8] {
     self.javaObject.call(method: NfcB__method__2, [])
   }
 
-  public func transceive(data: [Int8]) -> [Int8] {
+  open func transceive(data: [Int8]) -> [Int8] {
     self.javaObject.call(method: NfcB__method__3, [data.toJavaParameter()])
   }
 
-  public func getMaxTransceiveLength() -> Int32 {
+  open func getMaxTransceiveLength() -> Int32 {
     self.javaObject.call(method: NfcB__method__4, [])
   }
 }

@@ -7,15 +7,15 @@ open class ListActivity: Activity {
     super.init(ctor: ListActivity__method__0, [])
   }
 
-  public func setSelection(position: Int32) {
+  open func setSelection(position: Int32) {
     self.javaObject.call(method: ListActivity__method__1, [position.toJavaParameter()])
   }
 
-  public func getSelectedItemPosition() -> Int32 {
+  open func getSelectedItemPosition() -> Int32 {
     self.javaObject.call(method: ListActivity__method__2, [])
   }
 
-  public func getSelectedItemId() -> Int64 {
+  open func getSelectedItemId() -> Int64 {
     self.javaObject.call(method: ListActivity__method__3, [])
   }
 

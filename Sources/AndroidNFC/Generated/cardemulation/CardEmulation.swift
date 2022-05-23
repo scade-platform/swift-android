@@ -25,49 +25,49 @@ open class CardEmulation: Object {
     CardEmulation__class.callStatic(method: CardEmulation__method__0, [adapter.toJavaParameter()])
   }
 
-  public func isDefaultServiceForCategory(service: ComponentName?, category: String) -> Bool {
+  open func isDefaultServiceForCategory(service: ComponentName?, category: String) -> Bool {
     self.javaObject.call(method: CardEmulation__method__1, [service.toJavaParameter(), category.toJavaParameter()])
   }
 
-  public func isDefaultServiceForAid(service: ComponentName?, aid: String) -> Bool {
+  open func isDefaultServiceForAid(service: ComponentName?, aid: String) -> Bool {
     self.javaObject.call(method: CardEmulation__method__2, [service.toJavaParameter(), aid.toJavaParameter()])
   }
 
-  public func categoryAllowsForegroundPreference(category: String) -> Bool {
+  open func categoryAllowsForegroundPreference(category: String) -> Bool {
     self.javaObject.call(method: CardEmulation__method__3, [category.toJavaParameter()])
   }
 
-  public func getSelectionModeForCategory(category: String) -> Int32 {
+  open func getSelectionModeForCategory(category: String) -> Int32 {
     self.javaObject.call(method: CardEmulation__method__4, [category.toJavaParameter()])
   }
 
-  public func registerAidsForService<T0>(service: ComponentName?, category: String, aids: T0?) -> Bool where T0: List, T0.E == String {
+  open func registerAidsForService<T0>(service: ComponentName?, category: String, aids: T0?) -> Bool where T0: List, T0.E == String {
     self.javaObject.call(method: CardEmulation__method__5, [service.toJavaParameter(), category.toJavaParameter(), aids.toJavaParameter()])
   }
 
-  public func getAidsForService<R>(service: ComponentName?, category: String) -> R? where R: List, R.E == String {
+  open func getAidsForService<R>(service: ComponentName?, category: String) -> R? where R: List, R.E == String {
     self.javaObject.call(method: CardEmulation__method__6, [service.toJavaParameter(), category.toJavaParameter()])
   }
 
-  public func removeAidsForService(service: ComponentName?, category: String) -> Bool {
+  open func removeAidsForService(service: ComponentName?, category: String) -> Bool {
     self.javaObject.call(method: CardEmulation__method__7, [service.toJavaParameter(), category.toJavaParameter()])
   }
 
-  public func setPreferredService(activity: Activity?, service: ComponentName?) -> Bool {
+  open func setPreferredService(activity: Activity?, service: ComponentName?) -> Bool {
     self.javaObject.call(method: CardEmulation__method__8, [activity.toJavaParameter(), service.toJavaParameter()])
   }
 
-  public func unsetPreferredService(activity: Activity?) -> Bool {
+  open func unsetPreferredService(activity: Activity?) -> Bool {
     self.javaObject.call(method: CardEmulation__method__9, [activity.toJavaParameter()])
   }
 
-  public func supportsAidPrefixRegistration() -> Bool {
+  open func supportsAidPrefixRegistration() -> Bool {
     self.javaObject.call(method: CardEmulation__method__10, [])
   }
 }
 
 extension CardEmulation {
-  public func getAidsForService(service: ComponentName?, category: String) -> ListProxy<String>? {
+  open func getAidsForService(service: ComponentName?, category: String) -> ListProxy<String>? {
     self.javaObject.call(method: CardEmulation__method__6, [service.toJavaParameter(), category.toJavaParameter()])
   }
 }

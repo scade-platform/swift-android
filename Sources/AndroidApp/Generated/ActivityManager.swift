@@ -39,161 +39,137 @@ open class ActivityManager: Object {
 
   public static let RECENT_WITH_EXCLUDED: Int32 = ActivityManager__class.getStatic(field: ActivityManager__field__8)
 
-  public func getMemoryClass() -> Int32 {
+  open func getMemoryClass() -> Int32 {
     self.javaObject.call(method: ActivityManager__method__0, [])
   }
 
-  public func getLargeMemoryClass() -> Int32 {
+  open func getLargeMemoryClass() -> Int32 {
     self.javaObject.call(method: ActivityManager__method__1, [])
   }
 
-  public func isLowRamDevice() -> Bool {
+  open func isLowRamDevice() -> Bool {
     self.javaObject.call(method: ActivityManager__method__2, [])
   }
 
-  public func getRecentTasks<R>(maxNum: Int32, flags: Int32) -> R? where R: List, R.E == ActivityManager.RecentTaskInfo {
-    self.javaObject.call(method: ActivityManager__method__3, [maxNum.toJavaParameter(), flags.toJavaParameter()])
+  open func getAppTasks<R>() -> R? where R: List, R.E == ActivityManager.AppTask {
+    self.javaObject.call(method: ActivityManager__method__3, [])
   }
 
-  public func getAppTasks<R>() -> R? where R: List, R.E == ActivityManager.AppTask {
-    self.javaObject.call(method: ActivityManager__method__4, [])
+  open func moveTaskToFront(taskId: Int32, flags: Int32) {
+    self.javaObject.call(method: ActivityManager__method__4, [taskId.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func getRunningTasks<R>(maxNum: Int32) -> R? where R: List, R.E == ActivityManager.RunningTaskInfo {
-    self.javaObject.call(method: ActivityManager__method__5, [maxNum.toJavaParameter()])
+  open func moveTaskToFront(taskId: Int32, flags: Int32, options: Bundle?) {
+    self.javaObject.call(method: ActivityManager__method__5, [taskId.toJavaParameter(), flags.toJavaParameter(), options.toJavaParameter()])
   }
 
-  public func moveTaskToFront(taskId: Int32, flags: Int32) {
-    self.javaObject.call(method: ActivityManager__method__6, [taskId.toJavaParameter(), flags.toJavaParameter()])
+  open func getRunningServices<R>(maxNum: Int32) -> R? where R: List, R.E == ActivityManager.RunningServiceInfo {
+    self.javaObject.call(method: ActivityManager__method__6, [maxNum.toJavaParameter()])
   }
 
-  public func moveTaskToFront(taskId: Int32, flags: Int32, options: Bundle?) {
-    self.javaObject.call(method: ActivityManager__method__7, [taskId.toJavaParameter(), flags.toJavaParameter(), options.toJavaParameter()])
+  open func getRunningServiceControlPanel(service: ComponentName?) -> PendingIntent? {
+    self.javaObject.call(method: ActivityManager__method__7, [service.toJavaParameter()])
   }
 
-  public func getRunningServices<R>(maxNum: Int32) -> R? where R: List, R.E == ActivityManager.RunningServiceInfo {
-    self.javaObject.call(method: ActivityManager__method__8, [maxNum.toJavaParameter()])
+  open func getMemoryInfo(outInfo: ActivityManager.MemoryInfo?) {
+    self.javaObject.call(method: ActivityManager__method__8, [outInfo.toJavaParameter()])
   }
 
-  public func getRunningServiceControlPanel(service: ComponentName?) -> PendingIntent? {
-    self.javaObject.call(method: ActivityManager__method__9, [service.toJavaParameter()])
+  open func clearApplicationUserData() -> Bool {
+    self.javaObject.call(method: ActivityManager__method__9, [])
   }
 
-  public func getMemoryInfo(outInfo: ActivityManager.MemoryInfo?) {
-    self.javaObject.call(method: ActivityManager__method__10, [outInfo.toJavaParameter()])
+  open func getProcessesInErrorState<R>() -> R? where R: List, R.E == ActivityManager.ProcessErrorStateInfo {
+    self.javaObject.call(method: ActivityManager__method__10, [])
   }
 
-  public func clearApplicationUserData() -> Bool {
+  open func getRunningAppProcesses<R>() -> R? where R: List, R.E == ActivityManager.RunningAppProcessInfo {
     self.javaObject.call(method: ActivityManager__method__11, [])
   }
 
-  public func getProcessesInErrorState<R>() -> R? where R: List, R.E == ActivityManager.ProcessErrorStateInfo {
-    self.javaObject.call(method: ActivityManager__method__12, [])
-  }
-
-  public func getRunningAppProcesses<R>() -> R? where R: List, R.E == ActivityManager.RunningAppProcessInfo {
-    self.javaObject.call(method: ActivityManager__method__13, [])
-  }
-
   public static func getMyMemoryState(outState: ActivityManager.RunningAppProcessInfo?) {
-    ActivityManager__class.callStatic(method: ActivityManager__method__14, [outState.toJavaParameter()])
+    ActivityManager__class.callStatic(method: ActivityManager__method__12, [outState.toJavaParameter()])
   }
 
-  public func restartPackage(packageName: String) {
-    self.javaObject.call(method: ActivityManager__method__15, [packageName.toJavaParameter()])
+  open func killBackgroundProcesses(packageName: String) {
+    self.javaObject.call(method: ActivityManager__method__13, [packageName.toJavaParameter()])
   }
 
-  public func killBackgroundProcesses(packageName: String) {
-    self.javaObject.call(method: ActivityManager__method__16, [packageName.toJavaParameter()])
+  open func getDeviceConfigurationInfo() -> ConfigurationInfo? {
+    self.javaObject.call(method: ActivityManager__method__14, [])
   }
 
-  public func getDeviceConfigurationInfo() -> ConfigurationInfo? {
-    self.javaObject.call(method: ActivityManager__method__17, [])
+  open func getLauncherLargeIconDensity() -> Int32 {
+    self.javaObject.call(method: ActivityManager__method__15, [])
   }
 
-  public func getLauncherLargeIconDensity() -> Int32 {
-    self.javaObject.call(method: ActivityManager__method__18, [])
-  }
-
-  public func getLauncherLargeIconSize() -> Int32 {
-    self.javaObject.call(method: ActivityManager__method__19, [])
+  open func getLauncherLargeIconSize() -> Int32 {
+    self.javaObject.call(method: ActivityManager__method__16, [])
   }
 
   public static func isUserAMonkey() -> Bool {
-    ActivityManager__class.callStatic(method: ActivityManager__method__20, [])
+    ActivityManager__class.callStatic(method: ActivityManager__method__17, [])
   }
 
   public static func isRunningInTestHarness() -> Bool {
-    ActivityManager__class.callStatic(method: ActivityManager__method__21, [])
+    ActivityManager__class.callStatic(method: ActivityManager__method__18, [])
   }
 
-  public func dumpPackageState(fd: FileDescriptor?, packageName: String) {
-    self.javaObject.call(method: ActivityManager__method__22, [fd.toJavaParameter(), packageName.toJavaParameter()])
+  open func dumpPackageState(fd: FileDescriptor?, packageName: String) {
+    self.javaObject.call(method: ActivityManager__method__19, [fd.toJavaParameter(), packageName.toJavaParameter()])
   }
 
-  public func setWatchHeapLimit(pssSize: Int64) {
-    self.javaObject.call(method: ActivityManager__method__23, [pssSize.toJavaParameter()])
+  open func setWatchHeapLimit(pssSize: Int64) {
+    self.javaObject.call(method: ActivityManager__method__20, [pssSize.toJavaParameter()])
   }
 
-  public func clearWatchHeapLimit() {
-    self.javaObject.call(method: ActivityManager__method__24, [])
+  open func clearWatchHeapLimit() {
+    self.javaObject.call(method: ActivityManager__method__21, [])
   }
 
-  public func isInLockTaskMode() -> Bool {
-    self.javaObject.call(method: ActivityManager__method__25, [])
-  }
-
-  public func getLockTaskModeState() -> Int32 {
-    self.javaObject.call(method: ActivityManager__method__26, [])
+  open func getLockTaskModeState() -> Int32 {
+    self.javaObject.call(method: ActivityManager__method__22, [])
   }
 }
 
 extension ActivityManager {
-  public func getRecentTasks(maxNum: Int32, flags: Int32) -> ListProxy<ActivityManager.RecentTaskInfo>? {
-    self.javaObject.call(method: ActivityManager__method__3, [maxNum.toJavaParameter(), flags.toJavaParameter()])
+  open func getAppTasks() -> ListProxy<ActivityManager.AppTask>? {
+    self.javaObject.call(method: ActivityManager__method__3, [])
   }
 
-  public func getAppTasks() -> ListProxy<ActivityManager.AppTask>? {
-    self.javaObject.call(method: ActivityManager__method__4, [])
+  open func getRunningServices(maxNum: Int32) -> ListProxy<ActivityManager.RunningServiceInfo>? {
+    self.javaObject.call(method: ActivityManager__method__6, [maxNum.toJavaParameter()])
   }
 
-  public func getRunningTasks(maxNum: Int32) -> ListProxy<ActivityManager.RunningTaskInfo>? {
-    self.javaObject.call(method: ActivityManager__method__5, [maxNum.toJavaParameter()])
+  open func getProcessesInErrorState() -> ListProxy<ActivityManager.ProcessErrorStateInfo>? {
+    self.javaObject.call(method: ActivityManager__method__10, [])
   }
 
-  public func getRunningServices(maxNum: Int32) -> ListProxy<ActivityManager.RunningServiceInfo>? {
-    self.javaObject.call(method: ActivityManager__method__8, [maxNum.toJavaParameter()])
-  }
-
-  public func getProcessesInErrorState() -> ListProxy<ActivityManager.ProcessErrorStateInfo>? {
-    self.javaObject.call(method: ActivityManager__method__12, [])
-  }
-
-  public func getRunningAppProcesses() -> ListProxy<ActivityManager.RunningAppProcessInfo>? {
-    self.javaObject.call(method: ActivityManager__method__13, [])
+  open func getRunningAppProcesses() -> ListProxy<ActivityManager.RunningAppProcessInfo>? {
+    self.javaObject.call(method: ActivityManager__method__11, [])
   }
 }
 
 // ------------------------------------------------------------------------------------
 
 open class ActivityManagerAppTask: Object {
-  public func finishAndRemoveTask() {
+  open func finishAndRemoveTask() {
     self.javaObject.call(method: ActivityManagerAppTask__method__0, [])
   }
 
-  public func getTaskInfo() -> ActivityManager.RecentTaskInfo? {
+  open func getTaskInfo() -> ActivityManager.RecentTaskInfo? {
     self.javaObject.call(method: ActivityManagerAppTask__method__1, [])
   }
 
-  public func moveToFront() {
+  open func moveToFront() {
     self.javaObject.call(method: ActivityManagerAppTask__method__2, [])
   }
 
-  public func startActivity(context: Context?, intent: Intent?, options: Bundle?) {
+  open func startActivity(context: Context?, intent: Intent?, options: Bundle?) {
     self.javaObject.call(method: ActivityManagerAppTask__method__3, [JavaParameter(object: context?.toJavaObject()), intent.toJavaParameter(), options.toJavaParameter()])
   }
 
-  public func setExcludeFromRecents(exclude: Bool) {
+  open func setExcludeFromRecents(exclude: Bool) {
     self.javaObject.call(method: ActivityManagerAppTask__method__4, [exclude.toJavaParameter()])
   }
 }
@@ -323,15 +299,15 @@ open class ActivityManagerRunningAppProcessInfo: Object, Parcelable {
     super.init(ctor: ActivityManagerRunningAppProcessInfo__method__1, [pProcessName.toJavaParameter(), pPid.toJavaParameter(), pArr.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ActivityManagerRunningAppProcessInfo__method__2, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ActivityManagerRunningAppProcessInfo__method__3, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func readFromParcel(source: Parcel?) {
+  open func readFromParcel(source: Parcel?) {
     self.javaObject.call(method: ActivityManagerRunningAppProcessInfo__method__4, [source.toJavaParameter()])
   }
 
@@ -438,15 +414,15 @@ open class ActivityManagerProcessErrorStateInfo: Object, Parcelable {
     super.init(ctor: ActivityManagerProcessErrorStateInfo__method__0, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ActivityManagerProcessErrorStateInfo__method__1, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ActivityManagerProcessErrorStateInfo__method__2, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func readFromParcel(source: Parcel?) {
+  open func readFromParcel(source: Parcel?) {
     self.javaObject.call(method: ActivityManagerProcessErrorStateInfo__method__3, [source.toJavaParameter()])
   }
 
@@ -502,15 +478,15 @@ open class ActivityManagerMemoryInfo: Object, Parcelable {
     super.init(ctor: ActivityManagerMemoryInfo__method__0, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ActivityManagerMemoryInfo__method__1, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ActivityManagerMemoryInfo__method__2, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func readFromParcel(source: Parcel?) {
+  open func readFromParcel(source: Parcel?) {
     self.javaObject.call(method: ActivityManagerMemoryInfo__method__3, [source.toJavaParameter()])
   }
 
@@ -664,15 +640,15 @@ open class ActivityManagerRunningServiceInfo: Object, Parcelable {
     super.init(ctor: ActivityManagerRunningServiceInfo__method__0, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ActivityManagerRunningServiceInfo__method__1, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ActivityManagerRunningServiceInfo__method__2, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func readFromParcel(source: Parcel?) {
+  open func readFromParcel(source: Parcel?) {
     self.javaObject.call(method: ActivityManagerRunningServiceInfo__method__3, [source.toJavaParameter()])
   }
 
@@ -746,15 +722,15 @@ open class ActivityManagerRunningTaskInfo: Object, Parcelable {
     super.init(ctor: ActivityManagerRunningTaskInfo__method__0, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ActivityManagerRunningTaskInfo__method__1, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ActivityManagerRunningTaskInfo__method__2, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func readFromParcel(source: Parcel?) {
+  open func readFromParcel(source: Parcel?) {
     self.javaObject.call(method: ActivityManagerRunningTaskInfo__method__3, [source.toJavaParameter()])
   }
 
@@ -864,15 +840,15 @@ open class ActivityManagerRecentTaskInfo: Object, Parcelable {
     super.init(ctor: ActivityManagerRecentTaskInfo__method__0, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ActivityManagerRecentTaskInfo__method__1, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ActivityManagerRecentTaskInfo__method__2, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func readFromParcel(source: Parcel?) {
+  open func readFromParcel(source: Parcel?) {
     self.javaObject.call(method: ActivityManagerRecentTaskInfo__method__3, [source.toJavaParameter()])
   }
 
@@ -900,23 +876,23 @@ open class ActivityManagerTaskDescription: Object, Parcelable {
     super.init(ctor: ActivityManagerTaskDescription__method__2, [td.toJavaParameter()])
   }
 
-  public func getLabel() -> String {
+  open func getLabel() -> String {
     self.javaObject.call(method: ActivityManagerTaskDescription__method__3, [])
   }
 
-  public func getPrimaryColor() -> Int32 {
+  open func getPrimaryColor() -> Int32 {
     self.javaObject.call(method: ActivityManagerTaskDescription__method__4, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ActivityManagerTaskDescription__method__5, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ActivityManagerTaskDescription__method__6, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func readFromParcel(source: Parcel?) {
+  open func readFromParcel(source: Parcel?) {
     self.javaObject.call(method: ActivityManagerTaskDescription__method__7, [source.toJavaParameter()])
   }
 
@@ -936,30 +912,26 @@ private let ActivityManager__class = findJavaClass(fqn: "android/app/ActivityMan
 private let ActivityManager__method__0 = ActivityManager__class.getMethodID(name: "getMemoryClass", sig: "()I")!
 private let ActivityManager__method__1 = ActivityManager__class.getMethodID(name: "getLargeMemoryClass", sig: "()I")!
 private let ActivityManager__method__2 = ActivityManager__class.getMethodID(name: "isLowRamDevice", sig: "()Z")!
-private let ActivityManager__method__3 = ActivityManager__class.getMethodID(name: "getRecentTasks", sig: "(II)Ljava/util/List;")!
-private let ActivityManager__method__4 = ActivityManager__class.getMethodID(name: "getAppTasks", sig: "()Ljava/util/List;")!
-private let ActivityManager__method__5 = ActivityManager__class.getMethodID(name: "getRunningTasks", sig: "(I)Ljava/util/List;")!
-private let ActivityManager__method__6 = ActivityManager__class.getMethodID(name: "moveTaskToFront", sig: "(II)V")!
-private let ActivityManager__method__7 = ActivityManager__class.getMethodID(name: "moveTaskToFront", sig: "(IILandroid/os/Bundle;)V")!
-private let ActivityManager__method__8 = ActivityManager__class.getMethodID(name: "getRunningServices", sig: "(I)Ljava/util/List;")!
-private let ActivityManager__method__9 = ActivityManager__class.getMethodID(name: "getRunningServiceControlPanel", sig: "(Landroid/content/ComponentName;)Landroid/app/PendingIntent;")!
-private let ActivityManager__method__10 = ActivityManager__class.getMethodID(name: "getMemoryInfo", sig: "(Landroid/app/ActivityManager$MemoryInfo;)V")!
-private let ActivityManager__method__11 = ActivityManager__class.getMethodID(name: "clearApplicationUserData", sig: "()Z")!
-private let ActivityManager__method__12 = ActivityManager__class.getMethodID(name: "getProcessesInErrorState", sig: "()Ljava/util/List;")!
-private let ActivityManager__method__13 = ActivityManager__class.getMethodID(name: "getRunningAppProcesses", sig: "()Ljava/util/List;")!
-private let ActivityManager__method__14 = ActivityManager__class.getStaticMethodID(name: "getMyMemoryState", sig: "(Landroid/app/ActivityManager$RunningAppProcessInfo;)V")!
-private let ActivityManager__method__15 = ActivityManager__class.getMethodID(name: "restartPackage", sig: "(Ljava/lang/String;)V")!
-private let ActivityManager__method__16 = ActivityManager__class.getMethodID(name: "killBackgroundProcesses", sig: "(Ljava/lang/String;)V")!
-private let ActivityManager__method__17 = ActivityManager__class.getMethodID(name: "getDeviceConfigurationInfo", sig: "()Landroid/content/pm/ConfigurationInfo;")!
-private let ActivityManager__method__18 = ActivityManager__class.getMethodID(name: "getLauncherLargeIconDensity", sig: "()I")!
-private let ActivityManager__method__19 = ActivityManager__class.getMethodID(name: "getLauncherLargeIconSize", sig: "()I")!
-private let ActivityManager__method__20 = ActivityManager__class.getStaticMethodID(name: "isUserAMonkey", sig: "()Z")!
-private let ActivityManager__method__21 = ActivityManager__class.getStaticMethodID(name: "isRunningInTestHarness", sig: "()Z")!
-private let ActivityManager__method__22 = ActivityManager__class.getMethodID(name: "dumpPackageState", sig: "(Ljava/io/FileDescriptor;Ljava/lang/String;)V")!
-private let ActivityManager__method__23 = ActivityManager__class.getMethodID(name: "setWatchHeapLimit", sig: "(J)V")!
-private let ActivityManager__method__24 = ActivityManager__class.getMethodID(name: "clearWatchHeapLimit", sig: "()V")!
-private let ActivityManager__method__25 = ActivityManager__class.getMethodID(name: "isInLockTaskMode", sig: "()Z")!
-private let ActivityManager__method__26 = ActivityManager__class.getMethodID(name: "getLockTaskModeState", sig: "()I")!
+private let ActivityManager__method__3 = ActivityManager__class.getMethodID(name: "getAppTasks", sig: "()Ljava/util/List;")!
+private let ActivityManager__method__4 = ActivityManager__class.getMethodID(name: "moveTaskToFront", sig: "(II)V")!
+private let ActivityManager__method__5 = ActivityManager__class.getMethodID(name: "moveTaskToFront", sig: "(IILandroid/os/Bundle;)V")!
+private let ActivityManager__method__6 = ActivityManager__class.getMethodID(name: "getRunningServices", sig: "(I)Ljava/util/List;")!
+private let ActivityManager__method__7 = ActivityManager__class.getMethodID(name: "getRunningServiceControlPanel", sig: "(Landroid/content/ComponentName;)Landroid/app/PendingIntent;")!
+private let ActivityManager__method__8 = ActivityManager__class.getMethodID(name: "getMemoryInfo", sig: "(Landroid/app/ActivityManager$MemoryInfo;)V")!
+private let ActivityManager__method__9 = ActivityManager__class.getMethodID(name: "clearApplicationUserData", sig: "()Z")!
+private let ActivityManager__method__10 = ActivityManager__class.getMethodID(name: "getProcessesInErrorState", sig: "()Ljava/util/List;")!
+private let ActivityManager__method__11 = ActivityManager__class.getMethodID(name: "getRunningAppProcesses", sig: "()Ljava/util/List;")!
+private let ActivityManager__method__12 = ActivityManager__class.getStaticMethodID(name: "getMyMemoryState", sig: "(Landroid/app/ActivityManager$RunningAppProcessInfo;)V")!
+private let ActivityManager__method__13 = ActivityManager__class.getMethodID(name: "killBackgroundProcesses", sig: "(Ljava/lang/String;)V")!
+private let ActivityManager__method__14 = ActivityManager__class.getMethodID(name: "getDeviceConfigurationInfo", sig: "()Landroid/content/pm/ConfigurationInfo;")!
+private let ActivityManager__method__15 = ActivityManager__class.getMethodID(name: "getLauncherLargeIconDensity", sig: "()I")!
+private let ActivityManager__method__16 = ActivityManager__class.getMethodID(name: "getLauncherLargeIconSize", sig: "()I")!
+private let ActivityManager__method__17 = ActivityManager__class.getStaticMethodID(name: "isUserAMonkey", sig: "()Z")!
+private let ActivityManager__method__18 = ActivityManager__class.getStaticMethodID(name: "isRunningInTestHarness", sig: "()Z")!
+private let ActivityManager__method__19 = ActivityManager__class.getMethodID(name: "dumpPackageState", sig: "(Ljava/io/FileDescriptor;Ljava/lang/String;)V")!
+private let ActivityManager__method__20 = ActivityManager__class.getMethodID(name: "setWatchHeapLimit", sig: "(J)V")!
+private let ActivityManager__method__21 = ActivityManager__class.getMethodID(name: "clearWatchHeapLimit", sig: "()V")!
+private let ActivityManager__method__22 = ActivityManager__class.getMethodID(name: "getLockTaskModeState", sig: "()I")!
 
 private let ActivityManager__field__0 = ActivityManager__class.getStaticFieldID(name: "ACTION_REPORT_HEAP_LIMIT", sig: "Ljava/lang/String;")!
 private let ActivityManager__field__1 = ActivityManager__class.getStaticFieldID(name: "LOCK_TASK_MODE_LOCKED", sig: "I")!

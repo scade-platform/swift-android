@@ -7,36 +7,32 @@ open class GnssMeasurementsEvent: Object, Parcelable {
   public typealias Callback = AndroidLocation.GnssMeasurementsEventCallback
   public typealias CallbackProxy = AndroidLocation.GnssMeasurementsEventCallbackProxy
 
-  public func getClock() -> GnssClock? {
+  open func getClock() -> GnssClock? {
     self.javaObject.call(method: GnssMeasurementsEvent__method__0, [])
   }
 
-  public func getMeasurements<R>() -> R? where R: Java.Collection, R.E == GnssMeasurement {
+  open func getMeasurements<R>() -> R? where R: Java.Collection, R.E == GnssMeasurement {
     self.javaObject.call(method: GnssMeasurementsEvent__method__1, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: GnssMeasurementsEvent__method__2, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: GnssMeasurementsEvent__method__3, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }
 
 extension GnssMeasurementsEvent {
-  public func getMeasurements() -> Java.CollectionProxy<GnssMeasurement>? {
+  open func getMeasurements() -> Java.CollectionProxy<GnssMeasurement>? {
     self.javaObject.call(method: GnssMeasurementsEvent__method__1, [])
   }
 }
 
 // ------------------------------------------------------------------------------------
 
-public protocol GnssMeasurementsEventCallback where Self: Object {
-  func onGnssMeasurementsReceived(eventArgs: GnssMeasurementsEvent?) -> Void
-
-  func onStatusChanged(status: Int32) -> Void
-}
+public protocol GnssMeasurementsEventCallback where Self: Object {}
 
 public extension GnssMeasurementsEventCallback {
   func box() -> GnssMeasurementsEventCallbackProxy {

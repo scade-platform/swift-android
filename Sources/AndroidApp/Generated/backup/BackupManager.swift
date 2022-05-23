@@ -8,7 +8,7 @@ open class BackupManager: Object {
     super.init(ctor: BackupManager__method__0, [JavaParameter(object: context?.toJavaObject())])
   }
 
-  public func dataChanged() {
+  open func dataChanged() {
     self.javaObject.call(method: BackupManager__method__1, [])
   }
 
@@ -16,7 +16,7 @@ open class BackupManager: Object {
     BackupManager__class.callStatic(method: BackupManager__method__2, [packageName.toJavaParameter()])
   }
 
-  public func requestRestore(observer: RestoreObserver?) -> Int32 {
+  open func requestRestore(observer: RestoreObserver?) -> Int32 {
     self.javaObject.call(method: BackupManager__method__3, [JavaParameter(object: observer?.toJavaObject())])
   }
 

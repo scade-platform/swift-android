@@ -15,11 +15,11 @@ open class TimePickerDialog: AlertDialog, DialogInterface.OnClickListener {
     super.init(ctor: TimePickerDialog__method__1, [JavaParameter(object: context?.toJavaObject()), themeResId.toJavaParameter(), JavaParameter(object: listener?.toJavaObject()), hourOfDay.toJavaParameter(), minute.toJavaParameter(), is24HourView.toJavaParameter()])
   }
 
-  public func onClick(dialog: DialogInterface?, which: Int32) {
+  open func onClick(dialog: DialogInterface?, which: Int32) {
     self.javaObject.call(method: TimePickerDialog__method__2, [JavaParameter(object: dialog?.toJavaObject()), which.toJavaParameter()])
   }
 
-  public func updateTime(hourOfDay: Int32, minuteOfHour: Int32) {
+  open func updateTime(hourOfDay: Int32, minuteOfHour: Int32) {
     self.javaObject.call(method: TimePickerDialog__method__3, [hourOfDay.toJavaParameter(), minuteOfHour.toJavaParameter()])
   }
 

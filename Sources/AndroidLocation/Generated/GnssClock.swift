@@ -4,75 +4,75 @@ import AndroidOS
 import Java
 
 open class GnssClock: Object, Parcelable {
-  public func hasLeapSecond() -> Bool {
+  open func hasLeapSecond() -> Bool {
     self.javaObject.call(method: GnssClock__method__0, [])
   }
 
-  public func getLeapSecond() -> Int32 {
+  open func getLeapSecond() -> Int32 {
     self.javaObject.call(method: GnssClock__method__1, [])
   }
 
-  public func getTimeNanos() -> Int64 {
+  open func getTimeNanos() -> Int64 {
     self.javaObject.call(method: GnssClock__method__2, [])
   }
 
-  public func hasTimeUncertaintyNanos() -> Bool {
+  open func hasTimeUncertaintyNanos() -> Bool {
     self.javaObject.call(method: GnssClock__method__3, [])
   }
 
-  public func getTimeUncertaintyNanos() -> Double {
+  open func getTimeUncertaintyNanos() -> Double {
     self.javaObject.call(method: GnssClock__method__4, [])
   }
 
-  public func hasFullBiasNanos() -> Bool {
+  open func hasFullBiasNanos() -> Bool {
     self.javaObject.call(method: GnssClock__method__5, [])
   }
 
-  public func getFullBiasNanos() -> Int64 {
+  open func getFullBiasNanos() -> Int64 {
     self.javaObject.call(method: GnssClock__method__6, [])
   }
 
-  public func hasBiasNanos() -> Bool {
+  open func hasBiasNanos() -> Bool {
     self.javaObject.call(method: GnssClock__method__7, [])
   }
 
-  public func getBiasNanos() -> Double {
+  open func getBiasNanos() -> Double {
     self.javaObject.call(method: GnssClock__method__8, [])
   }
 
-  public func hasBiasUncertaintyNanos() -> Bool {
+  open func hasBiasUncertaintyNanos() -> Bool {
     self.javaObject.call(method: GnssClock__method__9, [])
   }
 
-  public func getBiasUncertaintyNanos() -> Double {
+  open func getBiasUncertaintyNanos() -> Double {
     self.javaObject.call(method: GnssClock__method__10, [])
   }
 
-  public func hasDriftNanosPerSecond() -> Bool {
+  open func hasDriftNanosPerSecond() -> Bool {
     self.javaObject.call(method: GnssClock__method__11, [])
   }
 
-  public func getDriftNanosPerSecond() -> Double {
+  open func getDriftNanosPerSecond() -> Double {
     self.javaObject.call(method: GnssClock__method__12, [])
   }
 
-  public func hasDriftUncertaintyNanosPerSecond() -> Bool {
+  open func hasDriftUncertaintyNanosPerSecond() -> Bool {
     self.javaObject.call(method: GnssClock__method__13, [])
   }
 
-  public func getDriftUncertaintyNanosPerSecond() -> Double {
+  open func getDriftUncertaintyNanosPerSecond() -> Double {
     self.javaObject.call(method: GnssClock__method__14, [])
   }
 
-  public func getHardwareClockDiscontinuityCount() -> Int32 {
+  open func getHardwareClockDiscontinuityCount() -> Int32 {
     self.javaObject.call(method: GnssClock__method__15, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: GnssClock__method__16, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: GnssClock__method__17, [])
   }
 }

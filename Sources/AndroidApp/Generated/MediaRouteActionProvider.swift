@@ -8,7 +8,7 @@ open class MediaRouteActionProvider: Object {
     super.init(ctor: MediaRouteActionProvider__method__0, [JavaParameter(object: context?.toJavaObject())])
   }
 
-  public func setRouteTypes(types: Int32) {
+  open func setRouteTypes(types: Int32) {
     self.javaObject.call(method: MediaRouteActionProvider__method__1, [types.toJavaParameter()])
   }
 

@@ -28,27 +28,27 @@ open class ComponentName: Object, Parcelable {
     ComponentName__class.callStatic(method: ComponentName__method__5, [JavaParameter(object: pkg?.toJavaObject()), cls.toJavaParameter()])
   }
 
-  public func clone() -> ComponentName? {
+  override open func clone() -> ComponentName? {
     self.javaObject.call(method: ComponentName__method__6, [])
   }
 
-  public func getPackageName() -> String {
+  open func getPackageName() -> String {
     self.javaObject.call(method: ComponentName__method__7, [])
   }
 
-  public func getClassName() -> String {
+  open func getClassName() -> String {
     self.javaObject.call(method: ComponentName__method__8, [])
   }
 
-  public func getShortClassName() -> String {
+  open func getShortClassName() -> String {
     self.javaObject.call(method: ComponentName__method__9, [])
   }
 
-  public func flattenToString() -> String {
+  open func flattenToString() -> String {
     self.javaObject.call(method: ComponentName__method__10, [])
   }
 
-  public func flattenToShortString() -> String {
+  open func flattenToShortString() -> String {
     self.javaObject.call(method: ComponentName__method__11, [])
   }
 
@@ -56,24 +56,24 @@ open class ComponentName: Object, Parcelable {
     ComponentName__class.callStatic(method: ComponentName__method__12, [str.toJavaParameter()])
   }
 
-  public func toShortString() -> String {
+  open func toShortString() -> String {
     self.javaObject.call(method: ComponentName__method__13, [])
   }
 
-  public func compareTo(o: ComponentName?) -> Int32 {
-    self.javaObject.call(method: ComponentName__method__14, [o.toJavaParameter()])
+  open func compareTo(that: ComponentName?) -> Int32 {
+    self.javaObject.call(method: ComponentName__method__14, [that.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ComponentName__method__15, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ComponentName__method__16, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public static func writeToParcel(c: ComponentName?, _out: Parcel?) {
-    ComponentName__class.callStatic(method: ComponentName__method__17, [c.toJavaParameter(), _out.toJavaParameter()])
+  public static func writeToParcel(c: ComponentName?, out: Parcel?) {
+    ComponentName__class.callStatic(method: ComponentName__method__17, [c.toJavaParameter(), out.toJavaParameter()])
   }
 
   public static func readFromParcel(_in: Parcel?) -> ComponentName? {

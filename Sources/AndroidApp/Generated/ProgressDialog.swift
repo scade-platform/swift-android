@@ -32,51 +32,51 @@ open class ProgressDialog: AlertDialog {
     ProgressDialog__class.callStatic(method: ProgressDialog__method__5, [JavaParameter(object: context?.toJavaObject()), title.toJavaParameter(), message.toJavaParameter(), indeterminate.toJavaParameter(), cancelable.toJavaParameter(), JavaParameter(object: cancelListener?.toJavaObject())])
   }
 
-  public func setProgress(value: Int32) {
+  open func setProgress(value: Int32) {
     self.javaObject.call(method: ProgressDialog__method__6, [value.toJavaParameter()])
   }
 
-  public func setSecondaryProgress(secondaryProgress: Int32) {
+  open func setSecondaryProgress(secondaryProgress: Int32) {
     self.javaObject.call(method: ProgressDialog__method__7, [secondaryProgress.toJavaParameter()])
   }
 
-  public func getProgress() -> Int32 {
+  open func getProgress() -> Int32 {
     self.javaObject.call(method: ProgressDialog__method__8, [])
   }
 
-  public func getSecondaryProgress() -> Int32 {
+  open func getSecondaryProgress() -> Int32 {
     self.javaObject.call(method: ProgressDialog__method__9, [])
   }
 
-  public func getMax() -> Int32 {
+  open func getMax() -> Int32 {
     self.javaObject.call(method: ProgressDialog__method__10, [])
   }
 
-  public func setMax(max: Int32) {
+  open func setMax(max: Int32) {
     self.javaObject.call(method: ProgressDialog__method__11, [max.toJavaParameter()])
   }
 
-  public func incrementProgressBy(diff: Int32) {
+  open func incrementProgressBy(diff: Int32) {
     self.javaObject.call(method: ProgressDialog__method__12, [diff.toJavaParameter()])
   }
 
-  public func incrementSecondaryProgressBy(diff: Int32) {
+  open func incrementSecondaryProgressBy(diff: Int32) {
     self.javaObject.call(method: ProgressDialog__method__13, [diff.toJavaParameter()])
   }
 
-  public func setIndeterminate(indeterminate: Bool) {
+  open func setIndeterminate(indeterminate: Bool) {
     self.javaObject.call(method: ProgressDialog__method__14, [indeterminate.toJavaParameter()])
   }
 
-  public func isIndeterminate() -> Bool {
+  open func isIndeterminate() -> Bool {
     self.javaObject.call(method: ProgressDialog__method__15, [])
   }
 
-  public func setProgressStyle(style: Int32) {
+  open func setProgressStyle(style: Int32) {
     self.javaObject.call(method: ProgressDialog__method__16, [style.toJavaParameter()])
   }
 
-  public func setProgressNumberFormat(format: String) {
+  open func setProgressNumberFormat(format: String) {
     self.javaObject.call(method: ProgressDialog__method__17, [format.toJavaParameter()])
   }
 

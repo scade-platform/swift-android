@@ -8,43 +8,43 @@ open class LocalActivityManager: Object {
     super.init(ctor: LocalActivityManager__method__0, [parent.toJavaParameter(), singleMode.toJavaParameter()])
   }
 
-  public func getCurrentActivity() -> Activity? {
+  open func getCurrentActivity() -> Activity? {
     self.javaObject.call(method: LocalActivityManager__method__1, [])
   }
 
-  public func getCurrentId() -> String {
+  open func getCurrentId() -> String {
     self.javaObject.call(method: LocalActivityManager__method__2, [])
   }
 
-  public func getActivity(id: String) -> Activity? {
+  open func getActivity(id: String) -> Activity? {
     self.javaObject.call(method: LocalActivityManager__method__3, [id.toJavaParameter()])
   }
 
-  public func dispatchCreate(state: Bundle?) {
+  open func dispatchCreate(state: Bundle?) {
     self.javaObject.call(method: LocalActivityManager__method__4, [state.toJavaParameter()])
   }
 
-  public func saveInstanceState() -> Bundle? {
+  open func saveInstanceState() -> Bundle? {
     self.javaObject.call(method: LocalActivityManager__method__5, [])
   }
 
-  public func dispatchResume() {
+  open func dispatchResume() {
     self.javaObject.call(method: LocalActivityManager__method__6, [])
   }
 
-  public func dispatchPause(finishing: Bool) {
+  open func dispatchPause(finishing: Bool) {
     self.javaObject.call(method: LocalActivityManager__method__7, [finishing.toJavaParameter()])
   }
 
-  public func dispatchStop() {
+  open func dispatchStop() {
     self.javaObject.call(method: LocalActivityManager__method__8, [])
   }
 
-  public func removeAllActivities() {
+  open func removeAllActivities() {
     self.javaObject.call(method: LocalActivityManager__method__9, [])
   }
 
-  public func dispatchDestroy(finishing: Bool) {
+  open func dispatchDestroy(finishing: Bool) {
     self.javaObject.call(method: LocalActivityManager__method__10, [finishing.toJavaParameter()])
   }
 

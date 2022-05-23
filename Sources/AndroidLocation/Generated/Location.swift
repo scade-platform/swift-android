@@ -18,11 +18,11 @@ open class Location: Object, Parcelable {
     super.init(ctor: Location__method__1, [l.toJavaParameter()])
   }
 
-  public func set(l: Location?) {
+  open func set(l: Location?) {
     self.javaObject.call(method: Location__method__2, [l.toJavaParameter()])
   }
 
-  public func reset() {
+  open func reset() {
     self.javaObject.call(method: Location__method__3, [])
   }
 
@@ -38,135 +38,135 @@ open class Location: Object, Parcelable {
     Location__class.callStatic(method: Location__method__6, [startLatitude.toJavaParameter(), startLongitude.toJavaParameter(), endLatitude.toJavaParameter(), endLongitude.toJavaParameter(), results.toJavaParameter()])
   }
 
-  public func distanceTo(dest: Location?) -> Float {
+  open func distanceTo(dest: Location?) -> Float {
     self.javaObject.call(method: Location__method__7, [dest.toJavaParameter()])
   }
 
-  public func bearingTo(dest: Location?) -> Float {
+  open func bearingTo(dest: Location?) -> Float {
     self.javaObject.call(method: Location__method__8, [dest.toJavaParameter()])
   }
 
-  public func getProvider() -> String {
+  open func getProvider() -> String {
     self.javaObject.call(method: Location__method__9, [])
   }
 
-  public func setProvider(provider: String) {
+  open func setProvider(provider: String) {
     self.javaObject.call(method: Location__method__10, [provider.toJavaParameter()])
   }
 
-  public func getTime() -> Int64 {
+  open func getTime() -> Int64 {
     self.javaObject.call(method: Location__method__11, [])
   }
 
-  public func setTime(time: Int64) {
+  open func setTime(time: Int64) {
     self.javaObject.call(method: Location__method__12, [time.toJavaParameter()])
   }
 
-  public func getElapsedRealtimeNanos() -> Int64 {
+  open func getElapsedRealtimeNanos() -> Int64 {
     self.javaObject.call(method: Location__method__13, [])
   }
 
-  public func setElapsedRealtimeNanos(time: Int64) {
+  open func setElapsedRealtimeNanos(time: Int64) {
     self.javaObject.call(method: Location__method__14, [time.toJavaParameter()])
   }
 
-  public func getLatitude() -> Double {
+  open func getLatitude() -> Double {
     self.javaObject.call(method: Location__method__15, [])
   }
 
-  public func setLatitude(latitude: Double) {
+  open func setLatitude(latitude: Double) {
     self.javaObject.call(method: Location__method__16, [latitude.toJavaParameter()])
   }
 
-  public func getLongitude() -> Double {
+  open func getLongitude() -> Double {
     self.javaObject.call(method: Location__method__17, [])
   }
 
-  public func setLongitude(longitude: Double) {
+  open func setLongitude(longitude: Double) {
     self.javaObject.call(method: Location__method__18, [longitude.toJavaParameter()])
   }
 
-  public func hasAltitude() -> Bool {
+  open func hasAltitude() -> Bool {
     self.javaObject.call(method: Location__method__19, [])
   }
 
-  public func getAltitude() -> Double {
+  open func getAltitude() -> Double {
     self.javaObject.call(method: Location__method__20, [])
   }
 
-  public func setAltitude(altitude: Double) {
+  open func setAltitude(altitude: Double) {
     self.javaObject.call(method: Location__method__21, [altitude.toJavaParameter()])
   }
 
-  public func removeAltitude() {
+  open func removeAltitude() {
     self.javaObject.call(method: Location__method__22, [])
   }
 
-  public func hasSpeed() -> Bool {
+  open func hasSpeed() -> Bool {
     self.javaObject.call(method: Location__method__23, [])
   }
 
-  public func getSpeed() -> Float {
+  open func getSpeed() -> Float {
     self.javaObject.call(method: Location__method__24, [])
   }
 
-  public func setSpeed(speed: Float) {
+  open func setSpeed(speed: Float) {
     self.javaObject.call(method: Location__method__25, [speed.toJavaParameter()])
   }
 
-  public func removeSpeed() {
+  open func removeSpeed() {
     self.javaObject.call(method: Location__method__26, [])
   }
 
-  public func hasBearing() -> Bool {
+  open func hasBearing() -> Bool {
     self.javaObject.call(method: Location__method__27, [])
   }
 
-  public func getBearing() -> Float {
+  open func getBearing() -> Float {
     self.javaObject.call(method: Location__method__28, [])
   }
 
-  public func setBearing(bearing: Float) {
+  open func setBearing(bearing: Float) {
     self.javaObject.call(method: Location__method__29, [bearing.toJavaParameter()])
   }
 
-  public func removeBearing() {
+  open func removeBearing() {
     self.javaObject.call(method: Location__method__30, [])
   }
 
-  public func hasAccuracy() -> Bool {
+  open func hasAccuracy() -> Bool {
     self.javaObject.call(method: Location__method__31, [])
   }
 
-  public func getAccuracy() -> Float {
+  open func getAccuracy() -> Float {
     self.javaObject.call(method: Location__method__32, [])
   }
 
-  public func setAccuracy(accuracy: Float) {
+  open func setAccuracy(accuracy: Float) {
     self.javaObject.call(method: Location__method__33, [accuracy.toJavaParameter()])
   }
 
-  public func removeAccuracy() {
+  open func removeAccuracy() {
     self.javaObject.call(method: Location__method__34, [])
   }
 
-  public func getExtras() -> Bundle? {
+  open func getExtras() -> Bundle? {
     self.javaObject.call(method: Location__method__35, [])
   }
 
-  public func setExtras(extras: Bundle?) {
+  open func setExtras(extras: Bundle?) {
     self.javaObject.call(method: Location__method__36, [extras.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: Location__method__37, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: Location__method__38, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func isFromMockProvider() -> Bool {
+  open func isFromMockProvider() -> Bool {
     self.javaObject.call(method: Location__method__39, [])
   }
 

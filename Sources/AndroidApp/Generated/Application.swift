@@ -15,39 +15,39 @@ open class Application: ContextWrapper, ComponentCallbacks2 {
     super.init(ctor: Application__method__0, [])
   }
 
-  public func onCreate() {
+  open func onCreate() {
     self.javaObject.call(method: Application__method__1, [])
   }
 
-  public func onTerminate() {
+  open func onTerminate() {
     self.javaObject.call(method: Application__method__2, [])
   }
 
-  public func onConfigurationChanged(newConfig: Configuration?) {
+  open func onConfigurationChanged(newConfig: Configuration?) {
     self.javaObject.call(method: Application__method__3, [newConfig.toJavaParameter()])
   }
 
-  public func onLowMemory() {
+  open func onLowMemory() {
     self.javaObject.call(method: Application__method__4, [])
   }
 
-  public func onTrimMemory(level: Int32) {
+  open func onTrimMemory(level: Int32) {
     self.javaObject.call(method: Application__method__5, [level.toJavaParameter()])
   }
 
-  public func registerActivityLifecycleCallbacks(callback: Application.ActivityLifecycleCallbacks?) {
+  open func registerActivityLifecycleCallbacks(callback: Application.ActivityLifecycleCallbacks?) {
     self.javaObject.call(method: Application__method__6, [JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func unregisterActivityLifecycleCallbacks(callback: Application.ActivityLifecycleCallbacks?) {
+  open func unregisterActivityLifecycleCallbacks(callback: Application.ActivityLifecycleCallbacks?) {
     self.javaObject.call(method: Application__method__7, [JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func registerOnProvideAssistDataListener(callback: Application.OnProvideAssistDataListener?) {
+  open func registerOnProvideAssistDataListener(callback: Application.OnProvideAssistDataListener?) {
     self.javaObject.call(method: Application__method__8, [JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func unregisterOnProvideAssistDataListener(callback: Application.OnProvideAssistDataListener?) {
+  open func unregisterOnProvideAssistDataListener(callback: Application.OnProvideAssistDataListener?) {
     self.javaObject.call(method: Application__method__9, [JavaParameter(object: callback?.toJavaObject())])
   }
 

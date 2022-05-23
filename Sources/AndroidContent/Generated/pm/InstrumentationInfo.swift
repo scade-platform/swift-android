@@ -84,7 +84,7 @@ open class InstrumentationInfo: PackageItemInfo, Parcelable {
     super.init(ctor: InstrumentationInfo__method__1, [orig.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: InstrumentationInfo__method__2, [])
   }
 

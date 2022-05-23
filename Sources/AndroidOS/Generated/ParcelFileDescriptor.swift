@@ -36,7 +36,7 @@ open class ParcelFileDescriptor: Object, Parcelable {
     ParcelFileDescriptor__class.callStatic(method: ParcelFileDescriptor__method__1, [orig.toJavaParameter()])
   }
 
-  public func dup() -> ParcelFileDescriptor? {
+  open func dup() -> ParcelFileDescriptor? {
     self.javaObject.call(method: ParcelFileDescriptor__method__2, [])
   }
 
@@ -68,43 +68,43 @@ open class ParcelFileDescriptor: Object, Parcelable {
     ParcelFileDescriptor__class.callStatic(method: ParcelFileDescriptor__method__9, [mode.toJavaParameter()])
   }
 
-  public func getFileDescriptor() -> FileDescriptor? {
+  open func getFileDescriptor() -> FileDescriptor? {
     self.javaObject.call(method: ParcelFileDescriptor__method__10, [])
   }
 
-  public func getStatSize() -> Int64 {
+  open func getStatSize() -> Int64 {
     self.javaObject.call(method: ParcelFileDescriptor__method__11, [])
   }
 
-  public func getFd() -> Int32 {
+  open func getFd() -> Int32 {
     self.javaObject.call(method: ParcelFileDescriptor__method__12, [])
   }
 
-  public func detachFd() -> Int32 {
+  open func detachFd() -> Int32 {
     self.javaObject.call(method: ParcelFileDescriptor__method__13, [])
   }
 
-  public func close() {
+  open func close() {
     self.javaObject.call(method: ParcelFileDescriptor__method__14, [])
   }
 
-  public func closeWithError(msg: String) {
+  open func closeWithError(msg: String) {
     self.javaObject.call(method: ParcelFileDescriptor__method__15, [msg.toJavaParameter()])
   }
 
-  public func canDetectErrors() -> Bool {
+  open func canDetectErrors() -> Bool {
     self.javaObject.call(method: ParcelFileDescriptor__method__16, [])
   }
 
-  public func checkError() {
+  open func checkError() {
     self.javaObject.call(method: ParcelFileDescriptor__method__17, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ParcelFileDescriptor__method__18, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ParcelFileDescriptor__method__19, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 

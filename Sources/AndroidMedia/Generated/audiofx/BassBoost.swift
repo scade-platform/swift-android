@@ -16,27 +16,27 @@ open class BassBoost: AudioEffect {
     super.init(ctor: BassBoost__method__0, [priority.toJavaParameter(), audioSession.toJavaParameter()])
   }
 
-  public func getStrengthSupported() -> Bool {
+  open func getStrengthSupported() -> Bool {
     self.javaObject.call(method: BassBoost__method__1, [])
   }
 
-  public func setStrength(strength: Int16) {
+  open func setStrength(strength: Int16) {
     self.javaObject.call(method: BassBoost__method__2, [strength.toJavaParameter()])
   }
 
-  public func getRoundedStrength() -> Int16 {
+  open func getRoundedStrength() -> Int16 {
     self.javaObject.call(method: BassBoost__method__3, [])
   }
 
-  public func setParameterListener(listener: BassBoost.OnParameterChangeListener?) {
+  open func setParameterListener(listener: BassBoost.OnParameterChangeListener?) {
     self.javaObject.call(method: BassBoost__method__4, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func getProperties() -> BassBoost.Settings? {
+  open func getProperties() -> BassBoost.Settings? {
     self.javaObject.call(method: BassBoost__method__5, [])
   }
 
-  public func setProperties(settings: BassBoost.Settings?) {
+  open func setProperties(settings: BassBoost.Settings?) {
     self.javaObject.call(method: BassBoost__method__6, [settings.toJavaParameter()])
   }
 

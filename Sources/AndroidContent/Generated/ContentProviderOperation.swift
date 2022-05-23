@@ -6,51 +6,51 @@ import Java
 open class ContentProviderOperation: Object, Parcelable {
   public typealias Builder = AndroidContent.ContentProviderOperationBuilder
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ContentProviderOperation__method__0, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func isYieldAllowed() -> Bool {
+  open func isYieldAllowed() -> Bool {
     self.javaObject.call(method: ContentProviderOperation__method__1, [])
   }
 
-  public func isInsert() -> Bool {
+  open func isInsert() -> Bool {
     self.javaObject.call(method: ContentProviderOperation__method__2, [])
   }
 
-  public func isDelete() -> Bool {
+  open func isDelete() -> Bool {
     self.javaObject.call(method: ContentProviderOperation__method__3, [])
   }
 
-  public func isUpdate() -> Bool {
+  open func isUpdate() -> Bool {
     self.javaObject.call(method: ContentProviderOperation__method__4, [])
   }
 
-  public func isAssertQuery() -> Bool {
+  open func isAssertQuery() -> Bool {
     self.javaObject.call(method: ContentProviderOperation__method__5, [])
   }
 
-  public func isWriteOperation() -> Bool {
+  open func isWriteOperation() -> Bool {
     self.javaObject.call(method: ContentProviderOperation__method__6, [])
   }
 
-  public func isReadOperation() -> Bool {
+  open func isReadOperation() -> Bool {
     self.javaObject.call(method: ContentProviderOperation__method__7, [])
   }
 
-  public func apply(provider: ContentProvider?, backRefs: [ContentProviderResult?], numBackRefs: Int32) -> ContentProviderResult? {
+  open func apply(provider: ContentProvider?, backRefs: [ContentProviderResult?], numBackRefs: Int32) -> ContentProviderResult? {
     self.javaObject.call(method: ContentProviderOperation__method__8, [JavaParameter(object: provider?.toJavaObject()), backRefs.toJavaParameter(), numBackRefs.toJavaParameter()])
   }
 
-  public func resolveValueBackReferences(backRefs: [ContentProviderResult?], numBackRefs: Int32) -> ContentValues? {
+  open func resolveValueBackReferences(backRefs: [ContentProviderResult?], numBackRefs: Int32) -> ContentValues? {
     self.javaObject.call(method: ContentProviderOperation__method__9, [backRefs.toJavaParameter(), numBackRefs.toJavaParameter()])
   }
 
-  public func resolveSelectionArgsBackReferences(backRefs: [ContentProviderResult?], numBackRefs: Int32) -> [String] {
+  open func resolveSelectionArgsBackReferences(backRefs: [ContentProviderResult?], numBackRefs: Int32) -> [String] {
     self.javaObject.call(method: ContentProviderOperation__method__10, [backRefs.toJavaParameter(), numBackRefs.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ContentProviderOperation__method__11, [])
   }
 }
@@ -58,39 +58,39 @@ open class ContentProviderOperation: Object, Parcelable {
 // ------------------------------------------------------------------------------------
 
 open class ContentProviderOperationBuilder: Object {
-  public func build() -> ContentProviderOperation? {
+  open func build() -> ContentProviderOperation? {
     self.javaObject.call(method: ContentProviderOperationBuilder__method__0, [])
   }
 
-  public func withValueBackReferences(backReferences: ContentValues?) -> ContentProviderOperation.Builder? {
+  open func withValueBackReferences(backReferences: ContentValues?) -> ContentProviderOperation.Builder? {
     self.javaObject.call(method: ContentProviderOperationBuilder__method__1, [backReferences.toJavaParameter()])
   }
 
-  public func withValueBackReference(key: String, previousResult: Int32) -> ContentProviderOperation.Builder? {
+  open func withValueBackReference(key: String, previousResult: Int32) -> ContentProviderOperation.Builder? {
     self.javaObject.call(method: ContentProviderOperationBuilder__method__2, [key.toJavaParameter(), previousResult.toJavaParameter()])
   }
 
-  public func withSelectionBackReference(selectionArgIndex: Int32, previousResult: Int32) -> ContentProviderOperation.Builder? {
+  open func withSelectionBackReference(selectionArgIndex: Int32, previousResult: Int32) -> ContentProviderOperation.Builder? {
     self.javaObject.call(method: ContentProviderOperationBuilder__method__3, [selectionArgIndex.toJavaParameter(), previousResult.toJavaParameter()])
   }
 
-  public func withValues(values: ContentValues?) -> ContentProviderOperation.Builder? {
+  open func withValues(values: ContentValues?) -> ContentProviderOperation.Builder? {
     self.javaObject.call(method: ContentProviderOperationBuilder__method__4, [values.toJavaParameter()])
   }
 
-  public func withValue(key: String, value: Object?) -> ContentProviderOperation.Builder? {
+  open func withValue(key: String, value: Object?) -> ContentProviderOperation.Builder? {
     self.javaObject.call(method: ContentProviderOperationBuilder__method__5, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func withSelection(selection: String, selectionArgs: [String]) -> ContentProviderOperation.Builder? {
+  open func withSelection(selection: String, selectionArgs: [String]) -> ContentProviderOperation.Builder? {
     self.javaObject.call(method: ContentProviderOperationBuilder__method__6, [selection.toJavaParameter(), selectionArgs.toJavaParameter()])
   }
 
-  public func withExpectedCount(count: Int32) -> ContentProviderOperation.Builder? {
+  open func withExpectedCount(count: Int32) -> ContentProviderOperation.Builder? {
     self.javaObject.call(method: ContentProviderOperationBuilder__method__7, [count.toJavaParameter()])
   }
 
-  public func withYieldAllowed(yieldAllowed: Bool) -> ContentProviderOperation.Builder? {
+  open func withYieldAllowed(yieldAllowed: Bool) -> ContentProviderOperation.Builder? {
     self.javaObject.call(method: ContentProviderOperationBuilder__method__8, [yieldAllowed.toJavaParameter()])
   }
 }

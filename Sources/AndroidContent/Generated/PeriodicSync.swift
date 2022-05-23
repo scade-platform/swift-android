@@ -10,11 +10,11 @@ open class PeriodicSync: Object, Parcelable {
 
   private(set) lazy var period: Int64 = javaObject.get(field: PeriodicSync__field__2)
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: PeriodicSync__method__0, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: PeriodicSync__method__1, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }

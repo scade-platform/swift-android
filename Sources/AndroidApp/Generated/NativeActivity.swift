@@ -11,7 +11,7 @@ open class NativeActivity: Activity {
     super.init(ctor: NativeActivity__method__0, [])
   }
 
-  public func onGlobalLayout() {
+  open func onGlobalLayout() {
     self.javaObject.call(method: NativeActivity__method__1, [])
   }
 

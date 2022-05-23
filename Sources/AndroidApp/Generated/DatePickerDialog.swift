@@ -23,15 +23,15 @@ open class DatePickerDialog: AlertDialog, DialogInterface.OnClickListener {
     super.init(ctor: DatePickerDialog__method__3, [JavaParameter(object: context?.toJavaObject()), themeResId.toJavaParameter(), JavaParameter(object: listener?.toJavaObject()), year.toJavaParameter(), monthOfYear.toJavaParameter(), dayOfMonth.toJavaParameter()])
   }
 
-  public func setOnDateSetListener(listener: DatePickerDialog.OnDateSetListener?) {
+  open func setOnDateSetListener(listener: DatePickerDialog.OnDateSetListener?) {
     self.javaObject.call(method: DatePickerDialog__method__4, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func onClick(dialog: DialogInterface?, which: Int32) {
+  open func onClick(dialog: DialogInterface?, which: Int32) {
     self.javaObject.call(method: DatePickerDialog__method__5, [JavaParameter(object: dialog?.toJavaObject()), which.toJavaParameter()])
   }
 
-  public func updateDate(year: Int32, month: Int32, dayOfMonth: Int32) {
+  open func updateDate(year: Int32, month: Int32, dayOfMonth: Int32) {
     self.javaObject.call(method: DatePickerDialog__method__6, [year.toJavaParameter(), month.toJavaParameter(), dayOfMonth.toJavaParameter()])
   }
 

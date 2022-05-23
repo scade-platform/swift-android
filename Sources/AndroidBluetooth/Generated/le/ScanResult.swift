@@ -8,27 +8,27 @@ open class ScanResult: Object, Parcelable {
     super.init(ctor: ScanResult__method__0, [device.toJavaParameter(), scanRecord.toJavaParameter(), rssi.toJavaParameter(), timestampNanos.toJavaParameter()])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ScanResult__method__1, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ScanResult__method__2, [])
   }
 
-  public func getDevice() -> BluetoothDevice? {
+  open func getDevice() -> BluetoothDevice? {
     self.javaObject.call(method: ScanResult__method__3, [])
   }
 
-  public func getScanRecord() -> ScanRecord? {
+  open func getScanRecord() -> ScanRecord? {
     self.javaObject.call(method: ScanResult__method__4, [])
   }
 
-  public func getRssi() -> Int32 {
+  open func getRssi() -> Int32 {
     self.javaObject.call(method: ScanResult__method__5, [])
   }
 
-  public func getTimestampNanos() -> Int64 {
+  open func getTimestampNanos() -> Int64 {
     self.javaObject.call(method: ScanResult__method__6, [])
   }
 

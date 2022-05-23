@@ -1,7 +1,6 @@
 
 
-import AndroidApp
-import AndroidContent
+import AndroidView
 import Java
 
 open class AudioManager: Object {
@@ -191,238 +190,168 @@ open class AudioManager: Object {
 
   public static let VIBRATE_TYPE_RINGER: Int32 = AudioManager__class.getStatic(field: AudioManager__field__89)
 
-  public func isVolumeFixed() -> Bool {
-    self.javaObject.call(method: AudioManager__method__0, [])
+  open func dispatchMediaKeyEvent(keyEvent: KeyEvent?) {
+    self.javaObject.call(method: AudioManager__method__0, [keyEvent.toJavaParameter()])
   }
 
-  public func adjustStreamVolume(streamType: Int32, direction: Int32, flags: Int32) {
-    self.javaObject.call(method: AudioManager__method__1, [streamType.toJavaParameter(), direction.toJavaParameter(), flags.toJavaParameter()])
+  open func isVolumeFixed() -> Bool {
+    self.javaObject.call(method: AudioManager__method__1, [])
   }
 
-  public func adjustVolume(direction: Int32, flags: Int32) {
-    self.javaObject.call(method: AudioManager__method__2, [direction.toJavaParameter(), flags.toJavaParameter()])
+  open func adjustStreamVolume(streamType: Int32, direction: Int32, flags: Int32) {
+    self.javaObject.call(method: AudioManager__method__2, [streamType.toJavaParameter(), direction.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func adjustSuggestedStreamVolume(direction: Int32, suggestedStreamType: Int32, flags: Int32) {
-    self.javaObject.call(method: AudioManager__method__3, [direction.toJavaParameter(), suggestedStreamType.toJavaParameter(), flags.toJavaParameter()])
+  open func adjustVolume(direction: Int32, flags: Int32) {
+    self.javaObject.call(method: AudioManager__method__3, [direction.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func getRingerMode() -> Int32 {
-    self.javaObject.call(method: AudioManager__method__4, [])
+  open func adjustSuggestedStreamVolume(direction: Int32, suggestedStreamType: Int32, flags: Int32) {
+    self.javaObject.call(method: AudioManager__method__4, [direction.toJavaParameter(), suggestedStreamType.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func getStreamMaxVolume(streamType: Int32) -> Int32 {
-    self.javaObject.call(method: AudioManager__method__5, [streamType.toJavaParameter()])
+  open func getRingerMode() -> Int32 {
+    self.javaObject.call(method: AudioManager__method__5, [])
   }
 
-  public func getStreamVolume(streamType: Int32) -> Int32 {
+  open func getStreamMaxVolume(streamType: Int32) -> Int32 {
     self.javaObject.call(method: AudioManager__method__6, [streamType.toJavaParameter()])
   }
 
-  public func setRingerMode(ringerMode: Int32) {
-    self.javaObject.call(method: AudioManager__method__7, [ringerMode.toJavaParameter()])
+  open func getStreamVolume(streamType: Int32) -> Int32 {
+    self.javaObject.call(method: AudioManager__method__7, [streamType.toJavaParameter()])
   }
 
-  public func setStreamVolume(streamType: Int32, index: Int32, flags: Int32) {
-    self.javaObject.call(method: AudioManager__method__8, [streamType.toJavaParameter(), index.toJavaParameter(), flags.toJavaParameter()])
+  open func setRingerMode(ringerMode: Int32) {
+    self.javaObject.call(method: AudioManager__method__8, [ringerMode.toJavaParameter()])
   }
 
-  public func setStreamSolo(streamType: Int32, state: Bool) {
-    self.javaObject.call(method: AudioManager__method__9, [streamType.toJavaParameter(), state.toJavaParameter()])
+  open func setStreamVolume(streamType: Int32, index: Int32, flags: Int32) {
+    self.javaObject.call(method: AudioManager__method__9, [streamType.toJavaParameter(), index.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func setStreamMute(streamType: Int32, state: Bool) {
-    self.javaObject.call(method: AudioManager__method__10, [streamType.toJavaParameter(), state.toJavaParameter()])
+  open func isStreamMute(streamType: Int32) -> Bool {
+    self.javaObject.call(method: AudioManager__method__10, [streamType.toJavaParameter()])
   }
 
-  public func isStreamMute(streamType: Int32) -> Bool {
-    self.javaObject.call(method: AudioManager__method__11, [streamType.toJavaParameter()])
+  open func setSpeakerphoneOn(on: Bool) {
+    self.javaObject.call(method: AudioManager__method__11, [on.toJavaParameter()])
   }
 
-  public func shouldVibrate(vibrateType: Int32) -> Bool {
-    self.javaObject.call(method: AudioManager__method__12, [vibrateType.toJavaParameter()])
+  open func isSpeakerphoneOn() -> Bool {
+    self.javaObject.call(method: AudioManager__method__12, [])
   }
 
-  public func getVibrateSetting(vibrateType: Int32) -> Int32 {
-    self.javaObject.call(method: AudioManager__method__13, [vibrateType.toJavaParameter()])
+  open func isBluetoothScoAvailableOffCall() -> Bool {
+    self.javaObject.call(method: AudioManager__method__13, [])
   }
 
-  public func setVibrateSetting(vibrateType: Int32, vibrateSetting: Int32) {
-    self.javaObject.call(method: AudioManager__method__14, [vibrateType.toJavaParameter(), vibrateSetting.toJavaParameter()])
+  open func startBluetoothSco() {
+    self.javaObject.call(method: AudioManager__method__14, [])
   }
 
-  public func setSpeakerphoneOn(on: Bool) {
-    self.javaObject.call(method: AudioManager__method__15, [on.toJavaParameter()])
+  open func stopBluetoothSco() {
+    self.javaObject.call(method: AudioManager__method__15, [])
   }
 
-  public func isSpeakerphoneOn() -> Bool {
-    self.javaObject.call(method: AudioManager__method__16, [])
+  open func setBluetoothScoOn(on: Bool) {
+    self.javaObject.call(method: AudioManager__method__16, [on.toJavaParameter()])
   }
 
-  public func isBluetoothScoAvailableOffCall() -> Bool {
+  open func isBluetoothScoOn() -> Bool {
     self.javaObject.call(method: AudioManager__method__17, [])
   }
 
-  public func startBluetoothSco() {
+  open func isBluetoothA2dpOn() -> Bool {
     self.javaObject.call(method: AudioManager__method__18, [])
   }
 
-  public func stopBluetoothSco() {
-    self.javaObject.call(method: AudioManager__method__19, [])
+  open func setMicrophoneMute(on: Bool) {
+    self.javaObject.call(method: AudioManager__method__19, [on.toJavaParameter()])
   }
 
-  public func setBluetoothScoOn(on: Bool) {
-    self.javaObject.call(method: AudioManager__method__20, [on.toJavaParameter()])
+  open func isMicrophoneMute() -> Bool {
+    self.javaObject.call(method: AudioManager__method__20, [])
   }
 
-  public func isBluetoothScoOn() -> Bool {
-    self.javaObject.call(method: AudioManager__method__21, [])
+  open func setMode(mode: Int32) {
+    self.javaObject.call(method: AudioManager__method__21, [mode.toJavaParameter()])
   }
 
-  public func setBluetoothA2dpOn(on: Bool) {
-    self.javaObject.call(method: AudioManager__method__22, [on.toJavaParameter()])
+  open func getMode() -> Int32 {
+    self.javaObject.call(method: AudioManager__method__22, [])
   }
 
-  public func isBluetoothA2dpOn() -> Bool {
+  open func isMusicActive() -> Bool {
     self.javaObject.call(method: AudioManager__method__23, [])
   }
 
-  public func setWiredHeadsetOn(on: Bool) {
-    self.javaObject.call(method: AudioManager__method__24, [on.toJavaParameter()])
+  open func generateAudioSessionId() -> Int32 {
+    self.javaObject.call(method: AudioManager__method__24, [])
   }
 
-  public func isWiredHeadsetOn() -> Bool {
-    self.javaObject.call(method: AudioManager__method__25, [])
+  open func setParameters(keyValuePairs: String) {
+    self.javaObject.call(method: AudioManager__method__25, [keyValuePairs.toJavaParameter()])
   }
 
-  public func setMicrophoneMute(on: Bool) {
-    self.javaObject.call(method: AudioManager__method__26, [on.toJavaParameter()])
+  open func getParameters(keys: String) -> String {
+    self.javaObject.call(method: AudioManager__method__26, [keys.toJavaParameter()])
   }
 
-  public func isMicrophoneMute() -> Bool {
-    self.javaObject.call(method: AudioManager__method__27, [])
+  open func playSoundEffect(effectType: Int32) {
+    self.javaObject.call(method: AudioManager__method__27, [effectType.toJavaParameter()])
   }
 
-  public func setMode(mode: Int32) {
-    self.javaObject.call(method: AudioManager__method__28, [mode.toJavaParameter()])
+  open func playSoundEffect(effectType: Int32, volume: Float) {
+    self.javaObject.call(method: AudioManager__method__28, [effectType.toJavaParameter(), volume.toJavaParameter()])
   }
 
-  public func getMode() -> Int32 {
+  open func loadSoundEffects() {
     self.javaObject.call(method: AudioManager__method__29, [])
   }
 
-  public func setRouting(mode: Int32, routes: Int32, mask: Int32) {
-    self.javaObject.call(method: AudioManager__method__30, [mode.toJavaParameter(), routes.toJavaParameter(), mask.toJavaParameter()])
+  open func unloadSoundEffects() {
+    self.javaObject.call(method: AudioManager__method__30, [])
   }
 
-  public func getRouting(mode: Int32) -> Int32 {
-    self.javaObject.call(method: AudioManager__method__31, [mode.toJavaParameter()])
+  open func requestAudioFocus(l: AudioManager.OnAudioFocusChangeListener?, streamType: Int32, durationHint: Int32) -> Int32 {
+    self.javaObject.call(method: AudioManager__method__31, [JavaParameter(object: l?.toJavaObject()), streamType.toJavaParameter(), durationHint.toJavaParameter()])
   }
 
-  public func isMusicActive() -> Bool {
-    self.javaObject.call(method: AudioManager__method__32, [])
+  open func abandonAudioFocus(l: AudioManager.OnAudioFocusChangeListener?) -> Int32 {
+    self.javaObject.call(method: AudioManager__method__32, [JavaParameter(object: l?.toJavaObject())])
   }
 
-  public func generateAudioSessionId() -> Int32 {
-    self.javaObject.call(method: AudioManager__method__33, [])
+  open func unregisterAudioRecordingCallback(cb: AudioManager.AudioRecordingCallback?) {
+    self.javaObject.call(method: AudioManager__method__33, [JavaParameter(object: cb?.toJavaObject())])
   }
 
-  public func setParameters(keyValuePairs: String) {
-    self.javaObject.call(method: AudioManager__method__34, [keyValuePairs.toJavaParameter()])
+  open func getActiveRecordingConfigurations<R>() -> R? where R: List, R.E == AudioRecordingConfiguration {
+    self.javaObject.call(method: AudioManager__method__34, [])
   }
 
-  public func getParameters(keys: String) -> String {
-    self.javaObject.call(method: AudioManager__method__35, [keys.toJavaParameter()])
+  open func getProperty(key: String) -> String {
+    self.javaObject.call(method: AudioManager__method__35, [key.toJavaParameter()])
   }
 
-  public func playSoundEffect(effectType: Int32) {
-    self.javaObject.call(method: AudioManager__method__36, [effectType.toJavaParameter()])
+  open func getDevices(flags: Int32) -> [AudioDeviceInfo?] {
+    self.javaObject.call(method: AudioManager__method__36, [flags.toJavaParameter()])
   }
 
-  public func playSoundEffect(effectType: Int32, volume: Float) {
-    self.javaObject.call(method: AudioManager__method__37, [effectType.toJavaParameter(), volume.toJavaParameter()])
-  }
-
-  public func loadSoundEffects() {
-    self.javaObject.call(method: AudioManager__method__38, [])
-  }
-
-  public func unloadSoundEffects() {
-    self.javaObject.call(method: AudioManager__method__39, [])
-  }
-
-  public func requestAudioFocus(l: AudioManager.OnAudioFocusChangeListener?, streamType: Int32, durationHint: Int32) -> Int32 {
-    self.javaObject.call(method: AudioManager__method__40, [JavaParameter(object: l?.toJavaObject()), streamType.toJavaParameter(), durationHint.toJavaParameter()])
-  }
-
-  public func abandonAudioFocus(l: AudioManager.OnAudioFocusChangeListener?) -> Int32 {
-    self.javaObject.call(method: AudioManager__method__41, [JavaParameter(object: l?.toJavaObject())])
-  }
-
-  public func registerMediaButtonEventReceiver(eventReceiver: ComponentName?) {
-    self.javaObject.call(method: AudioManager__method__42, [eventReceiver.toJavaParameter()])
-  }
-
-  public func registerMediaButtonEventReceiver(eventReceiver: PendingIntent?) {
-    self.javaObject.call(method: AudioManager__method__43, [eventReceiver.toJavaParameter()])
-  }
-
-  public func unregisterMediaButtonEventReceiver(eventReceiver: ComponentName?) {
-    self.javaObject.call(method: AudioManager__method__44, [eventReceiver.toJavaParameter()])
-  }
-
-  public func unregisterMediaButtonEventReceiver(eventReceiver: PendingIntent?) {
-    self.javaObject.call(method: AudioManager__method__45, [eventReceiver.toJavaParameter()])
-  }
-
-  public func registerRemoteControlClient(rcClient: RemoteControlClient?) {
-    self.javaObject.call(method: AudioManager__method__46, [rcClient.toJavaParameter()])
-  }
-
-  public func unregisterRemoteControlClient(rcClient: RemoteControlClient?) {
-    self.javaObject.call(method: AudioManager__method__47, [rcClient.toJavaParameter()])
-  }
-
-  public func registerRemoteController(rctlr: RemoteController?) -> Bool {
-    self.javaObject.call(method: AudioManager__method__48, [rctlr.toJavaParameter()])
-  }
-
-  public func unregisterRemoteController(rctlr: RemoteController?) {
-    self.javaObject.call(method: AudioManager__method__49, [rctlr.toJavaParameter()])
-  }
-
-  public func unregisterAudioRecordingCallback(cb: AudioManager.AudioRecordingCallback?) {
-    self.javaObject.call(method: AudioManager__method__50, [JavaParameter(object: cb?.toJavaObject())])
-  }
-
-  public func getActiveRecordingConfigurations<R>() -> R? where R: List, R.E == AudioRecordingConfiguration {
-    self.javaObject.call(method: AudioManager__method__51, [])
-  }
-
-  public func getProperty(key: String) -> String {
-    self.javaObject.call(method: AudioManager__method__52, [key.toJavaParameter()])
-  }
-
-  public func getDevices(flags: Int32) -> [AudioDeviceInfo?] {
-    self.javaObject.call(method: AudioManager__method__53, [flags.toJavaParameter()])
-  }
-
-  public func unregisterAudioDeviceCallback(callback: AudioDeviceCallback?) {
-    self.javaObject.call(method: AudioManager__method__54, [JavaParameter(object: callback?.toJavaObject())])
+  open func unregisterAudioDeviceCallback(callback: AudioDeviceCallback?) {
+    self.javaObject.call(method: AudioManager__method__37, [JavaParameter(object: callback?.toJavaObject())])
   }
 }
 
 extension AudioManager {
-  public func getActiveRecordingConfigurations() -> ListProxy<AudioRecordingConfiguration>? {
-    self.javaObject.call(method: AudioManager__method__51, [])
+  open func getActiveRecordingConfigurations() -> ListProxy<AudioRecordingConfiguration>? {
+    self.javaObject.call(method: AudioManager__method__34, [])
   }
 }
 
 // ------------------------------------------------------------------------------------
 
-public protocol AudioManagerAudioRecordingCallback where Self: Object {
-  func onRecordingConfigChanged<T0>(configs: T0?) -> Void where T0: List, T0.E == AudioRecordingConfiguration
-}
+public protocol AudioManagerAudioRecordingCallback where Self: Object {}
 
 public extension AudioManagerAudioRecordingCallback {
   func box() -> AudioManagerAudioRecordingCallbackProxy {
@@ -484,61 +413,44 @@ public final class AudioManagerOnAudioFocusChangeListenerProxy: Object, JInterfa
 
 private let AudioManager__class = findJavaClass(fqn: "android/media/AudioManager")!
 
-private let AudioManager__method__0 = AudioManager__class.getMethodID(name: "isVolumeFixed", sig: "()Z")!
-private let AudioManager__method__1 = AudioManager__class.getMethodID(name: "adjustStreamVolume", sig: "(III)V")!
-private let AudioManager__method__2 = AudioManager__class.getMethodID(name: "adjustVolume", sig: "(II)V")!
-private let AudioManager__method__3 = AudioManager__class.getMethodID(name: "adjustSuggestedStreamVolume", sig: "(III)V")!
-private let AudioManager__method__4 = AudioManager__class.getMethodID(name: "getRingerMode", sig: "()I")!
-private let AudioManager__method__5 = AudioManager__class.getMethodID(name: "getStreamMaxVolume", sig: "(I)I")!
-private let AudioManager__method__6 = AudioManager__class.getMethodID(name: "getStreamVolume", sig: "(I)I")!
-private let AudioManager__method__7 = AudioManager__class.getMethodID(name: "setRingerMode", sig: "(I)V")!
-private let AudioManager__method__8 = AudioManager__class.getMethodID(name: "setStreamVolume", sig: "(III)V")!
-private let AudioManager__method__9 = AudioManager__class.getMethodID(name: "setStreamSolo", sig: "(IZ)V")!
-private let AudioManager__method__10 = AudioManager__class.getMethodID(name: "setStreamMute", sig: "(IZ)V")!
-private let AudioManager__method__11 = AudioManager__class.getMethodID(name: "isStreamMute", sig: "(I)Z")!
-private let AudioManager__method__12 = AudioManager__class.getMethodID(name: "shouldVibrate", sig: "(I)Z")!
-private let AudioManager__method__13 = AudioManager__class.getMethodID(name: "getVibrateSetting", sig: "(I)I")!
-private let AudioManager__method__14 = AudioManager__class.getMethodID(name: "setVibrateSetting", sig: "(II)V")!
-private let AudioManager__method__15 = AudioManager__class.getMethodID(name: "setSpeakerphoneOn", sig: "(Z)V")!
-private let AudioManager__method__16 = AudioManager__class.getMethodID(name: "isSpeakerphoneOn", sig: "()Z")!
-private let AudioManager__method__17 = AudioManager__class.getMethodID(name: "isBluetoothScoAvailableOffCall", sig: "()Z")!
-private let AudioManager__method__18 = AudioManager__class.getMethodID(name: "startBluetoothSco", sig: "()V")!
-private let AudioManager__method__19 = AudioManager__class.getMethodID(name: "stopBluetoothSco", sig: "()V")!
-private let AudioManager__method__20 = AudioManager__class.getMethodID(name: "setBluetoothScoOn", sig: "(Z)V")!
-private let AudioManager__method__21 = AudioManager__class.getMethodID(name: "isBluetoothScoOn", sig: "()Z")!
-private let AudioManager__method__22 = AudioManager__class.getMethodID(name: "setBluetoothA2dpOn", sig: "(Z)V")!
-private let AudioManager__method__23 = AudioManager__class.getMethodID(name: "isBluetoothA2dpOn", sig: "()Z")!
-private let AudioManager__method__24 = AudioManager__class.getMethodID(name: "setWiredHeadsetOn", sig: "(Z)V")!
-private let AudioManager__method__25 = AudioManager__class.getMethodID(name: "isWiredHeadsetOn", sig: "()Z")!
-private let AudioManager__method__26 = AudioManager__class.getMethodID(name: "setMicrophoneMute", sig: "(Z)V")!
-private let AudioManager__method__27 = AudioManager__class.getMethodID(name: "isMicrophoneMute", sig: "()Z")!
-private let AudioManager__method__28 = AudioManager__class.getMethodID(name: "setMode", sig: "(I)V")!
-private let AudioManager__method__29 = AudioManager__class.getMethodID(name: "getMode", sig: "()I")!
-private let AudioManager__method__30 = AudioManager__class.getMethodID(name: "setRouting", sig: "(III)V")!
-private let AudioManager__method__31 = AudioManager__class.getMethodID(name: "getRouting", sig: "(I)I")!
-private let AudioManager__method__32 = AudioManager__class.getMethodID(name: "isMusicActive", sig: "()Z")!
-private let AudioManager__method__33 = AudioManager__class.getMethodID(name: "generateAudioSessionId", sig: "()I")!
-private let AudioManager__method__34 = AudioManager__class.getMethodID(name: "setParameters", sig: "(Ljava/lang/String;)V")!
-private let AudioManager__method__35 = AudioManager__class.getMethodID(name: "getParameters", sig: "(Ljava/lang/String;)Ljava/lang/String;")!
-private let AudioManager__method__36 = AudioManager__class.getMethodID(name: "playSoundEffect", sig: "(I)V")!
-private let AudioManager__method__37 = AudioManager__class.getMethodID(name: "playSoundEffect", sig: "(IF)V")!
-private let AudioManager__method__38 = AudioManager__class.getMethodID(name: "loadSoundEffects", sig: "()V")!
-private let AudioManager__method__39 = AudioManager__class.getMethodID(name: "unloadSoundEffects", sig: "()V")!
-private let AudioManager__method__40 = AudioManager__class.getMethodID(name: "requestAudioFocus", sig: "(Landroid/media/AudioManager$OnAudioFocusChangeListener;II)I")!
-private let AudioManager__method__41 = AudioManager__class.getMethodID(name: "abandonAudioFocus", sig: "(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I")!
-private let AudioManager__method__42 = AudioManager__class.getMethodID(name: "registerMediaButtonEventReceiver", sig: "(Landroid/content/ComponentName;)V")!
-private let AudioManager__method__43 = AudioManager__class.getMethodID(name: "registerMediaButtonEventReceiver", sig: "(Landroid/app/PendingIntent;)V")!
-private let AudioManager__method__44 = AudioManager__class.getMethodID(name: "unregisterMediaButtonEventReceiver", sig: "(Landroid/content/ComponentName;)V")!
-private let AudioManager__method__45 = AudioManager__class.getMethodID(name: "unregisterMediaButtonEventReceiver", sig: "(Landroid/app/PendingIntent;)V")!
-private let AudioManager__method__46 = AudioManager__class.getMethodID(name: "registerRemoteControlClient", sig: "(Landroid/media/RemoteControlClient;)V")!
-private let AudioManager__method__47 = AudioManager__class.getMethodID(name: "unregisterRemoteControlClient", sig: "(Landroid/media/RemoteControlClient;)V")!
-private let AudioManager__method__48 = AudioManager__class.getMethodID(name: "registerRemoteController", sig: "(Landroid/media/RemoteController;)Z")!
-private let AudioManager__method__49 = AudioManager__class.getMethodID(name: "unregisterRemoteController", sig: "(Landroid/media/RemoteController;)V")!
-private let AudioManager__method__50 = AudioManager__class.getMethodID(name: "unregisterAudioRecordingCallback", sig: "(Landroid/media/AudioManager$AudioRecordingCallback;)V")!
-private let AudioManager__method__51 = AudioManager__class.getMethodID(name: "getActiveRecordingConfigurations", sig: "()Ljava/util/List;")!
-private let AudioManager__method__52 = AudioManager__class.getMethodID(name: "getProperty", sig: "(Ljava/lang/String;)Ljava/lang/String;")!
-private let AudioManager__method__53 = AudioManager__class.getMethodID(name: "getDevices", sig: "(I)[Landroid/media/AudioDeviceInfo;")!
-private let AudioManager__method__54 = AudioManager__class.getMethodID(name: "unregisterAudioDeviceCallback", sig: "(Landroid/media/AudioDeviceCallback;)V")!
+private let AudioManager__method__0 = AudioManager__class.getMethodID(name: "dispatchMediaKeyEvent", sig: "(Landroid/view/KeyEvent;)V")!
+private let AudioManager__method__1 = AudioManager__class.getMethodID(name: "isVolumeFixed", sig: "()Z")!
+private let AudioManager__method__2 = AudioManager__class.getMethodID(name: "adjustStreamVolume", sig: "(III)V")!
+private let AudioManager__method__3 = AudioManager__class.getMethodID(name: "adjustVolume", sig: "(II)V")!
+private let AudioManager__method__4 = AudioManager__class.getMethodID(name: "adjustSuggestedStreamVolume", sig: "(III)V")!
+private let AudioManager__method__5 = AudioManager__class.getMethodID(name: "getRingerMode", sig: "()I")!
+private let AudioManager__method__6 = AudioManager__class.getMethodID(name: "getStreamMaxVolume", sig: "(I)I")!
+private let AudioManager__method__7 = AudioManager__class.getMethodID(name: "getStreamVolume", sig: "(I)I")!
+private let AudioManager__method__8 = AudioManager__class.getMethodID(name: "setRingerMode", sig: "(I)V")!
+private let AudioManager__method__9 = AudioManager__class.getMethodID(name: "setStreamVolume", sig: "(III)V")!
+private let AudioManager__method__10 = AudioManager__class.getMethodID(name: "isStreamMute", sig: "(I)Z")!
+private let AudioManager__method__11 = AudioManager__class.getMethodID(name: "setSpeakerphoneOn", sig: "(Z)V")!
+private let AudioManager__method__12 = AudioManager__class.getMethodID(name: "isSpeakerphoneOn", sig: "()Z")!
+private let AudioManager__method__13 = AudioManager__class.getMethodID(name: "isBluetoothScoAvailableOffCall", sig: "()Z")!
+private let AudioManager__method__14 = AudioManager__class.getMethodID(name: "startBluetoothSco", sig: "()V")!
+private let AudioManager__method__15 = AudioManager__class.getMethodID(name: "stopBluetoothSco", sig: "()V")!
+private let AudioManager__method__16 = AudioManager__class.getMethodID(name: "setBluetoothScoOn", sig: "(Z)V")!
+private let AudioManager__method__17 = AudioManager__class.getMethodID(name: "isBluetoothScoOn", sig: "()Z")!
+private let AudioManager__method__18 = AudioManager__class.getMethodID(name: "isBluetoothA2dpOn", sig: "()Z")!
+private let AudioManager__method__19 = AudioManager__class.getMethodID(name: "setMicrophoneMute", sig: "(Z)V")!
+private let AudioManager__method__20 = AudioManager__class.getMethodID(name: "isMicrophoneMute", sig: "()Z")!
+private let AudioManager__method__21 = AudioManager__class.getMethodID(name: "setMode", sig: "(I)V")!
+private let AudioManager__method__22 = AudioManager__class.getMethodID(name: "getMode", sig: "()I")!
+private let AudioManager__method__23 = AudioManager__class.getMethodID(name: "isMusicActive", sig: "()Z")!
+private let AudioManager__method__24 = AudioManager__class.getMethodID(name: "generateAudioSessionId", sig: "()I")!
+private let AudioManager__method__25 = AudioManager__class.getMethodID(name: "setParameters", sig: "(Ljava/lang/String;)V")!
+private let AudioManager__method__26 = AudioManager__class.getMethodID(name: "getParameters", sig: "(Ljava/lang/String;)Ljava/lang/String;")!
+private let AudioManager__method__27 = AudioManager__class.getMethodID(name: "playSoundEffect", sig: "(I)V")!
+private let AudioManager__method__28 = AudioManager__class.getMethodID(name: "playSoundEffect", sig: "(IF)V")!
+private let AudioManager__method__29 = AudioManager__class.getMethodID(name: "loadSoundEffects", sig: "()V")!
+private let AudioManager__method__30 = AudioManager__class.getMethodID(name: "unloadSoundEffects", sig: "()V")!
+private let AudioManager__method__31 = AudioManager__class.getMethodID(name: "requestAudioFocus", sig: "(Landroid/media/AudioManager$OnAudioFocusChangeListener;II)I")!
+private let AudioManager__method__32 = AudioManager__class.getMethodID(name: "abandonAudioFocus", sig: "(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I")!
+private let AudioManager__method__33 = AudioManager__class.getMethodID(name: "unregisterAudioRecordingCallback", sig: "(Landroid/media/AudioManager$AudioRecordingCallback;)V")!
+private let AudioManager__method__34 = AudioManager__class.getMethodID(name: "getActiveRecordingConfigurations", sig: "()Ljava/util/List;")!
+private let AudioManager__method__35 = AudioManager__class.getMethodID(name: "getProperty", sig: "(Ljava/lang/String;)Ljava/lang/String;")!
+private let AudioManager__method__36 = AudioManager__class.getMethodID(name: "getDevices", sig: "(I)[Landroid/media/AudioDeviceInfo;")!
+private let AudioManager__method__37 = AudioManager__class.getMethodID(name: "unregisterAudioDeviceCallback", sig: "(Landroid/media/AudioDeviceCallback;)V")!
 
 private let AudioManager__field__0 = AudioManager__class.getStaticFieldID(name: "ACTION_AUDIO_BECOMING_NOISY", sig: "Ljava/lang/String;")!
 private let AudioManager__field__1 = AudioManager__class.getStaticFieldID(name: "ACTION_HDMI_AUDIO_PLUG", sig: "Ljava/lang/String;")!

@@ -3,10 +3,6 @@
 import Java
 
 public protocol MidiSender where Self: Object {
-  func connect(receiver: MidiReceiver?) -> Void
-
-  func disconnect(receiver: MidiReceiver?) -> Void
-
   func onConnect(receiver: MidiReceiver?) -> Void
 
   func onDisconnect(receiver: MidiReceiver?) -> Void
@@ -39,11 +35,11 @@ open class MidiSenderProxy: Object, JInterfaceProxy, MidiSender {
     self.init(obj.toJavaObject()!)
   }
 
-  public func onConnect(receiver: MidiReceiver?) {
+  open func onConnect(receiver: MidiReceiver?) {
     self.javaObject.call(method: MidiSender__method__3, [JavaParameter(object: receiver?.toJavaObject())])
   }
 
-  public func onDisconnect(receiver: MidiReceiver?) {
+  open func onDisconnect(receiver: MidiReceiver?) {
     self.javaObject.call(method: MidiSender__method__4, [JavaParameter(object: receiver?.toJavaObject())])
   }
 }

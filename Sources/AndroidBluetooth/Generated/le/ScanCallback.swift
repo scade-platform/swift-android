@@ -2,13 +2,7 @@
 
 import Java
 
-public protocol ScanCallback where Self: Object {
-  func onScanResult(callbackType: Int32, result: ScanResult?) -> Void
-
-  func onBatchScanResults<T0>(results: T0?) -> Void where T0: List, T0.E == ScanResult
-
-  func onScanFailed(errorCode: Int32) -> Void
-}
+public protocol ScanCallback where Self: Object {}
 
 public extension ScanCallback {
   func box() -> ScanCallbackProxy {

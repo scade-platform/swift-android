@@ -3,19 +3,7 @@
 import Java
 
 public protocol MidiReceiver where Self: Object {
-  init(maxMessageSize: Int32)
-
   func onSend(msg: [Int8], offset: Int32, count: Int32, timestamp: Int64) -> Void
-
-  func flush() -> Void
-
-  func onFlush() -> Void
-
-  func getMaxMessageSize() -> Int32
-
-  func send(msg: [Int8], offset: Int32, count: Int32) -> Void
-
-  func send(msg: [Int8], offset: Int32, count: Int32, timestamp: Int64) -> Void
 }
 
 public extension MidiReceiver {
@@ -61,7 +49,7 @@ open class MidiReceiverProxy: Object, JInterfaceProxy, MidiReceiver {
     self.init(obj.toJavaObject()!)
   }
 
-  public func onSend(msg: [Int8], offset: Int32, count: Int32, timestamp: Int64) {
+  open func onSend(msg: [Int8], offset: Int32, count: Int32, timestamp: Int64) {
     self.javaObject.call(method: MidiReceiver__method__2, [msg.toJavaParameter(), offset.toJavaParameter(), count.toJavaParameter(), timestamp.toJavaParameter()])
   }
 }

@@ -11,11 +11,11 @@ open class NfcBarcode: Object, BasicTagTechnology {
     NfcBarcode__class.callStatic(method: NfcBarcode__method__0, [tag.toJavaParameter()])
   }
 
-  public func getType() -> Int32 {
+  open func getType() -> Int32 {
     self.javaObject.call(method: NfcBarcode__method__1, [])
   }
 
-  public func getBarcode() -> [Int8] {
+  open func getBarcode() -> [Int8] {
     self.javaObject.call(method: NfcBarcode__method__2, [])
   }
 }

@@ -9,35 +9,35 @@ open class ConfigurationStats: Object, Parcelable {
     super.init(ctor: ConfigurationStats__method__0, [stats.toJavaParameter()])
   }
 
-  public func getConfiguration() -> Configuration? {
+  open func getConfiguration() -> Configuration? {
     self.javaObject.call(method: ConfigurationStats__method__1, [])
   }
 
-  public func getFirstTimeStamp() -> Int64 {
+  open func getFirstTimeStamp() -> Int64 {
     self.javaObject.call(method: ConfigurationStats__method__2, [])
   }
 
-  public func getLastTimeStamp() -> Int64 {
+  open func getLastTimeStamp() -> Int64 {
     self.javaObject.call(method: ConfigurationStats__method__3, [])
   }
 
-  public func getLastTimeActive() -> Int64 {
+  open func getLastTimeActive() -> Int64 {
     self.javaObject.call(method: ConfigurationStats__method__4, [])
   }
 
-  public func getTotalTimeActive() -> Int64 {
+  open func getTotalTimeActive() -> Int64 {
     self.javaObject.call(method: ConfigurationStats__method__5, [])
   }
 
-  public func getActivationCount() -> Int32 {
+  open func getActivationCount() -> Int32 {
     self.javaObject.call(method: ConfigurationStats__method__6, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ConfigurationStats__method__7, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ConfigurationStats__method__8, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 

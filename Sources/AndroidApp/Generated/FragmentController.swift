@@ -9,125 +9,111 @@ open class FragmentController: Object {
     FragmentController__class.callStatic(method: FragmentController__method__0, [callbacks.toJavaParameter()])
   }
 
-  public func getFragmentManager() -> FragmentManager? {
+  open func getFragmentManager() -> FragmentManager? {
     let res = self.javaObject.call(method: FragmentController__method__1, []) as Object?
     return cast(res, to: FragmentManagerProxy.self)
   }
 
-  public func getLoaderManager() -> LoaderManager? {
+  open func getLoaderManager() -> LoaderManager? {
     let res = self.javaObject.call(method: FragmentController__method__2, []) as Object?
     return cast(res, to: LoaderManagerProxy.self)
   }
 
-  public func findFragmentByWho(who: String) -> Fragment? {
+  open func findFragmentByWho(who: String) -> Fragment? {
     self.javaObject.call(method: FragmentController__method__3, [who.toJavaParameter()])
   }
 
-  public func attachHost(parent: Fragment?) {
+  open func attachHost(parent: Fragment?) {
     self.javaObject.call(method: FragmentController__method__4, [parent.toJavaParameter()])
   }
 
-  public func noteStateNotSaved() {
+  open func noteStateNotSaved() {
     self.javaObject.call(method: FragmentController__method__5, [])
   }
 
-  public func saveAllState() -> Parcelable? {
+  open func saveAllState() -> Parcelable? {
     let res = self.javaObject.call(method: FragmentController__method__6, []) as Object?
     return cast(res, to: ParcelableProxy.self)
   }
 
-  public func restoreAllState<T0>(state: Parcelable?, nonConfigList: T0?) -> Void where T0: List, T0.E == Fragment {
-    self.javaObject.call(method: FragmentController__method__7, [JavaParameter(object: state?.toJavaObject()), nonConfigList.toJavaParameter()])
+  open func restoreAllState(state: Parcelable?, nonConfig: FragmentManagerNonConfig?) {
+    self.javaObject.call(method: FragmentController__method__7, [JavaParameter(object: state?.toJavaObject()), nonConfig.toJavaParameter()])
   }
 
-  public func restoreAllState(state: Parcelable?, nonConfig: FragmentManagerNonConfig?) {
-    self.javaObject.call(method: FragmentController__method__8, [JavaParameter(object: state?.toJavaObject()), nonConfig.toJavaParameter()])
+  open func retainNestedNonConfig() -> FragmentManagerNonConfig? {
+    self.javaObject.call(method: FragmentController__method__8, [])
   }
 
-  public func retainNonConfig<R>() -> R? where R: List, R.E == Fragment {
+  open func dispatchCreate() {
     self.javaObject.call(method: FragmentController__method__9, [])
   }
 
-  public func retainNestedNonConfig() -> FragmentManagerNonConfig? {
+  open func dispatchActivityCreated() {
     self.javaObject.call(method: FragmentController__method__10, [])
   }
 
-  public func dispatchCreate() {
+  open func dispatchStart() {
     self.javaObject.call(method: FragmentController__method__11, [])
   }
 
-  public func dispatchActivityCreated() {
+  open func dispatchResume() {
     self.javaObject.call(method: FragmentController__method__12, [])
   }
 
-  public func dispatchStart() {
+  open func dispatchPause() {
     self.javaObject.call(method: FragmentController__method__13, [])
   }
 
-  public func dispatchResume() {
+  open func dispatchStop() {
     self.javaObject.call(method: FragmentController__method__14, [])
   }
 
-  public func dispatchPause() {
+  open func dispatchDestroyView() {
     self.javaObject.call(method: FragmentController__method__15, [])
   }
 
-  public func dispatchStop() {
+  open func dispatchDestroy() {
     self.javaObject.call(method: FragmentController__method__16, [])
   }
 
-  public func dispatchDestroyView() {
-    self.javaObject.call(method: FragmentController__method__17, [])
+  open func dispatchMultiWindowModeChanged(isInMultiWindowMode: Bool) {
+    self.javaObject.call(method: FragmentController__method__17, [isInMultiWindowMode.toJavaParameter()])
   }
 
-  public func dispatchDestroy() {
-    self.javaObject.call(method: FragmentController__method__18, [])
+  open func dispatchPictureInPictureModeChanged(isInPictureInPictureMode: Bool) {
+    self.javaObject.call(method: FragmentController__method__18, [isInPictureInPictureMode.toJavaParameter()])
   }
 
-  public func dispatchMultiWindowModeChanged(isInMultiWindowMode: Bool) {
-    self.javaObject.call(method: FragmentController__method__19, [isInMultiWindowMode.toJavaParameter()])
+  open func dispatchConfigurationChanged(newConfig: Configuration?) {
+    self.javaObject.call(method: FragmentController__method__19, [newConfig.toJavaParameter()])
   }
 
-  public func dispatchPictureInPictureModeChanged(isInPictureInPictureMode: Bool) {
-    self.javaObject.call(method: FragmentController__method__20, [isInPictureInPictureMode.toJavaParameter()])
+  open func dispatchLowMemory() {
+    self.javaObject.call(method: FragmentController__method__20, [])
   }
 
-  public func dispatchConfigurationChanged(newConfig: Configuration?) {
-    self.javaObject.call(method: FragmentController__method__21, [newConfig.toJavaParameter()])
+  open func dispatchTrimMemory(level: Int32) {
+    self.javaObject.call(method: FragmentController__method__21, [level.toJavaParameter()])
   }
 
-  public func dispatchLowMemory() {
+  open func execPendingActions() -> Bool {
     self.javaObject.call(method: FragmentController__method__22, [])
   }
 
-  public func dispatchTrimMemory(level: Int32) {
-    self.javaObject.call(method: FragmentController__method__23, [level.toJavaParameter()])
+  open func doLoaderStart() {
+    self.javaObject.call(method: FragmentController__method__23, [])
   }
 
-  public func execPendingActions() -> Bool {
-    self.javaObject.call(method: FragmentController__method__24, [])
+  open func doLoaderStop(retain: Bool) {
+    self.javaObject.call(method: FragmentController__method__24, [retain.toJavaParameter()])
   }
 
-  public func doLoaderStart() {
+  open func doLoaderDestroy() {
     self.javaObject.call(method: FragmentController__method__25, [])
   }
 
-  public func doLoaderStop(retain: Bool) {
-    self.javaObject.call(method: FragmentController__method__26, [retain.toJavaParameter()])
-  }
-
-  public func doLoaderDestroy() {
-    self.javaObject.call(method: FragmentController__method__27, [])
-  }
-
-  public func reportLoaderStart() {
-    self.javaObject.call(method: FragmentController__method__28, [])
-  }
-}
-
-extension FragmentController {
-  public func retainNonConfig() -> ListProxy<Fragment>? {
-    self.javaObject.call(method: FragmentController__method__9, [])
+  open func reportLoaderStart() {
+    self.javaObject.call(method: FragmentController__method__26, [])
   }
 }
 
@@ -142,25 +128,23 @@ private let FragmentController__method__3 = FragmentController__class.getMethodI
 private let FragmentController__method__4 = FragmentController__class.getMethodID(name: "attachHost", sig: "(Landroid/app/Fragment;)V")!
 private let FragmentController__method__5 = FragmentController__class.getMethodID(name: "noteStateNotSaved", sig: "()V")!
 private let FragmentController__method__6 = FragmentController__class.getMethodID(name: "saveAllState", sig: "()Landroid/os/Parcelable;")!
-private let FragmentController__method__7 = FragmentController__class.getMethodID(name: "restoreAllState", sig: "(Landroid/os/Parcelable;Ljava/util/List;)V")!
-private let FragmentController__method__8 = FragmentController__class.getMethodID(name: "restoreAllState", sig: "(Landroid/os/Parcelable;Landroid/app/FragmentManagerNonConfig;)V")!
-private let FragmentController__method__9 = FragmentController__class.getMethodID(name: "retainNonConfig", sig: "()Ljava/util/List;")!
-private let FragmentController__method__10 = FragmentController__class.getMethodID(name: "retainNestedNonConfig", sig: "()Landroid/app/FragmentManagerNonConfig;")!
-private let FragmentController__method__11 = FragmentController__class.getMethodID(name: "dispatchCreate", sig: "()V")!
-private let FragmentController__method__12 = FragmentController__class.getMethodID(name: "dispatchActivityCreated", sig: "()V")!
-private let FragmentController__method__13 = FragmentController__class.getMethodID(name: "dispatchStart", sig: "()V")!
-private let FragmentController__method__14 = FragmentController__class.getMethodID(name: "dispatchResume", sig: "()V")!
-private let FragmentController__method__15 = FragmentController__class.getMethodID(name: "dispatchPause", sig: "()V")!
-private let FragmentController__method__16 = FragmentController__class.getMethodID(name: "dispatchStop", sig: "()V")!
-private let FragmentController__method__17 = FragmentController__class.getMethodID(name: "dispatchDestroyView", sig: "()V")!
-private let FragmentController__method__18 = FragmentController__class.getMethodID(name: "dispatchDestroy", sig: "()V")!
-private let FragmentController__method__19 = FragmentController__class.getMethodID(name: "dispatchMultiWindowModeChanged", sig: "(Z)V")!
-private let FragmentController__method__20 = FragmentController__class.getMethodID(name: "dispatchPictureInPictureModeChanged", sig: "(Z)V")!
-private let FragmentController__method__21 = FragmentController__class.getMethodID(name: "dispatchConfigurationChanged", sig: "(Landroid/content/res/Configuration;)V")!
-private let FragmentController__method__22 = FragmentController__class.getMethodID(name: "dispatchLowMemory", sig: "()V")!
-private let FragmentController__method__23 = FragmentController__class.getMethodID(name: "dispatchTrimMemory", sig: "(I)V")!
-private let FragmentController__method__24 = FragmentController__class.getMethodID(name: "execPendingActions", sig: "()Z")!
-private let FragmentController__method__25 = FragmentController__class.getMethodID(name: "doLoaderStart", sig: "()V")!
-private let FragmentController__method__26 = FragmentController__class.getMethodID(name: "doLoaderStop", sig: "(Z)V")!
-private let FragmentController__method__27 = FragmentController__class.getMethodID(name: "doLoaderDestroy", sig: "()V")!
-private let FragmentController__method__28 = FragmentController__class.getMethodID(name: "reportLoaderStart", sig: "()V")!
+private let FragmentController__method__7 = FragmentController__class.getMethodID(name: "restoreAllState", sig: "(Landroid/os/Parcelable;Landroid/app/FragmentManagerNonConfig;)V")!
+private let FragmentController__method__8 = FragmentController__class.getMethodID(name: "retainNestedNonConfig", sig: "()Landroid/app/FragmentManagerNonConfig;")!
+private let FragmentController__method__9 = FragmentController__class.getMethodID(name: "dispatchCreate", sig: "()V")!
+private let FragmentController__method__10 = FragmentController__class.getMethodID(name: "dispatchActivityCreated", sig: "()V")!
+private let FragmentController__method__11 = FragmentController__class.getMethodID(name: "dispatchStart", sig: "()V")!
+private let FragmentController__method__12 = FragmentController__class.getMethodID(name: "dispatchResume", sig: "()V")!
+private let FragmentController__method__13 = FragmentController__class.getMethodID(name: "dispatchPause", sig: "()V")!
+private let FragmentController__method__14 = FragmentController__class.getMethodID(name: "dispatchStop", sig: "()V")!
+private let FragmentController__method__15 = FragmentController__class.getMethodID(name: "dispatchDestroyView", sig: "()V")!
+private let FragmentController__method__16 = FragmentController__class.getMethodID(name: "dispatchDestroy", sig: "()V")!
+private let FragmentController__method__17 = FragmentController__class.getMethodID(name: "dispatchMultiWindowModeChanged", sig: "(Z)V")!
+private let FragmentController__method__18 = FragmentController__class.getMethodID(name: "dispatchPictureInPictureModeChanged", sig: "(Z)V")!
+private let FragmentController__method__19 = FragmentController__class.getMethodID(name: "dispatchConfigurationChanged", sig: "(Landroid/content/res/Configuration;)V")!
+private let FragmentController__method__20 = FragmentController__class.getMethodID(name: "dispatchLowMemory", sig: "()V")!
+private let FragmentController__method__21 = FragmentController__class.getMethodID(name: "dispatchTrimMemory", sig: "(I)V")!
+private let FragmentController__method__22 = FragmentController__class.getMethodID(name: "execPendingActions", sig: "()Z")!
+private let FragmentController__method__23 = FragmentController__class.getMethodID(name: "doLoaderStart", sig: "()V")!
+private let FragmentController__method__24 = FragmentController__class.getMethodID(name: "doLoaderStop", sig: "(Z)V")!
+private let FragmentController__method__25 = FragmentController__class.getMethodID(name: "doLoaderDestroy", sig: "()V")!
+private let FragmentController__method__26 = FragmentController__class.getMethodID(name: "reportLoaderStart", sig: "()V")!

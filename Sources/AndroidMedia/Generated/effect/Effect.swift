@@ -9,8 +9,6 @@ public protocol Effect where Self: Object {
 
   func setParameter(parameterKey: String, value: Object?) -> Void
 
-  func setUpdateListener(listener: EffectUpdateListener?) -> Void
-
   func release() -> Void
 }
 
@@ -37,19 +35,19 @@ open class EffectProxy: Object, JInterfaceProxy, Effect {
     self.init(obj.toJavaObject()!)
   }
 
-  public func getName() -> String {
+  open func getName() -> String {
     self.javaObject.call(method: Effect__method__1, [])
   }
 
-  public func apply(inputTexId: Int32, width: Int32, height: Int32, outputTexId: Int32) {
+  open func apply(inputTexId: Int32, width: Int32, height: Int32, outputTexId: Int32) {
     self.javaObject.call(method: Effect__method__2, [inputTexId.toJavaParameter(), width.toJavaParameter(), height.toJavaParameter(), outputTexId.toJavaParameter()])
   }
 
-  public func setParameter(parameterKey: String, value: Object?) {
+  open func setParameter(parameterKey: String, value: Object?) {
     self.javaObject.call(method: Effect__method__3, [parameterKey.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func release() {
+  open func release() {
     self.javaObject.call(method: Effect__method__5, [])
   }
 }

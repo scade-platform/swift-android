@@ -7,35 +7,35 @@ open class CursorLoader: Object {
     super.init(ctor: CursorLoader__method__0, [JavaParameter(object: context?.toJavaObject())])
   }
 
-  public func getProjection() -> [String] {
+  open func getProjection() -> [String] {
     self.javaObject.call(method: CursorLoader__method__1, [])
   }
 
-  public func setProjection(projection: [String]) {
+  open func setProjection(projection: [String]) {
     self.javaObject.call(method: CursorLoader__method__2, [projection.toJavaParameter()])
   }
 
-  public func getSelection() -> String {
+  open func getSelection() -> String {
     self.javaObject.call(method: CursorLoader__method__3, [])
   }
 
-  public func setSelection(selection: String) {
+  open func setSelection(selection: String) {
     self.javaObject.call(method: CursorLoader__method__4, [selection.toJavaParameter()])
   }
 
-  public func getSelectionArgs() -> [String] {
+  open func getSelectionArgs() -> [String] {
     self.javaObject.call(method: CursorLoader__method__5, [])
   }
 
-  public func setSelectionArgs(selectionArgs: [String]) {
+  open func setSelectionArgs(selectionArgs: [String]) {
     self.javaObject.call(method: CursorLoader__method__6, [selectionArgs.toJavaParameter()])
   }
 
-  public func getSortOrder() -> String {
+  open func getSortOrder() -> String {
     self.javaObject.call(method: CursorLoader__method__7, [])
   }
 
-  public func setSortOrder(sortOrder: String) {
+  open func setSortOrder(sortOrder: String) {
     self.javaObject.call(method: CursorLoader__method__8, [sortOrder.toJavaParameter()])
   }
 

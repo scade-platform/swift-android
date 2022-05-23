@@ -45,53 +45,53 @@ open class PackageInstaller: Object {
 
   public static let STATUS_SUCCESS: Int32 = PackageInstaller__class.getStatic(field: PackageInstaller__field__15)
 
-  public func createSession(params: PackageInstaller.SessionParams?) -> Int32 {
+  open func createSession(params: PackageInstaller.SessionParams?) -> Int32 {
     self.javaObject.call(method: PackageInstaller__method__0, [params.toJavaParameter()])
   }
 
-  public func openSession(sessionId: Int32) -> PackageInstaller.Session? {
+  open func openSession(sessionId: Int32) -> PackageInstaller.Session? {
     self.javaObject.call(method: PackageInstaller__method__1, [sessionId.toJavaParameter()])
   }
 
-  public func updateSessionAppLabel(sessionId: Int32, appLabel: String?) {
+  open func updateSessionAppLabel(sessionId: Int32, appLabel: String?) {
     self.javaObject.call(method: PackageInstaller__method__2, [sessionId.toJavaParameter(), appLabel.toJavaParameter()])
   }
 
-  public func abandonSession(sessionId: Int32) {
+  open func abandonSession(sessionId: Int32) {
     self.javaObject.call(method: PackageInstaller__method__3, [sessionId.toJavaParameter()])
   }
 
-  public func getSessionInfo(sessionId: Int32) -> PackageInstaller.SessionInfo? {
+  open func getSessionInfo(sessionId: Int32) -> PackageInstaller.SessionInfo? {
     self.javaObject.call(method: PackageInstaller__method__4, [sessionId.toJavaParameter()])
   }
 
-  public func getAllSessions<R>() -> R? where R: List, R.E == PackageInstaller.SessionInfo {
+  open func getAllSessions<R>() -> R? where R: List, R.E == PackageInstaller.SessionInfo {
     self.javaObject.call(method: PackageInstaller__method__5, [])
   }
 
-  public func getMySessions<R>() -> R? where R: List, R.E == PackageInstaller.SessionInfo {
+  open func getMySessions<R>() -> R? where R: List, R.E == PackageInstaller.SessionInfo {
     self.javaObject.call(method: PackageInstaller__method__6, [])
   }
 
-  public func uninstall(packageName: String, statusReceiver: IntentSender?) {
+  open func uninstall(packageName: String, statusReceiver: IntentSender?) {
     self.javaObject.call(method: PackageInstaller__method__7, [packageName.toJavaParameter(), statusReceiver.toJavaParameter()])
   }
 
-  public func registerSessionCallback(callback: PackageInstaller.SessionCallback?) {
+  open func registerSessionCallback(callback: PackageInstaller.SessionCallback?) {
     self.javaObject.call(method: PackageInstaller__method__8, [JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func unregisterSessionCallback(callback: PackageInstaller.SessionCallback?) {
+  open func unregisterSessionCallback(callback: PackageInstaller.SessionCallback?) {
     self.javaObject.call(method: PackageInstaller__method__9, [JavaParameter(object: callback?.toJavaObject())])
   }
 }
 
 extension PackageInstaller {
-  public func getAllSessions() -> ListProxy<PackageInstaller.SessionInfo>? {
+  open func getAllSessions() -> ListProxy<PackageInstaller.SessionInfo>? {
     self.javaObject.call(method: PackageInstaller__method__5, [])
   }
 
-  public func getMySessions() -> ListProxy<PackageInstaller.SessionInfo>? {
+  open func getMySessions() -> ListProxy<PackageInstaller.SessionInfo>? {
     self.javaObject.call(method: PackageInstaller__method__6, [])
   }
 }
@@ -99,39 +99,39 @@ extension PackageInstaller {
 // ------------------------------------------------------------------------------------
 
 open class PackageInstallerSessionInfo: Object, Parcelable {
-  public func getSessionId() -> Int32 {
+  open func getSessionId() -> Int32 {
     self.javaObject.call(method: PackageInstallerSessionInfo__method__0, [])
   }
 
-  public func getInstallerPackageName() -> String {
+  open func getInstallerPackageName() -> String {
     self.javaObject.call(method: PackageInstallerSessionInfo__method__1, [])
   }
 
-  public func getProgress() -> Float {
+  open func getProgress() -> Float {
     self.javaObject.call(method: PackageInstallerSessionInfo__method__2, [])
   }
 
-  public func isActive() -> Bool {
+  open func isActive() -> Bool {
     self.javaObject.call(method: PackageInstallerSessionInfo__method__3, [])
   }
 
-  public func getAppPackageName() -> String {
+  open func getAppPackageName() -> String {
     self.javaObject.call(method: PackageInstallerSessionInfo__method__4, [])
   }
 
-  public func getAppLabel() -> String? {
+  open func getAppLabel() -> String? {
     self.javaObject.call(method: PackageInstallerSessionInfo__method__5, [])
   }
 
-  public func createDetailsIntent() -> Intent? {
+  open func createDetailsIntent() -> Intent? {
     self.javaObject.call(method: PackageInstallerSessionInfo__method__6, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: PackageInstallerSessionInfo__method__7, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: PackageInstallerSessionInfo__method__8, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }
@@ -147,31 +147,31 @@ open class PackageInstallerSessionParams: Object, Parcelable {
     super.init(ctor: PackageInstallerSessionParams__method__0, [mode.toJavaParameter()])
   }
 
-  public func setInstallLocation(installLocation: Int32) {
+  open func setInstallLocation(installLocation: Int32) {
     self.javaObject.call(method: PackageInstallerSessionParams__method__1, [installLocation.toJavaParameter()])
   }
 
-  public func setSize(sizeBytes: Int64) {
+  open func setSize(sizeBytes: Int64) {
     self.javaObject.call(method: PackageInstallerSessionParams__method__2, [sizeBytes.toJavaParameter()])
   }
 
-  public func setAppPackageName(appPackageName: String) {
+  open func setAppPackageName(appPackageName: String) {
     self.javaObject.call(method: PackageInstallerSessionParams__method__3, [appPackageName.toJavaParameter()])
   }
 
-  public func setAppLabel(appLabel: String?) {
+  open func setAppLabel(appLabel: String?) {
     self.javaObject.call(method: PackageInstallerSessionParams__method__4, [appLabel.toJavaParameter()])
   }
 
-  public func setOriginatingUid(originatingUid: Int32) {
+  open func setOriginatingUid(originatingUid: Int32) {
     self.javaObject.call(method: PackageInstallerSessionParams__method__5, [originatingUid.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: PackageInstallerSessionParams__method__6, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: PackageInstallerSessionParams__method__7, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
@@ -187,27 +187,27 @@ open class PackageInstallerSessionParams: Object, Parcelable {
 // ------------------------------------------------------------------------------------
 
 open class PackageInstallerSession: Object {
-  public func setStagingProgress(progress: Float) {
+  open func setStagingProgress(progress: Float) {
     self.javaObject.call(method: PackageInstallerSession__method__0, [progress.toJavaParameter()])
   }
 
-  public func getNames() -> [String] {
+  open func getNames() -> [String] {
     self.javaObject.call(method: PackageInstallerSession__method__1, [])
   }
 
-  public func removeSplit(splitName: String) {
+  open func removeSplit(splitName: String) {
     self.javaObject.call(method: PackageInstallerSession__method__2, [splitName.toJavaParameter()])
   }
 
-  public func commit(statusReceiver: IntentSender?) {
+  open func commit(statusReceiver: IntentSender?) {
     self.javaObject.call(method: PackageInstallerSession__method__3, [statusReceiver.toJavaParameter()])
   }
 
-  public func close() {
+  open func close() {
     self.javaObject.call(method: PackageInstallerSession__method__4, [])
   }
 
-  public func abandon() {
+  open func abandon() {
     self.javaObject.call(method: PackageInstallerSession__method__5, [])
   }
 }
@@ -243,23 +243,23 @@ open class PackageInstallerSessionCallbackProxy: Object, JInterfaceProxy, Packag
     self.init(obj.toJavaObject()!)
   }
 
-  public func onCreated(sessionId: Int32) {
+  open func onCreated(sessionId: Int32) {
     self.javaObject.call(method: PackageInstallerSessionCallback__method__1, [sessionId.toJavaParameter()])
   }
 
-  public func onBadgingChanged(sessionId: Int32) {
+  open func onBadgingChanged(sessionId: Int32) {
     self.javaObject.call(method: PackageInstallerSessionCallback__method__2, [sessionId.toJavaParameter()])
   }
 
-  public func onActiveChanged(sessionId: Int32, active: Bool) {
+  open func onActiveChanged(sessionId: Int32, active: Bool) {
     self.javaObject.call(method: PackageInstallerSessionCallback__method__3, [sessionId.toJavaParameter(), active.toJavaParameter()])
   }
 
-  public func onProgressChanged(sessionId: Int32, progress: Float) {
+  open func onProgressChanged(sessionId: Int32, progress: Float) {
     self.javaObject.call(method: PackageInstallerSessionCallback__method__4, [sessionId.toJavaParameter(), progress.toJavaParameter()])
   }
 
-  public func onFinished(sessionId: Int32, success: Bool) {
+  open func onFinished(sessionId: Int32, success: Bool) {
     self.javaObject.call(method: PackageInstallerSessionCallback__method__5, [sessionId.toJavaParameter(), success.toJavaParameter()])
   }
 }

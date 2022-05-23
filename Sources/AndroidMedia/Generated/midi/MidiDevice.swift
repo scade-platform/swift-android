@@ -5,23 +5,23 @@ import Java
 open class MidiDevice: Object {
   public typealias MidiConnection = AndroidMedia.MidiDeviceMidiConnection
 
-  public func getInfo() -> MidiDeviceInfo? {
+  open func getInfo() -> MidiDeviceInfo? {
     self.javaObject.call(method: MidiDevice__method__0, [])
   }
 
-  public func openInputPort(portNumber: Int32) -> MidiInputPort? {
+  open func openInputPort(portNumber: Int32) -> MidiInputPort? {
     self.javaObject.call(method: MidiDevice__method__1, [portNumber.toJavaParameter()])
   }
 
-  public func openOutputPort(portNumber: Int32) -> MidiOutputPort? {
+  open func openOutputPort(portNumber: Int32) -> MidiOutputPort? {
     self.javaObject.call(method: MidiDevice__method__2, [portNumber.toJavaParameter()])
   }
 
-  public func connectPorts(inputPort: MidiInputPort?, outputPortNumber: Int32) -> MidiDevice.MidiConnection? {
+  open func connectPorts(inputPort: MidiInputPort?, outputPortNumber: Int32) -> MidiDevice.MidiConnection? {
     self.javaObject.call(method: MidiDevice__method__3, [inputPort.toJavaParameter(), outputPortNumber.toJavaParameter()])
   }
 
-  public func close() {
+  open func close() {
     self.javaObject.call(method: MidiDevice__method__4, [])
   }
 }
@@ -29,7 +29,7 @@ open class MidiDevice: Object {
 // ------------------------------------------------------------------------------------
 
 open class MidiDeviceMidiConnection: Object {
-  public func close() {
+  open func close() {
     self.javaObject.call(method: MidiDeviceMidiConnection__method__0, [])
   }
 }

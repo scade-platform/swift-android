@@ -20,27 +20,27 @@ open class AdvertiseSettings: Object, Parcelable {
 
   public static let ADVERTISE_TX_POWER_ULTRA_LOW: Int32 = AdvertiseSettings__class.getStatic(field: AdvertiseSettings__field__6)
 
-  public func getMode() -> Int32 {
+  open func getMode() -> Int32 {
     self.javaObject.call(method: AdvertiseSettings__method__0, [])
   }
 
-  public func getTxPowerLevel() -> Int32 {
+  open func getTxPowerLevel() -> Int32 {
     self.javaObject.call(method: AdvertiseSettings__method__1, [])
   }
 
-  public func isConnectable() -> Bool {
+  open func isConnectable() -> Bool {
     self.javaObject.call(method: AdvertiseSettings__method__2, [])
   }
 
-  public func getTimeout() -> Int32 {
+  open func getTimeout() -> Int32 {
     self.javaObject.call(method: AdvertiseSettings__method__3, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: AdvertiseSettings__method__4, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: AdvertiseSettings__method__5, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }
@@ -52,23 +52,23 @@ open class AdvertiseSettingsBuilder: Object {
     super.init(ctor: AdvertiseSettingsBuilder__method__0, [])
   }
 
-  public func setAdvertiseMode(advertiseMode: Int32) -> AdvertiseSettings.Builder? {
+  open func setAdvertiseMode(advertiseMode: Int32) -> AdvertiseSettings.Builder? {
     self.javaObject.call(method: AdvertiseSettingsBuilder__method__1, [advertiseMode.toJavaParameter()])
   }
 
-  public func setTxPowerLevel(txPowerLevel: Int32) -> AdvertiseSettings.Builder? {
+  open func setTxPowerLevel(txPowerLevel: Int32) -> AdvertiseSettings.Builder? {
     self.javaObject.call(method: AdvertiseSettingsBuilder__method__2, [txPowerLevel.toJavaParameter()])
   }
 
-  public func setConnectable(connectable: Bool) -> AdvertiseSettings.Builder? {
+  open func setConnectable(connectable: Bool) -> AdvertiseSettings.Builder? {
     self.javaObject.call(method: AdvertiseSettingsBuilder__method__3, [connectable.toJavaParameter()])
   }
 
-  public func setTimeout(timeoutMillis: Int32) -> AdvertiseSettings.Builder? {
+  open func setTimeout(timeoutMillis: Int32) -> AdvertiseSettings.Builder? {
     self.javaObject.call(method: AdvertiseSettingsBuilder__method__4, [timeoutMillis.toJavaParameter()])
   }
 
-  public func build() -> AdvertiseSettings? {
+  open func build() -> AdvertiseSettings? {
     self.javaObject.call(method: AdvertiseSettingsBuilder__method__5, [])
   }
 

@@ -3,15 +3,15 @@
 import Java
 
 open class MediaTimestamp: Object {
-  public func getAnchorMediaTimeUs() -> Int64 {
+  open func getAnchorMediaTimeUs() -> Int64 {
     self.javaObject.call(method: MediaTimestamp__method__0, [])
   }
 
-  public func getAnchorSytemNanoTime() -> Int64 {
+  open func getAnchorSytemNanoTime() -> Int64 {
     self.javaObject.call(method: MediaTimestamp__method__1, [])
   }
 
-  public func getMediaClockRate() -> Float {
+  open func getMediaClockRate() -> Float {
     self.javaObject.call(method: MediaTimestamp__method__2, [])
   }
 }

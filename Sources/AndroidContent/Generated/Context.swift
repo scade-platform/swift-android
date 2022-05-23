@@ -14,27 +14,9 @@ public protocol Context where Self: Object {
 
   func getApplicationContext() -> Context?
 
-  func registerComponentCallbacks(callback: ComponentCallbacks?) -> Void
-
-  func unregisterComponentCallbacks(callback: ComponentCallbacks?) -> Void
-
-  func getText(resId: Int32) -> String?
-
-  func getString(resId: Int32) -> String
-
-  func getString(resId: Int32, formatArgs: [Object?]) -> String
-
-  func getColor(id: Int32) -> Int32
-
-  func getColorStateList(id: Int32) -> ColorStateList?
-
   func setTheme(resid: Int32) -> Void
 
   func getTheme() -> Resources.Theme?
-
-  func obtainStyledAttributes(attrs: [Int32]) -> TypedArray?
-
-  func obtainStyledAttributes(resid: Int32, attrs: [Int32]) -> TypedArray?
 
   func getPackageName() -> String
 
@@ -60,12 +42,6 @@ public protocol Context where Self: Object {
 
   func databaseList() -> [String]
 
-  func getWallpaperDesiredMinimumWidth() -> Int32
-
-  func getWallpaperDesiredMinimumHeight() -> Int32
-
-  func clearWallpaper() -> Void
-
   func startActivity(intent: Intent?) -> Void
 
   func startActivity(intent: Intent?, options: Bundle?) -> Void
@@ -84,10 +60,6 @@ public protocol Context where Self: Object {
 
   func sendOrderedBroadcast(intent: Intent?, receiverPermission: String) -> Void
 
-  func sendStickyBroadcast(intent: Intent?) -> Void
-
-  func removeStickyBroadcast(intent: Intent?) -> Void
-
   func registerReceiver(receiver: BroadcastReceiver?, filter: IntentFilter?) -> Intent?
 
   func unregisterReceiver(receiver: BroadcastReceiver?) -> Void
@@ -103,8 +75,6 @@ public protocol Context where Self: Object {
   func startInstrumentation(className: ComponentName?, profileFile: String, arguments: Bundle?) -> Bool
 
   func getSystemService(name: String) -> Object?
-
-  func getSystemService<T>(serviceClass: Class<T>?) -> T? where T: Object
 
   func getSystemServiceName<T0>(serviceClass: Class<T0>?) -> String where T0: Object
 
@@ -127,8 +97,6 @@ public protocol Context where Self: Object {
   func createConfigurationContext(overrideConfiguration: Configuration?) -> Context?
 
   func createDeviceProtectedStorageContext() -> Context?
-
-  func isRestricted() -> Bool
 
   func isDeviceProtectedStorage() -> Bool
 }
@@ -177,11 +145,11 @@ public extension Context where Self: Object {
   }
 
   func getSystemService<T>(serviceClass: Class<T>?) -> T? where T: Object {
-    self.javaObject.call(method: Context__method__51, [serviceClass.toJavaParameter()])
+    self.javaObject.call(method: Context__method__46, [serviceClass.toJavaParameter()])
   }
 
   func isRestricted() -> Bool {
-    self.javaObject.call(method: Context__method__63, [])
+    self.javaObject.call(method: Context__method__58, [])
   }
 }
 
@@ -350,223 +318,203 @@ open class ContextProxy: Object, JInterfaceProxy, Context {
     self.init(obj.toJavaObject()!)
   }
 
-  public func getAssets() -> AssetManager? {
+  open func getAssets() -> AssetManager? {
     self.javaObject.call(method: Context__method__1, [])
   }
 
-  public func getResources() -> Resources? {
+  open func getResources() -> Resources? {
     self.javaObject.call(method: Context__method__2, [])
   }
 
-  public func getPackageManager() -> PackageManager? {
+  open func getPackageManager() -> PackageManager? {
     let res = self.javaObject.call(method: Context__method__3, []) as Object?
     return cast(res, to: PackageManagerProxy.self)
   }
 
-  public func getContentResolver() -> ContentResolver? {
+  open func getContentResolver() -> ContentResolver? {
     let res = self.javaObject.call(method: Context__method__4, []) as Object?
     return cast(res, to: ContentResolverProxy.self)
   }
 
-  public func getApplicationContext() -> Context? {
+  open func getApplicationContext() -> Context? {
     let res = self.javaObject.call(method: Context__method__5, []) as Object?
     return cast(res, to: ContextProxy.self)
   }
 
-  public func setTheme(resid: Int32) {
+  open func setTheme(resid: Int32) {
     self.javaObject.call(method: Context__method__13, [resid.toJavaParameter()])
   }
 
-  public func getTheme() -> Resources.Theme? {
+  open func getTheme() -> Resources.Theme? {
     self.javaObject.call(method: Context__method__14, [])
   }
 
-  public func getPackageName() -> String {
+  open func getPackageName() -> String {
     self.javaObject.call(method: Context__method__17, [])
   }
 
-  public func getApplicationInfo() -> ApplicationInfo? {
+  open func getApplicationInfo() -> ApplicationInfo? {
     self.javaObject.call(method: Context__method__18, [])
   }
 
-  public func getPackageResourcePath() -> String {
+  open func getPackageResourcePath() -> String {
     self.javaObject.call(method: Context__method__19, [])
   }
 
-  public func getPackageCodePath() -> String {
+  open func getPackageCodePath() -> String {
     self.javaObject.call(method: Context__method__20, [])
   }
 
-  public func getSharedPreferences(name: String, mode: Int32) -> SharedPreferences? {
+  open func getSharedPreferences(name: String, mode: Int32) -> SharedPreferences? {
     let res = self.javaObject.call(method: Context__method__21, [name.toJavaParameter(), mode.toJavaParameter()]) as Object?
     return cast(res, to: SharedPreferencesProxy.self)
   }
 
-  public func moveSharedPreferencesFrom(sourceContext: Context?, name: String) -> Bool {
+  open func moveSharedPreferencesFrom(sourceContext: Context?, name: String) -> Bool {
     self.javaObject.call(method: Context__method__22, [JavaParameter(object: sourceContext?.toJavaObject()), name.toJavaParameter()])
   }
 
-  public func deleteSharedPreferences(name: String) -> Bool {
+  open func deleteSharedPreferences(name: String) -> Bool {
     self.javaObject.call(method: Context__method__23, [name.toJavaParameter()])
   }
 
-  public func deleteFile(name: String) -> Bool {
+  open func deleteFile(name: String) -> Bool {
     self.javaObject.call(method: Context__method__24, [name.toJavaParameter()])
   }
 
-  public func fileList() -> [String] {
+  open func fileList() -> [String] {
     self.javaObject.call(method: Context__method__25, [])
   }
 
-  public func moveDatabaseFrom(sourceContext: Context?, name: String) -> Bool {
+  open func moveDatabaseFrom(sourceContext: Context?, name: String) -> Bool {
     self.javaObject.call(method: Context__method__26, [JavaParameter(object: sourceContext?.toJavaObject()), name.toJavaParameter()])
   }
 
-  public func deleteDatabase(name: String) -> Bool {
+  open func deleteDatabase(name: String) -> Bool {
     self.javaObject.call(method: Context__method__27, [name.toJavaParameter()])
   }
 
-  public func databaseList() -> [String] {
+  open func databaseList() -> [String] {
     self.javaObject.call(method: Context__method__28, [])
   }
 
-  public func getWallpaperDesiredMinimumWidth() -> Int32 {
-    self.javaObject.call(method: Context__method__29, [])
+  open func startActivity(intent: Intent?) {
+    self.javaObject.call(method: Context__method__29, [intent.toJavaParameter()])
   }
 
-  public func getWallpaperDesiredMinimumHeight() -> Int32 {
-    self.javaObject.call(method: Context__method__30, [])
+  open func startActivity(intent: Intent?, options: Bundle?) {
+    self.javaObject.call(method: Context__method__30, [intent.toJavaParameter(), options.toJavaParameter()])
   }
 
-  public func clearWallpaper() {
-    self.javaObject.call(method: Context__method__31, [])
+  open func startActivities(intents: [Intent?]) {
+    self.javaObject.call(method: Context__method__31, [intents.toJavaParameter()])
   }
 
-  public func startActivity(intent: Intent?) {
-    self.javaObject.call(method: Context__method__32, [intent.toJavaParameter()])
+  open func startActivities(intents: [Intent?], options: Bundle?) {
+    self.javaObject.call(method: Context__method__32, [intents.toJavaParameter(), options.toJavaParameter()])
   }
 
-  public func startActivity(intent: Intent?, options: Bundle?) {
-    self.javaObject.call(method: Context__method__33, [intent.toJavaParameter(), options.toJavaParameter()])
+  open func startIntentSender(intent: IntentSender?, fillInIntent: Intent?, flagsMask: Int32, flagsValues: Int32, extraFlags: Int32) {
+    self.javaObject.call(method: Context__method__33, [intent.toJavaParameter(), fillInIntent.toJavaParameter(), flagsMask.toJavaParameter(), flagsValues.toJavaParameter(), extraFlags.toJavaParameter()])
   }
 
-  public func startActivities(intents: [Intent?]) {
-    self.javaObject.call(method: Context__method__34, [intents.toJavaParameter()])
+  open func startIntentSender(intent: IntentSender?, fillInIntent: Intent?, flagsMask: Int32, flagsValues: Int32, extraFlags: Int32, options: Bundle?) {
+    self.javaObject.call(method: Context__method__34, [intent.toJavaParameter(), fillInIntent.toJavaParameter(), flagsMask.toJavaParameter(), flagsValues.toJavaParameter(), extraFlags.toJavaParameter(), options.toJavaParameter()])
   }
 
-  public func startActivities(intents: [Intent?], options: Bundle?) {
-    self.javaObject.call(method: Context__method__35, [intents.toJavaParameter(), options.toJavaParameter()])
+  open func sendBroadcast(intent: Intent?) {
+    self.javaObject.call(method: Context__method__35, [intent.toJavaParameter()])
   }
 
-  public func startIntentSender(intent: IntentSender?, fillInIntent: Intent?, flagsMask: Int32, flagsValues: Int32, extraFlags: Int32) {
-    self.javaObject.call(method: Context__method__36, [intent.toJavaParameter(), fillInIntent.toJavaParameter(), flagsMask.toJavaParameter(), flagsValues.toJavaParameter(), extraFlags.toJavaParameter()])
+  open func sendBroadcast(intent: Intent?, receiverPermission: String) {
+    self.javaObject.call(method: Context__method__36, [intent.toJavaParameter(), receiverPermission.toJavaParameter()])
   }
 
-  public func startIntentSender(intent: IntentSender?, fillInIntent: Intent?, flagsMask: Int32, flagsValues: Int32, extraFlags: Int32, options: Bundle?) {
-    self.javaObject.call(method: Context__method__37, [intent.toJavaParameter(), fillInIntent.toJavaParameter(), flagsMask.toJavaParameter(), flagsValues.toJavaParameter(), extraFlags.toJavaParameter(), options.toJavaParameter()])
+  open func sendOrderedBroadcast(intent: Intent?, receiverPermission: String) {
+    self.javaObject.call(method: Context__method__37, [intent.toJavaParameter(), receiverPermission.toJavaParameter()])
   }
 
-  public func sendBroadcast(intent: Intent?) {
-    self.javaObject.call(method: Context__method__38, [intent.toJavaParameter()])
+  open func registerReceiver(receiver: BroadcastReceiver?, filter: IntentFilter?) -> Intent? {
+    self.javaObject.call(method: Context__method__38, [JavaParameter(object: receiver?.toJavaObject()), filter.toJavaParameter()])
   }
 
-  public func sendBroadcast(intent: Intent?, receiverPermission: String) {
-    self.javaObject.call(method: Context__method__39, [intent.toJavaParameter(), receiverPermission.toJavaParameter()])
+  open func unregisterReceiver(receiver: BroadcastReceiver?) {
+    self.javaObject.call(method: Context__method__39, [JavaParameter(object: receiver?.toJavaObject())])
   }
 
-  public func sendOrderedBroadcast(intent: Intent?, receiverPermission: String) {
-    self.javaObject.call(method: Context__method__40, [intent.toJavaParameter(), receiverPermission.toJavaParameter()])
+  open func startService(service: Intent?) -> ComponentName? {
+    self.javaObject.call(method: Context__method__40, [service.toJavaParameter()])
   }
 
-  public func sendStickyBroadcast(intent: Intent?) {
-    self.javaObject.call(method: Context__method__41, [intent.toJavaParameter()])
+  open func stopService(service: Intent?) -> Bool {
+    self.javaObject.call(method: Context__method__41, [service.toJavaParameter()])
   }
 
-  public func removeStickyBroadcast(intent: Intent?) {
-    self.javaObject.call(method: Context__method__42, [intent.toJavaParameter()])
+  open func bindService(service: Intent?, conn: ServiceConnection?, flags: Int32) -> Bool {
+    self.javaObject.call(method: Context__method__42, [service.toJavaParameter(), JavaParameter(object: conn?.toJavaObject()), flags.toJavaParameter()])
   }
 
-  public func registerReceiver(receiver: BroadcastReceiver?, filter: IntentFilter?) -> Intent? {
-    self.javaObject.call(method: Context__method__43, [JavaParameter(object: receiver?.toJavaObject()), filter.toJavaParameter()])
+  open func unbindService(conn: ServiceConnection?) {
+    self.javaObject.call(method: Context__method__43, [JavaParameter(object: conn?.toJavaObject())])
   }
 
-  public func unregisterReceiver(receiver: BroadcastReceiver?) {
-    self.javaObject.call(method: Context__method__44, [JavaParameter(object: receiver?.toJavaObject())])
+  open func startInstrumentation(className: ComponentName?, profileFile: String, arguments: Bundle?) -> Bool {
+    self.javaObject.call(method: Context__method__44, [className.toJavaParameter(), profileFile.toJavaParameter(), arguments.toJavaParameter()])
   }
 
-  public func startService(service: Intent?) -> ComponentName? {
-    self.javaObject.call(method: Context__method__45, [service.toJavaParameter()])
+  open func getSystemService(name: String) -> Object? {
+    self.javaObject.call(method: Context__method__45, [name.toJavaParameter()])
   }
 
-  public func stopService(service: Intent?) -> Bool {
-    self.javaObject.call(method: Context__method__46, [service.toJavaParameter()])
+  open func getSystemServiceName<T0>(serviceClass: Class<T0>?) -> String where T0: Object {
+    self.javaObject.call(method: Context__method__47, [serviceClass.toJavaParameter()])
   }
 
-  public func bindService(service: Intent?, conn: ServiceConnection?, flags: Int32) -> Bool {
-    self.javaObject.call(method: Context__method__47, [service.toJavaParameter(), JavaParameter(object: conn?.toJavaObject()), flags.toJavaParameter()])
+  open func checkPermission(permission: String, pid: Int32, uid: Int32) -> Int32 {
+    self.javaObject.call(method: Context__method__48, [permission.toJavaParameter(), pid.toJavaParameter(), uid.toJavaParameter()])
   }
 
-  public func unbindService(conn: ServiceConnection?) {
-    self.javaObject.call(method: Context__method__48, [JavaParameter(object: conn?.toJavaObject())])
+  open func checkCallingPermission(permission: String) -> Int32 {
+    self.javaObject.call(method: Context__method__49, [permission.toJavaParameter()])
   }
 
-  public func startInstrumentation(className: ComponentName?, profileFile: String, arguments: Bundle?) -> Bool {
-    self.javaObject.call(method: Context__method__49, [className.toJavaParameter(), profileFile.toJavaParameter(), arguments.toJavaParameter()])
+  open func checkCallingOrSelfPermission(permission: String) -> Int32 {
+    self.javaObject.call(method: Context__method__50, [permission.toJavaParameter()])
   }
 
-  public func getSystemService(name: String) -> Object? {
-    self.javaObject.call(method: Context__method__50, [name.toJavaParameter()])
+  open func checkSelfPermission(permission: String) -> Int32 {
+    self.javaObject.call(method: Context__method__51, [permission.toJavaParameter()])
   }
 
-  public func getSystemServiceName<T0>(serviceClass: Class<T0>?) -> String where T0: Object {
-    self.javaObject.call(method: Context__method__52, [serviceClass.toJavaParameter()])
+  open func enforcePermission(permission: String, pid: Int32, uid: Int32, message: String) {
+    self.javaObject.call(method: Context__method__52, [permission.toJavaParameter(), pid.toJavaParameter(), uid.toJavaParameter(), message.toJavaParameter()])
   }
 
-  public func checkPermission(permission: String, pid: Int32, uid: Int32) -> Int32 {
-    self.javaObject.call(method: Context__method__53, [permission.toJavaParameter(), pid.toJavaParameter(), uid.toJavaParameter()])
+  open func enforceCallingPermission(permission: String, message: String) {
+    self.javaObject.call(method: Context__method__53, [permission.toJavaParameter(), message.toJavaParameter()])
   }
 
-  public func checkCallingPermission(permission: String) -> Int32 {
-    self.javaObject.call(method: Context__method__54, [permission.toJavaParameter()])
+  open func enforceCallingOrSelfPermission(permission: String, message: String) {
+    self.javaObject.call(method: Context__method__54, [permission.toJavaParameter(), message.toJavaParameter()])
   }
 
-  public func checkCallingOrSelfPermission(permission: String) -> Int32 {
-    self.javaObject.call(method: Context__method__55, [permission.toJavaParameter()])
-  }
-
-  public func checkSelfPermission(permission: String) -> Int32 {
-    self.javaObject.call(method: Context__method__56, [permission.toJavaParameter()])
-  }
-
-  public func enforcePermission(permission: String, pid: Int32, uid: Int32, message: String) {
-    self.javaObject.call(method: Context__method__57, [permission.toJavaParameter(), pid.toJavaParameter(), uid.toJavaParameter(), message.toJavaParameter()])
-  }
-
-  public func enforceCallingPermission(permission: String, message: String) {
-    self.javaObject.call(method: Context__method__58, [permission.toJavaParameter(), message.toJavaParameter()])
-  }
-
-  public func enforceCallingOrSelfPermission(permission: String, message: String) {
-    self.javaObject.call(method: Context__method__59, [permission.toJavaParameter(), message.toJavaParameter()])
-  }
-
-  public func createPackageContext(packageName: String, flags: Int32) -> Context? {
-    let res = self.javaObject.call(method: Context__method__60, [packageName.toJavaParameter(), flags.toJavaParameter()]) as Object?
+  open func createPackageContext(packageName: String, flags: Int32) -> Context? {
+    let res = self.javaObject.call(method: Context__method__55, [packageName.toJavaParameter(), flags.toJavaParameter()]) as Object?
     return cast(res, to: ContextProxy.self)
   }
 
-  public func createConfigurationContext(overrideConfiguration: Configuration?) -> Context? {
-    let res = self.javaObject.call(method: Context__method__61, [overrideConfiguration.toJavaParameter()]) as Object?
+  open func createConfigurationContext(overrideConfiguration: Configuration?) -> Context? {
+    let res = self.javaObject.call(method: Context__method__56, [overrideConfiguration.toJavaParameter()]) as Object?
     return cast(res, to: ContextProxy.self)
   }
 
-  public func createDeviceProtectedStorageContext() -> Context? {
-    let res = self.javaObject.call(method: Context__method__62, []) as Object?
+  open func createDeviceProtectedStorageContext() -> Context? {
+    let res = self.javaObject.call(method: Context__method__57, []) as Object?
     return cast(res, to: ContextProxy.self)
   }
 
-  public func isDeviceProtectedStorage() -> Bool {
-    self.javaObject.call(method: Context__method__64, [])
+  open func isDeviceProtectedStorage() -> Bool {
+    self.javaObject.call(method: Context__method__59, [])
   }
 }
 
@@ -602,42 +550,37 @@ private let Context__method__25 = Context__class.getMethodID(name: "fileList", s
 private let Context__method__26 = Context__class.getMethodID(name: "moveDatabaseFrom", sig: "(Landroid/content/Context;Ljava/lang/String;)Z")!
 private let Context__method__27 = Context__class.getMethodID(name: "deleteDatabase", sig: "(Ljava/lang/String;)Z")!
 private let Context__method__28 = Context__class.getMethodID(name: "databaseList", sig: "()[Ljava/lang/String;")!
-private let Context__method__29 = Context__class.getMethodID(name: "getWallpaperDesiredMinimumWidth", sig: "()I")!
-private let Context__method__30 = Context__class.getMethodID(name: "getWallpaperDesiredMinimumHeight", sig: "()I")!
-private let Context__method__31 = Context__class.getMethodID(name: "clearWallpaper", sig: "()V")!
-private let Context__method__32 = Context__class.getMethodID(name: "startActivity", sig: "(Landroid/content/Intent;)V")!
-private let Context__method__33 = Context__class.getMethodID(name: "startActivity", sig: "(Landroid/content/Intent;Landroid/os/Bundle;)V")!
-private let Context__method__34 = Context__class.getMethodID(name: "startActivities", sig: "([Landroid/content/Intent;)V")!
-private let Context__method__35 = Context__class.getMethodID(name: "startActivities", sig: "([Landroid/content/Intent;Landroid/os/Bundle;)V")!
-private let Context__method__36 = Context__class.getMethodID(name: "startIntentSender", sig: "(Landroid/content/IntentSender;Landroid/content/Intent;III)V")!
-private let Context__method__37 = Context__class.getMethodID(name: "startIntentSender", sig: "(Landroid/content/IntentSender;Landroid/content/Intent;IIILandroid/os/Bundle;)V")!
-private let Context__method__38 = Context__class.getMethodID(name: "sendBroadcast", sig: "(Landroid/content/Intent;)V")!
-private let Context__method__39 = Context__class.getMethodID(name: "sendBroadcast", sig: "(Landroid/content/Intent;Ljava/lang/String;)V")!
-private let Context__method__40 = Context__class.getMethodID(name: "sendOrderedBroadcast", sig: "(Landroid/content/Intent;Ljava/lang/String;)V")!
-private let Context__method__41 = Context__class.getMethodID(name: "sendStickyBroadcast", sig: "(Landroid/content/Intent;)V")!
-private let Context__method__42 = Context__class.getMethodID(name: "removeStickyBroadcast", sig: "(Landroid/content/Intent;)V")!
-private let Context__method__43 = Context__class.getMethodID(name: "registerReceiver", sig: "(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;")!
-private let Context__method__44 = Context__class.getMethodID(name: "unregisterReceiver", sig: "(Landroid/content/BroadcastReceiver;)V")!
-private let Context__method__45 = Context__class.getMethodID(name: "startService", sig: "(Landroid/content/Intent;)Landroid/content/ComponentName;")!
-private let Context__method__46 = Context__class.getMethodID(name: "stopService", sig: "(Landroid/content/Intent;)Z")!
-private let Context__method__47 = Context__class.getMethodID(name: "bindService", sig: "(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z")!
-private let Context__method__48 = Context__class.getMethodID(name: "unbindService", sig: "(Landroid/content/ServiceConnection;)V")!
-private let Context__method__49 = Context__class.getMethodID(name: "startInstrumentation", sig: "(Landroid/content/ComponentName;Ljava/lang/String;Landroid/os/Bundle;)Z")!
-private let Context__method__50 = Context__class.getMethodID(name: "getSystemService", sig: "(Ljava/lang/String;)Ljava/lang/Object;")!
-private let Context__method__51 = Context__class.getMethodID(name: "getSystemService", sig: "(Ljava/lang/Class;)Ljava/lang/Object;")!
-private let Context__method__52 = Context__class.getMethodID(name: "getSystemServiceName", sig: "(Ljava/lang/Class;)Ljava/lang/String;")!
-private let Context__method__53 = Context__class.getMethodID(name: "checkPermission", sig: "(Ljava/lang/String;II)I")!
-private let Context__method__54 = Context__class.getMethodID(name: "checkCallingPermission", sig: "(Ljava/lang/String;)I")!
-private let Context__method__55 = Context__class.getMethodID(name: "checkCallingOrSelfPermission", sig: "(Ljava/lang/String;)I")!
-private let Context__method__56 = Context__class.getMethodID(name: "checkSelfPermission", sig: "(Ljava/lang/String;)I")!
-private let Context__method__57 = Context__class.getMethodID(name: "enforcePermission", sig: "(Ljava/lang/String;IILjava/lang/String;)V")!
-private let Context__method__58 = Context__class.getMethodID(name: "enforceCallingPermission", sig: "(Ljava/lang/String;Ljava/lang/String;)V")!
-private let Context__method__59 = Context__class.getMethodID(name: "enforceCallingOrSelfPermission", sig: "(Ljava/lang/String;Ljava/lang/String;)V")!
-private let Context__method__60 = Context__class.getMethodID(name: "createPackageContext", sig: "(Ljava/lang/String;I)Landroid/content/Context;")!
-private let Context__method__61 = Context__class.getMethodID(name: "createConfigurationContext", sig: "(Landroid/content/res/Configuration;)Landroid/content/Context;")!
-private let Context__method__62 = Context__class.getMethodID(name: "createDeviceProtectedStorageContext", sig: "()Landroid/content/Context;")!
-private let Context__method__63 = Context__class.getMethodID(name: "isRestricted", sig: "()Z")!
-private let Context__method__64 = Context__class.getMethodID(name: "isDeviceProtectedStorage", sig: "()Z")!
+private let Context__method__29 = Context__class.getMethodID(name: "startActivity", sig: "(Landroid/content/Intent;)V")!
+private let Context__method__30 = Context__class.getMethodID(name: "startActivity", sig: "(Landroid/content/Intent;Landroid/os/Bundle;)V")!
+private let Context__method__31 = Context__class.getMethodID(name: "startActivities", sig: "([Landroid/content/Intent;)V")!
+private let Context__method__32 = Context__class.getMethodID(name: "startActivities", sig: "([Landroid/content/Intent;Landroid/os/Bundle;)V")!
+private let Context__method__33 = Context__class.getMethodID(name: "startIntentSender", sig: "(Landroid/content/IntentSender;Landroid/content/Intent;III)V")!
+private let Context__method__34 = Context__class.getMethodID(name: "startIntentSender", sig: "(Landroid/content/IntentSender;Landroid/content/Intent;IIILandroid/os/Bundle;)V")!
+private let Context__method__35 = Context__class.getMethodID(name: "sendBroadcast", sig: "(Landroid/content/Intent;)V")!
+private let Context__method__36 = Context__class.getMethodID(name: "sendBroadcast", sig: "(Landroid/content/Intent;Ljava/lang/String;)V")!
+private let Context__method__37 = Context__class.getMethodID(name: "sendOrderedBroadcast", sig: "(Landroid/content/Intent;Ljava/lang/String;)V")!
+private let Context__method__38 = Context__class.getMethodID(name: "registerReceiver", sig: "(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;")!
+private let Context__method__39 = Context__class.getMethodID(name: "unregisterReceiver", sig: "(Landroid/content/BroadcastReceiver;)V")!
+private let Context__method__40 = Context__class.getMethodID(name: "startService", sig: "(Landroid/content/Intent;)Landroid/content/ComponentName;")!
+private let Context__method__41 = Context__class.getMethodID(name: "stopService", sig: "(Landroid/content/Intent;)Z")!
+private let Context__method__42 = Context__class.getMethodID(name: "bindService", sig: "(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z")!
+private let Context__method__43 = Context__class.getMethodID(name: "unbindService", sig: "(Landroid/content/ServiceConnection;)V")!
+private let Context__method__44 = Context__class.getMethodID(name: "startInstrumentation", sig: "(Landroid/content/ComponentName;Ljava/lang/String;Landroid/os/Bundle;)Z")!
+private let Context__method__45 = Context__class.getMethodID(name: "getSystemService", sig: "(Ljava/lang/String;)Ljava/lang/Object;")!
+private let Context__method__46 = Context__class.getMethodID(name: "getSystemService", sig: "(Ljava/lang/Class;)Ljava/lang/Object;")!
+private let Context__method__47 = Context__class.getMethodID(name: "getSystemServiceName", sig: "(Ljava/lang/Class;)Ljava/lang/String;")!
+private let Context__method__48 = Context__class.getMethodID(name: "checkPermission", sig: "(Ljava/lang/String;II)I")!
+private let Context__method__49 = Context__class.getMethodID(name: "checkCallingPermission", sig: "(Ljava/lang/String;)I")!
+private let Context__method__50 = Context__class.getMethodID(name: "checkCallingOrSelfPermission", sig: "(Ljava/lang/String;)I")!
+private let Context__method__51 = Context__class.getMethodID(name: "checkSelfPermission", sig: "(Ljava/lang/String;)I")!
+private let Context__method__52 = Context__class.getMethodID(name: "enforcePermission", sig: "(Ljava/lang/String;IILjava/lang/String;)V")!
+private let Context__method__53 = Context__class.getMethodID(name: "enforceCallingPermission", sig: "(Ljava/lang/String;Ljava/lang/String;)V")!
+private let Context__method__54 = Context__class.getMethodID(name: "enforceCallingOrSelfPermission", sig: "(Ljava/lang/String;Ljava/lang/String;)V")!
+private let Context__method__55 = Context__class.getMethodID(name: "createPackageContext", sig: "(Ljava/lang/String;I)Landroid/content/Context;")!
+private let Context__method__56 = Context__class.getMethodID(name: "createConfigurationContext", sig: "(Landroid/content/res/Configuration;)Landroid/content/Context;")!
+private let Context__method__57 = Context__class.getMethodID(name: "createDeviceProtectedStorageContext", sig: "()Landroid/content/Context;")!
+private let Context__method__58 = Context__class.getMethodID(name: "isRestricted", sig: "()Z")!
+private let Context__method__59 = Context__class.getMethodID(name: "isDeviceProtectedStorage", sig: "()Z")!
 
 private let Context__field__0 = Context__class.getStaticFieldID(name: "ACCESSIBILITY_SERVICE", sig: "Ljava/lang/String;")!
 private let Context__field__1 = Context__class.getStaticFieldID(name: "ACCOUNT_SERVICE", sig: "Ljava/lang/String;")!

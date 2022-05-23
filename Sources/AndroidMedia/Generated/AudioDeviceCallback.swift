@@ -2,11 +2,7 @@
 
 import Java
 
-public protocol AudioDeviceCallback where Self: Object {
-  func onAudioDevicesAdded(addedDevices: [AudioDeviceInfo?]) -> Void
-
-  func onAudioDevicesRemoved(removedDevices: [AudioDeviceInfo?]) -> Void
-}
+public protocol AudioDeviceCallback where Self: Object {}
 
 public extension AudioDeviceCallback {
   func box() -> AudioDeviceCallbackProxy {

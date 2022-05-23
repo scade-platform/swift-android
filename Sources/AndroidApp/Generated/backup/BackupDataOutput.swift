@@ -3,11 +3,11 @@
 import Java
 
 open class BackupDataOutput: Object {
-  public func writeEntityHeader(key: String, dataSize: Int32) -> Int32 {
+  open func writeEntityHeader(key: String, dataSize: Int32) -> Int32 {
     self.javaObject.call(method: BackupDataOutput__method__0, [key.toJavaParameter(), dataSize.toJavaParameter()])
   }
 
-  public func writeEntityData(data: [Int8], size: Int32) -> Int32 {
+  open func writeEntityData(data: [Int8], size: Int32) -> Int32 {
     self.javaObject.call(method: BackupDataOutput__method__1, [data.toJavaParameter(), size.toJavaParameter()])
   }
 }

@@ -7,11 +7,11 @@ open class NdefFormatable: Object, BasicTagTechnology {
     NdefFormatable__class.callStatic(method: NdefFormatable__method__0, [tag.toJavaParameter()])
   }
 
-  public func format(firstMessage: NdefMessage?) {
+  open func format(firstMessage: NdefMessage?) {
     self.javaObject.call(method: NdefFormatable__method__1, [firstMessage.toJavaParameter()])
   }
 
-  public func formatReadOnly(firstMessage: NdefMessage?) {
+  open func formatReadOnly(firstMessage: NdefMessage?) {
     self.javaObject.call(method: NdefFormatable__method__2, [firstMessage.toJavaParameter()])
   }
 }

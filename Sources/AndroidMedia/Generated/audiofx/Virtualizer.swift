@@ -24,43 +24,43 @@ open class Virtualizer: AudioEffect {
     super.init(ctor: Virtualizer__method__0, [priority.toJavaParameter(), audioSession.toJavaParameter()])
   }
 
-  public func getStrengthSupported() -> Bool {
+  open func getStrengthSupported() -> Bool {
     self.javaObject.call(method: Virtualizer__method__1, [])
   }
 
-  public func setStrength(strength: Int16) {
+  open func setStrength(strength: Int16) {
     self.javaObject.call(method: Virtualizer__method__2, [strength.toJavaParameter()])
   }
 
-  public func getRoundedStrength() -> Int16 {
+  open func getRoundedStrength() -> Int16 {
     self.javaObject.call(method: Virtualizer__method__3, [])
   }
 
-  public func canVirtualize(inputChannelMask: Int32, virtualizationMode: Int32) -> Bool {
+  open func canVirtualize(inputChannelMask: Int32, virtualizationMode: Int32) -> Bool {
     self.javaObject.call(method: Virtualizer__method__4, [inputChannelMask.toJavaParameter(), virtualizationMode.toJavaParameter()])
   }
 
-  public func getSpeakerAngles(inputChannelMask: Int32, virtualizationMode: Int32, angles: [Int32]) -> Bool {
+  open func getSpeakerAngles(inputChannelMask: Int32, virtualizationMode: Int32, angles: [Int32]) -> Bool {
     self.javaObject.call(method: Virtualizer__method__5, [inputChannelMask.toJavaParameter(), virtualizationMode.toJavaParameter(), angles.toJavaParameter()])
   }
 
-  public func forceVirtualizationMode(virtualizationMode: Int32) -> Bool {
+  open func forceVirtualizationMode(virtualizationMode: Int32) -> Bool {
     self.javaObject.call(method: Virtualizer__method__6, [virtualizationMode.toJavaParameter()])
   }
 
-  public func getVirtualizationMode() -> Int32 {
+  open func getVirtualizationMode() -> Int32 {
     self.javaObject.call(method: Virtualizer__method__7, [])
   }
 
-  public func setParameterListener(listener: Virtualizer.OnParameterChangeListener?) {
+  open func setParameterListener(listener: Virtualizer.OnParameterChangeListener?) {
     self.javaObject.call(method: Virtualizer__method__8, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func getProperties() -> Virtualizer.Settings? {
+  open func getProperties() -> Virtualizer.Settings? {
     self.javaObject.call(method: Virtualizer__method__9, [])
   }
 
-  public func setProperties(settings: Virtualizer.Settings?) {
+  open func setProperties(settings: Virtualizer.Settings?) {
     self.javaObject.call(method: Virtualizer__method__10, [settings.toJavaParameter()])
   }
 

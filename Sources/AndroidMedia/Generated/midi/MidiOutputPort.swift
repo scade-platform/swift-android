@@ -7,15 +7,15 @@ open class MidiOutputPort: Object, MidiSender {
     self.javaObject.call(method: MidiOutputPort__method__0, [])
   }
 
-  public func onConnect(receiver: MidiReceiver?) {
+  open func onConnect(receiver: MidiReceiver?) {
     self.javaObject.call(method: MidiOutputPort__method__1, [JavaParameter(object: receiver?.toJavaObject())])
   }
 
-  public func onDisconnect(receiver: MidiReceiver?) {
+  open func onDisconnect(receiver: MidiReceiver?) {
     self.javaObject.call(method: MidiOutputPort__method__2, [JavaParameter(object: receiver?.toJavaObject())])
   }
 
-  public func close() {
+  open func close() {
     self.javaObject.call(method: MidiOutputPort__method__3, [])
   }
 }

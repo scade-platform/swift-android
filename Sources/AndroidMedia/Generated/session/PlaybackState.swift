@@ -70,57 +70,57 @@ open class PlaybackState: Object, Parcelable {
 
   public static let STATE_STOPPED: Int32 = PlaybackState__class.getStatic(field: PlaybackState__field__30)
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: PlaybackState__method__0, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: PlaybackState__method__1, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func getState() -> Int32 {
+  open func getState() -> Int32 {
     self.javaObject.call(method: PlaybackState__method__2, [])
   }
 
-  public func getPosition() -> Int64 {
+  open func getPosition() -> Int64 {
     self.javaObject.call(method: PlaybackState__method__3, [])
   }
 
-  public func getBufferedPosition() -> Int64 {
+  open func getBufferedPosition() -> Int64 {
     self.javaObject.call(method: PlaybackState__method__4, [])
   }
 
-  public func getPlaybackSpeed() -> Float {
+  open func getPlaybackSpeed() -> Float {
     self.javaObject.call(method: PlaybackState__method__5, [])
   }
 
-  public func getActions() -> Int64 {
+  open func getActions() -> Int64 {
     self.javaObject.call(method: PlaybackState__method__6, [])
   }
 
-  public func getCustomActions<R>() -> R? where R: List, R.E == PlaybackState.CustomAction {
+  open func getCustomActions<R>() -> R? where R: List, R.E == PlaybackState.CustomAction {
     self.javaObject.call(method: PlaybackState__method__7, [])
   }
 
-  public func getErrorMessage() -> String? {
+  open func getErrorMessage() -> String? {
     self.javaObject.call(method: PlaybackState__method__8, [])
   }
 
-  public func getLastPositionUpdateTime() -> Int64 {
+  open func getLastPositionUpdateTime() -> Int64 {
     self.javaObject.call(method: PlaybackState__method__9, [])
   }
 
-  public func getActiveQueueItemId() -> Int64 {
+  open func getActiveQueueItemId() -> Int64 {
     self.javaObject.call(method: PlaybackState__method__10, [])
   }
 
-  public func getExtras() -> Bundle? {
+  open func getExtras() -> Bundle? {
     self.javaObject.call(method: PlaybackState__method__11, [])
   }
 }
 
 extension PlaybackState {
-  public func getCustomActions() -> ListProxy<PlaybackState.CustomAction>? {
+  open func getCustomActions() -> ListProxy<PlaybackState.CustomAction>? {
     self.javaObject.call(method: PlaybackState__method__7, [])
   }
 }
@@ -136,43 +136,43 @@ open class PlaybackStateBuilder: Object {
     super.init(ctor: PlaybackStateBuilder__method__1, [from.toJavaParameter()])
   }
 
-  public func setState(state: Int32, position: Int64, playbackSpeed: Float, updateTime: Int64) -> PlaybackState.Builder? {
+  open func setState(state: Int32, position: Int64, playbackSpeed: Float, updateTime: Int64) -> PlaybackState.Builder? {
     self.javaObject.call(method: PlaybackStateBuilder__method__2, [state.toJavaParameter(), position.toJavaParameter(), playbackSpeed.toJavaParameter(), updateTime.toJavaParameter()])
   }
 
-  public func setState(state: Int32, position: Int64, playbackSpeed: Float) -> PlaybackState.Builder? {
+  open func setState(state: Int32, position: Int64, playbackSpeed: Float) -> PlaybackState.Builder? {
     self.javaObject.call(method: PlaybackStateBuilder__method__3, [state.toJavaParameter(), position.toJavaParameter(), playbackSpeed.toJavaParameter()])
   }
 
-  public func setActions(actions: Int64) -> PlaybackState.Builder? {
+  open func setActions(actions: Int64) -> PlaybackState.Builder? {
     self.javaObject.call(method: PlaybackStateBuilder__method__4, [actions.toJavaParameter()])
   }
 
-  public func addCustomAction(action: String, name: String, icon: Int32) -> PlaybackState.Builder? {
+  open func addCustomAction(action: String, name: String, icon: Int32) -> PlaybackState.Builder? {
     self.javaObject.call(method: PlaybackStateBuilder__method__5, [action.toJavaParameter(), name.toJavaParameter(), icon.toJavaParameter()])
   }
 
-  public func addCustomAction(customAction: PlaybackState.CustomAction?) -> PlaybackState.Builder? {
+  open func addCustomAction(customAction: PlaybackState.CustomAction?) -> PlaybackState.Builder? {
     self.javaObject.call(method: PlaybackStateBuilder__method__6, [customAction.toJavaParameter()])
   }
 
-  public func setBufferedPosition(bufferedPosition: Int64) -> PlaybackState.Builder? {
+  open func setBufferedPosition(bufferedPosition: Int64) -> PlaybackState.Builder? {
     self.javaObject.call(method: PlaybackStateBuilder__method__7, [bufferedPosition.toJavaParameter()])
   }
 
-  public func setActiveQueueItemId(id: Int64) -> PlaybackState.Builder? {
+  open func setActiveQueueItemId(id: Int64) -> PlaybackState.Builder? {
     self.javaObject.call(method: PlaybackStateBuilder__method__8, [id.toJavaParameter()])
   }
 
-  public func setErrorMessage(error: String?) -> PlaybackState.Builder? {
+  open func setErrorMessage(error: String?) -> PlaybackState.Builder? {
     self.javaObject.call(method: PlaybackStateBuilder__method__9, [error.toJavaParameter()])
   }
 
-  public func setExtras(extras: Bundle?) -> PlaybackState.Builder? {
+  open func setExtras(extras: Bundle?) -> PlaybackState.Builder? {
     self.javaObject.call(method: PlaybackStateBuilder__method__10, [extras.toJavaParameter()])
   }
 
-  public func build() -> PlaybackState? {
+  open func build() -> PlaybackState? {
     self.javaObject.call(method: PlaybackStateBuilder__method__11, [])
   }
 
@@ -190,27 +190,27 @@ open class PlaybackStateBuilder: Object {
 open class PlaybackStateCustomAction: Object, Parcelable {
   public typealias Builder = AndroidMedia.PlaybackStateCustomActionBuilder
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: PlaybackStateCustomAction__method__0, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: PlaybackStateCustomAction__method__1, [])
   }
 
-  public func getAction() -> String {
+  open func getAction() -> String {
     self.javaObject.call(method: PlaybackStateCustomAction__method__2, [])
   }
 
-  public func getName() -> String? {
+  open func getName() -> String? {
     self.javaObject.call(method: PlaybackStateCustomAction__method__3, [])
   }
 
-  public func getIcon() -> Int32 {
+  open func getIcon() -> Int32 {
     self.javaObject.call(method: PlaybackStateCustomAction__method__4, [])
   }
 
-  public func getExtras() -> Bundle? {
+  open func getExtras() -> Bundle? {
     self.javaObject.call(method: PlaybackStateCustomAction__method__5, [])
   }
 }
@@ -222,11 +222,11 @@ open class PlaybackStateCustomActionBuilder: Object {
     super.init(ctor: PlaybackStateCustomActionBuilder__method__0, [action.toJavaParameter(), name.toJavaParameter(), icon.toJavaParameter()])
   }
 
-  public func setExtras(extras: Bundle?) -> PlaybackState.CustomAction.Builder? {
+  open func setExtras(extras: Bundle?) -> PlaybackState.CustomAction.Builder? {
     self.javaObject.call(method: PlaybackStateCustomActionBuilder__method__1, [extras.toJavaParameter()])
   }
 
-  public func build() -> PlaybackState.CustomAction? {
+  open func build() -> PlaybackState.CustomAction? {
     self.javaObject.call(method: PlaybackStateCustomActionBuilder__method__2, [])
   }
 

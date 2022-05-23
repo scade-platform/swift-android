@@ -7,11 +7,11 @@ open class EffectContext: Object {
     EffectContext__class.callStatic(method: EffectContext__method__0, [])
   }
 
-  public func getFactory() -> EffectFactory? {
+  open func getFactory() -> EffectFactory? {
     self.javaObject.call(method: EffectContext__method__1, [])
   }
 
-  public func release() {
+  open func release() {
     self.javaObject.call(method: EffectContext__method__2, [])
   }
 }

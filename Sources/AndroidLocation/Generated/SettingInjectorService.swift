@@ -5,7 +5,7 @@ import AndroidContent
 import Java
 
 public protocol SettingInjectorService: Service {
-  init(name: String)
+  func onGetEnabled() -> Bool
 }
 
 public extension SettingInjectorService {
@@ -40,6 +40,10 @@ open class SettingInjectorServiceProxy: ServiceProxy, SettingInjectorService {
   fileprivate convenience init<P: SettingInjectorService>(_ obj: P) {
     self.init(obj.toJavaObject()!)
   }
+
+  open func onGetEnabled() -> Bool {
+    self.javaObject.call(method: SettingInjectorService__method__1, [])
+  }
 }
 
 // ------------------------------------------------------------------------------------
@@ -47,6 +51,7 @@ open class SettingInjectorServiceProxy: ServiceProxy, SettingInjectorService {
 private let SettingInjectorService__class = findJavaClass(fqn: "android/location/SettingInjectorService")!
 
 private let SettingInjectorService__method__0 = SettingInjectorService__class.getMethodID(name: "<init>", sig: "(Ljava/lang/String;)V")!
+private let SettingInjectorService__method__1 = SettingInjectorService__class.getMethodID(name: "onGetEnabled", sig: "()Z")!
 
 private let SettingInjectorService__field__0 = SettingInjectorService__class.getStaticFieldID(name: "ACTION_INJECTED_SETTING_CHANGED", sig: "Ljava/lang/String;")!
 private let SettingInjectorService__field__1 = SettingInjectorService__class.getStaticFieldID(name: "ACTION_SERVICE_INTENT", sig: "Ljava/lang/String;")!

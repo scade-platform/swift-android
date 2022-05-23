@@ -2,11 +2,7 @@
 
 import Java
 
-public protocol AdvertiseCallback where Self: Object {
-  func onStartSuccess(settingsInEffect: AdvertiseSettings?) -> Void
-
-  func onStartFailure(errorCode: Int32) -> Void
-}
+public protocol AdvertiseCallback where Self: Object {}
 
 public extension AdvertiseCallback {
   func box() -> AdvertiseCallbackProxy {

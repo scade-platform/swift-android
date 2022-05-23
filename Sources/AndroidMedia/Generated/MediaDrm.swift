@@ -60,79 +60,79 @@ open class MediaDrm: Object {
     MediaDrm__class.callStatic(method: MediaDrm__method__2, [uuid.toJavaParameter(), mimeType.toJavaParameter()])
   }
 
-  public func setOnEventListener(listener: MediaDrm.OnEventListener?) {
+  open func setOnEventListener(listener: MediaDrm.OnEventListener?) {
     self.javaObject.call(method: MediaDrm__method__3, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func openSession() -> [Int8] {
+  open func openSession() -> [Int8] {
     self.javaObject.call(method: MediaDrm__method__4, [])
   }
 
-  public func closeSession(sessionId: [Int8]) {
+  open func closeSession(sessionId: [Int8]) {
     self.javaObject.call(method: MediaDrm__method__5, [sessionId.toJavaParameter()])
   }
 
-  public func getKeyRequest(scope: [Int8], _init: [Int8], mimeType: String, keyType: Int32, optionalParameters: HashMap<String, String>?) -> MediaDrm.KeyRequest? {
+  open func getKeyRequest(scope: [Int8], _init: [Int8], mimeType: String, keyType: Int32, optionalParameters: HashMap<String, String>?) -> MediaDrm.KeyRequest? {
     self.javaObject.call(method: MediaDrm__method__6, [scope.toJavaParameter(), _init.toJavaParameter(), mimeType.toJavaParameter(), keyType.toJavaParameter(), optionalParameters.toJavaParameter()])
   }
 
-  public func provideKeyResponse(scope: [Int8], response: [Int8]) -> [Int8] {
+  open func provideKeyResponse(scope: [Int8], response: [Int8]) -> [Int8] {
     self.javaObject.call(method: MediaDrm__method__7, [scope.toJavaParameter(), response.toJavaParameter()])
   }
 
-  public func restoreKeys(sessionId: [Int8], keySetId: [Int8]) {
+  open func restoreKeys(sessionId: [Int8], keySetId: [Int8]) {
     self.javaObject.call(method: MediaDrm__method__8, [sessionId.toJavaParameter(), keySetId.toJavaParameter()])
   }
 
-  public func removeKeys(sessionId: [Int8]) {
+  open func removeKeys(sessionId: [Int8]) {
     self.javaObject.call(method: MediaDrm__method__9, [sessionId.toJavaParameter()])
   }
 
-  public func queryKeyStatus(sessionId: [Int8]) -> HashMap<String, String>? {
+  open func queryKeyStatus(sessionId: [Int8]) -> HashMap<String, String>? {
     self.javaObject.call(method: MediaDrm__method__10, [sessionId.toJavaParameter()])
   }
 
-  public func getProvisionRequest() -> MediaDrm.ProvisionRequest? {
+  open func getProvisionRequest() -> MediaDrm.ProvisionRequest? {
     self.javaObject.call(method: MediaDrm__method__11, [])
   }
 
-  public func provideProvisionResponse(response: [Int8]) {
+  open func provideProvisionResponse(response: [Int8]) {
     self.javaObject.call(method: MediaDrm__method__12, [response.toJavaParameter()])
   }
 
-  public func getSecureStops<R>() -> R? where R: List, R.E == [Int8] {
+  open func getSecureStops<R>() -> R? where R: List, R.E == [Int8] {
     self.javaObject.call(method: MediaDrm__method__13, [])
   }
 
-  public func getSecureStop(ssid: [Int8]) -> [Int8] {
+  open func getSecureStop(ssid: [Int8]) -> [Int8] {
     self.javaObject.call(method: MediaDrm__method__14, [ssid.toJavaParameter()])
   }
 
-  public func releaseSecureStops(ssRelease: [Int8]) {
+  open func releaseSecureStops(ssRelease: [Int8]) {
     self.javaObject.call(method: MediaDrm__method__15, [ssRelease.toJavaParameter()])
   }
 
-  public func releaseAllSecureStops() {
+  open func releaseAllSecureStops() {
     self.javaObject.call(method: MediaDrm__method__16, [])
   }
 
-  public func getPropertyString(propertyName: String) -> String {
+  open func getPropertyString(propertyName: String) -> String {
     self.javaObject.call(method: MediaDrm__method__17, [propertyName.toJavaParameter()])
   }
 
-  public func getPropertyByteArray(propertyName: String) -> [Int8] {
+  open func getPropertyByteArray(propertyName: String) -> [Int8] {
     self.javaObject.call(method: MediaDrm__method__18, [propertyName.toJavaParameter()])
   }
 
-  public func setPropertyString(propertyName: String, value: String) {
+  open func setPropertyString(propertyName: String, value: String) {
     self.javaObject.call(method: MediaDrm__method__19, [propertyName.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func setPropertyByteArray(propertyName: String, value: [Int8]) {
+  open func setPropertyByteArray(propertyName: String, value: [Int8]) {
     self.javaObject.call(method: MediaDrm__method__20, [propertyName.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func getCryptoSession(sessionId: [Int8], cipherAlgorithm: String, macAlgorithm: String) -> MediaDrm.CryptoSession? {
+  open func getCryptoSession(sessionId: [Int8], cipherAlgorithm: String, macAlgorithm: String) -> MediaDrm.CryptoSession? {
     self.javaObject.call(method: MediaDrm__method__21, [sessionId.toJavaParameter(), cipherAlgorithm.toJavaParameter(), macAlgorithm.toJavaParameter()])
   }
 
@@ -150,7 +150,7 @@ open class MediaDrm: Object {
 }
 
 extension MediaDrm {
-  public func getSecureStops() -> ListProxy<[Int8]>? {
+  open func getSecureStops() -> ListProxy<[Int8]>? {
     self.javaObject.call(method: MediaDrm__method__13, [])
   }
 }
@@ -158,19 +158,19 @@ extension MediaDrm {
 // ------------------------------------------------------------------------------------
 
 open class MediaDrmCryptoSession: Object {
-  public func encrypt(keyid: [Int8], input: [Int8], iv: [Int8]) -> [Int8] {
+  open func encrypt(keyid: [Int8], input: [Int8], iv: [Int8]) -> [Int8] {
     self.javaObject.call(method: MediaDrmCryptoSession__method__0, [keyid.toJavaParameter(), input.toJavaParameter(), iv.toJavaParameter()])
   }
 
-  public func decrypt(keyid: [Int8], input: [Int8], iv: [Int8]) -> [Int8] {
+  open func decrypt(keyid: [Int8], input: [Int8], iv: [Int8]) -> [Int8] {
     self.javaObject.call(method: MediaDrmCryptoSession__method__1, [keyid.toJavaParameter(), input.toJavaParameter(), iv.toJavaParameter()])
   }
 
-  public func sign(keyid: [Int8], message: [Int8]) -> [Int8] {
+  open func sign(keyid: [Int8], message: [Int8]) -> [Int8] {
     self.javaObject.call(method: MediaDrmCryptoSession__method__2, [keyid.toJavaParameter(), message.toJavaParameter()])
   }
 
-  public func verify(keyid: [Int8], message: [Int8], signature: [Int8]) -> Bool {
+  open func verify(keyid: [Int8], message: [Int8], signature: [Int8]) -> Bool {
     self.javaObject.call(method: MediaDrmCryptoSession__method__3, [keyid.toJavaParameter(), message.toJavaParameter(), signature.toJavaParameter()])
   }
 }
@@ -178,11 +178,11 @@ open class MediaDrmCryptoSession: Object {
 // ------------------------------------------------------------------------------------
 
 open class MediaDrmProvisionRequest: Object {
-  public func getData() -> [Int8] {
+  open func getData() -> [Int8] {
     self.javaObject.call(method: MediaDrmProvisionRequest__method__0, [])
   }
 
-  public func getDefaultUrl() -> String {
+  open func getDefaultUrl() -> String {
     self.javaObject.call(method: MediaDrmProvisionRequest__method__1, [])
   }
 }
@@ -196,15 +196,15 @@ open class MediaDrmKeyRequest: Object {
 
   public static let REQUEST_TYPE_RENEWAL: Int32 = MediaDrmKeyRequest__class.getStatic(field: MediaDrmKeyRequest__field__2)
 
-  public func getData() -> [Int8] {
+  open func getData() -> [Int8] {
     self.javaObject.call(method: MediaDrmKeyRequest__method__0, [])
   }
 
-  public func getDefaultUrl() -> String {
+  open func getDefaultUrl() -> String {
     self.javaObject.call(method: MediaDrmKeyRequest__method__1, [])
   }
 
-  public func getRequestType() -> Int32 {
+  open func getRequestType() -> Int32 {
     self.javaObject.call(method: MediaDrmKeyRequest__method__2, [])
   }
 }
@@ -254,11 +254,11 @@ open class MediaDrmKeyStatus: Object {
 
   public static let STATUS_USABLE: Int32 = MediaDrmKeyStatus__class.getStatic(field: MediaDrmKeyStatus__field__4)
 
-  public func getStatusCode() -> Int32 {
+  open func getStatusCode() -> Int32 {
     self.javaObject.call(method: MediaDrmKeyStatus__method__0, [])
   }
 
-  public func getKeyId() -> [Int8] {
+  open func getKeyId() -> [Int8] {
     self.javaObject.call(method: MediaDrmKeyStatus__method__1, [])
   }
 }
@@ -330,7 +330,7 @@ public final class MediaDrmOnExpirationUpdateListenerProxy: Object, JInterfacePr
 // ------------------------------------------------------------------------------------
 
 open class MediaDrmMediaDrmStateException: Object {
-  public func getDiagnosticInfo() -> String {
+  open func getDiagnosticInfo() -> String {
     self.javaObject.call(method: MediaDrmMediaDrmStateException__method__0, [])
   }
 }

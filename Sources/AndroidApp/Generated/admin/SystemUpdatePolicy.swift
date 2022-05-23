@@ -22,23 +22,23 @@ open class SystemUpdatePolicy: Object, Parcelable {
     SystemUpdatePolicy__class.callStatic(method: SystemUpdatePolicy__method__2, [])
   }
 
-  public func getPolicyType() -> Int32 {
+  open func getPolicyType() -> Int32 {
     self.javaObject.call(method: SystemUpdatePolicy__method__3, [])
   }
 
-  public func getInstallWindowStart() -> Int32 {
+  open func getInstallWindowStart() -> Int32 {
     self.javaObject.call(method: SystemUpdatePolicy__method__4, [])
   }
 
-  public func getInstallWindowEnd() -> Int32 {
+  open func getInstallWindowEnd() -> Int32 {
     self.javaObject.call(method: SystemUpdatePolicy__method__5, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: SystemUpdatePolicy__method__6, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: SystemUpdatePolicy__method__7, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }

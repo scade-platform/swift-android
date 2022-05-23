@@ -26,39 +26,39 @@ open class MidiDeviceInfo: Object, Parcelable {
 
   public static let TYPE_VIRTUAL: Int32 = MidiDeviceInfo__class.getStatic(field: MidiDeviceInfo__field__9)
 
-  public func getType() -> Int32 {
+  open func getType() -> Int32 {
     self.javaObject.call(method: MidiDeviceInfo__method__0, [])
   }
 
-  public func getId() -> Int32 {
+  open func getId() -> Int32 {
     self.javaObject.call(method: MidiDeviceInfo__method__1, [])
   }
 
-  public func getInputPortCount() -> Int32 {
+  open func getInputPortCount() -> Int32 {
     self.javaObject.call(method: MidiDeviceInfo__method__2, [])
   }
 
-  public func getOutputPortCount() -> Int32 {
+  open func getOutputPortCount() -> Int32 {
     self.javaObject.call(method: MidiDeviceInfo__method__3, [])
   }
 
-  public func getPorts() -> [MidiDeviceInfo.PortInfo?] {
+  open func getPorts() -> [MidiDeviceInfo.PortInfo?] {
     self.javaObject.call(method: MidiDeviceInfo__method__4, [])
   }
 
-  public func getProperties() -> Bundle? {
+  open func getProperties() -> Bundle? {
     self.javaObject.call(method: MidiDeviceInfo__method__5, [])
   }
 
-  public func isPrivate() -> Bool {
+  open func isPrivate() -> Bool {
     self.javaObject.call(method: MidiDeviceInfo__method__6, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: MidiDeviceInfo__method__7, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: MidiDeviceInfo__method__8, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }
@@ -70,15 +70,15 @@ open class MidiDeviceInfoPortInfo: Object {
 
   public static let TYPE_OUTPUT: Int32 = MidiDeviceInfoPortInfo__class.getStatic(field: MidiDeviceInfoPortInfo__field__1)
 
-  public func getType() -> Int32 {
+  open func getType() -> Int32 {
     self.javaObject.call(method: MidiDeviceInfoPortInfo__method__0, [])
   }
 
-  public func getPortNumber() -> Int32 {
+  open func getPortNumber() -> Int32 {
     self.javaObject.call(method: MidiDeviceInfoPortInfo__method__1, [])
   }
 
-  public func getName() -> String {
+  open func getName() -> String {
     self.javaObject.call(method: MidiDeviceInfoPortInfo__method__2, [])
   }
 }

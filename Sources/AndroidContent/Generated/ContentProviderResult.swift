@@ -18,11 +18,11 @@ open class ContentProviderResult: Object, Parcelable {
     super.init(ctor: ContentProviderResult__method__1, [source.toJavaParameter()])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ContentProviderResult__method__2, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ContentProviderResult__method__3, [])
   }
 

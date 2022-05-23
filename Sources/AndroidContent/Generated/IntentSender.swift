@@ -9,32 +9,28 @@ open class IntentSender: Object, Parcelable {
 
   public typealias SendIntentException = AndroidContent.IntentSenderSendIntentException
 
-  public func getTargetPackage() -> String {
+  open func getCreatorPackage() -> String {
     self.javaObject.call(method: IntentSender__method__0, [])
   }
 
-  public func getCreatorPackage() -> String {
+  open func getCreatorUid() -> Int32 {
     self.javaObject.call(method: IntentSender__method__1, [])
   }
 
-  public func getCreatorUid() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: IntentSender__method__2, [])
   }
 
-  public func describeContents() -> Int32 {
-    self.javaObject.call(method: IntentSender__method__3, [])
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
+    self.javaObject.call(method: IntentSender__method__3, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
-    self.javaObject.call(method: IntentSender__method__4, [dest.toJavaParameter(), flags.toJavaParameter()])
-  }
-
-  public static func writeIntentSenderOrNullToParcel(sender: IntentSender?, _out: Parcel?) {
-    IntentSender__class.callStatic(method: IntentSender__method__5, [sender.toJavaParameter(), _out.toJavaParameter()])
+  public static func writeIntentSenderOrNullToParcel(sender: IntentSender?, out: Parcel?) {
+    IntentSender__class.callStatic(method: IntentSender__method__4, [sender.toJavaParameter(), out.toJavaParameter()])
   }
 
   public static func readIntentSenderOrNullFromParcel(_in: Parcel?) -> IntentSender? {
-    IntentSender__class.callStatic(method: IntentSender__method__6, [_in.toJavaParameter()])
+    IntentSender__class.callStatic(method: IntentSender__method__5, [_in.toJavaParameter()])
   }
 }
 
@@ -94,13 +90,12 @@ open class IntentSenderSendIntentException: Object {
 
 private let IntentSender__class = findJavaClass(fqn: "android/content/IntentSender")!
 
-private let IntentSender__method__0 = IntentSender__class.getMethodID(name: "getTargetPackage", sig: "()Ljava/lang/String;")!
-private let IntentSender__method__1 = IntentSender__class.getMethodID(name: "getCreatorPackage", sig: "()Ljava/lang/String;")!
-private let IntentSender__method__2 = IntentSender__class.getMethodID(name: "getCreatorUid", sig: "()I")!
-private let IntentSender__method__3 = IntentSender__class.getMethodID(name: "describeContents", sig: "()I")!
-private let IntentSender__method__4 = IntentSender__class.getMethodID(name: "writeToParcel", sig: "(Landroid/os/Parcel;I)V")!
-private let IntentSender__method__5 = IntentSender__class.getStaticMethodID(name: "writeIntentSenderOrNullToParcel", sig: "(Landroid/content/IntentSender;Landroid/os/Parcel;)V")!
-private let IntentSender__method__6 = IntentSender__class.getStaticMethodID(name: "readIntentSenderOrNullFromParcel", sig: "(Landroid/os/Parcel;)Landroid/content/IntentSender;")!
+private let IntentSender__method__0 = IntentSender__class.getMethodID(name: "getCreatorPackage", sig: "()Ljava/lang/String;")!
+private let IntentSender__method__1 = IntentSender__class.getMethodID(name: "getCreatorUid", sig: "()I")!
+private let IntentSender__method__2 = IntentSender__class.getMethodID(name: "describeContents", sig: "()I")!
+private let IntentSender__method__3 = IntentSender__class.getMethodID(name: "writeToParcel", sig: "(Landroid/os/Parcel;I)V")!
+private let IntentSender__method__4 = IntentSender__class.getStaticMethodID(name: "writeIntentSenderOrNullToParcel", sig: "(Landroid/content/IntentSender;Landroid/os/Parcel;)V")!
+private let IntentSender__method__5 = IntentSender__class.getStaticMethodID(name: "readIntentSenderOrNullFromParcel", sig: "(Landroid/os/Parcel;)Landroid/content/IntentSender;")!
 
 // ------------------------------------------------------------------------------------
 

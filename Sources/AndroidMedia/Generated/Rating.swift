@@ -18,11 +18,11 @@ open class Rating: Object, Parcelable {
 
   public static let RATING_THUMB_UP_DOWN: Int32 = Rating__class.getStatic(field: Rating__field__6)
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: Rating__method__0, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: Rating__method__1, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
@@ -46,27 +46,27 @@ open class Rating: Object, Parcelable {
     Rating__class.callStatic(method: Rating__method__6, [percent.toJavaParameter()])
   }
 
-  public func isRated() -> Bool {
+  open func isRated() -> Bool {
     self.javaObject.call(method: Rating__method__7, [])
   }
 
-  public func getRatingStyle() -> Int32 {
+  open func getRatingStyle() -> Int32 {
     self.javaObject.call(method: Rating__method__8, [])
   }
 
-  public func hasHeart() -> Bool {
+  open func hasHeart() -> Bool {
     self.javaObject.call(method: Rating__method__9, [])
   }
 
-  public func isThumbUp() -> Bool {
+  open func isThumbUp() -> Bool {
     self.javaObject.call(method: Rating__method__10, [])
   }
 
-  public func getStarRating() -> Float {
+  open func getStarRating() -> Float {
     self.javaObject.call(method: Rating__method__11, [])
   }
 
-  public func getPercentRating() -> Float {
+  open func getPercentRating() -> Float {
     self.javaObject.call(method: Rating__method__12, [])
   }
 }

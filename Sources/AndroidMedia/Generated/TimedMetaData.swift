@@ -3,11 +3,11 @@
 import Java
 
 open class TimedMetaData: Object {
-  public func getTimestamp() -> Int64 {
+  open func getTimestamp() -> Int64 {
     self.javaObject.call(method: TimedMetaData__method__0, [])
   }
 
-  public func getMetaData() -> [Int8] {
+  open func getMetaData() -> [Int8] {
     self.javaObject.call(method: TimedMetaData__method__1, [])
   }
 }

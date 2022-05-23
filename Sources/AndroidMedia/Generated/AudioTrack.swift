@@ -50,7 +50,7 @@ open class AudioTrack: Object, AudioRouting {
     super.init(ctor: AudioTrack__method__2, [attributes.toJavaParameter(), format.toJavaParameter(), bufferSizeInBytes.toJavaParameter(), mode.toJavaParameter(), sessionId.toJavaParameter()])
   }
 
-  public func release() {
+  open func release() {
     self.javaObject.call(method: AudioTrack__method__3, [])
   }
 
@@ -62,71 +62,71 @@ open class AudioTrack: Object, AudioRouting {
     AudioTrack__class.callStatic(method: AudioTrack__method__5, [])
   }
 
-  public func getSampleRate() -> Int32 {
+  open func getSampleRate() -> Int32 {
     self.javaObject.call(method: AudioTrack__method__6, [])
   }
 
-  public func getPlaybackRate() -> Int32 {
+  open func getPlaybackRate() -> Int32 {
     self.javaObject.call(method: AudioTrack__method__7, [])
   }
 
-  public func getPlaybackParams() -> PlaybackParams? {
+  open func getPlaybackParams() -> PlaybackParams? {
     self.javaObject.call(method: AudioTrack__method__8, [])
   }
 
-  public func getAudioFormat() -> Int32 {
+  open func getAudioFormat() -> Int32 {
     self.javaObject.call(method: AudioTrack__method__9, [])
   }
 
-  public func getStreamType() -> Int32 {
+  open func getStreamType() -> Int32 {
     self.javaObject.call(method: AudioTrack__method__10, [])
   }
 
-  public func getChannelConfiguration() -> Int32 {
+  open func getChannelConfiguration() -> Int32 {
     self.javaObject.call(method: AudioTrack__method__11, [])
   }
 
-  public func getFormat() -> AudioFormat? {
+  open func getFormat() -> AudioFormat? {
     self.javaObject.call(method: AudioTrack__method__12, [])
   }
 
-  public func getChannelCount() -> Int32 {
+  open func getChannelCount() -> Int32 {
     self.javaObject.call(method: AudioTrack__method__13, [])
   }
 
-  public func getState() -> Int32 {
+  open func getState() -> Int32 {
     self.javaObject.call(method: AudioTrack__method__14, [])
   }
 
-  public func getPlayState() -> Int32 {
+  open func getPlayState() -> Int32 {
     self.javaObject.call(method: AudioTrack__method__15, [])
   }
 
-  public func getBufferSizeInFrames() -> Int32 {
+  open func getBufferSizeInFrames() -> Int32 {
     self.javaObject.call(method: AudioTrack__method__16, [])
   }
 
-  public func setBufferSizeInFrames(bufferSizeInFrames: Int32) -> Int32 {
+  open func setBufferSizeInFrames(bufferSizeInFrames: Int32) -> Int32 {
     self.javaObject.call(method: AudioTrack__method__17, [bufferSizeInFrames.toJavaParameter()])
   }
 
-  public func getBufferCapacityInFrames() -> Int32 {
+  open func getBufferCapacityInFrames() -> Int32 {
     self.javaObject.call(method: AudioTrack__method__18, [])
   }
 
-  public func getNotificationMarkerPosition() -> Int32 {
+  open func getNotificationMarkerPosition() -> Int32 {
     self.javaObject.call(method: AudioTrack__method__19, [])
   }
 
-  public func getPositionNotificationPeriod() -> Int32 {
+  open func getPositionNotificationPeriod() -> Int32 {
     self.javaObject.call(method: AudioTrack__method__20, [])
   }
 
-  public func getPlaybackHeadPosition() -> Int32 {
+  open func getPlaybackHeadPosition() -> Int32 {
     self.javaObject.call(method: AudioTrack__method__21, [])
   }
 
-  public func getUnderrunCount() -> Int32 {
+  open func getUnderrunCount() -> Int32 {
     self.javaObject.call(method: AudioTrack__method__22, [])
   }
 
@@ -138,115 +138,115 @@ open class AudioTrack: Object, AudioRouting {
     AudioTrack__class.callStatic(method: AudioTrack__method__24, [sampleRateInHz.toJavaParameter(), channelConfig.toJavaParameter(), audioFormat.toJavaParameter()])
   }
 
-  public func getAudioSessionId() -> Int32 {
+  open func getAudioSessionId() -> Int32 {
     self.javaObject.call(method: AudioTrack__method__25, [])
   }
 
-  public func getTimestamp(timestamp: AudioTimestamp?) -> Bool {
+  open func getTimestamp(timestamp: AudioTimestamp?) -> Bool {
     self.javaObject.call(method: AudioTrack__method__26, [timestamp.toJavaParameter()])
   }
 
-  public func setPlaybackPositionUpdateListener(listener: AudioTrack.OnPlaybackPositionUpdateListener?) {
+  open func setPlaybackPositionUpdateListener(listener: AudioTrack.OnPlaybackPositionUpdateListener?) {
     self.javaObject.call(method: AudioTrack__method__27, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setStereoVolume(leftGain: Float, rightGain: Float) -> Int32 {
-    self.javaObject.call(method: AudioTrack__method__28, [leftGain.toJavaParameter(), rightGain.toJavaParameter()])
+  open func setVolume(gain: Float) -> Int32 {
+    self.javaObject.call(method: AudioTrack__method__28, [gain.toJavaParameter()])
   }
 
-  public func setVolume(gain: Float) -> Int32 {
-    self.javaObject.call(method: AudioTrack__method__29, [gain.toJavaParameter()])
+  open func setPlaybackRate(sampleRateInHz: Int32) -> Int32 {
+    self.javaObject.call(method: AudioTrack__method__29, [sampleRateInHz.toJavaParameter()])
   }
 
-  public func setPlaybackRate(sampleRateInHz: Int32) -> Int32 {
-    self.javaObject.call(method: AudioTrack__method__30, [sampleRateInHz.toJavaParameter()])
+  open func setPlaybackParams(params: PlaybackParams?) {
+    self.javaObject.call(method: AudioTrack__method__30, [params.toJavaParameter()])
   }
 
-  public func setPlaybackParams(params: PlaybackParams?) {
-    self.javaObject.call(method: AudioTrack__method__31, [params.toJavaParameter()])
+  open func setNotificationMarkerPosition(markerInFrames: Int32) -> Int32 {
+    self.javaObject.call(method: AudioTrack__method__31, [markerInFrames.toJavaParameter()])
   }
 
-  public func setNotificationMarkerPosition(markerInFrames: Int32) -> Int32 {
-    self.javaObject.call(method: AudioTrack__method__32, [markerInFrames.toJavaParameter()])
+  open func setPositionNotificationPeriod(periodInFrames: Int32) -> Int32 {
+    self.javaObject.call(method: AudioTrack__method__32, [periodInFrames.toJavaParameter()])
   }
 
-  public func setPositionNotificationPeriod(periodInFrames: Int32) -> Int32 {
-    self.javaObject.call(method: AudioTrack__method__33, [periodInFrames.toJavaParameter()])
+  open func setPlaybackHeadPosition(positionInFrames: Int32) -> Int32 {
+    self.javaObject.call(method: AudioTrack__method__33, [positionInFrames.toJavaParameter()])
   }
 
-  public func setPlaybackHeadPosition(positionInFrames: Int32) -> Int32 {
-    self.javaObject.call(method: AudioTrack__method__34, [positionInFrames.toJavaParameter()])
+  open func setLoopPoints(startInFrames: Int32, endInFrames: Int32, loopCount: Int32) -> Int32 {
+    self.javaObject.call(method: AudioTrack__method__34, [startInFrames.toJavaParameter(), endInFrames.toJavaParameter(), loopCount.toJavaParameter()])
   }
 
-  public func setLoopPoints(startInFrames: Int32, endInFrames: Int32, loopCount: Int32) -> Int32 {
-    self.javaObject.call(method: AudioTrack__method__35, [startInFrames.toJavaParameter(), endInFrames.toJavaParameter(), loopCount.toJavaParameter()])
+  open func play() {
+    self.javaObject.call(method: AudioTrack__method__35, [])
   }
 
-  public func play() {
+  open func stop() {
     self.javaObject.call(method: AudioTrack__method__36, [])
   }
 
-  public func stop() {
+  open func pause() {
     self.javaObject.call(method: AudioTrack__method__37, [])
   }
 
-  public func pause() {
+  open func flush() {
     self.javaObject.call(method: AudioTrack__method__38, [])
   }
 
-  public func flush() {
-    self.javaObject.call(method: AudioTrack__method__39, [])
+  open func write(audioData: [Int8], offsetInBytes: Int32, sizeInBytes: Int32) -> Int32 {
+    self.javaObject.call(method: AudioTrack__method__39, [audioData.toJavaParameter(), offsetInBytes.toJavaParameter(), sizeInBytes.toJavaParameter()])
   }
 
-  public func write(audioData: [Int8], offsetInBytes: Int32, sizeInBytes: Int32) -> Int32 {
-    self.javaObject.call(method: AudioTrack__method__40, [audioData.toJavaParameter(), offsetInBytes.toJavaParameter(), sizeInBytes.toJavaParameter()])
+  open func write(audioData: [Int8], offsetInBytes: Int32, sizeInBytes: Int32, writeMode: Int32) -> Int32 {
+    self.javaObject.call(method: AudioTrack__method__40, [audioData.toJavaParameter(), offsetInBytes.toJavaParameter(), sizeInBytes.toJavaParameter(), writeMode.toJavaParameter()])
   }
 
-  public func write(audioData: [Int8], offsetInBytes: Int32, sizeInBytes: Int32, writeMode: Int32) -> Int32 {
-    self.javaObject.call(method: AudioTrack__method__41, [audioData.toJavaParameter(), offsetInBytes.toJavaParameter(), sizeInBytes.toJavaParameter(), writeMode.toJavaParameter()])
+  open func write(audioData: [Int16], offsetInShorts: Int32, sizeInShorts: Int32) -> Int32 {
+    self.javaObject.call(method: AudioTrack__method__41, [audioData.toJavaParameter(), offsetInShorts.toJavaParameter(), sizeInShorts.toJavaParameter()])
   }
 
-  public func write(audioData: [Int16], offsetInShorts: Int32, sizeInShorts: Int32) -> Int32 {
-    self.javaObject.call(method: AudioTrack__method__42, [audioData.toJavaParameter(), offsetInShorts.toJavaParameter(), sizeInShorts.toJavaParameter()])
+  open func write(audioData: [Int16], offsetInShorts: Int32, sizeInShorts: Int32, writeMode: Int32) -> Int32 {
+    self.javaObject.call(method: AudioTrack__method__42, [audioData.toJavaParameter(), offsetInShorts.toJavaParameter(), sizeInShorts.toJavaParameter(), writeMode.toJavaParameter()])
   }
 
-  public func write(audioData: [Int16], offsetInShorts: Int32, sizeInShorts: Int32, writeMode: Int32) -> Int32 {
-    self.javaObject.call(method: AudioTrack__method__43, [audioData.toJavaParameter(), offsetInShorts.toJavaParameter(), sizeInShorts.toJavaParameter(), writeMode.toJavaParameter()])
+  open func write(audioData: [Float], offsetInFloats: Int32, sizeInFloats: Int32, writeMode: Int32) -> Int32 {
+    self.javaObject.call(method: AudioTrack__method__43, [audioData.toJavaParameter(), offsetInFloats.toJavaParameter(), sizeInFloats.toJavaParameter(), writeMode.toJavaParameter()])
   }
 
-  public func write(audioData: [Float], offsetInFloats: Int32, sizeInFloats: Int32, writeMode: Int32) -> Int32 {
-    self.javaObject.call(method: AudioTrack__method__44, [audioData.toJavaParameter(), offsetInFloats.toJavaParameter(), sizeInFloats.toJavaParameter(), writeMode.toJavaParameter()])
+  open func write(audioData: ByteBuffer?, sizeInBytes: Int32, writeMode: Int32) -> Int32 {
+    self.javaObject.call(method: AudioTrack__method__44, [JavaParameter(object: audioData?.toJavaObject()), sizeInBytes.toJavaParameter(), writeMode.toJavaParameter()])
   }
 
-  public func reloadStaticData() -> Int32 {
-    self.javaObject.call(method: AudioTrack__method__45, [])
+  open func write(audioData: ByteBuffer?, sizeInBytes: Int32, writeMode: Int32, timestamp: Int64) -> Int32 {
+    self.javaObject.call(method: AudioTrack__method__45, [JavaParameter(object: audioData?.toJavaObject()), sizeInBytes.toJavaParameter(), writeMode.toJavaParameter(), timestamp.toJavaParameter()])
   }
 
-  public func attachAuxEffect(effectId: Int32) -> Int32 {
-    self.javaObject.call(method: AudioTrack__method__46, [effectId.toJavaParameter()])
+  open func reloadStaticData() -> Int32 {
+    self.javaObject.call(method: AudioTrack__method__46, [])
   }
 
-  public func setAuxEffectSendLevel(level: Float) -> Int32 {
-    self.javaObject.call(method: AudioTrack__method__47, [level.toJavaParameter()])
+  open func attachAuxEffect(effectId: Int32) -> Int32 {
+    self.javaObject.call(method: AudioTrack__method__47, [effectId.toJavaParameter()])
   }
 
-  public func setPreferredDevice(deviceInfo: AudioDeviceInfo?) -> Bool {
-    self.javaObject.call(method: AudioTrack__method__48, [deviceInfo.toJavaParameter()])
+  open func setAuxEffectSendLevel(level: Float) -> Int32 {
+    self.javaObject.call(method: AudioTrack__method__48, [level.toJavaParameter()])
   }
 
-  public func getPreferredDevice() -> AudioDeviceInfo? {
-    self.javaObject.call(method: AudioTrack__method__49, [])
+  open func setPreferredDevice(deviceInfo: AudioDeviceInfo?) -> Bool {
+    self.javaObject.call(method: AudioTrack__method__49, [deviceInfo.toJavaParameter()])
   }
 
-  public func getRoutedDevice() -> AudioDeviceInfo? {
+  open func getPreferredDevice() -> AudioDeviceInfo? {
     self.javaObject.call(method: AudioTrack__method__50, [])
   }
 
-  public func removeOnRoutingChangedListener(listener: AudioRouting.OnRoutingChangedListener?) {
-    self.javaObject.call(method: AudioTrack__method__51, [JavaParameter(object: listener?.toJavaObject())])
+  open func getRoutedDevice() -> AudioDeviceInfo? {
+    self.javaObject.call(method: AudioTrack__method__51, [])
   }
 
-  public func removeOnRoutingChangedListener(listener: AudioTrackOnRoutingChangedListener?) {
+  open func removeOnRoutingChangedListener(listener: AudioRouting.OnRoutingChangedListener?) {
     self.javaObject.call(method: AudioTrack__method__52, [JavaParameter(object: listener?.toJavaObject())])
   }
 
@@ -301,8 +301,6 @@ public final class AudioTrackOnPlaybackPositionUpdateListenerProxy: Object, JInt
 
 public protocol AudioTrackOnRoutingChangedListener: AudioRouting.OnRoutingChangedListener {
   func onRoutingChanged(audioTrack: AudioTrack?) -> Void
-
-  func onRoutingChanged(router: AudioRouting?) -> Void
 }
 
 public extension AudioTrackOnRoutingChangedListener {
@@ -344,27 +342,27 @@ open class AudioTrackBuilder: Object {
     super.init(ctor: AudioTrackBuilder__method__0, [])
   }
 
-  public func setAudioAttributes(attributes: AudioAttributes?) -> AudioTrack.Builder? {
+  open func setAudioAttributes(attributes: AudioAttributes?) -> AudioTrack.Builder? {
     self.javaObject.call(method: AudioTrackBuilder__method__1, [attributes.toJavaParameter()])
   }
 
-  public func setAudioFormat(format: AudioFormat?) -> AudioTrack.Builder? {
+  open func setAudioFormat(format: AudioFormat?) -> AudioTrack.Builder? {
     self.javaObject.call(method: AudioTrackBuilder__method__2, [format.toJavaParameter()])
   }
 
-  public func setBufferSizeInBytes(bufferSizeInBytes: Int32) -> AudioTrack.Builder? {
+  open func setBufferSizeInBytes(bufferSizeInBytes: Int32) -> AudioTrack.Builder? {
     self.javaObject.call(method: AudioTrackBuilder__method__3, [bufferSizeInBytes.toJavaParameter()])
   }
 
-  public func setTransferMode(mode: Int32) -> AudioTrack.Builder? {
+  open func setTransferMode(mode: Int32) -> AudioTrack.Builder? {
     self.javaObject.call(method: AudioTrackBuilder__method__4, [mode.toJavaParameter()])
   }
 
-  public func setSessionId(sessionId: Int32) -> AudioTrack.Builder? {
+  open func setSessionId(sessionId: Int32) -> AudioTrack.Builder? {
     self.javaObject.call(method: AudioTrackBuilder__method__5, [sessionId.toJavaParameter()])
   }
 
-  public func build() -> AudioTrack? {
+  open func build() -> AudioTrack? {
     self.javaObject.call(method: AudioTrackBuilder__method__6, [])
   }
 
@@ -409,31 +407,31 @@ private let AudioTrack__method__24 = AudioTrack__class.getStaticMethodID(name: "
 private let AudioTrack__method__25 = AudioTrack__class.getMethodID(name: "getAudioSessionId", sig: "()I")!
 private let AudioTrack__method__26 = AudioTrack__class.getMethodID(name: "getTimestamp", sig: "(Landroid/media/AudioTimestamp;)Z")!
 private let AudioTrack__method__27 = AudioTrack__class.getMethodID(name: "setPlaybackPositionUpdateListener", sig: "(Landroid/media/AudioTrack$OnPlaybackPositionUpdateListener;)V")!
-private let AudioTrack__method__28 = AudioTrack__class.getMethodID(name: "setStereoVolume", sig: "(FF)I")!
-private let AudioTrack__method__29 = AudioTrack__class.getMethodID(name: "setVolume", sig: "(F)I")!
-private let AudioTrack__method__30 = AudioTrack__class.getMethodID(name: "setPlaybackRate", sig: "(I)I")!
-private let AudioTrack__method__31 = AudioTrack__class.getMethodID(name: "setPlaybackParams", sig: "(Landroid/media/PlaybackParams;)V")!
-private let AudioTrack__method__32 = AudioTrack__class.getMethodID(name: "setNotificationMarkerPosition", sig: "(I)I")!
-private let AudioTrack__method__33 = AudioTrack__class.getMethodID(name: "setPositionNotificationPeriod", sig: "(I)I")!
-private let AudioTrack__method__34 = AudioTrack__class.getMethodID(name: "setPlaybackHeadPosition", sig: "(I)I")!
-private let AudioTrack__method__35 = AudioTrack__class.getMethodID(name: "setLoopPoints", sig: "(III)I")!
-private let AudioTrack__method__36 = AudioTrack__class.getMethodID(name: "play", sig: "()V")!
-private let AudioTrack__method__37 = AudioTrack__class.getMethodID(name: "stop", sig: "()V")!
-private let AudioTrack__method__38 = AudioTrack__class.getMethodID(name: "pause", sig: "()V")!
-private let AudioTrack__method__39 = AudioTrack__class.getMethodID(name: "flush", sig: "()V")!
-private let AudioTrack__method__40 = AudioTrack__class.getMethodID(name: "write", sig: "([BII)I")!
-private let AudioTrack__method__41 = AudioTrack__class.getMethodID(name: "write", sig: "([BIII)I")!
-private let AudioTrack__method__42 = AudioTrack__class.getMethodID(name: "write", sig: "([SII)I")!
-private let AudioTrack__method__43 = AudioTrack__class.getMethodID(name: "write", sig: "([SIII)I")!
-private let AudioTrack__method__44 = AudioTrack__class.getMethodID(name: "write", sig: "([FIII)I")!
-private let AudioTrack__method__45 = AudioTrack__class.getMethodID(name: "reloadStaticData", sig: "()I")!
-private let AudioTrack__method__46 = AudioTrack__class.getMethodID(name: "attachAuxEffect", sig: "(I)I")!
-private let AudioTrack__method__47 = AudioTrack__class.getMethodID(name: "setAuxEffectSendLevel", sig: "(F)I")!
-private let AudioTrack__method__48 = AudioTrack__class.getMethodID(name: "setPreferredDevice", sig: "(Landroid/media/AudioDeviceInfo;)Z")!
-private let AudioTrack__method__49 = AudioTrack__class.getMethodID(name: "getPreferredDevice", sig: "()Landroid/media/AudioDeviceInfo;")!
-private let AudioTrack__method__50 = AudioTrack__class.getMethodID(name: "getRoutedDevice", sig: "()Landroid/media/AudioDeviceInfo;")!
-private let AudioTrack__method__51 = AudioTrack__class.getMethodID(name: "removeOnRoutingChangedListener", sig: "(Landroid/media/AudioRouting$OnRoutingChangedListener;)V")!
-private let AudioTrack__method__52 = AudioTrack__class.getMethodID(name: "removeOnRoutingChangedListener", sig: "(Landroid/media/AudioTrack$OnRoutingChangedListener;)V")!
+private let AudioTrack__method__28 = AudioTrack__class.getMethodID(name: "setVolume", sig: "(F)I")!
+private let AudioTrack__method__29 = AudioTrack__class.getMethodID(name: "setPlaybackRate", sig: "(I)I")!
+private let AudioTrack__method__30 = AudioTrack__class.getMethodID(name: "setPlaybackParams", sig: "(Landroid/media/PlaybackParams;)V")!
+private let AudioTrack__method__31 = AudioTrack__class.getMethodID(name: "setNotificationMarkerPosition", sig: "(I)I")!
+private let AudioTrack__method__32 = AudioTrack__class.getMethodID(name: "setPositionNotificationPeriod", sig: "(I)I")!
+private let AudioTrack__method__33 = AudioTrack__class.getMethodID(name: "setPlaybackHeadPosition", sig: "(I)I")!
+private let AudioTrack__method__34 = AudioTrack__class.getMethodID(name: "setLoopPoints", sig: "(III)I")!
+private let AudioTrack__method__35 = AudioTrack__class.getMethodID(name: "play", sig: "()V")!
+private let AudioTrack__method__36 = AudioTrack__class.getMethodID(name: "stop", sig: "()V")!
+private let AudioTrack__method__37 = AudioTrack__class.getMethodID(name: "pause", sig: "()V")!
+private let AudioTrack__method__38 = AudioTrack__class.getMethodID(name: "flush", sig: "()V")!
+private let AudioTrack__method__39 = AudioTrack__class.getMethodID(name: "write", sig: "([BII)I")!
+private let AudioTrack__method__40 = AudioTrack__class.getMethodID(name: "write", sig: "([BIII)I")!
+private let AudioTrack__method__41 = AudioTrack__class.getMethodID(name: "write", sig: "([SII)I")!
+private let AudioTrack__method__42 = AudioTrack__class.getMethodID(name: "write", sig: "([SIII)I")!
+private let AudioTrack__method__43 = AudioTrack__class.getMethodID(name: "write", sig: "([FIII)I")!
+private let AudioTrack__method__44 = AudioTrack__class.getMethodID(name: "write", sig: "(Ljava/nio/ByteBuffer;II)I")!
+private let AudioTrack__method__45 = AudioTrack__class.getMethodID(name: "write", sig: "(Ljava/nio/ByteBuffer;IIJ)I")!
+private let AudioTrack__method__46 = AudioTrack__class.getMethodID(name: "reloadStaticData", sig: "()I")!
+private let AudioTrack__method__47 = AudioTrack__class.getMethodID(name: "attachAuxEffect", sig: "(I)I")!
+private let AudioTrack__method__48 = AudioTrack__class.getMethodID(name: "setAuxEffectSendLevel", sig: "(F)I")!
+private let AudioTrack__method__49 = AudioTrack__class.getMethodID(name: "setPreferredDevice", sig: "(Landroid/media/AudioDeviceInfo;)Z")!
+private let AudioTrack__method__50 = AudioTrack__class.getMethodID(name: "getPreferredDevice", sig: "()Landroid/media/AudioDeviceInfo;")!
+private let AudioTrack__method__51 = AudioTrack__class.getMethodID(name: "getRoutedDevice", sig: "()Landroid/media/AudioDeviceInfo;")!
+private let AudioTrack__method__52 = AudioTrack__class.getMethodID(name: "removeOnRoutingChangedListener", sig: "(Landroid/media/AudioRouting$OnRoutingChangedListener;)V")!
 
 private let AudioTrack__field__0 = AudioTrack__class.getStaticFieldID(name: "ERROR", sig: "I")!
 private let AudioTrack__field__1 = AudioTrack__class.getStaticFieldID(name: "ERROR_BAD_VALUE", sig: "I")!

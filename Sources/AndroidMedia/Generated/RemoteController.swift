@@ -1,6 +1,7 @@
 
 
 import AndroidContent
+import AndroidView
 import Java
 
 open class RemoteController: Object {
@@ -17,28 +18,32 @@ open class RemoteController: Object {
     super.init(ctor: RemoteController__method__0, [JavaParameter(object: context?.toJavaObject()), JavaParameter(object: updateListener?.toJavaObject())])
   }
 
-  public func getEstimatedMediaPosition() -> Int64 {
+  open func getEstimatedMediaPosition() -> Int64 {
     self.javaObject.call(method: RemoteController__method__1, [])
   }
 
-  public func seekTo(timeMs: Int64) -> Bool {
-    self.javaObject.call(method: RemoteController__method__2, [timeMs.toJavaParameter()])
+  open func sendMediaKeyEvent(keyEvent: KeyEvent?) -> Bool {
+    self.javaObject.call(method: RemoteController__method__2, [keyEvent.toJavaParameter()])
   }
 
-  public func setArtworkConfiguration(width: Int32, height: Int32) -> Bool {
-    self.javaObject.call(method: RemoteController__method__3, [width.toJavaParameter(), height.toJavaParameter()])
+  open func seekTo(timeMs: Int64) -> Bool {
+    self.javaObject.call(method: RemoteController__method__3, [timeMs.toJavaParameter()])
   }
 
-  public func clearArtworkConfiguration() -> Bool {
-    self.javaObject.call(method: RemoteController__method__4, [])
+  open func setArtworkConfiguration(width: Int32, height: Int32) -> Bool {
+    self.javaObject.call(method: RemoteController__method__4, [width.toJavaParameter(), height.toJavaParameter()])
   }
 
-  public func setSynchronizationMode(sync: Int32) -> Bool {
-    self.javaObject.call(method: RemoteController__method__5, [sync.toJavaParameter()])
+  open func clearArtworkConfiguration() -> Bool {
+    self.javaObject.call(method: RemoteController__method__5, [])
   }
 
-  public func editMetadata() -> RemoteController.MetadataEditor? {
-    self.javaObject.call(method: RemoteController__method__6, [])
+  open func setSynchronizationMode(sync: Int32) -> Bool {
+    self.javaObject.call(method: RemoteController__method__6, [sync.toJavaParameter()])
+  }
+
+  open func editMetadata() -> RemoteController.MetadataEditor? {
+    self.javaObject.call(method: RemoteController__method__7, [])
   }
 
   public required init(_ obj: JavaObject) {
@@ -53,7 +58,7 @@ open class RemoteController: Object {
 // ------------------------------------------------------------------------------------
 
 open class RemoteControllerMetadataEditor: Object, MediaMetadataEditor {
-  public func apply() {
+  open func apply() {
     self.javaObject.call(method: RemoteControllerMetadataEditor__method__0, [])
   }
 }
@@ -120,11 +125,12 @@ private let RemoteController__class = findJavaClass(fqn: "android/media/RemoteCo
 
 private let RemoteController__method__0 = RemoteController__class.getMethodID(name: "<init>", sig: "(Landroid/content/Context;Landroid/media/RemoteController$OnClientUpdateListener;)V")!
 private let RemoteController__method__1 = RemoteController__class.getMethodID(name: "getEstimatedMediaPosition", sig: "()J")!
-private let RemoteController__method__2 = RemoteController__class.getMethodID(name: "seekTo", sig: "(J)Z")!
-private let RemoteController__method__3 = RemoteController__class.getMethodID(name: "setArtworkConfiguration", sig: "(II)Z")!
-private let RemoteController__method__4 = RemoteController__class.getMethodID(name: "clearArtworkConfiguration", sig: "()Z")!
-private let RemoteController__method__5 = RemoteController__class.getMethodID(name: "setSynchronizationMode", sig: "(I)Z")!
-private let RemoteController__method__6 = RemoteController__class.getMethodID(name: "editMetadata", sig: "()Landroid/media/RemoteController$MetadataEditor;")!
+private let RemoteController__method__2 = RemoteController__class.getMethodID(name: "sendMediaKeyEvent", sig: "(Landroid/view/KeyEvent;)Z")!
+private let RemoteController__method__3 = RemoteController__class.getMethodID(name: "seekTo", sig: "(J)Z")!
+private let RemoteController__method__4 = RemoteController__class.getMethodID(name: "setArtworkConfiguration", sig: "(II)Z")!
+private let RemoteController__method__5 = RemoteController__class.getMethodID(name: "clearArtworkConfiguration", sig: "()Z")!
+private let RemoteController__method__6 = RemoteController__class.getMethodID(name: "setSynchronizationMode", sig: "(I)Z")!
+private let RemoteController__method__7 = RemoteController__class.getMethodID(name: "editMetadata", sig: "()Landroid/media/RemoteController$MetadataEditor;")!
 
 private let RemoteController__field__0 = RemoteController__class.getStaticFieldID(name: "POSITION_SYNCHRONIZATION_CHECK", sig: "I")!
 private let RemoteController__field__1 = RemoteController__class.getStaticFieldID(name: "POSITION_SYNCHRONIZATION_NONE", sig: "I")!

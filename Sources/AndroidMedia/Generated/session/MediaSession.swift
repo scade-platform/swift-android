@@ -21,75 +21,75 @@ open class MediaSession: Object {
     super.init(ctor: MediaSession__method__0, [JavaParameter(object: context?.toJavaObject()), tag.toJavaParameter()])
   }
 
-  public func setCallback(callback: MediaSession.Callback?) {
+  open func setCallback(callback: MediaSession.Callback?) {
     self.javaObject.call(method: MediaSession__method__1, [JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func setSessionActivity(pi: PendingIntent?) {
+  open func setSessionActivity(pi: PendingIntent?) {
     self.javaObject.call(method: MediaSession__method__2, [pi.toJavaParameter()])
   }
 
-  public func setMediaButtonReceiver(mbr: PendingIntent?) {
+  open func setMediaButtonReceiver(mbr: PendingIntent?) {
     self.javaObject.call(method: MediaSession__method__3, [mbr.toJavaParameter()])
   }
 
-  public func setFlags(flags: Int32) {
+  open func setFlags(flags: Int32) {
     self.javaObject.call(method: MediaSession__method__4, [flags.toJavaParameter()])
   }
 
-  public func setPlaybackToLocal(attributes: AudioAttributes?) {
+  open func setPlaybackToLocal(attributes: AudioAttributes?) {
     self.javaObject.call(method: MediaSession__method__5, [attributes.toJavaParameter()])
   }
 
-  public func setPlaybackToRemote(volumeProvider: VolumeProvider?) {
+  open func setPlaybackToRemote(volumeProvider: VolumeProvider?) {
     self.javaObject.call(method: MediaSession__method__6, [JavaParameter(object: volumeProvider?.toJavaObject())])
   }
 
-  public func setActive(active: Bool) {
+  open func setActive(active: Bool) {
     self.javaObject.call(method: MediaSession__method__7, [active.toJavaParameter()])
   }
 
-  public func isActive() -> Bool {
+  open func isActive() -> Bool {
     self.javaObject.call(method: MediaSession__method__8, [])
   }
 
-  public func sendSessionEvent(event: String, extras: Bundle?) {
+  open func sendSessionEvent(event: String, extras: Bundle?) {
     self.javaObject.call(method: MediaSession__method__9, [event.toJavaParameter(), extras.toJavaParameter()])
   }
 
-  public func release() {
+  open func release() {
     self.javaObject.call(method: MediaSession__method__10, [])
   }
 
-  public func getSessionToken() -> MediaSession.Token? {
+  open func getSessionToken() -> MediaSession.Token? {
     self.javaObject.call(method: MediaSession__method__11, [])
   }
 
-  public func getController() -> MediaController? {
+  open func getController() -> MediaController? {
     self.javaObject.call(method: MediaSession__method__12, [])
   }
 
-  public func setPlaybackState(state: PlaybackState?) {
+  open func setPlaybackState(state: PlaybackState?) {
     self.javaObject.call(method: MediaSession__method__13, [state.toJavaParameter()])
   }
 
-  public func setMetadata(metadata: MediaMetadata?) {
+  open func setMetadata(metadata: MediaMetadata?) {
     self.javaObject.call(method: MediaSession__method__14, [metadata.toJavaParameter()])
   }
 
-  public func setQueue<T0>(queue: T0?) -> Void where T0: List, T0.E == MediaSession.QueueItem {
+  open func setQueue<T0>(queue: T0?) -> Void where T0: List, T0.E == MediaSession.QueueItem {
     self.javaObject.call(method: MediaSession__method__15, [queue.toJavaParameter()])
   }
 
-  public func setQueueTitle(title: String?) {
+  open func setQueueTitle(title: String?) {
     self.javaObject.call(method: MediaSession__method__16, [title.toJavaParameter()])
   }
 
-  public func setRatingType(_type: Int32) {
-    self.javaObject.call(method: MediaSession__method__17, [_type.toJavaParameter()])
+  open func setRatingType(type: Int32) {
+    self.javaObject.call(method: MediaSession__method__17, [type.toJavaParameter()])
   }
 
-  public func setExtras(extras: Bundle?) {
+  open func setExtras(extras: Bundle?) {
     self.javaObject.call(method: MediaSession__method__18, [extras.toJavaParameter()])
   }
 
@@ -111,19 +111,19 @@ open class MediaSessionQueueItem: Object, Parcelable {
     super.init(ctor: MediaSessionQueueItem__method__0, [description.toJavaParameter(), id.toJavaParameter()])
   }
 
-  public func getDescription() -> MediaDescription? {
+  open func getDescription() -> MediaDescription? {
     self.javaObject.call(method: MediaSessionQueueItem__method__1, [])
   }
 
-  public func getQueueId() -> Int64 {
+  open func getQueueId() -> Int64 {
     self.javaObject.call(method: MediaSessionQueueItem__method__2, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: MediaSessionQueueItem__method__3, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: MediaSessionQueueItem__method__4, [])
   }
 
@@ -138,41 +138,7 @@ open class MediaSessionQueueItem: Object, Parcelable {
 
 // ------------------------------------------------------------------------------------
 
-public protocol MediaSessionCallback where Self: Object {
-  func onMediaButtonEvent(mediaButtonIntent: Intent?) -> Bool
-
-  func onPrepare() -> Void
-
-  func onPrepareFromMediaId(mediaId: String, extras: Bundle?) -> Void
-
-  func onPrepareFromSearch(query: String, extras: Bundle?) -> Void
-
-  func onPlay() -> Void
-
-  func onPlayFromSearch(query: String, extras: Bundle?) -> Void
-
-  func onPlayFromMediaId(mediaId: String, extras: Bundle?) -> Void
-
-  func onSkipToQueueItem(id: Int64) -> Void
-
-  func onPause() -> Void
-
-  func onSkipToNext() -> Void
-
-  func onSkipToPrevious() -> Void
-
-  func onFastForward() -> Void
-
-  func onRewind() -> Void
-
-  func onStop() -> Void
-
-  func onSeekTo(pos: Int64) -> Void
-
-  func onSetRating(rating: Rating?) -> Void
-
-  func onCustomAction(action: String, extras: Bundle?) -> Void
-}
+public protocol MediaSessionCallback where Self: Object {}
 
 public extension MediaSessionCallback {
   func box() -> MediaSessionCallbackProxy {
@@ -265,11 +231,11 @@ open class MediaSessionCallbackProxy: Object, JInterfaceProxy, MediaSessionCallb
 // ------------------------------------------------------------------------------------
 
 open class MediaSessionToken: Object, Parcelable {
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: MediaSessionToken__method__0, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: MediaSessionToken__method__1, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }

@@ -3,31 +3,31 @@
 import Java
 
 open class GpsSatellite: Object {
-  public func getPrn() -> Int32 {
+  open func getPrn() -> Int32 {
     self.javaObject.call(method: GpsSatellite__method__0, [])
   }
 
-  public func getSnr() -> Float {
+  open func getSnr() -> Float {
     self.javaObject.call(method: GpsSatellite__method__1, [])
   }
 
-  public func getElevation() -> Float {
+  open func getElevation() -> Float {
     self.javaObject.call(method: GpsSatellite__method__2, [])
   }
 
-  public func getAzimuth() -> Float {
+  open func getAzimuth() -> Float {
     self.javaObject.call(method: GpsSatellite__method__3, [])
   }
 
-  public func hasEphemeris() -> Bool {
+  open func hasEphemeris() -> Bool {
     self.javaObject.call(method: GpsSatellite__method__4, [])
   }
 
-  public func hasAlmanac() -> Bool {
+  open func hasAlmanac() -> Bool {
     self.javaObject.call(method: GpsSatellite__method__5, [])
   }
 
-  public func usedInFix() -> Bool {
+  open func usedInFix() -> Bool {
     self.javaObject.call(method: GpsSatellite__method__6, [])
   }
 }

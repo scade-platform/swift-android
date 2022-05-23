@@ -11,15 +11,15 @@ open class MediaSyncEvent: Object {
     MediaSyncEvent__class.callStatic(method: MediaSyncEvent__method__0, [eventType.toJavaParameter()])
   }
 
-  public func setAudioSessionId(audioSessionId: Int32) -> MediaSyncEvent? {
+  open func setAudioSessionId(audioSessionId: Int32) -> MediaSyncEvent? {
     self.javaObject.call(method: MediaSyncEvent__method__1, [audioSessionId.toJavaParameter()])
   }
 
-  public func getType() -> Int32 {
+  open func getType() -> Int32 {
     self.javaObject.call(method: MediaSyncEvent__method__2, [])
   }
 
-  public func getAudioSessionId() -> Int32 {
+  open func getAudioSessionId() -> Int32 {
     self.javaObject.call(method: MediaSyncEvent__method__3, [])
   }
 }

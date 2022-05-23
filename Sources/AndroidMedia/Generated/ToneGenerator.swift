@@ -209,19 +209,19 @@ open class ToneGenerator: Object {
     super.init(ctor: ToneGenerator__method__0, [streamType.toJavaParameter(), volume.toJavaParameter()])
   }
 
-  public func startTone(toneType: Int32) -> Bool {
+  open func startTone(toneType: Int32) -> Bool {
     self.javaObject.call(method: ToneGenerator__method__1, [toneType.toJavaParameter()])
   }
 
-  public func startTone(toneType: Int32, durationMs: Int32) -> Bool {
+  open func startTone(toneType: Int32, durationMs: Int32) -> Bool {
     self.javaObject.call(method: ToneGenerator__method__2, [toneType.toJavaParameter(), durationMs.toJavaParameter()])
   }
 
-  public func stopTone() {
+  open func stopTone() {
     self.javaObject.call(method: ToneGenerator__method__3, [])
   }
 
-  public func release() {
+  open func release() {
     self.javaObject.call(method: ToneGenerator__method__4, [])
   }
 

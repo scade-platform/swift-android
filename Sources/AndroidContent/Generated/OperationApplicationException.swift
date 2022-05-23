@@ -19,7 +19,7 @@ open class OperationApplicationException: Object {
     super.init(ctor: OperationApplicationException__method__3, [message.toJavaParameter(), numSuccessfulYieldPoints.toJavaParameter()])
   }
 
-  public func getNumSuccessfulYieldPoints() -> Int32 {
+  open func getNumSuccessfulYieldPoints() -> Int32 {
     self.javaObject.call(method: OperationApplicationException__method__4, [])
   }
 

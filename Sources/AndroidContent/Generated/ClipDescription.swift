@@ -24,31 +24,31 @@ open class ClipDescription: Object, Parcelable {
     ClipDescription__class.callStatic(method: ClipDescription__method__2, [concreteType.toJavaParameter(), desiredType.toJavaParameter()])
   }
 
-  public func getLabel() -> String? {
+  open func getLabel() -> String? {
     self.javaObject.call(method: ClipDescription__method__3, [])
   }
 
-  public func hasMimeType(mimeType: String) -> Bool {
+  open func hasMimeType(mimeType: String) -> Bool {
     self.javaObject.call(method: ClipDescription__method__4, [mimeType.toJavaParameter()])
   }
 
-  public func filterMimeTypes(mimeType: String) -> [String] {
+  open func filterMimeTypes(mimeType: String) -> [String] {
     self.javaObject.call(method: ClipDescription__method__5, [mimeType.toJavaParameter()])
   }
 
-  public func getMimeTypeCount() -> Int32 {
+  open func getMimeTypeCount() -> Int32 {
     self.javaObject.call(method: ClipDescription__method__6, [])
   }
 
-  public func getMimeType(index: Int32) -> String {
+  open func getMimeType(index: Int32) -> String {
     self.javaObject.call(method: ClipDescription__method__7, [index.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ClipDescription__method__8, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ClipDescription__method__9, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 

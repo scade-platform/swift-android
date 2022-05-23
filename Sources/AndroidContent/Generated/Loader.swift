@@ -15,48 +15,48 @@ open class Loader<D: JObjectConvertible>: Object {
     super.init(ctor: Loader__method__0, [JavaParameter(object: context?.toJavaObject())])
   }
 
-  public func deliverResult(data: D?) {
+  open func deliverResult(data: D?) {
     self.javaObject.call(method: Loader__method__1, [data.toJavaParameter()])
   }
 
-  public func deliverCancellation() {
+  open func deliverCancellation() {
     self.javaObject.call(method: Loader__method__2, [])
   }
 
-  public func getContext() -> Context? {
+  open func getContext() -> Context? {
     let res = self.javaObject.call(method: Loader__method__3, []) as Object?
     return cast(res, to: ContextProxy.self)
   }
 
-  public func getId() -> Int32 {
+  open func getId() -> Int32 {
     self.javaObject.call(method: Loader__method__4, [])
   }
 
-  public func registerListener<T0>(id: Int32, listener: T0?) -> Void where T0: Loader.OnLoadCompleteListener, T0.D == D {
+  open func registerListener<T0>(id: Int32, listener: T0?) -> Void where T0: Loader.OnLoadCompleteListener, T0.D == D {
     self.javaObject.call(method: Loader__method__5, [id.toJavaParameter(), listener.toJavaParameter()])
   }
 
-  public func unregisterListener<T0>(listener: T0?) -> Void where T0: Loader.OnLoadCompleteListener, T0.D == D {
+  open func unregisterListener<T0>(listener: T0?) -> Void where T0: Loader.OnLoadCompleteListener, T0.D == D {
     self.javaObject.call(method: Loader__method__6, [listener.toJavaParameter()])
   }
 
-  public func registerOnLoadCanceledListener<T0>(listener: T0?) -> Void where T0: Loader.OnLoadCanceledListener, T0.D == D {
+  open func registerOnLoadCanceledListener<T0>(listener: T0?) -> Void where T0: Loader.OnLoadCanceledListener, T0.D == D {
     self.javaObject.call(method: Loader__method__7, [listener.toJavaParameter()])
   }
 
-  public func unregisterOnLoadCanceledListener<T0>(listener: T0?) -> Void where T0: Loader.OnLoadCanceledListener, T0.D == D {
+  open func unregisterOnLoadCanceledListener<T0>(listener: T0?) -> Void where T0: Loader.OnLoadCanceledListener, T0.D == D {
     self.javaObject.call(method: Loader__method__8, [listener.toJavaParameter()])
   }
 
-  public func isStarted() -> Bool {
+  open func isStarted() -> Bool {
     self.javaObject.call(method: Loader__method__9, [])
   }
 
-  public func isAbandoned() -> Bool {
+  open func isAbandoned() -> Bool {
     self.javaObject.call(method: Loader__method__10, [])
   }
 
-  public func isReset() -> Bool {
+  open func isReset() -> Bool {
     self.javaObject.call(method: Loader__method__11, [])
   }
 
@@ -64,44 +64,68 @@ open class Loader<D: JObjectConvertible>: Object {
     self.javaObject.call(method: Loader__method__12, [])
   }
 
-  public func cancelLoad() -> Bool {
+  open func onStartLoading() {
     self.javaObject.call(method: Loader__method__13, [])
   }
 
-  public func forceLoad() {
+  open func cancelLoad() -> Bool {
     self.javaObject.call(method: Loader__method__14, [])
   }
 
-  public func stopLoading() {
+  open func onCancelLoad() -> Bool {
     self.javaObject.call(method: Loader__method__15, [])
   }
 
-  public func abandon() {
+  open func forceLoad() {
     self.javaObject.call(method: Loader__method__16, [])
   }
 
-  public func reset() {
+  open func onForceLoad() {
     self.javaObject.call(method: Loader__method__17, [])
   }
 
-  public func takeContentChanged() -> Bool {
+  open func stopLoading() {
     self.javaObject.call(method: Loader__method__18, [])
   }
 
-  public func commitContentChanged() {
+  open func onStopLoading() {
     self.javaObject.call(method: Loader__method__19, [])
   }
 
-  public func rollbackContentChanged() {
+  open func abandon() {
     self.javaObject.call(method: Loader__method__20, [])
   }
 
-  public func onContentChanged() {
+  open func onAbandon() {
     self.javaObject.call(method: Loader__method__21, [])
   }
 
-  public func dataToString(data: D?) -> String {
-    self.javaObject.call(method: Loader__method__22, [data.toJavaParameter()])
+  open func reset() {
+    self.javaObject.call(method: Loader__method__22, [])
+  }
+
+  open func onReset() {
+    self.javaObject.call(method: Loader__method__23, [])
+  }
+
+  open func takeContentChanged() -> Bool {
+    self.javaObject.call(method: Loader__method__24, [])
+  }
+
+  open func commitContentChanged() {
+    self.javaObject.call(method: Loader__method__25, [])
+  }
+
+  open func rollbackContentChanged() {
+    self.javaObject.call(method: Loader__method__26, [])
+  }
+
+  open func onContentChanged() {
+    self.javaObject.call(method: Loader__method__27, [])
+  }
+
+  open func dataToString(data: D?) -> String {
+    self.javaObject.call(method: Loader__method__28, [data.toJavaParameter()])
   }
 
   public required init(_ obj: JavaObject) {
@@ -214,16 +238,22 @@ private let Loader__method__9 = Loader__class.getMethodID(name: "isStarted", sig
 private let Loader__method__10 = Loader__class.getMethodID(name: "isAbandoned", sig: "()Z")!
 private let Loader__method__11 = Loader__class.getMethodID(name: "isReset", sig: "()Z")!
 private let Loader__method__12 = Loader__class.getMethodID(name: "startLoading", sig: "()V")!
-private let Loader__method__13 = Loader__class.getMethodID(name: "cancelLoad", sig: "()Z")!
-private let Loader__method__14 = Loader__class.getMethodID(name: "forceLoad", sig: "()V")!
-private let Loader__method__15 = Loader__class.getMethodID(name: "stopLoading", sig: "()V")!
-private let Loader__method__16 = Loader__class.getMethodID(name: "abandon", sig: "()V")!
-private let Loader__method__17 = Loader__class.getMethodID(name: "reset", sig: "()V")!
-private let Loader__method__18 = Loader__class.getMethodID(name: "takeContentChanged", sig: "()Z")!
-private let Loader__method__19 = Loader__class.getMethodID(name: "commitContentChanged", sig: "()V")!
-private let Loader__method__20 = Loader__class.getMethodID(name: "rollbackContentChanged", sig: "()V")!
-private let Loader__method__21 = Loader__class.getMethodID(name: "onContentChanged", sig: "()V")!
-private let Loader__method__22 = Loader__class.getMethodID(name: "dataToString", sig: "(Ljava/lang/Object;)Ljava/lang/String;")!
+private let Loader__method__13 = Loader__class.getMethodID(name: "onStartLoading", sig: "()V")!
+private let Loader__method__14 = Loader__class.getMethodID(name: "cancelLoad", sig: "()Z")!
+private let Loader__method__15 = Loader__class.getMethodID(name: "onCancelLoad", sig: "()Z")!
+private let Loader__method__16 = Loader__class.getMethodID(name: "forceLoad", sig: "()V")!
+private let Loader__method__17 = Loader__class.getMethodID(name: "onForceLoad", sig: "()V")!
+private let Loader__method__18 = Loader__class.getMethodID(name: "stopLoading", sig: "()V")!
+private let Loader__method__19 = Loader__class.getMethodID(name: "onStopLoading", sig: "()V")!
+private let Loader__method__20 = Loader__class.getMethodID(name: "abandon", sig: "()V")!
+private let Loader__method__21 = Loader__class.getMethodID(name: "onAbandon", sig: "()V")!
+private let Loader__method__22 = Loader__class.getMethodID(name: "reset", sig: "()V")!
+private let Loader__method__23 = Loader__class.getMethodID(name: "onReset", sig: "()V")!
+private let Loader__method__24 = Loader__class.getMethodID(name: "takeContentChanged", sig: "()Z")!
+private let Loader__method__25 = Loader__class.getMethodID(name: "commitContentChanged", sig: "()V")!
+private let Loader__method__26 = Loader__class.getMethodID(name: "rollbackContentChanged", sig: "()V")!
+private let Loader__method__27 = Loader__class.getMethodID(name: "onContentChanged", sig: "()V")!
+private let Loader__method__28 = Loader__class.getMethodID(name: "dataToString", sig: "(Ljava/lang/Object;)Ljava/lang/String;")!
 
 // ------------------------------------------------------------------------------------
 

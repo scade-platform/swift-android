@@ -9,11 +9,11 @@ open class Entity: Object {
     super.init(ctor: Entity__method__0, [values.toJavaParameter()])
   }
 
-  public func getEntityValues() -> ContentValues? {
+  open func getEntityValues() -> ContentValues? {
     self.javaObject.call(method: Entity__method__1, [])
   }
 
-  public func getSubValues() -> ArrayList<Entity.NamedContentValues>? {
+  open func getSubValues() -> ArrayList<Entity.NamedContentValues>? {
     self.javaObject.call(method: Entity__method__2, [])
   }
 

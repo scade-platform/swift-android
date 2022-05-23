@@ -166,15 +166,15 @@ open class AppWidgetProviderInfo: Object, Parcelable {
     self.javaObject.call(method: AppWidgetProviderInfo__method__2, [JavaParameter(object: packageManager?.toJavaObject())])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: AppWidgetProviderInfo__method__3, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func clone() -> AppWidgetProviderInfo? {
+  override open func clone() -> AppWidgetProviderInfo? {
     self.javaObject.call(method: AppWidgetProviderInfo__method__4, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: AppWidgetProviderInfo__method__5, [])
   }
 

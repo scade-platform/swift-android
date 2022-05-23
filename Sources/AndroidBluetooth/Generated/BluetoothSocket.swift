@@ -9,31 +9,31 @@ open class BluetoothSocket: Object {
 
   public static let TYPE_SCO: Int32 = BluetoothSocket__class.getStatic(field: BluetoothSocket__field__2)
 
-  public func getRemoteDevice() -> BluetoothDevice? {
+  open func getRemoteDevice() -> BluetoothDevice? {
     self.javaObject.call(method: BluetoothSocket__method__0, [])
   }
 
-  public func isConnected() -> Bool {
+  open func isConnected() -> Bool {
     self.javaObject.call(method: BluetoothSocket__method__1, [])
   }
 
-  public func connect() {
+  open func connect() {
     self.javaObject.call(method: BluetoothSocket__method__2, [])
   }
 
-  public func close() {
+  open func close() {
     self.javaObject.call(method: BluetoothSocket__method__3, [])
   }
 
-  public func getMaxTransmitPacketSize() -> Int32 {
+  open func getMaxTransmitPacketSize() -> Int32 {
     self.javaObject.call(method: BluetoothSocket__method__4, [])
   }
 
-  public func getMaxReceivePacketSize() -> Int32 {
+  open func getMaxReceivePacketSize() -> Int32 {
     self.javaObject.call(method: BluetoothSocket__method__5, [])
   }
 
-  public func getConnectionType() -> Int32 {
+  open func getConnectionType() -> Int32 {
     self.javaObject.call(method: BluetoothSocket__method__6, [])
   }
 }

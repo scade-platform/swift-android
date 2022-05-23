@@ -7,27 +7,27 @@ open class ListFragment: Fragment {
     super.init(ctor: ListFragment__method__0, [])
   }
 
-  public func setSelection(position: Int32) {
+  open func setSelection(position: Int32) {
     self.javaObject.call(method: ListFragment__method__1, [position.toJavaParameter()])
   }
 
-  public func getSelectedItemPosition() -> Int32 {
+  open func getSelectedItemPosition() -> Int32 {
     self.javaObject.call(method: ListFragment__method__2, [])
   }
 
-  public func getSelectedItemId() -> Int64 {
+  open func getSelectedItemId() -> Int64 {
     self.javaObject.call(method: ListFragment__method__3, [])
   }
 
-  public func setEmptyText(text: String?) {
+  open func setEmptyText(text: String?) {
     self.javaObject.call(method: ListFragment__method__4, [text.toJavaParameter()])
   }
 
-  public func setListShown(shown: Bool) {
+  open func setListShown(shown: Bool) {
     self.javaObject.call(method: ListFragment__method__5, [shown.toJavaParameter()])
   }
 
-  public func setListShownNoAnimation(shown: Bool) {
+  open func setListShownNoAnimation(shown: Bool) {
     self.javaObject.call(method: ListFragment__method__6, [shown.toJavaParameter()])
   }
 

@@ -8,11 +8,11 @@ open class MidiManager: Object {
 
   public typealias DeviceCallback = AndroidMedia.MidiManagerDeviceCallback
 
-  public func unregisterDeviceCallback(callback: MidiManager.DeviceCallback?) {
+  open func unregisterDeviceCallback(callback: MidiManager.DeviceCallback?) {
     self.javaObject.call(method: MidiManager__method__0, [callback.toJavaParameter()])
   }
 
-  public func getDevices() -> [MidiDeviceInfo?] {
+  open func getDevices() -> [MidiDeviceInfo?] {
     self.javaObject.call(method: MidiManager__method__1, [])
   }
 }
@@ -56,15 +56,15 @@ open class MidiManagerDeviceCallback: Object {
     super.init(ctor: MidiManagerDeviceCallback__method__0, [])
   }
 
-  public func onDeviceAdded(device: MidiDeviceInfo?) {
+  open func onDeviceAdded(device: MidiDeviceInfo?) {
     self.javaObject.call(method: MidiManagerDeviceCallback__method__1, [device.toJavaParameter()])
   }
 
-  public func onDeviceRemoved(device: MidiDeviceInfo?) {
+  open func onDeviceRemoved(device: MidiDeviceInfo?) {
     self.javaObject.call(method: MidiManagerDeviceCallback__method__2, [device.toJavaParameter()])
   }
 
-  public func onDeviceStatusChanged(status: MidiDeviceStatus?) {
+  open func onDeviceStatusChanged(status: MidiDeviceStatus?) {
     self.javaObject.call(method: MidiManagerDeviceCallback__method__3, [status.toJavaParameter()])
   }
 

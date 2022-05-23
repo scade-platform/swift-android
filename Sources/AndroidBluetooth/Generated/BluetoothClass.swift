@@ -8,23 +8,23 @@ open class BluetoothClass: Object, Parcelable {
 
   public typealias Service = AndroidBluetooth.BluetoothClassService
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: BluetoothClass__method__0, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: BluetoothClass__method__1, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func hasService(service: Int32) -> Bool {
+  open func hasService(service: Int32) -> Bool {
     self.javaObject.call(method: BluetoothClass__method__2, [service.toJavaParameter()])
   }
 
-  public func getMajorDeviceClass() -> Int32 {
+  open func getMajorDeviceClass() -> Int32 {
     self.javaObject.call(method: BluetoothClass__method__3, [])
   }
 
-  public func getDeviceClass() -> Int32 {
+  open func getDeviceClass() -> Int32 {
     self.javaObject.call(method: BluetoothClass__method__4, [])
   }
 }

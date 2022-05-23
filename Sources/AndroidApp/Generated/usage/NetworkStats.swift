@@ -5,15 +5,15 @@ import Java
 open class NetworkStats: Object {
   public typealias Bucket = AndroidApp.NetworkStatsBucket
 
-  public func getNextBucket(bucketOut: NetworkStats.Bucket?) -> Bool {
+  open func getNextBucket(bucketOut: NetworkStats.Bucket?) -> Bool {
     self.javaObject.call(method: NetworkStats__method__0, [bucketOut.toJavaParameter()])
   }
 
-  public func hasNextBucket() -> Bool {
+  open func hasNextBucket() -> Bool {
     self.javaObject.call(method: NetworkStats__method__1, [])
   }
 
-  public func close() {
+  open func close() {
     self.javaObject.call(method: NetworkStats__method__2, [])
   }
 }
@@ -45,43 +45,43 @@ open class NetworkStatsBucket: Object {
     super.init(ctor: NetworkStatsBucket__method__0, [])
   }
 
-  public func getUid() -> Int32 {
+  open func getUid() -> Int32 {
     self.javaObject.call(method: NetworkStatsBucket__method__1, [])
   }
 
-  public func getTag() -> Int32 {
+  open func getTag() -> Int32 {
     self.javaObject.call(method: NetworkStatsBucket__method__2, [])
   }
 
-  public func getState() -> Int32 {
+  open func getState() -> Int32 {
     self.javaObject.call(method: NetworkStatsBucket__method__3, [])
   }
 
-  public func getRoaming() -> Int32 {
+  open func getRoaming() -> Int32 {
     self.javaObject.call(method: NetworkStatsBucket__method__4, [])
   }
 
-  public func getStartTimeStamp() -> Int64 {
+  open func getStartTimeStamp() -> Int64 {
     self.javaObject.call(method: NetworkStatsBucket__method__5, [])
   }
 
-  public func getEndTimeStamp() -> Int64 {
+  open func getEndTimeStamp() -> Int64 {
     self.javaObject.call(method: NetworkStatsBucket__method__6, [])
   }
 
-  public func getRxBytes() -> Int64 {
+  open func getRxBytes() -> Int64 {
     self.javaObject.call(method: NetworkStatsBucket__method__7, [])
   }
 
-  public func getTxBytes() -> Int64 {
+  open func getTxBytes() -> Int64 {
     self.javaObject.call(method: NetworkStatsBucket__method__8, [])
   }
 
-  public func getRxPackets() -> Int64 {
+  open func getRxPackets() -> Int64 {
     self.javaObject.call(method: NetworkStatsBucket__method__9, [])
   }
 
-  public func getTxPackets() -> Int64 {
+  open func getTxPackets() -> Int64 {
     self.javaObject.call(method: NetworkStatsBucket__method__10, [])
   }
 

@@ -62,85 +62,85 @@ open class BluetoothGattCharacteristic: Object, Parcelable {
     super.init(ctor: BluetoothGattCharacteristic__method__0, [uuid.toJavaParameter(), properties.toJavaParameter(), permissions.toJavaParameter()])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: BluetoothGattCharacteristic__method__1, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func addDescriptor(descriptor: BluetoothGattDescriptor?) -> Bool {
+  open func addDescriptor(descriptor: BluetoothGattDescriptor?) -> Bool {
     self.javaObject.call(method: BluetoothGattCharacteristic__method__2, [descriptor.toJavaParameter()])
   }
 
-  public func getService() -> BluetoothGattService? {
+  open func getService() -> BluetoothGattService? {
     self.javaObject.call(method: BluetoothGattCharacteristic__method__3, [])
   }
 
-  public func getUuid() -> UUID? {
+  open func getUuid() -> UUID? {
     self.javaObject.call(method: BluetoothGattCharacteristic__method__4, [])
   }
 
-  public func getInstanceId() -> Int32 {
+  open func getInstanceId() -> Int32 {
     self.javaObject.call(method: BluetoothGattCharacteristic__method__5, [])
   }
 
-  public func getProperties() -> Int32 {
+  open func getProperties() -> Int32 {
     self.javaObject.call(method: BluetoothGattCharacteristic__method__6, [])
   }
 
-  public func getPermissions() -> Int32 {
+  open func getPermissions() -> Int32 {
     self.javaObject.call(method: BluetoothGattCharacteristic__method__7, [])
   }
 
-  public func getWriteType() -> Int32 {
+  open func getWriteType() -> Int32 {
     self.javaObject.call(method: BluetoothGattCharacteristic__method__8, [])
   }
 
-  public func setWriteType(writeType: Int32) {
+  open func setWriteType(writeType: Int32) {
     self.javaObject.call(method: BluetoothGattCharacteristic__method__9, [writeType.toJavaParameter()])
   }
 
-  public func getDescriptors<R>() -> R? where R: List, R.E == BluetoothGattDescriptor {
+  open func getDescriptors<R>() -> R? where R: List, R.E == BluetoothGattDescriptor {
     self.javaObject.call(method: BluetoothGattCharacteristic__method__10, [])
   }
 
-  public func getDescriptor(uuid: UUID?) -> BluetoothGattDescriptor? {
+  open func getDescriptor(uuid: UUID?) -> BluetoothGattDescriptor? {
     self.javaObject.call(method: BluetoothGattCharacteristic__method__11, [uuid.toJavaParameter()])
   }
 
-  public func getValue() -> [Int8] {
+  open func getValue() -> [Int8] {
     self.javaObject.call(method: BluetoothGattCharacteristic__method__12, [])
   }
 
-  public func getIntValue(formatType: Int32, offset: Int32) -> Int32 {
+  open func getIntValue(formatType: Int32, offset: Int32) -> Int32 {
     let res = self.javaObject.call(method: BluetoothGattCharacteristic__method__13, [formatType.toJavaParameter(), offset.toJavaParameter()]) as Int32.PrimitiveType
     return res.value
   }
 
-  public func getFloatValue(formatType: Int32, offset: Int32) -> Float {
+  open func getFloatValue(formatType: Int32, offset: Int32) -> Float {
     let res = self.javaObject.call(method: BluetoothGattCharacteristic__method__14, [formatType.toJavaParameter(), offset.toJavaParameter()]) as Float.PrimitiveType
     return res.value
   }
 
-  public func getStringValue(offset: Int32) -> String {
+  open func getStringValue(offset: Int32) -> String {
     self.javaObject.call(method: BluetoothGattCharacteristic__method__15, [offset.toJavaParameter()])
   }
 
-  public func setValue(value: [Int8]) -> Bool {
+  open func setValue(value: [Int8]) -> Bool {
     self.javaObject.call(method: BluetoothGattCharacteristic__method__16, [value.toJavaParameter()])
   }
 
-  public func setValue(value: Int32, formatType: Int32, offset: Int32) -> Bool {
+  open func setValue(value: Int32, formatType: Int32, offset: Int32) -> Bool {
     self.javaObject.call(method: BluetoothGattCharacteristic__method__17, [value.toJavaParameter(), formatType.toJavaParameter(), offset.toJavaParameter()])
   }
 
-  public func setValue(mantissa: Int32, exponent: Int32, formatType: Int32, offset: Int32) -> Bool {
+  open func setValue(mantissa: Int32, exponent: Int32, formatType: Int32, offset: Int32) -> Bool {
     self.javaObject.call(method: BluetoothGattCharacteristic__method__18, [mantissa.toJavaParameter(), exponent.toJavaParameter(), formatType.toJavaParameter(), offset.toJavaParameter()])
   }
 
-  public func setValue(value: String) -> Bool {
+  open func setValue(value: String) -> Bool {
     self.javaObject.call(method: BluetoothGattCharacteristic__method__19, [value.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: BluetoothGattCharacteristic__method__20, [])
   }
 
@@ -154,7 +154,7 @@ open class BluetoothGattCharacteristic: Object, Parcelable {
 }
 
 extension BluetoothGattCharacteristic {
-  public func getDescriptors() -> ListProxy<BluetoothGattDescriptor>? {
+  open func getDescriptors() -> ListProxy<BluetoothGattDescriptor>? {
     self.javaObject.call(method: BluetoothGattCharacteristic__method__10, [])
   }
 }

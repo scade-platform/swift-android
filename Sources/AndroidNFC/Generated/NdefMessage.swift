@@ -16,23 +16,23 @@ open class NdefMessage: Object, Parcelable {
     super.init(ctor: NdefMessage__method__2, [records.toJavaParameter()])
   }
 
-  public func getRecords() -> [NdefRecord?] {
+  open func getRecords() -> [NdefRecord?] {
     self.javaObject.call(method: NdefMessage__method__3, [])
   }
 
-  public func getByteArrayLength() -> Int32 {
+  open func getByteArrayLength() -> Int32 {
     self.javaObject.call(method: NdefMessage__method__4, [])
   }
 
-  public func toByteArray() -> [Int8] {
+  open func toByteArray() -> [Int8] {
     self.javaObject.call(method: NdefMessage__method__5, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: NdefMessage__method__6, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: NdefMessage__method__7, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 

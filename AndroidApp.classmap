@@ -102,9 +102,6 @@ AndroidApp:
 - android/app/ProgressDialog
 - android/app/RemoteInput
 - android/app/RemoteInput$Builder
-- android/app/SearchManager
-- android/app/SearchManager$OnCancelListener
-- android/app/SearchManager$OnDismissListener
 - android/app/SearchableInfo
 - android/app/Service
 - android/app/SharedElementCallback

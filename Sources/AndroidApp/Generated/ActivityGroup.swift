@@ -11,7 +11,7 @@ open class ActivityGroup: Activity {
     super.init(ctor: ActivityGroup__method__1, [singleActivityMode.toJavaParameter()])
   }
 
-  public func getCurrentActivity() -> Activity? {
+  open func getCurrentActivity() -> Activity? {
     self.javaObject.call(method: ActivityGroup__method__2, [])
   }
 

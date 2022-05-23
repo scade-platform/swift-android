@@ -3,15 +3,15 @@
 import Java
 
 open class BackupDataInputStream: Object {
-  public func read() -> Int32 {
+  open func read() -> Int32 {
     self.javaObject.call(method: BackupDataInputStream__method__0, [])
   }
 
-  public func getKey() -> String {
+  open func getKey() -> String {
     self.javaObject.call(method: BackupDataInputStream__method__1, [])
   }
 
-  public func size() -> Int32 {
+  open func size() -> Int32 {
     self.javaObject.call(method: BackupDataInputStream__method__2, [])
   }
 }

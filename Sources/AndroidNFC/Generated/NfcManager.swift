@@ -3,7 +3,7 @@
 import Java
 
 open class NfcManager: Object {
-  public func getDefaultAdapter() -> NfcAdapter? {
+  open func getDefaultAdapter() -> NfcAdapter? {
     self.javaObject.call(method: NfcManager__method__0, [])
   }
 }

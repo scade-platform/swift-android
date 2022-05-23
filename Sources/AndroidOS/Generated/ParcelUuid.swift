@@ -11,15 +11,15 @@ open class ParcelUuid: Object, Parcelable {
     ParcelUuid__class.callStatic(method: ParcelUuid__method__1, [uuid.toJavaParameter()])
   }
 
-  public func getUuid() -> UUID? {
+  open func getUuid() -> UUID? {
     self.javaObject.call(method: ParcelUuid__method__2, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ParcelUuid__method__3, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ParcelUuid__method__4, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 

@@ -17,35 +17,35 @@ open class Ndef: Object, BasicTagTechnology {
     Ndef__class.callStatic(method: Ndef__method__0, [tag.toJavaParameter()])
   }
 
-  public func getCachedNdefMessage() -> NdefMessage? {
+  open func getCachedNdefMessage() -> NdefMessage? {
     self.javaObject.call(method: Ndef__method__1, [])
   }
 
-  public func getType() -> String {
+  open func getType() -> String {
     self.javaObject.call(method: Ndef__method__2, [])
   }
 
-  public func getMaxSize() -> Int32 {
+  open func getMaxSize() -> Int32 {
     self.javaObject.call(method: Ndef__method__3, [])
   }
 
-  public func isWritable() -> Bool {
+  open func isWritable() -> Bool {
     self.javaObject.call(method: Ndef__method__4, [])
   }
 
-  public func getNdefMessage() -> NdefMessage? {
+  open func getNdefMessage() -> NdefMessage? {
     self.javaObject.call(method: Ndef__method__5, [])
   }
 
-  public func writeNdefMessage(msg: NdefMessage?) {
+  open func writeNdefMessage(msg: NdefMessage?) {
     self.javaObject.call(method: Ndef__method__6, [msg.toJavaParameter()])
   }
 
-  public func canMakeReadOnly() -> Bool {
+  open func canMakeReadOnly() -> Bool {
     self.javaObject.call(method: Ndef__method__7, [])
   }
 
-  public func makeReadOnly() -> Bool {
+  open func makeReadOnly() -> Bool {
     self.javaObject.call(method: Ndef__method__8, [])
   }
 }

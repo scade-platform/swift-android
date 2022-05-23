@@ -2,15 +2,7 @@
 
 import Java
 
-public protocol AbstractThreadedSyncAdapter where Self: Object {
-  init(context: Context?, autoInitialize: Bool)
-
-  init(context: Context?, autoInitialize: Bool, allowParallelSyncs: Bool)
-
-  func getContext() -> Context?
-
-  func onSyncCanceled() -> Void
-}
+public protocol AbstractThreadedSyncAdapter where Self: Object {}
 
 public extension AbstractThreadedSyncAdapter {
   func box() -> AbstractThreadedSyncAdapterProxy {

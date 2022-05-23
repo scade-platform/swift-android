@@ -1,5 +1,6 @@
 
 
+import AndroidOS
 import Java
 
 open class ComponentInfo: PackageItemInfo {
@@ -65,20 +66,24 @@ open class ComponentInfo: PackageItemInfo {
     super.init(ctor: ComponentInfo__method__1, [orig.toJavaParameter()])
   }
 
-  public func isEnabled() -> Bool {
-    self.javaObject.call(method: ComponentInfo__method__2, [])
+  override public init(source: Parcel?) {
+    super.init(ctor: ComponentInfo__method__2, [source.toJavaParameter()])
   }
 
-  public func getIconResource() -> Int32 {
+  open func isEnabled() -> Bool {
     self.javaObject.call(method: ComponentInfo__method__3, [])
   }
 
-  public func getLogoResource() -> Int32 {
+  public func getIconResource() -> Int32 {
     self.javaObject.call(method: ComponentInfo__method__4, [])
   }
 
-  public func getBannerResource() -> Int32 {
+  public func getLogoResource() -> Int32 {
     self.javaObject.call(method: ComponentInfo__method__5, [])
+  }
+
+  public func getBannerResource() -> Int32 {
+    self.javaObject.call(method: ComponentInfo__method__6, [])
   }
 
   public required init(_ obj: JavaObject) {
@@ -96,10 +101,11 @@ private let ComponentInfo__class = findJavaClass(fqn: "android/content/pm/Compon
 
 private let ComponentInfo__method__0 = ComponentInfo__class.getMethodID(name: "<init>", sig: "()V")!
 private let ComponentInfo__method__1 = ComponentInfo__class.getMethodID(name: "<init>", sig: "(Landroid/content/pm/ComponentInfo;)V")!
-private let ComponentInfo__method__2 = ComponentInfo__class.getMethodID(name: "isEnabled", sig: "()Z")!
-private let ComponentInfo__method__3 = ComponentInfo__class.getMethodID(name: "getIconResource", sig: "()I")!
-private let ComponentInfo__method__4 = ComponentInfo__class.getMethodID(name: "getLogoResource", sig: "()I")!
-private let ComponentInfo__method__5 = ComponentInfo__class.getMethodID(name: "getBannerResource", sig: "()I")!
+private let ComponentInfo__method__2 = ComponentInfo__class.getMethodID(name: "<init>", sig: "(Landroid/os/Parcel;)V")!
+private let ComponentInfo__method__3 = ComponentInfo__class.getMethodID(name: "isEnabled", sig: "()Z")!
+private let ComponentInfo__method__4 = ComponentInfo__class.getMethodID(name: "getIconResource", sig: "()I")!
+private let ComponentInfo__method__5 = ComponentInfo__class.getMethodID(name: "getLogoResource", sig: "()I")!
+private let ComponentInfo__method__6 = ComponentInfo__class.getMethodID(name: "getBannerResource", sig: "()I")!
 
 private let ComponentInfo__field__0 = ComponentInfo__class.getFieldID(name: "applicationInfo", sig: "Landroid/content/pm/ApplicationInfo;")!
 private let ComponentInfo__field__1 = ComponentInfo__class.getFieldID(name: "descriptionRes", sig: "I")!

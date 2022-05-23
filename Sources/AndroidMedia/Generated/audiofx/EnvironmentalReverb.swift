@@ -32,95 +32,95 @@ open class EnvironmentalReverb: AudioEffect {
     super.init(ctor: EnvironmentalReverb__method__0, [priority.toJavaParameter(), audioSession.toJavaParameter()])
   }
 
-  public func setRoomLevel(room: Int16) {
+  open func setRoomLevel(room: Int16) {
     self.javaObject.call(method: EnvironmentalReverb__method__1, [room.toJavaParameter()])
   }
 
-  public func getRoomLevel() -> Int16 {
+  open func getRoomLevel() -> Int16 {
     self.javaObject.call(method: EnvironmentalReverb__method__2, [])
   }
 
-  public func setRoomHFLevel(roomHF: Int16) {
+  open func setRoomHFLevel(roomHF: Int16) {
     self.javaObject.call(method: EnvironmentalReverb__method__3, [roomHF.toJavaParameter()])
   }
 
-  public func getRoomHFLevel() -> Int16 {
+  open func getRoomHFLevel() -> Int16 {
     self.javaObject.call(method: EnvironmentalReverb__method__4, [])
   }
 
-  public func setDecayTime(decayTime: Int32) {
+  open func setDecayTime(decayTime: Int32) {
     self.javaObject.call(method: EnvironmentalReverb__method__5, [decayTime.toJavaParameter()])
   }
 
-  public func getDecayTime() -> Int32 {
+  open func getDecayTime() -> Int32 {
     self.javaObject.call(method: EnvironmentalReverb__method__6, [])
   }
 
-  public func setDecayHFRatio(decayHFRatio: Int16) {
+  open func setDecayHFRatio(decayHFRatio: Int16) {
     self.javaObject.call(method: EnvironmentalReverb__method__7, [decayHFRatio.toJavaParameter()])
   }
 
-  public func getDecayHFRatio() -> Int16 {
+  open func getDecayHFRatio() -> Int16 {
     self.javaObject.call(method: EnvironmentalReverb__method__8, [])
   }
 
-  public func setReflectionsLevel(reflectionsLevel: Int16) {
+  open func setReflectionsLevel(reflectionsLevel: Int16) {
     self.javaObject.call(method: EnvironmentalReverb__method__9, [reflectionsLevel.toJavaParameter()])
   }
 
-  public func getReflectionsLevel() -> Int16 {
+  open func getReflectionsLevel() -> Int16 {
     self.javaObject.call(method: EnvironmentalReverb__method__10, [])
   }
 
-  public func setReflectionsDelay(reflectionsDelay: Int32) {
+  open func setReflectionsDelay(reflectionsDelay: Int32) {
     self.javaObject.call(method: EnvironmentalReverb__method__11, [reflectionsDelay.toJavaParameter()])
   }
 
-  public func getReflectionsDelay() -> Int32 {
+  open func getReflectionsDelay() -> Int32 {
     self.javaObject.call(method: EnvironmentalReverb__method__12, [])
   }
 
-  public func setReverbLevel(reverbLevel: Int16) {
+  open func setReverbLevel(reverbLevel: Int16) {
     self.javaObject.call(method: EnvironmentalReverb__method__13, [reverbLevel.toJavaParameter()])
   }
 
-  public func getReverbLevel() -> Int16 {
+  open func getReverbLevel() -> Int16 {
     self.javaObject.call(method: EnvironmentalReverb__method__14, [])
   }
 
-  public func setReverbDelay(reverbDelay: Int32) {
+  open func setReverbDelay(reverbDelay: Int32) {
     self.javaObject.call(method: EnvironmentalReverb__method__15, [reverbDelay.toJavaParameter()])
   }
 
-  public func getReverbDelay() -> Int32 {
+  open func getReverbDelay() -> Int32 {
     self.javaObject.call(method: EnvironmentalReverb__method__16, [])
   }
 
-  public func setDiffusion(diffusion: Int16) {
+  open func setDiffusion(diffusion: Int16) {
     self.javaObject.call(method: EnvironmentalReverb__method__17, [diffusion.toJavaParameter()])
   }
 
-  public func getDiffusion() -> Int16 {
+  open func getDiffusion() -> Int16 {
     self.javaObject.call(method: EnvironmentalReverb__method__18, [])
   }
 
-  public func setDensity(density: Int16) {
+  open func setDensity(density: Int16) {
     self.javaObject.call(method: EnvironmentalReverb__method__19, [density.toJavaParameter()])
   }
 
-  public func getDensity() -> Int16 {
+  open func getDensity() -> Int16 {
     self.javaObject.call(method: EnvironmentalReverb__method__20, [])
   }
 
-  public func setParameterListener(listener: EnvironmentalReverb.OnParameterChangeListener?) {
+  open func setParameterListener(listener: EnvironmentalReverb.OnParameterChangeListener?) {
     self.javaObject.call(method: EnvironmentalReverb__method__21, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func getProperties() -> EnvironmentalReverb.Settings? {
+  open func getProperties() -> EnvironmentalReverb.Settings? {
     self.javaObject.call(method: EnvironmentalReverb__method__22, [])
   }
 
-  public func setProperties(settings: EnvironmentalReverb.Settings?) {
+  open func setProperties(settings: EnvironmentalReverb.Settings?) {
     self.javaObject.call(method: EnvironmentalReverb__method__23, [settings.toJavaParameter()])
   }
 

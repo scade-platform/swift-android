@@ -23,51 +23,51 @@ open class MediaBrowser: Object {
     super.init(ctor: MediaBrowser__method__0, [JavaParameter(object: context?.toJavaObject()), serviceComponent.toJavaParameter(), callback.toJavaParameter(), rootHints.toJavaParameter()])
   }
 
-  public func connect() {
+  open func connect() {
     self.javaObject.call(method: MediaBrowser__method__1, [])
   }
 
-  public func disconnect() {
+  open func disconnect() {
     self.javaObject.call(method: MediaBrowser__method__2, [])
   }
 
-  public func isConnected() -> Bool {
+  open func isConnected() -> Bool {
     self.javaObject.call(method: MediaBrowser__method__3, [])
   }
 
-  public func getServiceComponent() -> ComponentName? {
+  open func getServiceComponent() -> ComponentName? {
     self.javaObject.call(method: MediaBrowser__method__4, [])
   }
 
-  public func getRoot() -> String {
+  open func getRoot() -> String {
     self.javaObject.call(method: MediaBrowser__method__5, [])
   }
 
-  public func getExtras() -> Bundle? {
+  open func getExtras() -> Bundle? {
     self.javaObject.call(method: MediaBrowser__method__6, [])
   }
 
-  public func getSessionToken() -> MediaSession.Token? {
+  open func getSessionToken() -> MediaSession.Token? {
     self.javaObject.call(method: MediaBrowser__method__7, [])
   }
 
-  public func subscribe(parentId: String, callback: MediaBrowser.SubscriptionCallback?) {
+  open func subscribe(parentId: String, callback: MediaBrowser.SubscriptionCallback?) {
     self.javaObject.call(method: MediaBrowser__method__8, [parentId.toJavaParameter(), JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func subscribe(parentId: String, options: Bundle?, callback: MediaBrowser.SubscriptionCallback?) {
+  open func subscribe(parentId: String, options: Bundle?, callback: MediaBrowser.SubscriptionCallback?) {
     self.javaObject.call(method: MediaBrowser__method__9, [parentId.toJavaParameter(), options.toJavaParameter(), JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func unsubscribe(parentId: String) {
+  open func unsubscribe(parentId: String) {
     self.javaObject.call(method: MediaBrowser__method__10, [parentId.toJavaParameter()])
   }
 
-  public func unsubscribe(parentId: String, callback: MediaBrowser.SubscriptionCallback?) {
+  open func unsubscribe(parentId: String, callback: MediaBrowser.SubscriptionCallback?) {
     self.javaObject.call(method: MediaBrowser__method__11, [parentId.toJavaParameter(), JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func getItem(mediaId: String, cb: MediaBrowser.ItemCallback?) {
+  open func getItem(mediaId: String, cb: MediaBrowser.ItemCallback?) {
     self.javaObject.call(method: MediaBrowser__method__12, [mediaId.toJavaParameter(), JavaParameter(object: cb?.toJavaObject())])
   }
 
@@ -82,11 +82,7 @@ open class MediaBrowser: Object {
 
 // ------------------------------------------------------------------------------------
 
-public protocol MediaBrowserItemCallback where Self: Object {
-  func onItemLoaded(item: MediaBrowser.MediaItem?) -> Void
-
-  func onError(itemId: String) -> Void
-}
+public protocol MediaBrowserItemCallback where Self: Object {}
 
 public extension MediaBrowserItemCallback {
   func box() -> MediaBrowserItemCallbackProxy {
@@ -118,15 +114,7 @@ open class MediaBrowserItemCallbackProxy: Object, JInterfaceProxy, MediaBrowserI
 
 // ------------------------------------------------------------------------------------
 
-public protocol MediaBrowserSubscriptionCallback where Self: Object {
-  func onChildrenLoaded<T0>(parentId: String, children: T0?) -> Void where T0: List, T0.E == MediaBrowser.MediaItem
-
-  func onChildrenLoaded<T0>(parentId: String, children: T0?, options: Bundle?) -> Void where T0: List, T0.E == MediaBrowser.MediaItem
-
-  func onError(parentId: String) -> Void
-
-  func onError(parentId: String, options: Bundle?) -> Void
-}
+public protocol MediaBrowserSubscriptionCallback where Self: Object {}
 
 public extension MediaBrowserSubscriptionCallback {
   func box() -> MediaBrowserSubscriptionCallbackProxy {
@@ -171,15 +159,15 @@ open class MediaBrowserConnectionCallback: Object {
     super.init(ctor: MediaBrowserConnectionCallback__method__0, [])
   }
 
-  public func onConnected() {
+  open func onConnected() {
     self.javaObject.call(method: MediaBrowserConnectionCallback__method__1, [])
   }
 
-  public func onConnectionSuspended() {
+  open func onConnectionSuspended() {
     self.javaObject.call(method: MediaBrowserConnectionCallback__method__2, [])
   }
 
-  public func onConnectionFailed() {
+  open func onConnectionFailed() {
     self.javaObject.call(method: MediaBrowserConnectionCallback__method__3, [])
   }
 
@@ -203,31 +191,31 @@ open class MediaBrowserMediaItem: Object, Parcelable {
     super.init(ctor: MediaBrowserMediaItem__method__0, [description.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: MediaBrowserMediaItem__method__1, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: MediaBrowserMediaItem__method__2, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func getFlags() -> Int32 {
+  open func getFlags() -> Int32 {
     self.javaObject.call(method: MediaBrowserMediaItem__method__3, [])
   }
 
-  public func isBrowsable() -> Bool {
+  open func isBrowsable() -> Bool {
     self.javaObject.call(method: MediaBrowserMediaItem__method__4, [])
   }
 
-  public func isPlayable() -> Bool {
+  open func isPlayable() -> Bool {
     self.javaObject.call(method: MediaBrowserMediaItem__method__5, [])
   }
 
-  public func getDescription() -> MediaDescription? {
+  open func getDescription() -> MediaDescription? {
     self.javaObject.call(method: MediaBrowserMediaItem__method__6, [])
   }
 
-  public func getMediaId() -> String {
+  open func getMediaId() -> String {
     self.javaObject.call(method: MediaBrowserMediaItem__method__7, [])
   }
 

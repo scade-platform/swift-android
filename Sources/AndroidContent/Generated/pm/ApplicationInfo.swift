@@ -301,11 +301,11 @@ open class ApplicationInfo: PackageItemInfo, Parcelable {
     super.init(ctor: ApplicationInfo__method__1, [orig.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ApplicationInfo__method__2, [])
   }
 
-  public func loadDescription(pm: PackageManager?) -> String? {
+  open func loadDescription(pm: PackageManager?) -> String? {
     self.javaObject.call(method: ApplicationInfo__method__3, [JavaParameter(object: pm?.toJavaObject())])
   }
 
@@ -325,8 +325,8 @@ open class ApplicationInfoDisplayNameComparator: Object {
     super.init(ctor: ApplicationInfoDisplayNameComparator__method__0, [JavaParameter(object: pm?.toJavaObject())])
   }
 
-  public func compare(o1: ApplicationInfo?, o2: ApplicationInfo?) -> Int32 {
-    self.javaObject.call(method: ApplicationInfoDisplayNameComparator__method__1, [o1.toJavaParameter(), o2.toJavaParameter()])
+  public func compare(aa: ApplicationInfo?, ab: ApplicationInfo?) -> Int32 {
+    self.javaObject.call(method: ApplicationInfoDisplayNameComparator__method__1, [aa.toJavaParameter(), ab.toJavaParameter()])
   }
 
   public required init(_ obj: JavaObject) {

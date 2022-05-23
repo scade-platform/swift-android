@@ -12,27 +12,27 @@ open class Signature: Object, Parcelable {
     super.init(ctor: Signature__method__1, [text.toJavaParameter()])
   }
 
-  public func toChars() -> [UInt16] {
+  open func toChars() -> [UInt16] {
     self.javaObject.call(method: Signature__method__2, [])
   }
 
-  public func toChars(existingArray: [UInt16], outLen: [Int32]) -> [UInt16] {
+  open func toChars(existingArray: [UInt16], outLen: [Int32]) -> [UInt16] {
     self.javaObject.call(method: Signature__method__3, [existingArray.toJavaParameter(), outLen.toJavaParameter()])
   }
 
-  public func toCharsString() -> String {
+  open func toCharsString() -> String {
     self.javaObject.call(method: Signature__method__4, [])
   }
 
-  public func toByteArray() -> [Int8] {
+  open func toByteArray() -> [Int8] {
     self.javaObject.call(method: Signature__method__5, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: Signature__method__6, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: Signature__method__7, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 

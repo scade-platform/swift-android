@@ -6,11 +6,11 @@ import Java
 open class SyncRequest: Object, Parcelable {
   public typealias Builder = AndroidContent.SyncRequestBuilder
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: SyncRequest__method__0, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: SyncRequest__method__1, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }
@@ -22,47 +22,47 @@ open class SyncRequestBuilder: Object {
     super.init(ctor: SyncRequestBuilder__method__0, [])
   }
 
-  public func syncOnce() -> SyncRequest.Builder? {
+  open func syncOnce() -> SyncRequest.Builder? {
     self.javaObject.call(method: SyncRequestBuilder__method__1, [])
   }
 
-  public func syncPeriodic(pollFrequency: Int64, beforeSeconds: Int64) -> SyncRequest.Builder? {
+  open func syncPeriodic(pollFrequency: Int64, beforeSeconds: Int64) -> SyncRequest.Builder? {
     self.javaObject.call(method: SyncRequestBuilder__method__2, [pollFrequency.toJavaParameter(), beforeSeconds.toJavaParameter()])
   }
 
-  public func setDisallowMetered(disallow: Bool) -> SyncRequest.Builder? {
+  open func setDisallowMetered(disallow: Bool) -> SyncRequest.Builder? {
     self.javaObject.call(method: SyncRequestBuilder__method__3, [disallow.toJavaParameter()])
   }
 
-  public func setRequiresCharging(requiresCharging: Bool) -> SyncRequest.Builder? {
+  open func setRequiresCharging(requiresCharging: Bool) -> SyncRequest.Builder? {
     self.javaObject.call(method: SyncRequestBuilder__method__4, [requiresCharging.toJavaParameter()])
   }
 
-  public func setExtras(bundle: Bundle?) -> SyncRequest.Builder? {
+  open func setExtras(bundle: Bundle?) -> SyncRequest.Builder? {
     self.javaObject.call(method: SyncRequestBuilder__method__5, [bundle.toJavaParameter()])
   }
 
-  public func setNoRetry(noRetry: Bool) -> SyncRequest.Builder? {
+  open func setNoRetry(noRetry: Bool) -> SyncRequest.Builder? {
     self.javaObject.call(method: SyncRequestBuilder__method__6, [noRetry.toJavaParameter()])
   }
 
-  public func setIgnoreSettings(ignoreSettings: Bool) -> SyncRequest.Builder? {
+  open func setIgnoreSettings(ignoreSettings: Bool) -> SyncRequest.Builder? {
     self.javaObject.call(method: SyncRequestBuilder__method__7, [ignoreSettings.toJavaParameter()])
   }
 
-  public func setIgnoreBackoff(ignoreBackoff: Bool) -> SyncRequest.Builder? {
+  open func setIgnoreBackoff(ignoreBackoff: Bool) -> SyncRequest.Builder? {
     self.javaObject.call(method: SyncRequestBuilder__method__8, [ignoreBackoff.toJavaParameter()])
   }
 
-  public func setManual(isManual: Bool) -> SyncRequest.Builder? {
+  open func setManual(isManual: Bool) -> SyncRequest.Builder? {
     self.javaObject.call(method: SyncRequestBuilder__method__9, [isManual.toJavaParameter()])
   }
 
-  public func setExpedited(expedited: Bool) -> SyncRequest.Builder? {
+  open func setExpedited(expedited: Bool) -> SyncRequest.Builder? {
     self.javaObject.call(method: SyncRequestBuilder__method__10, [expedited.toJavaParameter()])
   }
 
-  public func build() -> SyncRequest? {
+  open func build() -> SyncRequest? {
     self.javaObject.call(method: SyncRequestBuilder__method__11, [])
   }
 

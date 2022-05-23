@@ -281,43 +281,43 @@ open class ExifInterface: Object {
     super.init(ctor: ExifInterface__method__1, [fileDescriptor.toJavaParameter()])
   }
 
-  public func getAttribute(tag: String) -> String {
+  open func getAttribute(tag: String) -> String {
     self.javaObject.call(method: ExifInterface__method__2, [tag.toJavaParameter()])
   }
 
-  public func getAttributeInt(tag: String, defaultValue: Int32) -> Int32 {
+  open func getAttributeInt(tag: String, defaultValue: Int32) -> Int32 {
     self.javaObject.call(method: ExifInterface__method__3, [tag.toJavaParameter(), defaultValue.toJavaParameter()])
   }
 
-  public func getAttributeDouble(tag: String, defaultValue: Double) -> Double {
+  open func getAttributeDouble(tag: String, defaultValue: Double) -> Double {
     self.javaObject.call(method: ExifInterface__method__4, [tag.toJavaParameter(), defaultValue.toJavaParameter()])
   }
 
-  public func setAttribute(tag: String, value: String) {
+  open func setAttribute(tag: String, value: String) {
     self.javaObject.call(method: ExifInterface__method__5, [tag.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func saveAttributes() {
+  open func saveAttributes() {
     self.javaObject.call(method: ExifInterface__method__6, [])
   }
 
-  public func hasThumbnail() -> Bool {
+  open func hasThumbnail() -> Bool {
     self.javaObject.call(method: ExifInterface__method__7, [])
   }
 
-  public func getThumbnail() -> [Int8] {
+  open func getThumbnail() -> [Int8] {
     self.javaObject.call(method: ExifInterface__method__8, [])
   }
 
-  public func getThumbnailRange() -> [Int64] {
+  open func getThumbnailRange() -> [Int64] {
     self.javaObject.call(method: ExifInterface__method__9, [])
   }
 
-  public func getLatLong(output: [Float]) -> Bool {
+  open func getLatLong(output: [Float]) -> Bool {
     self.javaObject.call(method: ExifInterface__method__10, [output.toJavaParameter()])
   }
 
-  public func getAltitude(defaultValue: Double) -> Double {
+  open func getAltitude(defaultValue: Double) -> Double {
     self.javaObject.call(method: ExifInterface__method__11, [defaultValue.toJavaParameter()])
   }
 

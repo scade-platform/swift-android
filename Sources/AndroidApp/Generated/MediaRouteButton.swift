@@ -8,15 +8,15 @@ open class MediaRouteButton: Object {
     super.init(ctor: MediaRouteButton__method__0, [JavaParameter(object: context?.toJavaObject())])
   }
 
-  public func getRouteTypes() -> Int32 {
+  open func getRouteTypes() -> Int32 {
     self.javaObject.call(method: MediaRouteButton__method__1, [])
   }
 
-  public func setRouteTypes(types: Int32) {
+  open func setRouteTypes(types: Int32) {
     self.javaObject.call(method: MediaRouteButton__method__2, [types.toJavaParameter()])
   }
 
-  public func showDialog() {
+  open func showDialog() {
     self.javaObject.call(method: MediaRouteButton__method__3, [])
   }
 

@@ -9,47 +9,47 @@ open class LocationProvider: Object {
 
   public static let TEMPORARILY_UNAVAILABLE: Int32 = LocationProvider__class.getStatic(field: LocationProvider__field__2)
 
-  public func getName() -> String {
+  open func getName() -> String {
     self.javaObject.call(method: LocationProvider__method__0, [])
   }
 
-  public func meetsCriteria(criteria: Criteria?) -> Bool {
+  open func meetsCriteria(criteria: Criteria?) -> Bool {
     self.javaObject.call(method: LocationProvider__method__1, [criteria.toJavaParameter()])
   }
 
-  public func requiresNetwork() -> Bool {
+  open func requiresNetwork() -> Bool {
     self.javaObject.call(method: LocationProvider__method__2, [])
   }
 
-  public func requiresSatellite() -> Bool {
+  open func requiresSatellite() -> Bool {
     self.javaObject.call(method: LocationProvider__method__3, [])
   }
 
-  public func requiresCell() -> Bool {
+  open func requiresCell() -> Bool {
     self.javaObject.call(method: LocationProvider__method__4, [])
   }
 
-  public func hasMonetaryCost() -> Bool {
+  open func hasMonetaryCost() -> Bool {
     self.javaObject.call(method: LocationProvider__method__5, [])
   }
 
-  public func supportsAltitude() -> Bool {
+  open func supportsAltitude() -> Bool {
     self.javaObject.call(method: LocationProvider__method__6, [])
   }
 
-  public func supportsSpeed() -> Bool {
+  open func supportsSpeed() -> Bool {
     self.javaObject.call(method: LocationProvider__method__7, [])
   }
 
-  public func supportsBearing() -> Bool {
+  open func supportsBearing() -> Bool {
     self.javaObject.call(method: LocationProvider__method__8, [])
   }
 
-  public func getPowerRequirement() -> Int32 {
+  open func getPowerRequirement() -> Int32 {
     self.javaObject.call(method: LocationProvider__method__9, [])
   }
 
-  public func getAccuracy() -> Int32 {
+  open func getAccuracy() -> Int32 {
     self.javaObject.call(method: LocationProvider__method__10, [])
   }
 }

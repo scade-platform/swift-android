@@ -45,36 +45,28 @@ open class RingtoneManager: Object {
     super.init(ctor: RingtoneManager__method__1, [JavaParameter(object: context?.toJavaObject())])
   }
 
-  public func setType(_type: Int32) {
-    self.javaObject.call(method: RingtoneManager__method__2, [_type.toJavaParameter()])
+  open func setType(type: Int32) {
+    self.javaObject.call(method: RingtoneManager__method__2, [type.toJavaParameter()])
   }
 
-  public func inferStreamType() -> Int32 {
+  open func inferStreamType() -> Int32 {
     self.javaObject.call(method: RingtoneManager__method__3, [])
   }
 
-  public func setStopPreviousRingtone(stopPreviousRingtone: Bool) {
+  open func setStopPreviousRingtone(stopPreviousRingtone: Bool) {
     self.javaObject.call(method: RingtoneManager__method__4, [stopPreviousRingtone.toJavaParameter()])
   }
 
-  public func getStopPreviousRingtone() -> Bool {
+  open func getStopPreviousRingtone() -> Bool {
     self.javaObject.call(method: RingtoneManager__method__5, [])
   }
 
-  public func stopPreviousRingtone() {
+  open func stopPreviousRingtone() {
     self.javaObject.call(method: RingtoneManager__method__6, [])
   }
 
-  public func getIncludeDrm() -> Bool {
-    self.javaObject.call(method: RingtoneManager__method__7, [])
-  }
-
-  public func setIncludeDrm(includeDrm: Bool) {
-    self.javaObject.call(method: RingtoneManager__method__8, [includeDrm.toJavaParameter()])
-  }
-
-  public func getRingtone(position: Int32) -> Ringtone? {
-    self.javaObject.call(method: RingtoneManager__method__9, [position.toJavaParameter()])
+  open func getRingtone(position: Int32) -> Ringtone? {
+    self.javaObject.call(method: RingtoneManager__method__7, [position.toJavaParameter()])
   }
 
   public required init(_ obj: JavaObject) {
@@ -97,9 +89,7 @@ private let RingtoneManager__method__3 = RingtoneManager__class.getMethodID(name
 private let RingtoneManager__method__4 = RingtoneManager__class.getMethodID(name: "setStopPreviousRingtone", sig: "(Z)V")!
 private let RingtoneManager__method__5 = RingtoneManager__class.getMethodID(name: "getStopPreviousRingtone", sig: "()Z")!
 private let RingtoneManager__method__6 = RingtoneManager__class.getMethodID(name: "stopPreviousRingtone", sig: "()V")!
-private let RingtoneManager__method__7 = RingtoneManager__class.getMethodID(name: "getIncludeDrm", sig: "()Z")!
-private let RingtoneManager__method__8 = RingtoneManager__class.getMethodID(name: "setIncludeDrm", sig: "(Z)V")!
-private let RingtoneManager__method__9 = RingtoneManager__class.getMethodID(name: "getRingtone", sig: "(I)Landroid/media/Ringtone;")!
+private let RingtoneManager__method__7 = RingtoneManager__class.getMethodID(name: "getRingtone", sig: "(I)Landroid/media/Ringtone;")!
 
 private let RingtoneManager__field__0 = RingtoneManager__class.getStaticFieldID(name: "ACTION_RINGTONE_PICKER", sig: "Ljava/lang/String;")!
 private let RingtoneManager__field__1 = RingtoneManager__class.getStaticFieldID(name: "EXTRA_RINGTONE_DEFAULT_URI", sig: "Ljava/lang/String;")!

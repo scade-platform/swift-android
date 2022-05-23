@@ -3,29 +3,29 @@
 import Java
 
 open class ContentQueryMap: Object {
-  public func setKeepUpdated(keepUpdated: Bool) {
+  open func setKeepUpdated(keepUpdated: Bool) {
     self.javaObject.call(method: ContentQueryMap__method__0, [keepUpdated.toJavaParameter()])
   }
 
-  public func getValues(rowName: String) -> ContentValues? {
+  open func getValues(rowName: String) -> ContentValues? {
     self.javaObject.call(method: ContentQueryMap__method__1, [rowName.toJavaParameter()])
   }
 
-  public func requery() {
+  open func requery() {
     self.javaObject.call(method: ContentQueryMap__method__2, [])
   }
 
-  public func getRows<R>() -> R? where R: Map, R.K == String, R.V == ContentValues {
+  open func getRows<R>() -> R? where R: Map, R.K == String, R.V == ContentValues {
     self.javaObject.call(method: ContentQueryMap__method__3, [])
   }
 
-  public func close() {
+  open func close() {
     self.javaObject.call(method: ContentQueryMap__method__4, [])
   }
 }
 
 extension ContentQueryMap {
-  public func getRows() -> MapProxy<String, ContentValues>? {
+  open func getRows() -> MapProxy<String, ContentValues>? {
     self.javaObject.call(method: ContentQueryMap__method__3, [])
   }
 }

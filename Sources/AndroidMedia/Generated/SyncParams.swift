@@ -21,39 +21,39 @@ open class SyncParams: Object {
     super.init(ctor: SyncParams__method__0, [])
   }
 
-  public func allowDefaults() -> SyncParams? {
+  open func allowDefaults() -> SyncParams? {
     self.javaObject.call(method: SyncParams__method__1, [])
   }
 
-  public func setAudioAdjustMode(audioAdjustMode: Int32) -> SyncParams? {
+  open func setAudioAdjustMode(audioAdjustMode: Int32) -> SyncParams? {
     self.javaObject.call(method: SyncParams__method__2, [audioAdjustMode.toJavaParameter()])
   }
 
-  public func getAudioAdjustMode() -> Int32 {
+  open func getAudioAdjustMode() -> Int32 {
     self.javaObject.call(method: SyncParams__method__3, [])
   }
 
-  public func setSyncSource(syncSource: Int32) -> SyncParams? {
+  open func setSyncSource(syncSource: Int32) -> SyncParams? {
     self.javaObject.call(method: SyncParams__method__4, [syncSource.toJavaParameter()])
   }
 
-  public func getSyncSource() -> Int32 {
+  open func getSyncSource() -> Int32 {
     self.javaObject.call(method: SyncParams__method__5, [])
   }
 
-  public func setTolerance(tolerance: Float) -> SyncParams? {
+  open func setTolerance(tolerance: Float) -> SyncParams? {
     self.javaObject.call(method: SyncParams__method__6, [tolerance.toJavaParameter()])
   }
 
-  public func getTolerance() -> Float {
+  open func getTolerance() -> Float {
     self.javaObject.call(method: SyncParams__method__7, [])
   }
 
-  public func setFrameRate(frameRate: Float) -> SyncParams? {
+  open func setFrameRate(frameRate: Float) -> SyncParams? {
     self.javaObject.call(method: SyncParams__method__8, [frameRate.toJavaParameter()])
   }
 
-  public func getFrameRate() -> Float {
+  open func getFrameRate() -> Float {
     self.javaObject.call(method: SyncParams__method__9, [])
   }
 

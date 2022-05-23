@@ -17,181 +17,181 @@ open class Bundle: BaseBundle, Parcelable {
     super.init(ctor: Bundle__method__2, [b.toJavaParameter()])
   }
 
-  public func putAll(bundle: Bundle?) {
+  open func putAll(bundle: Bundle?) {
     self.javaObject.call(method: Bundle__method__3, [bundle.toJavaParameter()])
   }
 
-  public func hasFileDescriptors() -> Bool {
+  open func hasFileDescriptors() -> Bool {
     self.javaObject.call(method: Bundle__method__4, [])
   }
 
-  public func putByte(key: String, value: Int8) {
+  open func putByte(key: String, value: Int8) {
     self.javaObject.call(method: Bundle__method__5, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putChar(key: String, value: UInt16) {
+  open func putChar(key: String, value: UInt16) {
     self.javaObject.call(method: Bundle__method__6, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putShort(key: String, value: Int16) {
+  open func putShort(key: String, value: Int16) {
     self.javaObject.call(method: Bundle__method__7, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putFloat(key: String, value: Float) {
+  open func putFloat(key: String, value: Float) {
     self.javaObject.call(method: Bundle__method__8, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putCharSequence(key: String, value: String?) {
+  open func putCharSequence(key: String, value: String?) {
     self.javaObject.call(method: Bundle__method__9, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putParcelable(key: String, value: Parcelable?) {
+  open func putParcelable(key: String, value: Parcelable?) {
     self.javaObject.call(method: Bundle__method__10, [key.toJavaParameter(), JavaParameter(object: value?.toJavaObject())])
   }
 
-  public func putParcelableArray(key: String, value: [Parcelable?]) {
+  open func putParcelableArray(key: String, value: [Parcelable?]) {
     self.javaObject.call(method: Bundle__method__11, [key.toJavaParameter(), JavaParameter(object: value.map { $0?.box() }.toJavaObject())])
   }
 
-  public func putParcelableArrayList<T0>(key: String, value: ArrayList<T0>?) -> Void where T0: Parcelable {
+  open func putParcelableArrayList<T0>(key: String, value: ArrayList<T0>?) -> Void where T0: Parcelable {
     self.javaObject.call(method: Bundle__method__12, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putIntegerArrayList(key: String, value: ArrayList<Int32.PrimitiveType>?) {
+  open func putIntegerArrayList(key: String, value: ArrayList<Int32.PrimitiveType>?) {
     self.javaObject.call(method: Bundle__method__13, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putStringArrayList(key: String, value: ArrayList<String>?) {
+  open func putStringArrayList(key: String, value: ArrayList<String>?) {
     self.javaObject.call(method: Bundle__method__14, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putCharSequenceArrayList(key: String, value: ArrayList<String>?) {
+  open func putCharSequenceArrayList(key: String, value: ArrayList<String>?) {
     self.javaObject.call(method: Bundle__method__15, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putByteArray(key: String, value: [Int8]) {
+  open func putByteArray(key: String, value: [Int8]) {
     self.javaObject.call(method: Bundle__method__16, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putShortArray(key: String, value: [Int16]) {
+  open func putShortArray(key: String, value: [Int16]) {
     self.javaObject.call(method: Bundle__method__17, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putCharArray(key: String, value: [UInt16]) {
+  open func putCharArray(key: String, value: [UInt16]) {
     self.javaObject.call(method: Bundle__method__18, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putFloatArray(key: String, value: [Float]) {
+  open func putFloatArray(key: String, value: [Float]) {
     self.javaObject.call(method: Bundle__method__19, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putCharSequenceArray(key: String, value: [String?]) {
+  open func putCharSequenceArray(key: String, value: [String?]) {
     self.javaObject.call(method: Bundle__method__20, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putBundle(key: String, value: Bundle?) {
+  open func putBundle(key: String, value: Bundle?) {
     self.javaObject.call(method: Bundle__method__21, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func getByte(key: String) -> Int8 {
+  open func getByte(key: String) -> Int8 {
     self.javaObject.call(method: Bundle__method__22, [key.toJavaParameter()])
   }
 
-  public func getByte(key: String, defaultValue: Int8) -> Int8 {
+  open func getByte(key: String, defaultValue: Int8) -> Int8 {
     let res = self.javaObject.call(method: Bundle__method__23, [key.toJavaParameter(), defaultValue.toJavaParameter()]) as Int8.PrimitiveType
     return res.value
   }
 
-  public func getChar(key: String) -> UInt16 {
+  open func getChar(key: String) -> UInt16 {
     self.javaObject.call(method: Bundle__method__24, [key.toJavaParameter()])
   }
 
-  public func getChar(key: String, defaultValue: UInt16) -> UInt16 {
+  open func getChar(key: String, defaultValue: UInt16) -> UInt16 {
     self.javaObject.call(method: Bundle__method__25, [key.toJavaParameter(), defaultValue.toJavaParameter()])
   }
 
-  public func getShort(key: String) -> Int16 {
+  open func getShort(key: String) -> Int16 {
     self.javaObject.call(method: Bundle__method__26, [key.toJavaParameter()])
   }
 
-  public func getShort(key: String, defaultValue: Int16) -> Int16 {
+  open func getShort(key: String, defaultValue: Int16) -> Int16 {
     self.javaObject.call(method: Bundle__method__27, [key.toJavaParameter(), defaultValue.toJavaParameter()])
   }
 
-  public func getFloat(key: String) -> Float {
+  open func getFloat(key: String) -> Float {
     self.javaObject.call(method: Bundle__method__28, [key.toJavaParameter()])
   }
 
-  public func getFloat(key: String, defaultValue: Float) -> Float {
+  open func getFloat(key: String, defaultValue: Float) -> Float {
     self.javaObject.call(method: Bundle__method__29, [key.toJavaParameter(), defaultValue.toJavaParameter()])
   }
 
-  public func getCharSequence(key: String) -> String? {
+  open func getCharSequence(key: String) -> String? {
     self.javaObject.call(method: Bundle__method__30, [key.toJavaParameter()])
   }
 
-  public func getCharSequence(key: String, defaultValue: String?) -> String? {
+  open func getCharSequence(key: String, defaultValue: String?) -> String? {
     self.javaObject.call(method: Bundle__method__31, [key.toJavaParameter(), defaultValue.toJavaParameter()])
   }
 
-  public func getBundle(key: String) -> Bundle? {
+  open func getBundle(key: String) -> Bundle? {
     self.javaObject.call(method: Bundle__method__32, [key.toJavaParameter()])
   }
 
-  public func getParcelable<T>(key: String) -> T? where T: Parcelable {
+  open func getParcelable<T>(key: String) -> T? where T: Parcelable {
     self.javaObject.call(method: Bundle__method__33, [key.toJavaParameter()])
   }
 
-  public func getParcelableArray(key: String) -> [Parcelable?] {
+  open func getParcelableArray(key: String) -> [Parcelable?] {
     let res = self.javaObject.call(method: Bundle__method__34, [key.toJavaParameter()]) as [Object?]
     return cast(res, to: ParcelableProxy.self)
   }
 
-  public func getParcelableArrayList<T>(key: String) -> ArrayList<T>? where T: Parcelable {
+  open func getParcelableArrayList<T>(key: String) -> ArrayList<T>? where T: Parcelable {
     self.javaObject.call(method: Bundle__method__35, [key.toJavaParameter()])
   }
 
-  public func getIntegerArrayList(key: String) -> ArrayList<Int32.PrimitiveType>? {
+  open func getIntegerArrayList(key: String) -> ArrayList<Int32.PrimitiveType>? {
     self.javaObject.call(method: Bundle__method__36, [key.toJavaParameter()])
   }
 
-  public func getStringArrayList(key: String) -> ArrayList<String>? {
+  open func getStringArrayList(key: String) -> ArrayList<String>? {
     self.javaObject.call(method: Bundle__method__37, [key.toJavaParameter()])
   }
 
-  public func getCharSequenceArrayList(key: String) -> ArrayList<String>? {
+  open func getCharSequenceArrayList(key: String) -> ArrayList<String>? {
     self.javaObject.call(method: Bundle__method__38, [key.toJavaParameter()])
   }
 
-  public func getByteArray(key: String) -> [Int8] {
+  open func getByteArray(key: String) -> [Int8] {
     self.javaObject.call(method: Bundle__method__39, [key.toJavaParameter()])
   }
 
-  public func getShortArray(key: String) -> [Int16] {
+  open func getShortArray(key: String) -> [Int16] {
     self.javaObject.call(method: Bundle__method__40, [key.toJavaParameter()])
   }
 
-  public func getCharArray(key: String) -> [UInt16] {
+  open func getCharArray(key: String) -> [UInt16] {
     self.javaObject.call(method: Bundle__method__41, [key.toJavaParameter()])
   }
 
-  public func getFloatArray(key: String) -> [Float] {
+  open func getFloatArray(key: String) -> [Float] {
     self.javaObject.call(method: Bundle__method__42, [key.toJavaParameter()])
   }
 
-  public func getCharSequenceArray(key: String) -> [String?] {
+  open func getCharSequenceArray(key: String) -> [String?] {
     self.javaObject.call(method: Bundle__method__43, [key.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: Bundle__method__44, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: Bundle__method__45, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func readFromParcel(parcel: Parcel?) {
+  open func readFromParcel(parcel: Parcel?) {
     self.javaObject.call(method: Bundle__method__46, [parcel.toJavaParameter()])
   }
 

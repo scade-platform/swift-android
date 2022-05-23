@@ -61,45 +61,45 @@ open class AppWidgetManager: Object {
     AppWidgetManager__class.callStatic(method: AppWidgetManager__method__0, [JavaParameter(object: context?.toJavaObject())])
   }
 
-  public func updateAppWidgetOptions(appWidgetId: Int32, options: Bundle?) {
+  open func updateAppWidgetOptions(appWidgetId: Int32, options: Bundle?) {
     self.javaObject.call(method: AppWidgetManager__method__1, [appWidgetId.toJavaParameter(), options.toJavaParameter()])
   }
 
-  public func getAppWidgetOptions(appWidgetId: Int32) -> Bundle? {
+  open func getAppWidgetOptions(appWidgetId: Int32) -> Bundle? {
     self.javaObject.call(method: AppWidgetManager__method__2, [appWidgetId.toJavaParameter()])
   }
 
-  public func notifyAppWidgetViewDataChanged(appWidgetIds: [Int32], viewId: Int32) {
+  open func notifyAppWidgetViewDataChanged(appWidgetIds: [Int32], viewId: Int32) {
     self.javaObject.call(method: AppWidgetManager__method__3, [appWidgetIds.toJavaParameter(), viewId.toJavaParameter()])
   }
 
-  public func notifyAppWidgetViewDataChanged(appWidgetId: Int32, viewId: Int32) {
+  open func notifyAppWidgetViewDataChanged(appWidgetId: Int32, viewId: Int32) {
     self.javaObject.call(method: AppWidgetManager__method__4, [appWidgetId.toJavaParameter(), viewId.toJavaParameter()])
   }
 
-  public func getInstalledProviders<R>() -> R? where R: List, R.E == AppWidgetProviderInfo {
+  open func getInstalledProviders<R>() -> R? where R: List, R.E == AppWidgetProviderInfo {
     self.javaObject.call(method: AppWidgetManager__method__5, [])
   }
 
-  public func getAppWidgetInfo(appWidgetId: Int32) -> AppWidgetProviderInfo? {
+  open func getAppWidgetInfo(appWidgetId: Int32) -> AppWidgetProviderInfo? {
     self.javaObject.call(method: AppWidgetManager__method__6, [appWidgetId.toJavaParameter()])
   }
 
-  public func bindAppWidgetIdIfAllowed(appWidgetId: Int32, provider: ComponentName?) -> Bool {
+  open func bindAppWidgetIdIfAllowed(appWidgetId: Int32, provider: ComponentName?) -> Bool {
     self.javaObject.call(method: AppWidgetManager__method__7, [appWidgetId.toJavaParameter(), provider.toJavaParameter()])
   }
 
-  public func bindAppWidgetIdIfAllowed(appWidgetId: Int32, provider: ComponentName?, options: Bundle?) -> Bool {
+  open func bindAppWidgetIdIfAllowed(appWidgetId: Int32, provider: ComponentName?, options: Bundle?) -> Bool {
     self.javaObject.call(method: AppWidgetManager__method__8, [appWidgetId.toJavaParameter(), provider.toJavaParameter(), options.toJavaParameter()])
   }
 
-  public func getAppWidgetIds(provider: ComponentName?) -> [Int32] {
+  open func getAppWidgetIds(provider: ComponentName?) -> [Int32] {
     self.javaObject.call(method: AppWidgetManager__method__9, [provider.toJavaParameter()])
   }
 }
 
 extension AppWidgetManager {
-  public func getInstalledProviders() -> ListProxy<AppWidgetProviderInfo>? {
+  open func getInstalledProviders() -> ListProxy<AppWidgetProviderInfo>? {
     self.javaObject.call(method: AppWidgetManager__method__5, [])
   }
 }

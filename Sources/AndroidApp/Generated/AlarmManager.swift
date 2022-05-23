@@ -29,55 +29,55 @@ open class AlarmManager: Object {
 
   public static let RTC_WAKEUP: Int32 = AlarmManager__class.getStatic(field: AlarmManager__field__9)
 
-  public func set(_type: Int32, triggerAtMillis: Int64, operation: PendingIntent?) {
-    self.javaObject.call(method: AlarmManager__method__0, [_type.toJavaParameter(), triggerAtMillis.toJavaParameter(), operation.toJavaParameter()])
+  open func set(type: Int32, triggerAtMillis: Int64, operation: PendingIntent?) {
+    self.javaObject.call(method: AlarmManager__method__0, [type.toJavaParameter(), triggerAtMillis.toJavaParameter(), operation.toJavaParameter()])
   }
 
-  public func setRepeating(_type: Int32, triggerAtMillis: Int64, intervalMillis: Int64, operation: PendingIntent?) {
-    self.javaObject.call(method: AlarmManager__method__1, [_type.toJavaParameter(), triggerAtMillis.toJavaParameter(), intervalMillis.toJavaParameter(), operation.toJavaParameter()])
+  open func setRepeating(type: Int32, triggerAtMillis: Int64, intervalMillis: Int64, operation: PendingIntent?) {
+    self.javaObject.call(method: AlarmManager__method__1, [type.toJavaParameter(), triggerAtMillis.toJavaParameter(), intervalMillis.toJavaParameter(), operation.toJavaParameter()])
   }
 
-  public func setWindow(_type: Int32, windowStartMillis: Int64, windowLengthMillis: Int64, operation: PendingIntent?) {
-    self.javaObject.call(method: AlarmManager__method__2, [_type.toJavaParameter(), windowStartMillis.toJavaParameter(), windowLengthMillis.toJavaParameter(), operation.toJavaParameter()])
+  open func setWindow(type: Int32, windowStartMillis: Int64, windowLengthMillis: Int64, operation: PendingIntent?) {
+    self.javaObject.call(method: AlarmManager__method__2, [type.toJavaParameter(), windowStartMillis.toJavaParameter(), windowLengthMillis.toJavaParameter(), operation.toJavaParameter()])
   }
 
-  public func setExact(_type: Int32, triggerAtMillis: Int64, operation: PendingIntent?) {
-    self.javaObject.call(method: AlarmManager__method__3, [_type.toJavaParameter(), triggerAtMillis.toJavaParameter(), operation.toJavaParameter()])
+  open func setExact(type: Int32, triggerAtMillis: Int64, operation: PendingIntent?) {
+    self.javaObject.call(method: AlarmManager__method__3, [type.toJavaParameter(), triggerAtMillis.toJavaParameter(), operation.toJavaParameter()])
   }
 
-  public func setAlarmClock(info: AlarmManager.AlarmClockInfo?, operation: PendingIntent?) {
+  open func setAlarmClock(info: AlarmManager.AlarmClockInfo?, operation: PendingIntent?) {
     self.javaObject.call(method: AlarmManager__method__4, [info.toJavaParameter(), operation.toJavaParameter()])
   }
 
-  public func setInexactRepeating(_type: Int32, triggerAtMillis: Int64, intervalMillis: Int64, operation: PendingIntent?) {
-    self.javaObject.call(method: AlarmManager__method__5, [_type.toJavaParameter(), triggerAtMillis.toJavaParameter(), intervalMillis.toJavaParameter(), operation.toJavaParameter()])
+  open func setInexactRepeating(type: Int32, triggerAtMillis: Int64, intervalMillis: Int64, operation: PendingIntent?) {
+    self.javaObject.call(method: AlarmManager__method__5, [type.toJavaParameter(), triggerAtMillis.toJavaParameter(), intervalMillis.toJavaParameter(), operation.toJavaParameter()])
   }
 
-  public func setAndAllowWhileIdle(_type: Int32, triggerAtMillis: Int64, operation: PendingIntent?) {
-    self.javaObject.call(method: AlarmManager__method__6, [_type.toJavaParameter(), triggerAtMillis.toJavaParameter(), operation.toJavaParameter()])
+  open func setAndAllowWhileIdle(type: Int32, triggerAtMillis: Int64, operation: PendingIntent?) {
+    self.javaObject.call(method: AlarmManager__method__6, [type.toJavaParameter(), triggerAtMillis.toJavaParameter(), operation.toJavaParameter()])
   }
 
-  public func setExactAndAllowWhileIdle(_type: Int32, triggerAtMillis: Int64, operation: PendingIntent?) {
-    self.javaObject.call(method: AlarmManager__method__7, [_type.toJavaParameter(), triggerAtMillis.toJavaParameter(), operation.toJavaParameter()])
+  open func setExactAndAllowWhileIdle(type: Int32, triggerAtMillis: Int64, operation: PendingIntent?) {
+    self.javaObject.call(method: AlarmManager__method__7, [type.toJavaParameter(), triggerAtMillis.toJavaParameter(), operation.toJavaParameter()])
   }
 
-  public func cancel(operation: PendingIntent?) {
+  open func cancel(operation: PendingIntent?) {
     self.javaObject.call(method: AlarmManager__method__8, [operation.toJavaParameter()])
   }
 
-  public func cancel(listener: AlarmManager.OnAlarmListener?) {
+  open func cancel(listener: AlarmManager.OnAlarmListener?) {
     self.javaObject.call(method: AlarmManager__method__9, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setTime(millis: Int64) {
+  open func setTime(millis: Int64) {
     self.javaObject.call(method: AlarmManager__method__10, [millis.toJavaParameter()])
   }
 
-  public func setTimeZone(timeZone: String) {
+  open func setTimeZone(timeZone: String) {
     self.javaObject.call(method: AlarmManager__method__11, [timeZone.toJavaParameter()])
   }
 
-  public func getNextAlarmClock() -> AlarmManager.AlarmClockInfo? {
+  open func getNextAlarmClock() -> AlarmManager.AlarmClockInfo? {
     self.javaObject.call(method: AlarmManager__method__12, [])
   }
 }
@@ -89,19 +89,19 @@ open class AlarmManagerAlarmClockInfo: Object, Parcelable {
     super.init(ctor: AlarmManagerAlarmClockInfo__method__0, [triggerTime.toJavaParameter(), showIntent.toJavaParameter()])
   }
 
-  public func getTriggerTime() -> Int64 {
+  open func getTriggerTime() -> Int64 {
     self.javaObject.call(method: AlarmManagerAlarmClockInfo__method__1, [])
   }
 
-  public func getShowIntent() -> PendingIntent? {
+  open func getShowIntent() -> PendingIntent? {
     self.javaObject.call(method: AlarmManagerAlarmClockInfo__method__2, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: AlarmManagerAlarmClockInfo__method__3, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: AlarmManagerAlarmClockInfo__method__4, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 

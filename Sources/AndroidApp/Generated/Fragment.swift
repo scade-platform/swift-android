@@ -29,7 +29,7 @@ open class Fragment: Object, ComponentCallbacks2 {
     self.javaObject.call(method: Fragment__method__4, [])
   }
 
-  public func setArguments(args: Bundle?) {
+  open func setArguments(args: Bundle?) {
     self.javaObject.call(method: Fragment__method__5, [args.toJavaParameter()])
   }
 
@@ -37,11 +37,11 @@ open class Fragment: Object, ComponentCallbacks2 {
     self.javaObject.call(method: Fragment__method__6, [])
   }
 
-  public func setInitialSavedState(state: Fragment.SavedState?) {
+  open func setInitialSavedState(state: Fragment.SavedState?) {
     self.javaObject.call(method: Fragment__method__7, [state.toJavaParameter()])
   }
 
-  public func setTargetFragment(fragment: Fragment?, requestCode: Int32) {
+  open func setTargetFragment(fragment: Fragment?, requestCode: Int32) {
     self.javaObject.call(method: Fragment__method__8, [fragment.toJavaParameter(), requestCode.toJavaParameter()])
   }
 
@@ -53,7 +53,7 @@ open class Fragment: Object, ComponentCallbacks2 {
     self.javaObject.call(method: Fragment__method__10, [])
   }
 
-  public func getContext() -> Context? {
+  open func getContext() -> Context? {
     let res = self.javaObject.call(method: Fragment__method__11, []) as Object?
     return cast(res, to: ContextProxy.self)
   }
@@ -124,11 +124,11 @@ open class Fragment: Object, ComponentCallbacks2 {
     self.javaObject.call(method: Fragment__method__27, [])
   }
 
-  public func onHiddenChanged(hidden: Bool) {
+  open func onHiddenChanged(hidden: Bool) {
     self.javaObject.call(method: Fragment__method__28, [hidden.toJavaParameter()])
   }
 
-  public func setRetainInstance(retain: Bool) {
+  open func setRetainInstance(retain: Bool) {
     self.javaObject.call(method: Fragment__method__29, [retain.toJavaParameter()])
   }
 
@@ -136,48 +136,48 @@ open class Fragment: Object, ComponentCallbacks2 {
     self.javaObject.call(method: Fragment__method__30, [])
   }
 
-  public func setHasOptionsMenu(hasMenu: Bool) {
+  open func setHasOptionsMenu(hasMenu: Bool) {
     self.javaObject.call(method: Fragment__method__31, [hasMenu.toJavaParameter()])
   }
 
-  public func setMenuVisibility(menuVisible: Bool) {
+  open func setMenuVisibility(menuVisible: Bool) {
     self.javaObject.call(method: Fragment__method__32, [menuVisible.toJavaParameter()])
   }
 
-  public func setUserVisibleHint(isVisibleToUser: Bool) {
+  open func setUserVisibleHint(isVisibleToUser: Bool) {
     self.javaObject.call(method: Fragment__method__33, [isVisibleToUser.toJavaParameter()])
   }
 
-  public func getUserVisibleHint() -> Bool {
+  open func getUserVisibleHint() -> Bool {
     self.javaObject.call(method: Fragment__method__34, [])
   }
 
-  public func getLoaderManager() -> LoaderManager? {
+  open func getLoaderManager() -> LoaderManager? {
     let res = self.javaObject.call(method: Fragment__method__35, []) as Object?
     return cast(res, to: LoaderManagerProxy.self)
   }
 
-  public func startActivity(intent: Intent?) {
+  open func startActivity(intent: Intent?) {
     self.javaObject.call(method: Fragment__method__36, [intent.toJavaParameter()])
   }
 
-  public func startActivity(intent: Intent?, options: Bundle?) {
+  open func startActivity(intent: Intent?, options: Bundle?) {
     self.javaObject.call(method: Fragment__method__37, [intent.toJavaParameter(), options.toJavaParameter()])
   }
 
-  public func startActivityForResult(intent: Intent?, requestCode: Int32) {
+  open func startActivityForResult(intent: Intent?, requestCode: Int32) {
     self.javaObject.call(method: Fragment__method__38, [intent.toJavaParameter(), requestCode.toJavaParameter()])
   }
 
-  public func startActivityForResult(intent: Intent?, requestCode: Int32, options: Bundle?) {
+  open func startActivityForResult(intent: Intent?, requestCode: Int32, options: Bundle?) {
     self.javaObject.call(method: Fragment__method__39, [intent.toJavaParameter(), requestCode.toJavaParameter(), options.toJavaParameter()])
   }
 
-  public func startIntentSenderForResult(intent: IntentSender?, requestCode: Int32, fillInIntent: Intent?, flagsMask: Int32, flagsValues: Int32, extraFlags: Int32, options: Bundle?) {
+  open func startIntentSenderForResult(intent: IntentSender?, requestCode: Int32, fillInIntent: Intent?, flagsMask: Int32, flagsValues: Int32, extraFlags: Int32, options: Bundle?) {
     self.javaObject.call(method: Fragment__method__40, [intent.toJavaParameter(), requestCode.toJavaParameter(), fillInIntent.toJavaParameter(), flagsMask.toJavaParameter(), flagsValues.toJavaParameter(), extraFlags.toJavaParameter(), options.toJavaParameter()])
   }
 
-  public func onActivityResult(requestCode: Int32, resultCode: Int32, data: Intent?) {
+  open func onActivityResult(requestCode: Int32, resultCode: Int32, data: Intent?) {
     self.javaObject.call(method: Fragment__method__41, [requestCode.toJavaParameter(), resultCode.toJavaParameter(), data.toJavaParameter()])
   }
 
@@ -185,116 +185,112 @@ open class Fragment: Object, ComponentCallbacks2 {
     self.javaObject.call(method: Fragment__method__42, [permissions.toJavaParameter(), requestCode.toJavaParameter()])
   }
 
-  public func onRequestPermissionsResult(requestCode: Int32, permissions: [String], grantResults: [Int32]) {
+  open func onRequestPermissionsResult(requestCode: Int32, permissions: [String], grantResults: [Int32]) {
     self.javaObject.call(method: Fragment__method__43, [requestCode.toJavaParameter(), permissions.toJavaParameter(), grantResults.toJavaParameter()])
   }
 
-  public func shouldShowRequestPermissionRationale(permission: String) -> Bool {
+  open func shouldShowRequestPermissionRationale(permission: String) -> Bool {
     self.javaObject.call(method: Fragment__method__44, [permission.toJavaParameter()])
   }
 
-  public func onAttachFragment(childFragment: Fragment?) {
+  open func onAttachFragment(childFragment: Fragment?) {
     self.javaObject.call(method: Fragment__method__45, [childFragment.toJavaParameter()])
   }
 
-  public func onAttach(context: Context?) {
+  open func onAttach(context: Context?) {
     self.javaObject.call(method: Fragment__method__46, [JavaParameter(object: context?.toJavaObject())])
   }
 
-  public func onAttach(activity: Activity?) {
-    self.javaObject.call(method: Fragment__method__47, [activity.toJavaParameter()])
+  open func onCreate(savedInstanceState: Bundle?) {
+    self.javaObject.call(method: Fragment__method__47, [savedInstanceState.toJavaParameter()])
   }
 
-  public func onCreate(savedInstanceState: Bundle?) {
+  open func onActivityCreated(savedInstanceState: Bundle?) {
     self.javaObject.call(method: Fragment__method__48, [savedInstanceState.toJavaParameter()])
   }
 
-  public func onActivityCreated(savedInstanceState: Bundle?) {
+  open func onViewStateRestored(savedInstanceState: Bundle?) {
     self.javaObject.call(method: Fragment__method__49, [savedInstanceState.toJavaParameter()])
   }
 
-  public func onViewStateRestored(savedInstanceState: Bundle?) {
-    self.javaObject.call(method: Fragment__method__50, [savedInstanceState.toJavaParameter()])
+  open func onStart() {
+    self.javaObject.call(method: Fragment__method__50, [])
   }
 
-  public func onStart() {
+  open func onResume() {
     self.javaObject.call(method: Fragment__method__51, [])
   }
 
-  public func onResume() {
-    self.javaObject.call(method: Fragment__method__52, [])
+  open func onSaveInstanceState(outState: Bundle?) {
+    self.javaObject.call(method: Fragment__method__52, [outState.toJavaParameter()])
   }
 
-  public func onSaveInstanceState(outState: Bundle?) {
-    self.javaObject.call(method: Fragment__method__53, [outState.toJavaParameter()])
+  open func onMultiWindowModeChanged(isInMultiWindowMode: Bool) {
+    self.javaObject.call(method: Fragment__method__53, [isInMultiWindowMode.toJavaParameter()])
   }
 
-  public func onMultiWindowModeChanged(isInMultiWindowMode: Bool) {
-    self.javaObject.call(method: Fragment__method__54, [isInMultiWindowMode.toJavaParameter()])
+  open func onPictureInPictureModeChanged(isInPictureInPictureMode: Bool) {
+    self.javaObject.call(method: Fragment__method__54, [isInPictureInPictureMode.toJavaParameter()])
   }
 
-  public func onPictureInPictureModeChanged(isInPictureInPictureMode: Bool) {
-    self.javaObject.call(method: Fragment__method__55, [isInPictureInPictureMode.toJavaParameter()])
+  open func onConfigurationChanged(newConfig: Configuration?) {
+    self.javaObject.call(method: Fragment__method__55, [newConfig.toJavaParameter()])
   }
 
-  public func onConfigurationChanged(newConfig: Configuration?) {
-    self.javaObject.call(method: Fragment__method__56, [newConfig.toJavaParameter()])
+  open func onPause() {
+    self.javaObject.call(method: Fragment__method__56, [])
   }
 
-  public func onPause() {
+  open func onStop() {
     self.javaObject.call(method: Fragment__method__57, [])
   }
 
-  public func onStop() {
+  open func onLowMemory() {
     self.javaObject.call(method: Fragment__method__58, [])
   }
 
-  public func onLowMemory() {
-    self.javaObject.call(method: Fragment__method__59, [])
+  open func onTrimMemory(level: Int32) {
+    self.javaObject.call(method: Fragment__method__59, [level.toJavaParameter()])
   }
 
-  public func onTrimMemory(level: Int32) {
-    self.javaObject.call(method: Fragment__method__60, [level.toJavaParameter()])
+  open func onDestroyView() {
+    self.javaObject.call(method: Fragment__method__60, [])
   }
 
-  public func onDestroyView() {
+  open func onDestroy() {
     self.javaObject.call(method: Fragment__method__61, [])
   }
 
-  public func onDestroy() {
+  open func onDetach() {
     self.javaObject.call(method: Fragment__method__62, [])
   }
 
-  public func onDetach() {
+  open func onDestroyOptionsMenu() {
     self.javaObject.call(method: Fragment__method__63, [])
   }
 
-  public func onDestroyOptionsMenu() {
-    self.javaObject.call(method: Fragment__method__64, [])
+  open func setEnterSharedElementCallback(callback: SharedElementCallback?) {
+    self.javaObject.call(method: Fragment__method__64, [JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func setEnterSharedElementCallback(callback: SharedElementCallback?) {
+  open func setExitSharedElementCallback(callback: SharedElementCallback?) {
     self.javaObject.call(method: Fragment__method__65, [JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func setExitSharedElementCallback(callback: SharedElementCallback?) {
-    self.javaObject.call(method: Fragment__method__66, [JavaParameter(object: callback?.toJavaObject())])
+  open func setAllowEnterTransitionOverlap(allow: Bool) {
+    self.javaObject.call(method: Fragment__method__66, [allow.toJavaParameter()])
   }
 
-  public func setAllowEnterTransitionOverlap(allow: Bool) {
-    self.javaObject.call(method: Fragment__method__67, [allow.toJavaParameter()])
+  open func getAllowEnterTransitionOverlap() -> Bool {
+    self.javaObject.call(method: Fragment__method__67, [])
   }
 
-  public func getAllowEnterTransitionOverlap() -> Bool {
-    self.javaObject.call(method: Fragment__method__68, [])
+  open func setAllowReturnTransitionOverlap(allow: Bool) {
+    self.javaObject.call(method: Fragment__method__68, [allow.toJavaParameter()])
   }
 
-  public func setAllowReturnTransitionOverlap(allow: Bool) {
-    self.javaObject.call(method: Fragment__method__69, [allow.toJavaParameter()])
-  }
-
-  public func getAllowReturnTransitionOverlap() -> Bool {
-    self.javaObject.call(method: Fragment__method__70, [])
+  open func getAllowReturnTransitionOverlap() -> Bool {
+    self.javaObject.call(method: Fragment__method__69, [])
   }
 
   public required init(_ obj: JavaObject) {
@@ -313,11 +309,11 @@ open class FragmentInstantiationException: Object {}
 // ------------------------------------------------------------------------------------
 
 open class FragmentSavedState: Object, Parcelable {
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: FragmentSavedState__method__0, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: FragmentSavedState__method__1, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }
@@ -373,30 +369,29 @@ private let Fragment__method__43 = Fragment__class.getMethodID(name: "onRequestP
 private let Fragment__method__44 = Fragment__class.getMethodID(name: "shouldShowRequestPermissionRationale", sig: "(Ljava/lang/String;)Z")!
 private let Fragment__method__45 = Fragment__class.getMethodID(name: "onAttachFragment", sig: "(Landroid/app/Fragment;)V")!
 private let Fragment__method__46 = Fragment__class.getMethodID(name: "onAttach", sig: "(Landroid/content/Context;)V")!
-private let Fragment__method__47 = Fragment__class.getMethodID(name: "onAttach", sig: "(Landroid/app/Activity;)V")!
-private let Fragment__method__48 = Fragment__class.getMethodID(name: "onCreate", sig: "(Landroid/os/Bundle;)V")!
-private let Fragment__method__49 = Fragment__class.getMethodID(name: "onActivityCreated", sig: "(Landroid/os/Bundle;)V")!
-private let Fragment__method__50 = Fragment__class.getMethodID(name: "onViewStateRestored", sig: "(Landroid/os/Bundle;)V")!
-private let Fragment__method__51 = Fragment__class.getMethodID(name: "onStart", sig: "()V")!
-private let Fragment__method__52 = Fragment__class.getMethodID(name: "onResume", sig: "()V")!
-private let Fragment__method__53 = Fragment__class.getMethodID(name: "onSaveInstanceState", sig: "(Landroid/os/Bundle;)V")!
-private let Fragment__method__54 = Fragment__class.getMethodID(name: "onMultiWindowModeChanged", sig: "(Z)V")!
-private let Fragment__method__55 = Fragment__class.getMethodID(name: "onPictureInPictureModeChanged", sig: "(Z)V")!
-private let Fragment__method__56 = Fragment__class.getMethodID(name: "onConfigurationChanged", sig: "(Landroid/content/res/Configuration;)V")!
-private let Fragment__method__57 = Fragment__class.getMethodID(name: "onPause", sig: "()V")!
-private let Fragment__method__58 = Fragment__class.getMethodID(name: "onStop", sig: "()V")!
-private let Fragment__method__59 = Fragment__class.getMethodID(name: "onLowMemory", sig: "()V")!
-private let Fragment__method__60 = Fragment__class.getMethodID(name: "onTrimMemory", sig: "(I)V")!
-private let Fragment__method__61 = Fragment__class.getMethodID(name: "onDestroyView", sig: "()V")!
-private let Fragment__method__62 = Fragment__class.getMethodID(name: "onDestroy", sig: "()V")!
-private let Fragment__method__63 = Fragment__class.getMethodID(name: "onDetach", sig: "()V")!
-private let Fragment__method__64 = Fragment__class.getMethodID(name: "onDestroyOptionsMenu", sig: "()V")!
-private let Fragment__method__65 = Fragment__class.getMethodID(name: "setEnterSharedElementCallback", sig: "(Landroid/app/SharedElementCallback;)V")!
-private let Fragment__method__66 = Fragment__class.getMethodID(name: "setExitSharedElementCallback", sig: "(Landroid/app/SharedElementCallback;)V")!
-private let Fragment__method__67 = Fragment__class.getMethodID(name: "setAllowEnterTransitionOverlap", sig: "(Z)V")!
-private let Fragment__method__68 = Fragment__class.getMethodID(name: "getAllowEnterTransitionOverlap", sig: "()Z")!
-private let Fragment__method__69 = Fragment__class.getMethodID(name: "setAllowReturnTransitionOverlap", sig: "(Z)V")!
-private let Fragment__method__70 = Fragment__class.getMethodID(name: "getAllowReturnTransitionOverlap", sig: "()Z")!
+private let Fragment__method__47 = Fragment__class.getMethodID(name: "onCreate", sig: "(Landroid/os/Bundle;)V")!
+private let Fragment__method__48 = Fragment__class.getMethodID(name: "onActivityCreated", sig: "(Landroid/os/Bundle;)V")!
+private let Fragment__method__49 = Fragment__class.getMethodID(name: "onViewStateRestored", sig: "(Landroid/os/Bundle;)V")!
+private let Fragment__method__50 = Fragment__class.getMethodID(name: "onStart", sig: "()V")!
+private let Fragment__method__51 = Fragment__class.getMethodID(name: "onResume", sig: "()V")!
+private let Fragment__method__52 = Fragment__class.getMethodID(name: "onSaveInstanceState", sig: "(Landroid/os/Bundle;)V")!
+private let Fragment__method__53 = Fragment__class.getMethodID(name: "onMultiWindowModeChanged", sig: "(Z)V")!
+private let Fragment__method__54 = Fragment__class.getMethodID(name: "onPictureInPictureModeChanged", sig: "(Z)V")!
+private let Fragment__method__55 = Fragment__class.getMethodID(name: "onConfigurationChanged", sig: "(Landroid/content/res/Configuration;)V")!
+private let Fragment__method__56 = Fragment__class.getMethodID(name: "onPause", sig: "()V")!
+private let Fragment__method__57 = Fragment__class.getMethodID(name: "onStop", sig: "()V")!
+private let Fragment__method__58 = Fragment__class.getMethodID(name: "onLowMemory", sig: "()V")!
+private let Fragment__method__59 = Fragment__class.getMethodID(name: "onTrimMemory", sig: "(I)V")!
+private let Fragment__method__60 = Fragment__class.getMethodID(name: "onDestroyView", sig: "()V")!
+private let Fragment__method__61 = Fragment__class.getMethodID(name: "onDestroy", sig: "()V")!
+private let Fragment__method__62 = Fragment__class.getMethodID(name: "onDetach", sig: "()V")!
+private let Fragment__method__63 = Fragment__class.getMethodID(name: "onDestroyOptionsMenu", sig: "()V")!
+private let Fragment__method__64 = Fragment__class.getMethodID(name: "setEnterSharedElementCallback", sig: "(Landroid/app/SharedElementCallback;)V")!
+private let Fragment__method__65 = Fragment__class.getMethodID(name: "setExitSharedElementCallback", sig: "(Landroid/app/SharedElementCallback;)V")!
+private let Fragment__method__66 = Fragment__class.getMethodID(name: "setAllowEnterTransitionOverlap", sig: "(Z)V")!
+private let Fragment__method__67 = Fragment__class.getMethodID(name: "getAllowEnterTransitionOverlap", sig: "()Z")!
+private let Fragment__method__68 = Fragment__class.getMethodID(name: "setAllowReturnTransitionOverlap", sig: "(Z)V")!
+private let Fragment__method__69 = Fragment__class.getMethodID(name: "getAllowReturnTransitionOverlap", sig: "()Z")!
 
 // ------------------------------------------------------------------------------------
 

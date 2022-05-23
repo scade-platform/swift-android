@@ -7,19 +7,19 @@ import Java
 open class UsageEvents: Object, Parcelable {
   public typealias Event = AndroidApp.UsageEventsEvent
 
-  public func hasNextEvent() -> Bool {
+  open func hasNextEvent() -> Bool {
     self.javaObject.call(method: UsageEvents__method__0, [])
   }
 
-  public func getNextEvent(eventOut: UsageEvents.Event?) -> Bool {
+  open func getNextEvent(eventOut: UsageEvents.Event?) -> Bool {
     self.javaObject.call(method: UsageEvents__method__1, [eventOut.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: UsageEvents__method__2, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: UsageEvents__method__3, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }
@@ -41,23 +41,23 @@ open class UsageEventsEvent: Object {
     super.init(ctor: UsageEventsEvent__method__0, [])
   }
 
-  public func getPackageName() -> String {
+  open func getPackageName() -> String {
     self.javaObject.call(method: UsageEventsEvent__method__1, [])
   }
 
-  public func getClassName() -> String {
+  open func getClassName() -> String {
     self.javaObject.call(method: UsageEventsEvent__method__2, [])
   }
 
-  public func getTimeStamp() -> Int64 {
+  open func getTimeStamp() -> Int64 {
     self.javaObject.call(method: UsageEventsEvent__method__3, [])
   }
 
-  public func getEventType() -> Int32 {
+  open func getEventType() -> Int32 {
     self.javaObject.call(method: UsageEventsEvent__method__4, [])
   }
 
-  public func getConfiguration() -> Configuration? {
+  open func getConfiguration() -> Configuration? {
     self.javaObject.call(method: UsageEventsEvent__method__5, [])
   }
 

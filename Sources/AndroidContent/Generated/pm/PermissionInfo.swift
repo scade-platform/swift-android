@@ -91,11 +91,11 @@ open class PermissionInfo: PackageItemInfo, Parcelable {
     super.init(ctor: PermissionInfo__method__1, [orig.toJavaParameter()])
   }
 
-  public func loadDescription(pm: PackageManager?) -> String? {
+  open func loadDescription(pm: PackageManager?) -> String? {
     self.javaObject.call(method: PermissionInfo__method__2, [JavaParameter(object: pm?.toJavaObject())])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: PermissionInfo__method__3, [])
   }
 

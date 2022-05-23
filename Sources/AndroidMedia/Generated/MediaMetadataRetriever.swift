@@ -1,5 +1,6 @@
 
 
+import AndroidGraphics
 import Java
 
 open class MediaMetadataRetriever: Object {
@@ -63,36 +64,48 @@ open class MediaMetadataRetriever: Object {
     super.init(ctor: MediaMetadataRetriever__method__0, [])
   }
 
-  public func setDataSource(path: String) {
+  open func setDataSource(path: String) {
     self.javaObject.call(method: MediaMetadataRetriever__method__1, [path.toJavaParameter()])
   }
 
-  public func setDataSource<T0>(uri: String, headers: T0?) -> Void where T0: Map, T0.K == String, T0.V == String {
+  open func setDataSource<T0>(uri: String, headers: T0?) -> Void where T0: Map, T0.K == String, T0.V == String {
     self.javaObject.call(method: MediaMetadataRetriever__method__2, [uri.toJavaParameter(), headers.toJavaParameter()])
   }
 
-  public func setDataSource(fd: FileDescriptor?, offset: Int64, length: Int64) {
+  open func setDataSource(fd: FileDescriptor?, offset: Int64, length: Int64) {
     self.javaObject.call(method: MediaMetadataRetriever__method__3, [fd.toJavaParameter(), offset.toJavaParameter(), length.toJavaParameter()])
   }
 
-  public func setDataSource(fd: FileDescriptor?) {
+  open func setDataSource(fd: FileDescriptor?) {
     self.javaObject.call(method: MediaMetadataRetriever__method__4, [fd.toJavaParameter()])
   }
 
-  public func setDataSource(dataSource: MediaDataSource?) {
+  open func setDataSource(dataSource: MediaDataSource?) {
     self.javaObject.call(method: MediaMetadataRetriever__method__5, [JavaParameter(object: dataSource?.toJavaObject())])
   }
 
-  public func extractMetadata(keyCode: Int32) -> String {
+  open func extractMetadata(keyCode: Int32) -> String {
     self.javaObject.call(method: MediaMetadataRetriever__method__6, [keyCode.toJavaParameter()])
   }
 
-  public func getEmbeddedPicture() -> [Int8] {
-    self.javaObject.call(method: MediaMetadataRetriever__method__7, [])
+  open func getFrameAtTime(timeUs: Int64, option: Int32) -> Bitmap? {
+    self.javaObject.call(method: MediaMetadataRetriever__method__7, [timeUs.toJavaParameter(), option.toJavaParameter()])
   }
 
-  public func release() {
-    self.javaObject.call(method: MediaMetadataRetriever__method__8, [])
+  open func getFrameAtTime(timeUs: Int64) -> Bitmap? {
+    self.javaObject.call(method: MediaMetadataRetriever__method__8, [timeUs.toJavaParameter()])
+  }
+
+  open func getFrameAtTime() -> Bitmap? {
+    self.javaObject.call(method: MediaMetadataRetriever__method__9, [])
+  }
+
+  open func getEmbeddedPicture() -> [Int8] {
+    self.javaObject.call(method: MediaMetadataRetriever__method__10, [])
+  }
+
+  open func release() {
+    self.javaObject.call(method: MediaMetadataRetriever__method__11, [])
   }
 
   public required init(_ obj: JavaObject) {
@@ -115,8 +128,11 @@ private let MediaMetadataRetriever__method__3 = MediaMetadataRetriever__class.ge
 private let MediaMetadataRetriever__method__4 = MediaMetadataRetriever__class.getMethodID(name: "setDataSource", sig: "(Ljava/io/FileDescriptor;)V")!
 private let MediaMetadataRetriever__method__5 = MediaMetadataRetriever__class.getMethodID(name: "setDataSource", sig: "(Landroid/media/MediaDataSource;)V")!
 private let MediaMetadataRetriever__method__6 = MediaMetadataRetriever__class.getMethodID(name: "extractMetadata", sig: "(I)Ljava/lang/String;")!
-private let MediaMetadataRetriever__method__7 = MediaMetadataRetriever__class.getMethodID(name: "getEmbeddedPicture", sig: "()[B")!
-private let MediaMetadataRetriever__method__8 = MediaMetadataRetriever__class.getMethodID(name: "release", sig: "()V")!
+private let MediaMetadataRetriever__method__7 = MediaMetadataRetriever__class.getMethodID(name: "getFrameAtTime", sig: "(JI)Landroid/graphics/Bitmap;")!
+private let MediaMetadataRetriever__method__8 = MediaMetadataRetriever__class.getMethodID(name: "getFrameAtTime", sig: "(J)Landroid/graphics/Bitmap;")!
+private let MediaMetadataRetriever__method__9 = MediaMetadataRetriever__class.getMethodID(name: "getFrameAtTime", sig: "()Landroid/graphics/Bitmap;")!
+private let MediaMetadataRetriever__method__10 = MediaMetadataRetriever__class.getMethodID(name: "getEmbeddedPicture", sig: "()[B")!
+private let MediaMetadataRetriever__method__11 = MediaMetadataRetriever__class.getMethodID(name: "release", sig: "()V")!
 
 private let MediaMetadataRetriever__field__0 = MediaMetadataRetriever__class.getStaticFieldID(name: "METADATA_KEY_ALBUM", sig: "I")!
 private let MediaMetadataRetriever__field__1 = MediaMetadataRetriever__class.getStaticFieldID(name: "METADATA_KEY_ALBUMARTIST", sig: "I")!

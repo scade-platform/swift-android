@@ -6,40 +6,28 @@ open class ClipboardManager: Object {
   public typealias OnPrimaryClipChangedListener = AndroidContent.ClipboardManagerOnPrimaryClipChangedListener
   public typealias OnPrimaryClipChangedListenerProxy = AndroidContent.ClipboardManagerOnPrimaryClipChangedListenerProxy
 
-  public func setPrimaryClip(clip: ClipData?) {
+  open func setPrimaryClip(clip: ClipData?) {
     self.javaObject.call(method: ClipboardManager__method__0, [clip.toJavaParameter()])
   }
 
-  public func getPrimaryClip() -> ClipData? {
+  open func getPrimaryClip() -> ClipData? {
     self.javaObject.call(method: ClipboardManager__method__1, [])
   }
 
-  public func getPrimaryClipDescription() -> ClipDescription? {
+  open func getPrimaryClipDescription() -> ClipDescription? {
     self.javaObject.call(method: ClipboardManager__method__2, [])
   }
 
-  public func hasPrimaryClip() -> Bool {
+  open func hasPrimaryClip() -> Bool {
     self.javaObject.call(method: ClipboardManager__method__3, [])
   }
 
-  public func addPrimaryClipChangedListener(what: ClipboardManager.OnPrimaryClipChangedListener?) {
+  open func addPrimaryClipChangedListener(what: ClipboardManager.OnPrimaryClipChangedListener?) {
     self.javaObject.call(method: ClipboardManager__method__4, [JavaParameter(object: what?.toJavaObject())])
   }
 
-  public func removePrimaryClipChangedListener(what: ClipboardManager.OnPrimaryClipChangedListener?) {
+  open func removePrimaryClipChangedListener(what: ClipboardManager.OnPrimaryClipChangedListener?) {
     self.javaObject.call(method: ClipboardManager__method__5, [JavaParameter(object: what?.toJavaObject())])
-  }
-
-  public func getText() -> String? {
-    self.javaObject.call(method: ClipboardManager__method__6, [])
-  }
-
-  public func setText(text: String?) {
-    self.javaObject.call(method: ClipboardManager__method__7, [text.toJavaParameter()])
-  }
-
-  public func hasText() -> Bool {
-    self.javaObject.call(method: ClipboardManager__method__8, [])
   }
 }
 
@@ -85,9 +73,6 @@ private let ClipboardManager__method__2 = ClipboardManager__class.getMethodID(na
 private let ClipboardManager__method__3 = ClipboardManager__class.getMethodID(name: "hasPrimaryClip", sig: "()Z")!
 private let ClipboardManager__method__4 = ClipboardManager__class.getMethodID(name: "addPrimaryClipChangedListener", sig: "(Landroid/content/ClipboardManager$OnPrimaryClipChangedListener;)V")!
 private let ClipboardManager__method__5 = ClipboardManager__class.getMethodID(name: "removePrimaryClipChangedListener", sig: "(Landroid/content/ClipboardManager$OnPrimaryClipChangedListener;)V")!
-private let ClipboardManager__method__6 = ClipboardManager__class.getMethodID(name: "getText", sig: "()Ljava/lang/CharSequence;")!
-private let ClipboardManager__method__7 = ClipboardManager__class.getMethodID(name: "setText", sig: "(Ljava/lang/CharSequence;)V")!
-private let ClipboardManager__method__8 = ClipboardManager__class.getMethodID(name: "hasText", sig: "()Z")!
 
 // ------------------------------------------------------------------------------------
 

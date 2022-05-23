@@ -7,7 +7,7 @@ open class AsyncPlayer: Object {
     super.init(ctor: AsyncPlayer__method__0, [tag.toJavaParameter()])
   }
 
-  public func stop() {
+  open func stop() {
     self.javaObject.call(method: AsyncPlayer__method__1, [])
   }
 

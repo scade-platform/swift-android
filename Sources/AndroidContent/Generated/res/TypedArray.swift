@@ -3,111 +3,111 @@
 import Java
 
 open class TypedArray: Object {
-  public func length() -> Int32 {
+  open func length() -> Int32 {
     self.javaObject.call(method: TypedArray__method__0, [])
   }
 
-  public func getIndexCount() -> Int32 {
+  open func getIndexCount() -> Int32 {
     self.javaObject.call(method: TypedArray__method__1, [])
   }
 
-  public func getIndex(at: Int32) -> Int32 {
+  open func getIndex(at: Int32) -> Int32 {
     self.javaObject.call(method: TypedArray__method__2, [at.toJavaParameter()])
   }
 
-  public func getResources() -> Resources? {
+  open func getResources() -> Resources? {
     self.javaObject.call(method: TypedArray__method__3, [])
   }
 
-  public func getText(index: Int32) -> String? {
+  open func getText(index: Int32) -> String? {
     self.javaObject.call(method: TypedArray__method__4, [index.toJavaParameter()])
   }
 
-  public func getString(index: Int32) -> String {
+  open func getString(index: Int32) -> String {
     self.javaObject.call(method: TypedArray__method__5, [index.toJavaParameter()])
   }
 
-  public func getNonResourceString(index: Int32) -> String {
+  open func getNonResourceString(index: Int32) -> String {
     self.javaObject.call(method: TypedArray__method__6, [index.toJavaParameter()])
   }
 
-  public func getBoolean(index: Int32, defValue: Bool) -> Bool {
+  open func getBoolean(index: Int32, defValue: Bool) -> Bool {
     self.javaObject.call(method: TypedArray__method__7, [index.toJavaParameter(), defValue.toJavaParameter()])
   }
 
-  public func getInt(index: Int32, defValue: Int32) -> Int32 {
+  open func getInt(index: Int32, defValue: Int32) -> Int32 {
     self.javaObject.call(method: TypedArray__method__8, [index.toJavaParameter(), defValue.toJavaParameter()])
   }
 
-  public func getFloat(index: Int32, defValue: Float) -> Float {
+  open func getFloat(index: Int32, defValue: Float) -> Float {
     self.javaObject.call(method: TypedArray__method__9, [index.toJavaParameter(), defValue.toJavaParameter()])
   }
 
-  public func getColor(index: Int32, defValue: Int32) -> Int32 {
+  open func getColor(index: Int32, defValue: Int32) -> Int32 {
     self.javaObject.call(method: TypedArray__method__10, [index.toJavaParameter(), defValue.toJavaParameter()])
   }
 
-  public func getColorStateList(index: Int32) -> ColorStateList? {
+  open func getColorStateList(index: Int32) -> ColorStateList? {
     self.javaObject.call(method: TypedArray__method__11, [index.toJavaParameter()])
   }
 
-  public func getInteger(index: Int32, defValue: Int32) -> Int32 {
+  open func getInteger(index: Int32, defValue: Int32) -> Int32 {
     self.javaObject.call(method: TypedArray__method__12, [index.toJavaParameter(), defValue.toJavaParameter()])
   }
 
-  public func getDimension(index: Int32, defValue: Float) -> Float {
+  open func getDimension(index: Int32, defValue: Float) -> Float {
     self.javaObject.call(method: TypedArray__method__13, [index.toJavaParameter(), defValue.toJavaParameter()])
   }
 
-  public func getDimensionPixelOffset(index: Int32, defValue: Int32) -> Int32 {
+  open func getDimensionPixelOffset(index: Int32, defValue: Int32) -> Int32 {
     self.javaObject.call(method: TypedArray__method__14, [index.toJavaParameter(), defValue.toJavaParameter()])
   }
 
-  public func getDimensionPixelSize(index: Int32, defValue: Int32) -> Int32 {
+  open func getDimensionPixelSize(index: Int32, defValue: Int32) -> Int32 {
     self.javaObject.call(method: TypedArray__method__15, [index.toJavaParameter(), defValue.toJavaParameter()])
   }
 
-  public func getLayoutDimension(index: Int32, name: String) -> Int32 {
+  open func getLayoutDimension(index: Int32, name: String) -> Int32 {
     self.javaObject.call(method: TypedArray__method__16, [index.toJavaParameter(), name.toJavaParameter()])
   }
 
-  public func getLayoutDimension(index: Int32, defValue: Int32) -> Int32 {
+  open func getLayoutDimension(index: Int32, defValue: Int32) -> Int32 {
     self.javaObject.call(method: TypedArray__method__17, [index.toJavaParameter(), defValue.toJavaParameter()])
   }
 
-  public func getFraction(index: Int32, base: Int32, pbase: Int32, defValue: Float) -> Float {
+  open func getFraction(index: Int32, base: Int32, pbase: Int32, defValue: Float) -> Float {
     self.javaObject.call(method: TypedArray__method__18, [index.toJavaParameter(), base.toJavaParameter(), pbase.toJavaParameter(), defValue.toJavaParameter()])
   }
 
-  public func getResourceId(index: Int32, defValue: Int32) -> Int32 {
+  open func getResourceId(index: Int32, defValue: Int32) -> Int32 {
     self.javaObject.call(method: TypedArray__method__19, [index.toJavaParameter(), defValue.toJavaParameter()])
   }
 
-  public func getTextArray(index: Int32) -> [String?] {
+  open func getTextArray(index: Int32) -> [String?] {
     self.javaObject.call(method: TypedArray__method__20, [index.toJavaParameter()])
   }
 
-  public func getType(index: Int32) -> Int32 {
+  open func getType(index: Int32) -> Int32 {
     self.javaObject.call(method: TypedArray__method__21, [index.toJavaParameter()])
   }
 
-  public func hasValue(index: Int32) -> Bool {
+  open func hasValue(index: Int32) -> Bool {
     self.javaObject.call(method: TypedArray__method__22, [index.toJavaParameter()])
   }
 
-  public func hasValueOrEmpty(index: Int32) -> Bool {
+  open func hasValueOrEmpty(index: Int32) -> Bool {
     self.javaObject.call(method: TypedArray__method__23, [index.toJavaParameter()])
   }
 
-  public func getPositionDescription() -> String {
+  open func getPositionDescription() -> String {
     self.javaObject.call(method: TypedArray__method__24, [])
   }
 
-  public func recycle() {
+  open func recycle() {
     self.javaObject.call(method: TypedArray__method__25, [])
   }
 
-  public func getChangingConfigurations() -> Int32 {
+  open func getChangingConfigurations() -> Int32 {
     self.javaObject.call(method: TypedArray__method__26, [])
   }
 }

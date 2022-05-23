@@ -9,31 +9,31 @@ open class NfcFCardEmulation: Object {
     NfcFCardEmulation__class.callStatic(method: NfcFCardEmulation__method__0, [adapter.toJavaParameter()])
   }
 
-  public func getSystemCodeForService(service: ComponentName?) -> String {
+  open func getSystemCodeForService(service: ComponentName?) -> String {
     self.javaObject.call(method: NfcFCardEmulation__method__1, [service.toJavaParameter()])
   }
 
-  public func registerSystemCodeForService(service: ComponentName?, systemCode: String) -> Bool {
+  open func registerSystemCodeForService(service: ComponentName?, systemCode: String) -> Bool {
     self.javaObject.call(method: NfcFCardEmulation__method__2, [service.toJavaParameter(), systemCode.toJavaParameter()])
   }
 
-  public func unregisterSystemCodeForService(service: ComponentName?) -> Bool {
+  open func unregisterSystemCodeForService(service: ComponentName?) -> Bool {
     self.javaObject.call(method: NfcFCardEmulation__method__3, [service.toJavaParameter()])
   }
 
-  public func getNfcid2ForService(service: ComponentName?) -> String {
+  open func getNfcid2ForService(service: ComponentName?) -> String {
     self.javaObject.call(method: NfcFCardEmulation__method__4, [service.toJavaParameter()])
   }
 
-  public func setNfcid2ForService(service: ComponentName?, nfcid2: String) -> Bool {
+  open func setNfcid2ForService(service: ComponentName?, nfcid2: String) -> Bool {
     self.javaObject.call(method: NfcFCardEmulation__method__5, [service.toJavaParameter(), nfcid2.toJavaParameter()])
   }
 
-  public func enableService(activity: Activity?, service: ComponentName?) -> Bool {
+  open func enableService(activity: Activity?, service: ComponentName?) -> Bool {
     self.javaObject.call(method: NfcFCardEmulation__method__6, [activity.toJavaParameter(), service.toJavaParameter()])
   }
 
-  public func disableService(activity: Activity?) -> Bool {
+  open func disableService(activity: Activity?) -> Bool {
     self.javaObject.call(method: NfcFCardEmulation__method__7, [activity.toJavaParameter()])
   }
 }

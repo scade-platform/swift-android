@@ -27,47 +27,47 @@ open class DeviceAdminInfo: Object, Parcelable {
     super.init(ctor: DeviceAdminInfo__method__0, [JavaParameter(object: context?.toJavaObject()), resolveInfo.toJavaParameter()])
   }
 
-  public func getPackageName() -> String {
+  open func getPackageName() -> String {
     self.javaObject.call(method: DeviceAdminInfo__method__1, [])
   }
 
-  public func getReceiverName() -> String {
+  open func getReceiverName() -> String {
     self.javaObject.call(method: DeviceAdminInfo__method__2, [])
   }
 
-  public func getActivityInfo() -> ActivityInfo? {
+  open func getActivityInfo() -> ActivityInfo? {
     self.javaObject.call(method: DeviceAdminInfo__method__3, [])
   }
 
-  public func getComponent() -> ComponentName? {
+  open func getComponent() -> ComponentName? {
     self.javaObject.call(method: DeviceAdminInfo__method__4, [])
   }
 
-  public func loadLabel(pm: PackageManager?) -> String? {
+  open func loadLabel(pm: PackageManager?) -> String? {
     self.javaObject.call(method: DeviceAdminInfo__method__5, [JavaParameter(object: pm?.toJavaObject())])
   }
 
-  public func loadDescription(pm: PackageManager?) -> String? {
+  open func loadDescription(pm: PackageManager?) -> String? {
     self.javaObject.call(method: DeviceAdminInfo__method__6, [JavaParameter(object: pm?.toJavaObject())])
   }
 
-  public func isVisible() -> Bool {
+  open func isVisible() -> Bool {
     self.javaObject.call(method: DeviceAdminInfo__method__7, [])
   }
 
-  public func usesPolicy(policyIdent: Int32) -> Bool {
+  open func usesPolicy(policyIdent: Int32) -> Bool {
     self.javaObject.call(method: DeviceAdminInfo__method__8, [policyIdent.toJavaParameter()])
   }
 
-  public func getTagForPolicy(policyIdent: Int32) -> String {
+  open func getTagForPolicy(policyIdent: Int32) -> String {
     self.javaObject.call(method: DeviceAdminInfo__method__9, [policyIdent.toJavaParameter()])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: DeviceAdminInfo__method__10, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: DeviceAdminInfo__method__11, [])
   }
 

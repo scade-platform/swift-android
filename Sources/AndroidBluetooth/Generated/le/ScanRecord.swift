@@ -4,45 +4,45 @@ import AndroidOS
 import Java
 
 open class ScanRecord: Object {
-  public func getAdvertiseFlags() -> Int32 {
+  open func getAdvertiseFlags() -> Int32 {
     self.javaObject.call(method: ScanRecord__method__0, [])
   }
 
-  public func getServiceUuids<R>() -> R? where R: List, R.E == ParcelUuid {
+  open func getServiceUuids<R>() -> R? where R: List, R.E == ParcelUuid {
     self.javaObject.call(method: ScanRecord__method__1, [])
   }
 
-  public func getManufacturerSpecificData(manufacturerId: Int32) -> [Int8] {
+  open func getManufacturerSpecificData(manufacturerId: Int32) -> [Int8] {
     self.javaObject.call(method: ScanRecord__method__2, [manufacturerId.toJavaParameter()])
   }
 
-  public func getServiceData<R>() -> R? where R: Map, R.K == ParcelUuid, R.V == [Int8] {
+  open func getServiceData<R>() -> R? where R: Map, R.K == ParcelUuid, R.V == [Int8] {
     self.javaObject.call(method: ScanRecord__method__3, [])
   }
 
-  public func getServiceData(serviceDataUuid: ParcelUuid?) -> [Int8] {
+  open func getServiceData(serviceDataUuid: ParcelUuid?) -> [Int8] {
     self.javaObject.call(method: ScanRecord__method__4, [serviceDataUuid.toJavaParameter()])
   }
 
-  public func getTxPowerLevel() -> Int32 {
+  open func getTxPowerLevel() -> Int32 {
     self.javaObject.call(method: ScanRecord__method__5, [])
   }
 
-  public func getDeviceName() -> String {
+  open func getDeviceName() -> String {
     self.javaObject.call(method: ScanRecord__method__6, [])
   }
 
-  public func getBytes() -> [Int8] {
+  open func getBytes() -> [Int8] {
     self.javaObject.call(method: ScanRecord__method__7, [])
   }
 }
 
 extension ScanRecord {
-  public func getServiceUuids() -> ListProxy<ParcelUuid>? {
+  open func getServiceUuids() -> ListProxy<ParcelUuid>? {
     self.javaObject.call(method: ScanRecord__method__1, [])
   }
 
-  public func getServiceData() -> MapProxy<ParcelUuid, [Int8]>? {
+  open func getServiceData() -> MapProxy<ParcelUuid, [Int8]>? {
     self.javaObject.call(method: ScanRecord__method__3, [])
   }
 }

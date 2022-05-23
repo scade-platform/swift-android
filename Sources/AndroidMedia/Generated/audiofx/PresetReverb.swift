@@ -28,23 +28,23 @@ open class PresetReverb: AudioEffect {
     super.init(ctor: PresetReverb__method__0, [priority.toJavaParameter(), audioSession.toJavaParameter()])
   }
 
-  public func setPreset(preset: Int16) {
+  open func setPreset(preset: Int16) {
     self.javaObject.call(method: PresetReverb__method__1, [preset.toJavaParameter()])
   }
 
-  public func getPreset() -> Int16 {
+  open func getPreset() -> Int16 {
     self.javaObject.call(method: PresetReverb__method__2, [])
   }
 
-  public func setParameterListener(listener: PresetReverb.OnParameterChangeListener?) {
+  open func setParameterListener(listener: PresetReverb.OnParameterChangeListener?) {
     self.javaObject.call(method: PresetReverb__method__3, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func getProperties() -> PresetReverb.Settings? {
+  open func getProperties() -> PresetReverb.Settings? {
     self.javaObject.call(method: PresetReverb__method__4, [])
   }
 
-  public func setProperties(settings: PresetReverb.Settings?) {
+  open func setProperties(settings: PresetReverb.Settings?) {
     self.javaObject.call(method: PresetReverb__method__5, [settings.toJavaParameter()])
   }
 

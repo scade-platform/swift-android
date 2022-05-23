@@ -1,5 +1,6 @@
 
 
+import AndroidView
 import Java
 
 open class MediaRecorder: Object {
@@ -33,124 +34,136 @@ open class MediaRecorder: Object {
     super.init(ctor: MediaRecorder__method__0, [])
   }
 
-  public func setAudioSource(audio_source: Int32) {
-    self.javaObject.call(method: MediaRecorder__method__1, [audio_source.toJavaParameter()])
+  open func getSurface() -> Surface? {
+    self.javaObject.call(method: MediaRecorder__method__1, [])
+  }
+
+  open func setInputSurface(surface: Surface?) {
+    self.javaObject.call(method: MediaRecorder__method__2, [surface.toJavaParameter()])
+  }
+
+  open func setPreviewDisplay(sv: Surface?) {
+    self.javaObject.call(method: MediaRecorder__method__3, [sv.toJavaParameter()])
+  }
+
+  open func setAudioSource(audio_source: Int32) {
+    self.javaObject.call(method: MediaRecorder__method__4, [audio_source.toJavaParameter()])
   }
 
   public static func getAudioSourceMax() -> Int32 {
-    MediaRecorder__class.callStatic(method: MediaRecorder__method__2, [])
+    MediaRecorder__class.callStatic(method: MediaRecorder__method__5, [])
   }
 
-  public func setVideoSource(video_source: Int32) {
-    self.javaObject.call(method: MediaRecorder__method__3, [video_source.toJavaParameter()])
+  open func setVideoSource(video_source: Int32) {
+    self.javaObject.call(method: MediaRecorder__method__6, [video_source.toJavaParameter()])
   }
 
-  public func setProfile(profile: CamcorderProfile?) {
-    self.javaObject.call(method: MediaRecorder__method__4, [profile.toJavaParameter()])
+  open func setProfile(profile: CamcorderProfile?) {
+    self.javaObject.call(method: MediaRecorder__method__7, [profile.toJavaParameter()])
   }
 
-  public func setCaptureRate(fps: Double) {
-    self.javaObject.call(method: MediaRecorder__method__5, [fps.toJavaParameter()])
+  open func setCaptureRate(fps: Double) {
+    self.javaObject.call(method: MediaRecorder__method__8, [fps.toJavaParameter()])
   }
 
-  public func setOrientationHint(degrees: Int32) {
-    self.javaObject.call(method: MediaRecorder__method__6, [degrees.toJavaParameter()])
+  open func setOrientationHint(degrees: Int32) {
+    self.javaObject.call(method: MediaRecorder__method__9, [degrees.toJavaParameter()])
   }
 
-  public func setLocation(latitude: Float, longitude: Float) {
-    self.javaObject.call(method: MediaRecorder__method__7, [latitude.toJavaParameter(), longitude.toJavaParameter()])
+  open func setLocation(latitude: Float, longitude: Float) {
+    self.javaObject.call(method: MediaRecorder__method__10, [latitude.toJavaParameter(), longitude.toJavaParameter()])
   }
 
-  public func setOutputFormat(output_format: Int32) {
-    self.javaObject.call(method: MediaRecorder__method__8, [output_format.toJavaParameter()])
+  open func setOutputFormat(output_format: Int32) {
+    self.javaObject.call(method: MediaRecorder__method__11, [output_format.toJavaParameter()])
   }
 
-  public func setVideoSize(width: Int32, height: Int32) {
-    self.javaObject.call(method: MediaRecorder__method__9, [width.toJavaParameter(), height.toJavaParameter()])
+  open func setVideoSize(width: Int32, height: Int32) {
+    self.javaObject.call(method: MediaRecorder__method__12, [width.toJavaParameter(), height.toJavaParameter()])
   }
 
-  public func setVideoFrameRate(rate: Int32) {
-    self.javaObject.call(method: MediaRecorder__method__10, [rate.toJavaParameter()])
+  open func setVideoFrameRate(rate: Int32) {
+    self.javaObject.call(method: MediaRecorder__method__13, [rate.toJavaParameter()])
   }
 
-  public func setMaxDuration(max_duration_ms: Int32) {
-    self.javaObject.call(method: MediaRecorder__method__11, [max_duration_ms.toJavaParameter()])
+  open func setMaxDuration(max_duration_ms: Int32) {
+    self.javaObject.call(method: MediaRecorder__method__14, [max_duration_ms.toJavaParameter()])
   }
 
-  public func setMaxFileSize(max_filesize_bytes: Int64) {
-    self.javaObject.call(method: MediaRecorder__method__12, [max_filesize_bytes.toJavaParameter()])
+  open func setMaxFileSize(max_filesize_bytes: Int64) {
+    self.javaObject.call(method: MediaRecorder__method__15, [max_filesize_bytes.toJavaParameter()])
   }
 
-  public func setAudioEncoder(audio_encoder: Int32) {
-    self.javaObject.call(method: MediaRecorder__method__13, [audio_encoder.toJavaParameter()])
+  open func setAudioEncoder(audio_encoder: Int32) {
+    self.javaObject.call(method: MediaRecorder__method__16, [audio_encoder.toJavaParameter()])
   }
 
-  public func setVideoEncoder(video_encoder: Int32) {
-    self.javaObject.call(method: MediaRecorder__method__14, [video_encoder.toJavaParameter()])
+  open func setVideoEncoder(video_encoder: Int32) {
+    self.javaObject.call(method: MediaRecorder__method__17, [video_encoder.toJavaParameter()])
   }
 
-  public func setAudioSamplingRate(samplingRate: Int32) {
-    self.javaObject.call(method: MediaRecorder__method__15, [samplingRate.toJavaParameter()])
+  open func setAudioSamplingRate(samplingRate: Int32) {
+    self.javaObject.call(method: MediaRecorder__method__18, [samplingRate.toJavaParameter()])
   }
 
-  public func setAudioChannels(numChannels: Int32) {
-    self.javaObject.call(method: MediaRecorder__method__16, [numChannels.toJavaParameter()])
+  open func setAudioChannels(numChannels: Int32) {
+    self.javaObject.call(method: MediaRecorder__method__19, [numChannels.toJavaParameter()])
   }
 
-  public func setAudioEncodingBitRate(bitRate: Int32) {
-    self.javaObject.call(method: MediaRecorder__method__17, [bitRate.toJavaParameter()])
+  open func setAudioEncodingBitRate(bitRate: Int32) {
+    self.javaObject.call(method: MediaRecorder__method__20, [bitRate.toJavaParameter()])
   }
 
-  public func setVideoEncodingBitRate(bitRate: Int32) {
-    self.javaObject.call(method: MediaRecorder__method__18, [bitRate.toJavaParameter()])
+  open func setVideoEncodingBitRate(bitRate: Int32) {
+    self.javaObject.call(method: MediaRecorder__method__21, [bitRate.toJavaParameter()])
   }
 
-  public func setOutputFile(fd: FileDescriptor?) {
-    self.javaObject.call(method: MediaRecorder__method__19, [fd.toJavaParameter()])
+  open func setOutputFile(fd: FileDescriptor?) {
+    self.javaObject.call(method: MediaRecorder__method__22, [fd.toJavaParameter()])
   }
 
-  public func setOutputFile(path: String) {
-    self.javaObject.call(method: MediaRecorder__method__20, [path.toJavaParameter()])
+  open func setOutputFile(path: String) {
+    self.javaObject.call(method: MediaRecorder__method__23, [path.toJavaParameter()])
   }
 
-  public func prepare() {
-    self.javaObject.call(method: MediaRecorder__method__21, [])
-  }
-
-  public func start() {
-    self.javaObject.call(method: MediaRecorder__method__22, [])
-  }
-
-  public func stop() {
-    self.javaObject.call(method: MediaRecorder__method__23, [])
-  }
-
-  public func pause() {
+  open func prepare() {
     self.javaObject.call(method: MediaRecorder__method__24, [])
   }
 
-  public func resume() {
+  open func start() {
     self.javaObject.call(method: MediaRecorder__method__25, [])
   }
 
-  public func reset() {
+  open func stop() {
     self.javaObject.call(method: MediaRecorder__method__26, [])
   }
 
-  public func getMaxAmplitude() -> Int32 {
+  open func pause() {
     self.javaObject.call(method: MediaRecorder__method__27, [])
   }
 
-  public func setOnErrorListener(l: MediaRecorder.OnErrorListener?) {
-    self.javaObject.call(method: MediaRecorder__method__28, [JavaParameter(object: l?.toJavaObject())])
+  open func resume() {
+    self.javaObject.call(method: MediaRecorder__method__28, [])
   }
 
-  public func setOnInfoListener(listener: MediaRecorder.OnInfoListener?) {
-    self.javaObject.call(method: MediaRecorder__method__29, [JavaParameter(object: listener?.toJavaObject())])
+  open func reset() {
+    self.javaObject.call(method: MediaRecorder__method__29, [])
   }
 
-  public func release() {
+  open func getMaxAmplitude() -> Int32 {
     self.javaObject.call(method: MediaRecorder__method__30, [])
+  }
+
+  open func setOnErrorListener(l: MediaRecorder.OnErrorListener?) {
+    self.javaObject.call(method: MediaRecorder__method__31, [JavaParameter(object: l?.toJavaObject())])
+  }
+
+  open func setOnInfoListener(listener: MediaRecorder.OnInfoListener?) {
+    self.javaObject.call(method: MediaRecorder__method__32, [JavaParameter(object: listener?.toJavaObject())])
+  }
+
+  open func release() {
+    self.javaObject.call(method: MediaRecorder__method__33, [])
   }
 
   public required init(_ obj: JavaObject) {
@@ -319,36 +332,39 @@ open class MediaRecorderAudioSource: Object {
 private let MediaRecorder__class = findJavaClass(fqn: "android/media/MediaRecorder")!
 
 private let MediaRecorder__method__0 = MediaRecorder__class.getMethodID(name: "<init>", sig: "()V")!
-private let MediaRecorder__method__1 = MediaRecorder__class.getMethodID(name: "setAudioSource", sig: "(I)V")!
-private let MediaRecorder__method__2 = MediaRecorder__class.getStaticMethodID(name: "getAudioSourceMax", sig: "()I")!
-private let MediaRecorder__method__3 = MediaRecorder__class.getMethodID(name: "setVideoSource", sig: "(I)V")!
-private let MediaRecorder__method__4 = MediaRecorder__class.getMethodID(name: "setProfile", sig: "(Landroid/media/CamcorderProfile;)V")!
-private let MediaRecorder__method__5 = MediaRecorder__class.getMethodID(name: "setCaptureRate", sig: "(D)V")!
-private let MediaRecorder__method__6 = MediaRecorder__class.getMethodID(name: "setOrientationHint", sig: "(I)V")!
-private let MediaRecorder__method__7 = MediaRecorder__class.getMethodID(name: "setLocation", sig: "(FF)V")!
-private let MediaRecorder__method__8 = MediaRecorder__class.getMethodID(name: "setOutputFormat", sig: "(I)V")!
-private let MediaRecorder__method__9 = MediaRecorder__class.getMethodID(name: "setVideoSize", sig: "(II)V")!
-private let MediaRecorder__method__10 = MediaRecorder__class.getMethodID(name: "setVideoFrameRate", sig: "(I)V")!
-private let MediaRecorder__method__11 = MediaRecorder__class.getMethodID(name: "setMaxDuration", sig: "(I)V")!
-private let MediaRecorder__method__12 = MediaRecorder__class.getMethodID(name: "setMaxFileSize", sig: "(J)V")!
-private let MediaRecorder__method__13 = MediaRecorder__class.getMethodID(name: "setAudioEncoder", sig: "(I)V")!
-private let MediaRecorder__method__14 = MediaRecorder__class.getMethodID(name: "setVideoEncoder", sig: "(I)V")!
-private let MediaRecorder__method__15 = MediaRecorder__class.getMethodID(name: "setAudioSamplingRate", sig: "(I)V")!
-private let MediaRecorder__method__16 = MediaRecorder__class.getMethodID(name: "setAudioChannels", sig: "(I)V")!
-private let MediaRecorder__method__17 = MediaRecorder__class.getMethodID(name: "setAudioEncodingBitRate", sig: "(I)V")!
-private let MediaRecorder__method__18 = MediaRecorder__class.getMethodID(name: "setVideoEncodingBitRate", sig: "(I)V")!
-private let MediaRecorder__method__19 = MediaRecorder__class.getMethodID(name: "setOutputFile", sig: "(Ljava/io/FileDescriptor;)V")!
-private let MediaRecorder__method__20 = MediaRecorder__class.getMethodID(name: "setOutputFile", sig: "(Ljava/lang/String;)V")!
-private let MediaRecorder__method__21 = MediaRecorder__class.getMethodID(name: "prepare", sig: "()V")!
-private let MediaRecorder__method__22 = MediaRecorder__class.getMethodID(name: "start", sig: "()V")!
-private let MediaRecorder__method__23 = MediaRecorder__class.getMethodID(name: "stop", sig: "()V")!
-private let MediaRecorder__method__24 = MediaRecorder__class.getMethodID(name: "pause", sig: "()V")!
-private let MediaRecorder__method__25 = MediaRecorder__class.getMethodID(name: "resume", sig: "()V")!
-private let MediaRecorder__method__26 = MediaRecorder__class.getMethodID(name: "reset", sig: "()V")!
-private let MediaRecorder__method__27 = MediaRecorder__class.getMethodID(name: "getMaxAmplitude", sig: "()I")!
-private let MediaRecorder__method__28 = MediaRecorder__class.getMethodID(name: "setOnErrorListener", sig: "(Landroid/media/MediaRecorder$OnErrorListener;)V")!
-private let MediaRecorder__method__29 = MediaRecorder__class.getMethodID(name: "setOnInfoListener", sig: "(Landroid/media/MediaRecorder$OnInfoListener;)V")!
-private let MediaRecorder__method__30 = MediaRecorder__class.getMethodID(name: "release", sig: "()V")!
+private let MediaRecorder__method__1 = MediaRecorder__class.getMethodID(name: "getSurface", sig: "()Landroid/view/Surface;")!
+private let MediaRecorder__method__2 = MediaRecorder__class.getMethodID(name: "setInputSurface", sig: "(Landroid/view/Surface;)V")!
+private let MediaRecorder__method__3 = MediaRecorder__class.getMethodID(name: "setPreviewDisplay", sig: "(Landroid/view/Surface;)V")!
+private let MediaRecorder__method__4 = MediaRecorder__class.getMethodID(name: "setAudioSource", sig: "(I)V")!
+private let MediaRecorder__method__5 = MediaRecorder__class.getStaticMethodID(name: "getAudioSourceMax", sig: "()I")!
+private let MediaRecorder__method__6 = MediaRecorder__class.getMethodID(name: "setVideoSource", sig: "(I)V")!
+private let MediaRecorder__method__7 = MediaRecorder__class.getMethodID(name: "setProfile", sig: "(Landroid/media/CamcorderProfile;)V")!
+private let MediaRecorder__method__8 = MediaRecorder__class.getMethodID(name: "setCaptureRate", sig: "(D)V")!
+private let MediaRecorder__method__9 = MediaRecorder__class.getMethodID(name: "setOrientationHint", sig: "(I)V")!
+private let MediaRecorder__method__10 = MediaRecorder__class.getMethodID(name: "setLocation", sig: "(FF)V")!
+private let MediaRecorder__method__11 = MediaRecorder__class.getMethodID(name: "setOutputFormat", sig: "(I)V")!
+private let MediaRecorder__method__12 = MediaRecorder__class.getMethodID(name: "setVideoSize", sig: "(II)V")!
+private let MediaRecorder__method__13 = MediaRecorder__class.getMethodID(name: "setVideoFrameRate", sig: "(I)V")!
+private let MediaRecorder__method__14 = MediaRecorder__class.getMethodID(name: "setMaxDuration", sig: "(I)V")!
+private let MediaRecorder__method__15 = MediaRecorder__class.getMethodID(name: "setMaxFileSize", sig: "(J)V")!
+private let MediaRecorder__method__16 = MediaRecorder__class.getMethodID(name: "setAudioEncoder", sig: "(I)V")!
+private let MediaRecorder__method__17 = MediaRecorder__class.getMethodID(name: "setVideoEncoder", sig: "(I)V")!
+private let MediaRecorder__method__18 = MediaRecorder__class.getMethodID(name: "setAudioSamplingRate", sig: "(I)V")!
+private let MediaRecorder__method__19 = MediaRecorder__class.getMethodID(name: "setAudioChannels", sig: "(I)V")!
+private let MediaRecorder__method__20 = MediaRecorder__class.getMethodID(name: "setAudioEncodingBitRate", sig: "(I)V")!
+private let MediaRecorder__method__21 = MediaRecorder__class.getMethodID(name: "setVideoEncodingBitRate", sig: "(I)V")!
+private let MediaRecorder__method__22 = MediaRecorder__class.getMethodID(name: "setOutputFile", sig: "(Ljava/io/FileDescriptor;)V")!
+private let MediaRecorder__method__23 = MediaRecorder__class.getMethodID(name: "setOutputFile", sig: "(Ljava/lang/String;)V")!
+private let MediaRecorder__method__24 = MediaRecorder__class.getMethodID(name: "prepare", sig: "()V")!
+private let MediaRecorder__method__25 = MediaRecorder__class.getMethodID(name: "start", sig: "()V")!
+private let MediaRecorder__method__26 = MediaRecorder__class.getMethodID(name: "stop", sig: "()V")!
+private let MediaRecorder__method__27 = MediaRecorder__class.getMethodID(name: "pause", sig: "()V")!
+private let MediaRecorder__method__28 = MediaRecorder__class.getMethodID(name: "resume", sig: "()V")!
+private let MediaRecorder__method__29 = MediaRecorder__class.getMethodID(name: "reset", sig: "()V")!
+private let MediaRecorder__method__30 = MediaRecorder__class.getMethodID(name: "getMaxAmplitude", sig: "()I")!
+private let MediaRecorder__method__31 = MediaRecorder__class.getMethodID(name: "setOnErrorListener", sig: "(Landroid/media/MediaRecorder$OnErrorListener;)V")!
+private let MediaRecorder__method__32 = MediaRecorder__class.getMethodID(name: "setOnInfoListener", sig: "(Landroid/media/MediaRecorder$OnInfoListener;)V")!
+private let MediaRecorder__method__33 = MediaRecorder__class.getMethodID(name: "release", sig: "()V")!
 
 private let MediaRecorder__field__0 = MediaRecorder__class.getStaticFieldID(name: "MEDIA_ERROR_SERVER_DIED", sig: "I")!
 private let MediaRecorder__field__1 = MediaRecorder__class.getStaticFieldID(name: "MEDIA_RECORDER_ERROR_UNKNOWN", sig: "I")!

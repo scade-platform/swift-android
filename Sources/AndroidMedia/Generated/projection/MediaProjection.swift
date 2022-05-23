@@ -6,20 +6,18 @@ open class MediaProjection: Object {
   public typealias Callback = AndroidMedia.MediaProjectionCallback
   public typealias CallbackProxy = AndroidMedia.MediaProjectionCallbackProxy
 
-  public func unregisterCallback(callback: MediaProjection.Callback?) {
+  open func unregisterCallback(callback: MediaProjection.Callback?) {
     self.javaObject.call(method: MediaProjection__method__0, [JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func stop() {
+  open func stop() {
     self.javaObject.call(method: MediaProjection__method__1, [])
   }
 }
 
 // ------------------------------------------------------------------------------------
 
-public protocol MediaProjectionCallback where Self: Object {
-  func onStop() -> Void
-}
+public protocol MediaProjectionCallback where Self: Object {}
 
 public extension MediaProjectionCallback {
   func box() -> MediaProjectionCallbackProxy {

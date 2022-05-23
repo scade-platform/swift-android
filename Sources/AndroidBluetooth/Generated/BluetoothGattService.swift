@@ -12,43 +12,43 @@ open class BluetoothGattService: Object, Parcelable {
     super.init(ctor: BluetoothGattService__method__0, [uuid.toJavaParameter(), serviceType.toJavaParameter()])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: BluetoothGattService__method__1, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func addService(service: BluetoothGattService?) -> Bool {
+  open func addService(service: BluetoothGattService?) -> Bool {
     self.javaObject.call(method: BluetoothGattService__method__2, [service.toJavaParameter()])
   }
 
-  public func addCharacteristic(characteristic: BluetoothGattCharacteristic?) -> Bool {
+  open func addCharacteristic(characteristic: BluetoothGattCharacteristic?) -> Bool {
     self.javaObject.call(method: BluetoothGattService__method__3, [characteristic.toJavaParameter()])
   }
 
-  public func getUuid() -> UUID? {
+  open func getUuid() -> UUID? {
     self.javaObject.call(method: BluetoothGattService__method__4, [])
   }
 
-  public func getInstanceId() -> Int32 {
+  open func getInstanceId() -> Int32 {
     self.javaObject.call(method: BluetoothGattService__method__5, [])
   }
 
-  public func getType() -> Int32 {
+  open func getType() -> Int32 {
     self.javaObject.call(method: BluetoothGattService__method__6, [])
   }
 
-  public func getIncludedServices<R>() -> R? where R: List, R.E == BluetoothGattService {
+  open func getIncludedServices<R>() -> R? where R: List, R.E == BluetoothGattService {
     self.javaObject.call(method: BluetoothGattService__method__7, [])
   }
 
-  public func getCharacteristics<R>() -> R? where R: List, R.E == BluetoothGattCharacteristic {
+  open func getCharacteristics<R>() -> R? where R: List, R.E == BluetoothGattCharacteristic {
     self.javaObject.call(method: BluetoothGattService__method__8, [])
   }
 
-  public func getCharacteristic(uuid: UUID?) -> BluetoothGattCharacteristic? {
+  open func getCharacteristic(uuid: UUID?) -> BluetoothGattCharacteristic? {
     self.javaObject.call(method: BluetoothGattService__method__9, [uuid.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: BluetoothGattService__method__10, [])
   }
 
@@ -62,11 +62,11 @@ open class BluetoothGattService: Object, Parcelable {
 }
 
 extension BluetoothGattService {
-  public func getIncludedServices() -> ListProxy<BluetoothGattService>? {
+  open func getIncludedServices() -> ListProxy<BluetoothGattService>? {
     self.javaObject.call(method: BluetoothGattService__method__7, [])
   }
 
-  public func getCharacteristics() -> ListProxy<BluetoothGattCharacteristic>? {
+  open func getCharacteristics() -> ListProxy<BluetoothGattCharacteristic>? {
     self.javaObject.call(method: BluetoothGattService__method__8, [])
   }
 }

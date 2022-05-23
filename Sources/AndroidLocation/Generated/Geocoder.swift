@@ -12,15 +12,15 @@ open class Geocoder: Object {
     Geocoder__class.callStatic(method: Geocoder__method__1, [])
   }
 
-  public func getFromLocation<R>(latitude: Double, longitude: Double, maxResults: Int32) -> R? where R: List, R.E == Address {
+  open func getFromLocation<R>(latitude: Double, longitude: Double, maxResults: Int32) -> R? where R: List, R.E == Address {
     self.javaObject.call(method: Geocoder__method__2, [latitude.toJavaParameter(), longitude.toJavaParameter(), maxResults.toJavaParameter()])
   }
 
-  public func getFromLocationName<R>(locationName: String, maxResults: Int32) -> R? where R: List, R.E == Address {
+  open func getFromLocationName<R>(locationName: String, maxResults: Int32) -> R? where R: List, R.E == Address {
     self.javaObject.call(method: Geocoder__method__3, [locationName.toJavaParameter(), maxResults.toJavaParameter()])
   }
 
-  public func getFromLocationName<R>(locationName: String, maxResults: Int32, lowerLeftLatitude: Double, lowerLeftLongitude: Double, upperRightLatitude: Double, upperRightLongitude: Double) -> R? where R: List, R.E == Address {
+  open func getFromLocationName<R>(locationName: String, maxResults: Int32, lowerLeftLatitude: Double, lowerLeftLongitude: Double, upperRightLatitude: Double, upperRightLongitude: Double) -> R? where R: List, R.E == Address {
     self.javaObject.call(method: Geocoder__method__4, [locationName.toJavaParameter(), maxResults.toJavaParameter(), lowerLeftLatitude.toJavaParameter(), lowerLeftLongitude.toJavaParameter(), upperRightLatitude.toJavaParameter(), upperRightLongitude.toJavaParameter()])
   }
 
@@ -34,15 +34,15 @@ open class Geocoder: Object {
 }
 
 extension Geocoder {
-  public func getFromLocation(latitude: Double, longitude: Double, maxResults: Int32) -> ListProxy<Address>? {
+  open func getFromLocation(latitude: Double, longitude: Double, maxResults: Int32) -> ListProxy<Address>? {
     self.javaObject.call(method: Geocoder__method__2, [latitude.toJavaParameter(), longitude.toJavaParameter(), maxResults.toJavaParameter()])
   }
 
-  public func getFromLocationName(locationName: String, maxResults: Int32) -> ListProxy<Address>? {
+  open func getFromLocationName(locationName: String, maxResults: Int32) -> ListProxy<Address>? {
     self.javaObject.call(method: Geocoder__method__3, [locationName.toJavaParameter(), maxResults.toJavaParameter()])
   }
 
-  public func getFromLocationName(locationName: String, maxResults: Int32, lowerLeftLatitude: Double, lowerLeftLongitude: Double, upperRightLatitude: Double, upperRightLongitude: Double) -> ListProxy<Address>? {
+  open func getFromLocationName(locationName: String, maxResults: Int32, lowerLeftLatitude: Double, lowerLeftLongitude: Double, upperRightLatitude: Double, upperRightLongitude: Double) -> ListProxy<Address>? {
     self.javaObject.call(method: Geocoder__method__4, [locationName.toJavaParameter(), maxResults.toJavaParameter(), lowerLeftLatitude.toJavaParameter(), lowerLeftLongitude.toJavaParameter(), upperRightLatitude.toJavaParameter(), upperRightLongitude.toJavaParameter()])
   }
 }

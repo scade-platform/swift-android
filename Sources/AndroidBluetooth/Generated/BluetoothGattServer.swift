@@ -3,69 +3,69 @@
 import Java
 
 open class BluetoothGattServer: Object, BluetoothProfile {
-  public func close() {
+  open func close() {
     self.javaObject.call(method: BluetoothGattServer__method__0, [])
   }
 
-  public func connect(device: BluetoothDevice?, autoConnect: Bool) -> Bool {
+  open func connect(device: BluetoothDevice?, autoConnect: Bool) -> Bool {
     self.javaObject.call(method: BluetoothGattServer__method__1, [device.toJavaParameter(), autoConnect.toJavaParameter()])
   }
 
-  public func cancelConnection(device: BluetoothDevice?) {
+  open func cancelConnection(device: BluetoothDevice?) {
     self.javaObject.call(method: BluetoothGattServer__method__2, [device.toJavaParameter()])
   }
 
-  public func sendResponse(device: BluetoothDevice?, requestId: Int32, status: Int32, offset: Int32, value: [Int8]) -> Bool {
+  open func sendResponse(device: BluetoothDevice?, requestId: Int32, status: Int32, offset: Int32, value: [Int8]) -> Bool {
     self.javaObject.call(method: BluetoothGattServer__method__3, [device.toJavaParameter(), requestId.toJavaParameter(), status.toJavaParameter(), offset.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func notifyCharacteristicChanged(device: BluetoothDevice?, characteristic: BluetoothGattCharacteristic?, confirm: Bool) -> Bool {
+  open func notifyCharacteristicChanged(device: BluetoothDevice?, characteristic: BluetoothGattCharacteristic?, confirm: Bool) -> Bool {
     self.javaObject.call(method: BluetoothGattServer__method__4, [device.toJavaParameter(), characteristic.toJavaParameter(), confirm.toJavaParameter()])
   }
 
-  public func addService(service: BluetoothGattService?) -> Bool {
+  open func addService(service: BluetoothGattService?) -> Bool {
     self.javaObject.call(method: BluetoothGattServer__method__5, [service.toJavaParameter()])
   }
 
-  public func removeService(service: BluetoothGattService?) -> Bool {
+  open func removeService(service: BluetoothGattService?) -> Bool {
     self.javaObject.call(method: BluetoothGattServer__method__6, [service.toJavaParameter()])
   }
 
-  public func clearServices() {
+  open func clearServices() {
     self.javaObject.call(method: BluetoothGattServer__method__7, [])
   }
 
-  public func getServices<R>() -> R? where R: List, R.E == BluetoothGattService {
+  open func getServices<R>() -> R? where R: List, R.E == BluetoothGattService {
     self.javaObject.call(method: BluetoothGattServer__method__8, [])
   }
 
-  public func getService(uuid: UUID?) -> BluetoothGattService? {
+  open func getService(uuid: UUID?) -> BluetoothGattService? {
     self.javaObject.call(method: BluetoothGattServer__method__9, [uuid.toJavaParameter()])
   }
 
-  public func getConnectionState(device: BluetoothDevice?) -> Int32 {
+  open func getConnectionState(device: BluetoothDevice?) -> Int32 {
     self.javaObject.call(method: BluetoothGattServer__method__10, [device.toJavaParameter()])
   }
 
-  public func getConnectedDevices<R>() -> R? where R: List, R.E == BluetoothDevice {
+  open func getConnectedDevices<R>() -> R? where R: List, R.E == BluetoothDevice {
     self.javaObject.call(method: BluetoothGattServer__method__11, [])
   }
 
-  public func getDevicesMatchingConnectionStates<R>(states: [Int32]) -> R? where R: List, R.E == BluetoothDevice {
+  open func getDevicesMatchingConnectionStates<R>(states: [Int32]) -> R? where R: List, R.E == BluetoothDevice {
     self.javaObject.call(method: BluetoothGattServer__method__12, [states.toJavaParameter()])
   }
 }
 
 extension BluetoothGattServer {
-  public func getServices() -> ListProxy<BluetoothGattService>? {
+  open func getServices() -> ListProxy<BluetoothGattService>? {
     self.javaObject.call(method: BluetoothGattServer__method__8, [])
   }
 
-  public func getConnectedDevices() -> ListProxy<BluetoothDevice>? {
+  open func getConnectedDevices() -> ListProxy<BluetoothDevice>? {
     self.javaObject.call(method: BluetoothGattServer__method__11, [])
   }
 
-  public func getDevicesMatchingConnectionStates(states: [Int32]) -> ListProxy<BluetoothDevice>? {
+  open func getDevicesMatchingConnectionStates(states: [Int32]) -> ListProxy<BluetoothDevice>? {
     self.javaObject.call(method: BluetoothGattServer__method__12, [states.toJavaParameter()])
   }
 }

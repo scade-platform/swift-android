@@ -21,15 +21,15 @@ open class ActivityOptions: Object {
     ActivityOptions__class.callStatic(method: ActivityOptions__method__2, [])
   }
 
-  public func update(otherOptions: ActivityOptions?) {
+  open func update(otherOptions: ActivityOptions?) {
     self.javaObject.call(method: ActivityOptions__method__3, [otherOptions.toJavaParameter()])
   }
 
-  public func toBundle() -> Bundle? {
+  open func toBundle() -> Bundle? {
     self.javaObject.call(method: ActivityOptions__method__4, [])
   }
 
-  public func requestUsageTimeReport(receiver: PendingIntent?) {
+  open func requestUsageTimeReport(receiver: PendingIntent?) {
     self.javaObject.call(method: ActivityOptions__method__5, [receiver.toJavaParameter()])
   }
 }

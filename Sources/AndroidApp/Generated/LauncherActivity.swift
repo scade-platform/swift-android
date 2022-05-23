@@ -8,8 +8,6 @@ public protocol LauncherActivity where Self: ListActivity {
   typealias IconResizer = AndroidApp.LauncherActivityIconResizer
 
   typealias ListItem = AndroidApp.LauncherActivityListItem
-
-  func makeListItems<R>() -> R? where R: List, R.E == LauncherActivity.ListItem
 }
 
 public extension LauncherActivity {
@@ -19,12 +17,36 @@ public extension LauncherActivity {
 }
 
 public extension LauncherActivity where Self: Object {
-  func makeListItems<R>() -> R? where R: List, R.E == LauncherActivity.ListItem {
+  func onSetContentView() {
     self.javaObject.call(method: LauncherActivity__method__1, [])
   }
 
+  func intentForPosition(position: Int32) -> Intent? {
+    self.javaObject.call(method: LauncherActivity__method__2, [position.toJavaParameter()])
+  }
+
+  func itemForPosition(position: Int32) -> LauncherActivity.ListItem? {
+    self.javaObject.call(method: LauncherActivity__method__3, [position.toJavaParameter()])
+  }
+
+  func getTargetIntent() -> Intent? {
+    self.javaObject.call(method: LauncherActivity__method__4, [])
+  }
+
+  func onQueryPackageManager<R>(queryIntent: Intent?) -> R? where R: List, R.E == ResolveInfo {
+    self.javaObject.call(method: LauncherActivity__method__5, [queryIntent.toJavaParameter()])
+  }
+
+  func makeListItems<R>() -> R? where R: List, R.E == LauncherActivity.ListItem {
+    self.javaObject.call(method: LauncherActivity__method__6, [])
+  }
+
+  func onQueryPackageManager(queryIntent: Intent?) -> ListProxy<ResolveInfo>? {
+    self.javaObject.call(method: LauncherActivity__method__5, [queryIntent.toJavaParameter()])
+  }
+
   func makeListItems() -> ListProxy<LauncherActivity.ListItem>? {
-    self.javaObject.call(method: LauncherActivity__method__1, [])
+    self.javaObject.call(method: LauncherActivity__method__6, [])
   }
 }
 
@@ -121,7 +143,12 @@ open class LauncherActivityListItem: Object {
 
 private let LauncherActivity__class = findJavaClass(fqn: "android/app/LauncherActivity")!
 
-private let LauncherActivity__method__1 = LauncherActivity__class.getMethodID(name: "makeListItems", sig: "()Ljava/util/List;")!
+private let LauncherActivity__method__1 = LauncherActivity__class.getMethodID(name: "onSetContentView", sig: "()V")!
+private let LauncherActivity__method__2 = LauncherActivity__class.getMethodID(name: "intentForPosition", sig: "(I)Landroid/content/Intent;")!
+private let LauncherActivity__method__3 = LauncherActivity__class.getMethodID(name: "itemForPosition", sig: "(I)Landroid/app/LauncherActivity$ListItem;")!
+private let LauncherActivity__method__4 = LauncherActivity__class.getMethodID(name: "getTargetIntent", sig: "()Landroid/content/Intent;")!
+private let LauncherActivity__method__5 = LauncherActivity__class.getMethodID(name: "onQueryPackageManager", sig: "(Landroid/content/Intent;)Ljava/util/List;")!
+private let LauncherActivity__method__6 = LauncherActivity__class.getMethodID(name: "makeListItems", sig: "()Ljava/util/List;")!
 
 // ------------------------------------------------------------------------------------
 

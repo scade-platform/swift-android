@@ -23,169 +23,149 @@ open class LocationManager: Object {
 
   public static let PROVIDERS_CHANGED_ACTION: String = LocationManager__class.getStatic(field: LocationManager__field__8)
 
-  public func getAllProviders<R>() -> R? where R: List, R.E == String {
+  open func getAllProviders<R>() -> R? where R: List, R.E == String {
     self.javaObject.call(method: LocationManager__method__0, [])
   }
 
-  public func getProviders<R>(enabledOnly: Bool) -> R? where R: List, R.E == String {
+  open func getProviders<R>(enabledOnly: Bool) -> R? where R: List, R.E == String {
     self.javaObject.call(method: LocationManager__method__1, [enabledOnly.toJavaParameter()])
   }
 
-  public func getProvider(name: String) -> LocationProvider? {
+  open func getProvider(name: String) -> LocationProvider? {
     self.javaObject.call(method: LocationManager__method__2, [name.toJavaParameter()])
   }
 
-  public func getProviders<R>(criteria: Criteria?, enabledOnly: Bool) -> R? where R: List, R.E == String {
+  open func getProviders<R>(criteria: Criteria?, enabledOnly: Bool) -> R? where R: List, R.E == String {
     self.javaObject.call(method: LocationManager__method__3, [criteria.toJavaParameter(), enabledOnly.toJavaParameter()])
   }
 
-  public func getBestProvider(criteria: Criteria?, enabledOnly: Bool) -> String {
+  open func getBestProvider(criteria: Criteria?, enabledOnly: Bool) -> String {
     self.javaObject.call(method: LocationManager__method__4, [criteria.toJavaParameter(), enabledOnly.toJavaParameter()])
   }
 
-  public func requestLocationUpdates(provider: String, minTime: Int64, minDistance: Float, listener: LocationListener?) {
+  open func requestLocationUpdates(provider: String, minTime: Int64, minDistance: Float, listener: LocationListener?) {
     self.javaObject.call(method: LocationManager__method__5, [provider.toJavaParameter(), minTime.toJavaParameter(), minDistance.toJavaParameter(), JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func requestLocationUpdates(provider: String, minTime: Int64, minDistance: Float, intent: PendingIntent?) {
+  open func requestLocationUpdates(provider: String, minTime: Int64, minDistance: Float, intent: PendingIntent?) {
     self.javaObject.call(method: LocationManager__method__6, [provider.toJavaParameter(), minTime.toJavaParameter(), minDistance.toJavaParameter(), intent.toJavaParameter()])
   }
 
-  public func requestLocationUpdates(minTime: Int64, minDistance: Float, criteria: Criteria?, intent: PendingIntent?) {
+  open func requestLocationUpdates(minTime: Int64, minDistance: Float, criteria: Criteria?, intent: PendingIntent?) {
     self.javaObject.call(method: LocationManager__method__7, [minTime.toJavaParameter(), minDistance.toJavaParameter(), criteria.toJavaParameter(), intent.toJavaParameter()])
   }
 
-  public func requestSingleUpdate(provider: String, intent: PendingIntent?) {
+  open func requestSingleUpdate(provider: String, intent: PendingIntent?) {
     self.javaObject.call(method: LocationManager__method__8, [provider.toJavaParameter(), intent.toJavaParameter()])
   }
 
-  public func requestSingleUpdate(criteria: Criteria?, intent: PendingIntent?) {
+  open func requestSingleUpdate(criteria: Criteria?, intent: PendingIntent?) {
     self.javaObject.call(method: LocationManager__method__9, [criteria.toJavaParameter(), intent.toJavaParameter()])
   }
 
-  public func removeUpdates(listener: LocationListener?) {
+  open func removeUpdates(listener: LocationListener?) {
     self.javaObject.call(method: LocationManager__method__10, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func removeUpdates(intent: PendingIntent?) {
+  open func removeUpdates(intent: PendingIntent?) {
     self.javaObject.call(method: LocationManager__method__11, [intent.toJavaParameter()])
   }
 
-  public func addProximityAlert(latitude: Double, longitude: Double, radius: Float, expiration: Int64, intent: PendingIntent?) {
+  open func addProximityAlert(latitude: Double, longitude: Double, radius: Float, expiration: Int64, intent: PendingIntent?) {
     self.javaObject.call(method: LocationManager__method__12, [latitude.toJavaParameter(), longitude.toJavaParameter(), radius.toJavaParameter(), expiration.toJavaParameter(), intent.toJavaParameter()])
   }
 
-  public func removeProximityAlert(intent: PendingIntent?) {
+  open func removeProximityAlert(intent: PendingIntent?) {
     self.javaObject.call(method: LocationManager__method__13, [intent.toJavaParameter()])
   }
 
-  public func isProviderEnabled(provider: String) -> Bool {
+  open func isProviderEnabled(provider: String) -> Bool {
     self.javaObject.call(method: LocationManager__method__14, [provider.toJavaParameter()])
   }
 
-  public func getLastKnownLocation(provider: String) -> Location? {
+  open func getLastKnownLocation(provider: String) -> Location? {
     self.javaObject.call(method: LocationManager__method__15, [provider.toJavaParameter()])
   }
 
-  public func addTestProvider(name: String, requiresNetwork: Bool, requiresSatellite: Bool, requiresCell: Bool, hasMonetaryCost: Bool, supportsAltitude: Bool, supportsSpeed: Bool, supportsBearing: Bool, powerRequirement: Int32, accuracy: Int32) {
+  open func addTestProvider(name: String, requiresNetwork: Bool, requiresSatellite: Bool, requiresCell: Bool, hasMonetaryCost: Bool, supportsAltitude: Bool, supportsSpeed: Bool, supportsBearing: Bool, powerRequirement: Int32, accuracy: Int32) {
     self.javaObject.call(method: LocationManager__method__16, [name.toJavaParameter(), requiresNetwork.toJavaParameter(), requiresSatellite.toJavaParameter(), requiresCell.toJavaParameter(), hasMonetaryCost.toJavaParameter(), supportsAltitude.toJavaParameter(), supportsSpeed.toJavaParameter(), supportsBearing.toJavaParameter(), powerRequirement.toJavaParameter(), accuracy.toJavaParameter()])
   }
 
-  public func removeTestProvider(provider: String) {
+  open func removeTestProvider(provider: String) {
     self.javaObject.call(method: LocationManager__method__17, [provider.toJavaParameter()])
   }
 
-  public func setTestProviderLocation(provider: String, loc: Location?) {
+  open func setTestProviderLocation(provider: String, loc: Location?) {
     self.javaObject.call(method: LocationManager__method__18, [provider.toJavaParameter(), loc.toJavaParameter()])
   }
 
-  public func clearTestProviderLocation(provider: String) {
+  open func clearTestProviderLocation(provider: String) {
     self.javaObject.call(method: LocationManager__method__19, [provider.toJavaParameter()])
   }
 
-  public func setTestProviderEnabled(provider: String, enabled: Bool) {
+  open func setTestProviderEnabled(provider: String, enabled: Bool) {
     self.javaObject.call(method: LocationManager__method__20, [provider.toJavaParameter(), enabled.toJavaParameter()])
   }
 
-  public func clearTestProviderEnabled(provider: String) {
+  open func clearTestProviderEnabled(provider: String) {
     self.javaObject.call(method: LocationManager__method__21, [provider.toJavaParameter()])
   }
 
-  public func setTestProviderStatus(provider: String, status: Int32, extras: Bundle?, updateTime: Int64) {
+  open func setTestProviderStatus(provider: String, status: Int32, extras: Bundle?, updateTime: Int64) {
     self.javaObject.call(method: LocationManager__method__22, [provider.toJavaParameter(), status.toJavaParameter(), extras.toJavaParameter(), updateTime.toJavaParameter()])
   }
 
-  public func clearTestProviderStatus(provider: String) {
+  open func clearTestProviderStatus(provider: String) {
     self.javaObject.call(method: LocationManager__method__23, [provider.toJavaParameter()])
   }
 
-  public func addGpsStatusListener(listener: GpsStatus.Listener?) -> Bool {
-    self.javaObject.call(method: LocationManager__method__24, [JavaParameter(object: listener?.toJavaObject())])
+  open func registerGnssStatusCallback(callback: GnssStatus.Callback?) -> Bool {
+    self.javaObject.call(method: LocationManager__method__24, [JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func removeGpsStatusListener(listener: GpsStatus.Listener?) {
-    self.javaObject.call(method: LocationManager__method__25, [JavaParameter(object: listener?.toJavaObject())])
+  open func unregisterGnssStatusCallback(callback: GnssStatus.Callback?) {
+    self.javaObject.call(method: LocationManager__method__25, [JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func registerGnssStatusCallback(callback: GnssStatus.Callback?) -> Bool {
-    self.javaObject.call(method: LocationManager__method__26, [JavaParameter(object: callback?.toJavaObject())])
+  open func addNmeaListener(listener: OnNmeaMessageListener?) -> Bool {
+    self.javaObject.call(method: LocationManager__method__26, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func unregisterGnssStatusCallback(callback: GnssStatus.Callback?) {
-    self.javaObject.call(method: LocationManager__method__27, [JavaParameter(object: callback?.toJavaObject())])
+  open func removeNmeaListener(listener: OnNmeaMessageListener?) {
+    self.javaObject.call(method: LocationManager__method__27, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func addNmeaListener(listener: GpsStatus.NmeaListener?) -> Bool {
-    self.javaObject.call(method: LocationManager__method__28, [JavaParameter(object: listener?.toJavaObject())])
+  open func registerGnssMeasurementsCallback(callback: GnssMeasurementsEvent.Callback?) -> Bool {
+    self.javaObject.call(method: LocationManager__method__28, [JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func removeNmeaListener(listener: GpsStatus.NmeaListener?) {
-    self.javaObject.call(method: LocationManager__method__29, [JavaParameter(object: listener?.toJavaObject())])
+  open func unregisterGnssMeasurementsCallback(callback: GnssMeasurementsEvent.Callback?) {
+    self.javaObject.call(method: LocationManager__method__29, [JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func addNmeaListener(listener: OnNmeaMessageListener?) -> Bool {
-    self.javaObject.call(method: LocationManager__method__30, [JavaParameter(object: listener?.toJavaObject())])
+  open func registerGnssNavigationMessageCallback(callback: GnssNavigationMessage.Callback?) -> Bool {
+    self.javaObject.call(method: LocationManager__method__30, [JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func removeNmeaListener(listener: OnNmeaMessageListener?) {
-    self.javaObject.call(method: LocationManager__method__31, [JavaParameter(object: listener?.toJavaObject())])
+  open func unregisterGnssNavigationMessageCallback(callback: GnssNavigationMessage.Callback?) {
+    self.javaObject.call(method: LocationManager__method__31, [JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func registerGnssMeasurementsCallback(callback: GnssMeasurementsEvent.Callback?) -> Bool {
-    self.javaObject.call(method: LocationManager__method__32, [JavaParameter(object: callback?.toJavaObject())])
-  }
-
-  public func unregisterGnssMeasurementsCallback(callback: GnssMeasurementsEvent.Callback?) {
-    self.javaObject.call(method: LocationManager__method__33, [JavaParameter(object: callback?.toJavaObject())])
-  }
-
-  public func registerGnssNavigationMessageCallback(callback: GnssNavigationMessage.Callback?) -> Bool {
-    self.javaObject.call(method: LocationManager__method__34, [JavaParameter(object: callback?.toJavaObject())])
-  }
-
-  public func unregisterGnssNavigationMessageCallback(callback: GnssNavigationMessage.Callback?) {
-    self.javaObject.call(method: LocationManager__method__35, [JavaParameter(object: callback?.toJavaObject())])
-  }
-
-  public func getGpsStatus(status: GpsStatus?) -> GpsStatus? {
-    self.javaObject.call(method: LocationManager__method__36, [status.toJavaParameter()])
-  }
-
-  public func sendExtraCommand(provider: String, command: String, extras: Bundle?) -> Bool {
-    self.javaObject.call(method: LocationManager__method__37, [provider.toJavaParameter(), command.toJavaParameter(), extras.toJavaParameter()])
+  open func sendExtraCommand(provider: String, command: String, extras: Bundle?) -> Bool {
+    self.javaObject.call(method: LocationManager__method__32, [provider.toJavaParameter(), command.toJavaParameter(), extras.toJavaParameter()])
   }
 }
 
 extension LocationManager {
-  public func getAllProviders() -> ListProxy<String>? {
+  open func getAllProviders() -> ListProxy<String>? {
     self.javaObject.call(method: LocationManager__method__0, [])
   }
 
-  public func getProviders(enabledOnly: Bool) -> ListProxy<String>? {
+  open func getProviders(enabledOnly: Bool) -> ListProxy<String>? {
     self.javaObject.call(method: LocationManager__method__1, [enabledOnly.toJavaParameter()])
   }
 
-  public func getProviders(criteria: Criteria?, enabledOnly: Bool) -> ListProxy<String>? {
+  open func getProviders(criteria: Criteria?, enabledOnly: Bool) -> ListProxy<String>? {
     self.javaObject.call(method: LocationManager__method__3, [criteria.toJavaParameter(), enabledOnly.toJavaParameter()])
   }
 }
@@ -218,20 +198,15 @@ private let LocationManager__method__20 = LocationManager__class.getMethodID(nam
 private let LocationManager__method__21 = LocationManager__class.getMethodID(name: "clearTestProviderEnabled", sig: "(Ljava/lang/String;)V")!
 private let LocationManager__method__22 = LocationManager__class.getMethodID(name: "setTestProviderStatus", sig: "(Ljava/lang/String;ILandroid/os/Bundle;J)V")!
 private let LocationManager__method__23 = LocationManager__class.getMethodID(name: "clearTestProviderStatus", sig: "(Ljava/lang/String;)V")!
-private let LocationManager__method__24 = LocationManager__class.getMethodID(name: "addGpsStatusListener", sig: "(Landroid/location/GpsStatus$Listener;)Z")!
-private let LocationManager__method__25 = LocationManager__class.getMethodID(name: "removeGpsStatusListener", sig: "(Landroid/location/GpsStatus$Listener;)V")!
-private let LocationManager__method__26 = LocationManager__class.getMethodID(name: "registerGnssStatusCallback", sig: "(Landroid/location/GnssStatus$Callback;)Z")!
-private let LocationManager__method__27 = LocationManager__class.getMethodID(name: "unregisterGnssStatusCallback", sig: "(Landroid/location/GnssStatus$Callback;)V")!
-private let LocationManager__method__28 = LocationManager__class.getMethodID(name: "addNmeaListener", sig: "(Landroid/location/GpsStatus$NmeaListener;)Z")!
-private let LocationManager__method__29 = LocationManager__class.getMethodID(name: "removeNmeaListener", sig: "(Landroid/location/GpsStatus$NmeaListener;)V")!
-private let LocationManager__method__30 = LocationManager__class.getMethodID(name: "addNmeaListener", sig: "(Landroid/location/OnNmeaMessageListener;)Z")!
-private let LocationManager__method__31 = LocationManager__class.getMethodID(name: "removeNmeaListener", sig: "(Landroid/location/OnNmeaMessageListener;)V")!
-private let LocationManager__method__32 = LocationManager__class.getMethodID(name: "registerGnssMeasurementsCallback", sig: "(Landroid/location/GnssMeasurementsEvent$Callback;)Z")!
-private let LocationManager__method__33 = LocationManager__class.getMethodID(name: "unregisterGnssMeasurementsCallback", sig: "(Landroid/location/GnssMeasurementsEvent$Callback;)V")!
-private let LocationManager__method__34 = LocationManager__class.getMethodID(name: "registerGnssNavigationMessageCallback", sig: "(Landroid/location/GnssNavigationMessage$Callback;)Z")!
-private let LocationManager__method__35 = LocationManager__class.getMethodID(name: "unregisterGnssNavigationMessageCallback", sig: "(Landroid/location/GnssNavigationMessage$Callback;)V")!
-private let LocationManager__method__36 = LocationManager__class.getMethodID(name: "getGpsStatus", sig: "(Landroid/location/GpsStatus;)Landroid/location/GpsStatus;")!
-private let LocationManager__method__37 = LocationManager__class.getMethodID(name: "sendExtraCommand", sig: "(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Z")!
+private let LocationManager__method__24 = LocationManager__class.getMethodID(name: "registerGnssStatusCallback", sig: "(Landroid/location/GnssStatus$Callback;)Z")!
+private let LocationManager__method__25 = LocationManager__class.getMethodID(name: "unregisterGnssStatusCallback", sig: "(Landroid/location/GnssStatus$Callback;)V")!
+private let LocationManager__method__26 = LocationManager__class.getMethodID(name: "addNmeaListener", sig: "(Landroid/location/OnNmeaMessageListener;)Z")!
+private let LocationManager__method__27 = LocationManager__class.getMethodID(name: "removeNmeaListener", sig: "(Landroid/location/OnNmeaMessageListener;)V")!
+private let LocationManager__method__28 = LocationManager__class.getMethodID(name: "registerGnssMeasurementsCallback", sig: "(Landroid/location/GnssMeasurementsEvent$Callback;)Z")!
+private let LocationManager__method__29 = LocationManager__class.getMethodID(name: "unregisterGnssMeasurementsCallback", sig: "(Landroid/location/GnssMeasurementsEvent$Callback;)V")!
+private let LocationManager__method__30 = LocationManager__class.getMethodID(name: "registerGnssNavigationMessageCallback", sig: "(Landroid/location/GnssNavigationMessage$Callback;)Z")!
+private let LocationManager__method__31 = LocationManager__class.getMethodID(name: "unregisterGnssNavigationMessageCallback", sig: "(Landroid/location/GnssNavigationMessage$Callback;)V")!
+private let LocationManager__method__32 = LocationManager__class.getMethodID(name: "sendExtraCommand", sig: "(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Z")!
 
 private let LocationManager__field__0 = LocationManager__class.getStaticFieldID(name: "GPS_PROVIDER", sig: "Ljava/lang/String;")!
 private let LocationManager__field__1 = LocationManager__class.getStaticFieldID(name: "KEY_LOCATION_CHANGED", sig: "Ljava/lang/String;")!

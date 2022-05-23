@@ -9,28 +9,32 @@ open class MediaMuxer: Object {
     super.init(ctor: MediaMuxer__method__0, [path.toJavaParameter(), format.toJavaParameter()])
   }
 
-  public func setOrientationHint(degrees: Int32) {
+  open func setOrientationHint(degrees: Int32) {
     self.javaObject.call(method: MediaMuxer__method__1, [degrees.toJavaParameter()])
   }
 
-  public func setLocation(latitude: Float, longitude: Float) {
+  open func setLocation(latitude: Float, longitude: Float) {
     self.javaObject.call(method: MediaMuxer__method__2, [latitude.toJavaParameter(), longitude.toJavaParameter()])
   }
 
-  public func start() {
+  open func start() {
     self.javaObject.call(method: MediaMuxer__method__3, [])
   }
 
-  public func stop() {
+  open func stop() {
     self.javaObject.call(method: MediaMuxer__method__4, [])
   }
 
-  public func addTrack(format: MediaFormat?) -> Int32 {
+  open func addTrack(format: MediaFormat?) -> Int32 {
     self.javaObject.call(method: MediaMuxer__method__5, [format.toJavaParameter()])
   }
 
-  public func release() {
-    self.javaObject.call(method: MediaMuxer__method__6, [])
+  open func writeSampleData(trackIndex: Int32, byteBuf: ByteBuffer?, bufferInfo: MediaCodec.BufferInfo?) {
+    self.javaObject.call(method: MediaMuxer__method__6, [trackIndex.toJavaParameter(), JavaParameter(object: byteBuf?.toJavaObject()), bufferInfo.toJavaParameter()])
+  }
+
+  open func release() {
+    self.javaObject.call(method: MediaMuxer__method__7, [])
   }
 
   public required init(_ obj: JavaObject) {
@@ -60,7 +64,8 @@ private let MediaMuxer__method__2 = MediaMuxer__class.getMethodID(name: "setLoca
 private let MediaMuxer__method__3 = MediaMuxer__class.getMethodID(name: "start", sig: "()V")!
 private let MediaMuxer__method__4 = MediaMuxer__class.getMethodID(name: "stop", sig: "()V")!
 private let MediaMuxer__method__5 = MediaMuxer__class.getMethodID(name: "addTrack", sig: "(Landroid/media/MediaFormat;)I")!
-private let MediaMuxer__method__6 = MediaMuxer__class.getMethodID(name: "release", sig: "()V")!
+private let MediaMuxer__method__6 = MediaMuxer__class.getMethodID(name: "writeSampleData", sig: "(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V")!
+private let MediaMuxer__method__7 = MediaMuxer__class.getMethodID(name: "release", sig: "()V")!
 
 // ------------------------------------------------------------------------------------
 

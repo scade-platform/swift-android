@@ -105,8 +105,6 @@ public protocol PackageManager where Self: Object {
 
   func getResourcesForApplication(appPackageName: String) -> Resources?
 
-  func getPackageArchiveInfo(archiveFilePath: String, flags: Int32) -> PackageInfo?
-
   func verifyPendingInstall(id: Int32, verificationCode: Int32) -> Void
 
   func extendVerificationTimeout(id: Int32, verificationCodeAtTimeout: Int32, millisecondsToDelay: Int64) -> Void
@@ -115,13 +113,7 @@ public protocol PackageManager where Self: Object {
 
   func getInstallerPackageName(packageName: String) -> String
 
-  func addPackageToPreferred(packageName: String) -> Void
-
-  func removePackageFromPreferred(packageName: String) -> Void
-
   func getPreferredPackages<R>(flags: Int32) -> R? where R: List, R.E == PackageInfo
-
-  func addPreferredActivity(filter: IntentFilter?, match: Int32, set: [ComponentName?], activity: ComponentName?) -> Void
 
   func clearPackagePreferredActivities(packageName: String) -> Void
 
@@ -200,7 +192,7 @@ public extension PackageManager where Self: Object {
   }
 
   func getPreferredPackages(flags: Int32) -> ListProxy<PackageInfo>? {
-    self.javaObject.call(method: PackageManager__method__58, [flags.toJavaParameter()])
+    self.javaObject.call(method: PackageManager__method__56, [flags.toJavaParameter()])
   }
 }
 
@@ -469,269 +461,257 @@ open class PackageManagerProxy: Object, JInterfaceProxy, PackageManager {
     self.init(obj.toJavaObject()!)
   }
 
-  public func getPackageInfo(packageName: String, flags: Int32) -> PackageInfo? {
+  open func getPackageInfo(packageName: String, flags: Int32) -> PackageInfo? {
     self.javaObject.call(method: PackageManager__method__1, [packageName.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func currentToCanonicalPackageNames(names: [String]) -> [String] {
+  open func currentToCanonicalPackageNames(names: [String]) -> [String] {
     self.javaObject.call(method: PackageManager__method__2, [names.toJavaParameter()])
   }
 
-  public func canonicalToCurrentPackageNames(names: [String]) -> [String] {
+  open func canonicalToCurrentPackageNames(names: [String]) -> [String] {
     self.javaObject.call(method: PackageManager__method__3, [names.toJavaParameter()])
   }
 
-  public func getLaunchIntentForPackage(packageName: String) -> Intent? {
+  open func getLaunchIntentForPackage(packageName: String) -> Intent? {
     self.javaObject.call(method: PackageManager__method__4, [packageName.toJavaParameter()])
   }
 
-  public func getLeanbackLaunchIntentForPackage(packageName: String) -> Intent? {
+  open func getLeanbackLaunchIntentForPackage(packageName: String) -> Intent? {
     self.javaObject.call(method: PackageManager__method__5, [packageName.toJavaParameter()])
   }
 
-  public func getPackageGids(packageName: String) -> [Int32] {
+  open func getPackageGids(packageName: String) -> [Int32] {
     self.javaObject.call(method: PackageManager__method__6, [packageName.toJavaParameter()])
   }
 
-  public func getPackageGids(packageName: String, flags: Int32) -> [Int32] {
+  open func getPackageGids(packageName: String, flags: Int32) -> [Int32] {
     self.javaObject.call(method: PackageManager__method__7, [packageName.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func getPackageUid(packageName: String, flags: Int32) -> Int32 {
+  open func getPackageUid(packageName: String, flags: Int32) -> Int32 {
     self.javaObject.call(method: PackageManager__method__8, [packageName.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func getPermissionInfo(name: String, flags: Int32) -> PermissionInfo? {
+  open func getPermissionInfo(name: String, flags: Int32) -> PermissionInfo? {
     self.javaObject.call(method: PackageManager__method__9, [name.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func queryPermissionsByGroup<R>(group: String, flags: Int32) -> R? where R: List, R.E == PermissionInfo {
+  open func queryPermissionsByGroup<R>(group: String, flags: Int32) -> R? where R: List, R.E == PermissionInfo {
     self.javaObject.call(method: PackageManager__method__10, [group.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func getPermissionGroupInfo(name: String, flags: Int32) -> PermissionGroupInfo? {
+  open func getPermissionGroupInfo(name: String, flags: Int32) -> PermissionGroupInfo? {
     self.javaObject.call(method: PackageManager__method__11, [name.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func getAllPermissionGroups<R>(flags: Int32) -> R? where R: List, R.E == PermissionGroupInfo {
+  open func getAllPermissionGroups<R>(flags: Int32) -> R? where R: List, R.E == PermissionGroupInfo {
     self.javaObject.call(method: PackageManager__method__12, [flags.toJavaParameter()])
   }
 
-  public func getApplicationInfo(packageName: String, flags: Int32) -> ApplicationInfo? {
+  open func getApplicationInfo(packageName: String, flags: Int32) -> ApplicationInfo? {
     self.javaObject.call(method: PackageManager__method__13, [packageName.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func getActivityInfo(component: ComponentName?, flags: Int32) -> ActivityInfo? {
+  open func getActivityInfo(component: ComponentName?, flags: Int32) -> ActivityInfo? {
     self.javaObject.call(method: PackageManager__method__14, [component.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func getReceiverInfo(component: ComponentName?, flags: Int32) -> ActivityInfo? {
+  open func getReceiverInfo(component: ComponentName?, flags: Int32) -> ActivityInfo? {
     self.javaObject.call(method: PackageManager__method__15, [component.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func getServiceInfo(component: ComponentName?, flags: Int32) -> ServiceInfo? {
+  open func getServiceInfo(component: ComponentName?, flags: Int32) -> ServiceInfo? {
     self.javaObject.call(method: PackageManager__method__16, [component.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func getProviderInfo(component: ComponentName?, flags: Int32) -> ProviderInfo? {
+  open func getProviderInfo(component: ComponentName?, flags: Int32) -> ProviderInfo? {
     self.javaObject.call(method: PackageManager__method__17, [component.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func getInstalledPackages<R>(flags: Int32) -> R? where R: List, R.E == PackageInfo {
+  open func getInstalledPackages<R>(flags: Int32) -> R? where R: List, R.E == PackageInfo {
     self.javaObject.call(method: PackageManager__method__18, [flags.toJavaParameter()])
   }
 
-  public func getPackagesHoldingPermissions<R>(permissions: [String], flags: Int32) -> R? where R: List, R.E == PackageInfo {
+  open func getPackagesHoldingPermissions<R>(permissions: [String], flags: Int32) -> R? where R: List, R.E == PackageInfo {
     self.javaObject.call(method: PackageManager__method__19, [permissions.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func checkPermission(permName: String, pkgName: String) -> Int32 {
+  open func checkPermission(permName: String, pkgName: String) -> Int32 {
     self.javaObject.call(method: PackageManager__method__20, [permName.toJavaParameter(), pkgName.toJavaParameter()])
   }
 
-  public func isPermissionRevokedByPolicy(permName: String, pkgName: String) -> Bool {
+  open func isPermissionRevokedByPolicy(permName: String, pkgName: String) -> Bool {
     self.javaObject.call(method: PackageManager__method__21, [permName.toJavaParameter(), pkgName.toJavaParameter()])
   }
 
-  public func addPermission(info: PermissionInfo?) -> Bool {
+  open func addPermission(info: PermissionInfo?) -> Bool {
     self.javaObject.call(method: PackageManager__method__22, [info.toJavaParameter()])
   }
 
-  public func addPermissionAsync(info: PermissionInfo?) -> Bool {
+  open func addPermissionAsync(info: PermissionInfo?) -> Bool {
     self.javaObject.call(method: PackageManager__method__23, [info.toJavaParameter()])
   }
 
-  public func removePermission(name: String) {
+  open func removePermission(name: String) {
     self.javaObject.call(method: PackageManager__method__24, [name.toJavaParameter()])
   }
 
-  public func checkSignatures(pkg1: String, pkg2: String) -> Int32 {
+  open func checkSignatures(pkg1: String, pkg2: String) -> Int32 {
     self.javaObject.call(method: PackageManager__method__25, [pkg1.toJavaParameter(), pkg2.toJavaParameter()])
   }
 
-  public func checkSignatures(uid1: Int32, uid2: Int32) -> Int32 {
+  open func checkSignatures(uid1: Int32, uid2: Int32) -> Int32 {
     self.javaObject.call(method: PackageManager__method__26, [uid1.toJavaParameter(), uid2.toJavaParameter()])
   }
 
-  public func getPackagesForUid(uid: Int32) -> [String] {
+  open func getPackagesForUid(uid: Int32) -> [String] {
     self.javaObject.call(method: PackageManager__method__27, [uid.toJavaParameter()])
   }
 
-  public func getNameForUid(uid: Int32) -> String {
+  open func getNameForUid(uid: Int32) -> String {
     self.javaObject.call(method: PackageManager__method__28, [uid.toJavaParameter()])
   }
 
-  public func getInstalledApplications<R>(flags: Int32) -> R? where R: List, R.E == ApplicationInfo {
+  open func getInstalledApplications<R>(flags: Int32) -> R? where R: List, R.E == ApplicationInfo {
     self.javaObject.call(method: PackageManager__method__29, [flags.toJavaParameter()])
   }
 
-  public func getSystemSharedLibraryNames() -> [String] {
+  open func getSystemSharedLibraryNames() -> [String] {
     self.javaObject.call(method: PackageManager__method__30, [])
   }
 
-  public func getSystemAvailableFeatures() -> [FeatureInfo?] {
+  open func getSystemAvailableFeatures() -> [FeatureInfo?] {
     self.javaObject.call(method: PackageManager__method__31, [])
   }
 
-  public func hasSystemFeature(name: String) -> Bool {
+  open func hasSystemFeature(name: String) -> Bool {
     self.javaObject.call(method: PackageManager__method__32, [name.toJavaParameter()])
   }
 
-  public func hasSystemFeature(name: String, version: Int32) -> Bool {
+  open func hasSystemFeature(name: String, version: Int32) -> Bool {
     self.javaObject.call(method: PackageManager__method__33, [name.toJavaParameter(), version.toJavaParameter()])
   }
 
-  public func resolveActivity(intent: Intent?, flags: Int32) -> ResolveInfo? {
+  open func resolveActivity(intent: Intent?, flags: Int32) -> ResolveInfo? {
     self.javaObject.call(method: PackageManager__method__34, [intent.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func queryIntentActivities<R>(intent: Intent?, flags: Int32) -> R? where R: List, R.E == ResolveInfo {
+  open func queryIntentActivities<R>(intent: Intent?, flags: Int32) -> R? where R: List, R.E == ResolveInfo {
     self.javaObject.call(method: PackageManager__method__35, [intent.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func queryIntentActivityOptions<R>(caller: ComponentName?, specifics: [Intent?], intent: Intent?, flags: Int32) -> R? where R: List, R.E == ResolveInfo {
+  open func queryIntentActivityOptions<R>(caller: ComponentName?, specifics: [Intent?], intent: Intent?, flags: Int32) -> R? where R: List, R.E == ResolveInfo {
     self.javaObject.call(method: PackageManager__method__36, [caller.toJavaParameter(), specifics.toJavaParameter(), intent.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func queryBroadcastReceivers<R>(intent: Intent?, flags: Int32) -> R? where R: List, R.E == ResolveInfo {
+  open func queryBroadcastReceivers<R>(intent: Intent?, flags: Int32) -> R? where R: List, R.E == ResolveInfo {
     self.javaObject.call(method: PackageManager__method__37, [intent.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func resolveService(intent: Intent?, flags: Int32) -> ResolveInfo? {
+  open func resolveService(intent: Intent?, flags: Int32) -> ResolveInfo? {
     self.javaObject.call(method: PackageManager__method__38, [intent.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func queryIntentServices<R>(intent: Intent?, flags: Int32) -> R? where R: List, R.E == ResolveInfo {
+  open func queryIntentServices<R>(intent: Intent?, flags: Int32) -> R? where R: List, R.E == ResolveInfo {
     self.javaObject.call(method: PackageManager__method__39, [intent.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func queryIntentContentProviders<R>(intent: Intent?, flags: Int32) -> R? where R: List, R.E == ResolveInfo {
+  open func queryIntentContentProviders<R>(intent: Intent?, flags: Int32) -> R? where R: List, R.E == ResolveInfo {
     self.javaObject.call(method: PackageManager__method__40, [intent.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func resolveContentProvider(name: String, flags: Int32) -> ProviderInfo? {
+  open func resolveContentProvider(name: String, flags: Int32) -> ProviderInfo? {
     self.javaObject.call(method: PackageManager__method__41, [name.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func queryContentProviders<R>(processName: String, uid: Int32, flags: Int32) -> R? where R: List, R.E == ProviderInfo {
+  open func queryContentProviders<R>(processName: String, uid: Int32, flags: Int32) -> R? where R: List, R.E == ProviderInfo {
     self.javaObject.call(method: PackageManager__method__42, [processName.toJavaParameter(), uid.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func getInstrumentationInfo(className: ComponentName?, flags: Int32) -> InstrumentationInfo? {
+  open func getInstrumentationInfo(className: ComponentName?, flags: Int32) -> InstrumentationInfo? {
     self.javaObject.call(method: PackageManager__method__43, [className.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func queryInstrumentation<R>(targetPackage: String, flags: Int32) -> R? where R: List, R.E == InstrumentationInfo {
+  open func queryInstrumentation<R>(targetPackage: String, flags: Int32) -> R? where R: List, R.E == InstrumentationInfo {
     self.javaObject.call(method: PackageManager__method__44, [targetPackage.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func getText(packageName: String, resid: Int32, appInfo: ApplicationInfo?) -> String? {
+  open func getText(packageName: String, resid: Int32, appInfo: ApplicationInfo?) -> String? {
     self.javaObject.call(method: PackageManager__method__45, [packageName.toJavaParameter(), resid.toJavaParameter(), appInfo.toJavaParameter()])
   }
 
-  public func getXml(packageName: String, resid: Int32, appInfo: ApplicationInfo?) -> XmlResourceParser? {
+  open func getXml(packageName: String, resid: Int32, appInfo: ApplicationInfo?) -> XmlResourceParser? {
     let res = self.javaObject.call(method: PackageManager__method__46, [packageName.toJavaParameter(), resid.toJavaParameter(), appInfo.toJavaParameter()]) as Object?
     return cast(res, to: XmlResourceParserProxy.self)
   }
 
-  public func getApplicationLabel(info: ApplicationInfo?) -> String? {
+  open func getApplicationLabel(info: ApplicationInfo?) -> String? {
     self.javaObject.call(method: PackageManager__method__47, [info.toJavaParameter()])
   }
 
-  public func getResourcesForActivity(activityName: ComponentName?) -> Resources? {
+  open func getResourcesForActivity(activityName: ComponentName?) -> Resources? {
     self.javaObject.call(method: PackageManager__method__48, [activityName.toJavaParameter()])
   }
 
-  public func getResourcesForApplication(app: ApplicationInfo?) -> Resources? {
+  open func getResourcesForApplication(app: ApplicationInfo?) -> Resources? {
     self.javaObject.call(method: PackageManager__method__49, [app.toJavaParameter()])
   }
 
-  public func getResourcesForApplication(appPackageName: String) -> Resources? {
+  open func getResourcesForApplication(appPackageName: String) -> Resources? {
     self.javaObject.call(method: PackageManager__method__50, [appPackageName.toJavaParameter()])
   }
 
-  public func verifyPendingInstall(id: Int32, verificationCode: Int32) {
+  open func verifyPendingInstall(id: Int32, verificationCode: Int32) {
     self.javaObject.call(method: PackageManager__method__52, [id.toJavaParameter(), verificationCode.toJavaParameter()])
   }
 
-  public func extendVerificationTimeout(id: Int32, verificationCodeAtTimeout: Int32, millisecondsToDelay: Int64) {
+  open func extendVerificationTimeout(id: Int32, verificationCodeAtTimeout: Int32, millisecondsToDelay: Int64) {
     self.javaObject.call(method: PackageManager__method__53, [id.toJavaParameter(), verificationCodeAtTimeout.toJavaParameter(), millisecondsToDelay.toJavaParameter()])
   }
 
-  public func setInstallerPackageName(targetPackage: String, installerPackageName: String) {
+  open func setInstallerPackageName(targetPackage: String, installerPackageName: String) {
     self.javaObject.call(method: PackageManager__method__54, [targetPackage.toJavaParameter(), installerPackageName.toJavaParameter()])
   }
 
-  public func getInstallerPackageName(packageName: String) -> String {
+  open func getInstallerPackageName(packageName: String) -> String {
     self.javaObject.call(method: PackageManager__method__55, [packageName.toJavaParameter()])
   }
 
-  public func addPackageToPreferred(packageName: String) {
-    self.javaObject.call(method: PackageManager__method__56, [packageName.toJavaParameter()])
+  open func getPreferredPackages<R>(flags: Int32) -> R? where R: List, R.E == PackageInfo {
+    self.javaObject.call(method: PackageManager__method__56, [flags.toJavaParameter()])
   }
 
-  public func removePackageFromPreferred(packageName: String) {
+  open func clearPackagePreferredActivities(packageName: String) {
     self.javaObject.call(method: PackageManager__method__57, [packageName.toJavaParameter()])
   }
 
-  public func getPreferredPackages<R>(flags: Int32) -> R? where R: List, R.E == PackageInfo {
-    self.javaObject.call(method: PackageManager__method__58, [flags.toJavaParameter()])
+  open func getPreferredActivities<T0, T1>(outFilters: T0?, outActivities: T1?, packageName: String) -> Int32 where T0: List, T1: List, T0.E == IntentFilter, T1.E == ComponentName {
+    self.javaObject.call(method: PackageManager__method__58, [outFilters.toJavaParameter(), outActivities.toJavaParameter(), packageName.toJavaParameter()])
   }
 
-  public func addPreferredActivity(filter: IntentFilter?, match: Int32, set: [ComponentName?], activity: ComponentName?) {
-    self.javaObject.call(method: PackageManager__method__59, [filter.toJavaParameter(), match.toJavaParameter(), set.toJavaParameter(), activity.toJavaParameter()])
+  open func setComponentEnabledSetting(componentName: ComponentName?, newState: Int32, flags: Int32) {
+    self.javaObject.call(method: PackageManager__method__59, [componentName.toJavaParameter(), newState.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func clearPackagePreferredActivities(packageName: String) {
-    self.javaObject.call(method: PackageManager__method__60, [packageName.toJavaParameter()])
+  open func getComponentEnabledSetting(componentName: ComponentName?) -> Int32 {
+    self.javaObject.call(method: PackageManager__method__60, [componentName.toJavaParameter()])
   }
 
-  public func getPreferredActivities<T0, T1>(outFilters: T0?, outActivities: T1?, packageName: String) -> Int32 where T0: List, T1: List, T0.E == IntentFilter, T1.E == ComponentName {
-    self.javaObject.call(method: PackageManager__method__61, [outFilters.toJavaParameter(), outActivities.toJavaParameter(), packageName.toJavaParameter()])
+  open func setApplicationEnabledSetting(packageName: String, newState: Int32, flags: Int32) {
+    self.javaObject.call(method: PackageManager__method__61, [packageName.toJavaParameter(), newState.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func setComponentEnabledSetting(componentName: ComponentName?, newState: Int32, flags: Int32) {
-    self.javaObject.call(method: PackageManager__method__62, [componentName.toJavaParameter(), newState.toJavaParameter(), flags.toJavaParameter()])
+  open func getApplicationEnabledSetting(packageName: String) -> Int32 {
+    self.javaObject.call(method: PackageManager__method__62, [packageName.toJavaParameter()])
   }
 
-  public func getComponentEnabledSetting(componentName: ComponentName?) -> Int32 {
-    self.javaObject.call(method: PackageManager__method__63, [componentName.toJavaParameter()])
+  open func isSafeMode() -> Bool {
+    self.javaObject.call(method: PackageManager__method__63, [])
   }
 
-  public func setApplicationEnabledSetting(packageName: String, newState: Int32, flags: Int32) {
-    self.javaObject.call(method: PackageManager__method__64, [packageName.toJavaParameter(), newState.toJavaParameter(), flags.toJavaParameter()])
-  }
-
-  public func getApplicationEnabledSetting(packageName: String) -> Int32 {
-    self.javaObject.call(method: PackageManager__method__65, [packageName.toJavaParameter()])
-  }
-
-  public func isSafeMode() -> Bool {
-    self.javaObject.call(method: PackageManager__method__66, [])
-  }
-
-  public func getPackageInstaller() -> PackageInstaller? {
-    self.javaObject.call(method: PackageManager__method__67, [])
+  open func getPackageInstaller() -> PackageInstaller? {
+    self.javaObject.call(method: PackageManager__method__64, [])
   }
 }
 
@@ -814,18 +794,15 @@ private let PackageManager__method__52 = PackageManager__class.getMethodID(name:
 private let PackageManager__method__53 = PackageManager__class.getMethodID(name: "extendVerificationTimeout", sig: "(IIJ)V")!
 private let PackageManager__method__54 = PackageManager__class.getMethodID(name: "setInstallerPackageName", sig: "(Ljava/lang/String;Ljava/lang/String;)V")!
 private let PackageManager__method__55 = PackageManager__class.getMethodID(name: "getInstallerPackageName", sig: "(Ljava/lang/String;)Ljava/lang/String;")!
-private let PackageManager__method__56 = PackageManager__class.getMethodID(name: "addPackageToPreferred", sig: "(Ljava/lang/String;)V")!
-private let PackageManager__method__57 = PackageManager__class.getMethodID(name: "removePackageFromPreferred", sig: "(Ljava/lang/String;)V")!
-private let PackageManager__method__58 = PackageManager__class.getMethodID(name: "getPreferredPackages", sig: "(I)Ljava/util/List;")!
-private let PackageManager__method__59 = PackageManager__class.getMethodID(name: "addPreferredActivity", sig: "(Landroid/content/IntentFilter;I[Landroid/content/ComponentName;Landroid/content/ComponentName;)V")!
-private let PackageManager__method__60 = PackageManager__class.getMethodID(name: "clearPackagePreferredActivities", sig: "(Ljava/lang/String;)V")!
-private let PackageManager__method__61 = PackageManager__class.getMethodID(name: "getPreferredActivities", sig: "(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)I")!
-private let PackageManager__method__62 = PackageManager__class.getMethodID(name: "setComponentEnabledSetting", sig: "(Landroid/content/ComponentName;II)V")!
-private let PackageManager__method__63 = PackageManager__class.getMethodID(name: "getComponentEnabledSetting", sig: "(Landroid/content/ComponentName;)I")!
-private let PackageManager__method__64 = PackageManager__class.getMethodID(name: "setApplicationEnabledSetting", sig: "(Ljava/lang/String;II)V")!
-private let PackageManager__method__65 = PackageManager__class.getMethodID(name: "getApplicationEnabledSetting", sig: "(Ljava/lang/String;)I")!
-private let PackageManager__method__66 = PackageManager__class.getMethodID(name: "isSafeMode", sig: "()Z")!
-private let PackageManager__method__67 = PackageManager__class.getMethodID(name: "getPackageInstaller", sig: "()Landroid/content/pm/PackageInstaller;")!
+private let PackageManager__method__56 = PackageManager__class.getMethodID(name: "getPreferredPackages", sig: "(I)Ljava/util/List;")!
+private let PackageManager__method__57 = PackageManager__class.getMethodID(name: "clearPackagePreferredActivities", sig: "(Ljava/lang/String;)V")!
+private let PackageManager__method__58 = PackageManager__class.getMethodID(name: "getPreferredActivities", sig: "(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)I")!
+private let PackageManager__method__59 = PackageManager__class.getMethodID(name: "setComponentEnabledSetting", sig: "(Landroid/content/ComponentName;II)V")!
+private let PackageManager__method__60 = PackageManager__class.getMethodID(name: "getComponentEnabledSetting", sig: "(Landroid/content/ComponentName;)I")!
+private let PackageManager__method__61 = PackageManager__class.getMethodID(name: "setApplicationEnabledSetting", sig: "(Ljava/lang/String;II)V")!
+private let PackageManager__method__62 = PackageManager__class.getMethodID(name: "getApplicationEnabledSetting", sig: "(Ljava/lang/String;)I")!
+private let PackageManager__method__63 = PackageManager__class.getMethodID(name: "isSafeMode", sig: "()Z")!
+private let PackageManager__method__64 = PackageManager__class.getMethodID(name: "getPackageInstaller", sig: "()Landroid/content/pm/PackageInstaller;")!
 
 private let PackageManager__field__0 = PackageManager__class.getStaticFieldID(name: "COMPONENT_ENABLED_STATE_DEFAULT", sig: "I")!
 private let PackageManager__field__1 = PackageManager__class.getStaticFieldID(name: "COMPONENT_ENABLED_STATE_DISABLED", sig: "I")!

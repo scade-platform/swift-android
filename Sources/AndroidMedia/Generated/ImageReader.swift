@@ -1,5 +1,6 @@
 
 
+import AndroidView
 import Java
 
 open class ImageReader: Object {
@@ -10,34 +11,38 @@ open class ImageReader: Object {
     ImageReader__class.callStatic(method: ImageReader__method__0, [width.toJavaParameter(), height.toJavaParameter(), format.toJavaParameter(), maxImages.toJavaParameter()])
   }
 
-  public func getWidth() -> Int32 {
+  open func getWidth() -> Int32 {
     self.javaObject.call(method: ImageReader__method__1, [])
   }
 
-  public func getHeight() -> Int32 {
+  open func getHeight() -> Int32 {
     self.javaObject.call(method: ImageReader__method__2, [])
   }
 
-  public func getImageFormat() -> Int32 {
+  open func getImageFormat() -> Int32 {
     self.javaObject.call(method: ImageReader__method__3, [])
   }
 
-  public func getMaxImages() -> Int32 {
+  open func getMaxImages() -> Int32 {
     self.javaObject.call(method: ImageReader__method__4, [])
   }
 
-  public func acquireLatestImage() -> Image? {
-    let res = self.javaObject.call(method: ImageReader__method__5, []) as Object?
-    return cast(res, to: ImageProxy.self)
+  open func getSurface() -> Surface? {
+    self.javaObject.call(method: ImageReader__method__5, [])
   }
 
-  public func acquireNextImage() -> Image? {
+  open func acquireLatestImage() -> Image? {
     let res = self.javaObject.call(method: ImageReader__method__6, []) as Object?
     return cast(res, to: ImageProxy.self)
   }
 
-  public func close() {
-    self.javaObject.call(method: ImageReader__method__7, [])
+  open func acquireNextImage() -> Image? {
+    let res = self.javaObject.call(method: ImageReader__method__7, []) as Object?
+    return cast(res, to: ImageProxy.self)
+  }
+
+  open func close() {
+    self.javaObject.call(method: ImageReader__method__8, [])
   }
 }
 
@@ -82,9 +87,10 @@ private let ImageReader__method__1 = ImageReader__class.getMethodID(name: "getWi
 private let ImageReader__method__2 = ImageReader__class.getMethodID(name: "getHeight", sig: "()I")!
 private let ImageReader__method__3 = ImageReader__class.getMethodID(name: "getImageFormat", sig: "()I")!
 private let ImageReader__method__4 = ImageReader__class.getMethodID(name: "getMaxImages", sig: "()I")!
-private let ImageReader__method__5 = ImageReader__class.getMethodID(name: "acquireLatestImage", sig: "()Landroid/media/Image;")!
-private let ImageReader__method__6 = ImageReader__class.getMethodID(name: "acquireNextImage", sig: "()Landroid/media/Image;")!
-private let ImageReader__method__7 = ImageReader__class.getMethodID(name: "close", sig: "()V")!
+private let ImageReader__method__5 = ImageReader__class.getMethodID(name: "getSurface", sig: "()Landroid/view/Surface;")!
+private let ImageReader__method__6 = ImageReader__class.getMethodID(name: "acquireLatestImage", sig: "()Landroid/media/Image;")!
+private let ImageReader__method__7 = ImageReader__class.getMethodID(name: "acquireNextImage", sig: "()Landroid/media/Image;")!
+private let ImageReader__method__8 = ImageReader__class.getMethodID(name: "close", sig: "()V")!
 
 // ------------------------------------------------------------------------------------
 

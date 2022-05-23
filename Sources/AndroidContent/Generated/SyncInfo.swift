@@ -8,11 +8,11 @@ open class SyncInfo: Object, Parcelable {
 
   private(set) lazy var startTime: Int64 = javaObject.get(field: SyncInfo__field__1)
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: SyncInfo__method__0, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: SyncInfo__method__1, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }

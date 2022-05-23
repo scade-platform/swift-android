@@ -29,106 +29,102 @@ open class BluetoothGatt: Object, BluetoothProfile {
 
   public static let GATT_WRITE_NOT_PERMITTED: Int32 = BluetoothGatt__class.getStatic(field: BluetoothGatt__field__12)
 
-  public func close() {
+  open func close() {
     self.javaObject.call(method: BluetoothGatt__method__0, [])
   }
 
-  public func disconnect() {
+  open func disconnect() {
     self.javaObject.call(method: BluetoothGatt__method__1, [])
   }
 
-  public func connect() -> Bool {
+  open func connect() -> Bool {
     self.javaObject.call(method: BluetoothGatt__method__2, [])
   }
 
-  public func getDevice() -> BluetoothDevice? {
+  open func getDevice() -> BluetoothDevice? {
     self.javaObject.call(method: BluetoothGatt__method__3, [])
   }
 
-  public func discoverServices() -> Bool {
+  open func discoverServices() -> Bool {
     self.javaObject.call(method: BluetoothGatt__method__4, [])
   }
 
-  public func getServices<R>() -> R? where R: List, R.E == BluetoothGattService {
+  open func getServices<R>() -> R? where R: List, R.E == BluetoothGattService {
     self.javaObject.call(method: BluetoothGatt__method__5, [])
   }
 
-  public func getService(uuid: UUID?) -> BluetoothGattService? {
+  open func getService(uuid: UUID?) -> BluetoothGattService? {
     self.javaObject.call(method: BluetoothGatt__method__6, [uuid.toJavaParameter()])
   }
 
-  public func readCharacteristic(characteristic: BluetoothGattCharacteristic?) -> Bool {
+  open func readCharacteristic(characteristic: BluetoothGattCharacteristic?) -> Bool {
     self.javaObject.call(method: BluetoothGatt__method__7, [characteristic.toJavaParameter()])
   }
 
-  public func writeCharacteristic(characteristic: BluetoothGattCharacteristic?) -> Bool {
+  open func writeCharacteristic(characteristic: BluetoothGattCharacteristic?) -> Bool {
     self.javaObject.call(method: BluetoothGatt__method__8, [characteristic.toJavaParameter()])
   }
 
-  public func readDescriptor(descriptor: BluetoothGattDescriptor?) -> Bool {
+  open func readDescriptor(descriptor: BluetoothGattDescriptor?) -> Bool {
     self.javaObject.call(method: BluetoothGatt__method__9, [descriptor.toJavaParameter()])
   }
 
-  public func writeDescriptor(descriptor: BluetoothGattDescriptor?) -> Bool {
+  open func writeDescriptor(descriptor: BluetoothGattDescriptor?) -> Bool {
     self.javaObject.call(method: BluetoothGatt__method__10, [descriptor.toJavaParameter()])
   }
 
-  public func beginReliableWrite() -> Bool {
+  open func beginReliableWrite() -> Bool {
     self.javaObject.call(method: BluetoothGatt__method__11, [])
   }
 
-  public func executeReliableWrite() -> Bool {
+  open func executeReliableWrite() -> Bool {
     self.javaObject.call(method: BluetoothGatt__method__12, [])
   }
 
-  public func abortReliableWrite() {
+  open func abortReliableWrite() {
     self.javaObject.call(method: BluetoothGatt__method__13, [])
   }
 
-  public func abortReliableWrite(mDevice: BluetoothDevice?) {
-    self.javaObject.call(method: BluetoothGatt__method__14, [mDevice.toJavaParameter()])
+  open func setCharacteristicNotification(characteristic: BluetoothGattCharacteristic?, enable: Bool) -> Bool {
+    self.javaObject.call(method: BluetoothGatt__method__14, [characteristic.toJavaParameter(), enable.toJavaParameter()])
   }
 
-  public func setCharacteristicNotification(characteristic: BluetoothGattCharacteristic?, enable: Bool) -> Bool {
-    self.javaObject.call(method: BluetoothGatt__method__15, [characteristic.toJavaParameter(), enable.toJavaParameter()])
+  open func readRemoteRssi() -> Bool {
+    self.javaObject.call(method: BluetoothGatt__method__15, [])
   }
 
-  public func readRemoteRssi() -> Bool {
-    self.javaObject.call(method: BluetoothGatt__method__16, [])
+  open func requestMtu(mtu: Int32) -> Bool {
+    self.javaObject.call(method: BluetoothGatt__method__16, [mtu.toJavaParameter()])
   }
 
-  public func requestMtu(mtu: Int32) -> Bool {
-    self.javaObject.call(method: BluetoothGatt__method__17, [mtu.toJavaParameter()])
+  open func requestConnectionPriority(connectionPriority: Int32) -> Bool {
+    self.javaObject.call(method: BluetoothGatt__method__17, [connectionPriority.toJavaParameter()])
   }
 
-  public func requestConnectionPriority(connectionPriority: Int32) -> Bool {
-    self.javaObject.call(method: BluetoothGatt__method__18, [connectionPriority.toJavaParameter()])
+  open func getConnectionState(device: BluetoothDevice?) -> Int32 {
+    self.javaObject.call(method: BluetoothGatt__method__18, [device.toJavaParameter()])
   }
 
-  public func getConnectionState(device: BluetoothDevice?) -> Int32 {
-    self.javaObject.call(method: BluetoothGatt__method__19, [device.toJavaParameter()])
+  open func getConnectedDevices<R>() -> R? where R: List, R.E == BluetoothDevice {
+    self.javaObject.call(method: BluetoothGatt__method__19, [])
   }
 
-  public func getConnectedDevices<R>() -> R? where R: List, R.E == BluetoothDevice {
-    self.javaObject.call(method: BluetoothGatt__method__20, [])
-  }
-
-  public func getDevicesMatchingConnectionStates<R>(states: [Int32]) -> R? where R: List, R.E == BluetoothDevice {
-    self.javaObject.call(method: BluetoothGatt__method__21, [states.toJavaParameter()])
+  open func getDevicesMatchingConnectionStates<R>(states: [Int32]) -> R? where R: List, R.E == BluetoothDevice {
+    self.javaObject.call(method: BluetoothGatt__method__20, [states.toJavaParameter()])
   }
 }
 
 extension BluetoothGatt {
-  public func getServices() -> ListProxy<BluetoothGattService>? {
+  open func getServices() -> ListProxy<BluetoothGattService>? {
     self.javaObject.call(method: BluetoothGatt__method__5, [])
   }
 
-  public func getConnectedDevices() -> ListProxy<BluetoothDevice>? {
-    self.javaObject.call(method: BluetoothGatt__method__20, [])
+  open func getConnectedDevices() -> ListProxy<BluetoothDevice>? {
+    self.javaObject.call(method: BluetoothGatt__method__19, [])
   }
 
-  public func getDevicesMatchingConnectionStates(states: [Int32]) -> ListProxy<BluetoothDevice>? {
-    self.javaObject.call(method: BluetoothGatt__method__21, [states.toJavaParameter()])
+  open func getDevicesMatchingConnectionStates(states: [Int32]) -> ListProxy<BluetoothDevice>? {
+    self.javaObject.call(method: BluetoothGatt__method__20, [states.toJavaParameter()])
   }
 }
 
@@ -150,14 +146,13 @@ private let BluetoothGatt__method__10 = BluetoothGatt__class.getMethodID(name: "
 private let BluetoothGatt__method__11 = BluetoothGatt__class.getMethodID(name: "beginReliableWrite", sig: "()Z")!
 private let BluetoothGatt__method__12 = BluetoothGatt__class.getMethodID(name: "executeReliableWrite", sig: "()Z")!
 private let BluetoothGatt__method__13 = BluetoothGatt__class.getMethodID(name: "abortReliableWrite", sig: "()V")!
-private let BluetoothGatt__method__14 = BluetoothGatt__class.getMethodID(name: "abortReliableWrite", sig: "(Landroid/bluetooth/BluetoothDevice;)V")!
-private let BluetoothGatt__method__15 = BluetoothGatt__class.getMethodID(name: "setCharacteristicNotification", sig: "(Landroid/bluetooth/BluetoothGattCharacteristic;Z)Z")!
-private let BluetoothGatt__method__16 = BluetoothGatt__class.getMethodID(name: "readRemoteRssi", sig: "()Z")!
-private let BluetoothGatt__method__17 = BluetoothGatt__class.getMethodID(name: "requestMtu", sig: "(I)Z")!
-private let BluetoothGatt__method__18 = BluetoothGatt__class.getMethodID(name: "requestConnectionPriority", sig: "(I)Z")!
-private let BluetoothGatt__method__19 = BluetoothGatt__class.getMethodID(name: "getConnectionState", sig: "(Landroid/bluetooth/BluetoothDevice;)I")!
-private let BluetoothGatt__method__20 = BluetoothGatt__class.getMethodID(name: "getConnectedDevices", sig: "()Ljava/util/List;")!
-private let BluetoothGatt__method__21 = BluetoothGatt__class.getMethodID(name: "getDevicesMatchingConnectionStates", sig: "([I)Ljava/util/List;")!
+private let BluetoothGatt__method__14 = BluetoothGatt__class.getMethodID(name: "setCharacteristicNotification", sig: "(Landroid/bluetooth/BluetoothGattCharacteristic;Z)Z")!
+private let BluetoothGatt__method__15 = BluetoothGatt__class.getMethodID(name: "readRemoteRssi", sig: "()Z")!
+private let BluetoothGatt__method__16 = BluetoothGatt__class.getMethodID(name: "requestMtu", sig: "(I)Z")!
+private let BluetoothGatt__method__17 = BluetoothGatt__class.getMethodID(name: "requestConnectionPriority", sig: "(I)Z")!
+private let BluetoothGatt__method__18 = BluetoothGatt__class.getMethodID(name: "getConnectionState", sig: "(Landroid/bluetooth/BluetoothDevice;)I")!
+private let BluetoothGatt__method__19 = BluetoothGatt__class.getMethodID(name: "getConnectedDevices", sig: "()Ljava/util/List;")!
+private let BluetoothGatt__method__20 = BluetoothGatt__class.getMethodID(name: "getDevicesMatchingConnectionStates", sig: "([I)Ljava/util/List;")!
 
 private let BluetoothGatt__field__0 = BluetoothGatt__class.getStaticFieldID(name: "CONNECTION_PRIORITY_BALANCED", sig: "I")!
 private let BluetoothGatt__field__1 = BluetoothGatt__class.getStaticFieldID(name: "CONNECTION_PRIORITY_HIGH", sig: "I")!

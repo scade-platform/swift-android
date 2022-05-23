@@ -9,43 +9,43 @@ open class WallpaperInfo: Object, Parcelable {
     super.init(ctor: WallpaperInfo__method__0, [JavaParameter(object: context?.toJavaObject()), service.toJavaParameter()])
   }
 
-  public func getPackageName() -> String {
+  open func getPackageName() -> String {
     self.javaObject.call(method: WallpaperInfo__method__1, [])
   }
 
-  public func getServiceName() -> String {
+  open func getServiceName() -> String {
     self.javaObject.call(method: WallpaperInfo__method__2, [])
   }
 
-  public func getServiceInfo() -> ServiceInfo? {
+  open func getServiceInfo() -> ServiceInfo? {
     self.javaObject.call(method: WallpaperInfo__method__3, [])
   }
 
-  public func getComponent() -> ComponentName? {
+  open func getComponent() -> ComponentName? {
     self.javaObject.call(method: WallpaperInfo__method__4, [])
   }
 
-  public func loadLabel(pm: PackageManager?) -> String? {
+  open func loadLabel(pm: PackageManager?) -> String? {
     self.javaObject.call(method: WallpaperInfo__method__5, [JavaParameter(object: pm?.toJavaObject())])
   }
 
-  public func loadAuthor(pm: PackageManager?) -> String? {
+  open func loadAuthor(pm: PackageManager?) -> String? {
     self.javaObject.call(method: WallpaperInfo__method__6, [JavaParameter(object: pm?.toJavaObject())])
   }
 
-  public func loadDescription(pm: PackageManager?) -> String? {
+  open func loadDescription(pm: PackageManager?) -> String? {
     self.javaObject.call(method: WallpaperInfo__method__7, [JavaParameter(object: pm?.toJavaObject())])
   }
 
-  public func getSettingsActivity() -> String {
+  open func getSettingsActivity() -> String {
     self.javaObject.call(method: WallpaperInfo__method__8, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: WallpaperInfo__method__9, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: WallpaperInfo__method__10, [])
   }
 

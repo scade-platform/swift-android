@@ -92,12 +92,12 @@ open class IntentFilter: Object, Parcelable {
     self.javaObject.call(method: IntentFilter__method__12, [])
   }
 
-  public func addDataType(_type: String) {
-    self.javaObject.call(method: IntentFilter__method__13, [_type.toJavaParameter()])
+  public func addDataType(type: String) {
+    self.javaObject.call(method: IntentFilter__method__13, [type.toJavaParameter()])
   }
 
-  public func hasDataType(_type: String) -> Bool {
-    self.javaObject.call(method: IntentFilter__method__14, [_type.toJavaParameter()])
+  public func hasDataType(type: String) -> Bool {
+    self.javaObject.call(method: IntentFilter__method__14, [type.toJavaParameter()])
   }
 
   public func countDataTypes() -> Int32 {
@@ -132,8 +132,8 @@ open class IntentFilter: Object, Parcelable {
     self.javaObject.call(method: IntentFilter__method__22, [])
   }
 
-  public func addDataSchemeSpecificPart(ssp: String, _type: Int32) {
-    self.javaObject.call(method: IntentFilter__method__23, [ssp.toJavaParameter(), _type.toJavaParameter()])
+  public func addDataSchemeSpecificPart(ssp: String, type: Int32) {
+    self.javaObject.call(method: IntentFilter__method__23, [ssp.toJavaParameter(), type.toJavaParameter()])
   }
 
   public func countDataSchemeSpecificParts() -> Int32 {
@@ -160,8 +160,8 @@ open class IntentFilter: Object, Parcelable {
     self.javaObject.call(method: IntentFilter__method__29, [])
   }
 
-  public func addDataPath(path: String, _type: Int32) {
-    self.javaObject.call(method: IntentFilter__method__30, [path.toJavaParameter(), _type.toJavaParameter()])
+  public func addDataPath(path: String, type: Int32) {
+    self.javaObject.call(method: IntentFilter__method__30, [path.toJavaParameter(), type.toJavaParameter()])
   }
 
   public func countDataPaths() -> Int32 {
@@ -246,11 +246,11 @@ open class IntentFilterAuthorityEntry: Object {
     super.init(ctor: IntentFilterAuthorityEntry__method__0, [host.toJavaParameter(), port.toJavaParameter()])
   }
 
-  public func getHost() -> String {
+  open func getHost() -> String {
     self.javaObject.call(method: IntentFilterAuthorityEntry__method__1, [])
   }
 
-  public func getPort() -> Int32 {
+  open func getPort() -> Int32 {
     self.javaObject.call(method: IntentFilterAuthorityEntry__method__2, [])
   }
 

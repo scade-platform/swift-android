@@ -6,12 +6,6 @@ import AndroidOS
 import Java
 
 public protocol HostApduService: Service {
-  init()
-
-  func sendResponseApdu(responseApdu: [Int8]) -> Void
-
-  func notifyUnhandled() -> Void
-
   func processCommandApdu(commandApdu: [Int8], extras: Bundle?) -> [Int8]
 
   func onDeactivated(reason: Int32) -> Void
@@ -58,11 +52,11 @@ open class HostApduServiceProxy: ServiceProxy, HostApduService {
     self.init(obj.toJavaObject()!)
   }
 
-  public func processCommandApdu(commandApdu: [Int8], extras: Bundle?) -> [Int8] {
+  open func processCommandApdu(commandApdu: [Int8], extras: Bundle?) -> [Int8] {
     self.javaObject.call(method: HostApduService__method__3, [commandApdu.toJavaParameter(), extras.toJavaParameter()])
   }
 
-  public func onDeactivated(reason: Int32) {
+  open func onDeactivated(reason: Int32) {
     self.javaObject.call(method: HostApduService__method__4, [reason.toJavaParameter()])
   }
 }

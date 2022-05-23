@@ -7,11 +7,11 @@ open class TabActivity: ActivityGroup {
     super.init(ctor: TabActivity__method__0, [])
   }
 
-  public func setDefaultTab(tag: String) {
+  open func setDefaultTab(tag: String) {
     self.javaObject.call(method: TabActivity__method__1, [tag.toJavaParameter()])
   }
 
-  public func setDefaultTab(index: Int32) {
+  open func setDefaultTab(index: Int32) {
     self.javaObject.call(method: TabActivity__method__2, [index.toJavaParameter()])
   }
 

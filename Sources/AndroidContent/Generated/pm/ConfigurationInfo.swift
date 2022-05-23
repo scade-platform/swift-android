@@ -63,15 +63,15 @@ open class ConfigurationInfo: Object, Parcelable {
     super.init(ctor: ConfigurationInfo__method__1, [orig.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ConfigurationInfo__method__2, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ConfigurationInfo__method__3, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func getGlEsVersion() -> String {
+  open func getGlEsVersion() -> String {
     self.javaObject.call(method: ConfigurationInfo__method__4, [])
   }
 

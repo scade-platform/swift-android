@@ -42,15 +42,15 @@ open class Visualizer: Object {
     super.init(ctor: Visualizer__method__0, [audioSession.toJavaParameter()])
   }
 
-  public func release() {
+  open func release() {
     self.javaObject.call(method: Visualizer__method__1, [])
   }
 
-  public func setEnabled(enabled: Bool) -> Int32 {
+  open func setEnabled(enabled: Bool) -> Int32 {
     self.javaObject.call(method: Visualizer__method__2, [enabled.toJavaParameter()])
   }
 
-  public func getEnabled() -> Bool {
+  open func getEnabled() -> Bool {
     self.javaObject.call(method: Visualizer__method__3, [])
   }
 
@@ -62,47 +62,47 @@ open class Visualizer: Object {
     Visualizer__class.callStatic(method: Visualizer__method__5, [])
   }
 
-  public func setCaptureSize(size: Int32) -> Int32 {
+  open func setCaptureSize(size: Int32) -> Int32 {
     self.javaObject.call(method: Visualizer__method__6, [size.toJavaParameter()])
   }
 
-  public func getCaptureSize() -> Int32 {
+  open func getCaptureSize() -> Int32 {
     self.javaObject.call(method: Visualizer__method__7, [])
   }
 
-  public func setScalingMode(mode: Int32) -> Int32 {
+  open func setScalingMode(mode: Int32) -> Int32 {
     self.javaObject.call(method: Visualizer__method__8, [mode.toJavaParameter()])
   }
 
-  public func getScalingMode() -> Int32 {
+  open func getScalingMode() -> Int32 {
     self.javaObject.call(method: Visualizer__method__9, [])
   }
 
-  public func setMeasurementMode(mode: Int32) -> Int32 {
+  open func setMeasurementMode(mode: Int32) -> Int32 {
     self.javaObject.call(method: Visualizer__method__10, [mode.toJavaParameter()])
   }
 
-  public func getMeasurementMode() -> Int32 {
+  open func getMeasurementMode() -> Int32 {
     self.javaObject.call(method: Visualizer__method__11, [])
   }
 
-  public func getSamplingRate() -> Int32 {
+  open func getSamplingRate() -> Int32 {
     self.javaObject.call(method: Visualizer__method__12, [])
   }
 
-  public func getWaveForm(waveform: [Int8]) -> Int32 {
+  open func getWaveForm(waveform: [Int8]) -> Int32 {
     self.javaObject.call(method: Visualizer__method__13, [waveform.toJavaParameter()])
   }
 
-  public func getFft(fft: [Int8]) -> Int32 {
+  open func getFft(fft: [Int8]) -> Int32 {
     self.javaObject.call(method: Visualizer__method__14, [fft.toJavaParameter()])
   }
 
-  public func getMeasurementPeakRms(measurement: Visualizer.MeasurementPeakRms?) -> Int32 {
+  open func getMeasurementPeakRms(measurement: Visualizer.MeasurementPeakRms?) -> Int32 {
     self.javaObject.call(method: Visualizer__method__15, [measurement.toJavaParameter()])
   }
 
-  public func setDataCaptureListener(listener: Visualizer.OnDataCaptureListener?, rate: Int32, waveform: Bool, fft: Bool) -> Int32 {
+  open func setDataCaptureListener(listener: Visualizer.OnDataCaptureListener?, rate: Int32, waveform: Bool, fft: Bool) -> Int32 {
     self.javaObject.call(method: Visualizer__method__16, [JavaParameter(object: listener?.toJavaObject()), rate.toJavaParameter(), waveform.toJavaParameter(), fft.toJavaParameter()])
   }
 

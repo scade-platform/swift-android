@@ -12,35 +12,35 @@ open class ColorStateList: Object, Parcelable {
     ColorStateList__class.callStatic(method: ColorStateList__method__1, [color.toJavaParameter()])
   }
 
-  public func withAlpha(alpha: Int32) -> ColorStateList? {
+  open func withAlpha(alpha: Int32) -> ColorStateList? {
     self.javaObject.call(method: ColorStateList__method__2, [alpha.toJavaParameter()])
   }
 
-  public func getChangingConfigurations() -> Int32 {
+  open func getChangingConfigurations() -> Int32 {
     self.javaObject.call(method: ColorStateList__method__3, [])
   }
 
-  public func isStateful() -> Bool {
+  open func isStateful() -> Bool {
     self.javaObject.call(method: ColorStateList__method__4, [])
   }
 
-  public func isOpaque() -> Bool {
+  open func isOpaque() -> Bool {
     self.javaObject.call(method: ColorStateList__method__5, [])
   }
 
-  public func getColorForState(stateSet: [Int32], defaultColor: Int32) -> Int32 {
+  open func getColorForState(stateSet: [Int32], defaultColor: Int32) -> Int32 {
     self.javaObject.call(method: ColorStateList__method__6, [stateSet.toJavaParameter(), defaultColor.toJavaParameter()])
   }
 
-  public func getDefaultColor() -> Int32 {
+  open func getDefaultColor() -> Int32 {
     self.javaObject.call(method: ColorStateList__method__7, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ColorStateList__method__8, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ColorStateList__method__9, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 

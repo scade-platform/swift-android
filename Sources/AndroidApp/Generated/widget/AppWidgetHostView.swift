@@ -13,23 +13,23 @@ open class AppWidgetHostView: Object {
     super.init(ctor: AppWidgetHostView__method__1, [JavaParameter(object: context?.toJavaObject()), animationIn.toJavaParameter(), animationOut.toJavaParameter()])
   }
 
-  public func setAppWidget(appWidgetId: Int32, info: AppWidgetProviderInfo?) {
+  open func setAppWidget(appWidgetId: Int32, info: AppWidgetProviderInfo?) {
     self.javaObject.call(method: AppWidgetHostView__method__2, [appWidgetId.toJavaParameter(), info.toJavaParameter()])
   }
 
-  public func getAppWidgetId() -> Int32 {
+  open func getAppWidgetId() -> Int32 {
     self.javaObject.call(method: AppWidgetHostView__method__3, [])
   }
 
-  public func getAppWidgetInfo() -> AppWidgetProviderInfo? {
+  open func getAppWidgetInfo() -> AppWidgetProviderInfo? {
     self.javaObject.call(method: AppWidgetHostView__method__4, [])
   }
 
-  public func updateAppWidgetSize(newOptions: Bundle?, minWidth: Int32, minHeight: Int32, maxWidth: Int32, maxHeight: Int32) {
+  open func updateAppWidgetSize(newOptions: Bundle?, minWidth: Int32, minHeight: Int32, maxWidth: Int32, maxHeight: Int32) {
     self.javaObject.call(method: AppWidgetHostView__method__5, [newOptions.toJavaParameter(), minWidth.toJavaParameter(), minHeight.toJavaParameter(), maxWidth.toJavaParameter(), maxHeight.toJavaParameter()])
   }
 
-  public func updateAppWidgetOptions(options: Bundle?) {
+  open func updateAppWidgetOptions(options: Bundle?) {
     self.javaObject.call(method: AppWidgetHostView__method__6, [options.toJavaParameter()])
   }
 

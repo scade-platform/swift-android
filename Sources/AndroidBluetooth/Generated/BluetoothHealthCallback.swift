@@ -3,11 +3,7 @@
 import AndroidOS
 import Java
 
-public protocol BluetoothHealthCallback where Self: Object {
-  func onHealthAppConfigurationStatusChange(config: BluetoothHealthAppConfiguration?, status: Int32) -> Void
-
-  func onHealthChannelStateChange(config: BluetoothHealthAppConfiguration?, device: BluetoothDevice?, prevState: Int32, newState: Int32, fd: ParcelFileDescriptor?, channelId: Int32) -> Void
-}
+public protocol BluetoothHealthCallback where Self: Object {}
 
 public extension BluetoothHealthCallback {
   func box() -> BluetoothHealthCallbackProxy {

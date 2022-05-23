@@ -3,15 +3,15 @@
 import Java
 
 open class BluetoothLeAdvertiser: Object {
-  public func startAdvertising(settings: AdvertiseSettings?, advertiseData: AdvertiseData?, callback: AdvertiseCallback?) {
+  open func startAdvertising(settings: AdvertiseSettings?, advertiseData: AdvertiseData?, callback: AdvertiseCallback?) {
     self.javaObject.call(method: BluetoothLeAdvertiser__method__0, [settings.toJavaParameter(), advertiseData.toJavaParameter(), JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func startAdvertising(settings: AdvertiseSettings?, advertiseData: AdvertiseData?, scanResponse: AdvertiseData?, callback: AdvertiseCallback?) {
+  open func startAdvertising(settings: AdvertiseSettings?, advertiseData: AdvertiseData?, scanResponse: AdvertiseData?, callback: AdvertiseCallback?) {
     self.javaObject.call(method: BluetoothLeAdvertiser__method__1, [settings.toJavaParameter(), advertiseData.toJavaParameter(), scanResponse.toJavaParameter(), JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func stopAdvertising(callback: AdvertiseCallback?) {
+  open func stopAdvertising(callback: AdvertiseCallback?) {
     self.javaObject.call(method: BluetoothLeAdvertiser__method__2, [JavaParameter(object: callback?.toJavaObject())])
   }
 }

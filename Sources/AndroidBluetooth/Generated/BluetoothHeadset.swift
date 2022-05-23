@@ -35,41 +35,41 @@ open class BluetoothHeadset: Object, BluetoothProfile {
 
   public static let VENDOR_SPECIFIC_HEADSET_EVENT_COMPANY_ID_CATEGORY: String = BluetoothHeadset__class.getStatic(field: BluetoothHeadset__field__15)
 
-  public func getConnectedDevices<R>() -> R? where R: List, R.E == BluetoothDevice {
+  open func getConnectedDevices<R>() -> R? where R: List, R.E == BluetoothDevice {
     self.javaObject.call(method: BluetoothHeadset__method__0, [])
   }
 
-  public func getDevicesMatchingConnectionStates<R>(states: [Int32]) -> R? where R: List, R.E == BluetoothDevice {
+  open func getDevicesMatchingConnectionStates<R>(states: [Int32]) -> R? where R: List, R.E == BluetoothDevice {
     self.javaObject.call(method: BluetoothHeadset__method__1, [states.toJavaParameter()])
   }
 
-  public func getConnectionState(device: BluetoothDevice?) -> Int32 {
+  open func getConnectionState(device: BluetoothDevice?) -> Int32 {
     self.javaObject.call(method: BluetoothHeadset__method__2, [device.toJavaParameter()])
   }
 
-  public func startVoiceRecognition(device: BluetoothDevice?) -> Bool {
+  open func startVoiceRecognition(device: BluetoothDevice?) -> Bool {
     self.javaObject.call(method: BluetoothHeadset__method__3, [device.toJavaParameter()])
   }
 
-  public func stopVoiceRecognition(device: BluetoothDevice?) -> Bool {
+  open func stopVoiceRecognition(device: BluetoothDevice?) -> Bool {
     self.javaObject.call(method: BluetoothHeadset__method__4, [device.toJavaParameter()])
   }
 
-  public func isAudioConnected(device: BluetoothDevice?) -> Bool {
+  open func isAudioConnected(device: BluetoothDevice?) -> Bool {
     self.javaObject.call(method: BluetoothHeadset__method__5, [device.toJavaParameter()])
   }
 
-  public func sendVendorSpecificResultCode(device: BluetoothDevice?, command: String, arg: String) -> Bool {
+  open func sendVendorSpecificResultCode(device: BluetoothDevice?, command: String, arg: String) -> Bool {
     self.javaObject.call(method: BluetoothHeadset__method__6, [device.toJavaParameter(), command.toJavaParameter(), arg.toJavaParameter()])
   }
 }
 
 extension BluetoothHeadset {
-  public func getConnectedDevices() -> ListProxy<BluetoothDevice>? {
+  open func getConnectedDevices() -> ListProxy<BluetoothDevice>? {
     self.javaObject.call(method: BluetoothHeadset__method__0, [])
   }
 
-  public func getDevicesMatchingConnectionStates(states: [Int32]) -> ListProxy<BluetoothDevice>? {
+  open func getDevicesMatchingConnectionStates(states: [Int32]) -> ListProxy<BluetoothDevice>? {
     self.javaObject.call(method: BluetoothHeadset__method__1, [states.toJavaParameter()])
   }
 }

@@ -6,37 +6,37 @@ import Java
 open class AdvertiseData: Object, Parcelable {
   public typealias Builder = AndroidBluetooth.AdvertiseDataBuilder
 
-  public func getServiceUuids<R>() -> R? where R: List, R.E == ParcelUuid {
+  open func getServiceUuids<R>() -> R? where R: List, R.E == ParcelUuid {
     self.javaObject.call(method: AdvertiseData__method__0, [])
   }
 
-  public func getServiceData<R>() -> R? where R: Map, R.K == ParcelUuid, R.V == [Int8] {
+  open func getServiceData<R>() -> R? where R: Map, R.K == ParcelUuid, R.V == [Int8] {
     self.javaObject.call(method: AdvertiseData__method__1, [])
   }
 
-  public func getIncludeTxPowerLevel() -> Bool {
+  open func getIncludeTxPowerLevel() -> Bool {
     self.javaObject.call(method: AdvertiseData__method__2, [])
   }
 
-  public func getIncludeDeviceName() -> Bool {
+  open func getIncludeDeviceName() -> Bool {
     self.javaObject.call(method: AdvertiseData__method__3, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: AdvertiseData__method__4, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: AdvertiseData__method__5, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }
 
 extension AdvertiseData {
-  public func getServiceUuids() -> ListProxy<ParcelUuid>? {
+  open func getServiceUuids() -> ListProxy<ParcelUuid>? {
     self.javaObject.call(method: AdvertiseData__method__0, [])
   }
 
-  public func getServiceData() -> MapProxy<ParcelUuid, [Int8]>? {
+  open func getServiceData() -> MapProxy<ParcelUuid, [Int8]>? {
     self.javaObject.call(method: AdvertiseData__method__1, [])
   }
 }
@@ -48,27 +48,27 @@ open class AdvertiseDataBuilder: Object {
     super.init(ctor: AdvertiseDataBuilder__method__0, [])
   }
 
-  public func addServiceUuid(serviceUuid: ParcelUuid?) -> AdvertiseData.Builder? {
+  open func addServiceUuid(serviceUuid: ParcelUuid?) -> AdvertiseData.Builder? {
     self.javaObject.call(method: AdvertiseDataBuilder__method__1, [serviceUuid.toJavaParameter()])
   }
 
-  public func addServiceData(serviceDataUuid: ParcelUuid?, serviceData: [Int8]) -> AdvertiseData.Builder? {
+  open func addServiceData(serviceDataUuid: ParcelUuid?, serviceData: [Int8]) -> AdvertiseData.Builder? {
     self.javaObject.call(method: AdvertiseDataBuilder__method__2, [serviceDataUuid.toJavaParameter(), serviceData.toJavaParameter()])
   }
 
-  public func addManufacturerData(manufacturerId: Int32, manufacturerSpecificData: [Int8]) -> AdvertiseData.Builder? {
+  open func addManufacturerData(manufacturerId: Int32, manufacturerSpecificData: [Int8]) -> AdvertiseData.Builder? {
     self.javaObject.call(method: AdvertiseDataBuilder__method__3, [manufacturerId.toJavaParameter(), manufacturerSpecificData.toJavaParameter()])
   }
 
-  public func setIncludeTxPowerLevel(includeTxPowerLevel: Bool) -> AdvertiseData.Builder? {
+  open func setIncludeTxPowerLevel(includeTxPowerLevel: Bool) -> AdvertiseData.Builder? {
     self.javaObject.call(method: AdvertiseDataBuilder__method__4, [includeTxPowerLevel.toJavaParameter()])
   }
 
-  public func setIncludeDeviceName(includeDeviceName: Bool) -> AdvertiseData.Builder? {
+  open func setIncludeDeviceName(includeDeviceName: Bool) -> AdvertiseData.Builder? {
     self.javaObject.call(method: AdvertiseDataBuilder__method__5, [includeDeviceName.toJavaParameter()])
   }
 
-  public func build() -> AdvertiseData? {
+  open func build() -> AdvertiseData? {
     self.javaObject.call(method: AdvertiseDataBuilder__method__6, [])
   }
 

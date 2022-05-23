@@ -9,43 +9,43 @@ open class AutomaticZenRule: Object, Parcelable {
     super.init(ctor: AutomaticZenRule__method__0, [source.toJavaParameter()])
   }
 
-  public func getOwner() -> ComponentName? {
+  open func getOwner() -> ComponentName? {
     self.javaObject.call(method: AutomaticZenRule__method__1, [])
   }
 
-  public func getInterruptionFilter() -> Int32 {
+  open func getInterruptionFilter() -> Int32 {
     self.javaObject.call(method: AutomaticZenRule__method__2, [])
   }
 
-  public func getName() -> String {
+  open func getName() -> String {
     self.javaObject.call(method: AutomaticZenRule__method__3, [])
   }
 
-  public func isEnabled() -> Bool {
+  open func isEnabled() -> Bool {
     self.javaObject.call(method: AutomaticZenRule__method__4, [])
   }
 
-  public func getCreationTime() -> Int64 {
+  open func getCreationTime() -> Int64 {
     self.javaObject.call(method: AutomaticZenRule__method__5, [])
   }
 
-  public func setInterruptionFilter(interruptionFilter: Int32) {
+  open func setInterruptionFilter(interruptionFilter: Int32) {
     self.javaObject.call(method: AutomaticZenRule__method__6, [interruptionFilter.toJavaParameter()])
   }
 
-  public func setName(name: String) {
+  open func setName(name: String) {
     self.javaObject.call(method: AutomaticZenRule__method__7, [name.toJavaParameter()])
   }
 
-  public func setEnabled(enabled: Bool) {
+  open func setEnabled(enabled: Bool) {
     self.javaObject.call(method: AutomaticZenRule__method__8, [enabled.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: AutomaticZenRule__method__9, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: AutomaticZenRule__method__10, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 

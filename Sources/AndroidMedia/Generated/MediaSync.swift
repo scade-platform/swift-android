@@ -1,5 +1,6 @@
 
 
+import AndroidView
 import Java
 
 open class MediaSync: Object {
@@ -21,32 +22,44 @@ open class MediaSync: Object {
     self.javaObject.call(method: MediaSync__method__1, [])
   }
 
-  public func setAudioTrack(audioTrack: AudioTrack?) {
-    self.javaObject.call(method: MediaSync__method__2, [audioTrack.toJavaParameter()])
+  open func setSurface(surface: Surface?) {
+    self.javaObject.call(method: MediaSync__method__2, [surface.toJavaParameter()])
   }
 
-  public func setPlaybackParams(params: PlaybackParams?) {
-    self.javaObject.call(method: MediaSync__method__3, [params.toJavaParameter()])
+  open func setAudioTrack(audioTrack: AudioTrack?) {
+    self.javaObject.call(method: MediaSync__method__3, [audioTrack.toJavaParameter()])
   }
 
-  public func getPlaybackParams() -> PlaybackParams? {
+  public func createInputSurface() -> Surface? {
     self.javaObject.call(method: MediaSync__method__4, [])
   }
 
-  public func setSyncParams(params: SyncParams?) {
+  open func setPlaybackParams(params: PlaybackParams?) {
     self.javaObject.call(method: MediaSync__method__5, [params.toJavaParameter()])
   }
 
-  public func getSyncParams() -> SyncParams? {
+  open func getPlaybackParams() -> PlaybackParams? {
     self.javaObject.call(method: MediaSync__method__6, [])
   }
 
-  public func flush() {
-    self.javaObject.call(method: MediaSync__method__7, [])
+  open func setSyncParams(params: SyncParams?) {
+    self.javaObject.call(method: MediaSync__method__7, [params.toJavaParameter()])
   }
 
-  public func getTimestamp() -> MediaTimestamp? {
+  open func getSyncParams() -> SyncParams? {
     self.javaObject.call(method: MediaSync__method__8, [])
+  }
+
+  open func flush() {
+    self.javaObject.call(method: MediaSync__method__9, [])
+  }
+
+  open func getTimestamp() -> MediaTimestamp? {
+    self.javaObject.call(method: MediaSync__method__10, [])
+  }
+
+  open func queueAudio(audioData: ByteBuffer?, bufferId: Int32, presentationTimeUs: Int64) {
+    self.javaObject.call(method: MediaSync__method__11, [JavaParameter(object: audioData?.toJavaObject()), bufferId.toJavaParameter(), presentationTimeUs.toJavaParameter()])
   }
 
   public required init(_ obj: JavaObject) {
@@ -92,7 +105,9 @@ public final class MediaSyncOnErrorListenerProxy: Object, JInterfaceProxy, Media
 
 // ------------------------------------------------------------------------------------
 
-public protocol MediaSyncCallback where Self: Object {}
+public protocol MediaSyncCallback where Self: Object {
+  func onAudioBufferConsumed(sync: MediaSync?, audioBuffer: ByteBuffer?, bufferId: Int32) -> Void
+}
 
 public extension MediaSyncCallback {
   func box() -> MediaSyncCallbackProxy {
@@ -110,6 +125,10 @@ open class MediaSyncCallbackProxy: Object, JInterfaceProxy, MediaSyncCallback {
   fileprivate convenience init<P: MediaSyncCallback>(_ obj: P) {
     self.init(obj.toJavaObject()!)
   }
+
+  open func onAudioBufferConsumed(sync: MediaSync?, audioBuffer: ByteBuffer?, bufferId: Int32) {
+    self.javaObject.call(method: MediaSyncCallback__method__1, [sync.toJavaParameter(), JavaParameter(object: audioBuffer?.toJavaObject()), bufferId.toJavaParameter()])
+  }
 }
 
 // ------------------------------------------------------------------------------------
@@ -118,13 +137,16 @@ private let MediaSync__class = findJavaClass(fqn: "android/media/MediaSync")!
 
 private let MediaSync__method__0 = MediaSync__class.getMethodID(name: "<init>", sig: "()V")!
 private let MediaSync__method__1 = MediaSync__class.getMethodID(name: "release", sig: "()V")!
-private let MediaSync__method__2 = MediaSync__class.getMethodID(name: "setAudioTrack", sig: "(Landroid/media/AudioTrack;)V")!
-private let MediaSync__method__3 = MediaSync__class.getMethodID(name: "setPlaybackParams", sig: "(Landroid/media/PlaybackParams;)V")!
-private let MediaSync__method__4 = MediaSync__class.getMethodID(name: "getPlaybackParams", sig: "()Landroid/media/PlaybackParams;")!
-private let MediaSync__method__5 = MediaSync__class.getMethodID(name: "setSyncParams", sig: "(Landroid/media/SyncParams;)V")!
-private let MediaSync__method__6 = MediaSync__class.getMethodID(name: "getSyncParams", sig: "()Landroid/media/SyncParams;")!
-private let MediaSync__method__7 = MediaSync__class.getMethodID(name: "flush", sig: "()V")!
-private let MediaSync__method__8 = MediaSync__class.getMethodID(name: "getTimestamp", sig: "()Landroid/media/MediaTimestamp;")!
+private let MediaSync__method__2 = MediaSync__class.getMethodID(name: "setSurface", sig: "(Landroid/view/Surface;)V")!
+private let MediaSync__method__3 = MediaSync__class.getMethodID(name: "setAudioTrack", sig: "(Landroid/media/AudioTrack;)V")!
+private let MediaSync__method__4 = MediaSync__class.getMethodID(name: "createInputSurface", sig: "()Landroid/view/Surface;")!
+private let MediaSync__method__5 = MediaSync__class.getMethodID(name: "setPlaybackParams", sig: "(Landroid/media/PlaybackParams;)V")!
+private let MediaSync__method__6 = MediaSync__class.getMethodID(name: "getPlaybackParams", sig: "()Landroid/media/PlaybackParams;")!
+private let MediaSync__method__7 = MediaSync__class.getMethodID(name: "setSyncParams", sig: "(Landroid/media/SyncParams;)V")!
+private let MediaSync__method__8 = MediaSync__class.getMethodID(name: "getSyncParams", sig: "()Landroid/media/SyncParams;")!
+private let MediaSync__method__9 = MediaSync__class.getMethodID(name: "flush", sig: "()V")!
+private let MediaSync__method__10 = MediaSync__class.getMethodID(name: "getTimestamp", sig: "()Landroid/media/MediaTimestamp;")!
+private let MediaSync__method__11 = MediaSync__class.getMethodID(name: "queueAudio", sig: "(Ljava/nio/ByteBuffer;IJ)V")!
 
 private let MediaSync__field__0 = MediaSync__class.getStaticFieldID(name: "MEDIASYNC_ERROR_AUDIOTRACK_FAIL", sig: "I")!
 private let MediaSync__field__1 = MediaSync__class.getStaticFieldID(name: "MEDIASYNC_ERROR_SURFACE_FAIL", sig: "I")!
@@ -138,3 +160,5 @@ private let MediaSyncOnErrorListener__method__0 = MediaSyncOnErrorListener__clas
 // ------------------------------------------------------------------------------------
 
 private let MediaSyncCallback__class = findJavaClass(fqn: "android/media/MediaSync$Callback")!
+
+private let MediaSyncCallback__method__1 = MediaSyncCallback__class.getMethodID(name: "onAudioBufferConsumed", sig: "(Landroid/media/MediaSync;Ljava/nio/ByteBuffer;I)V")!

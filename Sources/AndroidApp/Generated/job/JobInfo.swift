@@ -33,75 +33,75 @@ open class JobInfo: Object, Parcelable {
     JobInfo__class.callStatic(method: JobInfo__method__1, [])
   }
 
-  public func getId() -> Int32 {
+  open func getId() -> Int32 {
     self.javaObject.call(method: JobInfo__method__2, [])
   }
 
-  public func getService() -> ComponentName? {
+  open func getService() -> ComponentName? {
     self.javaObject.call(method: JobInfo__method__3, [])
   }
 
-  public func isRequireCharging() -> Bool {
+  open func isRequireCharging() -> Bool {
     self.javaObject.call(method: JobInfo__method__4, [])
   }
 
-  public func isRequireDeviceIdle() -> Bool {
+  open func isRequireDeviceIdle() -> Bool {
     self.javaObject.call(method: JobInfo__method__5, [])
   }
 
-  public func getTriggerContentUris() -> [JobInfo.TriggerContentUri?] {
+  open func getTriggerContentUris() -> [JobInfo.TriggerContentUri?] {
     self.javaObject.call(method: JobInfo__method__6, [])
   }
 
-  public func getTriggerContentUpdateDelay() -> Int64 {
+  open func getTriggerContentUpdateDelay() -> Int64 {
     self.javaObject.call(method: JobInfo__method__7, [])
   }
 
-  public func getTriggerContentMaxDelay() -> Int64 {
+  open func getTriggerContentMaxDelay() -> Int64 {
     self.javaObject.call(method: JobInfo__method__8, [])
   }
 
-  public func getNetworkType() -> Int32 {
+  open func getNetworkType() -> Int32 {
     self.javaObject.call(method: JobInfo__method__9, [])
   }
 
-  public func getMinLatencyMillis() -> Int64 {
+  open func getMinLatencyMillis() -> Int64 {
     self.javaObject.call(method: JobInfo__method__10, [])
   }
 
-  public func getMaxExecutionDelayMillis() -> Int64 {
+  open func getMaxExecutionDelayMillis() -> Int64 {
     self.javaObject.call(method: JobInfo__method__11, [])
   }
 
-  public func isPeriodic() -> Bool {
+  open func isPeriodic() -> Bool {
     self.javaObject.call(method: JobInfo__method__12, [])
   }
 
-  public func isPersisted() -> Bool {
+  open func isPersisted() -> Bool {
     self.javaObject.call(method: JobInfo__method__13, [])
   }
 
-  public func getIntervalMillis() -> Int64 {
+  open func getIntervalMillis() -> Int64 {
     self.javaObject.call(method: JobInfo__method__14, [])
   }
 
-  public func getFlexMillis() -> Int64 {
+  open func getFlexMillis() -> Int64 {
     self.javaObject.call(method: JobInfo__method__15, [])
   }
 
-  public func getInitialBackoffMillis() -> Int64 {
+  open func getInitialBackoffMillis() -> Int64 {
     self.javaObject.call(method: JobInfo__method__16, [])
   }
 
-  public func getBackoffPolicy() -> Int32 {
+  open func getBackoffPolicy() -> Int32 {
     self.javaObject.call(method: JobInfo__method__17, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: JobInfo__method__18, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: JobInfo__method__19, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }
@@ -113,55 +113,55 @@ open class JobInfoBuilder: Object {
     super.init(ctor: JobInfoBuilder__method__0, [jobId.toJavaParameter(), jobService.toJavaParameter()])
   }
 
-  public func setRequiredNetworkType(networkType: Int32) -> JobInfo.Builder? {
+  open func setRequiredNetworkType(networkType: Int32) -> JobInfo.Builder? {
     self.javaObject.call(method: JobInfoBuilder__method__1, [networkType.toJavaParameter()])
   }
 
-  public func setRequiresCharging(requiresCharging: Bool) -> JobInfo.Builder? {
+  open func setRequiresCharging(requiresCharging: Bool) -> JobInfo.Builder? {
     self.javaObject.call(method: JobInfoBuilder__method__2, [requiresCharging.toJavaParameter()])
   }
 
-  public func setRequiresDeviceIdle(requiresDeviceIdle: Bool) -> JobInfo.Builder? {
+  open func setRequiresDeviceIdle(requiresDeviceIdle: Bool) -> JobInfo.Builder? {
     self.javaObject.call(method: JobInfoBuilder__method__3, [requiresDeviceIdle.toJavaParameter()])
   }
 
-  public func addTriggerContentUri(uri: JobInfo.TriggerContentUri?) -> JobInfo.Builder? {
+  open func addTriggerContentUri(uri: JobInfo.TriggerContentUri?) -> JobInfo.Builder? {
     self.javaObject.call(method: JobInfoBuilder__method__4, [uri.toJavaParameter()])
   }
 
-  public func setTriggerContentUpdateDelay(durationMs: Int64) -> JobInfo.Builder? {
+  open func setTriggerContentUpdateDelay(durationMs: Int64) -> JobInfo.Builder? {
     self.javaObject.call(method: JobInfoBuilder__method__5, [durationMs.toJavaParameter()])
   }
 
-  public func setTriggerContentMaxDelay(durationMs: Int64) -> JobInfo.Builder? {
+  open func setTriggerContentMaxDelay(durationMs: Int64) -> JobInfo.Builder? {
     self.javaObject.call(method: JobInfoBuilder__method__6, [durationMs.toJavaParameter()])
   }
 
-  public func setPeriodic(intervalMillis: Int64) -> JobInfo.Builder? {
+  open func setPeriodic(intervalMillis: Int64) -> JobInfo.Builder? {
     self.javaObject.call(method: JobInfoBuilder__method__7, [intervalMillis.toJavaParameter()])
   }
 
-  public func setPeriodic(intervalMillis: Int64, flexMillis: Int64) -> JobInfo.Builder? {
+  open func setPeriodic(intervalMillis: Int64, flexMillis: Int64) -> JobInfo.Builder? {
     self.javaObject.call(method: JobInfoBuilder__method__8, [intervalMillis.toJavaParameter(), flexMillis.toJavaParameter()])
   }
 
-  public func setMinimumLatency(minLatencyMillis: Int64) -> JobInfo.Builder? {
+  open func setMinimumLatency(minLatencyMillis: Int64) -> JobInfo.Builder? {
     self.javaObject.call(method: JobInfoBuilder__method__9, [minLatencyMillis.toJavaParameter()])
   }
 
-  public func setOverrideDeadline(maxExecutionDelayMillis: Int64) -> JobInfo.Builder? {
+  open func setOverrideDeadline(maxExecutionDelayMillis: Int64) -> JobInfo.Builder? {
     self.javaObject.call(method: JobInfoBuilder__method__10, [maxExecutionDelayMillis.toJavaParameter()])
   }
 
-  public func setBackoffCriteria(initialBackoffMillis: Int64, backoffPolicy: Int32) -> JobInfo.Builder? {
+  open func setBackoffCriteria(initialBackoffMillis: Int64, backoffPolicy: Int32) -> JobInfo.Builder? {
     self.javaObject.call(method: JobInfoBuilder__method__11, [initialBackoffMillis.toJavaParameter(), backoffPolicy.toJavaParameter()])
   }
 
-  public func setPersisted(isPersisted: Bool) -> JobInfo.Builder? {
+  open func setPersisted(isPersisted: Bool) -> JobInfo.Builder? {
     self.javaObject.call(method: JobInfoBuilder__method__12, [isPersisted.toJavaParameter()])
   }
 
-  public func build() -> JobInfo? {
+  open func build() -> JobInfo? {
     self.javaObject.call(method: JobInfoBuilder__method__13, [])
   }
 
@@ -179,15 +179,15 @@ open class JobInfoBuilder: Object {
 open class JobInfoTriggerContentUri: Object, Parcelable {
   public static let FLAG_NOTIFY_FOR_DESCENDANTS: Int32 = JobInfoTriggerContentUri__class.getStatic(field: JobInfoTriggerContentUri__field__0)
 
-  public func getFlags() -> Int32 {
+  open func getFlags() -> Int32 {
     self.javaObject.call(method: JobInfoTriggerContentUri__method__0, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: JobInfoTriggerContentUri__method__1, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: JobInfoTriggerContentUri__method__2, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }

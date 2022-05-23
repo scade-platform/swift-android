@@ -4,9 +4,7 @@ import AndroidApp
 import AndroidContent
 import Java
 
-public protocol OffHostApduService: Service {
-  init()
-}
+public protocol OffHostApduService: Service {}
 
 public extension OffHostApduService {
   func box() -> OffHostApduServiceProxy {

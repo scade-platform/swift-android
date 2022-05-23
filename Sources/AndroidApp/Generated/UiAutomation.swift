@@ -24,7 +24,7 @@ open class UiAutomation: Object {
 
   public static let ROTATION_UNFREEZE: Int32 = UiAutomation__class.getStatic(field: UiAutomation__field__6)
 
-  public func setOnAccessibilityEventListener(listener: UiAutomation.OnAccessibilityEventListener?) {
+  open func setOnAccessibilityEventListener(listener: UiAutomation.OnAccessibilityEventListener?) {
     self.javaObject.call(method: UiAutomation__method__0, [JavaParameter(object: listener?.toJavaObject())])
   }
 
@@ -32,27 +32,27 @@ open class UiAutomation: Object {
     self.javaObject.call(method: UiAutomation__method__1, [action.toJavaParameter()])
   }
 
-  public func setRotation(rotation: Int32) -> Bool {
+  open func setRotation(rotation: Int32) -> Bool {
     self.javaObject.call(method: UiAutomation__method__2, [rotation.toJavaParameter()])
   }
 
-  public func waitForIdle(idleTimeoutMillis: Int64, globalTimeoutMillis: Int64) {
+  open func waitForIdle(idleTimeoutMillis: Int64, globalTimeoutMillis: Int64) {
     self.javaObject.call(method: UiAutomation__method__3, [idleTimeoutMillis.toJavaParameter(), globalTimeoutMillis.toJavaParameter()])
   }
 
-  public func setRunAsMonkey(enable: Bool) {
+  open func setRunAsMonkey(enable: Bool) {
     self.javaObject.call(method: UiAutomation__method__4, [enable.toJavaParameter()])
   }
 
-  public func clearWindowContentFrameStats(windowId: Int32) -> Bool {
+  open func clearWindowContentFrameStats(windowId: Int32) -> Bool {
     self.javaObject.call(method: UiAutomation__method__5, [windowId.toJavaParameter()])
   }
 
-  public func clearWindowAnimationFrameStats() {
+  open func clearWindowAnimationFrameStats() {
     self.javaObject.call(method: UiAutomation__method__6, [])
   }
 
-  public func executeShellCommand(command: String) -> ParcelFileDescriptor? {
+  open func executeShellCommand(command: String) -> ParcelFileDescriptor? {
     self.javaObject.call(method: UiAutomation__method__7, [command.toJavaParameter()])
   }
 }

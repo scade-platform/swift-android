@@ -57,7 +57,7 @@ open class EffectFactory: Object {
 
   public static let EFFECT_VIGNETTE: String = EffectFactory__class.getStatic(field: EffectFactory__field__26)
 
-  public func createEffect(effectName: String) -> Effect? {
+  open func createEffect(effectName: String) -> Effect? {
     let res = self.javaObject.call(method: EffectFactory__method__0, [effectName.toJavaParameter()]) as Object?
     return cast(res, to: EffectProxy.self)
   }

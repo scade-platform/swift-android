@@ -7,19 +7,19 @@ open class NfcV: Object, BasicTagTechnology {
     NfcV__class.callStatic(method: NfcV__method__0, [tag.toJavaParameter()])
   }
 
-  public func getResponseFlags() -> Int8 {
+  open func getResponseFlags() -> Int8 {
     self.javaObject.call(method: NfcV__method__1, [])
   }
 
-  public func getDsfId() -> Int8 {
+  open func getDsfId() -> Int8 {
     self.javaObject.call(method: NfcV__method__2, [])
   }
 
-  public func transceive(data: [Int8]) -> [Int8] {
+  open func transceive(data: [Int8]) -> [Int8] {
     self.javaObject.call(method: NfcV__method__3, [data.toJavaParameter()])
   }
 
-  public func getMaxTransceiveLength() -> Int32 {
+  open func getMaxTransceiveLength() -> Int32 {
     self.javaObject.call(method: NfcV__method__4, [])
   }
 }

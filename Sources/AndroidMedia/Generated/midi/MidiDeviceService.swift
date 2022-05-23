@@ -5,17 +5,7 @@ import AndroidContent
 import Java
 
 public protocol MidiDeviceService: Service {
-  init()
-
   func onGetInputPortReceivers() -> [MidiReceiver?]
-
-  func getOutputPortReceivers() -> [MidiReceiver?]
-
-  func getDeviceInfo() -> MidiDeviceInfo?
-
-  func onDeviceStatusChanged(status: MidiDeviceStatus?) -> Void
-
-  func onClose() -> Void
 }
 
 public extension MidiDeviceService {
@@ -62,7 +52,7 @@ open class MidiDeviceServiceProxy: ServiceProxy, MidiDeviceService {
     self.init(obj.toJavaObject()!)
   }
 
-  public func onGetInputPortReceivers() -> [MidiReceiver?] {
+  open func onGetInputPortReceivers() -> [MidiReceiver?] {
     let res = self.javaObject.call(method: MidiDeviceService__method__1, []) as [Object?]
     return cast(res, to: MidiReceiverProxy.self)
   }

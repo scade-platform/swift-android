@@ -18,117 +18,117 @@ open class ContentValues: Object, Parcelable {
     super.init(ctor: ContentValues__method__2, [from.toJavaParameter()])
   }
 
-  public func put(key: String, value: String) {
+  open func put(key: String, value: String) {
     self.javaObject.call(method: ContentValues__method__3, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putAll(other: ContentValues?) {
+  open func putAll(other: ContentValues?) {
     self.javaObject.call(method: ContentValues__method__4, [other.toJavaParameter()])
   }
 
-  public func put(key: String, value: Int8) {
+  open func put(key: String, value: Int8) {
     self.javaObject.call(method: ContentValues__method__5, [key.toJavaParameter(), JavaParameter(object: value.toJavaObject())])
   }
 
-  public func put(key: String, value: Int16) {
+  open func put(key: String, value: Int16) {
     self.javaObject.call(method: ContentValues__method__6, [key.toJavaParameter(), JavaParameter(object: value.toJavaObject())])
   }
 
-  public func put(key: String, value: Int32) {
+  open func put(key: String, value: Int32) {
     self.javaObject.call(method: ContentValues__method__7, [key.toJavaParameter(), JavaParameter(object: value.toJavaObject())])
   }
 
-  public func put(key: String, value: Int64) {
+  open func put(key: String, value: Int64) {
     self.javaObject.call(method: ContentValues__method__8, [key.toJavaParameter(), JavaParameter(object: value.toJavaObject())])
   }
 
-  public func put(key: String, value: Float) {
+  open func put(key: String, value: Float) {
     self.javaObject.call(method: ContentValues__method__9, [key.toJavaParameter(), JavaParameter(object: value.toJavaObject())])
   }
 
-  public func put(key: String, value: Double) {
+  open func put(key: String, value: Double) {
     self.javaObject.call(method: ContentValues__method__10, [key.toJavaParameter(), JavaParameter(object: value.toJavaObject())])
   }
 
-  public func put(key: String, value: [Int8]) {
+  open func put(key: String, value: [Int8]) {
     self.javaObject.call(method: ContentValues__method__11, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putNull(key: String) {
+  open func putNull(key: String) {
     self.javaObject.call(method: ContentValues__method__12, [key.toJavaParameter()])
   }
 
-  public func size() -> Int32 {
+  open func size() -> Int32 {
     self.javaObject.call(method: ContentValues__method__13, [])
   }
 
-  public func remove(key: String) {
+  open func remove(key: String) {
     self.javaObject.call(method: ContentValues__method__14, [key.toJavaParameter()])
   }
 
-  public func clear() {
+  open func clear() {
     self.javaObject.call(method: ContentValues__method__15, [])
   }
 
-  public func containsKey(key: String) -> Bool {
+  open func containsKey(key: String) -> Bool {
     self.javaObject.call(method: ContentValues__method__16, [key.toJavaParameter()])
   }
 
-  public func get(key: String) -> Object? {
+  open func get(key: String) -> Object? {
     self.javaObject.call(method: ContentValues__method__17, [key.toJavaParameter()])
   }
 
-  public func getAsString(key: String) -> String {
+  open func getAsString(key: String) -> String {
     self.javaObject.call(method: ContentValues__method__18, [key.toJavaParameter()])
   }
 
-  public func getAsLong(key: String) -> Int64 {
+  open func getAsLong(key: String) -> Int64 {
     let res = self.javaObject.call(method: ContentValues__method__19, [key.toJavaParameter()]) as Int64.PrimitiveType
     return res.value
   }
 
-  public func getAsInteger(key: String) -> Int32 {
+  open func getAsInteger(key: String) -> Int32 {
     let res = self.javaObject.call(method: ContentValues__method__20, [key.toJavaParameter()]) as Int32.PrimitiveType
     return res.value
   }
 
-  public func getAsShort(key: String) -> Int16 {
+  open func getAsShort(key: String) -> Int16 {
     let res = self.javaObject.call(method: ContentValues__method__21, [key.toJavaParameter()]) as Int16.PrimitiveType
     return res.value
   }
 
-  public func getAsByte(key: String) -> Int8 {
+  open func getAsByte(key: String) -> Int8 {
     let res = self.javaObject.call(method: ContentValues__method__22, [key.toJavaParameter()]) as Int8.PrimitiveType
     return res.value
   }
 
-  public func getAsDouble(key: String) -> Double {
+  open func getAsDouble(key: String) -> Double {
     let res = self.javaObject.call(method: ContentValues__method__23, [key.toJavaParameter()]) as Double.PrimitiveType
     return res.value
   }
 
-  public func getAsFloat(key: String) -> Float {
+  open func getAsFloat(key: String) -> Float {
     let res = self.javaObject.call(method: ContentValues__method__24, [key.toJavaParameter()]) as Float.PrimitiveType
     return res.value
   }
 
-  public func getAsByteArray(key: String) -> [Int8] {
+  open func getAsByteArray(key: String) -> [Int8] {
     self.javaObject.call(method: ContentValues__method__25, [key.toJavaParameter()])
   }
 
-  public func valueSet<T0, R>() -> R? where T0: Map.Entry, R: Java.Set, T0.K == String, T0.V == Object, R.E == T0 {
+  open func valueSet<T0, R>() -> R? where T0: Map.Entry, R: Java.Set, T0.K == String, T0.V == Object, R.E == T0 {
     self.javaObject.call(method: ContentValues__method__26, [])
   }
 
-  public func keySet<R>() -> R? where R: Java.Set, R.E == String {
+  open func keySet<R>() -> R? where R: Java.Set, R.E == String {
     self.javaObject.call(method: ContentValues__method__27, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ContentValues__method__28, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ContentValues__method__29, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
@@ -142,11 +142,11 @@ open class ContentValues: Object, Parcelable {
 }
 
 extension ContentValues {
-  public func valueSet<T0>() -> Java.SetProxy<T0>? where T0: Map.Entry, T0.K == String, T0.V == Object {
+  open func valueSet<T0>() -> Java.SetProxy<T0>? where T0: Map.Entry, T0.K == String, T0.V == Object {
     self.javaObject.call(method: ContentValues__method__26, [])
   }
 
-  public func keySet() -> Java.SetProxy<String>? {
+  open func keySet() -> Java.SetProxy<String>? {
     self.javaObject.call(method: ContentValues__method__27, [])
   }
 }

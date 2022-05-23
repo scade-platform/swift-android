@@ -67,121 +67,109 @@ open class BluetoothAdapter: Object {
     BluetoothAdapter__class.callStatic(method: BluetoothAdapter__method__0, [])
   }
 
-  public func getRemoteDevice(address: String) -> BluetoothDevice? {
+  open func getRemoteDevice(address: String) -> BluetoothDevice? {
     self.javaObject.call(method: BluetoothAdapter__method__1, [address.toJavaParameter()])
   }
 
-  public func getRemoteDevice(address: [Int8]) -> BluetoothDevice? {
+  open func getRemoteDevice(address: [Int8]) -> BluetoothDevice? {
     self.javaObject.call(method: BluetoothAdapter__method__2, [address.toJavaParameter()])
   }
 
-  public func getBluetoothLeAdvertiser() -> BluetoothLeAdvertiser? {
+  open func getBluetoothLeAdvertiser() -> BluetoothLeAdvertiser? {
     self.javaObject.call(method: BluetoothAdapter__method__3, [])
   }
 
-  public func getBluetoothLeScanner() -> BluetoothLeScanner? {
+  open func getBluetoothLeScanner() -> BluetoothLeScanner? {
     self.javaObject.call(method: BluetoothAdapter__method__4, [])
   }
 
-  public func isEnabled() -> Bool {
+  open func isEnabled() -> Bool {
     self.javaObject.call(method: BluetoothAdapter__method__5, [])
   }
 
-  public func getState() -> Int32 {
+  open func getState() -> Int32 {
     self.javaObject.call(method: BluetoothAdapter__method__6, [])
   }
 
-  public func enable() -> Bool {
+  open func enable() -> Bool {
     self.javaObject.call(method: BluetoothAdapter__method__7, [])
   }
 
-  public func disable() -> Bool {
+  open func disable() -> Bool {
     self.javaObject.call(method: BluetoothAdapter__method__8, [])
   }
 
-  public func getAddress() -> String {
+  open func getAddress() -> String {
     self.javaObject.call(method: BluetoothAdapter__method__9, [])
   }
 
-  public func getName() -> String {
+  open func getName() -> String {
     self.javaObject.call(method: BluetoothAdapter__method__10, [])
   }
 
-  public func setName(name: String) -> Bool {
+  open func setName(name: String) -> Bool {
     self.javaObject.call(method: BluetoothAdapter__method__11, [name.toJavaParameter()])
   }
 
-  public func getScanMode() -> Int32 {
+  open func getScanMode() -> Int32 {
     self.javaObject.call(method: BluetoothAdapter__method__12, [])
   }
 
-  public func startDiscovery() -> Bool {
+  open func startDiscovery() -> Bool {
     self.javaObject.call(method: BluetoothAdapter__method__13, [])
   }
 
-  public func cancelDiscovery() -> Bool {
+  open func cancelDiscovery() -> Bool {
     self.javaObject.call(method: BluetoothAdapter__method__14, [])
   }
 
-  public func isDiscovering() -> Bool {
+  open func isDiscovering() -> Bool {
     self.javaObject.call(method: BluetoothAdapter__method__15, [])
   }
 
-  public func isMultipleAdvertisementSupported() -> Bool {
+  open func isMultipleAdvertisementSupported() -> Bool {
     self.javaObject.call(method: BluetoothAdapter__method__16, [])
   }
 
-  public func isOffloadedFilteringSupported() -> Bool {
+  open func isOffloadedFilteringSupported() -> Bool {
     self.javaObject.call(method: BluetoothAdapter__method__17, [])
   }
 
-  public func isOffloadedScanBatchingSupported() -> Bool {
+  open func isOffloadedScanBatchingSupported() -> Bool {
     self.javaObject.call(method: BluetoothAdapter__method__18, [])
   }
 
-  public func getBondedDevices<R>() -> R? where R: Java.Set, R.E == BluetoothDevice {
+  open func getBondedDevices<R>() -> R? where R: Java.Set, R.E == BluetoothDevice {
     self.javaObject.call(method: BluetoothAdapter__method__19, [])
   }
 
-  public func getProfileConnectionState(profile: Int32) -> Int32 {
+  open func getProfileConnectionState(profile: Int32) -> Int32 {
     self.javaObject.call(method: BluetoothAdapter__method__20, [profile.toJavaParameter()])
   }
 
-  public func listenUsingRfcommWithServiceRecord(name: String, uuid: UUID?) -> BluetoothServerSocket? {
+  open func listenUsingRfcommWithServiceRecord(name: String, uuid: UUID?) -> BluetoothServerSocket? {
     self.javaObject.call(method: BluetoothAdapter__method__21, [name.toJavaParameter(), uuid.toJavaParameter()])
   }
 
-  public func listenUsingInsecureRfcommWithServiceRecord(name: String, uuid: UUID?) -> BluetoothServerSocket? {
+  open func listenUsingInsecureRfcommWithServiceRecord(name: String, uuid: UUID?) -> BluetoothServerSocket? {
     self.javaObject.call(method: BluetoothAdapter__method__22, [name.toJavaParameter(), uuid.toJavaParameter()])
   }
 
-  public func getProfileProxy(context: Context?, listener: BluetoothProfile.ServiceListener?, profile: Int32) -> Bool {
+  open func getProfileProxy(context: Context?, listener: BluetoothProfile.ServiceListener?, profile: Int32) -> Bool {
     self.javaObject.call(method: BluetoothAdapter__method__23, [JavaParameter(object: context?.toJavaObject()), JavaParameter(object: listener?.toJavaObject()), profile.toJavaParameter()])
   }
 
-  public func closeProfileProxy(profile: Int32, proxy: BluetoothProfile?) {
+  open func closeProfileProxy(profile: Int32, proxy: BluetoothProfile?) {
     self.javaObject.call(method: BluetoothAdapter__method__24, [profile.toJavaParameter(), JavaParameter(object: proxy?.toJavaObject())])
   }
 
   public static func checkBluetoothAddress(address: String) -> Bool {
     BluetoothAdapter__class.callStatic(method: BluetoothAdapter__method__25, [address.toJavaParameter()])
   }
-
-  public func startLeScan(callback: BluetoothAdapter.LeScanCallback?) -> Bool {
-    self.javaObject.call(method: BluetoothAdapter__method__26, [JavaParameter(object: callback?.toJavaObject())])
-  }
-
-  public func startLeScan(serviceUuids: [UUID?], callback: BluetoothAdapter.LeScanCallback?) -> Bool {
-    self.javaObject.call(method: BluetoothAdapter__method__27, [serviceUuids.toJavaParameter(), JavaParameter(object: callback?.toJavaObject())])
-  }
-
-  public func stopLeScan(callback: BluetoothAdapter.LeScanCallback?) {
-    self.javaObject.call(method: BluetoothAdapter__method__28, [JavaParameter(object: callback?.toJavaObject())])
-  }
 }
 
 extension BluetoothAdapter {
-  public func getBondedDevices() -> Java.SetProxy<BluetoothDevice>? {
+  open func getBondedDevices() -> Java.SetProxy<BluetoothDevice>? {
     self.javaObject.call(method: BluetoothAdapter__method__19, [])
   }
 }
@@ -248,9 +236,6 @@ private let BluetoothAdapter__method__22 = BluetoothAdapter__class.getMethodID(n
 private let BluetoothAdapter__method__23 = BluetoothAdapter__class.getMethodID(name: "getProfileProxy", sig: "(Landroid/content/Context;Landroid/bluetooth/BluetoothProfile$ServiceListener;I)Z")!
 private let BluetoothAdapter__method__24 = BluetoothAdapter__class.getMethodID(name: "closeProfileProxy", sig: "(ILandroid/bluetooth/BluetoothProfile;)V")!
 private let BluetoothAdapter__method__25 = BluetoothAdapter__class.getStaticMethodID(name: "checkBluetoothAddress", sig: "(Ljava/lang/String;)Z")!
-private let BluetoothAdapter__method__26 = BluetoothAdapter__class.getMethodID(name: "startLeScan", sig: "(Landroid/bluetooth/BluetoothAdapter$LeScanCallback;)Z")!
-private let BluetoothAdapter__method__27 = BluetoothAdapter__class.getMethodID(name: "startLeScan", sig: "([Ljava/util/UUID;Landroid/bluetooth/BluetoothAdapter$LeScanCallback;)Z")!
-private let BluetoothAdapter__method__28 = BluetoothAdapter__class.getMethodID(name: "stopLeScan", sig: "(Landroid/bluetooth/BluetoothAdapter$LeScanCallback;)V")!
 
 private let BluetoothAdapter__field__0 = BluetoothAdapter__class.getStaticFieldID(name: "ACTION_CONNECTION_STATE_CHANGED", sig: "Ljava/lang/String;")!
 private let BluetoothAdapter__field__1 = BluetoothAdapter__class.getStaticFieldID(name: "ACTION_DISCOVERY_FINISHED", sig: "Ljava/lang/String;")!

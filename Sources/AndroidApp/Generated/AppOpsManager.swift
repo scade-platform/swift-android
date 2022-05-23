@@ -78,51 +78,51 @@ open class AppOpsManager: Object {
     AppOpsManager__class.callStatic(method: AppOpsManager__method__0, [permission.toJavaParameter()])
   }
 
-  public func startWatchingMode(op: String, packageName: String, callback: AppOpsManager.OnOpChangedListener?) {
+  open func startWatchingMode(op: String, packageName: String, callback: AppOpsManager.OnOpChangedListener?) {
     self.javaObject.call(method: AppOpsManager__method__1, [op.toJavaParameter(), packageName.toJavaParameter(), JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func stopWatchingMode(callback: AppOpsManager.OnOpChangedListener?) {
+  open func stopWatchingMode(callback: AppOpsManager.OnOpChangedListener?) {
     self.javaObject.call(method: AppOpsManager__method__2, [JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func checkOp(op: String, uid: Int32, packageName: String) -> Int32 {
+  open func checkOp(op: String, uid: Int32, packageName: String) -> Int32 {
     self.javaObject.call(method: AppOpsManager__method__3, [op.toJavaParameter(), uid.toJavaParameter(), packageName.toJavaParameter()])
   }
 
-  public func checkOpNoThrow(op: String, uid: Int32, packageName: String) -> Int32 {
+  open func checkOpNoThrow(op: String, uid: Int32, packageName: String) -> Int32 {
     self.javaObject.call(method: AppOpsManager__method__4, [op.toJavaParameter(), uid.toJavaParameter(), packageName.toJavaParameter()])
   }
 
-  public func noteOp(op: String, uid: Int32, packageName: String) -> Int32 {
+  open func noteOp(op: String, uid: Int32, packageName: String) -> Int32 {
     self.javaObject.call(method: AppOpsManager__method__5, [op.toJavaParameter(), uid.toJavaParameter(), packageName.toJavaParameter()])
   }
 
-  public func noteOpNoThrow(op: String, uid: Int32, packageName: String) -> Int32 {
+  open func noteOpNoThrow(op: String, uid: Int32, packageName: String) -> Int32 {
     self.javaObject.call(method: AppOpsManager__method__6, [op.toJavaParameter(), uid.toJavaParameter(), packageName.toJavaParameter()])
   }
 
-  public func noteProxyOp(op: String, proxiedPackageName: String) -> Int32 {
+  open func noteProxyOp(op: String, proxiedPackageName: String) -> Int32 {
     self.javaObject.call(method: AppOpsManager__method__7, [op.toJavaParameter(), proxiedPackageName.toJavaParameter()])
   }
 
-  public func noteProxyOpNoThrow(op: String, proxiedPackageName: String) -> Int32 {
+  open func noteProxyOpNoThrow(op: String, proxiedPackageName: String) -> Int32 {
     self.javaObject.call(method: AppOpsManager__method__8, [op.toJavaParameter(), proxiedPackageName.toJavaParameter()])
   }
 
-  public func startOp(op: String, uid: Int32, packageName: String) -> Int32 {
+  open func startOp(op: String, uid: Int32, packageName: String) -> Int32 {
     self.javaObject.call(method: AppOpsManager__method__9, [op.toJavaParameter(), uid.toJavaParameter(), packageName.toJavaParameter()])
   }
 
-  public func startOpNoThrow(op: String, uid: Int32, packageName: String) -> Int32 {
+  open func startOpNoThrow(op: String, uid: Int32, packageName: String) -> Int32 {
     self.javaObject.call(method: AppOpsManager__method__10, [op.toJavaParameter(), uid.toJavaParameter(), packageName.toJavaParameter()])
   }
 
-  public func finishOp(op: String, uid: Int32, packageName: String) {
+  open func finishOp(op: String, uid: Int32, packageName: String) {
     self.javaObject.call(method: AppOpsManager__method__11, [op.toJavaParameter(), uid.toJavaParameter(), packageName.toJavaParameter()])
   }
 
-  public func checkPackage(uid: Int32, packageName: String) {
+  open func checkPackage(uid: Int32, packageName: String) {
     self.javaObject.call(method: AppOpsManager__method__12, [uid.toJavaParameter(), packageName.toJavaParameter()])
   }
 }

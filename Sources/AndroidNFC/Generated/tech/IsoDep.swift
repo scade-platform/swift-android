@@ -7,31 +7,31 @@ open class IsoDep: Object, BasicTagTechnology {
     IsoDep__class.callStatic(method: IsoDep__method__0, [tag.toJavaParameter()])
   }
 
-  public func setTimeout(timeout: Int32) {
+  open func setTimeout(timeout: Int32) {
     self.javaObject.call(method: IsoDep__method__1, [timeout.toJavaParameter()])
   }
 
-  public func getTimeout() -> Int32 {
+  open func getTimeout() -> Int32 {
     self.javaObject.call(method: IsoDep__method__2, [])
   }
 
-  public func getHistoricalBytes() -> [Int8] {
+  open func getHistoricalBytes() -> [Int8] {
     self.javaObject.call(method: IsoDep__method__3, [])
   }
 
-  public func getHiLayerResponse() -> [Int8] {
+  open func getHiLayerResponse() -> [Int8] {
     self.javaObject.call(method: IsoDep__method__4, [])
   }
 
-  public func transceive(data: [Int8]) -> [Int8] {
+  open func transceive(data: [Int8]) -> [Int8] {
     self.javaObject.call(method: IsoDep__method__5, [data.toJavaParameter()])
   }
 
-  public func getMaxTransceiveLength() -> Int32 {
+  open func getMaxTransceiveLength() -> Int32 {
     self.javaObject.call(method: IsoDep__method__6, [])
   }
 
-  public func isExtendedLengthApduSupported() -> Bool {
+  open func isExtendedLengthApduSupported() -> Bool {
     self.javaObject.call(method: IsoDep__method__7, [])
   }
 }

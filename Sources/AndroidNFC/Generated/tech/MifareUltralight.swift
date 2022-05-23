@@ -15,31 +15,31 @@ open class MifareUltralight: Object, BasicTagTechnology {
     MifareUltralight__class.callStatic(method: MifareUltralight__method__0, [tag.toJavaParameter()])
   }
 
-  public func getType() -> Int32 {
+  open func getType() -> Int32 {
     self.javaObject.call(method: MifareUltralight__method__1, [])
   }
 
-  public func readPages(pageOffset: Int32) -> [Int8] {
+  open func readPages(pageOffset: Int32) -> [Int8] {
     self.javaObject.call(method: MifareUltralight__method__2, [pageOffset.toJavaParameter()])
   }
 
-  public func writePage(pageOffset: Int32, data: [Int8]) {
+  open func writePage(pageOffset: Int32, data: [Int8]) {
     self.javaObject.call(method: MifareUltralight__method__3, [pageOffset.toJavaParameter(), data.toJavaParameter()])
   }
 
-  public func transceive(data: [Int8]) -> [Int8] {
+  open func transceive(data: [Int8]) -> [Int8] {
     self.javaObject.call(method: MifareUltralight__method__4, [data.toJavaParameter()])
   }
 
-  public func getMaxTransceiveLength() -> Int32 {
+  open func getMaxTransceiveLength() -> Int32 {
     self.javaObject.call(method: MifareUltralight__method__5, [])
   }
 
-  public func setTimeout(timeout: Int32) {
+  open func setTimeout(timeout: Int32) {
     self.javaObject.call(method: MifareUltralight__method__6, [timeout.toJavaParameter()])
   }
 
-  public func getTimeout() -> Int32 {
+  open func getTimeout() -> Int32 {
     self.javaObject.call(method: MifareUltralight__method__7, [])
   }
 }

@@ -30,27 +30,27 @@ open class ClipData: Object, Parcelable {
     ClipData__class.callStatic(method: ClipData__method__5, [label.toJavaParameter(), intent.toJavaParameter()])
   }
 
-  public func getDescription() -> ClipDescription? {
+  open func getDescription() -> ClipDescription? {
     self.javaObject.call(method: ClipData__method__6, [])
   }
 
-  public func addItem(item: ClipData.Item?) {
+  open func addItem(item: ClipData.Item?) {
     self.javaObject.call(method: ClipData__method__7, [item.toJavaParameter()])
   }
 
-  public func getItemCount() -> Int32 {
+  open func getItemCount() -> Int32 {
     self.javaObject.call(method: ClipData__method__8, [])
   }
 
-  public func getItemAt(index: Int32) -> ClipData.Item? {
+  open func getItemAt(index: Int32) -> ClipData.Item? {
     self.javaObject.call(method: ClipData__method__9, [index.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ClipData__method__10, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ClipData__method__11, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
@@ -78,27 +78,27 @@ open class ClipDataItem: Object {
     super.init(ctor: ClipDataItem__method__2, [intent.toJavaParameter()])
   }
 
-  public func getText() -> String? {
+  open func getText() -> String? {
     self.javaObject.call(method: ClipDataItem__method__3, [])
   }
 
-  public func getHtmlText() -> String {
+  open func getHtmlText() -> String {
     self.javaObject.call(method: ClipDataItem__method__4, [])
   }
 
-  public func getIntent() -> Intent? {
+  open func getIntent() -> Intent? {
     self.javaObject.call(method: ClipDataItem__method__5, [])
   }
 
-  public func coerceToText(context: Context?) -> String? {
+  open func coerceToText(context: Context?) -> String? {
     self.javaObject.call(method: ClipDataItem__method__6, [JavaParameter(object: context?.toJavaObject())])
   }
 
-  public func coerceToStyledText(context: Context?) -> String? {
+  open func coerceToStyledText(context: Context?) -> String? {
     self.javaObject.call(method: ClipDataItem__method__7, [JavaParameter(object: context?.toJavaObject())])
   }
 
-  public func coerceToHtmlText(context: Context?) -> String {
+  open func coerceToHtmlText(context: Context?) -> String {
     self.javaObject.call(method: ClipDataItem__method__8, [JavaParameter(object: context?.toJavaObject())])
   }
 

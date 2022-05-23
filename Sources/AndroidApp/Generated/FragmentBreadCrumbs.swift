@@ -11,24 +11,28 @@ open class FragmentBreadCrumbs: Object, FragmentManager.OnBackStackChangedListen
     super.init(ctor: FragmentBreadCrumbs__method__0, [JavaParameter(object: context?.toJavaObject())])
   }
 
-  public func setActivity(a: Activity?) {
+  open func setActivity(a: Activity?) {
     self.javaObject.call(method: FragmentBreadCrumbs__method__1, [a.toJavaParameter()])
   }
 
-  public func setMaxVisible(visibleCrumbs: Int32) {
+  open func setMaxVisible(visibleCrumbs: Int32) {
     self.javaObject.call(method: FragmentBreadCrumbs__method__2, [visibleCrumbs.toJavaParameter()])
   }
 
-  public func setOnBreadCrumbClickListener(listener: FragmentBreadCrumbs.OnBreadCrumbClickListener?) {
+  open func setOnBreadCrumbClickListener(listener: FragmentBreadCrumbs.OnBreadCrumbClickListener?) {
     self.javaObject.call(method: FragmentBreadCrumbs__method__3, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func setTitle(title: String?, shortTitle: String?) {
+  open func setTitle(title: String?, shortTitle: String?) {
     self.javaObject.call(method: FragmentBreadCrumbs__method__4, [title.toJavaParameter(), shortTitle.toJavaParameter()])
   }
 
-  public func onBackStackChanged() {
-    self.javaObject.call(method: FragmentBreadCrumbs__method__5, [])
+  open func onLayout(changed: Bool, l: Int32, t: Int32, r: Int32, b: Int32) {
+    self.javaObject.call(method: FragmentBreadCrumbs__method__5, [changed.toJavaParameter(), l.toJavaParameter(), t.toJavaParameter(), r.toJavaParameter(), b.toJavaParameter()])
+  }
+
+  open func onBackStackChanged() {
+    self.javaObject.call(method: FragmentBreadCrumbs__method__6, [])
   }
 
   public required init(_ obj: JavaObject) {
@@ -81,7 +85,8 @@ private let FragmentBreadCrumbs__method__1 = FragmentBreadCrumbs__class.getMetho
 private let FragmentBreadCrumbs__method__2 = FragmentBreadCrumbs__class.getMethodID(name: "setMaxVisible", sig: "(I)V")!
 private let FragmentBreadCrumbs__method__3 = FragmentBreadCrumbs__class.getMethodID(name: "setOnBreadCrumbClickListener", sig: "(Landroid/app/FragmentBreadCrumbs$OnBreadCrumbClickListener;)V")!
 private let FragmentBreadCrumbs__method__4 = FragmentBreadCrumbs__class.getMethodID(name: "setTitle", sig: "(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V")!
-private let FragmentBreadCrumbs__method__5 = FragmentBreadCrumbs__class.getMethodID(name: "onBackStackChanged", sig: "()V")!
+private let FragmentBreadCrumbs__method__5 = FragmentBreadCrumbs__class.getMethodID(name: "onLayout", sig: "(ZIIII)V")!
+private let FragmentBreadCrumbs__method__6 = FragmentBreadCrumbs__class.getMethodID(name: "onBackStackChanged", sig: "()V")!
 
 // ------------------------------------------------------------------------------------
 

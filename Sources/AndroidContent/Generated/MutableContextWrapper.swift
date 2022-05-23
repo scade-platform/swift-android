@@ -7,7 +7,7 @@ open class MutableContextWrapper: ContextWrapper {
     super.init(ctor: MutableContextWrapper__method__0, [JavaParameter(object: base?.toJavaObject())])
   }
 
-  public func setBaseContext(base: Context?) {
+  open func setBaseContext(base: Context?) {
     self.javaObject.call(method: MutableContextWrapper__method__1, [JavaParameter(object: base?.toJavaObject())])
   }
 

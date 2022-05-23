@@ -2,27 +2,7 @@
 
 import Java
 
-public protocol BluetoothGattCallback where Self: Object {
-  func onConnectionStateChange(gatt: BluetoothGatt?, status: Int32, newState: Int32) -> Void
-
-  func onServicesDiscovered(gatt: BluetoothGatt?, status: Int32) -> Void
-
-  func onCharacteristicRead(gatt: BluetoothGatt?, characteristic: BluetoothGattCharacteristic?, status: Int32) -> Void
-
-  func onCharacteristicWrite(gatt: BluetoothGatt?, characteristic: BluetoothGattCharacteristic?, status: Int32) -> Void
-
-  func onCharacteristicChanged(gatt: BluetoothGatt?, characteristic: BluetoothGattCharacteristic?) -> Void
-
-  func onDescriptorRead(gatt: BluetoothGatt?, descriptor: BluetoothGattDescriptor?, status: Int32) -> Void
-
-  func onDescriptorWrite(gatt: BluetoothGatt?, descriptor: BluetoothGattDescriptor?, status: Int32) -> Void
-
-  func onReliableWriteCompleted(gatt: BluetoothGatt?, status: Int32) -> Void
-
-  func onReadRemoteRssi(gatt: BluetoothGatt?, rssi: Int32, status: Int32) -> Void
-
-  func onMtuChanged(gatt: BluetoothGatt?, mtu: Int32, status: Int32) -> Void
-}
+public protocol BluetoothGattCallback where Self: Object {}
 
 public extension BluetoothGattCallback {
   func box() -> BluetoothGattCallbackProxy {

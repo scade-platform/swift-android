@@ -4,11 +4,11 @@ import AndroidContent
 import Java
 
 open class MediaProjectionManager: Object {
-  public func createScreenCaptureIntent() -> Intent? {
+  open func createScreenCaptureIntent() -> Intent? {
     self.javaObject.call(method: MediaProjectionManager__method__0, [])
   }
 
-  public func getMediaProjection(resultCode: Int32, resultData: Intent?) -> MediaProjection? {
+  open func getMediaProjection(resultCode: Int32, resultData: Intent?) -> MediaProjection? {
     self.javaObject.call(method: MediaProjectionManager__method__1, [resultCode.toJavaParameter(), resultData.toJavaParameter()])
   }
 }

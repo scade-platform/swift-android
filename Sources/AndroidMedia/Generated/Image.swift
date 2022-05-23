@@ -1,5 +1,6 @@
 
 
+import AndroidGraphics
 import Java
 
 public protocol Image where Self: Object {
@@ -13,8 +14,6 @@ public protocol Image where Self: Object {
   func getHeight() -> Int32
 
   func getTimestamp() -> Int64
-
-  func setTimestamp(timestamp: Int64) -> Void
 
   func getPlanes() -> [Image.Plane?]
 
@@ -31,6 +30,14 @@ public extension Image where Self: Object {
   func setTimestamp(timestamp: Int64) {
     self.javaObject.call(method: Image__method__4, [timestamp.toJavaParameter()])
   }
+
+  func getCropRect() -> Rect? {
+    self.javaObject.call(method: Image__method__5, [])
+  }
+
+  func setCropRect(cropRect: Rect?) {
+    self.javaObject.call(method: Image__method__6, [cropRect.toJavaParameter()])
+  }
 }
 
 open class ImageProxy: Object, JInterfaceProxy, Image {
@@ -44,29 +51,29 @@ open class ImageProxy: Object, JInterfaceProxy, Image {
     self.init(obj.toJavaObject()!)
   }
 
-  public func getFormat() -> Int32 {
+  open func getFormat() -> Int32 {
     self.javaObject.call(method: Image__method__0, [])
   }
 
-  public func getWidth() -> Int32 {
+  open func getWidth() -> Int32 {
     self.javaObject.call(method: Image__method__1, [])
   }
 
-  public func getHeight() -> Int32 {
+  open func getHeight() -> Int32 {
     self.javaObject.call(method: Image__method__2, [])
   }
 
-  public func getTimestamp() -> Int64 {
+  open func getTimestamp() -> Int64 {
     self.javaObject.call(method: Image__method__3, [])
   }
 
-  public func getPlanes() -> [Image.Plane?] {
-    let res = self.javaObject.call(method: Image__method__5, []) as [Object?]
+  open func getPlanes() -> [Image.Plane?] {
+    let res = self.javaObject.call(method: Image__method__7, []) as [Object?]
     return cast(res, to: Image.PlaneProxy.self)
   }
 
-  public func close() {
-    self.javaObject.call(method: Image__method__6, [])
+  open func close() {
+    self.javaObject.call(method: Image__method__8, [])
   }
 }
 
@@ -76,6 +83,8 @@ public protocol ImagePlane where Self: Object {
   func getRowStride() -> Int32
 
   func getPixelStride() -> Int32
+
+  func getBuffer() -> ByteBuffer?
 }
 
 public extension ImagePlane {
@@ -95,12 +104,17 @@ open class ImagePlaneProxy: Object, JInterfaceProxy, ImagePlane {
     self.init(obj.toJavaObject()!)
   }
 
-  public func getRowStride() -> Int32 {
+  open func getRowStride() -> Int32 {
     self.javaObject.call(method: ImagePlane__method__0, [])
   }
 
-  public func getPixelStride() -> Int32 {
+  open func getPixelStride() -> Int32 {
     self.javaObject.call(method: ImagePlane__method__1, [])
+  }
+
+  open func getBuffer() -> ByteBuffer? {
+    let res = self.javaObject.call(method: ImagePlane__method__2, []) as Object?
+    return cast(res, to: ByteBufferProxy.self) as! ByteBuffer?
   }
 }
 
@@ -113,8 +127,10 @@ private let Image__method__1 = Image__class.getMethodID(name: "getWidth", sig: "
 private let Image__method__2 = Image__class.getMethodID(name: "getHeight", sig: "()I")!
 private let Image__method__3 = Image__class.getMethodID(name: "getTimestamp", sig: "()J")!
 private let Image__method__4 = Image__class.getMethodID(name: "setTimestamp", sig: "(J)V")!
-private let Image__method__5 = Image__class.getMethodID(name: "getPlanes", sig: "()[Landroid/media/Image$Plane;")!
-private let Image__method__6 = Image__class.getMethodID(name: "close", sig: "()V")!
+private let Image__method__5 = Image__class.getMethodID(name: "getCropRect", sig: "()Landroid/graphics/Rect;")!
+private let Image__method__6 = Image__class.getMethodID(name: "setCropRect", sig: "(Landroid/graphics/Rect;)V")!
+private let Image__method__7 = Image__class.getMethodID(name: "getPlanes", sig: "()[Landroid/media/Image$Plane;")!
+private let Image__method__8 = Image__class.getMethodID(name: "close", sig: "()V")!
 
 // ------------------------------------------------------------------------------------
 
@@ -122,3 +138,4 @@ private let ImagePlane__class = findJavaClass(fqn: "android/media/Image$Plane")!
 
 private let ImagePlane__method__0 = ImagePlane__class.getMethodID(name: "getRowStride", sig: "()I")!
 private let ImagePlane__method__1 = ImagePlane__class.getMethodID(name: "getPixelStride", sig: "()I")!
+private let ImagePlane__method__2 = ImagePlane__class.getMethodID(name: "getBuffer", sig: "()Ljava/nio/ByteBuffer;")!

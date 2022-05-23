@@ -6,10 +6,6 @@ public protocol AsyncQueryHandler where Self: Object {
   typealias WorkerHandler = AndroidContent.AsyncQueryHandlerWorkerHandler
 
   typealias WorkerArgs = AndroidContent.AsyncQueryHandlerWorkerArgs
-
-  init(cr: ContentResolver?)
-
-  func cancelOperation(token: Int32) -> Void
 }
 
 public extension AsyncQueryHandler {
@@ -25,6 +21,14 @@ public extension AsyncQueryHandler where Self: Object {
 
   func cancelOperation(token: Int32) {
     self.javaObject.call(method: AsyncQueryHandler__method__1, [token.toJavaParameter()])
+  }
+
+  func onUpdateComplete(token: Int32, cookie: Object?, result: Int32) {
+    self.javaObject.call(method: AsyncQueryHandler__method__2, [token.toJavaParameter(), cookie.toJavaParameter(), result.toJavaParameter()])
+  }
+
+  func onDeleteComplete(token: Int32, cookie: Object?, result: Int32) {
+    self.javaObject.call(method: AsyncQueryHandler__method__3, [token.toJavaParameter(), cookie.toJavaParameter(), result.toJavaParameter()])
   }
 }
 
@@ -109,6 +113,18 @@ open class AsyncQueryHandlerWorkerArgs: Object {
       javaObject.set(field: AsyncQueryHandlerWorkerArgs__field__6, value: val)
     }
   }
+
+  override public init() {
+    super.init(ctor: AsyncQueryHandlerWorkerArgs__method__0, [])
+  }
+
+  public required init(_ obj: JavaObject) {
+    super.init(obj)
+  }
+
+  public required init(ctor: JavaMethodID, _ args: [JavaParameter]) {
+    super.init(ctor: ctor, args)
+  }
 }
 
 // ------------------------------------------------------------------------------------
@@ -117,6 +133,8 @@ private let AsyncQueryHandler__class = findJavaClass(fqn: "android/content/Async
 
 private let AsyncQueryHandler__method__0 = AsyncQueryHandler__class.getMethodID(name: "<init>", sig: "(Landroid/content/ContentResolver;)V")!
 private let AsyncQueryHandler__method__1 = AsyncQueryHandler__class.getMethodID(name: "cancelOperation", sig: "(I)V")!
+private let AsyncQueryHandler__method__2 = AsyncQueryHandler__class.getMethodID(name: "onUpdateComplete", sig: "(ILjava/lang/Object;I)V")!
+private let AsyncQueryHandler__method__3 = AsyncQueryHandler__class.getMethodID(name: "onDeleteComplete", sig: "(ILjava/lang/Object;I)V")!
 
 // ------------------------------------------------------------------------------------
 
@@ -125,6 +143,8 @@ private let AsyncQueryHandlerWorkerHandler__class = findJavaClass(fqn: "android/
 // ------------------------------------------------------------------------------------
 
 private let AsyncQueryHandlerWorkerArgs__class = findJavaClass(fqn: "android/content/AsyncQueryHandler$WorkerArgs")!
+
+private let AsyncQueryHandlerWorkerArgs__method__0 = AsyncQueryHandlerWorkerArgs__class.getMethodID(name: "<init>", sig: "()V")!
 
 private let AsyncQueryHandlerWorkerArgs__field__0 = AsyncQueryHandlerWorkerArgs__class.getFieldID(name: "cookie", sig: "Ljava/lang/Object;")!
 private let AsyncQueryHandlerWorkerArgs__field__1 = AsyncQueryHandlerWorkerArgs__class.getFieldID(name: "orderBy", sig: "Ljava/lang/String;")!

@@ -131,7 +131,7 @@ open class ResolveInfo: Object, Parcelable {
     super.init(ctor: ResolveInfo__method__1, [orig.toJavaParameter()])
   }
 
-  public func loadLabel(pm: PackageManager?) -> String? {
+  open func loadLabel(pm: PackageManager?) -> String? {
     self.javaObject.call(method: ResolveInfo__method__2, [JavaParameter(object: pm?.toJavaObject())])
   }
 
@@ -139,11 +139,11 @@ open class ResolveInfo: Object, Parcelable {
     self.javaObject.call(method: ResolveInfo__method__3, [])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: ResolveInfo__method__4, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: ResolveInfo__method__5, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
@@ -163,8 +163,8 @@ open class ResolveInfoDisplayNameComparator: Object {
     super.init(ctor: ResolveInfoDisplayNameComparator__method__0, [JavaParameter(object: pm?.toJavaObject())])
   }
 
-  public func compare(o1: ResolveInfo?, o2: ResolveInfo?) -> Int32 {
-    self.javaObject.call(method: ResolveInfoDisplayNameComparator__method__1, [o1.toJavaParameter(), o2.toJavaParameter()])
+  public func compare(a: ResolveInfo?, b: ResolveInfo?) -> Int32 {
+    self.javaObject.call(method: ResolveInfoDisplayNameComparator__method__1, [a.toJavaParameter(), b.toJavaParameter()])
   }
 
   public required init(_ obj: JavaObject) {

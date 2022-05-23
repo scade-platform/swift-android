@@ -25,7 +25,7 @@ open class DrmInitDataProxy: Object, JInterfaceProxy, DrmInitData {
     self.init(obj.toJavaObject()!)
   }
 
-  public func get(schemeUuid: UUID?) -> DrmInitData.SchemeInitData? {
+  open func get(schemeUuid: UUID?) -> DrmInitData.SchemeInitData? {
     self.javaObject.call(method: DrmInitData__method__0, [schemeUuid.toJavaParameter()])
   }
 }

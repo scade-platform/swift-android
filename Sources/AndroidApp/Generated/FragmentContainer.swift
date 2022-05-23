@@ -23,7 +23,7 @@ open class FragmentContainerProxy: Object, JInterfaceProxy, FragmentContainer {
     self.init(obj.toJavaObject()!)
   }
 
-  public func onHasView() -> Bool {
+  open func onHasView() -> Bool {
     self.javaObject.call(method: FragmentContainer__method__1, [])
   }
 }

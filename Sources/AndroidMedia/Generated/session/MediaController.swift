@@ -3,6 +3,7 @@
 import AndroidApp
 import AndroidContent
 import AndroidOS
+import AndroidView
 import Java
 
 open class MediaController: Object {
@@ -17,68 +18,72 @@ open class MediaController: Object {
     super.init(ctor: MediaController__method__0, [JavaParameter(object: context?.toJavaObject()), token.toJavaParameter()])
   }
 
-  public func getTransportControls() -> MediaController.TransportControls? {
+  open func getTransportControls() -> MediaController.TransportControls? {
     self.javaObject.call(method: MediaController__method__1, [])
   }
 
-  public func getPlaybackState() -> PlaybackState? {
-    self.javaObject.call(method: MediaController__method__2, [])
+  open func dispatchMediaButtonEvent(keyEvent: KeyEvent?) -> Bool {
+    self.javaObject.call(method: MediaController__method__2, [keyEvent.toJavaParameter()])
   }
 
-  public func getMetadata() -> MediaMetadata? {
+  open func getPlaybackState() -> PlaybackState? {
     self.javaObject.call(method: MediaController__method__3, [])
   }
 
-  public func getQueue<R>() -> R? where R: List, R.E == MediaSession.QueueItem {
+  open func getMetadata() -> MediaMetadata? {
     self.javaObject.call(method: MediaController__method__4, [])
   }
 
-  public func getQueueTitle() -> String? {
+  open func getQueue<R>() -> R? where R: List, R.E == MediaSession.QueueItem {
     self.javaObject.call(method: MediaController__method__5, [])
   }
 
-  public func getExtras() -> Bundle? {
+  open func getQueueTitle() -> String? {
     self.javaObject.call(method: MediaController__method__6, [])
   }
 
-  public func getRatingType() -> Int32 {
+  open func getExtras() -> Bundle? {
     self.javaObject.call(method: MediaController__method__7, [])
   }
 
-  public func getFlags() -> Int64 {
+  open func getRatingType() -> Int32 {
     self.javaObject.call(method: MediaController__method__8, [])
   }
 
-  public func getPlaybackInfo() -> MediaController.PlaybackInfo? {
+  open func getFlags() -> Int64 {
     self.javaObject.call(method: MediaController__method__9, [])
   }
 
-  public func getSessionActivity() -> PendingIntent? {
+  open func getPlaybackInfo() -> MediaController.PlaybackInfo? {
     self.javaObject.call(method: MediaController__method__10, [])
   }
 
-  public func getSessionToken() -> MediaSession.Token? {
+  open func getSessionActivity() -> PendingIntent? {
     self.javaObject.call(method: MediaController__method__11, [])
   }
 
-  public func setVolumeTo(value: Int32, flags: Int32) {
-    self.javaObject.call(method: MediaController__method__12, [value.toJavaParameter(), flags.toJavaParameter()])
+  open func getSessionToken() -> MediaSession.Token? {
+    self.javaObject.call(method: MediaController__method__12, [])
   }
 
-  public func adjustVolume(direction: Int32, flags: Int32) {
-    self.javaObject.call(method: MediaController__method__13, [direction.toJavaParameter(), flags.toJavaParameter()])
+  open func setVolumeTo(value: Int32, flags: Int32) {
+    self.javaObject.call(method: MediaController__method__13, [value.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func registerCallback(callback: MediaController.Callback?) {
-    self.javaObject.call(method: MediaController__method__14, [JavaParameter(object: callback?.toJavaObject())])
+  open func adjustVolume(direction: Int32, flags: Int32) {
+    self.javaObject.call(method: MediaController__method__14, [direction.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func unregisterCallback(callback: MediaController.Callback?) {
+  open func registerCallback(callback: MediaController.Callback?) {
     self.javaObject.call(method: MediaController__method__15, [JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func getPackageName() -> String {
-    self.javaObject.call(method: MediaController__method__16, [])
+  open func unregisterCallback(callback: MediaController.Callback?) {
+    self.javaObject.call(method: MediaController__method__16, [JavaParameter(object: callback?.toJavaObject())])
+  }
+
+  open func getPackageName() -> String {
+    self.javaObject.call(method: MediaController__method__17, [])
   }
 
   public required init(_ obj: JavaObject) {
@@ -91,8 +96,8 @@ open class MediaController: Object {
 }
 
 extension MediaController {
-  public func getQueue() -> ListProxy<MediaSession.QueueItem>? {
-    self.javaObject.call(method: MediaController__method__4, [])
+  open func getQueue() -> ListProxy<MediaSession.QueueItem>? {
+    self.javaObject.call(method: MediaController__method__5, [])
   }
 }
 
@@ -103,23 +108,23 @@ open class MediaControllerPlaybackInfo: Object {
 
   public static let PLAYBACK_TYPE_REMOTE: Int32 = MediaControllerPlaybackInfo__class.getStatic(field: MediaControllerPlaybackInfo__field__1)
 
-  public func getPlaybackType() -> Int32 {
+  open func getPlaybackType() -> Int32 {
     self.javaObject.call(method: MediaControllerPlaybackInfo__method__0, [])
   }
 
-  public func getAudioAttributes() -> AudioAttributes? {
+  open func getAudioAttributes() -> AudioAttributes? {
     self.javaObject.call(method: MediaControllerPlaybackInfo__method__1, [])
   }
 
-  public func getVolumeControl() -> Int32 {
+  open func getVolumeControl() -> Int32 {
     self.javaObject.call(method: MediaControllerPlaybackInfo__method__2, [])
   }
 
-  public func getMaxVolume() -> Int32 {
+  open func getMaxVolume() -> Int32 {
     self.javaObject.call(method: MediaControllerPlaybackInfo__method__3, [])
   }
 
-  public func getCurrentVolume() -> Int32 {
+  open func getCurrentVolume() -> Int32 {
     self.javaObject.call(method: MediaControllerPlaybackInfo__method__4, [])
   }
 }
@@ -127,94 +132,78 @@ open class MediaControllerPlaybackInfo: Object {
 // ------------------------------------------------------------------------------------
 
 open class MediaControllerTransportControls: Object {
-  public func prepare() {
+  open func prepare() {
     self.javaObject.call(method: MediaControllerTransportControls__method__0, [])
   }
 
-  public func prepareFromMediaId(mediaId: String, extras: Bundle?) {
+  open func prepareFromMediaId(mediaId: String, extras: Bundle?) {
     self.javaObject.call(method: MediaControllerTransportControls__method__1, [mediaId.toJavaParameter(), extras.toJavaParameter()])
   }
 
-  public func prepareFromSearch(query: String, extras: Bundle?) {
+  open func prepareFromSearch(query: String, extras: Bundle?) {
     self.javaObject.call(method: MediaControllerTransportControls__method__2, [query.toJavaParameter(), extras.toJavaParameter()])
   }
 
-  public func play() {
+  open func play() {
     self.javaObject.call(method: MediaControllerTransportControls__method__3, [])
   }
 
-  public func playFromMediaId(mediaId: String, extras: Bundle?) {
+  open func playFromMediaId(mediaId: String, extras: Bundle?) {
     self.javaObject.call(method: MediaControllerTransportControls__method__4, [mediaId.toJavaParameter(), extras.toJavaParameter()])
   }
 
-  public func playFromSearch(query: String, extras: Bundle?) {
+  open func playFromSearch(query: String, extras: Bundle?) {
     self.javaObject.call(method: MediaControllerTransportControls__method__5, [query.toJavaParameter(), extras.toJavaParameter()])
   }
 
-  public func skipToQueueItem(id: Int64) {
+  open func skipToQueueItem(id: Int64) {
     self.javaObject.call(method: MediaControllerTransportControls__method__6, [id.toJavaParameter()])
   }
 
-  public func pause() {
+  open func pause() {
     self.javaObject.call(method: MediaControllerTransportControls__method__7, [])
   }
 
-  public func stop() {
+  open func stop() {
     self.javaObject.call(method: MediaControllerTransportControls__method__8, [])
   }
 
-  public func seekTo(pos: Int64) {
+  open func seekTo(pos: Int64) {
     self.javaObject.call(method: MediaControllerTransportControls__method__9, [pos.toJavaParameter()])
   }
 
-  public func fastForward() {
+  open func fastForward() {
     self.javaObject.call(method: MediaControllerTransportControls__method__10, [])
   }
 
-  public func skipToNext() {
+  open func skipToNext() {
     self.javaObject.call(method: MediaControllerTransportControls__method__11, [])
   }
 
-  public func rewind() {
+  open func rewind() {
     self.javaObject.call(method: MediaControllerTransportControls__method__12, [])
   }
 
-  public func skipToPrevious() {
+  open func skipToPrevious() {
     self.javaObject.call(method: MediaControllerTransportControls__method__13, [])
   }
 
-  public func setRating(rating: Rating?) {
+  open func setRating(rating: Rating?) {
     self.javaObject.call(method: MediaControllerTransportControls__method__14, [rating.toJavaParameter()])
   }
 
-  public func sendCustomAction(customAction: PlaybackState.CustomAction?, args: Bundle?) {
+  open func sendCustomAction(customAction: PlaybackState.CustomAction?, args: Bundle?) {
     self.javaObject.call(method: MediaControllerTransportControls__method__15, [customAction.toJavaParameter(), args.toJavaParameter()])
   }
 
-  public func sendCustomAction(action: String, args: Bundle?) {
+  open func sendCustomAction(action: String, args: Bundle?) {
     self.javaObject.call(method: MediaControllerTransportControls__method__16, [action.toJavaParameter(), args.toJavaParameter()])
   }
 }
 
 // ------------------------------------------------------------------------------------
 
-public protocol MediaControllerCallback where Self: Object {
-  func onSessionDestroyed() -> Void
-
-  func onSessionEvent(event: String, extras: Bundle?) -> Void
-
-  func onPlaybackStateChanged(state: PlaybackState?) -> Void
-
-  func onMetadataChanged(metadata: MediaMetadata?) -> Void
-
-  func onQueueChanged<T0>(queue: T0?) -> Void where T0: List, T0.E == MediaSession.QueueItem
-
-  func onQueueTitleChanged(title: String?) -> Void
-
-  func onExtrasChanged(extras: Bundle?) -> Void
-
-  func onAudioInfoChanged(info: MediaController.PlaybackInfo?) -> Void
-}
+public protocol MediaControllerCallback where Self: Object {}
 
 public extension MediaControllerCallback {
   func box() -> MediaControllerCallbackProxy {
@@ -274,21 +263,22 @@ private let MediaController__class = findJavaClass(fqn: "android/media/session/M
 
 private let MediaController__method__0 = MediaController__class.getMethodID(name: "<init>", sig: "(Landroid/content/Context;Landroid/media/session/MediaSession$Token;)V")!
 private let MediaController__method__1 = MediaController__class.getMethodID(name: "getTransportControls", sig: "()Landroid/media/session/MediaController$TransportControls;")!
-private let MediaController__method__2 = MediaController__class.getMethodID(name: "getPlaybackState", sig: "()Landroid/media/session/PlaybackState;")!
-private let MediaController__method__3 = MediaController__class.getMethodID(name: "getMetadata", sig: "()Landroid/media/MediaMetadata;")!
-private let MediaController__method__4 = MediaController__class.getMethodID(name: "getQueue", sig: "()Ljava/util/List;")!
-private let MediaController__method__5 = MediaController__class.getMethodID(name: "getQueueTitle", sig: "()Ljava/lang/CharSequence;")!
-private let MediaController__method__6 = MediaController__class.getMethodID(name: "getExtras", sig: "()Landroid/os/Bundle;")!
-private let MediaController__method__7 = MediaController__class.getMethodID(name: "getRatingType", sig: "()I")!
-private let MediaController__method__8 = MediaController__class.getMethodID(name: "getFlags", sig: "()J")!
-private let MediaController__method__9 = MediaController__class.getMethodID(name: "getPlaybackInfo", sig: "()Landroid/media/session/MediaController$PlaybackInfo;")!
-private let MediaController__method__10 = MediaController__class.getMethodID(name: "getSessionActivity", sig: "()Landroid/app/PendingIntent;")!
-private let MediaController__method__11 = MediaController__class.getMethodID(name: "getSessionToken", sig: "()Landroid/media/session/MediaSession$Token;")!
-private let MediaController__method__12 = MediaController__class.getMethodID(name: "setVolumeTo", sig: "(II)V")!
-private let MediaController__method__13 = MediaController__class.getMethodID(name: "adjustVolume", sig: "(II)V")!
-private let MediaController__method__14 = MediaController__class.getMethodID(name: "registerCallback", sig: "(Landroid/media/session/MediaController$Callback;)V")!
-private let MediaController__method__15 = MediaController__class.getMethodID(name: "unregisterCallback", sig: "(Landroid/media/session/MediaController$Callback;)V")!
-private let MediaController__method__16 = MediaController__class.getMethodID(name: "getPackageName", sig: "()Ljava/lang/String;")!
+private let MediaController__method__2 = MediaController__class.getMethodID(name: "dispatchMediaButtonEvent", sig: "(Landroid/view/KeyEvent;)Z")!
+private let MediaController__method__3 = MediaController__class.getMethodID(name: "getPlaybackState", sig: "()Landroid/media/session/PlaybackState;")!
+private let MediaController__method__4 = MediaController__class.getMethodID(name: "getMetadata", sig: "()Landroid/media/MediaMetadata;")!
+private let MediaController__method__5 = MediaController__class.getMethodID(name: "getQueue", sig: "()Ljava/util/List;")!
+private let MediaController__method__6 = MediaController__class.getMethodID(name: "getQueueTitle", sig: "()Ljava/lang/CharSequence;")!
+private let MediaController__method__7 = MediaController__class.getMethodID(name: "getExtras", sig: "()Landroid/os/Bundle;")!
+private let MediaController__method__8 = MediaController__class.getMethodID(name: "getRatingType", sig: "()I")!
+private let MediaController__method__9 = MediaController__class.getMethodID(name: "getFlags", sig: "()J")!
+private let MediaController__method__10 = MediaController__class.getMethodID(name: "getPlaybackInfo", sig: "()Landroid/media/session/MediaController$PlaybackInfo;")!
+private let MediaController__method__11 = MediaController__class.getMethodID(name: "getSessionActivity", sig: "()Landroid/app/PendingIntent;")!
+private let MediaController__method__12 = MediaController__class.getMethodID(name: "getSessionToken", sig: "()Landroid/media/session/MediaSession$Token;")!
+private let MediaController__method__13 = MediaController__class.getMethodID(name: "setVolumeTo", sig: "(II)V")!
+private let MediaController__method__14 = MediaController__class.getMethodID(name: "adjustVolume", sig: "(II)V")!
+private let MediaController__method__15 = MediaController__class.getMethodID(name: "registerCallback", sig: "(Landroid/media/session/MediaController$Callback;)V")!
+private let MediaController__method__16 = MediaController__class.getMethodID(name: "unregisterCallback", sig: "(Landroid/media/session/MediaController$Callback;)V")!
+private let MediaController__method__17 = MediaController__class.getMethodID(name: "getPackageName", sig: "()Ljava/lang/String;")!
 
 // ------------------------------------------------------------------------------------
 

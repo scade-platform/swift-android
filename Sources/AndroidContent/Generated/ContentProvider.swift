@@ -7,31 +7,7 @@ public protocol ContentProvider: ComponentCallbacks2 where Self: Object {
   typealias PipeDataWriter = AndroidContent.ContentProviderPipeDataWriter
   typealias PipeDataWriterProxy = AndroidContent.ContentProviderPipeDataWriterProxy
 
-  func getContext() -> Context?
-
-  func getCallingPackage() -> String
-
-  func getReadPermission() -> String
-
-  func getWritePermission() -> String
-
-  func getPathPermissions() -> [PathPermission?]
-
   func onCreate() -> Bool
-
-  func onConfigurationChanged(newConfig: Configuration?) -> Void
-
-  func onLowMemory() -> Void
-
-  func onTrimMemory(level: Int32) -> Void
-
-  func attachInfo(context: Context?, info: ProviderInfo?) -> Void
-
-  func applyBatch(operations: ArrayList<ContentProviderOperation>?) -> [ContentProviderResult?]
-
-  func call(method: String, arg: String, extras: Bundle?) -> Bundle?
-
-  func shutdown() -> Void
 }
 
 public extension ContentProvider {
@@ -50,44 +26,60 @@ public extension ContentProvider where Self: Object {
     self.javaObject.call(method: ContentProvider__method__2, [])
   }
 
-  func getReadPermission() -> String {
-    self.javaObject.call(method: ContentProvider__method__3, [])
+  func setReadPermission(permission: String) {
+    self.javaObject.call(method: ContentProvider__method__3, [permission.toJavaParameter()])
   }
 
-  func getWritePermission() -> String {
+  func getReadPermission() -> String {
     self.javaObject.call(method: ContentProvider__method__4, [])
   }
 
+  func setWritePermission(permission: String) {
+    self.javaObject.call(method: ContentProvider__method__5, [permission.toJavaParameter()])
+  }
+
+  func getWritePermission() -> String {
+    self.javaObject.call(method: ContentProvider__method__6, [])
+  }
+
+  func setPathPermissions(permissions: [PathPermission?]) {
+    self.javaObject.call(method: ContentProvider__method__7, [permissions.toJavaParameter()])
+  }
+
   func getPathPermissions() -> [PathPermission?] {
-    self.javaObject.call(method: ContentProvider__method__5, [])
-  }
-
-  func onConfigurationChanged(newConfig: Configuration?) {
-    self.javaObject.call(method: ContentProvider__method__7, [newConfig.toJavaParameter()])
-  }
-
-  func onLowMemory() {
     self.javaObject.call(method: ContentProvider__method__8, [])
   }
 
+  func onConfigurationChanged(newConfig: Configuration?) {
+    self.javaObject.call(method: ContentProvider__method__10, [newConfig.toJavaParameter()])
+  }
+
+  func onLowMemory() {
+    self.javaObject.call(method: ContentProvider__method__11, [])
+  }
+
   func onTrimMemory(level: Int32) {
-    self.javaObject.call(method: ContentProvider__method__9, [level.toJavaParameter()])
+    self.javaObject.call(method: ContentProvider__method__12, [level.toJavaParameter()])
+  }
+
+  func isTemporary() -> Bool {
+    self.javaObject.call(method: ContentProvider__method__13, [])
   }
 
   func attachInfo(context: Context?, info: ProviderInfo?) {
-    self.javaObject.call(method: ContentProvider__method__10, [JavaParameter(object: context?.toJavaObject()), info.toJavaParameter()])
+    self.javaObject.call(method: ContentProvider__method__14, [JavaParameter(object: context?.toJavaObject()), info.toJavaParameter()])
   }
 
   func applyBatch(operations: ArrayList<ContentProviderOperation>?) -> [ContentProviderResult?] {
-    self.javaObject.call(method: ContentProvider__method__11, [operations.toJavaParameter()])
+    self.javaObject.call(method: ContentProvider__method__15, [operations.toJavaParameter()])
   }
 
   func call(method: String, arg: String, extras: Bundle?) -> Bundle? {
-    self.javaObject.call(method: ContentProvider__method__12, [method.toJavaParameter(), arg.toJavaParameter(), extras.toJavaParameter()])
+    self.javaObject.call(method: ContentProvider__method__16, [method.toJavaParameter(), arg.toJavaParameter(), extras.toJavaParameter()])
   }
 
   func shutdown() {
-    self.javaObject.call(method: ContentProvider__method__13, [])
+    self.javaObject.call(method: ContentProvider__method__17, [])
   }
 }
 
@@ -102,8 +94,8 @@ open class ContentProviderProxy: Object, JInterfaceProxy, ContentProvider {
     self.init(obj.toJavaObject()!)
   }
 
-  public func onCreate() -> Bool {
-    self.javaObject.call(method: ContentProvider__method__6, [])
+  open func onCreate() -> Bool {
+    self.javaObject.call(method: ContentProvider__method__9, [])
   }
 }
 
@@ -141,17 +133,21 @@ private let ContentProvider__class = findJavaClass(fqn: "android/content/Content
 
 private let ContentProvider__method__1 = ContentProvider__class.getMethodID(name: "getContext", sig: "()Landroid/content/Context;")!
 private let ContentProvider__method__2 = ContentProvider__class.getMethodID(name: "getCallingPackage", sig: "()Ljava/lang/String;")!
-private let ContentProvider__method__3 = ContentProvider__class.getMethodID(name: "getReadPermission", sig: "()Ljava/lang/String;")!
-private let ContentProvider__method__4 = ContentProvider__class.getMethodID(name: "getWritePermission", sig: "()Ljava/lang/String;")!
-private let ContentProvider__method__5 = ContentProvider__class.getMethodID(name: "getPathPermissions", sig: "()[Landroid/content/pm/PathPermission;")!
-private let ContentProvider__method__6 = ContentProvider__class.getMethodID(name: "onCreate", sig: "()Z")!
-private let ContentProvider__method__7 = ContentProvider__class.getMethodID(name: "onConfigurationChanged", sig: "(Landroid/content/res/Configuration;)V")!
-private let ContentProvider__method__8 = ContentProvider__class.getMethodID(name: "onLowMemory", sig: "()V")!
-private let ContentProvider__method__9 = ContentProvider__class.getMethodID(name: "onTrimMemory", sig: "(I)V")!
-private let ContentProvider__method__10 = ContentProvider__class.getMethodID(name: "attachInfo", sig: "(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V")!
-private let ContentProvider__method__11 = ContentProvider__class.getMethodID(name: "applyBatch", sig: "(Ljava/util/ArrayList;)[Landroid/content/ContentProviderResult;")!
-private let ContentProvider__method__12 = ContentProvider__class.getMethodID(name: "call", sig: "(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;")!
-private let ContentProvider__method__13 = ContentProvider__class.getMethodID(name: "shutdown", sig: "()V")!
+private let ContentProvider__method__3 = ContentProvider__class.getMethodID(name: "setReadPermission", sig: "(Ljava/lang/String;)V")!
+private let ContentProvider__method__4 = ContentProvider__class.getMethodID(name: "getReadPermission", sig: "()Ljava/lang/String;")!
+private let ContentProvider__method__5 = ContentProvider__class.getMethodID(name: "setWritePermission", sig: "(Ljava/lang/String;)V")!
+private let ContentProvider__method__6 = ContentProvider__class.getMethodID(name: "getWritePermission", sig: "()Ljava/lang/String;")!
+private let ContentProvider__method__7 = ContentProvider__class.getMethodID(name: "setPathPermissions", sig: "([Landroid/content/pm/PathPermission;)V")!
+private let ContentProvider__method__8 = ContentProvider__class.getMethodID(name: "getPathPermissions", sig: "()[Landroid/content/pm/PathPermission;")!
+private let ContentProvider__method__9 = ContentProvider__class.getMethodID(name: "onCreate", sig: "()Z")!
+private let ContentProvider__method__10 = ContentProvider__class.getMethodID(name: "onConfigurationChanged", sig: "(Landroid/content/res/Configuration;)V")!
+private let ContentProvider__method__11 = ContentProvider__class.getMethodID(name: "onLowMemory", sig: "()V")!
+private let ContentProvider__method__12 = ContentProvider__class.getMethodID(name: "onTrimMemory", sig: "(I)V")!
+private let ContentProvider__method__13 = ContentProvider__class.getMethodID(name: "isTemporary", sig: "()Z")!
+private let ContentProvider__method__14 = ContentProvider__class.getMethodID(name: "attachInfo", sig: "(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V")!
+private let ContentProvider__method__15 = ContentProvider__class.getMethodID(name: "applyBatch", sig: "(Ljava/util/ArrayList;)[Landroid/content/ContentProviderResult;")!
+private let ContentProvider__method__16 = ContentProvider__class.getMethodID(name: "call", sig: "(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;")!
+private let ContentProvider__method__17 = ContentProvider__class.getMethodID(name: "shutdown", sig: "()V")!
 
 // ------------------------------------------------------------------------------------
 

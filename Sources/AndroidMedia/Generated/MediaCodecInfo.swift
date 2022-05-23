@@ -25,8 +25,8 @@ open class MediaCodecInfo: Object {
     self.javaObject.call(method: MediaCodecInfo__method__2, [])
   }
 
-  public func getCapabilitiesForType(_type: String) -> MediaCodecInfo.CodecCapabilities? {
-    self.javaObject.call(method: MediaCodecInfo__method__3, [_type.toJavaParameter()])
+  public func getCapabilitiesForType(type: String) -> MediaCodecInfo.CodecCapabilities? {
+    self.javaObject.call(method: MediaCodecInfo__method__3, [type.toJavaParameter()])
   }
 }
 
@@ -391,7 +391,7 @@ open class MediaCodecInfoEncoderCapabilities: Object {
 
   public static let BITRATE_MODE_VBR: Int32 = MediaCodecInfoEncoderCapabilities__class.getStatic(field: MediaCodecInfoEncoderCapabilities__field__2)
 
-  public func isBitrateModeSupported(mode: Int32) -> Bool {
+  open func isBitrateModeSupported(mode: Int32) -> Bool {
     self.javaObject.call(method: MediaCodecInfoEncoderCapabilities__method__0, [mode.toJavaParameter()])
   }
 }
@@ -399,19 +399,19 @@ open class MediaCodecInfoEncoderCapabilities: Object {
 // ------------------------------------------------------------------------------------
 
 open class MediaCodecInfoVideoCapabilities: Object {
-  public func getWidthAlignment() -> Int32 {
+  open func getWidthAlignment() -> Int32 {
     self.javaObject.call(method: MediaCodecInfoVideoCapabilities__method__0, [])
   }
 
-  public func getHeightAlignment() -> Int32 {
+  open func getHeightAlignment() -> Int32 {
     self.javaObject.call(method: MediaCodecInfoVideoCapabilities__method__1, [])
   }
 
-  public func areSizeAndRateSupported(width: Int32, height: Int32, frameRate: Double) -> Bool {
+  open func areSizeAndRateSupported(width: Int32, height: Int32, frameRate: Double) -> Bool {
     self.javaObject.call(method: MediaCodecInfoVideoCapabilities__method__2, [width.toJavaParameter(), height.toJavaParameter(), frameRate.toJavaParameter()])
   }
 
-  public func isSizeSupported(width: Int32, height: Int32) -> Bool {
+  open func isSizeSupported(width: Int32, height: Int32) -> Bool {
     self.javaObject.call(method: MediaCodecInfoVideoCapabilities__method__3, [width.toJavaParameter(), height.toJavaParameter()])
   }
 }
@@ -419,15 +419,15 @@ open class MediaCodecInfoVideoCapabilities: Object {
 // ------------------------------------------------------------------------------------
 
 open class MediaCodecInfoAudioCapabilities: Object {
-  public func getSupportedSampleRates() -> [Int32] {
+  open func getSupportedSampleRates() -> [Int32] {
     self.javaObject.call(method: MediaCodecInfoAudioCapabilities__method__0, [])
   }
 
-  public func getMaxInputChannelCount() -> Int32 {
+  open func getMaxInputChannelCount() -> Int32 {
     self.javaObject.call(method: MediaCodecInfoAudioCapabilities__method__1, [])
   }
 
-  public func isSampleRateSupported(sampleRate: Int32) -> Bool {
+  open func isSampleRateSupported(sampleRate: Int32) -> Bool {
     self.javaObject.call(method: MediaCodecInfoAudioCapabilities__method__2, [sampleRate.toJavaParameter()])
   }
 }
@@ -581,27 +581,27 @@ open class MediaCodecInfoCodecCapabilities: Object {
     self.javaObject.call(method: MediaCodecInfoCodecCapabilities__method__3, [format.toJavaParameter()])
   }
 
-  public func getDefaultFormat() -> MediaFormat? {
+  open func getDefaultFormat() -> MediaFormat? {
     self.javaObject.call(method: MediaCodecInfoCodecCapabilities__method__4, [])
   }
 
-  public func getMimeType() -> String {
+  open func getMimeType() -> String {
     self.javaObject.call(method: MediaCodecInfoCodecCapabilities__method__5, [])
   }
 
-  public func getMaxSupportedInstances() -> Int32 {
+  open func getMaxSupportedInstances() -> Int32 {
     self.javaObject.call(method: MediaCodecInfoCodecCapabilities__method__6, [])
   }
 
-  public func getAudioCapabilities() -> MediaCodecInfo.AudioCapabilities? {
+  open func getAudioCapabilities() -> MediaCodecInfo.AudioCapabilities? {
     self.javaObject.call(method: MediaCodecInfoCodecCapabilities__method__7, [])
   }
 
-  public func getEncoderCapabilities() -> MediaCodecInfo.EncoderCapabilities? {
+  open func getEncoderCapabilities() -> MediaCodecInfo.EncoderCapabilities? {
     self.javaObject.call(method: MediaCodecInfoCodecCapabilities__method__8, [])
   }
 
-  public func getVideoCapabilities() -> MediaCodecInfo.VideoCapabilities? {
+  open func getVideoCapabilities() -> MediaCodecInfo.VideoCapabilities? {
     self.javaObject.call(method: MediaCodecInfoCodecCapabilities__method__9, [])
   }
 

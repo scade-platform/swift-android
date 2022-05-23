@@ -4,13 +4,9 @@ import AndroidContent
 import Java
 
 public protocol JobService: Service {
-  init()
-
   func onStartJob(params: JobParameters?) -> Bool
 
   func onStopJob(params: JobParameters?) -> Bool
-
-  func jobFinished(params: JobParameters?, needsReschedule: Bool) -> Void
 }
 
 public extension JobService {
@@ -44,11 +40,11 @@ open class JobServiceProxy: ServiceProxy, JobService {
     self.init(obj.toJavaObject()!)
   }
 
-  public func onStartJob(params: JobParameters?) -> Bool {
+  open func onStartJob(params: JobParameters?) -> Bool {
     self.javaObject.call(method: JobService__method__1, [params.toJavaParameter()])
   }
 
-  public func onStopJob(params: JobParameters?) -> Bool {
+  open func onStopJob(params: JobParameters?) -> Bool {
     self.javaObject.call(method: JobService__method__2, [params.toJavaParameter()])
   }
 }

@@ -9,11 +9,11 @@ open class FileBackupHelper: FileBackupHelperBase, BackupHelper {
     super.init(ctor: FileBackupHelper__method__0, [JavaParameter(object: context?.toJavaObject()), files.toJavaParameter()])
   }
 
-  public func performBackup(oldState: ParcelFileDescriptor?, data: BackupDataOutput?, newState: ParcelFileDescriptor?) {
+  open func performBackup(oldState: ParcelFileDescriptor?, data: BackupDataOutput?, newState: ParcelFileDescriptor?) {
     self.javaObject.call(method: FileBackupHelper__method__1, [oldState.toJavaParameter(), data.toJavaParameter(), newState.toJavaParameter()])
   }
 
-  public func restoreEntity(data: BackupDataInputStream?) {
+  open func restoreEntity(data: BackupDataInputStream?) {
     self.javaObject.call(method: FileBackupHelper__method__2, [data.toJavaParameter()])
   }
 

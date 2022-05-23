@@ -3,19 +3,19 @@
 import Java
 
 open class BluetoothLeScanner: Object {
-  public func startScan(callback: ScanCallback?) {
+  open func startScan(callback: ScanCallback?) {
     self.javaObject.call(method: BluetoothLeScanner__method__0, [JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func startScan<T0>(filters: T0?, settings: ScanSettings?, callback: ScanCallback?) -> Void where T0: List, T0.E == ScanFilter {
+  open func startScan<T0>(filters: T0?, settings: ScanSettings?, callback: ScanCallback?) -> Void where T0: List, T0.E == ScanFilter {
     self.javaObject.call(method: BluetoothLeScanner__method__1, [filters.toJavaParameter(), settings.toJavaParameter(), JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func stopScan(callback: ScanCallback?) {
+  open func stopScan(callback: ScanCallback?) {
     self.javaObject.call(method: BluetoothLeScanner__method__2, [JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func flushPendingScanResults(callback: ScanCallback?) {
+  open func flushPendingScanResults(callback: ScanCallback?) {
     self.javaObject.call(method: BluetoothLeScanner__method__3, [JavaParameter(object: callback?.toJavaObject())])
   }
 }

@@ -282,23 +282,23 @@ open class Configuration: Object, Parcelable {
     super.init(ctor: Configuration__method__1, [o.toJavaParameter()])
   }
 
-  public func isLayoutSizeAtLeast(size: Int32) -> Bool {
+  open func isLayoutSizeAtLeast(size: Int32) -> Bool {
     self.javaObject.call(method: Configuration__method__2, [size.toJavaParameter()])
   }
 
-  public func setTo(o: Configuration?) {
+  open func setTo(o: Configuration?) {
     self.javaObject.call(method: Configuration__method__3, [o.toJavaParameter()])
   }
 
-  public func setToDefaults() {
+  open func setToDefaults() {
     self.javaObject.call(method: Configuration__method__4, [])
   }
 
-  public func updateFrom(delta: Configuration?) -> Int32 {
+  open func updateFrom(delta: Configuration?) -> Int32 {
     self.javaObject.call(method: Configuration__method__5, [delta.toJavaParameter()])
   }
 
-  public func diff(delta: Configuration?) -> Int32 {
+  open func diff(delta: Configuration?) -> Int32 {
     self.javaObject.call(method: Configuration__method__6, [delta.toJavaParameter()])
   }
 
@@ -306,31 +306,31 @@ open class Configuration: Object, Parcelable {
     Configuration__class.callStatic(method: Configuration__method__7, [configChanges.toJavaParameter(), interestingChanges.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: Configuration__method__8, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: Configuration__method__9, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func readFromParcel(source: Parcel?) {
+  open func readFromParcel(source: Parcel?) {
     self.javaObject.call(method: Configuration__method__10, [source.toJavaParameter()])
   }
 
-  public func compareTo(o: Configuration?) -> Int32 {
-    self.javaObject.call(method: Configuration__method__11, [o.toJavaParameter()])
+  open func compareTo(that: Configuration?) -> Int32 {
+    self.javaObject.call(method: Configuration__method__11, [that.toJavaParameter()])
   }
 
-  public func equals(that: Configuration?) -> Bool {
+  open func equals(that: Configuration?) -> Bool {
     self.javaObject.call(method: Configuration__method__12, [that.toJavaParameter()])
   }
 
-  public func getLayoutDirection() -> Int32 {
+  open func getLayoutDirection() -> Int32 {
     self.javaObject.call(method: Configuration__method__13, [])
   }
 
-  public func isScreenRound() -> Bool {
+  open func isScreenRound() -> Bool {
     self.javaObject.call(method: Configuration__method__14, [])
   }
 

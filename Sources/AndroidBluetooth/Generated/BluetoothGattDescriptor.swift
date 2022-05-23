@@ -30,31 +30,31 @@ open class BluetoothGattDescriptor: Object, Parcelable {
     super.init(ctor: BluetoothGattDescriptor__method__0, [uuid.toJavaParameter(), permissions.toJavaParameter()])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: BluetoothGattDescriptor__method__1, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func getCharacteristic() -> BluetoothGattCharacteristic? {
+  open func getCharacteristic() -> BluetoothGattCharacteristic? {
     self.javaObject.call(method: BluetoothGattDescriptor__method__2, [])
   }
 
-  public func getUuid() -> UUID? {
+  open func getUuid() -> UUID? {
     self.javaObject.call(method: BluetoothGattDescriptor__method__3, [])
   }
 
-  public func getPermissions() -> Int32 {
+  open func getPermissions() -> Int32 {
     self.javaObject.call(method: BluetoothGattDescriptor__method__4, [])
   }
 
-  public func getValue() -> [Int8] {
+  open func getValue() -> [Int8] {
     self.javaObject.call(method: BluetoothGattDescriptor__method__5, [])
   }
 
-  public func setValue(value: [Int8]) -> Bool {
+  open func setValue(value: [Int8]) -> Bool {
     self.javaObject.call(method: BluetoothGattDescriptor__method__6, [value.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: BluetoothGattDescriptor__method__7, [])
   }
 

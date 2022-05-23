@@ -3,137 +3,137 @@
 import Java
 
 open class BaseBundle: Object {
-  public func size() -> Int32 {
+  open func size() -> Int32 {
     self.javaObject.call(method: BaseBundle__method__0, [])
   }
 
-  public func isEmpty() -> Bool {
+  open func isEmpty() -> Bool {
     self.javaObject.call(method: BaseBundle__method__1, [])
   }
 
-  public func clear() {
+  open func clear() {
     self.javaObject.call(method: BaseBundle__method__2, [])
   }
 
-  public func containsKey(key: String) -> Bool {
+  open func containsKey(key: String) -> Bool {
     self.javaObject.call(method: BaseBundle__method__3, [key.toJavaParameter()])
   }
 
-  public func get(key: String) -> Object? {
+  open func get(key: String) -> Object? {
     self.javaObject.call(method: BaseBundle__method__4, [key.toJavaParameter()])
   }
 
-  public func remove(key: String) {
+  open func remove(key: String) {
     self.javaObject.call(method: BaseBundle__method__5, [key.toJavaParameter()])
   }
 
-  public func keySet<R>() -> R? where R: Java.Set, R.E == String {
+  open func keySet<R>() -> R? where R: Java.Set, R.E == String {
     self.javaObject.call(method: BaseBundle__method__6, [])
   }
 
-  public func putBoolean(key: String, value: Bool) {
+  open func putBoolean(key: String, value: Bool) {
     self.javaObject.call(method: BaseBundle__method__7, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putInt(key: String, value: Int32) {
+  open func putInt(key: String, value: Int32) {
     self.javaObject.call(method: BaseBundle__method__8, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putLong(key: String, value: Int64) {
+  open func putLong(key: String, value: Int64) {
     self.javaObject.call(method: BaseBundle__method__9, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putDouble(key: String, value: Double) {
+  open func putDouble(key: String, value: Double) {
     self.javaObject.call(method: BaseBundle__method__10, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putString(key: String, value: String) {
+  open func putString(key: String, value: String) {
     self.javaObject.call(method: BaseBundle__method__11, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putBooleanArray(key: String, value: [Bool]) {
+  open func putBooleanArray(key: String, value: [Bool]) {
     self.javaObject.call(method: BaseBundle__method__12, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putIntArray(key: String, value: [Int32]) {
+  open func putIntArray(key: String, value: [Int32]) {
     self.javaObject.call(method: BaseBundle__method__13, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putLongArray(key: String, value: [Int64]) {
+  open func putLongArray(key: String, value: [Int64]) {
     self.javaObject.call(method: BaseBundle__method__14, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putDoubleArray(key: String, value: [Double]) {
+  open func putDoubleArray(key: String, value: [Double]) {
     self.javaObject.call(method: BaseBundle__method__15, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func putStringArray(key: String, value: [String]) {
+  open func putStringArray(key: String, value: [String]) {
     self.javaObject.call(method: BaseBundle__method__16, [key.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func getBoolean(key: String) -> Bool {
+  open func getBoolean(key: String) -> Bool {
     self.javaObject.call(method: BaseBundle__method__17, [key.toJavaParameter()])
   }
 
-  public func getBoolean(key: String, defaultValue: Bool) -> Bool {
+  open func getBoolean(key: String, defaultValue: Bool) -> Bool {
     self.javaObject.call(method: BaseBundle__method__18, [key.toJavaParameter(), defaultValue.toJavaParameter()])
   }
 
-  public func getInt(key: String) -> Int32 {
+  open func getInt(key: String) -> Int32 {
     self.javaObject.call(method: BaseBundle__method__19, [key.toJavaParameter()])
   }
 
-  public func getInt(key: String, defaultValue: Int32) -> Int32 {
+  open func getInt(key: String, defaultValue: Int32) -> Int32 {
     self.javaObject.call(method: BaseBundle__method__20, [key.toJavaParameter(), defaultValue.toJavaParameter()])
   }
 
-  public func getLong(key: String) -> Int64 {
+  open func getLong(key: String) -> Int64 {
     self.javaObject.call(method: BaseBundle__method__21, [key.toJavaParameter()])
   }
 
-  public func getLong(key: String, defaultValue: Int64) -> Int64 {
+  open func getLong(key: String, defaultValue: Int64) -> Int64 {
     self.javaObject.call(method: BaseBundle__method__22, [key.toJavaParameter(), defaultValue.toJavaParameter()])
   }
 
-  public func getDouble(key: String) -> Double {
+  open func getDouble(key: String) -> Double {
     self.javaObject.call(method: BaseBundle__method__23, [key.toJavaParameter()])
   }
 
-  public func getDouble(key: String, defaultValue: Double) -> Double {
+  open func getDouble(key: String, defaultValue: Double) -> Double {
     self.javaObject.call(method: BaseBundle__method__24, [key.toJavaParameter(), defaultValue.toJavaParameter()])
   }
 
-  public func getString(key: String) -> String {
+  open func getString(key: String) -> String {
     self.javaObject.call(method: BaseBundle__method__25, [key.toJavaParameter()])
   }
 
-  public func getString(key: String, defaultValue: String) -> String {
+  open func getString(key: String, defaultValue: String) -> String {
     self.javaObject.call(method: BaseBundle__method__26, [key.toJavaParameter(), defaultValue.toJavaParameter()])
   }
 
-  public func getBooleanArray(key: String) -> [Bool] {
+  open func getBooleanArray(key: String) -> [Bool] {
     self.javaObject.call(method: BaseBundle__method__27, [key.toJavaParameter()])
   }
 
-  public func getIntArray(key: String) -> [Int32] {
+  open func getIntArray(key: String) -> [Int32] {
     self.javaObject.call(method: BaseBundle__method__28, [key.toJavaParameter()])
   }
 
-  public func getLongArray(key: String) -> [Int64] {
+  open func getLongArray(key: String) -> [Int64] {
     self.javaObject.call(method: BaseBundle__method__29, [key.toJavaParameter()])
   }
 
-  public func getDoubleArray(key: String) -> [Double] {
+  open func getDoubleArray(key: String) -> [Double] {
     self.javaObject.call(method: BaseBundle__method__30, [key.toJavaParameter()])
   }
 
-  public func getStringArray(key: String) -> [String] {
+  open func getStringArray(key: String) -> [String] {
     self.javaObject.call(method: BaseBundle__method__31, [key.toJavaParameter()])
   }
 }
 
 extension BaseBundle {
-  public func keySet() -> Java.SetProxy<String>? {
+  open func keySet() -> Java.SetProxy<String>? {
     self.javaObject.call(method: BaseBundle__method__6, [])
   }
 }

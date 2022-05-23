@@ -32,59 +32,59 @@ open class Equalizer: AudioEffect {
     super.init(ctor: Equalizer__method__0, [priority.toJavaParameter(), audioSession.toJavaParameter()])
   }
 
-  public func getNumberOfBands() -> Int16 {
+  open func getNumberOfBands() -> Int16 {
     self.javaObject.call(method: Equalizer__method__1, [])
   }
 
-  public func getBandLevelRange() -> [Int16] {
+  open func getBandLevelRange() -> [Int16] {
     self.javaObject.call(method: Equalizer__method__2, [])
   }
 
-  public func setBandLevel(band: Int16, level: Int16) {
+  open func setBandLevel(band: Int16, level: Int16) {
     self.javaObject.call(method: Equalizer__method__3, [band.toJavaParameter(), level.toJavaParameter()])
   }
 
-  public func getBandLevel(band: Int16) -> Int16 {
+  open func getBandLevel(band: Int16) -> Int16 {
     self.javaObject.call(method: Equalizer__method__4, [band.toJavaParameter()])
   }
 
-  public func getCenterFreq(band: Int16) -> Int32 {
+  open func getCenterFreq(band: Int16) -> Int32 {
     self.javaObject.call(method: Equalizer__method__5, [band.toJavaParameter()])
   }
 
-  public func getBandFreqRange(band: Int16) -> [Int32] {
+  open func getBandFreqRange(band: Int16) -> [Int32] {
     self.javaObject.call(method: Equalizer__method__6, [band.toJavaParameter()])
   }
 
-  public func getBand(frequency: Int32) -> Int16 {
+  open func getBand(frequency: Int32) -> Int16 {
     self.javaObject.call(method: Equalizer__method__7, [frequency.toJavaParameter()])
   }
 
-  public func getCurrentPreset() -> Int16 {
+  open func getCurrentPreset() -> Int16 {
     self.javaObject.call(method: Equalizer__method__8, [])
   }
 
-  public func usePreset(preset: Int16) {
+  open func usePreset(preset: Int16) {
     self.javaObject.call(method: Equalizer__method__9, [preset.toJavaParameter()])
   }
 
-  public func getNumberOfPresets() -> Int16 {
+  open func getNumberOfPresets() -> Int16 {
     self.javaObject.call(method: Equalizer__method__10, [])
   }
 
-  public func getPresetName(preset: Int16) -> String {
+  open func getPresetName(preset: Int16) -> String {
     self.javaObject.call(method: Equalizer__method__11, [preset.toJavaParameter()])
   }
 
-  public func setParameterListener(listener: Equalizer.OnParameterChangeListener?) {
+  open func setParameterListener(listener: Equalizer.OnParameterChangeListener?) {
     self.javaObject.call(method: Equalizer__method__12, [JavaParameter(object: listener?.toJavaObject())])
   }
 
-  public func getProperties() -> Equalizer.Settings? {
+  open func getProperties() -> Equalizer.Settings? {
     self.javaObject.call(method: Equalizer__method__13, [])
   }
 
-  public func setProperties(settings: Equalizer.Settings?) {
+  open func setProperties(settings: Equalizer.Settings?) {
     self.javaObject.call(method: Equalizer__method__14, [settings.toJavaParameter()])
   }
 

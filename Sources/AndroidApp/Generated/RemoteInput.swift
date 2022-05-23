@@ -11,23 +11,23 @@ open class RemoteInput: Object, Parcelable {
 
   public static let RESULTS_CLIP_LABEL: String = RemoteInput__class.getStatic(field: RemoteInput__field__1)
 
-  public func getResultKey() -> String {
+  open func getResultKey() -> String {
     self.javaObject.call(method: RemoteInput__method__0, [])
   }
 
-  public func getLabel() -> String? {
+  open func getLabel() -> String? {
     self.javaObject.call(method: RemoteInput__method__1, [])
   }
 
-  public func getChoices() -> [String?] {
+  open func getChoices() -> [String?] {
     self.javaObject.call(method: RemoteInput__method__2, [])
   }
 
-  public func getAllowFreeFormInput() -> Bool {
+  open func getAllowFreeFormInput() -> Bool {
     self.javaObject.call(method: RemoteInput__method__3, [])
   }
 
-  public func getExtras() -> Bundle? {
+  open func getExtras() -> Bundle? {
     self.javaObject.call(method: RemoteInput__method__4, [])
   }
 
@@ -39,11 +39,11 @@ open class RemoteInput: Object, Parcelable {
     RemoteInput__class.callStatic(method: RemoteInput__method__6, [remoteInputs.toJavaParameter(), intent.toJavaParameter(), results.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: RemoteInput__method__7, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: RemoteInput__method__8, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 }
@@ -55,27 +55,27 @@ open class RemoteInputBuilder: Object {
     super.init(ctor: RemoteInputBuilder__method__0, [resultKey.toJavaParameter()])
   }
 
-  public func setLabel(label: String?) -> RemoteInput.Builder? {
+  open func setLabel(label: String?) -> RemoteInput.Builder? {
     self.javaObject.call(method: RemoteInputBuilder__method__1, [label.toJavaParameter()])
   }
 
-  public func setChoices(choices: [String?]) -> RemoteInput.Builder? {
+  open func setChoices(choices: [String?]) -> RemoteInput.Builder? {
     self.javaObject.call(method: RemoteInputBuilder__method__2, [choices.toJavaParameter()])
   }
 
-  public func setAllowFreeFormInput(allowFreeFormInput: Bool) -> RemoteInput.Builder? {
+  open func setAllowFreeFormInput(allowFreeFormInput: Bool) -> RemoteInput.Builder? {
     self.javaObject.call(method: RemoteInputBuilder__method__3, [allowFreeFormInput.toJavaParameter()])
   }
 
-  public func addExtras(extras: Bundle?) -> RemoteInput.Builder? {
+  open func addExtras(extras: Bundle?) -> RemoteInput.Builder? {
     self.javaObject.call(method: RemoteInputBuilder__method__4, [extras.toJavaParameter()])
   }
 
-  public func getExtras() -> Bundle? {
+  open func getExtras() -> Bundle? {
     self.javaObject.call(method: RemoteInputBuilder__method__5, [])
   }
 
-  public func build() -> RemoteInput? {
+  open func build() -> RemoteInput? {
     self.javaObject.call(method: RemoteInputBuilder__method__6, [])
   }
 

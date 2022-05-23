@@ -195,40 +195,49 @@ open class MediaFormat: Object {
     self.javaObject.call(method: MediaFormat__method__5, [name.toJavaParameter()])
   }
 
-  public func getFeatureEnabled(feature: String) -> Bool {
-    self.javaObject.call(method: MediaFormat__method__6, [feature.toJavaParameter()])
+  public func getByteBuffer(name: String) -> ByteBuffer? {
+    let res = self.javaObject.call(method: MediaFormat__method__6, [name.toJavaParameter()]) as Object?
+    return cast(res, to: ByteBufferProxy.self) as! ByteBuffer?
+  }
+
+  open func getFeatureEnabled(feature: String) -> Bool {
+    self.javaObject.call(method: MediaFormat__method__7, [feature.toJavaParameter()])
   }
 
   public func setInteger(name: String, value: Int32) {
-    self.javaObject.call(method: MediaFormat__method__7, [name.toJavaParameter(), value.toJavaParameter()])
-  }
-
-  public func setLong(name: String, value: Int64) {
     self.javaObject.call(method: MediaFormat__method__8, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func setFloat(name: String, value: Float) {
+  public func setLong(name: String, value: Int64) {
     self.javaObject.call(method: MediaFormat__method__9, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func setString(name: String, value: String) {
+  public func setFloat(name: String, value: Float) {
     self.javaObject.call(method: MediaFormat__method__10, [name.toJavaParameter(), value.toJavaParameter()])
   }
 
-  public func setFeatureEnabled(feature: String, enabled: Bool) {
-    self.javaObject.call(method: MediaFormat__method__11, [feature.toJavaParameter(), enabled.toJavaParameter()])
+  public func setString(name: String, value: String) {
+    self.javaObject.call(method: MediaFormat__method__11, [name.toJavaParameter(), value.toJavaParameter()])
+  }
+
+  public func setByteBuffer(name: String, bytes: ByteBuffer?) {
+    self.javaObject.call(method: MediaFormat__method__12, [name.toJavaParameter(), JavaParameter(object: bytes?.toJavaObject())])
+  }
+
+  open func setFeatureEnabled(feature: String, enabled: Bool) {
+    self.javaObject.call(method: MediaFormat__method__13, [feature.toJavaParameter(), enabled.toJavaParameter()])
   }
 
   public static func createAudioFormat(mime: String, sampleRate: Int32, channelCount: Int32) -> MediaFormat? {
-    MediaFormat__class.callStatic(method: MediaFormat__method__12, [mime.toJavaParameter(), sampleRate.toJavaParameter(), channelCount.toJavaParameter()])
+    MediaFormat__class.callStatic(method: MediaFormat__method__14, [mime.toJavaParameter(), sampleRate.toJavaParameter(), channelCount.toJavaParameter()])
   }
 
   public static func createSubtitleFormat(mime: String, language: String) -> MediaFormat? {
-    MediaFormat__class.callStatic(method: MediaFormat__method__13, [mime.toJavaParameter(), language.toJavaParameter()])
+    MediaFormat__class.callStatic(method: MediaFormat__method__15, [mime.toJavaParameter(), language.toJavaParameter()])
   }
 
   public static func createVideoFormat(mime: String, width: Int32, height: Int32) -> MediaFormat? {
-    MediaFormat__class.callStatic(method: MediaFormat__method__14, [mime.toJavaParameter(), width.toJavaParameter(), height.toJavaParameter()])
+    MediaFormat__class.callStatic(method: MediaFormat__method__16, [mime.toJavaParameter(), width.toJavaParameter(), height.toJavaParameter()])
   }
 
   public required init(_ obj: JavaObject) {
@@ -250,15 +259,17 @@ private let MediaFormat__method__2 = MediaFormat__class.getMethodID(name: "getIn
 private let MediaFormat__method__3 = MediaFormat__class.getMethodID(name: "getLong", sig: "(Ljava/lang/String;)J")!
 private let MediaFormat__method__4 = MediaFormat__class.getMethodID(name: "getFloat", sig: "(Ljava/lang/String;)F")!
 private let MediaFormat__method__5 = MediaFormat__class.getMethodID(name: "getString", sig: "(Ljava/lang/String;)Ljava/lang/String;")!
-private let MediaFormat__method__6 = MediaFormat__class.getMethodID(name: "getFeatureEnabled", sig: "(Ljava/lang/String;)Z")!
-private let MediaFormat__method__7 = MediaFormat__class.getMethodID(name: "setInteger", sig: "(Ljava/lang/String;I)V")!
-private let MediaFormat__method__8 = MediaFormat__class.getMethodID(name: "setLong", sig: "(Ljava/lang/String;J)V")!
-private let MediaFormat__method__9 = MediaFormat__class.getMethodID(name: "setFloat", sig: "(Ljava/lang/String;F)V")!
-private let MediaFormat__method__10 = MediaFormat__class.getMethodID(name: "setString", sig: "(Ljava/lang/String;Ljava/lang/String;)V")!
-private let MediaFormat__method__11 = MediaFormat__class.getMethodID(name: "setFeatureEnabled", sig: "(Ljava/lang/String;Z)V")!
-private let MediaFormat__method__12 = MediaFormat__class.getStaticMethodID(name: "createAudioFormat", sig: "(Ljava/lang/String;II)Landroid/media/MediaFormat;")!
-private let MediaFormat__method__13 = MediaFormat__class.getStaticMethodID(name: "createSubtitleFormat", sig: "(Ljava/lang/String;Ljava/lang/String;)Landroid/media/MediaFormat;")!
-private let MediaFormat__method__14 = MediaFormat__class.getStaticMethodID(name: "createVideoFormat", sig: "(Ljava/lang/String;II)Landroid/media/MediaFormat;")!
+private let MediaFormat__method__6 = MediaFormat__class.getMethodID(name: "getByteBuffer", sig: "(Ljava/lang/String;)Ljava/nio/ByteBuffer;")!
+private let MediaFormat__method__7 = MediaFormat__class.getMethodID(name: "getFeatureEnabled", sig: "(Ljava/lang/String;)Z")!
+private let MediaFormat__method__8 = MediaFormat__class.getMethodID(name: "setInteger", sig: "(Ljava/lang/String;I)V")!
+private let MediaFormat__method__9 = MediaFormat__class.getMethodID(name: "setLong", sig: "(Ljava/lang/String;J)V")!
+private let MediaFormat__method__10 = MediaFormat__class.getMethodID(name: "setFloat", sig: "(Ljava/lang/String;F)V")!
+private let MediaFormat__method__11 = MediaFormat__class.getMethodID(name: "setString", sig: "(Ljava/lang/String;Ljava/lang/String;)V")!
+private let MediaFormat__method__12 = MediaFormat__class.getMethodID(name: "setByteBuffer", sig: "(Ljava/lang/String;Ljava/nio/ByteBuffer;)V")!
+private let MediaFormat__method__13 = MediaFormat__class.getMethodID(name: "setFeatureEnabled", sig: "(Ljava/lang/String;Z)V")!
+private let MediaFormat__method__14 = MediaFormat__class.getStaticMethodID(name: "createAudioFormat", sig: "(Ljava/lang/String;II)Landroid/media/MediaFormat;")!
+private let MediaFormat__method__15 = MediaFormat__class.getStaticMethodID(name: "createSubtitleFormat", sig: "(Ljava/lang/String;Ljava/lang/String;)Landroid/media/MediaFormat;")!
+private let MediaFormat__method__16 = MediaFormat__class.getStaticMethodID(name: "createVideoFormat", sig: "(Ljava/lang/String;II)Landroid/media/MediaFormat;")!
 
 private let MediaFormat__field__0 = MediaFormat__class.getStaticFieldID(name: "COLOR_RANGE_FULL", sig: "I")!
 private let MediaFormat__field__1 = MediaFormat__class.getStaticFieldID(name: "COLOR_RANGE_LIMITED", sig: "I")!

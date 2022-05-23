@@ -13,37 +13,37 @@ open class UsageStatsManager: Object {
 
   public static let INTERVAL_YEARLY: Int32 = UsageStatsManager__class.getStatic(field: UsageStatsManager__field__4)
 
-  public func queryUsageStats<R>(intervalType: Int32, beginTime: Int64, endTime: Int64) -> R? where R: List, R.E == UsageStats {
+  open func queryUsageStats<R>(intervalType: Int32, beginTime: Int64, endTime: Int64) -> R? where R: List, R.E == UsageStats {
     self.javaObject.call(method: UsageStatsManager__method__0, [intervalType.toJavaParameter(), beginTime.toJavaParameter(), endTime.toJavaParameter()])
   }
 
-  public func queryConfigurations<R>(intervalType: Int32, beginTime: Int64, endTime: Int64) -> R? where R: List, R.E == ConfigurationStats {
+  open func queryConfigurations<R>(intervalType: Int32, beginTime: Int64, endTime: Int64) -> R? where R: List, R.E == ConfigurationStats {
     self.javaObject.call(method: UsageStatsManager__method__1, [intervalType.toJavaParameter(), beginTime.toJavaParameter(), endTime.toJavaParameter()])
   }
 
-  public func queryEvents(beginTime: Int64, endTime: Int64) -> UsageEvents? {
+  open func queryEvents(beginTime: Int64, endTime: Int64) -> UsageEvents? {
     self.javaObject.call(method: UsageStatsManager__method__2, [beginTime.toJavaParameter(), endTime.toJavaParameter()])
   }
 
-  public func queryAndAggregateUsageStats<R>(beginTime: Int64, endTime: Int64) -> R? where R: Map, R.K == String, R.V == UsageStats {
+  open func queryAndAggregateUsageStats<R>(beginTime: Int64, endTime: Int64) -> R? where R: Map, R.K == String, R.V == UsageStats {
     self.javaObject.call(method: UsageStatsManager__method__3, [beginTime.toJavaParameter(), endTime.toJavaParameter()])
   }
 
-  public func isAppInactive(packageName: String) -> Bool {
+  open func isAppInactive(packageName: String) -> Bool {
     self.javaObject.call(method: UsageStatsManager__method__4, [packageName.toJavaParameter()])
   }
 }
 
 extension UsageStatsManager {
-  public func queryUsageStats(intervalType: Int32, beginTime: Int64, endTime: Int64) -> ListProxy<UsageStats>? {
+  open func queryUsageStats(intervalType: Int32, beginTime: Int64, endTime: Int64) -> ListProxy<UsageStats>? {
     self.javaObject.call(method: UsageStatsManager__method__0, [intervalType.toJavaParameter(), beginTime.toJavaParameter(), endTime.toJavaParameter()])
   }
 
-  public func queryConfigurations(intervalType: Int32, beginTime: Int64, endTime: Int64) -> ListProxy<ConfigurationStats>? {
+  open func queryConfigurations(intervalType: Int32, beginTime: Int64, endTime: Int64) -> ListProxy<ConfigurationStats>? {
     self.javaObject.call(method: UsageStatsManager__method__1, [intervalType.toJavaParameter(), beginTime.toJavaParameter(), endTime.toJavaParameter()])
   }
 
-  public func queryAndAggregateUsageStats(beginTime: Int64, endTime: Int64) -> MapProxy<String, UsageStats>? {
+  open func queryAndAggregateUsageStats(beginTime: Int64, endTime: Int64) -> MapProxy<String, UsageStats>? {
     self.javaObject.call(method: UsageStatsManager__method__3, [beginTime.toJavaParameter(), endTime.toJavaParameter()])
   }
 }

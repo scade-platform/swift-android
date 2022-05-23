@@ -8,35 +8,35 @@ open class UsageStats: Object, Parcelable {
     super.init(ctor: UsageStats__method__0, [stats.toJavaParameter()])
   }
 
-  public func getPackageName() -> String {
+  open func getPackageName() -> String {
     self.javaObject.call(method: UsageStats__method__1, [])
   }
 
-  public func getFirstTimeStamp() -> Int64 {
+  open func getFirstTimeStamp() -> Int64 {
     self.javaObject.call(method: UsageStats__method__2, [])
   }
 
-  public func getLastTimeStamp() -> Int64 {
+  open func getLastTimeStamp() -> Int64 {
     self.javaObject.call(method: UsageStats__method__3, [])
   }
 
-  public func getLastTimeUsed() -> Int64 {
+  open func getLastTimeUsed() -> Int64 {
     self.javaObject.call(method: UsageStats__method__4, [])
   }
 
-  public func getTotalTimeInForeground() -> Int64 {
+  open func getTotalTimeInForeground() -> Int64 {
     self.javaObject.call(method: UsageStats__method__5, [])
   }
 
-  public func add(right: UsageStats?) {
+  open func add(right: UsageStats?) {
     self.javaObject.call(method: UsageStats__method__6, [right.toJavaParameter()])
   }
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: UsageStats__method__7, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: UsageStats__method__8, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 

@@ -67,67 +67,67 @@ open class BluetoothDevice: Object, Parcelable {
 
   public static let TRANSPORT_LE: Int32 = BluetoothDevice__class.getStatic(field: BluetoothDevice__field__30)
 
-  public func describeContents() -> Int32 {
+  open func describeContents() -> Int32 {
     self.javaObject.call(method: BluetoothDevice__method__0, [])
   }
 
-  public func writeToParcel(dest: Parcel?, flags: Int32) {
+  open func writeToParcel(dest: Parcel?, flags: Int32) {
     self.javaObject.call(method: BluetoothDevice__method__1, [dest.toJavaParameter(), flags.toJavaParameter()])
   }
 
-  public func getAddress() -> String {
+  open func getAddress() -> String {
     self.javaObject.call(method: BluetoothDevice__method__2, [])
   }
 
-  public func getName() -> String {
+  open func getName() -> String {
     self.javaObject.call(method: BluetoothDevice__method__3, [])
   }
 
-  public func getType() -> Int32 {
+  open func getType() -> Int32 {
     self.javaObject.call(method: BluetoothDevice__method__4, [])
   }
 
-  public func createBond() -> Bool {
+  open func createBond() -> Bool {
     self.javaObject.call(method: BluetoothDevice__method__5, [])
   }
 
-  public func getBondState() -> Int32 {
+  open func getBondState() -> Int32 {
     self.javaObject.call(method: BluetoothDevice__method__6, [])
   }
 
-  public func getBluetoothClass() -> BluetoothClass? {
+  open func getBluetoothClass() -> BluetoothClass? {
     self.javaObject.call(method: BluetoothDevice__method__7, [])
   }
 
-  public func getUuids() -> [ParcelUuid?] {
+  open func getUuids() -> [ParcelUuid?] {
     self.javaObject.call(method: BluetoothDevice__method__8, [])
   }
 
-  public func fetchUuidsWithSdp() -> Bool {
+  open func fetchUuidsWithSdp() -> Bool {
     self.javaObject.call(method: BluetoothDevice__method__9, [])
   }
 
-  public func setPin(pin: [Int8]) -> Bool {
+  open func setPin(pin: [Int8]) -> Bool {
     self.javaObject.call(method: BluetoothDevice__method__10, [pin.toJavaParameter()])
   }
 
-  public func setPairingConfirmation(confirm: Bool) -> Bool {
+  open func setPairingConfirmation(confirm: Bool) -> Bool {
     self.javaObject.call(method: BluetoothDevice__method__11, [confirm.toJavaParameter()])
   }
 
-  public func createRfcommSocketToServiceRecord(uuid: UUID?) -> BluetoothSocket? {
+  open func createRfcommSocketToServiceRecord(uuid: UUID?) -> BluetoothSocket? {
     self.javaObject.call(method: BluetoothDevice__method__12, [uuid.toJavaParameter()])
   }
 
-  public func createInsecureRfcommSocketToServiceRecord(uuid: UUID?) -> BluetoothSocket? {
+  open func createInsecureRfcommSocketToServiceRecord(uuid: UUID?) -> BluetoothSocket? {
     self.javaObject.call(method: BluetoothDevice__method__13, [uuid.toJavaParameter()])
   }
 
-  public func connectGatt(context: Context?, autoConnect: Bool, callback: BluetoothGattCallback?) -> BluetoothGatt? {
+  open func connectGatt(context: Context?, autoConnect: Bool, callback: BluetoothGattCallback?) -> BluetoothGatt? {
     self.javaObject.call(method: BluetoothDevice__method__14, [JavaParameter(object: context?.toJavaObject()), autoConnect.toJavaParameter(), JavaParameter(object: callback?.toJavaObject())])
   }
 
-  public func connectGatt(context: Context?, autoConnect: Bool, callback: BluetoothGattCallback?, transport: Int32) -> BluetoothGatt? {
+  open func connectGatt(context: Context?, autoConnect: Bool, callback: BluetoothGattCallback?, transport: Int32) -> BluetoothGatt? {
     self.javaObject.call(method: BluetoothDevice__method__15, [JavaParameter(object: context?.toJavaObject()), autoConnect.toJavaParameter(), JavaParameter(object: callback?.toJavaObject()), transport.toJavaParameter()])
   }
 }
